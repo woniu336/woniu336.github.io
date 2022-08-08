@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://woniu336.github.io</id>
+    <title>独沽月</title>
+    <updated>2022-08-08T11:48:39.211Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://woniu336.github.io"/>
+    <link rel="self" href="https://woniu336.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://woniu336.github.io/images/avatar.png</logo>
+    <icon>https://woniu336.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, 独沽月</rights>
+    <entry>
+        <title type="html"><![CDATA[AMH7.0安装苹果cms的一些坑和注意事项]]></title>
+        <id>https://woniu336.github.io/post/amh70-an-zhuang-ping-guo-cms-de-yi-xie-keng-he-zhu-yi-shi-xiang/</id>
+        <link href="https://woniu336.github.io/post/amh70-an-zhuang-ping-guo-cms-de-yi-xie-keng-he-zhu-yi-shi-xiang/">
+        </link>
+        <updated>2022-08-08T10:58:44.000Z</updated>
+        <content type="html"><![CDATA[<p>记录开始<br>
+首先</p>
+]]></content>
+    </entry>
+</feed>
