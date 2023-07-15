@@ -2321,6 +2321,21 @@ target="_blank" rel="noopener"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sort date desc
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
+&lt;/div>&lt;h4 id="笔记">笔记&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">table title AS &amp;#34;标题&amp;#34;,date AS &amp;#34;创建时间&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from &amp;#34;闪念&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">where draft=false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sort date desc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
 &lt;/div></description></item><item><title>关于</title><link>https://jimugou.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jimugou.com/about/</guid><description>&lt;img src="https://i.imgtg.com/2023/07/07/OxPNcP.webp" alt="Featured image of post 关于" />&lt;h1 id="关于">『关于』&lt;/h1>
 &lt;h3 id="我">😊我：&lt;/h3>
 &lt;p>目前是一名高三学生,喜欢折腾各种电子产品,爱打游戏,没事就写写博客,做这个博客是为了记录一些有的没的,还有就是装逼,由于目前还是个穷屌丝,整个博客花的费用主要是域名续费,部署在&lt;code>GitHub&lt;/code>上,配合&lt;code>GitHub action&lt;/code>和&lt;code>Vercel&lt;/code>,虽然偶尔会崩,但是能用就行,整个博客基本上是全静态,日常水文够用,选择&lt;code>hugo&lt;/code>而不用&lt;code>hexo&lt;/code>是考虑到稳定性和可持续性,&lt;code>hexo&lt;/code>过于依赖&lt;code>npm&lt;/code>,不同主题的配置差别太大,有时还可能因为node版本不适合报错,折腾不动,目前就用着hugo养老吧.&lt;/p>
