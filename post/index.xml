@@ -1,6 +1,110 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记与博客 on 木瓜有点甜</title><link>https://jimugou.com/post/</link><description>Recent content in 笔记与博客 on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 15 Jul 2023 23:46:46 +0800</lastBuildDate><atom:link href="https://jimugou.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>晚上了hhh</title><link>https://jimugou.com/p/%E6%99%9A%E4%B8%8A%E4%BA%86hhh/</link><pubDate>Sat, 15 Jul 2023 23:46:46 +0800</pubDate><guid>https://jimugou.com/p/%E6%99%9A%E4%B8%8A%E4%BA%86hhh/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/b1ce7ea9aa02113214402bb75af5756c.webp"
 loading="lazy"
->&lt;/p></description></item><item><title>测试</title><link>https://jimugou.com/p/%E6%B5%8B%E8%AF%95/</link><pubDate>Sat, 15 Jul 2023 23:21:45 +0800</pubDate><guid>https://jimugou.com/p/%E6%B5%8B%E8%AF%95/</guid><description>&lt;p>对对对&lt;/p></description></item><item><title>我的AndroidTV折腾小记]</title><link>https://jimugou.com/p/221219/</link><pubDate>Wed, 12 Jul 2023 22:12:06 +0800</pubDate><guid>https://jimugou.com/p/221219/</guid><description>&lt;img src="https://cdn.bilicdn.tk/gh/woniu336/blog-image@main/img/Windows11.webp.webp" alt="Featured image of post 我的AndroidTV折腾小记]" />&lt;h2 id="起因">起因&lt;/h2>
+>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">name: GitHub Page
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">on:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> branches:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - main &lt;span class="c1"># main 更新触发&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> deploy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: actions/checkout@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> submodules: &lt;span class="nb">true&lt;/span> &lt;span class="c1"># clone submodules&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> fetch-depth: &lt;span class="m">0&lt;/span> &lt;span class="c1"># 克隆所有历史信息&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setup Hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: peaceiris/actions-hugo@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> hugo-version: &lt;span class="s2">&amp;#34;0.115.2&amp;#34;&lt;/span> &lt;span class="c1"># Hugo 版本&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> extended: &lt;span class="nb">true&lt;/span> &lt;span class="c1"># hugo插件版 Stack主题 必须启用&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Cache resources &lt;span class="c1"># 缓存 resource 文件加快生成速度&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: actions/cache@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> path: resources
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 检查照片文件变化&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> key: &lt;span class="si">${&lt;/span>&lt;span class="p">{ runner.os &lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="o">}&lt;/span>-hugocache-&lt;span class="si">${&lt;/span>&lt;span class="p">{ hashFiles(&lt;/span>&lt;span class="s1">&amp;#39;content/**/*&amp;#39;&lt;/span>&lt;span class="p">) &lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> restore-keys: &lt;span class="si">${&lt;/span>&lt;span class="p">{ runner.os &lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="o">}&lt;/span>-hugocache-
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Build &lt;span class="c1"># 生成网页 删除无用 resource 文件 削减空行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: hugo --minify --gc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Deploy &lt;span class="c1"># 部署到 GitHub Page&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: peaceiris/actions-gh-pages@v3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 如果在同一个仓库下使用请使用 github_token 并注释 deploy_key&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># github_token: ${{ secrets.GITHUB_TOKEN }}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> deploy_key: &lt;span class="si">${&lt;/span>&lt;span class="p">{ secrets.ACTIONS_DEPLOY_KEY &lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="o">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 如果在同一个仓库请注释&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external_repository: lin-snow/blog &lt;span class="c1"># 你的 GitHub page 仓库 example/example.github.io&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> publish_dir: ./public
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> user_name: &lt;span class="s2">&amp;#34;github-actions[bot]&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> user_email: &lt;span class="s2">&amp;#34;github-actions[bot]@users.noreply.github.com&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> full_commit_message: Deploy from &lt;span class="si">${&lt;/span>&lt;span class="p">{ github.repository &lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="o">}&lt;/span>@&lt;span class="si">${&lt;/span>&lt;span class="p">{ github.sha &lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="o">}&lt;/span> 🚀
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>测试</title><link>https://jimugou.com/p/%E6%B5%8B%E8%AF%95/</link><pubDate>Sat, 15 Jul 2023 23:21:45 +0800</pubDate><guid>https://jimugou.com/p/%E6%B5%8B%E8%AF%95/</guid><description>&lt;p>好的&lt;/p>
+&lt;p>豆豆&lt;/p></description></item><item><title>我的AndroidTV折腾小记]</title><link>https://jimugou.com/p/221219/</link><pubDate>Wed, 12 Jul 2023 22:12:06 +0800</pubDate><guid>https://jimugou.com/p/221219/</guid><description>&lt;img src="https://cdn.bilicdn.tk/gh/woniu336/blog-image@main/img/Windows11.webp.webp" alt="Featured image of post 我的AndroidTV折腾小记]" />&lt;h2 id="起因">起因&lt;/h2>
 &lt;p>我向往常一样逛着小破站，虽然我不是什么玩安卓的专业人士，但是有了iOS越狱的基础，一台破安卓手机和Windows11上推出的WSA,我开始的了解了一些安卓领域的东西，大数据真的厉害，刷着刷着就给我推送了小米盒子刷&lt;code>AndroidTV&lt;/code>的视频，没想到电视盒子也能这么搞，这瞬间让我想起了被小米盒子各种广告弹窗支配的恐惧，这下子算是有救了，二话不说，直接开干。🤣&lt;/p>
 &lt;h2 id="什么是androidtv">🤔什么是AndroidTV?&lt;/h2>
 &lt;blockquote>
