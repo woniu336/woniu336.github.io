@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记与博客 on 木瓜有点甜</title><link>https://jimugou.com/post/</link><description>Recent content in 笔记与博客 on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 19 Jul 2023 23:37:45 +0800</lastBuildDate><atom:link href="https://jimugou.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>为Debian10升级到5.X Cloud内核，并安装BBR</title><link>https://jimugou.com/p/1/</link><pubDate>Wed, 19 Jul 2023 23:37:45 +0800</pubDate><guid>https://jimugou.com/p/1/</guid><description> &lt;br>
-&lt;h1 id="1-谷歌云一键重装系统-debian-10">1. 谷歌云一键重装系统 Debian 10&lt;/h1>
+&lt;h2 id="谷歌云一键重装系统">谷歌云一键重装系统&lt;/h2>
 &lt;p>&lt;strong>10.146.0.5&lt;/strong> 为内网 IP （需替换）&lt;br>
 &lt;strong>0.146.0.1&lt;/strong> 为网关&lt;/p>
+&lt;h3 id="1-一键脚本安装">1. 一键脚本安装&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -19,7 +20,7 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl"> bash &amp;lt;&lt;span class="o">(&lt;/span>wget --no-check-certificate -qO- &lt;span class="s1">&amp;#39;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span> --ip-addr 10.146.0.5 --ip-gate 10.146.0.1 --ip-mask 255.255.255.0 -u 20.04 -v &lt;span class="m">64&lt;/span> -p &lt;span class="m">123456&lt;/span> -port &lt;span class="m">22&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="更新组件">&lt;strong>更新组件&lt;/strong>&lt;/h2>
+&lt;/div>&lt;h3 id="2-更新组件">2. &lt;strong>更新组件&lt;/strong>&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -42,11 +43,11 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;hr>
-&lt;h2 id="2-更换为-cloud-内核">2. 更换为 Cloud 内核&lt;/h2>
+&lt;h3 id="3-更换为-cloud-内核">3. 更换为 Cloud 内核&lt;/h3>
 &lt;p>&lt;strong>听说 5. X 内核对 BBR 有神秘加成&lt;/strong>，手中正好有闲置小鸡，就来试试&lt;/p>
 &lt;p>Cloud 内核是什么呢？包页面对 linux-image-cloud-amd 64 的说明是：This package depends on the latest Linux kernel and modules for use on cloud platforms including Amazon EC 2, Microsoft Azure, and Google Compute Engine. 即专门为云平台而优化的，剔除了蓝牙、声音这些无用模块的同时添加了几乎只有云平台会用到的驱动程序，支持 KVM 虚拟化&lt;/p>
 &lt;hr>
-&lt;p>&lt;strong>一键安装：&lt;/strong>&lt;/p>
+&lt;h4 id="1-一键安装">1. &lt;strong>一键安装：&lt;/strong>&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -60,7 +61,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;hr>
-&lt;p>&lt;strong>删除老内核：&lt;/strong>&lt;/p>
+&lt;h4 id="2-删除老内核">2. &lt;strong>删除老内核：&lt;/strong>&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -76,7 +77,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;hr>
-&lt;p>&lt;strong>更新一下 grub：&lt;/strong>&lt;/p>
+&lt;h4 id="3-更新一下-grub">3. &lt;strong>更新一下 grub：&lt;/strong>&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -86,10 +87,10 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;hr>
-&lt;p>&lt;strong>重启：&lt;/strong>&lt;br>
-Reboot&lt;/p>
+&lt;h4 id="4-重启">4. &lt;strong>重启：&lt;/strong>&lt;/h4>
+&lt;p>Reboot&lt;/p>
 &lt;hr>
-&lt;p>&lt;strong>重启后一键开启 BBR：&lt;/strong>&lt;/p>
+&lt;h4 id="5-重启后一键开启-bbr">5. &lt;strong>重启后一键开启 BBR：&lt;/strong>&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -99,7 +100,7 @@ Reboot&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;hr>
-&lt;p>&lt;strong>检查 BBR 是否启动&lt;/strong>&lt;/p>
+&lt;h4 id="6-检查-bbr-是否启动">6. &lt;strong>检查 BBR 是否启动&lt;/strong>&lt;/h4>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
