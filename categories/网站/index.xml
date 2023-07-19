@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网站 on 木瓜有点甜</title><link>https://jimugou.com/categories/%E7%BD%91%E7%AB%99/</link><description>Recent content in 网站 on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 19 Jul 2023 23:37:45 +0800</lastBuildDate><atom:link href="https://jimugou.com/categories/%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml"/><item><title>为Debian10升级到5.X Cloud内核，并安装BBR</title><link>https://jimugou.com/p/1/</link><pubDate>Wed, 19 Jul 2023 23:37:45 +0800</pubDate><guid>https://jimugou.com/p/1/</guid><description> &lt;br>
 &lt;h2 id="谷歌云一键重装系统">谷歌云一键重装系统&lt;/h2>
 &lt;p>&lt;strong>10.146.0.5&lt;/strong> 为内网 IP （需替换）&lt;br>
-&lt;strong>0.146.0.1&lt;/strong> 为网关&lt;/p>
+&lt;strong>10.146.0.1&lt;/strong> 为网关&lt;/p>
 &lt;h3 id="1-一键脚本安装">1. 一键脚本安装&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
