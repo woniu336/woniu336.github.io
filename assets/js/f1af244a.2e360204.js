@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[282],{3419:function(e){e.exports=JSON.parse('{"title":"C/C++","slug":"/category/cc","permalink":"/docs/category/cc","navigation":{"previous":{"title":"README","permalink":"/docs/Stack"},"next":{"title":"blank","permalink":"/docs/Stack/C_C++/blank"}}}')}}]);

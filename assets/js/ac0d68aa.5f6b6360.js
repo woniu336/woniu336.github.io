@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[96],{6836:function(e){e.exports=JSON.parse('{"title":"\u5de5\u5177","slug":"/category/\u5de5\u5177","permalink":"/docs/category/\u5de5\u5177","navigation":{"previous":{"title":"\u6548\u7387\u6307\u5317","permalink":"/docs/EfficiencyGuide"},"next":{"title":"blank","permalink":"/docs/Tool-blank"}}}')}}]);
