@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-  <ShortName>阿甘的知识库</ShortName>
-  <Description>Search 阿甘的知识库</Description>
+  <ShortName>阿甘的知识库6</ShortName>
+  <Description>Search 阿甘的知识库6</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">https://woniu336.github.io/img/head.jpg</Image>
   <Url type="text/html" method="get" template="https://woniu336.github.io/search?q={searchTerms}"/>
