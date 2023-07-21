@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>建站 on 阿甘知识库</title><link>https://jimugou.com/categories/%E5%BB%BA%E7%AB%99/</link><description>Recent content in 建站 on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Jul 2023 23:04:33 +0800</lastBuildDate><atom:link href="https://jimugou.com/categories/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml"/><item><title>修改SSH端口方法</title><link>https://jimugou.com/p/4/</link><pubDate>Fri, 21 Jul 2023 23:04:33 +0800</pubDate><guid>https://jimugou.com/p/4/</guid><description>&lt;h3 id="编辑-sshd_config">编辑 sshd_config&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>建站 on 阿甘知识库</title><link>https://99bilibili.eu.org/categories/%E5%BB%BA%E7%AB%99/</link><description>Recent content in 建站 on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Jul 2023 23:04:33 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/categories/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml"/><item><title>修改SSH端口方法</title><link>https://99bilibili.eu.org/p/4/</link><pubDate>Fri, 21 Jul 2023 23:04:33 +0800</pubDate><guid>https://99bilibili.eu.org/p/4/</guid><description>&lt;h3 id="编辑-sshd_config">编辑 sshd_config&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -26,7 +26,7 @@
 &lt;/div>
 &lt;/div>&lt;blockquote>
 &lt;p>新端口使用后，发现注释后依然可以连接！&lt;strong>直接删掉 port 22&lt;/strong>&lt;/p>
-&lt;/blockquote></description></item><item><title>谷歌云第三方SSH工具登录与一键重装系统</title><link>https://jimugou.com/p/3/</link><pubDate>Fri, 21 Jul 2023 22:32:10 +0800</pubDate><guid>https://jimugou.com/p/3/</guid><description>&lt;blockquote>
+&lt;/blockquote></description></item><item><title>谷歌云第三方SSH工具登录与一键重装系统</title><link>https://99bilibili.eu.org/p/3/</link><pubDate>Fri, 21 Jul 2023 22:32:10 +0800</pubDate><guid>https://99bilibili.eu.org/p/3/</guid><description>&lt;blockquote>
 &lt;h2 id="一设置-root-密码">一，设置 root 密码&lt;/h2>
 &lt;/blockquote>
 &lt;ol>
@@ -123,7 +123,7 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">apt update -y &amp;amp;&amp;amp; apt full-upgrade -y &amp;amp;&amp;amp; apt install -y curl wget sudo socat
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>宝塔7.7.0官方原版备份一键安装</title><link>https://jimugou.com/p/1/</link><pubDate>Fri, 21 Jul 2023 12:28:24 +0800</pubDate><guid>https://jimugou.com/p/1/</guid><description>&lt;p>为什么是 7.7.0 版本，而不是其他版本呢？因为这个版本没有很旧，也没有太多限制，还可以破解&lt;/p>
+&lt;/div></description></item><item><title>宝塔7.7.0官方原版备份一键安装</title><link>https://99bilibili.eu.org/p/1/</link><pubDate>Fri, 21 Jul 2023 12:28:24 +0800</pubDate><guid>https://99bilibili.eu.org/p/1/</guid><description>&lt;p>为什么是 7.7.0 版本，而不是其他版本呢？因为这个版本没有很旧，也没有太多限制，还可以破解&lt;/p>
 &lt;blockquote>
 &lt;h2 id="开始安装">开始安装&lt;/h2>
 &lt;/blockquote>
