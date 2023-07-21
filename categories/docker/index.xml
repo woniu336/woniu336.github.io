@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记与博客 on 阿甘知识库</title><link>https://jimugou.com/post/</link><description>Recent content in 笔记与博客 on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Jul 2023 13:49:57 +0800</lastBuildDate><atom:link href="https://jimugou.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>docker 一键安装脚本</title><link>https://jimugou.com/p/2/</link><pubDate>Fri, 21 Jul 2023 13:49:57 +0800</pubDate><guid>https://jimugou.com/p/2/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on 阿甘知识库</title><link>https://jimugou.com/categories/docker/</link><description>Recent content in docker on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Jul 2023 13:49:57 +0800</lastBuildDate><atom:link href="https://jimugou.com/categories/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>docker 一键安装脚本</title><link>https://jimugou.com/p/2/</link><pubDate>Fri, 21 Jul 2023 13:49:57 +0800</pubDate><guid>https://jimugou.com/p/2/</guid><description>&lt;blockquote>
 &lt;h2 id="官方脚本-推荐">官方脚本 （推荐）&lt;/h2>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -75,63 +75,4 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">systemctl restart docker
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>宝塔7.7.0官方原版备份一键安装</title><link>https://jimugou.com/p/1/</link><pubDate>Fri, 21 Jul 2023 12:28:24 +0800</pubDate><guid>https://jimugou.com/p/1/</guid><description>&lt;img src="https://i.imgtg.com/2023/07/21/OhODBc.jpg" alt="Featured image of post 宝塔7.7.0官方原版备份一键安装" />&lt;p>为什么是 7.7.0 版本，而不是其他版本呢？因为这个版本没有很旧，也没有太多限制，还可以破解&lt;/p>
-&lt;blockquote>
-&lt;h2 id="开始安装">开始安装&lt;/h2>
-&lt;/blockquote>
-&lt;p>&lt;strong>Centos/Ubuntu/Debian 安装命令独立运行环境（py 3.7）&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-Bash" data-lang="Bash">&lt;span class="line">&lt;span class="cl">curl -sSO https://raw.githubusercontent.com/woniu336/btpanel-v7.7.0/main/install/install_panel.sh &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> bash install_panel.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>备用安装链接，适用于不能访问 GitHub 的服务器。文件公开存放在 &lt;a class="link" href="http://d.moe.ms/?btpanel-v7.7.0" target="_blank" rel="noopener"
->d.moe.ms&lt;/a>&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">curl -sSO http://d.moe.ms/AAAAA/btpanel-v7.7.0/install/install_panel.sh &amp;amp;&amp;amp; bash install_panel.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;h2 id="净化与破解">净化与破解&lt;/h2>
-&lt;/blockquote>
-&lt;p>&lt;strong>修改 hosts 文件&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">echo &amp;#39;127.0.0.1 bt.cn&amp;#39; &amp;gt;&amp;gt;/etc/hosts
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>解除强制手机登录&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rm -f /www/server/panel/data/bind.pl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>手动解锁宝塔所有付费插件为永不过期&lt;/strong>&lt;/p>
-&lt;p>文件路径：&lt;code>/www/server/panel/data/plugin.json&lt;/code>&lt;/p>
-&lt;p>搜索字符串：&lt;code>&amp;quot;endtime&amp;quot;: -1&lt;/code> 全部替换为 &lt;code>&amp;quot;endtime&amp;quot;: 999999999999&lt;/code>&lt;/p>
-&lt;p>&lt;strong>给plugin.json文件上锁防止自动修复为免费版&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">chattr +i /www/server/panel/data/plugin.json
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>注意事项 : 服务器重启后又回到&amp;quot;endtime&amp;quot;: -1 需要再次修改替换&lt;/p>
-&lt;/blockquote>
-&lt;p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
