@@ -1,35 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo on 木瓜有点甜</title><link>https://jimugou.com/tags/hugo/</link><description>Recent content in hugo on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Jul 2023 10:36:43 +0800</lastBuildDate><atom:link href="https://jimugou.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>拥抱最好用的hugo之stack</title><link>https://jimugou.com/p/2/</link><pubDate>Fri, 21 Jul 2023 10:36:43 +0800</pubDate><guid>https://jimugou.com/p/2/</guid><description>&lt;img src="https://im.gurl.eu.org/file/8e2743f9e2ec78b1eb8a3.png" alt="Featured image of post 拥抱最好用的hugo之stack" />&lt;h2 id="_缘起_">&lt;em>🙃缘起:&lt;/em>&lt;/h2>
-&lt;p>*进坑Hugo这么久了,是时候也开一篇记录一下建站过程了.*本教程是面向小白而写的,所以可能有些东西写的很罗嗦,所以大佬手下留情.本文稍微有点长,所以请保持耐心.😅&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo on 木瓜有点甜</title><link>https://jimugou.com/tags/hugo/</link><description>Recent content in hugo on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://jimugou.com/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>拥抱最好用的 hugo 之 stack</title><link>https://jimugou.com/p/2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jimugou.com/p/2/</guid><description>&lt;img src="https://im.gurl.eu.org/file/8e2743f9e2ec78b1eb8a3.png" alt="Featured image of post 拥抱最好用的 hugo 之 stack" />&lt;h2 id="_缘起_">&lt;em>🙃缘起:&lt;/em>&lt;/h2>
+&lt;p>*进坑 Hugo 这么久了, 是时候也开一篇记录一下建站过程了.*本教程是面向小白而写的, 所以可能有些东西写的很罗嗦, 所以大佬手下留情. 本文稍微有点长, 所以请保持耐心.😅&lt;/p>
 &lt;p>&lt;em>写这篇的一个主要原因有三:&lt;/em>&lt;/p>
 &lt;blockquote>
 &lt;ol>
 &lt;li>&lt;em>记录并回顾此站从新建文件夹到诞生的主要过程&lt;/em>&lt;/li>
-&lt;li>&lt;em>帮助一些小白入坑hugo&lt;/em>&lt;/li>
-&lt;li>&lt;em>使文章数加一(doge&lt;/em>&lt;/li>
+&lt;li>&lt;em>帮助一些小白入坑 hugo&lt;/em>&lt;/li>
+&lt;li>&lt;em>使文章数加一 (doge&lt;/em>&lt;/li>
 &lt;/ol>
 &lt;/blockquote>
 &lt;hr>
 &lt;h2 id="_声明_">&lt;em>📢声明:&lt;/em>&lt;/h2>
-&lt;p>&lt;em>由于本人人菜瘾大,技术十分之有限,写的代码非常之烂,都是本着能用就行写的,所以请大佬手下留情.&lt;/em>&lt;/p>
+&lt;p>&lt;em>由于本人人菜瘾大, 技术十分之有限, 写的代码非常之烂, 都是本着能用就行写的, 所以请大佬手下留情.&lt;/em>&lt;/p>
 &lt;hr>
 &lt;h2 id="_本篇教程编写环境_">&lt;em>📑本篇教程编写环境:&lt;/em>&lt;/h2>
-&lt;p>&lt;em>操作系统: &lt;code>Windows 11&lt;/code> 专业版 22H2&lt;/em>&lt;/p>
-&lt;p>&lt;em>Microsoft Edge版本 107.0.1418.62 (正式版本) (64 位)&lt;/em>&lt;/p>
-&lt;p>&lt;em>Markdown编辑器: Typora&lt;/em>&lt;/p>
+&lt;p>&lt;em>操作系统: &lt;code>Windows 11&lt;/code> 专业版 22 H 2&lt;/em>&lt;/p>
+&lt;p>&lt;em>Microsoft Edge 版本 107.0.1418.62 (正式版本) (64 位)&lt;/em>&lt;/p>
+&lt;p>&lt;em>Markdown 编辑器: Typora&lt;/em>&lt;/p>
 &lt;p>&lt;em>博客配置编辑器: VS Code&lt;/em>&lt;/p>
-&lt;p>&lt;em>命令行工具:Git、Terminal&lt;/em>&lt;/p>
-&lt;p>Hugo版本:&lt;code>hugo extended0.107.0_windows-amd64&lt;/code>&lt;/p>
-&lt;p>Hugo主题:&lt;code>hugo-theme-stack&lt;/code>&lt;/p>
-&lt;p>&lt;em>使用的主要路径: 桌面、D盘&lt;/em>&lt;/p>
+&lt;p>&lt;em>命令行工具: Git、Terminal&lt;/em>&lt;/p>
+&lt;p>Hugo 版本: &lt;code>hugo extended0.107.0_windows-amd64&lt;/code>&lt;/p>
+&lt;p>Hugo 主题: &lt;code>hugo-theme-stack&lt;/code>&lt;/p>
+&lt;p>&lt;em>使用的主要路径: 桌面、D 盘&lt;/em>&lt;/p>
 &lt;p>&lt;em>基本上就这些了….&lt;/em>&lt;/p>
-&lt;h2 id="_hugo环境搭建_">&lt;em>🧀Hugo环境搭建&lt;/em>&lt;/h2>
-&lt;p>&lt;em>使用hugo之前,必须配置hugo环境,这跟hexo要安装node和npm差不多.&lt;/em> 下载的操作建议按照先安装&lt;code>VScode&lt;/code>再安装&lt;code>GIt&lt;/code>的顺序操作,因为后面的Git有个设置选项需要先有VScode编辑器&lt;/p>
-&lt;h3 id="_安装vscode_">🎈_安装VScode_&lt;/h3>
+&lt;h2 id="_hugo-环境搭建_">&lt;em>🧀Hugo 环境搭建&lt;/em>&lt;/h2>
+&lt;p>&lt;em>使用 hugo 之前, 必须配置 hugo 环境, 这跟 hexo 要安装 node 和 npm 差不多.&lt;/em> 下载的操作建议按照先安装 &lt;code>VScode&lt;/code> 再安装 &lt;code>GIt&lt;/code> 的顺序操作, 因为后面的 Git 有个设置选项需要先有 VScode 编辑器&lt;/p>
+&lt;h3 id="_安装-vscode_">🎈_安装 VScode_&lt;/h3>
 &lt;ol>
 &lt;li>
-&lt;p>&lt;em>从官网获取VScode的安装包&lt;/em>&lt;/p>
+&lt;p>&lt;em>从官网获取 VScode 的安装包&lt;/em>&lt;/p>
 &lt;blockquote>
-&lt;p>VScode官网: &lt;a class="link" href="https://code.visualstudio.com/Download" target="_blank" rel="noopener"
+&lt;p>VScode 官网: &lt;a class="link" href="https://code.visualstudio.com/Download" target="_blank" rel="noopener"
 >https://code.visualstudio.com/Download&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;/li>
