@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Jul 2023 13:49:57 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>docker 一键安装脚本</title><link>https://jimugou.com/p/2/</link><pubDate>Fri, 21 Jul 2023 13:49:57 +0800</pubDate><guid>https://jimugou.com/p/2/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Jul 2023 22:32:10 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>谷歌云第三方SSH工具登录与一键重装系统</title><link>https://jimugou.com/p/3/</link><pubDate>Fri, 21 Jul 2023 22:32:10 +0800</pubDate><guid>https://jimugou.com/p/3/</guid><description>&lt;blockquote>
+&lt;h2 id="一设置-root-密码">一，设置 root 密码&lt;/h2>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>先选择从浏览器打开 ssh 连接服务器&lt;/li>
+&lt;li>切换到 root 账号，输入代码：&lt;code>sudo -i&lt;/code>&lt;/li>
+&lt;li>设置 root 密码，输入代码：&lt;code>passwd&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;h2 id="二开启-ssh-权限">二，开启 SSH 权限&lt;/h2>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>CentOS 和 Debian 通用，输入以下两条命令&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/PermitRootLogin no/PermitRootLogin yes/g&amp;#39;&lt;/span> /etc/ssh/sshd_config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/PasswordAuthentication no/PasswordAuthentication yes/g&amp;#39;&lt;/span> /etc/ssh/sshd_config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="2">
+&lt;li>Ubuntu 系统，输入以下两条命令&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/ #PermitRootLogin prohibit-password/PermitRootLogin yes/g&amp;#39;&lt;/span> /etc/ssh/sshd_config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sed -i &lt;span class="s1">&amp;#39;s/PasswordAuthentication no/PasswordAuthentication yes/g&amp;#39;&lt;/span> /etc/ssh/sshd_config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>重启服务器 ：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">reboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>以上就是谷歌云设置 ROOT 用户以及允许第三方 SSH 登录教程。&lt;/p>
+&lt;blockquote>
+&lt;h2 id="一键重装脚本-仅适用于谷歌云-密码123456--ssh-端口-22">一键重装脚本, 仅适用于谷歌云 (密码：123456 ) SSH 端口: 22&lt;/h2>
+&lt;/blockquote>
+&lt;p>&lt;strong>系统更新&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">apt update -y &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y wget sudo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>一键脚本&lt;/strong> （ubuntu 20.04）&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">bash &amp;lt;&lt;span class="o">(&lt;/span>wget --no-check-certificate -qO- &lt;span class="s1">&amp;#39;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&amp;#39;&lt;/span>&lt;span class="o">)&lt;/span> --ip-addr 10.146.0.3 --ip-gate 10.146.0.1 --ip-mask 255.255.255.0 -u 20.04 -v &lt;span class="m">64&lt;/span> -p &lt;span class="m">123456&lt;/span> -port &lt;span class="m">22&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>参数修改&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;strong>10.146.0.3&lt;/strong> 谷歌云 VPS 内网 IP 谷歌云后台去找&lt;/li>
+&lt;li>&lt;strong>10.146.0.1&lt;/strong> 谷歌云 VPS 内网 IP 的网关前三位数和 IP 相同第四位数为 1&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>系统参数&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>-d 10&lt;/strong> 【7、8、9、10，11】Debian&lt;/p>
+&lt;p>&lt;strong>-u 20.04&lt;/strong> 【14.04、16.04、18.04、20.04】Ubuntu&lt;/p>
+&lt;blockquote>
+&lt;h3 id="系统更新安装成功后">&lt;strong>系统更新&lt;/strong>（安装成功后）&lt;/h3>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">apt update -y &amp;amp;&amp;amp; apt full-upgrade -y &amp;amp;&amp;amp; apt install -y curl wget sudo socat
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>docker 一键安装脚本</title><link>https://jimugou.com/p/2/</link><pubDate>Fri, 21 Jul 2023 13:49:57 +0800</pubDate><guid>https://jimugou.com/p/2/</guid><description>&lt;blockquote>
 &lt;h2 id="官方脚本-推荐">官方脚本 （推荐）&lt;/h2>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
