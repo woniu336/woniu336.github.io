@@ -1,4 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>建站 on 阿甘知识库</title><link>https://jimugou.com/categories/%E5%BB%BA%E7%AB%99/</link><description>Recent content in 建站 on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Jul 2023 22:32:10 +0800</lastBuildDate><atom:link href="https://jimugou.com/categories/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml"/><item><title>谷歌云第三方SSH工具登录与一键重装系统</title><link>https://jimugou.com/p/3/</link><pubDate>Fri, 21 Jul 2023 22:32:10 +0800</pubDate><guid>https://jimugou.com/p/3/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>建站 on 阿甘知识库</title><link>https://jimugou.com/categories/%E5%BB%BA%E7%AB%99/</link><description>Recent content in 建站 on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 21 Jul 2023 23:04:33 +0800</lastBuildDate><atom:link href="https://jimugou.com/categories/%E5%BB%BA%E7%AB%99/index.xml" rel="self" type="application/rss+xml"/><item><title>修改SSH端口方法</title><link>https://jimugou.com/p/4/</link><pubDate>Fri, 21 Jul 2023 23:04:33 +0800</pubDate><guid>https://jimugou.com/p/4/</guid><description>&lt;h3 id="编辑-sshd_config">编辑 sshd_config&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">nano /etc/ssh/sshd_config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>例如：添加 33 端口，注释掉 22 端口&lt;/p>
+&lt;p>Port 33&lt;/p>
+&lt;h3 id="退出保存">退出保存&lt;/h3>
+&lt;p>&lt;code>crl+x&lt;/code>退出&lt;/p>
+&lt;p>&lt;code>y&lt;/code> 确定保存&lt;/p>
+&lt;p>回车/ 重启 reboot&lt;/p>
+&lt;h3 id="查看变更状态">查看变更状态&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">systemctl status sshd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>新端口使用后，发现注释后依然可以连接！&lt;strong>直接删掉 port 22&lt;/strong>&lt;/p>
+&lt;/blockquote></description></item><item><title>谷歌云第三方SSH工具登录与一键重装系统</title><link>https://jimugou.com/p/3/</link><pubDate>Fri, 21 Jul 2023 22:32:10 +0800</pubDate><guid>https://jimugou.com/p/3/</guid><description>&lt;blockquote>
 &lt;h2 id="一设置-root-密码">一，设置 root 密码&lt;/h2>
 &lt;/blockquote>
 &lt;ol>
@@ -63,7 +89,7 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">apt update -y &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y wget sudo
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;strong>一键脚本&lt;/strong> （ubuntu 20.04）&lt;/p>
+&lt;/div>&lt;p>&lt;strong>一键脚本&lt;/strong> （ubuntu 20.04）时间半个小时吧，耐心等待就行&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
