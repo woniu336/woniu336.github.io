@@ -167,7 +167,9 @@
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">rm -f /www/server/panel/data/bind.pl
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;strong>手动解锁宝塔所有付费插件为永不过期&lt;/strong>&lt;/p>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>手动解锁宝塔所有付费插件为永不过期&lt;/strong>&lt;/p>
+&lt;/blockquote>
 &lt;p>文件路径：&lt;code>/www/server/panel/data/plugin.json&lt;/code>&lt;/p>
 &lt;p>搜索字符串：&lt;code>&amp;quot;endtime&amp;quot;: -1&lt;/code> 全部替换为 &lt;code>&amp;quot;endtime&amp;quot;: 999999999999&lt;/code>&lt;/p>
 &lt;p>&lt;strong>给plugin.json文件上锁防止自动修复为免费版&lt;/strong>&lt;/p>
