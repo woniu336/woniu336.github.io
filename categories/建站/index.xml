@@ -10,9 +10,11 @@
 &lt;/div>&lt;p>例如：添加 33 端口，注释掉 22 端口&lt;/p>
 &lt;p>Port 33&lt;/p>
 &lt;h3 id="退出保存">退出保存&lt;/h3>
-&lt;p>&lt;code>crl+x&lt;/code>退出&lt;/p>
-&lt;p>&lt;code>y&lt;/code> 确定保存&lt;/p>
-&lt;p>回车/ 重启 reboot&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>crl+x&lt;/code> 退出&lt;/li>
+&lt;li>&lt;code>y&lt;/code> 确定保存&lt;/li>
+&lt;li>回车/ 重启 reboot&lt;/li>
+&lt;/ul>
 &lt;h3 id="查看变更状态">查看变更状态&lt;/h3>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
