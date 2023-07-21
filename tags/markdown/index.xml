@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>markdown on 木瓜有点甜</title><link>https://jimugou.com/tags/markdown/</link><description>Recent content in markdown on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 30 Jul 2022 20:46:11 +0800</lastBuildDate><atom:link href="https://jimugou.com/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>obsidian中的markdown书写范例实例</title><link>https://jimugou.com/notes/2022/08/29/223916/</link><pubDate>Sat, 30 Jul 2022 20:46:11 +0800</pubDate><guid>https://jimugou.com/notes/2022/08/29/223916/</guid><description>&lt;p>枚举 &lt;em>obsidian&lt;/em> 中支持的基本&amp;amp;&amp;amp;一点点拓展 &lt;em>markdown&lt;/em> 通用语法，以及一些obsidian特性关键机制。&lt;br>
+特性在&lt;em>obsidian&lt;/em>外的展现极可能不正常，将额外给出截图供参考。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># 几级标题就有几个\#号 &amp;lt;-转义，显示井号而不被识别为markdown语法标记
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="几级标题就有几个号--转义显示井号而不被识别为markdown语法标记">几级标题就有几个#号 &amp;lt;-转义，显示井号而不被识别为markdown语法标记&lt;/h1>
+&lt;h1 id="表格">表格&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">| *斜体* | **粗体** | ***斜粗体*** | **粗体中*包含斜体*的文字** | *斜体中**包含粗体**的文字* |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| ----------:|:-------------:|:-------------- | ---------------------------------------- | ---------------------------------------------- |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| ~~删除线~~ | &amp;lt;u&amp;gt;下划线&amp;lt;/u&amp;gt; | 一行&amp;lt;br&amp;gt;另起行 | 上标：X&amp;lt;sup&amp;gt;2&amp;lt;/sup&amp;gt; 下标：H&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;O | 内部链接：[[obsidian中的markdown书写范例实例]] |
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:right">&lt;em>斜体&lt;/em>&lt;/th>
+&lt;th style="text-align:center">&lt;strong>粗体&lt;/strong>&lt;/th>
+&lt;th style="text-align:left">&lt;em>&lt;strong>斜粗体&lt;/strong>&lt;/em>&lt;/th>
+&lt;th>&lt;strong>粗体中&lt;em>包含斜体&lt;/em>的文字&lt;/strong>&lt;/th>
+&lt;th>&lt;em>斜体中&lt;strong>包含粗体&lt;/strong>的文字&lt;/em>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:right">&lt;del>删除线&lt;/del>&lt;/td>
+&lt;td style="text-align:center">&lt;u>下划线&lt;/u>&lt;/td>
+&lt;td style="text-align:left">一行&lt;br>另起行&lt;/td>
+&lt;td>上标：X&lt;sup>2&lt;/sup> 下标：H&lt;sub>2&lt;/sub>O&lt;/td>
+&lt;td>内部链接：[[obsidian中的markdown书写范例实例]]&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="分割线">分割线&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h1 id="引用-1">引用 &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;gt; 这是第一段引用文本的第 1行
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; 这是第一段引用文本的第 2行
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>这是第一段引用文本的第 1行&lt;br>
+这是第一段引用文本的第 2行&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="标注">标注&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;gt; [!note]- 注释 点击查看类型名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; note
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!abstract]+ 摘要/总结 点击查看类型名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; abstract, summary, tldr
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!info] 信息/todo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; info, todo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!tip] 提示/要点
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; tip, hint, important
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!success] 成功/核查/完成
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; success, check, done
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!question] 问题/帮助
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; question, help, faq
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!warning] 警告/注意
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; warning, caution, attention
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!failure] 故障
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; failure, fail, missing
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!danger] 危险
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; danger, error
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!bug]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; bug
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!example] 实例
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; example
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; [!quote] 引用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;gt; quote, cite
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>[!tip] 个例常用汇总&lt;br>
+note,summary,info,tip,success,fail,question,warning,danger,bug,example,quote&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!note]- 注释 点击查看类型名&lt;br>
+note&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!abstract]+ 摘要/总结 点击查看类型名&lt;br>
+abstract, summary, tldr&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!info] 信息/todo&lt;br>
+info, todo&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!tip] 提示/要点&lt;br>
+tip, hint, important&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!success] 成功/核查/完成&lt;br>
+success, check, done&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!question] 问题/帮助&lt;br>
+question, help, faq&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!warning] 警告/注意&lt;br>
+warning, caution, attention&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!failure] 故障&lt;br>
+failure, fail, missing&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!danger] 危险&lt;br>
+danger, error&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!bug]&lt;br>
+bug&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!example] 实例&lt;br>
+example&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>[!quote] 引用&lt;br>
+quote, cite&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="有序表-2">有序表 &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">1. 项目 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2. 项目 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3. 项目 3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 1. 项目 3a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 2. 项目 3b
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol>
+&lt;li>项目 1&lt;/li>
+&lt;li>项目 2&lt;/li>
+&lt;li>项目 3
+&lt;ol>
+&lt;li>项目 3a&lt;/li>
+&lt;li>项目 3b&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="无序表-3">无序表 &lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">- 项目 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- 项目 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - 项目 2a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - 项目 2b
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>项目 1&lt;/li>
+&lt;li>项目 2
+&lt;ul>
+&lt;li>项目 2a&lt;/li>
+&lt;li>项目 2b&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="缩进与退格-4">缩进与退格 &lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;/h1>
+&lt;h1 id="任务列表-5">任务列表 &lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">- [ ] 待办任务列表 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- [ ] 待办任务列表 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- [x] 已办任务列表 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- [x] 已办任务列表 2
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 待办任务列表 1&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 待办任务列表 2&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 已办任务列表 1&lt;/li>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> 已办任务列表 2&lt;/li>
+&lt;/ul>
+&lt;h1 id="行内代码">行内代码：&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">` 这是一段行内代码 `
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">`&amp;lt;table border=&amp;#34;1&amp;#34; cellspacing=&amp;#34;0&amp;#34; width=&amp;#34;500&amp;#34; height=&amp;#34;500&amp;#34;&amp;gt;`
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">`print(&amp;#34;Hello, World!&amp;#34;)`
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">` 这是一行突出显示的文本内容 `
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">`` 这是一段能显示 `反引号` 的行内代码 ``^code
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>这是一段行内代码&lt;/code>&lt;/p>
+&lt;p>&lt;code>&amp;lt;table border=&amp;quot;1&amp;quot; cellspacing=&amp;quot;0&amp;quot; width=&amp;quot;500&amp;quot; height=&amp;quot;500&amp;quot;&amp;gt;&lt;/code>&lt;/p>
+&lt;p>&lt;code>print(&amp;quot;Hello, World!&amp;quot;)&lt;/code>&lt;/p>
+&lt;p>&lt;code>这是一行突出显示的文本内容&lt;/code>&lt;/p>
+&lt;p>&lt;code>这是一段能显示 `反引号` 的行内代码&lt;/code>^code&lt;/p>
+&lt;blockquote>
+&lt;p>[!tip]&lt;br>
+上文出现的&lt;code>^code&lt;/code>为块链接标记，在后文会提及。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="代码块">代码块：&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">```python
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#!/usr/bin/python
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># -*- coding: UTF-8 -*-
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">i = 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">while(i &amp;lt; 100):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> j = 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> while(j &amp;lt;= (i/j)):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if not(i%j): break
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> j = j + 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (j &amp;gt; i/j) : print i, &amp;#34; 是素数&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> i = i + 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">print &amp;#34;Good bye!&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">```
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="ch">#!/usr/bin/python&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># -*- coding: UTF-8 -*-&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">j&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">)):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="ow">not&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">):&lt;/span> &lt;span class="k">break&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">j&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">j&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">j&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="nb">print&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34; 是素数&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">i&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span> &lt;span class="s2">&amp;#34;Good bye!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="公式">公式&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> $E = mc^2$
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>$E = mc^2$&lt;/p>
+&lt;h1 id="注释特性">注释（特性）&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">%%这是一行Obsidian里的注释%%
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%%
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">这里是
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">一段
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">假装有
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">很多行的
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Obsidian里的
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">注释
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">编辑模式下注释才可见
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">%%
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>%% 这是一行 Obsidian 里的注释%%&lt;/p>
+&lt;p>%%
+这里是
+一段
+假装有
+很多行的
+Obsidian 里的
+注释
+编辑模式下注释才可见
+%%&lt;/p>
+&lt;h1 id="嵌入文件特性">嵌入文件（特性）&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">![[obsidian中的markdown书写范例实例#外部链接]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">![logo|200](https://i.imgur.com/5kQLnaZ.pngs &amp;#34; 悬浮提示文本 &amp;#34;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>![[obsidian中的markdown书写范例实例#外部链接]]&lt;/p>
+&lt;p>&lt;img src="https://i.imgur.com/5kQLnaZ.png"
+loading="lazy"
+alt="Imgur|200"
+>&lt;/p>
+&lt;blockquote>
+&lt;p>[!info] 支持格式&lt;/p>
+&lt;p>目前为止，Obsidian 支持以下格式的文件：&lt;br>
+Markdown 文件：md;&lt;br>
+图像文件：png, jpg, jpeg, gif, bmp, svg;&lt;br>
+音频文件：mp3, webm, wav, m4a, ogg, 3gp, flac;&lt;br>
+视频文件：mp4, webm, ogv;&lt;br>
+PDF 文件：pdf.&lt;br>
+以上类型文件都可以内嵌到笔记页面中&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">块链接：[[obsidian中的markdown书写范例实例#^code]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">块引用：![[obsidian中的markdown书写范例实例#^code]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Obsidian URI：[打开Mermaid书写范例](obsidian://open?vault=_notes&amp;amp;file=%E6%9D%82%E5%BD%95%2F%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%2Fobjekyll%E4%BD%BF%E7%94%A8%2Fobsidian%E4%BD%BF%E7%94%A8%2FMermaid%E4%B9%A6%E5%86%99%E8%8C%83%E4%BE%8B%E5%AE%9E%E4%BE%8B)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>块链接：[[obsidian中的markdown书写范例实例#^code]]&lt;/p>
+&lt;p>块引用：![[obsidian中的markdown书写范例实例#^code]]&lt;/p>
+&lt;p>Obsidian URI：&lt;a class="link" href="obsidian://open?vault=_notes&amp;amp;file=%E6%9D%82%E5%BD%95%2F%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%2Fobjekyll%E4%BD%BF%E7%94%A8%2Fobsidian%E4%BD%BF%E7%94%A8%2FMermaid%E4%B9%A6%E5%86%99%E8%8C%83%E4%BE%8B%E5%AE%9E%E4%BE%8B" >打开Mermaid书写范例&lt;/a>&lt;/p>
+&lt;h1 id="外部链接">外部链接&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[百度一下，你就知道](http://www.baidu.com &amp;#34;按住Ctrl点击跳转百度&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">变量形式表达：[百度一下，你就知道][度娘]；[知乎 - 有问题，就会有答案][知乎]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[[obsidian中的markdown书写范例实例#标注]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[度娘]: &amp;lt;http://www.baidu.com&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[知乎]: &amp;lt;https://www.zhihu.com&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;a class="link" href="http://www.baidu.com" title="按住Ctrl点击跳转百度"
+target="_blank" rel="noopener"
+>百度一下，你就知道&lt;/a>&lt;/p>
+&lt;p>变量形式表达：&lt;a class="link" href="http://www.baidu.com" target="_blank" rel="noopener"
+>百度一下，你就知道&lt;/a>；&lt;a class="link" href="https://www.zhihu.com" target="_blank" rel="noopener"
+>知乎 - 有问题，就会有答案&lt;/a>&lt;/p>
+&lt;p>[[obsidian中的markdown书写范例实例#标注]]&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">[^1]: 同个引用段落内的换行直接敲击 Enter 即可；若需添加 第二个独立引用段落，连续敲击 两下 Enter 即可；后面的 &amp;gt; 敲回车会自动补上
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[^2]: 输入文本内容后，敲击 Enter 自动补全格式，并进入 下个 有序列表；若需要在同个列表内，增加 换行显示 的内容 (但不进入下个列表)；敲击 Shift + Enter，即可另起一行输入文本；在有序列表的中间，插入一个新的列表，后面列表的 数字序号 会自动递进 一层；即便在源代码模式中修改了数字序号，渲染界面依然是 依照顺序 显示的
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[^3]: 输入文本内容后，敲击 Enter 自动补全格式，并进入 下个 无序列表；若需要在同个列表内，增加换行显示的内容 (但不进入下个列表)；敲击 Shift + Enter，即可另起一行输入文本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[^4]: 在列表和引用的书写过程中，我们需要利用 缩进 与 退格，让文章肌理分明，更具层级；缩进：Tab；退格：Shift + Tab；引用的缩进和列表不同，引用需另起一行，并额外多打一个 &amp;gt; 来完成缩进；如果要退回上一级，敲 2 下回车键即可
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[^5]: 任务列表也是可以缩进 + 退格的，操作跟 无序、有序列表一样
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>同个引用段落内的换行直接敲击 Enter 即可；若需添加 第二个独立引用段落，连续敲击 两下 Enter 即可；后面的 &amp;gt; 敲回车会自动补上&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>输入文本内容后，敲击 Enter 自动补全格式，并进入 下个 有序列表；若需要在同个列表内，增加 换行显示 的内容 (但不进入下个列表)；敲击 Shift + Enter，即可另起一行输入文本；在有序列表的中间，插入一个新的列表，后面列表的 数字序号 会自动递进 一层；即便在源代码模式中修改了数字序号，渲染界面依然是 依照顺序 显示的&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>输入文本内容后，敲击 Enter 自动补全格式，并进入 下个 无序列表；若需要在同个列表内，增加换行显示的内容 (但不进入下个列表)；敲击 Shift + Enter，即可另起一行输入文本&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>在列表和引用的书写过程中，我们需要利用 缩进 与 退格，让文章肌理分明，更具层级；缩进：Tab；退格：Shift + Tab；引用的缩进和列表不同，引用需另起一行，并额外多打一个 &amp;gt; 来完成缩进；如果要退回上一级，敲 2 下回车键即可&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5">
+&lt;p>任务列表也是可以缩进 + 退格的，操作跟 无序、有序列表一样&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item></channel></rss>
