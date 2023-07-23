@@ -77,5 +77,5 @@ apt update -y && apt full-upgrade -y && apt install -y curl wget sudo socat
 ---
 
 > 作者: [woniu336](https://github.com/woniu336)  
-> URL: https://lruihao.cn/posts/001/  
+> URL: https://99bilibili.eu.org/posts/001/  
 

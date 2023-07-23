@@ -35,5 +35,5 @@ sort date desc
 ---
 
 > 作者: [woniu336](https://github.com/woniu336)  
-> URL: https://lruihao.cn/%E4%B8%BB%E9%9D%A2%E6%9D%BF/  
+> URL: https://99bilibili.eu.org/%E4%B8%BB%E9%9D%A2%E6%9D%BF/  
 

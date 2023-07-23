@@ -173,5 +173,5 @@ over!
 ---
 
 > 作者: [woniu336](https://github.com/woniu336)  
-> URL: https://lruihao.cn/projects/bill-note/  
+> URL: https://99bilibili.eu.org/projects/bill-note/  
 

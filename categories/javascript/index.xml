@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>JavaScript - 分类 - 木瓜有点甜</title><link>https://lruihao.cn/categories/javascript/</link><description>JavaScript - 分类 - 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>310478073@qq.com (woniu336)</managingEditor><webMaster>310478073@qq.com (woniu336)</webMaster><lastBuildDate>Sun, 23 May 2021 17:15:41 +0000</lastBuildDate><atom:link href="https://lruihao.cn/categories/javascript/" rel="self" type="application/rss+xml"/><item><title>Cell Watermark</title><link>https://lruihao.cn/projects/cell-watermark/</link><pubDate>Sun, 23 May 2021 17:15:41 +0000</pubDate><author>woniu336</author><guid>https://lruihao.cn/projects/cell-watermark/</guid><description><![CDATA[<h1 id="usage">Usage</h1>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>JavaScript - 分类 - 木瓜有点甜</title><link>https://99bilibili.eu.org/categories/javascript/</link><description>JavaScript - 分类 - 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>310478073@qq.com (woniu336)</managingEditor><webMaster>310478073@qq.com (woniu336)</webMaster><lastBuildDate>Sun, 23 May 2021 17:15:41 +0000</lastBuildDate><atom:link href="https://99bilibili.eu.org/categories/javascript/" rel="self" type="application/rss+xml"/><item><title>Cell Watermark</title><link>https://99bilibili.eu.org/projects/cell-watermark/</link><pubDate>Sun, 23 May 2021 17:15:41 +0000</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/projects/cell-watermark/</guid><description><![CDATA[<h1 id="usage">Usage</h1>
 <h2 id="browser">Browser</h2>
 <ol>
 <li>
@@ -223,7 +223,7 @@
 </table>
 <h4 id="destroy">destroy()</h4>
 <p>Force destroy watermark</p>
-]]></description></item><item><title>利用腾讯云为静态页面添加“动态”相册</title><link>https://lruihao.cn/projects/cos-album/</link><pubDate>Sun, 24 Nov 2019 10:52:34 +0000</pubDate><author>woniu336</author><guid>https://lruihao.cn/projects/cos-album/</guid><description><![CDATA[<div class="featured-image">
+]]></description></item><item><title>利用腾讯云为静态页面添加“动态”相册</title><link>https://99bilibili.eu.org/projects/cos-album/</link><pubDate>Sun, 24 Nov 2019 10:52:34 +0000</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/projects/cos-album/</guid><description><![CDATA[<div class="featured-image">
         <img src="/projects/cos-album/images/view.png" referrerpolicy="no-referrer">
       </div><div class="details admonition info open">
     <div class="details-summary admonition-title">

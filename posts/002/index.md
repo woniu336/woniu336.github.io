@@ -81,5 +81,5 @@ export NVM_NODEJS_ORG_MIRROR=https://mirrors.ustc.edu.cn/node/
 ---
 
 > 作者: [woniu336](https://github.com/woniu336)  
-> URL: https://lruihao.cn/posts/002/  
+> URL: https://99bilibili.eu.org/posts/002/  
 

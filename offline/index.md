@@ -7,5 +7,5 @@
 ---
 
 > 作者: [woniu336](https://github.com/woniu336)  
-> URL: https://lruihao.cn/offline/  
+> URL: https://99bilibili.eu.org/offline/  
 

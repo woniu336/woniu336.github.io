@@ -31,5 +31,5 @@
 ---
 
 > 作者: [woniu336](https://github.com/woniu336)  
-> URL: https://lruihao.cn/friends/  
+> URL: https://99bilibili.eu.org/friends/  
 

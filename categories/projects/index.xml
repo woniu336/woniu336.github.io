@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Projects - 分类 - 木瓜有点甜</title><link>https://lruihao.cn/categories/projects/</link><description>Projects - 分类 - 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>310478073@qq.com (woniu336)</managingEditor><webMaster>310478073@qq.com (woniu336)</webMaster><lastBuildDate>Sun, 23 May 2021 17:15:41 +0000</lastBuildDate><atom:link href="https://lruihao.cn/categories/projects/" rel="self" type="application/rss+xml"/><item><title>Cell Watermark</title><link>https://lruihao.cn/projects/cell-watermark/</link><pubDate>Sun, 23 May 2021 17:15:41 +0000</pubDate><author>woniu336</author><guid>https://lruihao.cn/projects/cell-watermark/</guid><description><![CDATA[<h1 id="usage">Usage</h1>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Projects - 分类 - 木瓜有点甜</title><link>https://99bilibili.eu.org/categories/projects/</link><description>Projects - 分类 - 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>310478073@qq.com (woniu336)</managingEditor><webMaster>310478073@qq.com (woniu336)</webMaster><lastBuildDate>Sun, 23 May 2021 17:15:41 +0000</lastBuildDate><atom:link href="https://99bilibili.eu.org/categories/projects/" rel="self" type="application/rss+xml"/><item><title>Cell Watermark</title><link>https://99bilibili.eu.org/projects/cell-watermark/</link><pubDate>Sun, 23 May 2021 17:15:41 +0000</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/projects/cell-watermark/</guid><description><![CDATA[<h1 id="usage">Usage</h1>
 <h2 id="browser">Browser</h2>
 <ol>
 <li>
@@ -223,7 +223,7 @@
 </table>
 <h4 id="destroy">destroy()</h4>
 <p>Force destroy watermark</p>
-]]></description></item><item><title>基于 leancloud-storage 实现的无后端记账本</title><link>https://lruihao.cn/projects/bill-note/</link><pubDate>Tue, 02 Mar 2021 21:46:40 +0000</pubDate><author>woniu336</author><guid>https://lruihao.cn/projects/bill-note/</guid><description><![CDATA[<h2 id="起因">起因</h2>
+]]></description></item><item><title>基于 leancloud-storage 实现的无后端记账本</title><link>https://99bilibili.eu.org/projects/bill-note/</link><pubDate>Tue, 02 Mar 2021 21:46:40 +0000</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/projects/bill-note/</guid><description><![CDATA[<h2 id="起因">起因</h2>
 <div class="details admonition info open">
     <div class="details-summary admonition-title">
       <i class="icon fa-solid fa-info-circle fa-fw" aria-hidden="true"></i>起因<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
@@ -495,7 +495,7 @@ valine 可以實現無後端，那我是不是也可以，leancloud 文檔走一
 然后衍生一下，什么过年斗地主，天炸，麻将，字牌记账系统那不也是同理可得嘛！</p>
 <p>over!</p>
 <p><figure><a class="lightgallery" href="/projects/bill-note/images/demo.jpg" data-thumbnail="/projects/bill-note/images/demo.jpg" data-sub-html="<h2>效果</h2><p>Demo</p>"></a><figcaption class="image-caption">效果</figcaption>
-  </figure></p>]]></description></item><item><title>cell-blog 功能介绍与安装</title><link>https://lruihao.cn/projects/cell-blog/</link><pubDate>Sat, 25 Jul 2020 20:51:11 +0000</pubDate><author>woniu336</author><guid>https://lruihao.cn/projects/cell-blog/</guid><description><![CDATA[<div class="featured-image">
+  </figure></p>]]></description></item><item><title>cell-blog 功能介绍与安装</title><link>https://99bilibili.eu.org/projects/cell-blog/</link><pubDate>Sat, 25 Jul 2020 20:51:11 +0000</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/projects/cell-blog/</guid><description><![CDATA[<div class="featured-image">
         <img src="https://i.loli.net/2020/05/11/vHeNRG4Qi7ljrM8.png" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>基于 Laravel7 开发，Markdown 语法的个人独立博客。<a href="https://github.com/Lruihao/cell-blog"target="_blank" rel="external nofollow noopener noreferrer">Cell Blog<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a>, 也是我的毕业设计作品，目前已開源。</p>
@@ -666,7 +666,7 @@ valine 可以實現無後端，那我是不是也可以，leancloud 文檔走一
 </div><p>启动服务后，在浏览器打开<code>http://localhost/admin/</code>, 使用用户名<code>admin</code>和密码<code>admin</code>登录。</p>
 <h2 id="license">License</h2>
 <p>Cell Blog is open-sourced software licensed under the MIT license.</p>
-<p></p>]]></description></item><item><title>利用腾讯云为静态页面添加“动态”相册</title><link>https://lruihao.cn/projects/cos-album/</link><pubDate>Sun, 24 Nov 2019 10:52:34 +0000</pubDate><author>woniu336</author><guid>https://lruihao.cn/projects/cos-album/</guid><description><![CDATA[<div class="featured-image">
+<p></p>]]></description></item><item><title>利用腾讯云为静态页面添加“动态”相册</title><link>https://99bilibili.eu.org/projects/cos-album/</link><pubDate>Sun, 24 Nov 2019 10:52:34 +0000</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/projects/cos-album/</guid><description><![CDATA[<div class="featured-image">
         <img src="/projects/cos-album/images/view.png" referrerpolicy="no-referrer">
       </div><div class="details admonition info open">
     <div class="details-summary admonition-title">

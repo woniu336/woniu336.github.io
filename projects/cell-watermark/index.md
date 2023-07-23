@@ -96,5 +96,5 @@ Force destroy watermark
 ---
 
 > 作者: [woniu336](https://github.com/woniu336)  
-> URL: https://lruihao.cn/projects/cell-watermark/  
+> URL: https://99bilibili.eu.org/projects/cell-watermark/  
 

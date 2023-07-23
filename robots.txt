@@ -65,4 +65,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://lruihao.cn/sitemap.xml
+Sitemap: https://99bilibili.eu.org/sitemap.xml
