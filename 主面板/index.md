@@ -34,6 +34,6 @@ sort date desc
 
 ---
 
-> 作者: [Lruihao](https://github.com/Lruihao)  
+> 作者: [woniu336](https://github.com/woniu336)  
 > URL: https://lruihao.cn/%E4%B8%BB%E9%9D%A2%E6%9D%BF/  
 

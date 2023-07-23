@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 木瓜有点甜</title><link>https://lruihao.cn/posts/</link><description>所有文章 | 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1024@lruihao.cn (Lruihao)</managingEditor><webMaster>1024@lruihao.cn (Lruihao)</webMaster><lastBuildDate>Sun, 23 Jul 2023 11:30:15 +0800</lastBuildDate><atom:link href="https://lruihao.cn/posts/" rel="self" type="application/rss+xml"/><item><title>8899谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://lruihao.cn/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>Lruihao</author><guid>https://lruihao.cn/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 木瓜有点甜</title><link>https://lruihao.cn/posts/</link><description>所有文章 | 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>310478073@qq.com (woniu336)</managingEditor><webMaster>310478073@qq.com (woniu336)</webMaster><lastBuildDate>Sun, 23 Jul 2023 11:30:15 +0800</lastBuildDate><atom:link href="https://lruihao.cn/posts/" rel="self" type="application/rss+xml"/><item><title>8899谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://lruihao.cn/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>woniu336</author><guid>https://lruihao.cn/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
 <ol>
 <li>先选择从浏览器打开 ssh 连接服务器</li>
 <li>切换到 root 账号，输入代码：<code>sudo -i</code></li>
@@ -84,7 +84,7 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt update -y &amp;&amp; apt full-upgrade -y &amp;&amp; apt install -y curl wget sudo socat</span></span></code></pre></td></tr></table>
 </div>
-</div>]]></description></item><item><title>8899谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://lruihao.cn/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>Lruihao</author><guid>https://lruihao.cn/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
+</div>]]></description></item><item><title>8899谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://lruihao.cn/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>woniu336</author><guid>https://lruihao.cn/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
 <ol>
 <li>先选择从浏览器打开 ssh 连接服务器</li>
 <li>切换到 root 账号，输入代码：<code>sudo -i</code></li>
