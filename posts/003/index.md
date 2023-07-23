@@ -1,9 +1,7 @@
 # 3
 
 
-{{< admonition quote "quote" false >}}
-note abstract info tip success question warning failure danger bug example quote
-{{< /admonition >}}
+
 
 <!--more-->
 
@@ -11,6 +9,6 @@ note abstract info tip success question warning failure danger bug example quote
 
 ---
 
-> 作者: <no value>  
+> 作者: [woniu336](https://github.com/woniu336)  
 > URL: https://99bilibili.eu.org/posts/003/  
 
