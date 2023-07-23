@@ -30,6 +30,6 @@
 
 ---
 
-> 作者: xxxx  
-> URL: https://99bilibili.eu.org/friends/  
+> 作者: [Lruihao](https://github.com/Lruihao)  
+> URL: https://lruihao.cn/friends/  
 

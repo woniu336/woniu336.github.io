@@ -1,4 +1,4 @@
-# 889谷歌云第三方 SSH 工具登录与一键重装系统
+# 8899谷歌云第三方 SSH 工具登录与一键重装系统
 
 
 <!--more-->
@@ -77,5 +77,5 @@ apt update -y && apt full-upgrade -y && apt install -y curl wget sudo socat
 ---
 
 > 作者: <no value>  
-> URL: https://99bilibili.eu.org/001/  
+> URL: https://lruihao.cn/posts/001/  
 

@@ -52,6 +52,6 @@
 
 ---
 
-> 作者: xxxx  
-> URL: https://99bilibili.eu.org/about/  
+> 作者: [Lruihao](https://github.com/Lruihao)  
+> URL: https://lruihao.cn/about/  
 

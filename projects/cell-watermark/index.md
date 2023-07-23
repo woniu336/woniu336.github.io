@@ -95,6 +95,6 @@ Force destroy watermark
 
 ---
 
-> 作者: xxxx  
-> URL: https://99bilibili.eu.org/projects/cell-watermark/  
+> 作者: [Lruihao](https://github.com/Lruihao)  
+> URL: https://lruihao.cn/projects/cell-watermark/  
 

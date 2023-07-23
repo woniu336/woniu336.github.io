@@ -34,6 +34,6 @@ sort date desc
 
 ---
 
-> 作者: xxxx  
-> URL: https://99bilibili.eu.org/%E4%B8%BB%E9%9D%A2%E6%9D%BF/  
+> 作者: [Lruihao](https://github.com/Lruihao)  
+> URL: https://lruihao.cn/%E4%B8%BB%E9%9D%A2%E6%9D%BF/  
 
