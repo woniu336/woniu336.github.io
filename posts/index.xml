@@ -1,4 +1,5 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 木瓜有点甜</title><link>https://99bilibili.eu.org/posts/</link><description>所有文章 | 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>310478073@qq.com (woniu336)</managingEditor><webMaster>310478073@qq.com (woniu336)</webMaster><lastBuildDate>Mon, 24 Jul 2023 01:25:16 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/posts/" rel="self" type="application/rss+xml"/><item><title>图像测试</title><link>https://99bilibili.eu.org/posts/004/</link><pubDate>Mon, 24 Jul 2023 00:47:36 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/004/</guid><description>&lt;h3 id="图像测试">图像测试&lt;/h3></description></item><item><title>kkkkkk</title><link>https://99bilibili.eu.org/posts/006/</link><pubDate>Mon, 24 Jul 2023 01:25:16 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/006/</guid><description><![CDATA[<h1 id="浏览器原理---事件循环">浏览器原理 - 事件循环</h1>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - 木瓜有点甜</title><link>https://99bilibili.eu.org/posts/</link><description>所有文章 | 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>310478073@qq.com (阿甘)</managingEditor><webMaster>310478073@qq.com (阿甘)</webMaster><lastBuildDate>Mon, 24 Jul 2023 01:25:16 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/posts/" rel="self" type="application/rss+xml"/><item><title>图像测试</title><link>https://99bilibili.eu.org/posts/004/</link><pubDate>Mon, 24 Jul 2023 00:47:36 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/004/</guid><description>&lt;h3 id="图像测试">图像测试&lt;/h3>
+&lt;p>&lt;/p></description></item><item><title>kkkkkk</title><link>https://99bilibili.eu.org/posts/006/</link><pubDate>Mon, 24 Jul 2023 01:25:16 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/006/</guid><description><![CDATA[<h1 id="浏览器原理---事件循环">浏览器原理 - 事件循环</h1>
 <p>最近在抖音上刷到很多次 <a href="http://yuanjin.tech/"target="_blank" rel="external nofollow noopener noreferrer">袁进老师<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 的前端视频，然后就听了一下他的前端大师课，感觉了解一些浏览器原理后，原来工作中的一些疑问也自然解开了。</p>
 <!--more-->
 <h2 id="浏览器的进程模型">浏览器的进程模型</h2>
@@ -224,7 +225,7 @@
 <blockquote>
 <p>作者: <a href="https://github.com/Lruihao"target="_blank" rel="external nofollow noopener noreferrer">Lruihao<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 URL: <a href="https://lruihao.cn/posts/event-loop/"target="_blank" rel="external nofollow noopener noreferrer">https://lruihao.cn/posts/event-loop/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
-</blockquote>]]></description></item><item><title>谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://99bilibili.eu.org/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
+</blockquote>]]></description></item><item><title>谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://99bilibili.eu.org/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
 <ol>
 <li>先选择从浏览器打开 ssh 连接服务器</li>
 <li>切换到 root 账号，输入代码：<code>sudo -i</code></li>
@@ -310,12 +311,12 @@ URL: <a href="https://lruihao.cn/posts/event-loop/"target="_blank" rel="external
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt update -y &amp;&amp; apt full-upgrade -y &amp;&amp; apt install -y curl wget sudo socat</span></span></code></pre></td></tr></table>
 </div>
-</div>]]></description></item><item><title>测试文章</title><link>https://99bilibili.eu.org/posts/005/</link><pubDate>Mon, 24 Jul 2023 01:11:44 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/005/</guid><description><![CDATA[<p>惆怅长岑长次</p>
+</div>]]></description></item><item><title>测试文章</title><link>https://99bilibili.eu.org/posts/005/</link><pubDate>Mon, 24 Jul 2023 01:11:44 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/005/</guid><description><![CDATA[<p>惆怅长岑长次</p>
 <p></p>
 <hr>
 <p></p>
 <hr>
-<p></p>]]></description></item><item><title>解决 SourceTree 提交时候 husky 命令失败问题</title><link>https://99bilibili.eu.org/posts/002/</link><pubDate>Sun, 23 Jul 2023 13:39:37 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/002/</guid><description><![CDATA[<h2 id="问题描述">问题描述</h2>
+<p></p>]]></description></item><item><title>解决 SourceTree 提交时候 husky 命令失败问题</title><link>https://99bilibili.eu.org/posts/002/</link><pubDate>Sun, 23 Jul 2023 13:39:37 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/002/</guid><description><![CDATA[<h2 id="问题描述">问题描述</h2>
 <p>在使用 SourceTree 提交代码的时候，会出现 husky 命令失败的问题（通过命令行提交代码没有问题），如下图所示：</p>
 <p></p>
 <p>看错误，是一个 catch 参数的问题，在新版本的 Node 中，catch 参数是可以省略的，但是在旧版本中，catch 参数是必须的。</p>
@@ -422,7 +423,7 @@ URL: <a href="https://lruihao.cn/posts/event-loop/"target="_blank" rel="external
 <p>作者: <a href="https://github.com/Lruihao"target="_blank" rel="external nofollow noopener noreferrer">Lruihao<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 URL: <a href="https://lruihao.cn/posts/sourcetree-husky/"target="_blank" rel="external nofollow noopener noreferrer">https://lruihao.cn/posts/sourcetree-husky/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
 </blockquote>
-]]></description></item><item><title>kkkkkk</title><link>https://99bilibili.eu.org/posts/006/</link><pubDate>Mon, 24 Jul 2023 01:25:16 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/006/</guid><description><![CDATA[<h1 id="浏览器原理---事件循环">浏览器原理 - 事件循环</h1>
+]]></description></item><item><title>kkkkkk</title><link>https://99bilibili.eu.org/posts/006/</link><pubDate>Mon, 24 Jul 2023 01:25:16 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/006/</guid><description><![CDATA[<h1 id="浏览器原理---事件循环">浏览器原理 - 事件循环</h1>
 <p>最近在抖音上刷到很多次 <a href="http://yuanjin.tech/"target="_blank" rel="external nofollow noopener noreferrer">袁进老师<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 的前端视频，然后就听了一下他的前端大师课，感觉了解一些浏览器原理后，原来工作中的一些疑问也自然解开了。</p>
 <!--more-->
 <h2 id="浏览器的进程模型">浏览器的进程模型</h2>
@@ -648,12 +649,13 @@ URL: <a href="https://lruihao.cn/posts/sourcetree-husky/"target="_blank" rel="ex
 <blockquote>
 <p>作者: <a href="https://github.com/Lruihao"target="_blank" rel="external nofollow noopener noreferrer">Lruihao<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 URL: <a href="https://lruihao.cn/posts/event-loop/"target="_blank" rel="external nofollow noopener noreferrer">https://lruihao.cn/posts/event-loop/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
-</blockquote>]]></description></item><item><title>测试文章</title><link>https://99bilibili.eu.org/posts/005/</link><pubDate>Mon, 24 Jul 2023 01:11:44 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/005/</guid><description><![CDATA[<p>惆怅长岑长次</p>
+</blockquote>]]></description></item><item><title>测试文章</title><link>https://99bilibili.eu.org/posts/005/</link><pubDate>Mon, 24 Jul 2023 01:11:44 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/005/</guid><description><![CDATA[<p>惆怅长岑长次</p>
 <p></p>
 <hr>
 <p></p>
 <hr>
-<p></p>]]></description></item><item><title>图像测试</title><link>https://99bilibili.eu.org/posts/004/</link><pubDate>Mon, 24 Jul 2023 00:47:36 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/004/</guid><description>&lt;h3 id="图像测试">图像测试&lt;/h3></description></item><item><title>解决 SourceTree 提交时候 husky 命令失败问题</title><link>https://99bilibili.eu.org/posts/002/</link><pubDate>Sun, 23 Jul 2023 13:39:37 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/002/</guid><description><![CDATA[<h2 id="问题描述">问题描述</h2>
+<p></p>]]></description></item><item><title>图像测试</title><link>https://99bilibili.eu.org/posts/004/</link><pubDate>Mon, 24 Jul 2023 00:47:36 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/004/</guid><description>&lt;h3 id="图像测试">图像测试&lt;/h3>
+&lt;p>&lt;/p></description></item><item><title>解决 SourceTree 提交时候 husky 命令失败问题</title><link>https://99bilibili.eu.org/posts/002/</link><pubDate>Sun, 23 Jul 2023 13:39:37 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/002/</guid><description><![CDATA[<h2 id="问题描述">问题描述</h2>
 <p>在使用 SourceTree 提交代码的时候，会出现 husky 命令失败的问题（通过命令行提交代码没有问题），如下图所示：</p>
 <p></p>
 <p>看错误，是一个 catch 参数的问题，在新版本的 Node 中，catch 参数是可以省略的，但是在旧版本中，catch 参数是必须的。</p>
@@ -760,7 +762,7 @@ URL: <a href="https://lruihao.cn/posts/event-loop/"target="_blank" rel="external
 <p>作者: <a href="https://github.com/Lruihao"target="_blank" rel="external nofollow noopener noreferrer">Lruihao<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 URL: <a href="https://lruihao.cn/posts/sourcetree-husky/"target="_blank" rel="external nofollow noopener noreferrer">https://lruihao.cn/posts/sourcetree-husky/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
 </blockquote>
-]]></description></item><item><title>谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://99bilibili.eu.org/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
+]]></description></item><item><title>谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://99bilibili.eu.org/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
 <ol>
 <li>先选择从浏览器打开 ssh 连接服务器</li>
 <li>切换到 root 账号，输入代码：<code>sudo -i</code></li>
