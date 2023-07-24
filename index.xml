@@ -147,7 +147,8 @@
 </div>
 </div><p>点击按钮后，会发生什么呢？</p>
 <p>&lt;复制代码自行演示&gt;</p>
-<p></p>
+<p><figure><a class="lightgallery" href="/posts/006/images/36381556.jpg" data-thumbnail="/posts/006/images/36381556.jpg" data-sub-html="<h2>ffd</h2><p>55</p>"></a><figcaption class="image-caption">ffd</figcaption>
+  </figure></p>
 <h3 id="任务有优先级吗">任务有优先级吗？</h3>
 <p>任务没有优先级，在消息队列中先进先出</p>
 <p>但<strong>消息队列是有优先级的</strong></p>
@@ -176,6 +177,10 @@
 <p></p>
 <p></p>
 <p></p>
+<p><figure><a class="lightgallery" href="/posts/006/images/blog3.png" data-thumbnail="/posts/006/images/blog3.png" data-sub-html="<h2>img</h2><p>d</p>"></a><figcaption class="image-caption">img</figcaption>
+  </figure></p>
+<p><figure><a class="lightgallery" href="/posts/006/images/image-20230724022726403.png" data-thumbnail="/posts/006/images/image-20230724022726403.png" data-sub-html="<h2>image-20230724022726403</h2><p>dd</p>"></a><figcaption class="image-caption">image-20230724022726403</figcaption>
+  </figure></p>
 <div class="highlight" id="id-2"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -224,15 +229,16 @@ URL: <a href="https://lruihao.cn/posts/event-loop/"target="_blank" rel="external
 <hr>
 <p></p>
 <hr>
-<p></p>]]></description></item><item><title>编辑测试666</title><link>https://99bilibili.eu.org/posts/004/</link><pubDate>Mon, 24 Jul 2023 00:47:36 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/004/</guid><description><![CDATA[<div class="details admonition quote">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-quote-right fa-fw" aria-hidden="true"></i>quote<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content">note abstract info tip success question warning failure danger bug example quote</div>
-    </div>
-  </div>
-<p>Ffff</p>]]></description></item><item><title>3</title><link>https://99bilibili.eu.org/posts/003/</link><pubDate>Mon, 24 Jul 2023 00:16:41 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/003/</guid><description>&lt;p>测试&lt;/p></description></item><item><title>解决 SourceTree 提交时候 husky 命令失败问题</title><link>https://99bilibili.eu.org/posts/002/</link><pubDate>Sun, 23 Jul 2023 13:39:37 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/002/</guid><description><![CDATA[<h2 id="问题描述">问题描述</h2>
+<p></p>]]></description></item><item><title>图像测试</title><link>https://99bilibili.eu.org/posts/004/</link><pubDate>Mon, 24 Jul 2023 00:47:36 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/004/</guid><description><![CDATA[<h3 id="图像测试">图像测试</h3>
+<p></p>
+<p><a href="https://blog.csdn.net/muxuen/article/details/123574865"target="_blank" rel="external nofollow noopener noreferrer">测试连接<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
+<p><a href="https://blog.csdn.net/muxuen/article/details/123574865"target="_blank" rel="external nofollow noopener noreferrer">haod<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
+<p><a href="https://blog.csdn.net/muxuen/article/details/123574865"target="_blank" rel="external nofollow noopener noreferrer">好的<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
+
+<hr>
+
+<p></p>
+<p></p>]]></description></item><item><title>解决 SourceTree 提交时候 husky 命令失败问题</title><link>https://99bilibili.eu.org/posts/002/</link><pubDate>Sun, 23 Jul 2023 13:39:37 +0800</pubDate><author>woniu336</author><guid>https://99bilibili.eu.org/posts/002/</guid><description><![CDATA[<h2 id="问题描述">问题描述</h2>
 <p>在使用 SourceTree 提交代码的时候，会出现 husky 命令失败的问题（通过命令行提交代码没有问题），如下图所示：</p>
 <p></p>
 <p>看错误，是一个 catch 参数的问题，在新版本的 Node 中，catch 参数是可以省略的，但是在旧版本中，catch 参数是必须的。</p>
