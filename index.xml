@@ -337,7 +337,7 @@ URL: <a href="https://lruihao.cn/posts/event-loop/"target="_blank" rel="external
 <p>作者: <a href="https://github.com/Lruihao"target="_blank" rel="external nofollow noopener noreferrer">Lruihao<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
 URL: <a href="https://lruihao.cn/posts/sourcetree-husky/"target="_blank" rel="external nofollow noopener noreferrer">https://lruihao.cn/posts/sourcetree-husky/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
 </blockquote>
-]]></description></item><item><title>谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://99bilibili.eu.org/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
+]]></description></item><item><title>66谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://99bilibili.eu.org/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
 <ol>
 <li>先选择从浏览器打开 ssh 连接服务器</li>
 <li>切换到 root 账号，输入代码：<code>sudo -i</code></li>
