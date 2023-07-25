@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记与博客 on 木瓜有点甜</title><link>https://99bilibili.eu.org/post/</link><description>Recent content in 笔记与博客 on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 15:40:01 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>docker 一键安装脚本</title><link>https://99bilibili.eu.org/p/1/</link><pubDate>Tue, 25 Jul 2023 15:40:01 +0800</pubDate><guid>https://99bilibili.eu.org/p/1/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记与博客 on 木瓜有点甜</title><link>https://99bilibili.eu.org/post/</link><description>Recent content in 笔记与博客 on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 21:05:44 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在 VM 虚拟机上安装 macOS 14 索诺玛 最新系统?</title><link>https://99bilibili.eu.org/p/2/</link><pubDate>Tue, 25 Jul 2023 21:05:44 +0800</pubDate><guid>https://99bilibili.eu.org/p/2/</guid><description>&lt;h1 id="如果你想在-windows-电脑上体验苹果最新的-macos-14-sonoma-系统">如果你想在 Windows 电脑上体验苹果最新的 macOS 14 Sonoma 系统！&lt;/h1>
+&lt;h1 id="那么跟着我步骤来进行安装吧">那么跟着我步骤来进行安装吧~&lt;/h1>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/32ada962f6d5bcfa802f9917c1f1a24c.webp"
+loading="lazy"
+>&lt;/p>
+&lt;h1 id="安装步骤">安装步骤：&lt;/h1>
+&lt;p>1、首先下载并安装 VMWare 虚拟机软件**【&lt;a class="link" href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html" target="_blank" rel="noopener"
+>官网下载&lt;/a>】**&lt;/p>
+&lt;ol start="2">
+&lt;li>下载**【&lt;a class="link" href="https://github.com/paolo-projects/unlocker" target="_blank" rel="noopener"
+>VMWare Unlocker】&lt;/a>**，&lt;strong>以管理员身份运行 win-install&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;p>3.下载 macOS 14 索诺玛 （Sonoma）的 ISO 系统文件【&lt;strong>&lt;a class="link" href="https://www.mediafire.com/file/lzlounvkwazy948/macOS&amp;#43;Sonoma&amp;#43;ISO.iso/file" target="_blank" rel="noopener"
+>点击下载&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>4.创建虚拟机，转到&lt;strong>我的文档 -&amp;gt; 虚拟机 -&amp;gt; macOS 14 虚拟机文件，&lt;/strong>&lt;/p>
+&lt;p>然后在 &lt;strong>右键单击&lt;/strong>​​ 2 KB 的&lt;strong>macOS 14 (.VMX) 文件，然后选择****使用记事本打开，并在底部输入以下内容：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">smc.version = &amp;#34;0&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>全选代码&lt;/p>
+&lt;p>复制&lt;/p>
+&lt;p>5.正式开始安装&lt;/p>
+&lt;p>启用以太网：&lt;/p>
+&lt;p>搜索 ethernet0.virtualDev = &amp;ldquo;e1000e&amp;rdquo; 并将 &lt;strong>e1000e&lt;/strong>替换 为 &lt;strong>vmxnet3&lt;/strong> 并保存文件。&lt;/p></description></item><item><title>docker 一键安装脚本</title><link>https://99bilibili.eu.org/p/1/</link><pubDate>Tue, 25 Jul 2023 15:40:01 +0800</pubDate><guid>https://99bilibili.eu.org/p/1/</guid><description>&lt;blockquote>
 &lt;h2 id="官方脚本-推荐">官方脚本 （推荐）&lt;/h2>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
