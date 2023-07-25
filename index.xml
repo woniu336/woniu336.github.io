@@ -1,4 +1,112 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木瓜有点甜</title><link>https://99bilibili.eu.org/</link><description>Recent content on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 26 Jul 2023 00:34:10 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker 项目整理 （持续更新中）</title><link>https://99bilibili.eu.org/p/11/</link><pubDate>Wed, 26 Jul 2023 00:34:10 +0800</pubDate><guid>https://99bilibili.eu.org/p/11/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/07/9f6b5256cba670cde842c50fe9c06a61.webp" alt="Featured image of post Docker 项目整理 （持续更新中）" />&lt;h2 id="nginx-proxy-manager-反向代理神器">Nginx Proxy Manager 反向代理神器&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木瓜有点甜</title><link>https://99bilibili.eu.org/</link><description>Recent content on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 26 Jul 2023 00:39:14 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>网站远程自动备份方法分享</title><link>https://99bilibili.eu.org/p/12/</link><pubDate>Wed, 26 Jul 2023 00:39:14 +0800</pubDate><guid>https://99bilibili.eu.org/p/12/</guid><description>&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/0CkomEpfbhk"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;blockquote>
+&lt;p>将 vps 中 home/web 目录打包并传到指定 VPS 的 home 目录&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="手动备份迁移">&lt;strong>手动备份迁移&lt;/strong>&lt;/h2>
+&lt;h3 id="按时间戳打包">&lt;strong>按时间戳打包&lt;/strong>&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd /home/ &amp;amp;&amp;amp; tar czvf web_$(date +&amp;#34;%Y%m%d%H%M%S&amp;#34;).tar.gz web
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="传输最新的tar压缩包到其他vps">&lt;strong>传输最新的tar压缩包到其他VPS&lt;/strong>&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd /home/ &amp;amp;&amp;amp; ls -t /home/*.tar.gz | head -1 | xargs -I {} scp {} root@0.0.0.0:/home/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="只保留3个压缩包">&lt;strong>只保留3个压缩包&lt;/strong>&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd /home/ &amp;amp;&amp;amp; ls -t /home/*.tar.gz | tail -n +4 | xargs -I {} rm {}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="远端机器解压最新tar文件">&lt;strong>远端机器解压最新tar文件&lt;/strong>&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd /home/ &amp;amp;&amp;amp; ls -t /home/*.tar.gz | head -1 | xargs -I {} tar -xzf {}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="自动备份迁移">&lt;strong>自动备份迁移&lt;/strong>&lt;/h3>
+&lt;p>&lt;strong>下载sh脚本&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">apt update -y &amp;amp;&amp;amp; apt install -y wget sudo sshpass
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cd /home
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">wget beifen.sh https://raw.githubusercontent.com/kejilion/sh/main/beifen.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">chmod +x beifen.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">nano beifen.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>运行sh脚本&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">./beifen.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>定时任务&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">(crontab -l ; echo &amp;#34;0 2 * * 1 /home/beifen.sh&amp;#34;) | crontab -
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Docker 项目整理 （持续更新中）</title><link>https://99bilibili.eu.org/p/11/</link><pubDate>Wed, 26 Jul 2023 00:34:10 +0800</pubDate><guid>https://99bilibili.eu.org/p/11/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/07/9f6b5256cba670cde842c50fe9c06a61.webp" alt="Featured image of post Docker 项目整理 （持续更新中）" />&lt;h2 id="nginx-proxy-manager-反向代理神器">Nginx Proxy Manager 反向代理神器&lt;/h2>
 &lt;p>1.&lt;strong>更新环境&lt;/strong>&lt;br>
 &lt;br>&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
