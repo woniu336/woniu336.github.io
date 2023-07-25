@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记与博客 on 木瓜有点甜</title><link>https://99bilibili.eu.org/post/</link><description>Recent content in 笔记与博客 on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 21:05:44 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>如何在 VM 虚拟机上安装 macOS 14 索诺玛 最新系统?</title><link>https://99bilibili.eu.org/p/2/</link><pubDate>Tue, 25 Jul 2023 21:05:44 +0800</pubDate><guid>https://99bilibili.eu.org/p/2/</guid><description>&lt;h1 id="如果你想在-windows-电脑上体验苹果最新的-macos-14-sonoma-系统">如果你想在 Windows 电脑上体验苹果最新的 macOS 14 Sonoma 系统！&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记与博客 on 木瓜有点甜</title><link>https://99bilibili.eu.org/post/</link><description>Recent content in 笔记与博客 on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 22:09:19 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Chrome 书签实时备份、同步方案</title><link>https://99bilibili.eu.org/p/3/</link><pubDate>Tue, 25 Jul 2023 22:09:19 +0800</pubDate><guid>https://99bilibili.eu.org/p/3/</guid><description>&lt;h2 id="关于">关于&lt;/h2>
+&lt;p>BookmarkHub 是一款浏览器插件，可以在不同浏览器之间同步你的书签。&lt;/p>
+&lt;p>适用于各大主流浏览器，如 Chrome、Firefox、Microsoft Edge 等。&lt;/p>
+&lt;p>它使用 GitHub 的 Gist 记录来存储浏览器的书签，可以放心安全的使用。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/7124130c5219b8a00b66b170854f66ed.webp"
+loading="lazy"
+>
+&lt;img src="https://r2.leshans.eu.org/2023/07/a740371de6ac09f82f1673c838a45816.webp"
+loading="lazy"
+>
+&lt;img src="https://r2.leshans.eu.org/2023/07/ed5ac2a8e6a314e7bf1453525b389de0.webp"
+loading="lazy"
+>&lt;/p>
+&lt;h2 id="功能">功能&lt;/h2>
+&lt;ul>
+&lt;li>不需要注册特殊账号，只需要用你的 GitHub 账号的 Token 和 Gist&lt;/li>
+&lt;li>一键上传下载书签&lt;/li>
+&lt;li>一键清空本地所有书签&lt;/li>
+&lt;li>支持跨电脑跨浏览器同步书签&lt;/li>
+&lt;li>支持显示本地和远程书签的数量&lt;/li>
+&lt;/ul>
+&lt;h2 id="下载安装">下载安装&lt;/h2>
+&lt;blockquote>
+&lt;p>本插件需要把书签存储到 Gist 中，所以请确保有 GitHub 账号或可以通过网络注册 GitHub 账号。&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://chrome.google.com/webstore/detail/bookmarkhub-sync-bookmark/fohimdklhhcpcnpmmichieidclgfdmol" target="_blank" rel="noopener"
+>Chrome 浏览器&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://addons.mozilla.org/zh-CN/firefox/addon/BookmarkHub/" target="_blank" rel="noopener"
+>Firefox 浏览器&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://microsoftedge.microsoft.com/addons/detail/BookmarkHub/fdnmfpogadcljhecfhdikdecbkggfmgk" target="_blank" rel="noopener"
+>Microsoft Edge 浏览器&lt;/a>&lt;/li>
+&lt;li>Opera 浏览器&lt;/li>
+&lt;li>其他基于 Chromium 内核的浏览器&lt;/li>
+&lt;/ul>
+&lt;!-- USAGE EXAMPLES -->
+&lt;h2 id="使用方法">使用方法&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://github.com/login" target="_blank" rel="noopener"
+>登陆&lt;/a> GitHub，如果没有账号请点此&lt;a class="link" href="https://github.com/join" target="_blank" rel="noopener"
+>注册&lt;/a>。&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/settings/tokens/new" target="_blank" rel="noopener"
+>创建一个可以管理 gist 的 token&lt;/a>。&lt;/li>
+&lt;li>&lt;a class="link" href="https://gist.github.com" target="_blank" rel="noopener"
+>创建一个私有的 gist&lt;/a>。&lt;strong>注意：如果是公开的 gist，你的书签是可以被他人搜索到的。&lt;/strong>&lt;/li>
+&lt;li>在浏览器的应用商店下载 BookmarkHub，点击插件的设置按钮，在弹出的设置窗口填入 token 和 gist ID，然后你就可以上传下载书签了。&lt;/li>
+&lt;/ol>
+&lt;!-- ROADMAP -->
+&lt;h2 id="待实现的功能">待实现的功能&lt;/h2>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> 自动同步书签&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 支持 webdav 协议&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 移动端&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 导入导出&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> 分享书签&lt;/li>
+&lt;/ul>
+&lt;!-- LICENSE -->
+&lt;h2 id="license">License&lt;/h2>
+&lt;p>See &lt;code>LICENSE&lt;/code> for more information.&lt;/p>
+&lt;!-- CONTACT -->
+&lt;h2 id="contact">Contact&lt;/h2>
+&lt;p>Dudor&lt;/p>
+&lt;p>Project Link: &lt;a class="link" href="https://github.com/dudor/BookmarkHub" target="_blank" rel="noopener"
+>https://github.com/dudor/BookmarkHub&lt;/a>&lt;/p></description></item><item><title>如何在 VM 虚拟机上安装 macOS 14 索诺玛 最新系统?</title><link>https://99bilibili.eu.org/p/2/</link><pubDate>Tue, 25 Jul 2023 21:05:44 +0800</pubDate><guid>https://99bilibili.eu.org/p/2/</guid><description>&lt;h1 id="如果你想在-windows-电脑上体验苹果最新的-macos-14-sonoma-系统">如果你想在 Windows 电脑上体验苹果最新的 macOS 14 Sonoma 系统！&lt;/h1>
 &lt;h1 id="那么跟着我步骤来进行安装吧">那么跟着我步骤来进行安装吧~&lt;/h1>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/32ada962f6d5bcfa802f9917c1f1a24c.webp"
 loading="lazy"
