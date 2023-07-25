@@ -1,426 +1,213 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>木瓜有点甜</title><link>https://99bilibili.eu.org/</link><description>探索、分享、记录自己在工作与生活中,学习到的一些东西。欢迎来到木瓜有点甜的博客.</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>310478073@qq.com (阿甘)</managingEditor><webMaster>310478073@qq.com (阿甘)</webMaster><lastBuildDate>Mon, 24 Jul 2023 16:06:22 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>测试007</title><link>https://99bilibili.eu.org/posts/007/</link><pubDate>Mon, 24 Jul 2023 16:06:22 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/007/</guid><description>&lt;p>啛啛喳喳&lt;/p></description></item><item><title>kkkkkk</title><link>https://99bilibili.eu.org/posts/006/</link><pubDate>Mon, 24 Jul 2023 01:25:16 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/006/</guid><description><![CDATA[<h1 id="浏览器原理---事件循环">浏览器原理 - 事件循环</h1>
-<p>最近在抖音上刷到很多次 <a href="http://yuanjin.tech/"target="_blank" rel="external nofollow noopener noreferrer">袁进老师<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a> 的前端视频，然后就听了一下他的前端大师课，感觉了解一些浏览器原理后，原来工作中的一些疑问也自然解开了。</p>
-<!--more-->
-<h2 id="浏览器的进程模型">浏览器的进程模型</h2>
-<h3 id="何为进程">何为进程？</h3>
-<p>程序运行需要有它自己专属的内存空间，可以把这块内存空间简单的理解为进程</p>
-
-<p>每个应用至少有一个进程，进程之间相互独立，即使要通信，也需要双方同意。</p>
-<h3 id="何为线程">何为线程？</h3>
-<p>有了进程后，就可以运行程序的代码了。</p>
-<p>运行代码的「人」称之为「线程」。</p>
-<p>一个进程至少有一个线程，所以在进程开启后会自动创建一个线程来运行代码，该线程称之为主线程。</p>
-<p>如果程序需要同时执行多块代码，主线程就会启动更多的线程来执行代码，所以一个进程中可以包含多个线程</p>
-<h3 id="浏览器有哪些进程和线程">浏览器有哪些进程和线程？</h3>
-<p><strong>浏览器是一个多进程多线程的应用程序</strong>，浏览器内部工作极其复杂。</p>
-<p>为了避免相互影响，为了减少连环崩溃的几率，当启动浏览器后，它会自动启动多个进程。</p>
-
-<blockquote>
-<p>可以在浏览器的任务管理器中查看当前的所有进程</p>
-</blockquote>
-<p>其中，最主要的进程有：</p>
-<ol>
-<li>
-<p>浏览器进程</p>
-<p>主要负责界面显示、用户交互、子进程管理等。浏览器进程内部会启动多个线程处理不同的任务。</p>
-</li>
-<li>
-<p>网络进程</p>
-<p>负责加载网络资源。网络进程内部会启动多个线程来处理不同的网络任务。</p>
-</li>
-<li>
-<p><strong>渲染进程</strong>（本篇重点讲解的进程）</p>
-<p>渲染进程启动后，会开启一个<strong>渲染主线程</strong>，主线程负责执行 HTML、CSS、JS 代码。</p>
-<p>默认情况下，浏览器会为每个标签页开启一个新的渲染进程，以保证不同的标签页之间不相互影响。</p>
-<blockquote>
-<p>将来该默认模式可能会有所改变，有兴趣的同学可参见 <a href="https://chromium.googlesource.com/chromium/src/&#43;/main/docs/process_model_and_site_isolation.md#Modes-and-Availability"target="_blank" rel="external nofollow noopener noreferrer">chrome 官方说明文档<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
-</blockquote>
-<p></p>
-</li>
-</ol>
-<h2 id="渲染主线程是如何工作的">渲染主线程是如何工作的？</h2>
-<p>渲染主线程是浏览器中最繁忙的线程，需要它处理的任务包括但不限于：</p>
-<ul>
-<li>解析 HTML</li>
-<li>解析 CSS</li>
-<li>计算样式</li>
-<li>布局</li>
-<li>处理图层</li>
-<li>每秒把页面画 60 次</li>
-<li>执行全局 JS 代码</li>
-<li>执行事件处理函数</li>
-<li>执行计时器的回调函数</li>
-<li>&hellip;&hellip;</li>
-</ul>
-<p></p>
-<blockquote>
-<p>思考题：为什么渲染进程不适用多个线程来处理这些事情？</p>
-</blockquote>
-<p>要处理这么多的任务，主线程遇到了一个前所未有的难题：如何调度任务？</p>
-<p>比如：</p>
-<ul>
-<li>我正在执行一个 JS 函数，执行到一半的时候用户点击了按钮，我该立即去执行点击事件的处理函数吗？</li>
-<li>我正在执行一个 JS 函数，执行到一半的时候某个计时器到达了时间，我该立即去执行它的回调吗？</li>
-<li>浏览器进程通知我“用户点击了按钮”，与此同时，某个计时器也到达了时间，我应该处理哪一个呢？</li>
-<li>&hellip;&hellip;</li>
-</ul>
-<p>渲染主线程想出了一个绝妙的主意来处理这个问题：排队</p>
-<p><figure><a class="lightgallery" href="images/202208092230847.png" data-thumbnail="images/202208092230847.png" data-sub-html="<h2>消息队列</h2><p>所有要执行的任务都要排队，FIFO</p>"></a><figcaption class="image-caption">消息队列</figcaption>
-  </figure></p>
-<ol>
-<li>在最开始的时候，渲染主线程会进入一个无限循环</li>
-<li>每一次循环会检查消息队列中是否有任务存在。如果有，就取出第一个任务执行，执行完一个后进入下一次循环；如果没有，则进入休眠状态。</li>
-<li>其他所有线程（包括其他进程的线程）可以随时向消息队列添加任务。新任务会加到消息队列的末尾。在添加新任务时，如果主线程是休眠状态，则会将其唤醒以继续循环拿取任务</li>
-</ol>
-<p>这样一来，就可以让每个任务有条不紊的、持续的进行下去了。<strong>整个过程，被称之为事件循环（消息循环）</strong>。</p>
-<p></p>
-<h2 id="若干解释">若干解释</h2>
-<h3 id="何为异步">何为异步？</h3>
-<p>代码在执行过程中，会遇到一些无法立即处理的任务，比如：</p>
-<ul>
-<li>计时完成后需要执行的任务 —— <code>setTimeout</code>、<code>setInterval</code></li>
-<li>网络通信完成后需要执行的任务 &ndash; <code>XHR</code>、<code>Fetch</code></li>
-<li>用户操作后需要执行的任务 &ndash; <code>addEventListener</code></li>
-</ul>
-<p>如果让渲染主线程等待这些任务的时机达到，就会导致主线程长期处于「阻塞」的状态，从而导致浏览器「卡死」</p>
-<p><figure><a class="lightgallery" href="images/202208101043348.png" data-thumbnail="images/202208101043348.png" data-sub-html="<h2>同步策略</h2><p>同步策略会导致卡死</p>"></a><figcaption class="image-caption">同步策略</figcaption>
-  </figure></p>
-<p><strong>渲染主线程承担着极其重要的工作，无论如何都不能阻塞！</strong></p>
-<p>因此，浏览器选择<strong>异步</strong>来解决这个问题</p>
-<p><figure><a class="lightgallery" href="images/202208101048899.png" data-thumbnail="images/202208101048899.png" data-sub-html="<h2>异步策略</h2><p>异步策略，渲染主线程永不阻塞</p>"></a><figcaption class="image-caption">异步策略</figcaption>
-  </figure></p>
-<p>使用异步的方式，<strong>渲染主线程永不阻塞</strong></p>
-<div class="details admonition question">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-question-circle fa-fw" aria-hidden="true"></i>面试题：如何理解 JS 的异步？<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content"><p>参考答案：</p>
-<p>JS 是一门单线程的语言，这是因为它运行在浏览器的渲染主线程中，而渲染主线程只有一个。</p>
-<p>而渲染主线程承担着诸多的工作，渲染页面、执行 JS 都在其中运行。</p>
-<p>如果使用同步的方式，就极有可能导致主线程产生阻塞，从而导致消息队列中的很多其他任务无法得到执行。这样一来，一方面会导致繁忙的主线程白白的消耗时间，另一方面导致页面无法及时更新，给用户造成卡死现象。</p>
-<p>所以浏览器采用异步的方式来避免。具体做法是当某些任务发生时，比如计时器、网络、事件监听，主线程将任务交给其他线程去处理，自身立即结束任务的执行，转而执行后续代码。当其他线程完成时，将事先传递的回调函数包装成任务，加入到消息队列的末尾排队，等待主线程调度执行。</p>
-<p>在这种异步模式下，浏览器永不阻塞，从而最大限度的保证了单线程的流畅运行。</p>
-</div>
-    </div>
-  </div>
-<h3 id="js-为何会阻碍渲染">JS 为何会阻碍渲染？</h3>
-<p>先看代码</p>
-<div class="highlight" id="id-1"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mr.Yuan is awesome!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>change<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">h1</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1">// 死循环指定的时间
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">function</span> <span class="nx">delay</span><span class="p">(</span><span class="nx">duration</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">start</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">-</span> <span class="nx">start</span> <span class="o">&lt;</span> <span class="nx">duration</span><span class="p">)</span> <span class="p">{}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">h1</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;袁老师很帅！&#39;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">delay</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="p">};</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>点击按钮后，会发生什么呢？</p>
-<p>&lt;复制代码自行演示&gt;</p>
-<p><figure><a class="lightgallery" href="/posts/006/images/36381556.jpg" data-thumbnail="/posts/006/images/36381556.jpg" data-sub-html="<h2>ffd</h2><p>55</p>"></a><figcaption class="image-caption">ffd</figcaption>
-  </figure></p>
-<h3 id="任务有优先级吗">任务有优先级吗？</h3>
-<p>任务没有优先级，在消息队列中先进先出</p>
-<p>但<strong>消息队列是有优先级的</strong></p>
-<p>根据 W3C 的最新解释：</p>
-<ul>
-<li>每个任务都有一个任务类型，同一个类型的任务必须在一个队列，不同类型的任务可以分属于不同的队列。
-在一次事件循环中，浏览器可以根据实际情况从不同的队列中取出任务执行。</li>
-<li>浏览器必须准备好一个微队列，微队列中的任务优先所有其他任务执行
-<a href="https://html.spec.whatwg.org/multipage/webappapis.html#perform-a-microtask-checkpoint"target="_blank" rel="external nofollow noopener noreferrer">https://html.spec.whatwg.org/multipage/webappapis.html#perform-a-microtask-checkpoint<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
-</ul>
-<blockquote>
-<p>随着浏览器的复杂度急剧提升，W3C 不再使用宏队列的说法</p>
-</blockquote>
-<p>在目前 chrome 的实现中，至少包含了下面的队列：</p>
-<ul>
-<li>微队列：用户存放需要最快执行的任务，优先级「最高」</li>
-<li>延时队列：用于存放计时器到达后的回调任务，优先级「中」</li>
-<li>交互队列：用于存放用户操作后产生的事件处理任务，优先级「高」</li>
-</ul>
-<p></p>
-<p><figure><a class="lightgallery" href="/posts/006/images/image-20230724020539746.png" data-thumbnail="/posts/006/images/image-20230724020539746.png" data-sub-html="<h2>image-20230724020539746</h2><p>微队列、延时队列、交互队列</p>"></a><figcaption class="image-caption">image-20230724020539746</figcaption>
-  </figure></p>
-<p>添加任务到微队列的主要方式主要是使用 Promise、MutationObserver，例如：</p>
-
-
-<p></p>
-<p></p>
-<p></p>
-<p><figure><a class="lightgallery" href="/posts/006/images/blog3.png" data-thumbnail="/posts/006/images/blog3.png" data-sub-html="<h2>img</h2><p>d</p>"></a><figcaption class="image-caption">img</figcaption>
-  </figure></p>
-<p><figure><a class="lightgallery" href="/posts/006/images/image-20230724022726403.png" data-thumbnail="/posts/006/images/image-20230724022726403.png" data-sub-html="<h2>image-20230724022726403</h2><p>dd</p>"></a><figcaption class="image-caption">image-20230724022726403</figcaption>
-  </figure></p>
-<div class="highlight" id="id-2"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 立即把一个函数添加到微队列
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">().</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{});</span></span></span></code></pre></td></tr></table>
-</div>
-</div><p>浏览器还有很多其他的队列，由于和我们开发关系不大，不作考虑。</p>
-<div class="details admonition question">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-question-circle fa-fw" aria-hidden="true"></i>面试题：阐述一下 JS 的事件循环<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content"><p>参考答案：</p>
-<p>事件循环又叫做消息循环，是浏览器渲染主线程的工作方式。</p>
-<p>在 Chrome 的源码中，它开启一个不会结束的 for 循环，每次循环从消息队列中取出第一个任务执行，而其他线程只需要在合适的时候将任务加入到队列末尾即可。</p>
-<p>过去把消息队列简单分为宏队列和微队列，这种说法目前已无法满足复杂的浏览器环境，取而代之的是一种更加灵活多变的处理方式。</p>
-<p>根据 W3C 官方的解释，每个任务有不同的类型，同类型的任务必须在同一个队列，不同的任务可以属于不同的队列。不同任务队列有不同的优先级，在一次事件循环中，由浏览器自行决定取哪一个队列的任务。但浏览器必须有一个微队列，微队列的任务一定具有最高的优先级，必须优先调度执行。</p>
-</div>
-    </div>
-  </div>
-<div class="details admonition question">
-    <div class="details-summary admonition-title">
-      <i class="icon fa-solid fa-question-circle fa-fw" aria-hidden="true"></i>面试题：JS 中的计时器能做到精确计时吗？为什么？<i class="details-icon fa-solid fa-angle-right fa-fw" aria-hidden="true"></i>
-    </div>
-    <div class="details-content">
-      <div class="admonition-content"><p>参考答案：</p>
-<p>不行，因为：</p>
-<ol>
-<li>计算机硬件没有原子钟，无法做到精确计时</li>
-<li>操作系统的计时函数本身就有少量偏差，由于 JS 的计时器最终调用的是操作系统的函数，也就携带了这些偏差</li>
-<li>按照 W3C 的标准，浏览器实现计时器时，如果嵌套层级超过 5 层，则会带有 4 毫秒的最少时间，这样在计时时间少于 4 毫秒时又带来了偏差</li>
-<li>受事件循环的影响，计时器的回调函数只能在主线程空闲时运行，因此又带来了偏差</li>
-</ol>
-</div>
-    </div>
-  </div>
-<hr>
-<blockquote>
-<p>作者: <a href="https://github.com/Lruihao"target="_blank" rel="external nofollow noopener noreferrer">Lruihao<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
-URL: <a href="https://lruihao.cn/posts/event-loop/"target="_blank" rel="external nofollow noopener noreferrer">https://lruihao.cn/posts/event-loop/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
-</blockquote>]]></description></item><item><title>测试文章</title><link>https://99bilibili.eu.org/posts/005/</link><pubDate>Mon, 24 Jul 2023 01:11:44 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/005/</guid><description><![CDATA[<p>惆怅长岑长次</p>
-<p></p>
-<hr>
-<p></p>
-<hr>
-<p></p>]]></description></item><item><title>图像测试</title><link>https://99bilibili.eu.org/posts/004/</link><pubDate>Mon, 24 Jul 2023 00:47:36 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/004/</guid><description>&lt;h3 id="图像测试">图像测试&lt;/h3>
-&lt;p>&lt;/p></description></item><item><title>解决 SourceTree 提交时候 husky 命令失败问题</title><link>https://99bilibili.eu.org/posts/002/</link><pubDate>Sun, 23 Jul 2023 13:39:37 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/002/</guid><description><![CDATA[<h2 id="问题描述">问题描述</h2>
-<p>在使用 SourceTree 提交代码的时候，会出现 husky 命令失败的问题（通过命令行提交代码没有问题），如下图所示：</p>
-<p></p>
-<p>看错误，是一个 catch 参数的问题，在新版本的 Node 中，catch 参数是可以省略的，但是在旧版本中，catch 参数是必须的。</p>
-<p>由于使用了 nvm 管理 Node 版本，项目中的 Node 是正常的，但是 SourceTree 使用的是系统的 Node，所以会出现这个问题。</p>
-<h2 id="解决方案">解决方案</h2>
-<p>知道了问题的原因，解决起来就很简单了，只需要将 SourceTree husky hook 阶段的 Node 版本切换到项目中的 Node 版本即可。</p>
-<p>配置 <code>.huskyrc</code> 文件，内容如下：</p>
-<div class="highlight" id="id-1"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;export PATH=\&#34;</span><span class="k">$(</span>dirname <span class="k">$(</span>which node<span class="k">))</span><span class="s2">:\$PATH\&#34;&#34;</span> &gt; ~/.huskyrc</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果你使用了 <code>zsh</code> 和 <code>nvm</code>, 建议在 <code>$ZSH_CUSTOM</code> 目录下添加一个自定义 zsh 脚本。
-这个脚本会在你进入包含了 <code>.nvmrc</code> 文件目录中自动切换 node 版本，切换版本后修正 <code>~/.huskyrc</code> 的 path 内容。</p>
-<div class="highlight" id="id-2"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">vim <span class="nv">$ZSH_CUSTOM</span>/nvm_custom.zsh</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight" id="id-3"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh"><span class="line"><span class="cl"><span class="c1"># https://github.com/nvm-sh/nvm#manual-install</span>
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">NVM_DIR</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$HOME</span><span class="s2">/.nvm&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span> -s <span class="s2">&#34;</span><span class="nv">$NVM_DIR</span><span class="s2">/nvm.sh&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="se">\.</span> <span class="s2">&#34;</span><span class="nv">$NVM_DIR</span><span class="s2">/nvm.sh&#34;</span>  <span class="c1"># This loads nvm</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span> -s <span class="s2">&#34;</span><span class="nv">$NVM_DIR</span><span class="s2">/bash_completion&#34;</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="se">\.</span> <span class="s2">&#34;</span><span class="nv">$NVM_DIR</span><span class="s2">/bash_completion&#34;</span>  <span class="c1"># This loads nvm bash_completion</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># https://github.com/nvm-sh/nvm#deeper-shell-integration</span>
-</span></span><span class="line"><span class="cl">autoload -U add-zsh-hook
-</span></span><span class="line"><span class="cl">load-nvmrc<span class="o">()</span> <span class="o">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">local</span> <span class="nv">node_version</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>nvm version<span class="k">)</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">local</span> <span class="nv">nvmrc_path</span><span class="o">=</span><span class="s2">&#34;</span><span class="k">$(</span>nvm_find_nvmrc<span class="k">)</span><span class="s2">&#34;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$nvmrc_path</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">local</span> <span class="nv">nvmrc_node_version</span><span class="o">=</span><span class="k">$(</span>nvm version <span class="s2">&#34;</span><span class="k">$(</span>cat <span class="s2">&#34;</span><span class="si">${</span><span class="nv">nvmrc_path</span><span class="si">}</span><span class="s2">&#34;</span><span class="k">)</span><span class="s2">&#34;</span><span class="k">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$nvmrc_node_version</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;N/A&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-</span></span><span class="line"><span class="cl">      nvm install
-</span></span><span class="line"><span class="cl">    <span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$nvmrc_node_version</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;</span><span class="nv">$node_version</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-</span></span><span class="line"><span class="cl">      nvm use
-</span></span><span class="line"><span class="cl">    <span class="k">fi</span>
-</span></span><span class="line"><span class="cl">  <span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$node_version</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;</span><span class="k">$(</span>nvm version default<span class="k">)</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;Reverting to nvm default version&#34;</span>
-</span></span><span class="line"><span class="cl">    nvm use default
-</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="c1"># fix husky hook</span>
-</span></span><span class="line"><span class="cl">  <span class="c1"># ref: https://github.com/typicode/husky/issues/390#issuecomment-762213421</span>
-</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;export PATH=\&#34;</span><span class="k">$(</span>dirname <span class="k">$(</span>which node<span class="k">))</span><span class="s2">:\$PATH\&#34;&#34;</span> &gt; ~/.huskyrc
-</span></span><span class="line"><span class="cl"><span class="o">}</span>
-</span></span><span class="line"><span class="cl">add-zsh-hook chpwd load-nvmrc
-</span></span><span class="line"><span class="cl">load-nvmrc
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># https://github.com/nvm-sh/nvm#use-a-mirror-of-node-binaries</span>
-</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">NVM_NODEJS_ORG_MIRROR</span><span class="o">=</span>https://mirrors.ustc.edu.cn/node/</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="参考">参考</h2>
-<ul>
-<li><a href="https://wxhboy.cn/2022/04/12/%e8%a7%a3%e5%86%b3SourceTree%e6%8f%90%e4%ba%a4%e6%97%b6%e5%80%99husky%e5%91%bd%e4%bb%a4%e5%a4%b1%e8%b4%a5%e9%97%ae%e9%a2%98/"target="_blank" rel="external nofollow noopener noreferrer">https://wxhboy.cn/2022/04/12/解决SourceTree提交时候husky命令失败问题/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
-<li><a href="https://github.com/typicode/husky/issues/390#issuecomment-762213421"target="_blank" rel="external nofollow noopener noreferrer">https://github.com/typicode/husky/issues/390#issuecomment-762213421<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
-<li><a href="https://github.com/typicode/husky/issues/904#issuecomment-862184954"target="_blank" rel="external nofollow noopener noreferrer">https://github.com/typicode/husky/issues/904#issuecomment-862184954<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
-<li><a href="https://github.com/nvm-sh/nvm#deeper-shell-integration"target="_blank" rel="external nofollow noopener noreferrer">https://github.com/nvm-sh/nvm#deeper-shell-integration<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></li>
-</ul>
-<hr>
-<blockquote>
-<p>作者: <a href="https://github.com/Lruihao"target="_blank" rel="external nofollow noopener noreferrer">Lruihao<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a><br>
-URL: <a href="https://lruihao.cn/posts/sourcetree-husky/"target="_blank" rel="external nofollow noopener noreferrer">https://lruihao.cn/posts/sourcetree-husky/<i class="fa-solid fa-external-link-alt fa-fw fa-xs ms-1 text-secondary" aria-hidden="true"></i></a></p>
-</blockquote>
-]]></description></item><item><title>66谷歌云第三方 SSH 工具登录与一键重装系统</title><link>https://99bilibili.eu.org/posts/001/</link><pubDate>Sun, 23 Jul 2023 11:30:15 +0800</pubDate><author>阿甘</author><guid>https://99bilibili.eu.org/posts/001/</guid><description><![CDATA[<h2 id="一设置-root-密码">一，设置 root 密码</h2>
-<ol>
-<li>先选择从浏览器打开 ssh 连接服务器</li>
-<li>切换到 root 账号，输入代码：<code>sudo -i</code></li>
-<li>设置 root 密码，输入代码：<code>passwd</code></li>
-</ol>
-<h2 id="二开启-ssh-权限">二，开启 SSH 权限</h2>
-<ol>
-<li>CentOS 和 Debian 通用，输入以下两条命令</li>
-</ol>
-<div class="highlight" id="id-1"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/PermitRootLogin no/PermitRootLogin yes/g&#39;</span> /etc/ssh/sshd_config
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/PasswordAuthentication no/PasswordAuthentication yes/g&#39;</span> /etc/ssh/sshd_config</span></span></code></pre></td></tr></table>
-</div>
-</div><ol start="2">
-<li>Ubuntu 系统，输入以下两条命令</li>
-</ol>
-<div class="highlight" id="id-2"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/ #PermitRootLogin prohibit-password/PermitRootLogin yes/g&#39;</span> /etc/ssh/sshd_config 
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;s/PasswordAuthentication no/PasswordAuthentication yes/g&#39;</span> /etc/ssh/sshd_config</span></span></code></pre></td></tr></table>
-</div>
-</div><ol start="3">
-<li>重启服务器 ：</li>
-</ol>
-<div class="highlight" id="id-3"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">reboot</span></span></code></pre></td></tr></table>
-</div>
-</div><p>以上就是谷歌云设置 ROOT 用户以及允许第三方 SSH 登录教程。</p>
-<h2 id="三一键重装脚本">三，一键重装脚本</h2>
-<p><strong>系统更新</strong></p>
-<div class="highlight" id="id-4"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">apt update -y <span class="o">&amp;&amp;</span> apt install -y wget sudo</span></span></code></pre></td></tr></table>
-</div>
-</div><p><strong>一键脚本</strong> （ubuntu 20.04）时间半个小时吧，耐心等待就行</p>
-<div class="highlight" id="id-5"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">bash &lt;<span class="o">(</span>wget --no-check-certificate -qO- <span class="s1">&#39;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&#39;</span><span class="o">)</span> --ip-addr 10.146.0.3 --ip-gate 10.146.0.1 --ip-mask 255.255.255.0 -u 20.04 -v <span class="m">64</span> -p <span class="m">123456</span> -port <span class="m">22</span></span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p><strong>仅适用于谷歌云 (密码：123456 ) SSH 端口: 22</strong></p>
-</blockquote>
-<blockquote>
-<p>参数修改</p>
-</blockquote>
-<ul>
-<li><strong>10.146.0.3</strong> 谷歌云 VPS 内网 IP 谷歌云后台去找</li>
-<li><strong>10.146.0.1</strong> 谷歌云 VPS 内网 IP 的网关前三位数和 IP 相同第四位数为 1</li>
-</ul>
-<blockquote>
-<p>系统参数</p>
-</blockquote>
-<p><strong>-d 10</strong> 【7、8、9、10，11】Debian</p>
-<p><strong>-u 20.04</strong> 【14.04、16.04、18.04、20.04】Ubuntu</p>
-<h2 id="四系统更新">四，<strong>系统更新</strong></h2>
-<div class="highlight" id="id-6"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">apt update -y &amp;&amp; apt full-upgrade -y &amp;&amp; apt install -y curl wget sudo socat</span></span></code></pre></td></tr></table>
-</div>
-</div>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木瓜有点甜</title><link>https://99bilibili.eu.org/</link><description>Recent content on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 15:40:01 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>docker 一键安装脚本</title><link>https://99bilibili.eu.org/p/1/</link><pubDate>Tue, 25 Jul 2023 15:40:01 +0800</pubDate><guid>https://99bilibili.eu.org/p/1/</guid><description>&lt;blockquote>
+&lt;h2 id="官方脚本-推荐">官方脚本 （推荐）&lt;/h2>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -fsSL https://get.docker.com &lt;span class="p">|&lt;/span> sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -L &lt;span class="s2">&amp;#34;https://github.com/docker/compose/releases/latest/download/docker-compose-&lt;/span>&lt;span class="k">$(&lt;/span>uname -s&lt;span class="k">)&lt;/span>&lt;span class="s2">-&lt;/span>&lt;span class="k">$(&lt;/span>uname -m&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h1 id="查看-docker-版本-含-docker-compose">查看 Docker 版本 （含 Docker compose）&lt;/h1>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl"> docker --version&lt;span class="o">&amp;amp;&amp;amp;&lt;/span>docker-compose --version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;h2 id="个人脚本-国内加速">个人脚本 (国内加速)&lt;/h2>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">bash &amp;lt;&lt;span class="o">(&lt;/span>curl -sSL https://linuxmirrors.cn/docker.sh&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>或者&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">bash &amp;lt;&lt;span class="o">(&lt;/span>curl -sSL https://raw.githubusercontent.com/SuperManito/LinuxMirrors/main/DockerInstallation.sh&lt;span class="o">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>个人脚本说明：&lt;/p>
+&lt;/blockquote>
+&lt;p>脚本集成安装 &lt;a class="link" href="https://docs.docker.com/engine" target="_blank" rel="noopener"
+>&lt;code>Docker Engine&lt;/code>&lt;/a>，可选择安装版本、下载软件源、镜像加速器，支持海内外服务器环境和 &lt;code>arm&lt;/code> 架构处理器环境使用&lt;/p>
+&lt;p>&lt;code>Docker CE&lt;/code> 软件仓库，全称 Docker Community Edition (Docker 社区版)，用于下载并安装 Docker 相关软件包&lt;br>
+&lt;code>Docker Registry&lt;/code> 镜像仓库，用于控制下载镜像的来源存储仓库，又称镜像加速器，默认为官方提供 Docker Hub 仓库&lt;/p>
+&lt;blockquote>
+&lt;h4 id="卸载-docker">卸载 Docker&lt;/h4>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo apt-get purge docker-ce docker-ce-cli containerd.io
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>继续&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">sudo rm -rf /var/lib/docker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo rm -rf /var/lib/containerd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接着&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt-get remove -y docker* containerd.io podman* runc &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt-get autoremove
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;h3 id="关于-docker-报错无法启动">关于 docker 报错无法启动&lt;/h3>
+&lt;/blockquote>
+&lt;p>非新装环境可能会在运行脚本后遇到 &lt;code>Docker&lt;/code> 服务无法启动的情况，建议重新安装来解决.&lt;/p>
+&lt;p>卸载完成后重新执行脚本安装即可, 卸载不会删除镜像和容器数据.&lt;/p>
+&lt;p>卸载命令如下 :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt-get remove -y docker* containerd.io podman* runc &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt-get autoremove
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;h2 id="重新安装出现的问题">重新安装出现的问题&lt;/h2>
+&lt;/blockquote>
+&lt;p>重启 docker&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">systemctl restart docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>归档</title><link>https://99bilibili.eu.org/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/archives/</guid><description/></item><item><title/><link>https://99bilibili.eu.org/%E4%B8%BB%E9%9D%A2%E6%9D%BF/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/%E4%B8%BB%E9%9D%A2%E6%9D%BF/</guid><description>&lt;h4 id="日记">日记&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">table title AS &amp;#34;标题&amp;#34;,date AS &amp;#34;创建时间&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from &amp;#34;日记&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">where draft=true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sort date desc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="草稿箱">草稿箱&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">table title AS &amp;#34;标题&amp;#34;,date AS &amp;#34;创建时间&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from &amp;#34;post&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">where draft=true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sort date desc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="已发布">已发布&lt;/h3>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">table title AS &amp;#34;标题&amp;#34;,date AS &amp;#34;创建时间&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from &amp;#34;post&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">where draft=false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sort date desc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>关于</title><link>https://99bilibili.eu.org/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/about/</guid><description>&lt;img src="https://i.imgtg.com/2023/07/07/OxPNcP.webp" alt="Featured image of post 关于" />&lt;h1 id="关于">『关于』&lt;/h1>
+&lt;h3 id="我">😊我：&lt;/h3>
+&lt;p>目前是一名高三学生,喜欢折腾各种电子产品,爱打游戏,没事就写写博客,做这个博客是为了记录一些有的没的,还有就是装逼,由于目前还是个穷屌丝,整个博客花的费用主要是域名续费,部署在&lt;code>GitHub&lt;/code>上,配合&lt;code>GitHub action&lt;/code>和&lt;code>Vercel&lt;/code>,虽然偶尔会崩,但是能用就行,整个博客基本上是全静态,日常水文够用,选择&lt;code>hugo&lt;/code>而不用&lt;code>hexo&lt;/code>是考虑到稳定性和可持续性,&lt;code>hexo&lt;/code>过于依赖&lt;code>npm&lt;/code>,不同主题的配置差别太大,有时还可能因为node版本不适合报错,折腾不动,目前就用着hugo养老吧.&lt;/p>
+&lt;p>🌵我的兴趣爱好:&lt;/p>
+&lt;p>🪅抓鱼&lt;/p>
+&lt;p>👦数码设备&lt;/p>
+&lt;p>👨‍💻电子产品&lt;/p>
+&lt;p>💪操作系统，尤其是MacOS和iOS&lt;/p>
+&lt;p>✍️写博客&lt;/p>
+&lt;p>👋打游戏，比如大多数的枪战游戏和我最喜欢的GTA5&lt;/p>
+&lt;p>🎉编程&lt;/p>
+&lt;p>🔮音乐，如金曲or电音&lt;/p>
+&lt;p>♂不是gay啊&lt;/p>
+&lt;p>🍔喜欢汉堡&lt;/p>
+&lt;p>🌝喜欢旅游&lt;/p>
+&lt;p>🃏喜欢大自然和小动物&lt;/p>
+&lt;hr>
+&lt;h3 id="擅长">💪擅长：&lt;/h3>
+&lt;p>&lt;del>HTML5 、CSS、JS&lt;/del>&lt;/p>
+&lt;p>&lt;del>能够较熟练使用Windows，Linux，macos，iOS，Android&lt;/del>&lt;/p>
+&lt;p>&lt;del>一点点Ps、Pr&lt;/del>&lt;/p>
+&lt;p>&lt;del>一点点的Word、Excel、PowerPoint&lt;/del>&lt;/p>
+&lt;p>&lt;del>FPS游戏&lt;/del>&lt;/p>
+&lt;hr>
+&lt;h3 id="联系">🃏联系：&lt;/h3>
+&lt;p>QQ：1909901779&lt;/p>
+&lt;p>Wechat：l1nsn0w&lt;/p>
+&lt;p>邮箱：1909901779@qq.com&lt;/p>
+&lt;hr>
+&lt;h3 id="some-words">📃Some Words&lt;/h3>
+&lt;details style="box-sizing: border-box; display: block;">&lt;summary style="box-sizing: border-box; display: list-item;">📃展开详细信息：&lt;/summary>&lt;/details>
+&lt;hr></description></item><item><title>搜索</title><link>https://99bilibili.eu.org/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/search/</guid><description/></item><item><title>友链</title><link>https://99bilibili.eu.org/links/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/links/</guid><description>&lt;h2 id="博客信息">博客信息🤡&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">🍔名字： L1nSn0w&lt;span class="err">&amp;#39;&lt;/span>s Blog
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">🍟博客地址：https://blog.linsnow.cn
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">🥗简介：无限进步.🎈
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">🍚我的头像: https://blog.linsnow.cn/img/avatar.png
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="要求">🙏🏻要求&lt;/h2>
+&lt;blockquote>
+&lt;ol>
+&lt;li>只接受双向友链✋🏻&lt;/li>
+&lt;li>尽量保持活跃😕（总不能一年不更新吧）&lt;/li>
+&lt;li>网页加载速度不能太慢🤦🏻‍♂️&lt;/li>
+&lt;li>不要接入广告🙅🏻‍♀️&lt;/li>
+&lt;li>如果换了链接或头像即时告知，我不会因为手动更换链接而嫌麻烦😉&lt;/li>
+&lt;/ol>
+&lt;/blockquote></description></item></channel></rss>
