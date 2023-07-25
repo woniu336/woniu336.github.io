@@ -1,4 +1,126 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木瓜有点甜</title><link>https://99bilibili.eu.org/</link><description>Recent content on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 23:57:49 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>rclone开机自动挂载</title><link>https://99bilibili.eu.org/p/10/</link><pubDate>Tue, 25 Jul 2023 23:57:49 +0800</pubDate><guid>https://99bilibili.eu.org/p/10/</guid><description>&lt;br>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>木瓜有点甜</title><link>https://99bilibili.eu.org/</link><description>Recent content on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 26 Jul 2023 00:34:10 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker 项目整理 （持续更新中）</title><link>https://99bilibili.eu.org/p/11/</link><pubDate>Wed, 26 Jul 2023 00:34:10 +0800</pubDate><guid>https://99bilibili.eu.org/p/11/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/07/9f6b5256cba670cde842c50fe9c06a61.webp" alt="Featured image of post Docker 项目整理 （持续更新中）" />&lt;h2 id="nginx-proxy-manager-反向代理神器">Nginx Proxy Manager 反向代理神器&lt;/h2>
+&lt;p>1.&lt;strong>更新环境&lt;/strong>&lt;br>
+&lt;br>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt update -y &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y curl socat wget sudo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div> &lt;br>
+&lt;p>2.&lt;strong>安装 Docker&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -fsSL https://get.docker.com &lt;span class="p">|&lt;/span> sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -L &lt;span class="s2">&amp;#34;https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-&lt;/span>&lt;span class="k">$(&lt;/span>uname -s&lt;span class="k">)&lt;/span>&lt;span class="s2">-&lt;/span>&lt;span class="k">$(&lt;/span>uname -m&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;br>
+&lt;p>3.&lt;strong>安装 Nginx Proxy Manager&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker run -d &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --name&lt;span class="o">=&lt;/span>npm &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 80:80 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 81:81 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 443:443 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /home/npm/data:/data &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /home/npm/letsencrypt:/etc/letsencrypt &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --restart&lt;span class="o">=&lt;/span>always &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> jc21/nginx-proxy-manager:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;br>
+&lt;p>4.&lt;strong>进入 NGINX 面板&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>服务器 IP 加 81 端口访问网页&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>登录:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">admin@example.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>密码:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">changeme
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;hr>
+&lt;h2 id="portainer-ce-中文版">Portainer-ce 中文版&lt;/h2>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker run -d --restart&lt;span class="o">=&lt;/span>always --name&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;portainer&amp;#34;&lt;/span> -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data 6053537/portainer-ce
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;hr>
+&lt;h2 id="uptime-kuma-在线监控平台">Uptime Kuma 在线监控平台&lt;/h2>
+&lt;p>可以将各类资源挂载到这个网页监控工具上。方便全局掌控网站或者 IP 的 VPS 心跳延迟情况。建康情况全局掌控！&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/24abb9dc8846bfc11a4d879528a4dfc9.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/9f6b5256cba670cde842c50fe9c06a61.webp"
+loading="lazy"
+>&lt;/p>
+&lt;p>一键安装&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker run -d &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --name&lt;span class="o">=&lt;/span>uptime-kuma &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 3001:3001 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /home/uptime/uptime-kuma-data:/app/data &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --restart&lt;span class="o">=&lt;/span>always &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> louislam/uptime-kuma:latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>rclone开机自动挂载</title><link>https://99bilibili.eu.org/p/10/</link><pubDate>Tue, 25 Jul 2023 23:57:49 +0800</pubDate><guid>https://99bilibili.eu.org/p/10/</guid><description>&lt;br>
 &lt;h1 id="假设">假设:&lt;/h1>
 &lt;ol>
 &lt;li>你已经挂载好了onedrive&lt;/li>
@@ -965,128 +1087,6 @@ title="YouTube Video"
 >
 &lt;/iframe>
 &lt;/div>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>Docker 项目整理 （持续更新中）</title><link>https://99bilibili.eu.org/p/11/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/p/11/</guid><description>&lt;img src="https://r2.leshans.eu.org/2023/07/9f6b5256cba670cde842c50fe9c06a61.webp" alt="Featured image of post Docker 项目整理 （持续更新中）" />&lt;h2 id="nginx-proxy-manager-反向代理神器">Nginx Proxy Manager 反向代理神器&lt;/h2>
-&lt;p>1.&lt;strong>更新环境&lt;/strong>
-&lt;br>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">apt update -y &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> apt install -y curl socat wget sudo
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div> &lt;br>
-&lt;p>2.&lt;strong>安装 Docker&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -fsSL https://get.docker.com &lt;span class="p">|&lt;/span> sh
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -L &lt;span class="s2">&amp;#34;https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-&lt;/span>&lt;span class="k">$(&lt;/span>uname -s&lt;span class="k">)&lt;/span>&lt;span class="s2">-&lt;/span>&lt;span class="k">$(&lt;/span>uname -m&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x /usr/local/bin/docker-compose
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;br>
-&lt;p>3.&lt;strong>安装 Nginx Proxy Manager&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;span class="lnt">7
-&lt;/span>&lt;span class="lnt">8
-&lt;/span>&lt;span class="lnt">9
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker run -d &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --name&lt;span class="o">=&lt;/span>npm &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 80:80 &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 81:81 &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 443:443 &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /home/npm/data:/data &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /home/npm/letsencrypt:/etc/letsencrypt &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --restart&lt;span class="o">=&lt;/span>always &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> jc21/nginx-proxy-manager:latest
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;br>
-&lt;p>4.&lt;strong>进入 NGINX 面板&lt;/strong>&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>服务器 IP 加 81 端口访问网页&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>登录:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">admin@example.com
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>密码:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">changeme
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;/ol>
-&lt;hr>
-&lt;h2 id="portainer-ce-中文版">Portainer-ce 中文版&lt;/h2>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">docker run -d --restart&lt;span class="o">=&lt;/span>always --name&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;portainer&amp;#34;&lt;/span> -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data 6053537/portainer-ce
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;hr>
-&lt;h2 id="uptime-kuma-在线监控平台">Uptime Kuma 在线监控平台&lt;/h2>
-&lt;p>可以将各类资源挂载到这个网页监控工具上。方便全局掌控网站或者 IP 的 VPS 心跳延迟情况。建康情况全局掌控！&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/24abb9dc8846bfc11a4d879528a4dfc9.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/9f6b5256cba670cde842c50fe9c06a61.webp"
-loading="lazy"
->&lt;/p>
-&lt;p>一键安装&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;span class="lnt">3
-&lt;/span>&lt;span class="lnt">4
-&lt;/span>&lt;span class="lnt">5
-&lt;/span>&lt;span class="lnt">6
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker run -d &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --name&lt;span class="o">=&lt;/span>uptime-kuma &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 3001:3001 &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /home/uptime/uptime-kuma-data:/app/data &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --restart&lt;span class="o">=&lt;/span>always &lt;span class="se">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> louislam/uptime-kuma:latest
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>关于</title><link>https://99bilibili.eu.org/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/about/</guid><description>&lt;img src="https://i.imgtg.com/2023/07/07/OxPNcP.webp" alt="Featured image of post 关于" />&lt;h1 id="关于">『关于』&lt;/h1>
