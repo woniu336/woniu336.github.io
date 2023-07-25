@@ -1,1 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日记 on 木瓜有点甜</title><link>https://99bilibili.eu.org/%E6%97%A5%E8%AE%B0/</link><description>Recent content in 日记 on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://99bilibili.eu.org/%E6%97%A5%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日记 on 木瓜有点甜</title><link>https://99bilibili.eu.org/%E6%97%A5%E8%AE%B0/</link><description>Recent content in 日记 on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://99bilibili.eu.org/%E6%97%A5%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://99bilibili.eu.org/%E6%97%A5%E8%AE%B0/%E8%A7%86%E9%A2%91%E6%A8%A1%E6%9D%BF/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/%E6%97%A5%E8%AE%B0/%E8%A7%86%E9%A2%91%E6%A8%A1%E6%9D%BF/</guid><description>&lt;h2 id="bilibili-video-httpsstackjimmycaicomwritingshortcodesbilibili-video">Bilibili video &lt;a class="link" href="https://stack.jimmycai.com/writing/shortcodes#bilibili-video" target="_blank" rel="noopener"
+>#&lt;/a>&lt;/h2>
+&lt;p>Embed a &lt;a class="link" href="https://www.bilibili.com/" target="_blank" rel="noopener"
+>Bilibili&lt;/a> video.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">
+&lt;p>Bilibili 视频av号或BV号错误！请检查视频av号或BV号是否正确&lt;/p>
+&lt;p>当前视频av或BV号：VIDEO_ID，视频分P：PART_NUMBER&lt;/p>
+&lt;div class="video-wrapper">
+&lt;iframe src="https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=PART_NUMBER&amp;"
+scrolling="no"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>视频 ID 可以在视频的 URL 中找到。例如， &lt;a class="link" href="https://www.bilibili.com/video/av12345678" target="_blank" rel="noopener"
+>https://www.bilibili.com/video/av12345678&lt;/a> 的视频 ID 是 av 12345678。同时支持 AV 和 BV。&lt;/p>
+&lt;p>PART_NUMBER 是可选项。它可用于指定要播放的视频部分。例如， &lt;a class="link" href="https://www.bilibili.com/video/av12345678?p=2" target="_blank" rel="noopener"
+>https://www.bilibili.com/video/av12345678?p=2&lt;/a> 的部分编号是 2。&lt;/p>
+&lt;h2 id="youtube-video-httpsstackjimmycaicomwritingshortcodesyoutube-video">YouTube video &lt;a class="link" href="https://stack.jimmycai.com/writing/shortcodes#youtube-video" target="_blank" rel="noopener"
+>#&lt;/a>&lt;/h2>
+&lt;p>Embed a &lt;a class="link" href="https://www.youtube.com/" target="_blank" rel="noopener"
+>YouTube&lt;/a> video.&lt;/p>
+&lt;p>markdown&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/VIDEO_ID"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
