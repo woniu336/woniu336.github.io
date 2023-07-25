@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>翻墙 on 木瓜有点甜</title><link>https://99bilibili.eu.org/categories/%E7%BF%BB%E5%A2%99/</link><description>Recent content in 翻墙 on 木瓜有点甜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 25 Jul 2023 22:56:17 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/categories/%E7%BF%BB%E5%A2%99/index.xml" rel="self" type="application/rss+xml"/><item><title>2023最佳免费vpn方式</title><link>https://99bilibili.eu.org/p/4/</link><pubDate>Tue, 25 Jul 2023 22:56:17 +0800</pubDate><guid>https://99bilibili.eu.org/p/4/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/6232cb09b61afc3983033b1c8a292283.webp"
+loading="lazy"
+>&lt;/p>
+&lt;h2 id="windows-系统">&lt;strong>Windows 系统:&lt;/strong>&lt;/h2>
+&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/5fvhws6ZXrM"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;p>v2rayN 最新版&lt;a class="link" href="https://github.com/2dust/v2rayN/releases" target="_blank" rel="noopener"
+>下载地址&amp;raquo;&lt;/a>&lt;/p>
+&lt;p>cloudflare&lt;a class="link" href="https://dash.cloudflare.com/" target="_blank" rel="noopener"
+>网站链接&amp;raquo;&lt;/a>&lt;/p>
+&lt;p>临时邮箱：&lt;a class="link" href="https://www.linshiyouxiang.net/" target="_blank" rel="noopener"
+>https://www.linshiyouxiang.net/&lt;/a>&lt;/p>
+&lt;p>部署代码：&lt;a class="link" href="https://github.com/zizifn/edgetunnel/blob/main/src/worker-vless.js" target="_blank" rel="noopener"
+>https://github.com/zizifn/edgetunnel/blob/main/src/worker-vless.js&lt;/a>&lt;/p>
+&lt;p>uuid生成：&lt;a class="link" href="https://1024tools.com/uuid" target="_blank" rel="noopener"
+>https://1024tools.com/uuid&lt;/a>&lt;/p>
+&lt;p>免费域名注册：&lt;a class="link" href="https://www.dynadot.com/register-your-free-link-domain" target="_blank" rel="noopener"
+>https://www.dynadot.com/register-your-free-link-domain&lt;/a>&lt;/p>
+&lt;p>付费域名注册：www.namesilo.com（付费域名注册和解析&lt;a class="link" href="https://www.youtube.com/watch?v=5pb4yQwu1T4" target="_blank" rel="noopener"
+>点击查看这个视频&amp;raquo;跳转到4分17秒处&lt;/a>）&lt;/p>
+&lt;p>workers win专用ip优选：&lt;a class="link" href="https://jdssl.top/wp-content/uploads/2023/07/works%E4%B8%93%E7%94%A8ip%E4%BC%98%E9%80%89.zip" target="_blank" rel="noopener"
+>下载地址&amp;raquo;&lt;/a>&lt;/p>
+&lt;p>ip查看：&lt;a class="link" href="https://whatismyipaddress.com/" target="_blank" rel="noopener"
+>https://whatismyipaddress.com/&lt;/a>&lt;/p>
+&lt;p>cf ip优选；&lt;a class="link" href="https://stock.hostmonit.com/CloudFlareYes" target="_blank" rel="noopener"
+>https://stock.hostmonit.com/CloudFlareYes&lt;/a>&lt;/p>
+&lt;p>网络测速：&lt;a class="link" href="https://www.speedtest.net/result/14952074175" target="_blank" rel="noopener"
+>https://www.speedtest.net/result/14952074175&lt;/a>&lt;/p>
+&lt;p>openclash转换订阅网址：&lt;a class="link" href="https://sub-web.netlify.app/" target="_blank" rel="noopener"
+>https://sub-web.netlify.app/&lt;/a>&lt;/p>
+&lt;h5 id="cdn加速">cdn加速&lt;/h5>
+&lt;p>cdn-all.xn&amp;ndash;b6gac.eu.org&lt;br>
+cdn.xn&amp;ndash;b6gac.eu.org&lt;br>
+cdn-b100.xn&amp;ndash;b6gac.eu.org&lt;br>
+edgetunnel.anycast.eu.org&lt;br>
+cdn.anycast.eu.org （亚洲地区）&lt;/p>
+&lt;p>1.有域名（有tls加密，443端口)，推荐！&lt;br>
+Custom Domains查看——添加自定义域——填1个二级域名&lt;br>
+点击自定义域，在二级域名后加/UUID，就能看到VLESS节点URL和Clash-meta配置&lt;br>
+在v2rayN导入URL，地址栏改为优选ip&lt;/p>
+&lt;p>2.无域名（没tls加密，80或者2052端口）&lt;br>
+进去 worker.dev，加上/uuid 就能看到 VLESS 节点 URL 和 Clash-meta 配置。v2ray,shadowrocket 等客户端要去掉 tls 加密，端口改为80或者2052，地址修为优选 i&lt;/p>
+&lt;h2 id="mac-系统">MAC 系统:&lt;/h2>
+&lt;div class="video-wrapper">
+&lt;iframe loading="lazy"
+src="https://www.youtube.com/embed/Y32X4U9iJ_o"
+allowfullscreen
+title="YouTube Video"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;p>v2rayu: &lt;a class="link" href="https://github.com/yanue/V2rayU/releases/tag/v3.8.0" target="_blank" rel="noopener"
+>下载链接&amp;raquo;&lt;/a>&lt;/p>
+&lt;h5 id="cloudflarest-ip优化">cloudflarest ip优化：&lt;/h5>
+&lt;p>mac inter :&lt;a class="link" href="https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.4/CloudflareST_darwin_amd64.zip" target="_blank" rel="noopener"
+>下载地址&amp;raquo;&lt;/a>&lt;/p>
+&lt;p>mac arm :&lt;a class="link" href="https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.4/CloudflareST_darwin_arm64.zip" target="_blank" rel="noopener"
+>下载地址&amp;raquo;&lt;/a>&lt;/p>
+&lt;p>cloudflarest ip段：&lt;a class="link" href="https://zip.baipiao.eu.org/" target="_blank" rel="noopener"
+>下载地址&amp;raquo;&lt;/a>&lt;/p>
+&lt;p>备注：需要自行下载上方CDN IP段否则只能延迟测速。&lt;/p>
+&lt;p>终端：cd /xxxx/xxxxx/CloudfareST&lt;/p>
+&lt;p>普通ip优选&lt;/p>
+&lt;p>sudo ./CloudflareST &lt;/p>
+&lt;p>10 个平均延迟低于 200 ms且下载速度高于3MB/s的IP&lt;/p>
+&lt;p>sudo ./CloudflareST -url &lt;a class="link" href="https://jp.cloudflarest.link" target="_blank" rel="noopener"
+>https://jp.cloudflarest.link&lt;/a> -tl 200 -sl 3 -dn 10&lt;/p>
+&lt;p>sudo ./CloudflareST -url &lt;a class="link" href="https://hkcs.cloudflarest.link" target="_blank" rel="noopener"
+>https://hkcs.cloudflarest.link&lt;/a> -tl 200 -sl 3 -dn 10&lt;/p>
+&lt;p>这是测试文本，单击 “编辑” 按钮更改此文本。&lt;/p></description></item></channel></rss>
