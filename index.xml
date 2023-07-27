@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://99bilibili.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jul 2023 00:27:35 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Jane 主题预览</title><link>https://99bilibili.eu.org/post/jane-theme-preview/</link><pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate><guid>https://99bilibili.eu.org/post/jane-theme-preview/</guid><description>&lt;p>主题预览,内容有待填充。&lt;/p></description></item><item><title>关于</title><link>https://99bilibili.eu.org/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/about/</guid><description>&lt;h1 id="关于">『关于』&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://99bilibili.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jul 2023 00:42:31 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Jane 主题预览</title><link>https://99bilibili.eu.org/post/jane-theme-preview/</link><pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate><guid>https://99bilibili.eu.org/post/jane-theme-preview/</guid><description>&lt;p>主题预览,内容有待填充。&lt;/p></description></item><item><title>关于</title><link>https://99bilibili.eu.org/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/about/</guid><description>&lt;h1 id="关于">『关于』&lt;/h1>
 &lt;h3 id="我">😊我：&lt;/h3>
 &lt;p>目前是一名高三学生,喜欢折腾各种电子产品,爱打游戏,没事就写写博客,做这个博客是为了记录一些有的没的,还有就是装逼,由于目前还是个穷屌丝,整个博客花的费用主要是域名续费,部署在&lt;code>GitHub&lt;/code>上,配合&lt;code>GitHub action&lt;/code>和&lt;code>Vercel&lt;/code>,虽然偶尔会崩,但是能用就行,整个博客基本上是全静态,日常水文够用,选择&lt;code>hugo&lt;/code>而不用&lt;code>hexo&lt;/code>是考虑到稳定性和可持续性,&lt;code>hexo&lt;/code>过于依赖&lt;code>npm&lt;/code>,不同主题的配置差别太大,有时还可能因为node版本不适合报错,折腾不动,目前就用着hugo养老吧.&lt;/p>
 &lt;p>🌵我的兴趣爱好:&lt;/p>
@@ -29,44 +29,8 @@
 &lt;hr>
 &lt;h3 id="some-words">📃Some Words&lt;/h3>
 &lt;!-- raw HTML omitted -->
-&lt;hr></description></item><item><title>vvvv</title><link>https://99bilibili.eu.org/post/017/</link><pubDate>Fri, 28 Jul 2023 00:27:35 +0800</pubDate><guid>https://99bilibili.eu.org/post/017/</guid><description>&lt;p>错误信息 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo;&lt;/p>
-&lt;p>表明在你的 Git 项目中的 .gitmodules 文件中找不到 &amp;ldquo;themes/jane&amp;rdquo; 子模块的 URL。&lt;/p>
-&lt;p>.gitmodules 文件是一个包含子模块配置信息的文件，它用于跟踪和管理项目中使用的子模块。子模块允许你在一个 Git 项目中嵌套另一个 Git 项目，并将其作为你项目的一部分来管理。&lt;/p>
-&lt;p>出现这个错误可能有几种原因：&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>缺少 .gitmodules 文件：首先，确保你的项目根目录下有一个名为 .gitmodules 的文件。如果没有该文件，你需要创建一个新的 .gitmodules 文件并添加相应的子模块配置。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Themes/jane 子模块不存在：如果 themes/jane 子模块确实存在，但它没有被正确地添加为项目的子模块，则需要检查是否正确地添加了子模块。&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>解决方法：&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>确保 .gitmodules 文件存在：在项目根目录下，使用文本编辑器创建一个新的 .gitmodules 文件，或确保已存在的 .gitmodules 文件没有被移除或重命名。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>添加子模块的 URL：在 .gitmodules 文件中添加 themes/jane 子模块的 URL。例如：&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;pre tabindex="0">&lt;code>[submodule &amp;#34;themes/jane&amp;#34;]
-path = themes/jane
-url = https://github.com/your_username/jane.git
-&lt;/code>&lt;/pre>&lt;p>请将上述 URL 替换为 themes/jane 子模块的实际 Git 仓库 URL。&lt;/p>
-&lt;ol start="3">
-&lt;li>初始化子模块：运行以下命令来初始化和更新子模块：&lt;/li>
-&lt;/ol>
-&lt;pre tabindex="0">&lt;code>git submodule init
-git submodule update
-&lt;/code>&lt;/pre>&lt;p>这将会初始化并获取你在 .gitmodules 文件中配置的子模块。&lt;/p>
-&lt;ol start="4">
-&lt;li>提交更改：一旦子模块配置正常并成功初始化，确保将 .gitmodules 文件和项目的其他更改提交到 Git 仓库：&lt;/li>
-&lt;/ol>
-&lt;pre tabindex="0">&lt;code>git add .
-git commit -m &amp;#34;Added themes/jane submodule&amp;#34;
-git push
-&lt;/code>&lt;/pre>&lt;p>以上步骤应该能帮助你解决 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo; 错误。如果你还有其他问题或需要进一步的帮助，请随时向我询问。&lt;/p></description></item><item><title>01677</title><link>https://99bilibili.eu.org/post/016/</link><pubDate>Thu, 27 Jul 2023 16:52:56 +0800</pubDate><guid>https://99bilibili.eu.org/post/016/</guid><description>&lt;p>p&amp;rsquo;p&amp;rsquo;pppp&lt;/p></description></item><item><title>015111</title><link>https://99bilibili.eu.org/post/015/</link><pubDate>Thu, 27 Jul 2023 16:52:47 +0800</pubDate><guid>https://99bilibili.eu.org/post/015/</guid><description>&lt;p>111&lt;/p></description></item><item><title>01477</title><link>https://99bilibili.eu.org/post/014/</link><pubDate>Thu, 27 Jul 2023 16:52:35 +0800</pubDate><guid>https://99bilibili.eu.org/post/014/</guid><description>&lt;p>777&lt;/p></description></item><item><title>hugo子模块错误提示解决办法</title><link>https://99bilibili.eu.org/post/013/</link><pubDate>Thu, 27 Jul 2023 14:46:23 +0800</pubDate><guid>https://99bilibili.eu.org/post/013/</guid><description>&lt;p>错误信息 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo;&lt;/p>
+&lt;hr></description></item><item><title>014</title><link>https://99bilibili.eu.org/post/014/</link><pubDate>Fri, 28 Jul 2023 00:42:31 +0800</pubDate><guid>https://99bilibili.eu.org/post/014/</guid><description>&lt;p>嘎嘎嘎嘎嘎嘎嘎嘎嘎&lt;/p>
+&lt;h4 id="哇哇哇哇哇哇哇">哇哇哇哇哇哇哇&lt;/h4></description></item><item><title>hugo子模块错误提示解决办法</title><link>https://99bilibili.eu.org/post/013/</link><pubDate>Thu, 27 Jul 2023 14:46:23 +0800</pubDate><guid>https://99bilibili.eu.org/post/013/</guid><description>&lt;p>错误信息 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo;&lt;/p>
 &lt;p>表明在你的 Git 项目中的 .gitmodules 文件中找不到 &amp;ldquo;themes/jane&amp;rdquo; 子模块的 URL。&lt;/p>
 &lt;p>.gitmodules 文件是一个包含子模块配置信息的文件，它用于跟踪和管理项目中使用的子模块。子模块允许你在一个 Git 项目中嵌套另一个 Git 项目，并将其作为你项目的一部分来管理。&lt;/p>
 &lt;p>出现这个错误可能有几种原因：&lt;/p>
@@ -971,4 +935,54 @@ sudo rm -rf /var/lib/containerd
 &lt;ul>
 &lt;li>&lt;code>layouts/&lt;/code> Stores templates in the form of .html files that specify how views of your content will be rendered into a static website.&lt;/li>
 &lt;li>&lt;code>assets/&lt;/code> stores all the scss &amp;amp; js &lt;strong>source files&lt;/strong>, &lt;code>Hugo Pipes&lt;/code> will bundle them to &lt;code>resources/&lt;/code> folder.&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/ul></description></item><item><title>Demo: toc</title><link>https://99bilibili.eu.org/post/demo/2-toc/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/post/demo/2-toc/</guid><description>&lt;h2 id="header">Header&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h2 id="header-1">Header&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h2 id="header-2">Header&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h3 id="subheader">SubHeader&lt;/h3>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h3 id="this-is-very-long-subheader--this-is-very-long-subheader--this-is-very-long-subheader-this-is-very-long-subheader--this-is-very-long-subheader-this-is-very-long-subheader">This is very long SubHeader, This is very long SubHeader, This is very long SubHeader, This is very long SubHeader, This is very long SubHeader, This is very long SubHeader&lt;/h3>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h3 id="subheader-1">SubHeader&lt;/h3>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h2 id="header-3">Header&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h2 id="header-4">Header&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h2 id="header-5">Header&lt;/h2>
+&lt;h2 id="header-6">Header&lt;/h2>
+&lt;h3 id="subheader-2">SubHeader&lt;/h3>
+&lt;h3 id="subheader-3">SubHeader&lt;/h3>
+&lt;h4 id="h4">H4&lt;/h4>
+&lt;h4 id="h4-1">H4&lt;/h4>
+&lt;h5 id="h5">H5&lt;/h5>
+&lt;h6 id="h6">H6&lt;/h6>
+&lt;h2 id="header-7">Header&lt;/h2>
+&lt;h2 id="header-8">Header&lt;/h2></description></item><item><title>Demo: toc, global toc is true, but this post should not show toc</title><link>https://99bilibili.eu.org/post/other/test-toc/global-toc-except-this/</link><pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/post/other/test-toc/global-toc-except-this/</guid><description>&lt;h2 id="header">Header&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h2 id="header-1">Header&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h2 id="header-2">Header&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h3 id="subheader">SubHeader&lt;/h3>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h3 id="this-is-very-long-subheader--this-is-very-long-subheader--this-is-very-long-subheader-this-is-very-long-subheader--this-is-very-long-subheader-this-is-very-long-subheader">This is very long SubHeader, This is very long SubHeader, This is very long SubHeader, This is very long SubHeader, This is very long SubHeader, This is very long SubHeader&lt;/h3>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h3 id="subheader-1">SubHeader&lt;/h3>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h2 id="header-3">Header&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h2 id="header-4">Header&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;h2 id="header-5">Header&lt;/h2>
+&lt;h2 id="header-6">Header&lt;/h2>
+&lt;h3 id="subheader-2">SubHeader&lt;/h3>
+&lt;h3 id="subheader-3">SubHeader&lt;/h3>
+&lt;h4 id="h4">H4&lt;/h4>
+&lt;h4 id="h4-1">H4&lt;/h4>
+&lt;h5 id="h5">H5&lt;/h5>
+&lt;h6 id="h6">H6&lt;/h6>
+&lt;h2 id="header-7">Header&lt;/h2>
+&lt;h2 id="header-8">Header&lt;/h2></description></item><item><title>no header, no toc</title><link>https://99bilibili.eu.org/post/other/test-toc/no-header-dont-show-toc/</link><pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/post/other/test-toc/no-header-dont-show-toc/</guid><description>&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p></description></item></channel></rss>
