@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库66</title><link>https://99bilibili.eu.org/</link><description>Recent content on 阿甘知识库66</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 27 Jul 2023 14:32:31 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Jane 主题预览</title><link>https://99bilibili.eu.org/post/jane-theme-preview/</link><pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate><guid>https://99bilibili.eu.org/post/jane-theme-preview/</guid><description>&lt;p>主题预览,内容有待填充。&lt;/p></description></item><item><title>关于</title><link>https://99bilibili.eu.org/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/about/</guid><description>&lt;h1 id="关于">『关于』&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库66</title><link>https://99bilibili.eu.org/</link><description>Recent content on 阿甘知识库66</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 27 Jul 2023 14:46:23 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Jane 主题预览</title><link>https://99bilibili.eu.org/post/jane-theme-preview/</link><pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate><guid>https://99bilibili.eu.org/post/jane-theme-preview/</guid><description>&lt;p>主题预览,内容有待填充。&lt;/p></description></item><item><title>关于</title><link>https://99bilibili.eu.org/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/about/</guid><description>&lt;h1 id="关于">『关于』&lt;/h1>
 &lt;h3 id="我">😊我：&lt;/h3>
 &lt;p>目前是一名高三学生,喜欢折腾各种电子产品,爱打游戏,没事就写写博客,做这个博客是为了记录一些有的没的,还有就是装逼,由于目前还是个穷屌丝,整个博客花的费用主要是域名续费,部署在&lt;code>GitHub&lt;/code>上,配合&lt;code>GitHub action&lt;/code>和&lt;code>Vercel&lt;/code>,虽然偶尔会崩,但是能用就行,整个博客基本上是全静态,日常水文够用,选择&lt;code>hugo&lt;/code>而不用&lt;code>hexo&lt;/code>是考虑到稳定性和可持续性,&lt;code>hexo&lt;/code>过于依赖&lt;code>npm&lt;/code>,不同主题的配置差别太大,有时还可能因为node版本不适合报错,折腾不动,目前就用着hugo养老吧.&lt;/p>
 &lt;p>🌵我的兴趣爱好:&lt;/p>
@@ -29,7 +29,44 @@
 &lt;hr>
 &lt;h3 id="some-words">📃Some Words&lt;/h3>
 &lt;!-- raw HTML omitted -->
-&lt;hr></description></item><item><title>哈哈哈</title><link>https://99bilibili.eu.org/post/002/</link><pubDate>Thu, 27 Jul 2023 14:32:31 +0800</pubDate><guid>https://99bilibili.eu.org/post/002/</guid><description>&lt;p>成都顶顶顶&lt;/p></description></item><item><title>77799</title><link>https://99bilibili.eu.org/post/001/</link><pubDate>Thu, 27 Jul 2023 13:05:40 +0800</pubDate><guid>https://99bilibili.eu.org/post/001/</guid><description>&lt;p>本篇博客的视频教程首发于 &lt;a href="https://www.youtube.com/@techxiaofei">&lt;strong>Youtube：科技小飞哥&lt;/strong>&lt;/a>，加入 &lt;a href="https://t.me/+5OzmrG-iyJE2YzM9">&lt;strong>电报粉丝群&lt;/strong>&lt;/a> 获得最新视频更新和问题解答。&lt;/p>
+&lt;hr></description></item><item><title>hugo子模块错误提示解决办法</title><link>https://99bilibili.eu.org/post/013/</link><pubDate>Thu, 27 Jul 2023 14:46:23 +0800</pubDate><guid>https://99bilibili.eu.org/post/013/</guid><description>&lt;p>错误信息 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo;&lt;/p>
+&lt;p>表明在你的 Git 项目中的 .gitmodules 文件中找不到 &amp;ldquo;themes/jane&amp;rdquo; 子模块的 URL。&lt;/p>
+&lt;p>.gitmodules 文件是一个包含子模块配置信息的文件，它用于跟踪和管理项目中使用的子模块。子模块允许你在一个 Git 项目中嵌套另一个 Git 项目，并将其作为你项目的一部分来管理。&lt;/p>
+&lt;p>出现这个错误可能有几种原因：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>缺少 .gitmodules 文件：首先，确保你的项目根目录下有一个名为 .gitmodules 的文件。如果没有该文件，你需要创建一个新的 .gitmodules 文件并添加相应的子模块配置。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Themes/jane 子模块不存在：如果 themes/jane 子模块确实存在，但它没有被正确地添加为项目的子模块，则需要检查是否正确地添加了子模块。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>解决方法：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>确保 .gitmodules 文件存在：在项目根目录下，使用文本编辑器创建一个新的 .gitmodules 文件，或确保已存在的 .gitmodules 文件没有被移除或重命名。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>添加子模块的 URL：在 .gitmodules 文件中添加 themes/jane 子模块的 URL。例如：&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>[submodule &amp;#34;themes/jane&amp;#34;]
+path = themes/jane
+url = https://github.com/your_username/jane.git
+&lt;/code>&lt;/pre>&lt;p>请将上述 URL 替换为 themes/jane 子模块的实际 Git 仓库 URL。&lt;/p>
+&lt;ol start="3">
+&lt;li>初始化子模块：运行以下命令来初始化和更新子模块：&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>git submodule init
+git submodule update
+&lt;/code>&lt;/pre>&lt;p>这将会初始化并获取你在 .gitmodules 文件中配置的子模块。&lt;/p>
+&lt;ol start="4">
+&lt;li>提交更改：一旦子模块配置正常并成功初始化，确保将 .gitmodules 文件和项目的其他更改提交到 Git 仓库：&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>git add .
+git commit -m &amp;#34;Added themes/jane submodule&amp;#34;
+git push
+&lt;/code>&lt;/pre>&lt;p>以上步骤应该能帮助你解决 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo; 错误。如果你还有其他问题或需要进一步的帮助，请随时向我询问。&lt;/p></description></item><item><title>哈哈哈</title><link>https://99bilibili.eu.org/post/002/</link><pubDate>Thu, 27 Jul 2023 14:32:31 +0800</pubDate><guid>https://99bilibili.eu.org/post/002/</guid><description>&lt;p>成都顶顶顶&lt;/p></description></item><item><title>77799</title><link>https://99bilibili.eu.org/post/001/</link><pubDate>Thu, 27 Jul 2023 13:05:40 +0800</pubDate><guid>https://99bilibili.eu.org/post/001/</guid><description>&lt;p>本篇博客的视频教程首发于 &lt;a href="https://www.youtube.com/@techxiaofei">&lt;strong>Youtube：科技小飞哥&lt;/strong>&lt;/a>，加入 &lt;a href="https://t.me/+5OzmrG-iyJE2YzM9">&lt;strong>电报粉丝群&lt;/strong>&lt;/a> 获得最新视频更新和问题解答。&lt;/p>
 &lt;h1 id="背景httpswwwtechxiaofeicomposttechprotobufe8838ce699af">背景&lt;a href="https://www.techxiaofei.com/post/tech/protobuf/#%E8%83%8C%E6%99%AF">&lt;/a>&lt;/h1>
 &lt;p>目前主流的几种数据交互的格式主要有&lt;code>xml&lt;/code>、&lt;code>json&lt;/code>、&lt;code>protobuf&lt;/code>等等。&lt;code>xml&lt;/code>和&lt;code>json&lt;/code>我相信大家都很了解了。&lt;/p>
 &lt;ul>
@@ -2439,133 +2476,4 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
 &lt;h3 id="clean-up">Clean up&lt;/h3>
 &lt;p>You&amp;rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&amp;rsquo;t used, delete it.&lt;/p>
 &lt;h2 id="a-practical-example-in-a-diff">A practical example in a diff&lt;/h2>
-&lt;p>&lt;a href="http://heyitsalex.net/">Hey, it&amp;rsquo;s Alex&lt;/a> was migrated in less than a &lt;em>father-with-kids day&lt;/em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this &lt;a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610">diff&lt;/a>.&lt;/p></description></item><item><title>Demo: Syntax Highlighting</title><link>https://99bilibili.eu.org/post/demo/3-syntax-highlighting/</link><pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate><guid>https://99bilibili.eu.org/post/demo/3-syntax-highlighting/</guid><description>&lt;p>More detail: &lt;a href="https://gohugo.io/content-management/syntax-highlighting/">Syntax Highlighting | Hugo&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-js" data-lang="js">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">function&lt;/span> &lt;span style="color:#a6e22e">helloWorld&lt;/span> () {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">alert&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Hello, World!&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">HelloWorld&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>&lt;span style="color:#f92672">(&lt;/span>String&lt;span style="color:#f92672">[]&lt;/span> args&lt;span style="color:#f92672">)&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">out&lt;/span>&lt;span style="color:#f92672">.&lt;/span>&lt;span style="color:#a6e22e">println&lt;/span>&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Hello, World!&amp;#34;&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">package&lt;/span> hello
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">fun&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>(args: Array&amp;lt;String&amp;gt;) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> println(&lt;span style="color:#e6db74">&amp;#34;Hello World!&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">/* Hello */&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>(&lt;span style="color:#66d9ef">void&lt;/span>){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">printf&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Hello, World!&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// &amp;#39;Hello World!&amp;#39; program
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;iostream&amp;gt;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>(){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> std&lt;span style="color:#f92672">::&lt;/span>cout &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Hello World!&amp;#34;&lt;/span> &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> std&lt;span style="color:#f92672">::&lt;/span>endl;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cs" data-lang="cs">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">using&lt;/span> System;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">HelloWorld&lt;/span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">public&lt;/span> &lt;span style="color:#66d9ef">static&lt;/span> &lt;span style="color:#66d9ef">void&lt;/span> Main(){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System.Console.WriteLine(&lt;span style="color:#e6db74">&amp;#34;Hello, World!&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">html&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#f92672">body&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Hello, World!
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">body&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#f92672">html&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">package&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">import&lt;/span> &lt;span style="color:#a6e22e">fmt&lt;/span> &lt;span style="color:#e6db74">&amp;#34;fmt&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">func&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>()
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fmt&lt;/span>.&lt;span style="color:#a6e22e">Printf&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Hello, World!\n&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-scala" data-lang="scala">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">object&lt;/span> &lt;span style="color:#a6e22e">HelloWorld&lt;/span> &lt;span style="color:#66d9ef">with&lt;/span> &lt;span style="color:#a6e22e">Application&lt;/span> &lt;span style="color:#f92672">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">Console&lt;/span>&lt;span style="color:#f92672">.&lt;/span>println&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;Hello, World!&amp;#34;&lt;/span>&lt;span style="color:#f92672">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-php" data-lang="php">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">&amp;lt;?&lt;/span>&lt;span style="color:#a6e22e">php&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">echo&lt;/span> &lt;span style="color:#e6db74">&amp;#39;Hello, World!&amp;#39;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">?&amp;gt;&lt;/span>&lt;span style="color:#960050;background-color:#1e0010">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>print(&lt;span style="color:#e6db74">&amp;#34;Hello, World!&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="no-named-code-block">no named code block&lt;/h2>
-&lt;pre tabindex="0">&lt;code>## this is a comment
-$ echo this is a command
-this is a command
-## edit the file
-$vi foo.md
-+++
-date = &amp;#34;2014-09-28&amp;#34;
-title = &amp;#34;creating a new theme&amp;#34;
-+++
-bah and humbug
-:wq
-## show it
-$ cat foo.md
-+++
-date = &amp;#34;2014-09-28&amp;#34;
-title = &amp;#34;creating a new theme&amp;#34;
-+++
-bah and humbug
-$
-&lt;/code>&lt;/pre>&lt;h2 id="highlight-shortcode">highlight shortcode&lt;/h2>
-&lt;p>example:&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-shortcode" data-lang="shortcode">{{&amp;lt; highlight go &amp;#34;linenos=table,hl_lines=8 15-17,linenostart=199&amp;#34; &amp;gt;}}
-// ... code
-{{&amp;lt; /highlight &amp;gt;}}
-&lt;/code>&lt;/pre>&lt;p>result:&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">200
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">201
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">202
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">203
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">204
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">205
-&lt;/span>&lt;span style="background-color:#3c3d38">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">206
-&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">207
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">208
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">209
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">210
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">211
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">212
-&lt;/span>&lt;span style="background-color:#3c3d38">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">213
-&lt;/span>&lt;/span>&lt;span style="background-color:#3c3d38">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">214
-&lt;/span>&lt;/span>&lt;span style="background-color:#3c3d38">&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">215
-&lt;/span>&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">216
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">217
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">218
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">219
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">220
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// GetTitleFunc returns a func that can be used to transform a string to
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// title case.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">//
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// The supported styles are
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">//
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// - &amp;#34;Go&amp;#34; (strings.Title)
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// - &amp;#34;AP&amp;#34; (see https://www.apstylebook.com/)
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#3c3d38">&lt;span>&lt;span style="color:#75715e">// - &amp;#34;Chicago&amp;#34; (see http://www.chicagomanualofstyle.org/home.html)
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">//
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// If an unknown or empty style is provided, AP style is what you get.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">func&lt;/span> &lt;span style="color:#a6e22e">GetTitleFunc&lt;/span>(&lt;span style="color:#a6e22e">style&lt;/span> &lt;span style="color:#66d9ef">string&lt;/span>) &lt;span style="color:#66d9ef">func&lt;/span>(&lt;span style="color:#a6e22e">s&lt;/span> &lt;span style="color:#66d9ef">string&lt;/span>) &lt;span style="color:#66d9ef">string&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">switch&lt;/span> &lt;span style="color:#a6e22e">strings&lt;/span>.&lt;span style="color:#a6e22e">ToLower&lt;/span>(&lt;span style="color:#a6e22e">style&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#34;go&amp;#34;&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#a6e22e">strings&lt;/span>.&lt;span style="color:#a6e22e">Title&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#3c3d38">&lt;span> &lt;span style="color:#66d9ef">case&lt;/span> &lt;span style="color:#e6db74">&amp;#34;chicago&amp;#34;&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#3c3d38">&lt;span> &lt;span style="color:#a6e22e">tc&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#a6e22e">transform&lt;/span>.&lt;span style="color:#a6e22e">NewTitleConverter&lt;/span>(&lt;span style="color:#a6e22e">transform&lt;/span>.&lt;span style="color:#a6e22e">ChicagoStyle&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex; background-color:#3c3d38">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#a6e22e">tc&lt;/span>.&lt;span style="color:#a6e22e">Title&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span>:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">tc&lt;/span> &lt;span style="color:#f92672">:=&lt;/span> &lt;span style="color:#a6e22e">transform&lt;/span>.&lt;span style="color:#a6e22e">NewTitleConverter&lt;/span>(&lt;span style="color:#a6e22e">transform&lt;/span>.&lt;span style="color:#a6e22e">APStyle&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#a6e22e">tc&lt;/span>.&lt;span style="color:#a6e22e">Title&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;p>&lt;a href="http://heyitsalex.net/">Hey, it&amp;rsquo;s Alex&lt;/a> was migrated in less than a &lt;em>father-with-kids day&lt;/em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this &lt;a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610">diff&lt;/a>.&lt;/p></description></item></channel></rss>
