@@ -690,23 +690,49 @@
 &lt;p>添加子模块的 URL：在 .gitmodules 文件中添加 themes/jane 子模块的 URL。例如：&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>[submodule &amp;#34;themes/jane&amp;#34;]
-path = themes/jane
-url = https://github.com/your_username/jane.git
-&lt;/code>&lt;/pre>&lt;p>请将上述 URL 替换为 themes/jane 子模块的实际 Git 仓库 URL。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>submodule &lt;span style="color:#4070a0">&amp;#34;themes/jane&amp;#34;&lt;/span>&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">path&lt;/span> &lt;span style="color:#666">=&lt;/span> themes/jane
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">url&lt;/span> &lt;span style="color:#666">=&lt;/span> https://github.com/xianmin/hugo-theme-jane.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>请将上述 URL 替换为 themes/jane 子模块的实际 Git 仓库 URL。&lt;/p>
 &lt;ol start="3">
 &lt;li>初始化子模块：运行以下命令来初始化和更新子模块：&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>git submodule init
-git submodule update
-&lt;/code>&lt;/pre>&lt;p>这将会初始化并获取你在 .gitmodules 文件中配置的子模块。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git submodule init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这将会初始化并获取你在 .gitmodules 文件中配置的子模块。&lt;/p>
 &lt;ol start="4">
 &lt;li>提交更改：一旦子模块配置正常并成功初始化，确保将 .gitmodules 文件和项目的其他更改提交到 Git 仓库：&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>git add .
-git commit -m &amp;#34;Added themes/jane submodule&amp;#34;
-git push
-&lt;/code>&lt;/pre>&lt;p>以上步骤应该能帮助你解决 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo; 错误。如果你还有其他问题或需要进一步的帮助，请随时向我询问。&lt;/p></description></item><item><title>网站远程自动备份方法分享</title><link>https://99bilibili.eu.org/post/12/</link><pubDate>Wed, 26 Jul 2023 00:39:14 +0800</pubDate><guid>https://99bilibili.eu.org/post/12/</guid><description>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git add .
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git commit -m &lt;span style="color:#4070a0">&amp;#34;Added themes/jane submodule&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git push
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>以上步骤应该能帮助你解决 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo; 错误。如果你还有其他问题或需要进一步的帮助，请随时向我询问。&lt;/p></description></item><item><title>网站远程自动备份方法分享</title><link>https://99bilibili.eu.org/post/12/</link><pubDate>Wed, 26 Jul 2023 00:39:14 +0800</pubDate><guid>https://99bilibili.eu.org/post/12/</guid><description>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 &lt;iframe src="https://www.youtube.com/embed/0CkomEpfbhk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
 &lt;/div>
