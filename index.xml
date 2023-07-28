@@ -29,7 +29,7 @@
 &lt;hr>
 &lt;h3 id="some-words">📃Some Words&lt;/h3>
 &lt;!-- raw HTML omitted -->
-&lt;hr></description></item><item><title>014</title><link>https://99bilibili.eu.org/post/014/</link><pubDate>Fri, 28 Jul 2023 00:42:31 +0800</pubDate><guid>https://99bilibili.eu.org/post/014/</guid><description>&lt;p>嘎嘎嘎嘎嘎嘎嘎嘎嘎&lt;/p>
+&lt;hr></description></item><item><title>019994</title><link>https://99bilibili.eu.org/post/014/</link><pubDate>Fri, 28 Jul 2023 00:42:31 +0800</pubDate><guid>https://99bilibili.eu.org/post/014/</guid><description>&lt;p>嘎嘎嘎嘎嘎嘎嘎嘎嘎&lt;/p>
 &lt;h4 id="哇哇哇哇哇哇哇">哇哇哇哇哇哇哇&lt;/h4></description></item><item><title>hugo子模块错误提示解决办法</title><link>https://99bilibili.eu.org/post/013/</link><pubDate>Thu, 27 Jul 2023 14:46:23 +0800</pubDate><guid>https://99bilibili.eu.org/post/013/</guid><description>&lt;p>错误信息 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo;&lt;/p>
 &lt;p>表明在你的 Git 项目中的 .gitmodules 文件中找不到 &amp;ldquo;themes/jane&amp;rdquo; 子模块的 URL。&lt;/p>
 &lt;p>.gitmodules 文件是一个包含子模块配置信息的文件，它用于跟踪和管理项目中使用的子模块。子模块允许你在一个 Git 项目中嵌套另一个 Git 项目，并将其作为你项目的一部分来管理。&lt;/p>
