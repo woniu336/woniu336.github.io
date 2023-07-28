@@ -1,35 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://99bilibili.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jul 2023 22:14:16 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>关于</title><link>https://99bilibili.eu.org/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/about/</guid><description>&lt;h1 id="关于">『关于』&lt;/h1>
-&lt;h3 id="我">😊我：&lt;/h3>
-&lt;p>目前是一名高三学生,喜欢折腾各种电子产品,爱打游戏,没事就写写博客,做这个博客是为了记录一些有的没的,还有就是装逼,由于目前还是个穷屌丝,整个博客花的费用主要是域名续费,部署在&lt;code>GitHub&lt;/code>上,配合&lt;code>GitHub action&lt;/code>和&lt;code>Vercel&lt;/code>,虽然偶尔会崩,但是能用就行,整个博客基本上是全静态,日常水文够用,选择&lt;code>hugo&lt;/code>而不用&lt;code>hexo&lt;/code>是考虑到稳定性和可持续性,&lt;code>hexo&lt;/code>过于依赖&lt;code>npm&lt;/code>,不同主题的配置差别太大,有时还可能因为node版本不适合报错,折腾不动,目前就用着hugo养老吧.&lt;/p>
-&lt;p>🌵我的兴趣爱好:&lt;/p>
-&lt;p>🪅抓鱼&lt;/p>
-&lt;p>👦数码设备&lt;/p>
-&lt;p>👨‍💻电子产品&lt;/p>
-&lt;p>💪操作系统，尤其是MacOS和iOS&lt;/p>
-&lt;p>✍️写博客&lt;/p>
-&lt;p>👋打游戏，比如大多数的枪战游戏和我最喜欢的GTA5&lt;/p>
-&lt;p>🎉编程&lt;/p>
-&lt;p>🔮音乐，如金曲or电音&lt;/p>
-&lt;p>♂不是gay啊&lt;/p>
-&lt;p>🍔喜欢汉堡&lt;/p>
-&lt;p>🌝喜欢旅游&lt;/p>
-&lt;p>🃏喜欢大自然和小动物&lt;/p>
-&lt;hr>
-&lt;h3 id="擅长">💪擅长：&lt;/h3>
-&lt;p>&lt;del>HTML5 、CSS、JS&lt;/del>&lt;/p>
-&lt;p>&lt;del>能够较熟练使用Windows，Linux，macos，iOS，Android&lt;/del>&lt;/p>
-&lt;p>&lt;del>一点点Ps、Pr&lt;/del>&lt;/p>
-&lt;p>&lt;del>一点点的Word、Excel、PowerPoint&lt;/del>&lt;/p>
-&lt;p>&lt;del>FPS游戏&lt;/del>&lt;/p>
-&lt;hr>
-&lt;h3 id="联系">🃏联系：&lt;/h3>
-&lt;p>QQ：1909901779&lt;/p>
-&lt;p>Wechat：l1nsn0w&lt;/p>
-&lt;p>邮箱：1909901779@qq.com&lt;/p>
-&lt;hr>
-&lt;h3 id="some-words">📃Some Words&lt;/h3>
-&lt;!-- raw HTML omitted -->
-&lt;hr></description></item><item><title>Hugo 代码拷贝插件</title><link>https://99bilibili.eu.org/post/015/</link><pubDate>Fri, 28 Jul 2023 22:14:16 +0800</pubDate><guid>https://99bilibili.eu.org/post/015/</guid><description>&lt;p>博客是建好了，但是总是想添加一个代码一键复制的功能。一开始是想去 html 标签中直接添加一个 &lt;code>button&lt;/code> ，但是发现好像并没有那么简单。查阅了 Hugo 的内置功能也没有发现，很幸运找到了一篇博客 &lt;a href="https://huangzhongde.cn/">黄忠德的博客&lt;/a> ，正好解决了我的需求。所以也记录一下。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://99bilibili.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 28 Jul 2023 22:14:16 +0800</lastBuildDate><atom:link href="https://99bilibili.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 代码拷贝插件</title><link>https://99bilibili.eu.org/post/015/</link><pubDate>Fri, 28 Jul 2023 22:14:16 +0800</pubDate><guid>https://99bilibili.eu.org/post/015/</guid><description>&lt;p>博客是建好了，但是总是想添加一个代码一键复制的功能。一开始是想去 html 标签中直接添加一个 &lt;code>button&lt;/code> ，但是发现好像并没有那么简单。查阅了 Hugo 的内置功能也没有发现，很幸运找到了一篇博客 &lt;a href="https://huangzhongde.cn/">黄忠德的博客&lt;/a> ，正好解决了我的需求。所以也记录一下。&lt;/p>
 &lt;h3 id="思考">思考&lt;/h3>
 &lt;p>我们知道，代码片段是使用 markdown code fences 来编写的&lt;/p>
 &lt;pre tabindex="0">&lt;code>``` jsx
@@ -1979,7 +1948,44 @@ sudo rm -rf /var/lib/containerd
 &lt;/blockquote>
 &lt;p>重启 docker&lt;/p>
 &lt;pre tabindex="0">&lt;code>systemctl restart docker
-&lt;/code>&lt;/pre></description></item><item><title/><link>https://99bilibili.eu.org/%E4%B8%BB%E9%9D%A2%E6%9D%BF/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/%E4%B8%BB%E9%9D%A2%E6%9D%BF/</guid><description>&lt;h4 id="日记">日记&lt;/h4>
+&lt;/code>&lt;/pre></description></item><item><title/><link>https://99bilibili.eu.org/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/about/</guid><description>&lt;h1 id="关于我">关于我&lt;/h1>
+&lt;ul>
+&lt;li>👨‍💻 行善积德，莫问前程&lt;/li>
+&lt;li>👨‍💼 心如明镜，福报自来&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;!-- raw HTML omitted -->
+&lt;h3 id="blog存在的意义">blog存在的意义:&lt;/h3>
+&lt;ol>
+&lt;li>记录踩坑过程&lt;/li>
+&lt;li>经验总结&lt;/li>
+&lt;li>用到时避免再次踩坑&lt;/li>
+&lt;li>知识需要记忆与利用&lt;/li>
+&lt;/ol>
+&lt;!-- raw HTML omitted -->
+&lt;p>个人网站是一种有点神秘的动物，大部分隐身在互联网的丛林中，很少有人观察到。那些完全生活在 Facebook 和 Google 的美丽花园中的互联网用户，甚至可能都不知道该物种的存在。其他没有经验的用户可能会认为，个人网站已经像恐龙那样灭绝。事实是野外还存在许多标本，只有了解该物种习性的猎人才能发现它们&lt;/p>
+&lt;pre tabindex="0">&lt;code>
+_ooOoo_
+o8888888o
+88&amp;#34; . &amp;#34;88
+(| -_- |)
+O\ = /O
+____/`---&amp;#39;\____
+.&amp;#39; \\| |// `。
+/ \\||| : |||// \
+/ _||||| -:- |||||- \
+| | \\\ - /// | |
+| \_| &amp;#39;&amp;#39;\---/&amp;#39;&amp;#39; | |
+\ .-\__ `-` ___/-. /
+___`. .&amp;#39; /--.--\ `. . __
+.&amp;#34;&amp;#34; &amp;#39;&amp;lt; `.___\_&amp;lt;|&amp;gt;_/___.&amp;#39; &amp;gt;&amp;#39;&amp;#34;&amp;#34;.
+| | : `- \`.;`\ _ /`;.`/ - ` : | |
+\ \ `-. \_ __\ /__ _/ .-` / /
+======`-.____`-.___\_____/___.-`____.-&amp;#39;======
+`=---=&amp;#39;
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+佛祖保佑 永无BUG
+&lt;/code>&lt;/pre>&lt;p>&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;!-- raw HTML omitted -->&lt;/p></description></item><item><title/><link>https://99bilibili.eu.org/%E4%B8%BB%E9%9D%A2%E6%9D%BF/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://99bilibili.eu.org/%E4%B8%BB%E9%9D%A2%E6%9D%BF/</guid><description>&lt;h4 id="日记">日记&lt;/h4>
 &lt;pre tabindex="0">&lt;code class="language-dataview" data-lang="dataview">table title AS &amp;#34;标题&amp;#34;,date AS &amp;#34;创建时间&amp;#34;
 from &amp;#34;日记&amp;#34;
 where draft=true
