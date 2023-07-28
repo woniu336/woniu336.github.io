@@ -757,7 +757,7 @@ git push
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -fsSL https://get.docker.com | sh
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -L &lt;span style="color:#4070a0">&amp;#34;https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -s&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -m&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -L &lt;span style="color:#4070a0">&amp;#34;https://github.com/docker/compose/releases/latest/download/docker-compose-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -s&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -m&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod +x /usr/local/bin/docker-compose
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
@@ -796,12 +796,26 @@ git push
 &lt;/li>
 &lt;li>
 &lt;p>登录:&lt;/p>
-&lt;pre tabindex="0">&lt;code>admin@example.com
-&lt;/code>&lt;/pre>&lt;/li>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>admin@example.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
 &lt;li>
 &lt;p>密码:&lt;/p>
-&lt;pre tabindex="0">&lt;code>changeme
-&lt;/code>&lt;/pre>&lt;/li>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>changeme
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
 &lt;/ol>
 &lt;hr>
 &lt;h2 id="portainer-ce-中文版">Portainer-ce 中文版&lt;/h2>
