@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 29 Jul 2023 01:26:55 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>hugo部署twikoo评论</title><link>https://jimugou.com/post/017/</link><pubDate>Sat, 29 Jul 2023 01:26:55 +0800</pubDate><guid>https://jimugou.com/post/017/</guid><description>&lt;h2 id="1申请-envid">1.申请 envId&lt;/h2>
 &lt;p>请看 &lt;a href="https://twikoo.js.org/quick-start.html#%E4%BA%91%E5%87%BD%E6%95%B0%E9%83%A8%E7%BD%B2">twikoo 官方文档&lt;/a>，我选的是 vercel 部署方式，视频教程：Twikoo Vercel 部署教程&lt;/p>
-&lt;div class="bilibili">&lt;iframe src="//player.bilibili.com/player.html?bvid=BV1Jh4y1y7YV&amp;page=1" width="800" height="600" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">&lt;/iframe>&lt;/div>
+&lt;div class="bilibili">&lt;iframe src="//player.bilibili.com/player.html?bvid=BV1Fh411e7ZH&amp;page=1" width="800" height="600" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">&lt;/iframe>&lt;/div>
 &lt;h2 id="2添加代码">2.添加代码&lt;/h2>
 &lt;p>Hugo 的 PaperMod 主题添加 twikoo 代码的位置：layouts/partials/comments.html 推荐添加在自己博客站点下的 layouts 文件夹，不要添加到主题里的 layouts 文件夹，否则更新主题时会被覆盖&lt;/p>
 &lt;!-- raw HTML omitted -->
