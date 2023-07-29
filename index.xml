@@ -1,4 +1,223 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 29 Jul 2023 21:25:52 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>搭建独角数卡发卡网站 经营自己的小店</title><link>https://jimugou.com/post/020/</link><pubDate>Sat, 29 Jul 2023 21:25:52 +0800</pubDate><guid>https://jimugou.com/post/020/</guid><description>&lt;p>python一键自动化搭建发卡网站&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 29 Jul 2023 23:18:42 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo使用Shortcode插入bilibili、Youtube视频</title><link>https://jimugou.com/post/021/</link><pubDate>Sat, 29 Jul 2023 23:18:42 +0800</pubDate><guid>https://jimugou.com/post/021/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>使用个人博客也有一年多的时间，这一年多的时候踩了很多坑，也学到了很多知识。 这里分享一个系列教程：从零开始搭建个人博客，把我的经验分享在这里。&lt;/p>
+&lt;h2 id="shortcodes是什么">Shortcodes是什么&lt;/h2>
+&lt;p>shortcode 可以理解为&lt;strong>HTML模版&lt;/strong>，可以很方便的支持markdown里面写一行规定格式的代码，能用shortcode里面的模版替换成对应的HTML文件，然后就把这段HTML代码添加到编译之后的HTML文件中。&lt;/p>
+&lt;p>&lt;code>Hugo shortcode&lt;/code>&lt;/p>
+&lt;p>&lt;code>//注：去掉@，我这里是为了防止自动编译&lt;/code>&lt;br>
+&lt;code>{@{&amp;lt; name parameter1 parameter2 &amp;gt;}}&lt;/code>&lt;/p>
+&lt;p>然后在你的&lt;code>主题&lt;/code>的&lt;code>layouts/shortcodes&lt;/code> 会自动找 名字为 name.html的文件，就把参数的值替换到html中，得到一个最终的html信息。&lt;/p>
+&lt;p>shortcode可以很方便的做复用，可以让你在每个markdown文件里面添加很少的内容，通常是一行代码，就能生成一个通用的HTML片段。&lt;/p>
+&lt;p>使用Shortcode，我们就能很方便的通过一行简单的代码来插入B站或者Youtube视频。&lt;/p>
+&lt;h2 id="插入视频">插入视频&lt;/h2>
+&lt;p>我们就教大家怎么在Hugo中嵌入Bilibili视频和Youtube视频，这样当别人访问你的个人博客网站的时候，可以直接点击播放你插入的视频，还可以自动跳转到你的自媒体平台播放视频，来给你的自媒体平台引流。&lt;/p>
+&lt;h3 id="1-嵌入bilibili视频">1. 嵌入Bilibili视频&lt;/h3>
+&lt;p>在hugo网站目录你使用的主题目录下&lt;code>themes/{your theme name}/layouts/shortcodes&lt;/code>中创建bilibili.html文件。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-19">19&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-20">20&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-21">21&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-22">22&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-23">23&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-24">24&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-25">25&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-26">26&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-27">27&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-28">28&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-29">29&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-30">30&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-31">31&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-32">32&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-33">33&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-34">34&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-35">35&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-36">36&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-37">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-37">37&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-38">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-38">38&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-39">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-39">39&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#062873;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#062873;font-weight:bold">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#60a0b0;font-style:italic">&amp;lt;!-- style 样式 是为了让网页上的视频框按比例显示而非固定的大小 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#062873;font-weight:bold">style&lt;/span> &lt;span style="color:#4070a0">type&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;text/css&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#0e84b5;font-weight:bold">aspect-ratio&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">position&lt;/span>: &lt;span style="color:#007020;font-weight:bold">relative&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">width&lt;/span>: &lt;span style="color:#40a070">100&lt;/span>&lt;span style="color:#902000">%&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">height&lt;/span>: &lt;span style="color:#40a070">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">padding-bottom&lt;/span>: &lt;span style="color:#40a070">75&lt;/span>&lt;span style="color:#902000">%&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#0e84b5;font-weight:bold">aspect-ratio&lt;/span> &lt;span style="color:#062873;font-weight:bold">iframe&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">position&lt;/span>: &lt;span style="color:#007020;font-weight:bold">absolute&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">width&lt;/span>: &lt;span style="color:#40a070">100&lt;/span>&lt;span style="color:#902000">%&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">height&lt;/span>: &lt;span style="color:#40a070">100&lt;/span>&lt;span style="color:#902000">%&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">left&lt;/span>: &lt;span style="color:#40a070">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">top&lt;/span>: &lt;span style="color:#40a070">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#062873;font-weight:bold">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#062873;font-weight:bold">head&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#062873;font-weight:bold">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#062873;font-weight:bold">div&lt;/span> &lt;span style="color:#4070a0">class&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;aspect-ratio&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#062873;font-weight:bold">iframe&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">src&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;https://player.bilibili.com/player.html?bvid={{.Get 0 }}&amp;amp;page={{ if .Get 1 }}{{.Get 1}}{{ else }}1&amp;amp;high_quality=1&amp;amp;danmaku=0{{end}}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">scrolling&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;no&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">border&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">frameborder&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;no&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">framespacing&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">allowfullscreen&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;true&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#062873;font-weight:bold">iframe&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#60a0b0;font-style:italic">&amp;lt;!-- src 中的 &amp;amp;high_quality=1&amp;amp;danmaku=0 设定了高清程度并默认屏蔽弹幕 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#062873;font-weight:bold">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#062873;font-weight:bold">body&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#062873;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后在你的bilibli的连接上找到BV号。 比如我的视频链接是： &lt;a href="https://www.bilibili.com/video/BV1n8411K7zr/?vd_source=adec61d169fe18e7682f66c984380921">https://www.bilibili.com/video/BV1n8411K7zr/?vd_source=adec61d169fe18e7682f66c984380921&lt;/a>&lt;/p>
+&lt;p>那么BV号就是：&lt;code>BV1n8411K7zr&lt;/code>&lt;/p>
+&lt;p>在你的markdown文件里面添加这么一行&lt;/p>
+&lt;p>&lt;code>//注：去掉@，我这里是为了防止自动编译&lt;/code>&lt;br>
+&lt;code>{@{&amp;lt; bilibili BV1n8411K7zr &amp;gt;}}&lt;/code>&lt;/p>
+&lt;p>其中bilibli是你定义的html的文件名，后面的BV1n8411K7zr 就是你的第一个参数，也就是{{.Get 0 }}，毕竟在程序届，是从0开始数的。&lt;/p>
+&lt;p>这样就能展示你的B站视频了:&lt;/p>
+&lt;!DOCTYPE HTML>
+&lt;html>
+&lt;head>
+&lt;style type="text/css">
+.aspect-ratio {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.aspect-ratio iframe {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class="aspect-ratio">
+&lt;iframe
+src="https://player.bilibili.com/player.html?bvid=BV1ie4y1n7vy&amp;page=1&amp;high_quality=1&amp;danmaku=0"
+scrolling="no"
+border="0"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;/body>
+&lt;/html>
+&lt;p>点击&lt;code>去Bilibili观看&lt;/code>或者&lt;code>吐槽&lt;/code>会自动跳转到b站对应的视频链接继续观看，非常方便。&lt;/p>
+&lt;h2 id="2-嵌入youtube视频">2. 嵌入Youtube视频&lt;/h2>
+&lt;p>Hugo是自带Youtube视频的插入的，所以我们甚至不需要自己添加shortcode模板。&lt;/p>
+&lt;p>找到你的视频链接：&lt;/p>
+&lt;p>&lt;code>https://www.youtube.com/watch?v=kDQJF6Ngsi0&lt;/code>
+你只需要取到 v=xxxx里面的xxxx内容 也就是你只需要写&lt;/p>
+&lt;p>&lt;code>{@{&amp;lt; youtube kDQJF6Ngsi0 &amp;gt;}}&lt;/code>&lt;/p>
+&lt;p>就会自动匹配Hugo自带的&lt;code>shortcode&lt;/code>模板，嵌入你的youtube视频。&lt;/p>
+&lt;p>如果你不想用hugo自带的shortcode模板，或者它无法正常插入视频，那么同样的方式在你使用的主题目录下&lt;code>themes/{your theme name}/layouts/shortcodes&lt;/code>中创建youtube.html文件。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-19">19&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-20">20&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-21">21&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#062873;font-weight:bold">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#0e84b5;font-weight:bold">meta-media&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">position&lt;/span>: &lt;span style="color:#007020;font-weight:bold">relative&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">margin-bottom&lt;/span>: &lt;span style="color:#40a070">30&lt;/span>&lt;span style="color:#902000">px&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">display&lt;/span>: &lt;span style="color:#007020;font-weight:bold">flex&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">width&lt;/span>: &lt;span style="color:#40a070">100&lt;/span>&lt;span style="color:#902000">%&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">height&lt;/span>: &lt;span style="color:#40a070">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">padding-bottom&lt;/span>: &lt;span style="color:#40a070">75&lt;/span>&lt;span style="color:#902000">%&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> .&lt;span style="color:#0e84b5;font-weight:bold">video&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">position&lt;/span>: &lt;span style="color:#007020;font-weight:bold">absolute&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">width&lt;/span>: &lt;span style="color:#40a070">100&lt;/span>&lt;span style="color:#902000">%&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">height&lt;/span>: &lt;span style="color:#40a070">100&lt;/span>&lt;span style="color:#902000">%&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">left&lt;/span>: &lt;span style="color:#40a070">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">top&lt;/span>: &lt;span style="color:#40a070">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#062873;font-weight:bold">style&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#062873;font-weight:bold">div&lt;/span> &lt;span style="color:#4070a0">class&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;meta-media&amp;#34;&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#062873;font-weight:bold">iframe&lt;/span> &lt;span style="color:#4070a0">src&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;https://www.youtube.com/embed/{{ .Get 0 }}&amp;#34;&lt;/span> &lt;span style="color:#4070a0">frameborder&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;no&amp;#34;&lt;/span> &lt;span style="color:#4070a0">scrolling&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;yes&amp;#34;&lt;/span> &lt;span style="color:#4070a0">allowfullscreen&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;allowfullscreen&amp;#34;&lt;/span> &lt;span style="color:#4070a0">high_quality&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;1&amp;#34;&lt;/span> &lt;span style="color:#4070a0">framespacing&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;1&amp;#34;&lt;/span> &lt;span style="color:#4070a0">class&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;video&amp;#34;&lt;/span> &amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#062873;font-weight:bold">iframe&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;/&lt;span style="color:#062873;font-weight:bold">div&lt;/span>&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>看一下效果：&lt;/p>
+&lt;style>
+.meta-media {
+position: relative;
+margin-bottom: 30px;
+display: flex;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.video {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;div class="meta-media">
+&lt;iframe src="https://www.youtube.com/embed/Y7QGIBQZ3Rk" frameborder="no" scrolling="yes"
+allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
+&lt;/iframe>
+&lt;/div>
+&lt;h2 id="结论">结论&lt;/h2>
+&lt;p>&lt;code>shortcodes&lt;/code>是不是很方便？让你在博客里面只需要写上一行代码就可以自动链接到B站或者Youtube，可以非常方便的引流。赶快在你的个人博客加入shortcodes添加B站和Youtube视频吧。能大大提高你的B站和Youtube视频的站外曝光率。&lt;/p></description></item><item><title>搭建独角数卡发卡网站 经营自己的小店</title><link>https://jimugou.com/post/020/</link><pubDate>Sat, 29 Jul 2023 21:25:52 +0800</pubDate><guid>https://jimugou.com/post/020/</guid><description>&lt;p>python一键自动化搭建发卡网站&lt;/p>
 &lt;p>开源地址&lt;/p>
 &lt;p>&lt;a href="https://github.com/assimon/dujiaoka">https://github.com/assimon/dujiaoka&lt;/a>&lt;/p>
 &lt;p>这里提供的python脚本都是在自己的电脑上运行的，需要先在本机安装python环境安装paramiko，speedtest-cli库。 就可以用现实电脑操作控制所有VPS了，包括批量更新，查看所有VPS情况，批量安装docker，批量上传文件，批量测速，批量部署NGINX，批量启动BBR加速等操作！&lt;/p>
@@ -436,7 +655,39 @@ where draft=false
 sort date desc
 &lt;/code>&lt;/pre></description></item><item><title>hugo部署twikoo评论</title><link>https://jimugou.com/post/017/</link><pubDate>Sat, 29 Jul 2023 01:26:55 +0800</pubDate><guid>https://jimugou.com/post/017/</guid><description>&lt;h2 id="1申请-envid">1.申请 envId&lt;/h2>
 &lt;p>请看 &lt;a href="https://twikoo.js.org/quick-start.html#%E4%BA%91%E5%87%BD%E6%95%B0%E9%83%A8%E7%BD%B2">twikoo 官方文档&lt;/a>，我选的是 vercel 部署方式，视频教程：Twikoo Vercel 部署教程&lt;/p>
-&lt;div class="bilibili">&lt;iframe src="//player.bilibili.com/player.html?bvid=BV1Fh411e7ZH&amp;page=1" width="800" height="600" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">&lt;/iframe>&lt;/div>
+&lt;!DOCTYPE HTML>
+&lt;html>
+&lt;head>
+&lt;style type="text/css">
+.aspect-ratio {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.aspect-ratio iframe {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class="aspect-ratio">
+&lt;iframe
+src="https://player.bilibili.com/player.html?bvid=BV1Fh411e7ZH&amp;page=1&amp;high_quality=1&amp;danmaku=0"
+scrolling="no"
+border="0"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;/body>
+&lt;/html>
 &lt;h2 id="2添加代码">2.添加代码&lt;/h2>
 &lt;p>Hugo 的 PaperMod 主题添加 twikoo 代码的位置：layouts/partials/comments.html 推荐添加在自己博客站点下的 layouts 文件夹，不要添加到主题里的 layouts 文件夹，否则更新主题时会被覆盖&lt;/p>
 &lt;!-- raw HTML omitted -->
@@ -1670,9 +1921,27 @@ import React from &amp;#39;react&amp;#39;;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git push
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>以上步骤应该能帮助你解决 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo; 错误。如果你还有其他问题或需要进一步的帮助，请随时向我询问。&lt;/p></description></item><item><title>网站远程自动备份方法分享</title><link>https://jimugou.com/post/12/</link><pubDate>Wed, 26 Jul 2023 00:39:14 +0800</pubDate><guid>https://jimugou.com/post/12/</guid><description>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/0CkomEpfbhk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div>&lt;p>以上步骤应该能帮助你解决 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo; 错误。如果你还有其他问题或需要进一步的帮助，请随时向我询问。&lt;/p></description></item><item><title>网站远程自动备份方法分享</title><link>https://jimugou.com/post/12/</link><pubDate>Wed, 26 Jul 2023 00:39:14 +0800</pubDate><guid>https://jimugou.com/post/12/</guid><description>&lt;style>
+.meta-media {
+position: relative;
+margin-bottom: 30px;
+display: flex;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.video {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;div class="meta-media">
+&lt;iframe src="https://www.youtube.com/embed/0CkomEpfbhk" frameborder="no" scrolling="yes"
+allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
+&lt;/iframe>
 &lt;/div>
 &lt;blockquote>
 &lt;p>将 vps 中 home/web 目录打包并传到指定 VPS 的 home 目录&lt;/p>
@@ -2311,8 +2580,27 @@ SSH:22
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>Cloudflare CDN反代免费VPN高速上网，速度超快，千兆节点、解锁奈飞流媒体</title><link>https://jimugou.com/post/4/</link><pubDate>Tue, 25 Jul 2023 22:56:17 +0800</pubDate><guid>https://jimugou.com/post/4/</guid><description>&lt;h1 id="windows-系统">&lt;strong>Windows 系统:&lt;/strong>&lt;/h1>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/5fvhws6ZXrM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;style>
+.meta-media {
+position: relative;
+margin-bottom: 30px;
+display: flex;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.video {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;div class="meta-media">
+&lt;iframe src="https://www.youtube.com/embed/5fvhws6ZXrM" frameborder="no" scrolling="yes"
+allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
+&lt;/iframe>
 &lt;/div>
 &lt;p>v2rayN 最新版&lt;a href="https://github.com/2dust/v2rayN/releases">下载地址&amp;raquo;&lt;/a>&lt;/p>
 &lt;p>cloudflare&lt;a href="https://dash.cloudflare.com/">网站链接&amp;raquo;&lt;/a>&lt;/p>
@@ -2340,8 +2628,27 @@ Custom Domains查看——添加自定义域——填1个二级域名&lt;br>
 &lt;p>2.无域名（没tls加密，80或者2052端口）&lt;br>
 进去 worker.dev，加上/uuid 就能看到 VLESS 节点 URL 和 Clash-meta 配置。v2ray,shadowrocket 等客户端要去掉 tls 加密，端口改为80或者2052，地址修为优选 i&lt;/p>
 &lt;h1 id="mac-系统">MAC 系统:&lt;/h1>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/Y32X4U9iJ_o" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;style>
+.meta-media {
+position: relative;
+margin-bottom: 30px;
+display: flex;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.video {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;div class="meta-media">
+&lt;iframe src="https://www.youtube.com/embed/Y32X4U9iJ_o" frameborder="no" scrolling="yes"
+allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
+&lt;/iframe>
 &lt;/div>
 &lt;p>v2rayu: &lt;a href="https://github.com/yanue/V2rayU/releases/tag/v3.8.0">下载链接&amp;raquo;&lt;/a>&lt;/p>
 &lt;h2 id="cloudflarest-ip优化">Cloudflarest ip优化：&lt;/h2>
@@ -2404,20 +2711,4 @@ Custom Domains查看——添加自定义域——填1个二级域名&lt;br>
 &lt;!-- raw HTML omitted -->
 &lt;h2 id="contact">Contact&lt;/h2>
 &lt;p>Dudor&lt;/p>
-&lt;p>Project Link: &lt;a href="https://github.com/dudor/BookmarkHub">https://github.com/dudor/BookmarkHub&lt;/a>&lt;/p></description></item><item><title>如何在 VM 虚拟机上安装 macOS 14 索诺玛 最新系统?</title><link>https://jimugou.com/post/2/</link><pubDate>Tue, 25 Jul 2023 21:05:44 +0800</pubDate><guid>https://jimugou.com/post/2/</guid><description>&lt;h1 id="如果你想在-windows-电脑上体验苹果最新的-macos-14-sonoma-系统">如果你想在 Windows 电脑上体验苹果最新的 macOS 14 Sonoma 系统！&lt;/h1>
-&lt;h1 id="那么跟着我步骤来进行安装吧">那么跟着我步骤来进行安装吧~&lt;/h1>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/32ada962f6d5bcfa802f9917c1f1a24c.webp" alt="">&lt;/p>
-&lt;h1 id="安装步骤">安装步骤：&lt;/h1>
-&lt;p>1、首先下载并安装 VMWare 虚拟机软件**【&lt;a href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html">官网下载&lt;/a>】**&lt;/p>
-&lt;ol start="2">
-&lt;li>下载**【&lt;a href="https://github.com/paolo-projects/unlocker">VMWare Unlocker】&lt;/a>**，&lt;strong>以管理员身份运行 win-install&lt;/strong>&lt;/li>
-&lt;/ol>
-&lt;p>3.下载 macOS 14 索诺玛 （Sonoma）的 ISO 系统文件【&lt;strong>&lt;a href="https://www.mediafire.com/file/lzlounvkwazy948/macOS+Sonoma+ISO.iso/file">点击下载&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>4.创建虚拟机，转到&lt;strong>我的文档 -&amp;gt; 虚拟机 -&amp;gt; macOS 14 虚拟机文件，&lt;/strong>&lt;/p>
-&lt;p>然后在 &lt;strong>右键单击&lt;/strong>​​ 2 KB 的&lt;strong>macOS 14 (.VMX) 文件，然后选择****使用记事本打开，并在底部输入以下内容：&lt;/strong>&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-none" data-lang="none">smc.version = &amp;#34;0&amp;#34;
-&lt;/code>&lt;/pre>&lt;p>全选代码&lt;/p>
-&lt;p>复制&lt;/p>
-&lt;p>5.正式开始安装&lt;/p>
-&lt;p>启用以太网：&lt;/p>
-&lt;p>搜索 ethernet0.virtualDev = &amp;ldquo;e1000e&amp;rdquo; 并将 &lt;strong>e1000e&lt;/strong>替换 为 &lt;strong>vmxnet3&lt;/strong> 并保存文件。&lt;/p></description></item></channel></rss>
+&lt;p>Project Link: &lt;a href="https://github.com/dudor/BookmarkHub">https://github.com/dudor/BookmarkHub&lt;/a>&lt;/p></description></item></channel></rss>
