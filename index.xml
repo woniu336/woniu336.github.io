@@ -1,4 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 29 Jul 2023 23:18:42 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo使用Shortcode插入bilibili、Youtube视频</title><link>https://jimugou.com/post/021/</link><pubDate>Sat, 29 Jul 2023 23:18:42 +0800</pubDate><guid>https://jimugou.com/post/021/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 30 Jul 2023 00:19:18 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>vercel部署hugo记录配置</title><link>https://jimugou.com/post/022/</link><pubDate>Sun, 30 Jul 2023 00:19:18 +0800</pubDate><guid>https://jimugou.com/post/022/</guid><description>&lt;h2 id="构建和开发设置">构建和开发设置&lt;/h2>
+&lt;p>在新项目中使用框架时，系统会自动检测到该框架。因此，会自动配置多个项目设置，以达到最佳效果。你可以在下面覆盖它们。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/220f80a9913bb8fe05a176cf44145503.webp" alt="">&lt;/p>
+&lt;h2 id="环境变量">环境变量&lt;/h2>
+&lt;p>为了在构建和运行时为您的部署提供环境变量，您可以在这里为您选择的环境输入环境变量。&lt;/p>
+&lt;p>指定&lt;code>hugo版本&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/6112283a5fae16e078ecf419e739fc55.webp" alt="">&lt;/p></description></item><item><title>Hugo使用Shortcode插入bilibili、Youtube视频</title><link>https://jimugou.com/post/021/</link><pubDate>Sat, 29 Jul 2023 23:18:42 +0800</pubDate><guid>https://jimugou.com/post/021/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>使用个人博客也有一年多的时间，这一年多的时候踩了很多坑，也学到了很多知识。 这里分享一个系列教程：从零开始搭建个人博客，把我的经验分享在这里。&lt;/p>
 &lt;h2 id="shortcodes是什么">Shortcodes是什么&lt;/h2>
 &lt;p>shortcode 可以理解为&lt;strong>HTML模版&lt;/strong>，可以很方便的支持markdown里面写一行规定格式的代码，能用shortcode里面的模版替换成对应的HTML文件，然后就把这段HTML代码添加到编译之后的HTML文件中。&lt;/p>
@@ -2662,53 +2668,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;p>10 个平均延迟低于 200 ms且下载速度高于3MB/s的IP&lt;/p>
 &lt;p>sudo ./CloudflareST -url &lt;a href="https://jp.cloudflarest.link">https://jp.cloudflarest.link&lt;/a> -tl 200 -sl 3 -dn 10&lt;/p>
 &lt;p>sudo ./CloudflareST -url &lt;a href="https://hkcs.cloudflarest.link">https://hkcs.cloudflarest.link&lt;/a> -tl 200 -sl 3 -dn 10&lt;/p>
-&lt;p>这是测试文本，单击 “编辑” 按钮更改此文本。&lt;/p></description></item><item><title>Chrome 书签实时备份、同步方案</title><link>https://jimugou.com/post/3/</link><pubDate>Tue, 25 Jul 2023 22:09:19 +0800</pubDate><guid>https://jimugou.com/post/3/</guid><description>&lt;h2 id="关于">关于&lt;/h2>
-&lt;p>BookmarkHub 是一款浏览器插件，可以在不同浏览器之间同步你的书签。&lt;/p>
-&lt;p>适用于各大主流浏览器，如 Chrome、Firefox、Microsoft Edge 等。&lt;/p>
-&lt;p>它使用 GitHub 的 Gist 记录来存储浏览器的书签，可以放心安全的使用。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/7124130c5219b8a00b66b170854f66ed.webp" alt="">
-&lt;img src="https://r2.leshans.eu.org/2023/07/a740371de6ac09f82f1673c838a45816.webp" alt="">
-&lt;img src="https://r2.leshans.eu.org/2023/07/ed5ac2a8e6a314e7bf1453525b389de0.webp" alt="">&lt;/p>
-&lt;h2 id="功能">功能&lt;/h2>
-&lt;ul>
-&lt;li>不需要注册特殊账号，只需要用你的 GitHub 账号的 Token 和 Gist&lt;/li>
-&lt;li>一键上传下载书签&lt;/li>
-&lt;li>一键清空本地所有书签&lt;/li>
-&lt;li>支持跨电脑跨浏览器同步书签&lt;/li>
-&lt;li>支持显示本地和远程书签的数量&lt;/li>
-&lt;/ul>
-&lt;h2 id="下载安装">下载安装&lt;/h2>
-&lt;blockquote>
-&lt;p>本插件需要把书签存储到 Gist 中，所以请确保有 GitHub 账号或可以通过网络注册 GitHub 账号。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;a href="https://chrome.google.com/webstore/detail/bookmarkhub-sync-bookmark/fohimdklhhcpcnpmmichieidclgfdmol">Chrome 浏览器&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://addons.mozilla.org/zh-CN/firefox/addon/BookmarkHub/">Firefox 浏览器&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://microsoftedge.microsoft.com/addons/detail/BookmarkHub/fdnmfpogadcljhecfhdikdecbkggfmgk">Microsoft Edge 浏览器&lt;/a>&lt;/li>
-&lt;li>Opera 浏览器&lt;/li>
-&lt;li>其他基于 Chromium 内核的浏览器&lt;/li>
-&lt;/ul>
-&lt;!-- raw HTML omitted -->
-&lt;h2 id="使用方法">使用方法&lt;/h2>
-&lt;ol>
-&lt;li>&lt;a href="https://github.com/login">登陆&lt;/a> GitHub，如果没有账号请点此&lt;a href="https://github.com/join">注册&lt;/a>。&lt;/li>
-&lt;li>&lt;a href="https://github.com/settings/tokens/new">创建一个可以管理 gist 的 token&lt;/a>。&lt;/li>
-&lt;li>&lt;a href="https://gist.github.com">创建一个私有的 gist&lt;/a>。&lt;strong>注意：如果是公开的 gist，你的书签是可以被他人搜索到的。&lt;/strong>&lt;/li>
-&lt;li>在浏览器的应用商店下载 BookmarkHub，点击插件的设置按钮，在弹出的设置窗口填入 token 和 gist ID，然后你就可以上传下载书签了。&lt;/li>
-&lt;/ol>
-&lt;!-- raw HTML omitted -->
-&lt;h2 id="待实现的功能">待实现的功能&lt;/h2>
-&lt;ul>
-&lt;li>&lt;input disabled="" type="checkbox"> 自动同步书签&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 支持 webdav 协议&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 移动端&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 导入导出&lt;/li>
-&lt;li>&lt;input disabled="" type="checkbox"> 分享书签&lt;/li>
-&lt;/ul>
-&lt;!-- raw HTML omitted -->
-&lt;h2 id="license">License&lt;/h2>
-&lt;p>See &lt;code>LICENSE&lt;/code> for more information.&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;h2 id="contact">Contact&lt;/h2>
-&lt;p>Dudor&lt;/p>
-&lt;p>Project Link: &lt;a href="https://github.com/dudor/BookmarkHub">https://github.com/dudor/BookmarkHub&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>这是测试文本，单击 “编辑” 按钮更改此文本。&lt;/p></description></item></channel></rss>
