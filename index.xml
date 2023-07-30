@@ -1,7 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 30 Jul 2023 23:06:40 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>024</title><link>https://jimugou.com/post/024/</link><pubDate>Sun, 30 Jul 2023 23:06:40 +0800</pubDate><guid>https://jimugou.com/post/024/</guid><description/></item><item><title>最新Linux一键重装脚本，迄今为止功能最全，最好用的脚本</title><link>https://jimugou.com/post/023/</link><pubDate>Sun, 30 Jul 2023 22:23:45 +0800</pubDate><guid>https://jimugou.com/post/023/</guid><description>&lt;p>整理记录最新Linux一键重装支持Debian 12，迄今为止功能最全，最好用的脚本&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 30 Jul 2023 23:06:40 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>可能是最快的独角数卡发卡网搭建教程</title><link>https://jimugou.com/post/024/</link><pubDate>Sun, 30 Jul 2023 23:06:40 +0800</pubDate><guid>https://jimugou.com/post/024/</guid><description>&lt;p>独角数卡是一款卡密销售系统,他依赖 mysql 和 redis ，按部就班的装是没问题的，因为作者提供的文档还挺强大，佩服!
+这里主要怎么一分钟无痛的安装好它，&lt;/p>
+&lt;p>主要参考了一位大佬的docker镜像 &lt;a href="https://blog.dov.moe/posts/49102/">https://blog.dov.moe/posts/49102/&lt;/a>&lt;/p>
+&lt;p>啰嗦两句，这个镜像比官方推荐那个镜像要好，官方那个docker是半吊子的，还需要装mysql和redis&lt;/p>
+&lt;p>&lt;code>项目地址:&lt;/code>&lt;/p>
+&lt;p>&lt;a href="https://github.com/assimon/dujiaoka">https://github.com/assimon/dujiaoka&lt;/a>&lt;/p>
+&lt;h2 id="1-首先安装docker">1. 首先安装docker&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -fsSL https://get.docker.com | sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -L &lt;span style="color:#4070a0">&amp;#34;https://github.com/docker/compose/releases/latest/download/docker-compose-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -s&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -m&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod +x /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="2-安装部署独角数卡">2. 安装部署独角数卡&lt;/h2>
+&lt;p>&lt;code>说明: 事前准备好一个域名，并将域名指向你VPS的IP地址&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash &amp;lt;&lt;span style="color:#666">(&lt;/span>curl -L -s https://raw.githubusercontent.com/8-diagrams/open_shell/main/dujiao.sh&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol>
+&lt;li>提示输入域名&lt;/li>
+&lt;li>商城名字&lt;/li>
+&lt;li>开通Https[Y/N]&lt;/li>
+&lt;/ol>
+&lt;p>安装成功后,&lt;code>会出现几行信息&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/94fbdecfca41e3e2576450e874893ce0.webp" alt="">&lt;/p>
+&lt;hr>
+&lt;blockquote>
+&lt;p>数据库地址: &lt;code>db&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>数据库密码: &lt;code>d774bbf7434919fd5846d204cedf6190&lt;/code> # (密码每个人不一样)&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>redis地址: &lt;code>redis&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>dujiao.taoshuge.eu.org # &lt;code>域名&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;h2 id="3-然后浏览器输入域名继续完善配置">3. 然后浏览器输入域名继续完善配置&lt;/h2>
+&lt;p>注意: 红色框起来的地方,&lt;/p>
+&lt;p>&lt;code>数据库地址&lt;/code>: db&lt;/p>
+&lt;p>&lt;code>MySQL用户名&lt;/code>: root&lt;/p>
+&lt;p>&lt;code>redis地址&lt;/code>: redis&lt;/p>
+&lt;p>&lt;code>MySQL密码&lt;/code>: 改成你自己的&lt;/p>
+&lt;p>&lt;code>网站url&lt;/code>: 改成你自己的&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/47c6a705f8087ec47a4c5678143e06e8.webp" alt="">&lt;/p>
+&lt;h2 id="4-配置正确进入后台">4. 配置正确进入后台&lt;/h2>
+&lt;p>&lt;code>后台地址: /admin&lt;/code> 账号密码均为: &lt;code>admin&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/633f7c24a83cb343048d7c318494d57c.webp" alt="">&lt;/p>
+&lt;p>剩下的就自己去探索吧&lt;/p></description></item><item><title>最新Linux一键重装脚本，迄今为止功能最全，最好用的脚本</title><link>https://jimugou.com/post/023/</link><pubDate>Sun, 30 Jul 2023 22:23:45 +0800</pubDate><guid>https://jimugou.com/post/023/</guid><description>&lt;p>整理记录最新Linux一键重装支持Debian 12，迄今为止功能最全，最好用的脚本&lt;/p>
 &lt;p>项目地址: &lt;a href="https://github.com/leitbogioro/Tools/">https://github.com/leitbogioro/Tools/&lt;/a>&lt;/p>
 &lt;h2 id="首先登录ssh下载脚本">首先登录SSH,下载脚本&lt;/h2>
-&lt;p>国外服务器&lt;/p>
+&lt;p>&lt;code>国外服务器&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
@@ -10,7 +77,7 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget --no-check-certificate -qO InstallNET.sh &lt;span style="color:#4070a0">&amp;#39;https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/InstallNET.sh&amp;#39;&lt;/span> &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod a+x InstallNET.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>中国大陆服务器：&lt;/p>
+&lt;/div>&lt;p>&lt;code>中国大陆服务器：&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
@@ -20,7 +87,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="然后安装依赖">然后安装依赖&lt;/h2>
-&lt;p>Debian系列(Debian / Ubuntu / Kali):&lt;/p>
+&lt;p>Debian系列(&lt;code>Debian / Ubuntu&lt;/code> / Kali):&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
@@ -33,7 +100,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt install wget -y
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>RedHat系列，仅基于RedHat 7+、grub2（CentOS / AlmaLinux / RockyLinux / OracleLinux / Fedora / VzLinux / ScientificOS / RedHat Enterprise Linux / 腾讯OpenCloudOS / AWS AmazonLinux / AliyunLinux或AliyunLinux / OpenAnolis）：&lt;/p>
+&lt;/div>&lt;p>RedHat系列，仅基于RedHat 7+、grub2（&lt;code>CentOS&lt;/code> / AlmaLinux / RockyLinux / &lt;code>OracleLinux&lt;/code> / Fedora / VzLinux / ScientificOS / RedHat Enterprise Linux / &lt;code>腾讯OpenCloudOS&lt;/code> / &lt;code>AWS&lt;/code> AmazonLinux / &lt;code>AliyunLinux或AliyunLinux&lt;/code> / OpenAnolis）：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
