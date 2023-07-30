@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 30 Jul 2023 00:19:18 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>vercel部署hugo记录配置</title><link>https://jimugou.com/post/022/</link><pubDate>Sun, 30 Jul 2023 00:19:18 +0800</pubDate><guid>https://jimugou.com/post/022/</guid><description>&lt;h2 id="构建和开发设置">构建和开发设置&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 30 Jul 2023 23:06:40 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>024</title><link>https://jimugou.com/post/024/</link><pubDate>Sun, 30 Jul 2023 23:06:40 +0800</pubDate><guid>https://jimugou.com/post/024/</guid><description/></item><item><title>最新Linux一键重装脚本，迄今为止功能最全，最好用的脚本</title><link>https://jimugou.com/post/023/</link><pubDate>Sun, 30 Jul 2023 22:23:45 +0800</pubDate><guid>https://jimugou.com/post/023/</guid><description>&lt;p>整理记录最新Linux一键重装支持Debian 12，迄今为止功能最全，最好用的脚本&lt;/p>
+&lt;p>项目地址: &lt;a href="https://github.com/leitbogioro/Tools/">https://github.com/leitbogioro/Tools/&lt;/a>&lt;/p>
+&lt;h2 id="首先登录ssh下载脚本">首先登录SSH,下载脚本&lt;/h2>
+&lt;p>国外服务器&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget --no-check-certificate -qO InstallNET.sh &lt;span style="color:#4070a0">&amp;#39;https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/InstallNET.sh&amp;#39;&lt;/span> &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod a+x InstallNET.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>中国大陆服务器：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget --no-check-certificate -qO InstallNET.sh &lt;span style="color:#4070a0">&amp;#39;https://gitee.com/mb9e8j2/Tools/raw/master/Linux_reinstall/InstallNET.sh&amp;#39;&lt;/span> &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod a+x InstallNET.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="然后安装依赖">然后安装依赖&lt;/h2>
+&lt;p>Debian系列(Debian / Ubuntu / Kali):&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt update -y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt install wget -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>RedHat系列，仅基于RedHat 7+、grub2（CentOS / AlmaLinux / RockyLinux / OracleLinux / Fedora / VzLinux / ScientificOS / RedHat Enterprise Linux / 腾讯OpenCloudOS / AWS AmazonLinux / AliyunLinux或AliyunLinux / OpenAnolis）：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>yum install wget -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dnf install wget -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="快速开始">快速开始&lt;/h2>
+&lt;p>默认密码&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>LeitboGi0ro
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>默认ssh端口22&lt;/p>
+&lt;hr>
+&lt;p>说明: 可以直接在后面加版本号,例如: &lt;code>bash InstallNET.sh -debian 11&lt;/code>&lt;/p>
+&lt;p>或者 &lt;code>bash InstallNET.sh -ubuntu 20.04&lt;/code>&lt;/p>
+&lt;p>启动安装命令后十几秒完成, 提示你 &lt;code>reboot&lt;/code> 重启你的机器,稍等几分钟就好&lt;/p>
+&lt;p>安装完成,最好改下密码&lt;/p>
+&lt;p>Debian 12&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash InstallNET.sh -debian
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>CentOS 9&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash InstallNET.sh -centos
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Ubuntu 22.04&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash InstallNET.sh -ubuntu
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Windows Server 2022&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash InstallNET.sh -windows
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="参数详细说明">参数详细说明&lt;/h2>
+&lt;p>&lt;code>-debian 9-12&lt;/code>：Debian 9 及更高版本&lt;/p>
+&lt;p>&lt;code>-centos 7&lt;/code> 或 8/9-stream：CentOS 7 及更高版本&lt;/p>
+&lt;p>&lt;code>-ubuntu 20.04&lt;/code>/22.04：Ubuntu 20.04 及更高版本&lt;/p>
+&lt;p>&lt;code>-windows 10&lt;/code>/11/2012/2016/2019/2022：Windows 10 Enterprise LTSC、Windows 11 Pro for Workstation 22H2、Windows Server 2012 R2、Windows Server 2016、Windows Server 2019、Windows Server 2022。支持 IPv4 dhcp 和静态、扩展当前操作系统磁盘分区。用户登录后必须执行自动步骤。&lt;/p></description></item><item><title>vercel部署hugo记录配置</title><link>https://jimugou.com/post/022/</link><pubDate>Sun, 30 Jul 2023 00:19:18 +0800</pubDate><guid>https://jimugou.com/post/022/</guid><description>&lt;h2 id="构建和开发设置">构建和开发设置&lt;/h2>
 &lt;p>在新项目中使用框架时，系统会自动检测到该框架。因此，会自动配置多个项目设置，以达到最佳效果。你可以在下面覆盖它们。&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/220f80a9913bb8fe05a176cf44145503.webp" alt="">&lt;/p>
 &lt;h2 id="环境变量">环境变量&lt;/h2>
@@ -2461,215 +2570,4 @@ Reboot&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>注意事项 : 服务器重启后又回到&amp;quot;endtime&amp;quot;: -1 需要再次修改替换&lt;/p>
-&lt;!-- raw HTML omitted --></description></item><item><title>整理一些常用的脚本（持续更新中）</title><link>https://jimugou.com/post/5/</link><pubDate>Tue, 25 Jul 2023 23:28:57 +0800</pubDate><guid>https://jimugou.com/post/5/</guid><description>&lt;blockquote>
-&lt;p>&lt;strong>VPS 检测&lt;/strong> (二选一)&lt;/p>
-&lt;/blockquote>
-&lt;pre tabindex="0">&lt;code>wget -q https://github.com/Aniverse/A/raw/i/a &amp;amp;&amp;amp; bash a
-&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code> wget -qO- bench.sh | bash
-&lt;/code>&lt;/pre>&lt;p>&lt;strong>三网测速脚本&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>bash &amp;lt;&lt;span style="color:#666">(&lt;/span>curl -Lso- https://git.io/superspeed_uxh&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>三网回程测试脚本&lt;/strong>(二选一)&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl https://raw.githubusercontent.com/zhucaidan/mtr_trace/main/mtr_trace.sh|bash
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl https://raw.githubusercontent.com/zhanghanyun/backtrace/main/install.sh -sSf | sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="49-以上内核一键开启-bbr-脚本">4.9 以上内核一键开启 BBR 脚本&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;net.core.default_qdisc=fq&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/sysctl.conf
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;net.ipv4.tcp_congestion_control=bbr&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/sysctl.conf
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sysctl -p
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lsmod | grep bbr
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>或者&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>wget -N --no-check-certificate &lt;span style="color:#4070a0">&amp;#34;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&amp;#34;&lt;/span> &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x tcp.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./tcp.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="综合工具箱强烈推荐集成了很多脚本">综合工具箱（强烈推荐，集成了很多脚本）&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>wget -O box.sh https://raw.githubusercontent.com/BlueSkyXN/SKY-BOX/main/box.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x box.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> clear &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./box.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="dd-相关">DD 相关&lt;/h2>
-&lt;h4 id="dd-成-debian-11">DD 成 Debian 11&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>bash &amp;lt;&lt;span style="color:#666">(&lt;/span>wget --no-check-certificate -qO- &lt;span style="color:#4070a0">&amp;#39;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span> -d &lt;span style="color:#40a070">11&lt;/span> -v &lt;span style="color:#40a070">64&lt;/span> -p &lt;span style="color:#40a070">123456&lt;/span> -port &lt;span style="color:#40a070">22&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="dd-成-ubuntu-2004">DD 成 Ubuntu 20.04&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>bash &amp;lt;&lt;span style="color:#666">(&lt;/span>wget --no-check-certificate -qO- &lt;span style="color:#4070a0">&amp;#39;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span> -u 20.04 -v &lt;span style="color:#40a070">64&lt;/span> -p &lt;span style="color:#40a070">123456&lt;/span> -port &lt;span style="color:#40a070">22&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>密码: 123456
-SSH:22
-&lt;!-- raw HTML omitted -->&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="其他-dd-脚本">其他 DD 脚本&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>wget –no-check-certificate -O AutoReinstall.sh https://git.io/AutoReinstall.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> bash AutoReinstall.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>默认的密码是 ：&lt;strong>&lt;code>Pwd@CentOS&lt;/code>&lt;/strong> 或者 &lt;strong>&lt;code>Pwd@Linux&lt;/code>&lt;/strong>&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;strong>&lt;code>具体是哪一个密码在重装时会提示&lt;/code>&lt;/strong>，重装完成后建议修改这个 root 密码，使用 &lt;code>passwd&lt;/code> 命令即可修改。&lt;/p>
-&lt;p>这个一键重装系统的脚本 &lt;code>自动获取IP地址&lt;/code>、&lt;code>网关&lt;/code>、&lt;code>子网掩码&lt;/code> 自动判断网络环境，选择国内/外镜像，再也不用担心卡半天了超级懒人一键化，无需复杂的命令解决萌咖脚本中一些导致安装错误的问题 CentOS 7 镜像抛弃 LVM，回归 ext 4，减少不稳定因素。&lt;/p>
-&lt;h4 id="更新组件">&lt;strong>更新组件&lt;/strong>&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>apt update -y &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> apt install -y curl &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> apt install -y socat &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> apt install wget -y
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="升级-packages">&lt;strong>升级 packages&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sudo -i
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt update -y
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt install wget curl sudo vim git -y
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>Cloudflare CDN反代免费VPN高速上网，速度超快，千兆节点、解锁奈飞流媒体</title><link>https://jimugou.com/post/4/</link><pubDate>Tue, 25 Jul 2023 22:56:17 +0800</pubDate><guid>https://jimugou.com/post/4/</guid><description>&lt;h1 id="windows-系统">&lt;strong>Windows 系统:&lt;/strong>&lt;/h1>
-&lt;style>
-.meta-media {
-position: relative;
-margin-bottom: 30px;
-display: flex;
-width: 100%;
-height: 0;
-padding-bottom: 75%;
-}
-.video {
-position: absolute;
-width: 100%;
-height: 100%;
-left: 0;
-top: 0;
-}
-&lt;/style>
-&lt;div class="meta-media">
-&lt;iframe src="https://www.youtube.com/embed/5fvhws6ZXrM" frameborder="no" scrolling="yes"
-allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
-&lt;/iframe>
-&lt;/div>
-&lt;p>v2rayN 最新版&lt;a href="https://github.com/2dust/v2rayN/releases">下载地址&amp;raquo;&lt;/a>&lt;/p>
-&lt;p>cloudflare&lt;a href="https://dash.cloudflare.com/">网站链接&amp;raquo;&lt;/a>&lt;/p>
-&lt;p>临时邮箱：&lt;a href="https://www.linshiyouxiang.net/">https://www.linshiyouxiang.net/&lt;/a>&lt;/p>
-&lt;p>部署代码：&lt;a href="https://github.com/zizifn/edgetunnel/blob/main/src/worker-vless.js">https://github.com/zizifn/edgetunnel/blob/main/src/worker-vless.js&lt;/a>&lt;/p>
-&lt;p>uuid生成：&lt;a href="https://1024tools.com/uuid">https://1024tools.com/uuid&lt;/a>&lt;/p>
-&lt;p>proxyIP代理IP: 103.200.112.108&lt;/p>
-&lt;p>免费域名注册：&lt;a href="https://www.dynadot.com/register-your-free-link-domain">https://www.dynadot.com/register-your-free-link-domain&lt;/a>&lt;/p>
-&lt;p>付费域名注册：www.namesilo.com（付费域名注册和解析&lt;a href="https://www.youtube.com/watch?v=5pb4yQwu1T4">点击查看这个视频&amp;raquo;跳转到4分17秒处&lt;/a>）&lt;/p>
-&lt;p>workers win专用ip优选：&lt;a href="https://jdssl.top/wp-content/uploads/2023/07/works%E4%B8%93%E7%94%A8ip%E4%BC%98%E9%80%89.zip">下载地址&amp;raquo;&lt;/a>&lt;/p>
-&lt;p>ip查看：&lt;a href="https://whatismyipaddress.com/">https://whatismyipaddress.com/&lt;/a>&lt;/p>
-&lt;p>cf ip优选；&lt;a href="https://stock.hostmonit.com/CloudFlareYes">https://stock.hostmonit.com/CloudFlareYes&lt;/a>&lt;/p>
-&lt;p>网络测速：&lt;a href="https://www.speedtest.net/zh-Hans">https://www.speedtest.net/zh-Hans&lt;/a>&lt;/p>
-&lt;p>openclash转换订阅网址：&lt;a href="https://sub-web.netlify.app/">https://sub-web.netlify.app/&lt;/a>&lt;/p>
-&lt;h1 id="cdn加速">Cdn加速&lt;/h1>
-&lt;p>cdn-all.xn&amp;ndash;b6gac.eu.org&lt;br>
-cdn.xn&amp;ndash;b6gac.eu.org&lt;br>
-cdn-b100.xn&amp;ndash;b6gac.eu.org&lt;br>
-edgetunnel.anycast.eu.org&lt;br>
-cdn.anycast.eu.org （亚洲地区）&lt;/p>
-&lt;p>1.有域名（有tls加密，443端口)，推荐！&lt;br>
-Custom Domains查看——添加自定义域——填1个二级域名&lt;br>
-点击自定义域，在二级域名后加/UUID，就能看到VLESS节点URL和Clash-meta配置&lt;br>
-在v2rayN导入URL，地址栏改为优选ip&lt;/p>
-&lt;p>2.无域名（没tls加密，80或者2052端口）&lt;br>
-进去 worker.dev，加上/uuid 就能看到 VLESS 节点 URL 和 Clash-meta 配置。v2ray,shadowrocket 等客户端要去掉 tls 加密，端口改为80或者2052，地址修为优选 i&lt;/p>
-&lt;h1 id="mac-系统">MAC 系统:&lt;/h1>
-&lt;style>
-.meta-media {
-position: relative;
-margin-bottom: 30px;
-display: flex;
-width: 100%;
-height: 0;
-padding-bottom: 75%;
-}
-.video {
-position: absolute;
-width: 100%;
-height: 100%;
-left: 0;
-top: 0;
-}
-&lt;/style>
-&lt;div class="meta-media">
-&lt;iframe src="https://www.youtube.com/embed/Y32X4U9iJ_o" frameborder="no" scrolling="yes"
-allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
-&lt;/iframe>
-&lt;/div>
-&lt;p>v2rayu: &lt;a href="https://github.com/yanue/V2rayU/releases/tag/v3.8.0">下载链接&amp;raquo;&lt;/a>&lt;/p>
-&lt;h2 id="cloudflarest-ip优化">Cloudflarest ip优化：&lt;/h2>
-&lt;p>mac inter :&lt;a href="https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.4/CloudflareST_darwin_amd64.zip">下载地址&amp;raquo;&lt;/a>&lt;/p>
-&lt;p>mac arm :&lt;a href="https://github.com/XIU2/CloudflareSpeedTest/releases/download/v2.2.4/CloudflareST_darwin_arm64.zip">下载地址&amp;raquo;&lt;/a>&lt;/p>
-&lt;p>cloudflarest ip段：&lt;a href="https://zip.baipiao.eu.org/">下载地址&amp;raquo;&lt;/a>&lt;/p>
-&lt;p>备注：需要自行下载上方CDN IP段否则只能延迟测速。&lt;/p>
-&lt;p>终端：cd /xxxx/xxxxx/CloudfareST&lt;/p>
-&lt;p>普通ip优选&lt;/p>
-&lt;p>sudo ./CloudflareST &lt;/p>
-&lt;p>10 个平均延迟低于 200 ms且下载速度高于3MB/s的IP&lt;/p>
-&lt;p>sudo ./CloudflareST -url &lt;a href="https://jp.cloudflarest.link">https://jp.cloudflarest.link&lt;/a> -tl 200 -sl 3 -dn 10&lt;/p>
-&lt;p>sudo ./CloudflareST -url &lt;a href="https://hkcs.cloudflarest.link">https://hkcs.cloudflarest.link&lt;/a> -tl 200 -sl 3 -dn 10&lt;/p>
-&lt;p>这是测试文本，单击 “编辑” 按钮更改此文本。&lt;/p></description></item></channel></rss>
+&lt;!-- raw HTML omitted --></description></item></channel></rss>
