@@ -1,34 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 31 Jul 2023 10:34:39 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>025</title><link>https://jimugou.com/post/025/</link><pubDate>Mon, 31 Jul 2023 10:34:39 +0800</pubDate><guid>https://jimugou.com/post/025/</guid><description/></item><item><title>🤝友链</title><link>https://jimugou.com/friend/</link><pubDate>Mon, 31 Jul 2023 10:34:39 +0800</pubDate><guid>https://jimugou.com/friend/</guid><description>&lt;a target="_blank" href=https://blog.csdn.net/u010066597?type&amp;#61;blog title=Z字骚年 class="friendurl">
-&lt;div class="frienddiv">
-&lt;div class="frienddivleft">
-&lt;img class="myfriend" src=https://avatars.githubusercontent.com/u/3828072?v&amp;#61;4&amp;amp;s&amp;#61;160 />
-&lt;/div>
-&lt;div class="frienddivright">
-&lt;div class="friendname">Z字骚年&lt;/div>
-&lt;div class="friendinfo">Joe Zou&amp;#39;s Blog&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/a>
-&lt;a target="_blank" href=https://www.cnblogs.com/meshare/#/c/subject/category/default.html title=木瓜有点甜 class="friendurl">
-&lt;div class="frienddiv">
-&lt;div class="frienddivleft">
-&lt;img class="myfriend" src=https://avatars3.githubusercontent.com/u/12484497?v&amp;#61;4&amp;amp;s&amp;#61;160 />
-&lt;/div>
-&lt;div class="frienddivright">
-&lt;div class="friendname">木瓜有点甜&lt;/div>
-&lt;div class="friendinfo">木瓜哥的博客&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/a>
-&lt;p>👉 友链格式&lt;/p>
-&lt;p>名称： 阿甘知识库&lt;/p>
-&lt;p>网址： &lt;a href="https://jimugou.com">https://jimugou.com&lt;/a>&lt;/p>
-&lt;p>图标： &lt;a href="https://jimugou.com/logo.png">https://jimugou.com/logo.png&lt;/a>&lt;/p>
-&lt;p>描述： 一个记录技术、阅读、生活的博客&lt;/p>
-&lt;p> &lt;/p>
-&lt;p>👉 友链申请要求&lt;/p>
-&lt;p>秉承互换友链原则、文章定期更新、不能有太多广告、个人描述字数控制在15字内&lt;/p>
-&lt;p> &lt;/p></description></item><item><title>可能是最快的独角数卡发卡网搭建教程</title><link>https://jimugou.com/post/024/</link><pubDate>Sun, 30 Jul 2023 23:06:40 +0800</pubDate><guid>https://jimugou.com/post/024/</guid><description>&lt;p>独角数卡是一款卡密销售系统,他依赖 mysql 和 redis ，按部就班的装是没问题的，因为作者提供的文档还挺强大，佩服!
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 31 Jul 2023 10:34:39 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>025</title><link>https://jimugou.com/post/025/</link><pubDate>Mon, 31 Jul 2023 10:34:39 +0800</pubDate><guid>https://jimugou.com/post/025/</guid><description/></item><item><title>可能是最快的独角数卡发卡网搭建教程</title><link>https://jimugou.com/post/024/</link><pubDate>Sun, 30 Jul 2023 23:06:40 +0800</pubDate><guid>https://jimugou.com/post/024/</guid><description>&lt;p>独角数卡是一款卡密销售系统,他依赖 mysql 和 redis ，按部就班的装是没问题的，因为作者提供的文档还挺强大，佩服!
 这里主要怎么一分钟无痛的安装好它，&lt;/p>
 &lt;p>主要参考了一位大佬的docker镜像 &lt;a href="https://blog.dov.moe/posts/49102/">https://blog.dov.moe/posts/49102/&lt;/a>&lt;/p>
 &lt;p>啰嗦两句，这个镜像比官方推荐那个镜像要好，官方那个docker是半吊子的，还需要装mysql和redis&lt;/p>
@@ -975,7 +945,36 @@ allowfullscreen="true"
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">version&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#40a070">1.5.8&lt;/span>&lt;span style="color:#bbb"> &lt;/span>// 这个版本号要自己手动修改，和twikoo的版本号要对得上&lt;span style="color:#bbb">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>完结!&lt;/p></description></item><item><title>关于我</title><link>https://jimugou.com/about/</link><pubDate>Sat, 29 Jul 2023 00:48:22 +0800</pubDate><guid>https://jimugou.com/about/</guid><description>&lt;h2 id="个人介绍">个人介绍&lt;/h2>
+&lt;/div>&lt;p>完结!&lt;/p></description></item><item><title>🤝友链</title><link>https://jimugou.com/friend/</link><pubDate>Sat, 29 Jul 2023 00:48:22 +0800</pubDate><guid>https://jimugou.com/friend/</guid><description>&lt;a target="_blank" href=https://blog.csdn.net/u010066597?type&amp;#61;blog title=Z字骚年 class="friendurl">
+&lt;div class="frienddiv">
+&lt;div class="frienddivleft">
+&lt;img class="myfriend" src=https://avatars.githubusercontent.com/u/3828072?v&amp;#61;4&amp;amp;s&amp;#61;160 />
+&lt;/div>
+&lt;div class="frienddivright">
+&lt;div class="friendname">Z字骚年&lt;/div>
+&lt;div class="friendinfo">Joe Zou&amp;#39;s Blog&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;a target="_blank" href=https://www.cnblogs.com/meshare/#/c/subject/category/default.html title=木瓜有点甜 class="friendurl">
+&lt;div class="frienddiv">
+&lt;div class="frienddivleft">
+&lt;img class="myfriend" src=https://avatars3.githubusercontent.com/u/12484497?v&amp;#61;4&amp;amp;s&amp;#61;160 />
+&lt;/div>
+&lt;div class="frienddivright">
+&lt;div class="friendname">木瓜有点甜&lt;/div>
+&lt;div class="friendinfo">木瓜哥的博客&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;p>👉 友链格式&lt;/p>
+&lt;p>名称： 阿甘知识库&lt;/p>
+&lt;p>网址： &lt;a href="https://jimugou.com">https://jimugou.com&lt;/a>&lt;/p>
+&lt;p>图标： &lt;a href="https://i.imgtg.com/2023/07/31/Oi3cqX.png">https://i.imgtg.com/2023/07/31/Oi3cqX.png&lt;/a>&lt;/p>
+&lt;p>描述： 一个记录技术、阅读、生活的博客&lt;/p>
+&lt;p> &lt;/p>
+&lt;p>👉 友链申请要求&lt;/p>
+&lt;p>秉承互换友链原则、文章定期更新、不能有太多广告、个人描述字数控制在15字内&lt;/p></description></item><item><title>关于我</title><link>https://jimugou.com/about/</link><pubDate>Sat, 29 Jul 2023 00:48:22 +0800</pubDate><guid>https://jimugou.com/about/</guid><description>&lt;h2 id="个人介绍">个人介绍&lt;/h2>
 &lt;p>个人网站： &lt;a href="https://jimugou.com/">https://jimugou.com&lt;/a>&lt;/p>
 &lt;p>目前定居&lt;strong>广西&lt;/strong>，勤勤恳恳的守法公民。&lt;/p>
 &lt;p>&lt;code>互联网领域自媒体博主&lt;/code>，在自媒体平台上分享最新的科技互联网相关软件、产品、使用教程。&lt;/p>
