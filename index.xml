@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 30 Jul 2023 23:06:40 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>可能是最快的独角数卡发卡网搭建教程</title><link>https://jimugou.com/post/024/</link><pubDate>Sun, 30 Jul 2023 23:06:40 +0800</pubDate><guid>https://jimugou.com/post/024/</guid><description>&lt;p>独角数卡是一款卡密销售系统,他依赖 mysql 和 redis ，按部就班的装是没问题的，因为作者提供的文档还挺强大，佩服!
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 31 Jul 2023 10:34:39 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>025</title><link>https://jimugou.com/post/025/</link><pubDate>Mon, 31 Jul 2023 10:34:39 +0800</pubDate><guid>https://jimugou.com/post/025/</guid><description/></item><item><title>🤝友链</title><link>https://jimugou.com/friend/</link><pubDate>Mon, 31 Jul 2023 10:34:39 +0800</pubDate><guid>https://jimugou.com/friend/</guid><description>&lt;a target="_blank" href=https://blog.csdn.net/u010066597?type&amp;#61;blog title=Z字骚年 class="friendurl">
+&lt;div class="frienddiv">
+&lt;div class="frienddivleft">
+&lt;img class="myfriend" src=https://avatars.githubusercontent.com/u/3828072?v&amp;#61;4&amp;amp;s&amp;#61;160 />
+&lt;/div>
+&lt;div class="frienddivright">
+&lt;div class="friendname">Z字骚年&lt;/div>
+&lt;div class="friendinfo">Joe Zou&amp;#39;s Blog&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;a target="_blank" href=https://www.cnblogs.com/meshare/#/c/subject/category/default.html title=木瓜有点甜 class="friendurl">
+&lt;div class="frienddiv">
+&lt;div class="frienddivleft">
+&lt;img class="myfriend" src=https://avatars3.githubusercontent.com/u/12484497?v&amp;#61;4&amp;amp;s&amp;#61;160 />
+&lt;/div>
+&lt;div class="frienddivright">
+&lt;div class="friendname">木瓜有点甜&lt;/div>
+&lt;div class="friendinfo">木瓜哥的博客&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/a>
+&lt;p>👉 友链格式&lt;/p>
+&lt;p>名称： 阿甘知识库&lt;/p>
+&lt;p>网址： &lt;a href="https://jimugou.com">https://jimugou.com&lt;/a>&lt;/p>
+&lt;p>图标： &lt;a href="https://jimugou.com/logo.png">https://jimugou.com/logo.png&lt;/a>&lt;/p>
+&lt;p>描述： 一个记录技术、阅读、生活的博客&lt;/p>
+&lt;p> &lt;/p>
+&lt;p>👉 友链申请要求&lt;/p>
+&lt;p>秉承互换友链原则、文章定期更新、不能有太多广告、个人描述字数控制在15字内&lt;/p>
+&lt;p> &lt;/p></description></item><item><title>可能是最快的独角数卡发卡网搭建教程</title><link>https://jimugou.com/post/024/</link><pubDate>Sun, 30 Jul 2023 23:06:40 +0800</pubDate><guid>https://jimugou.com/post/024/</guid><description>&lt;p>独角数卡是一款卡密销售系统,他依赖 mysql 和 redis ，按部就班的装是没问题的，因为作者提供的文档还挺强大，佩服!
 这里主要怎么一分钟无痛的安装好它，&lt;/p>
 &lt;p>主要参考了一位大佬的docker镜像 &lt;a href="https://blog.dov.moe/posts/49102/">https://blog.dov.moe/posts/49102/&lt;/a>&lt;/p>
 &lt;p>啰嗦两句，这个镜像比官方推荐那个镜像要好，官方那个docker是半吊子的，还需要装mysql和redis&lt;/p>
@@ -2497,144 +2527,4 @@ Reboot&lt;/p>
 &lt;pre tabindex="0">&lt;code>systemctl status sshd
 &lt;/code>&lt;/pre>&lt;blockquote>
 &lt;p>新端口使用后，发现注释后依然可以连接！&lt;strong>直接删掉 port 22&lt;/strong>&lt;/p>
-&lt;/blockquote></description></item><item><title>谷歌云第三方SSH工具登录与一键重装系统</title><link>https://jimugou.com/post/7/</link><pubDate>Tue, 25 Jul 2023 23:48:31 +0800</pubDate><guid>https://jimugou.com/post/7/</guid><description>&lt;h2 id="一设置-root-密码">一，设置 root 密码&lt;/h2>
-&lt;ol>
-&lt;li>先选择从浏览器打开 ssh 连接服务器&lt;/li>
-&lt;li>切换到 root 账号，输入代码：&lt;code>sudo -i&lt;/code>&lt;/li>
-&lt;li>设置 root 密码，输入代码：&lt;code>passwd&lt;/code>&lt;/li>
-&lt;/ol>
-&lt;h2 id="二开启-ssh-权限">二，开启 SSH 权限&lt;/h2>
-&lt;ol>
-&lt;li>CentOS 和 Debian 通用，输入以下两条命令&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;s/PermitRootLogin no/PermitRootLogin yes/g&amp;#39;&lt;/span> /etc/ssh/sshd_config
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;s/PasswordAuthentication no/PasswordAuthentication yes/g&amp;#39;&lt;/span> /etc/ssh/sshd_config
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="2">
-&lt;li>Ubuntu 系统，输入以下两条命令&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;s/ #PermitRootLogin prohibit-password/PermitRootLogin yes/g&amp;#39;&lt;/span> /etc/ssh/sshd_config
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;s/PasswordAuthentication no/PasswordAuthentication yes/g&amp;#39;&lt;/span> /etc/ssh/sshd_config
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="3">
-&lt;li>重启服务器 ：&lt;/li>
-&lt;/ol>
-&lt;pre tabindex="0">&lt;code>reboot
-&lt;/code>&lt;/pre>&lt;p>以上就是谷歌云设置 ROOT 用户以及允许第三方 SSH 登录教程。&lt;/p>
-&lt;h2 id="三一键重装脚本">三，一键重装脚本&lt;/h2>
-&lt;p>&lt;strong>系统更新&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>apt update -y &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> apt install -y wget sudo
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>一键脚本&lt;/strong> （ubuntu 20.04）时间半个小时吧，耐心等待就行&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>bash &amp;lt;&lt;span style="color:#666">(&lt;/span>wget --no-check-certificate -qO- &lt;span style="color:#4070a0">&amp;#39;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span> --ip-addr 10.146.0.3 --ip-gate 10.146.0.1 --ip-mask 255.255.255.0 -u 20.04 -v &lt;span style="color:#40a070">64&lt;/span> -p &lt;span style="color:#40a070">123456&lt;/span> -port &lt;span style="color:#40a070">22&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>&lt;strong>仅适用于谷歌云 (密码：123456 ) SSH 端口: 22&lt;/strong>&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>参数修改&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;strong>10.146.0.3&lt;/strong> 谷歌云 VPS 内网 IP 谷歌云后台去找&lt;/li>
-&lt;li>&lt;strong>10.146.0.1&lt;/strong> 谷歌云 VPS 内网 IP 的网关前三位数和 IP 相同第四位数为 1&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>系统参数&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;strong>-d 10&lt;/strong> 【7、8、9、10，11】Debian&lt;/p>
-&lt;p>&lt;strong>-u 20.04&lt;/strong> 【14.04、16.04、18.04、20.04】Ubuntu&lt;/p>
-&lt;h2 id="四系统更新">四，&lt;strong>系统更新&lt;/strong>&lt;/h2>
-&lt;pre tabindex="0">&lt;code>apt update -y &amp;amp;&amp;amp; apt full-upgrade -y &amp;amp;&amp;amp; apt install -y curl wget sudo socat
-&lt;/code>&lt;/pre></description></item><item><title>宝塔7.7安装教程</title><link>https://jimugou.com/post/6/</link><pubDate>Tue, 25 Jul 2023 23:38:07 +0800</pubDate><guid>https://jimugou.com/post/6/</guid><description>&lt;p>为什么是 7.7.0 版本，而不是其他版本呢？因为这个版本没有很旧，也没有太多限制，还可以破解&lt;/p>
-&lt;blockquote>
-&lt;h3 id="安装宝塔">&lt;strong>安装宝塔：&lt;/strong>&lt;/h3>
-&lt;/blockquote>
-&lt;pre tabindex="0">&lt;code>yum install -y wget &amp;amp;&amp;amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;amp;&amp;amp; sh install.sh ed8484bec
-&lt;/code>&lt;/pre>&lt;h3 id="1下载离线升级包">&lt;strong>1、下载离线升级包&lt;/strong>&lt;/h3>
-&lt;pre tabindex="0">&lt;code>wget https://github.com/woniu336/2btc/raw/main/LinuxPanel-7.7.0.zip
-&lt;/code>&lt;/pre>&lt;h3 id="2解压">&lt;strong>2、解压&lt;/strong>&lt;/h3>
-&lt;p>yum -y install unzip zip （若解压失败）&lt;/p>
-&lt;pre tabindex="0">&lt;code>unzip LinuxPanel-7.7.0.zip
-&lt;/code>&lt;/pre>&lt;h3 id="3进入升级目录">&lt;strong>3、进入升级目录&lt;/strong>&lt;/h3>
-&lt;pre tabindex="0">&lt;code>cd /root/panel
-&lt;/code>&lt;/pre>&lt;h3 id="4运行降级">&lt;strong>4、运行降级&lt;/strong>&lt;/h3>
-&lt;p>bash update.sh&lt;/p>
-&lt;h3 id="5去除登录">&lt;strong>5、去除登录&lt;/strong>&lt;/h3>
-&lt;pre tabindex="0">&lt;code>rm -f /www/server/panel/data/bind.pl
-&lt;/code>&lt;/pre>&lt;p>全部安装完成后，执行以下内容，避免官方搞小动作&lt;/p>
-&lt;pre tabindex="0">&lt;code>echo &amp;#39;127.0.0.1 bt.cn&amp;#39; &amp;gt;&amp;gt;/etc/hosts
-&lt;/code>&lt;/pre>&lt;blockquote>
-&lt;h3 id="其他方法">其他方法&lt;/h3>
-&lt;/blockquote>
-&lt;p>&lt;strong>Centos/Ubuntu/Debian 安装命令独立运行环境（py 3.7）&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sSO https://raw.githubusercontent.com/woniu336/btpanel-v7.7.0/main/install/install_panel.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> bash install_panel. Sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="净化与破解">净化与破解&lt;/h2>
-&lt;h3 id="修改-hosts-文件">&lt;strong>修改 hosts 文件&lt;/strong>&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#39;127.0.0.1 bt.cn&amp;#39;&lt;/span> &amp;gt;&amp;gt;/etc/hosts
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="解除强制手机登录">解除强制手机登录&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>rm -f /www/server/panel/data/bind.pl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="手动解锁宝塔所有付费插件为永不过期">&lt;strong>手动解锁宝塔所有付费插件为永不过期&lt;/strong>&lt;/h3>
-&lt;p>文件路径：&lt;code>/www/server/panel/data/plugin.json&lt;/code>&lt;/p>
-&lt;p>搜索字符串：&lt;code>&amp;quot;endtime&amp;quot;: -1&lt;/code> 全部替换为 &lt;code>&amp;quot;endtime&amp;quot;: 999999999999&lt;/code>&lt;/p>
-&lt;h3 id="-给pluginjson文件上锁防止自动修复为免费版">** 给plugin.json文件上锁防止自动修复为免费版**&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>chattr +i /www/server/panel/data/plugin.json
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>注意事项 : 服务器重启后又回到&amp;quot;endtime&amp;quot;: -1 需要再次修改替换&lt;/p>
-&lt;!-- raw HTML omitted --></description></item></channel></rss>
+&lt;/blockquote></description></item></channel></rss>
