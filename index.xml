@@ -68,9 +68,7 @@
 &lt;p>&lt;code>网站url&lt;/code>: https://你的域名 (域名事先解析到IP)&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/da1f9948fab16c95030c6897c5380850.webp" alt="">&lt;/p>
 &lt;p>点击安装&lt;/p>
-&lt;h2 id="4-配置正确进入后台">4. 配置正确进入后台&lt;/h2>
-&lt;p>&lt;code>后台地址: /admin&lt;/code> 账号密码均为: &lt;code>admin&lt;/code>&lt;/p>
-&lt;h2 id="5-关于https">5. 关于https&lt;/h2>
+&lt;h2 id="4-修正https">4. 修正https&lt;/h2>
 &lt;ol>
 &lt;li>
 &lt;p>进入dujiao目录 (cd dujiao)&lt;/p>
@@ -99,7 +97,10 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>systemctl &lt;span style="color:#007020">enable&lt;/span> docker
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>剩下的就自己去探索吧&lt;/p></description></item><item><title>最新Linux一键重装脚本，迄今为止功能最全，最好用的脚本</title><link>https://jimugou.com/post/023/</link><pubDate>Sun, 30 Jul 2023 22:23:45 +0800</pubDate><guid>https://jimugou.com/post/023/</guid><description>&lt;p>整理记录最新Linux一键重装支持Debian 12，迄今为止功能最全，最好用的脚本&lt;/p>
+&lt;/div>&lt;h2 id="5-配置正确进入后台">5. 配置正确进入后台&lt;/h2>
+&lt;p>&lt;code>后台地址: /admin&lt;/code> 账号密码均为: &lt;code>admin&lt;/code>&lt;/p>
+&lt;p> &lt;/p>
+&lt;p>剩下的就自己去探索吧&lt;/p></description></item><item><title>最新Linux一键重装脚本，迄今为止功能最全，最好用的脚本</title><link>https://jimugou.com/post/023/</link><pubDate>Sun, 30 Jul 2023 22:23:45 +0800</pubDate><guid>https://jimugou.com/post/023/</guid><description>&lt;p>整理记录最新Linux一键重装支持Debian 12，迄今为止功能最全，最好用的脚本&lt;/p>
 &lt;p>项目地址: &lt;a href="https://github.com/leitbogioro/Tools/">https://github.com/leitbogioro/Tools/&lt;/a>&lt;/p>
 &lt;h2 id="首先登录ssh下载脚本">首先登录SSH,下载脚本&lt;/h2>
 &lt;p>&lt;code>国外服务器&lt;/code>&lt;/p>
