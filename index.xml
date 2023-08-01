@@ -59,7 +59,7 @@
 &lt;p>网站url: &lt;code>http://64.176.51.177:1088&lt;/code> #&lt;/p>
 &lt;/blockquote>
 &lt;hr>
-&lt;h2 id="3-配置数据库">3. 配置数据库&lt;/h2>
+&lt;h2 id="3-浏览器打开解析好的域名配置数据库">3. 浏览器打开解析好的域名,配置数据库&lt;/h2>
 &lt;p>&lt;code>注意: 使用解析好的域名安装,带https://&lt;/code>&lt;/p>
 &lt;p>&lt;code>数据库地址&lt;/code>: db&lt;/p>
 &lt;p>&lt;code>MySQL用户名&lt;/code>: dujiaoka&lt;/p>
