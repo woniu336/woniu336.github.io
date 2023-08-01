@@ -24,23 +24,28 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="2-安装部署独角数卡">2. 安装部署独角数卡&lt;/h2>
-&lt;p>&lt;code>说明: 事前准备好一个域名，并将域名指向你VPS的IP地址&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash &amp;lt;&lt;span style="color:#666">(&lt;/span>curl -L -s https://raw.githubusercontent.com/8-diagrams/open_shell/main/dujiao.sh&lt;span style="color:#666">)&lt;/span>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash &amp;lt;&lt;span style="color:#666">(&lt;/span>curl -L -s https://raw.githubusercontent.com/woniu336/open_shell/main/dujiao.sh&lt;span style="color:#666">)&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;ol>
-&lt;li>提示输入域名&lt;/li>
-&lt;li>商城名字&lt;/li>
-&lt;li>开通Https[Y/N]&lt;/li>
+&lt;li>
+&lt;p>提示输入IP和端口号: &lt;code>IP:1088&lt;/code> (注意端口是 1088)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>商场名字: 随意&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>开通Https[Y/N]: &lt;code>n&lt;/code>&lt;/p>
+&lt;/li>
 &lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/898b8d30a7b3897e28ae576a33ef7aba.webp" alt="">&lt;/p>
 &lt;p>安装成功后,&lt;code>会出现几行信息&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/94fbdecfca41e3e2576450e874893ce0.webp" alt="">&lt;/p>
-&lt;hr>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/657f2039face2e1b9b3f4f1fa9fea891.webp" alt="">&lt;/p>
 &lt;blockquote>
 &lt;p>数据库地址: &lt;code>db&lt;/code>&lt;/p>
 &lt;/blockquote>
@@ -51,21 +56,50 @@
 &lt;p>redis地址: &lt;code>redis&lt;/code>&lt;/p>
 &lt;/blockquote>
 &lt;blockquote>
-&lt;p>dujiao.taoshuge.eu.org # &lt;code>域名&lt;/code>&lt;/p>
+&lt;p>网站url: &lt;code>http://64.176.51.177:1088&lt;/code> #&lt;/p>
 &lt;/blockquote>
 &lt;hr>
-&lt;h2 id="3-然后浏览器输入域名继续完善配置">3. 然后浏览器输入域名继续完善配置&lt;/h2>
-&lt;p>注意: 红色框起来的地方,&lt;/p>
+&lt;h2 id="3-配置数据库">3. 配置数据库&lt;/h2>
+&lt;p>&lt;code>注意: 使用解析好的域名安装,带https://&lt;/code>&lt;/p>
 &lt;p>&lt;code>数据库地址&lt;/code>: db&lt;/p>
-&lt;p>&lt;code>MySQL用户名&lt;/code>: root&lt;/p>
+&lt;p>&lt;code>MySQL用户名&lt;/code>: dujiaoka&lt;/p>
 &lt;p>&lt;code>redis地址&lt;/code>: redis&lt;/p>
 &lt;p>&lt;code>MySQL密码&lt;/code>: 改成你自己的&lt;/p>
-&lt;p>&lt;code>网站url&lt;/code>: 改成你自己的&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/47c6a705f8087ec47a4c5678143e06e8.webp" alt="">&lt;/p>
+&lt;p>&lt;code>网站url&lt;/code>: https://你的域名 (域名事先解析到IP)&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/da1f9948fab16c95030c6897c5380850.webp" alt="">&lt;/p>
+&lt;p>点击安装&lt;/p>
 &lt;h2 id="4-配置正确进入后台">4. 配置正确进入后台&lt;/h2>
 &lt;p>&lt;code>后台地址: /admin&lt;/code> 账号密码均为: &lt;code>admin&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/633f7c24a83cb343048d7c318494d57c.webp" alt="">&lt;/p>
-&lt;p>剩下的就自己去探索吧&lt;/p></description></item><item><title>最新Linux一键重装脚本，迄今为止功能最全，最好用的脚本</title><link>https://jimugou.com/post/023/</link><pubDate>Sun, 30 Jul 2023 22:23:45 +0800</pubDate><guid>https://jimugou.com/post/023/</guid><description>&lt;p>整理记录最新Linux一键重装支持Debian 12，迄今为止功能最全，最好用的脚本&lt;/p>
+&lt;h2 id="5-关于https">5. 关于https&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>进入dujiao目录 (cd dujiao)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>修改env.conf 将 &lt;code>ADMIN_HTTPS=false&lt;/code> 修改成 &lt;code>ADMIN_HTTPS=true&lt;/code> 保存&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>然后重启docker&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>systemctl restart docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>设置docker 开机自启&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>systemctl &lt;span style="color:#007020">enable&lt;/span> docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>剩下的就自己去探索吧&lt;/p></description></item><item><title>最新Linux一键重装脚本，迄今为止功能最全，最好用的脚本</title><link>https://jimugou.com/post/023/</link><pubDate>Sun, 30 Jul 2023 22:23:45 +0800</pubDate><guid>https://jimugou.com/post/023/</guid><description>&lt;p>整理记录最新Linux一键重装支持Debian 12，迄今为止功能最全，最好用的脚本&lt;/p>
 &lt;p>项目地址: &lt;a href="https://github.com/leitbogioro/Tools/">https://github.com/leitbogioro/Tools/&lt;/a>&lt;/p>
 &lt;h2 id="首先登录ssh下载脚本">首先登录SSH,下载脚本&lt;/h2>
 &lt;p>&lt;code>国外服务器&lt;/code>&lt;/p>
