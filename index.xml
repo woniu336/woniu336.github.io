@@ -4,11 +4,11 @@
 &lt;h3 id="创建github仓库">🧀创建Github仓库&lt;/h3>
 &lt;p>为了使用&lt;code>GitHub Action&lt;/code>自动部署,加上便于管理,所以创建两个仓库,虽然一个也行.&lt;/p>
 &lt;p>1.我们先创建一个名字为&lt;code>blog&lt;/code>的仓库用于存放hugo生成的文件,打开右上角的&lt;code>+号&lt;/code>,然后选择&lt;code>New repository&lt;/code>以新建仓库&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/newrepo.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/00a1ce170f5e85a7fdb11d20d2cf2244.webp" alt="">&lt;/p>
 &lt;p>2.跟着图片里的步骤操作,先给仓库取个名字,叫做&lt;code>blog&lt;/code>(小白最好将仓库名字跟我起一样的),然后勾选&lt;code>public&lt;/code>,接着勾选&lt;code>Add a REAMME file&lt;/code>,最后点击&lt;code>Create repository&lt;/code>完成创建.&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/newblog.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/6cd7341b6edf4943d4ee0dbf40f7195f.webp" alt="">&lt;/p>
 &lt;p>3.接下来我们按照刚才那样依葫芦画瓢,再创建一个名为&lt;code>blog-file&lt;/code>的仓库&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/newblogfile.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/96a6fddc65af243c030ef91b2e81c9ed.webp" alt="">&lt;/p>
 &lt;h3 id="获取ssh-key密钥">🍦获取SSH Key密钥&lt;/h3>
 &lt;p>ssh密钥可以是我们推送文件到仓库时不需要每次都输入密码,大大的提高我们的效率.所以我们首先需要在我们的电脑生成ssh密钥&lt;/p>
 &lt;p>1.在&lt;code>git bash&lt;/code>执行以下指令,配置邮箱和用户名&lt;/p>
@@ -23,7 +23,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Copy&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/Inkedgitbashconfig.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/eeca6f9277266f6dfa6ab93b0df30ac8.webp" alt="">&lt;/p>
 &lt;p>2.生成shh key,在&lt;code>git bash&lt;/code>中 输入以下命令&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -34,7 +34,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Copy&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/gitbashsshkey.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/3c61c8b708992a8fae694ab15366d4be.webp" alt="">&lt;/p>
 &lt;p>一路回车就行&lt;/p>
 &lt;p>默认会生成在如下目录&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -46,16 +46,16 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Copy&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/ssh.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/2e37b7bf2f9347c2ba8ef4db8713cb74.webp" alt="">&lt;/p>
 &lt;p>用记事本打开生成目录下&lt;code>id_rsa.pub&lt;/code>,其中的内容即为公钥,&lt;code>id_rsa&lt;/code>即为私钥.这两个待会要用到.&lt;/p>
 &lt;p>3.将将公钥配置到&lt;code>GitHub&lt;/code>账户中,先打开设置,即&lt;code>Settings&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/setting.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/852804060ef7654d1158f64fc0c230a4.webp" alt="">&lt;/p>
 &lt;p>进入&lt;code>SSH and GPG key&lt;/code>配置项里,点击&lt;code>SSH keys&lt;/code>下的&lt;code>New SHH key&lt;/code>进行添加&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/sshkey.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/c43662576bb6a0326ffa8b9fcd77c5b0.webp" alt="">&lt;/p>
 &lt;p>4.然后随便在&lt;code>Title&lt;/code>项里随便起一个名字,在&lt;code>Key&lt;/code>里填入刚才得到的&lt;code>id_rsa.pub&lt;/code>里的内容,然后点击&lt;code>Add SSH key&lt;/code>就添加好了.&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/addssh.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/13c8fb41364945308cc849de2ef3b04e.webp" alt="">&lt;/p>
 &lt;p>5.接下来我们需要往刚才创建的名为&lt;code>blog-file&lt;/code>的仓库里添加&lt;code>id_rsa密钥&lt;/code>,点击&lt;code>Settings&lt;/code>,然后找到&lt;code>Secrets and variables&lt;/code>,点击&lt;code>Actions&lt;/code>,然后点击&lt;code>New repository secret&lt;/code>，在&lt;code>Name&lt;/code>里填入&lt;code>ACTIONS_DEPLOY_KEY&lt;/code>，在&lt;code>Value&lt;/code>里填入&lt;code>id_rsa&lt;/code>密钥即可。&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/secret.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/fa72fcba60cb43f45b312819449972af.webp" alt="">&lt;/p>
 &lt;hr>
 &lt;h3 id="部署hugo博客">🍚部署hugo博客&lt;/h3>
 &lt;p>1.接下来我们在我们的博客根目录下创建一个名为&lt;code>.github&lt;/code>的文件夹,然后在文件夹里新建一个新的文件夹,名字为&lt;code>workflows&lt;/code>,接着进入&lt;code>workflows&lt;/code>文件夹里新建一个名为&lt;code>deploy.xml&lt;/code>的文件,再在&lt;code>deploy.xml&lt;/code>里填入如下内容,最终目录为&lt;code>~\blog\.github\workflows\deploy.xml&lt;/code>,将&lt;code>deploy.xml&lt;/code>中的&lt;code>external_repository&lt;/code>项里的&lt;code>lin-snow&lt;/code>改为你GitHub注册时的名字即可&lt;/p>
@@ -163,7 +163,7 @@
 &lt;/div>
 &lt;/div>&lt;p>Copy&lt;/p>
 &lt;p>2.然后在博客根目录文件夹下新建一个名为&lt;code>deploy.sh&lt;/code>的文件用于一键部署博客,在&lt;code>deploy.sh&lt;/code>中填入如下内容,其中最后一行代码里的&lt;code>git@github.com:lin-snow/blog-file.git&lt;/code>需要更改为你自己仓库的地址,可以通过如下图片中的操作获得该地址&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/codessh.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/0229816bbacaa285c057c8b70cd5d9b6.webp" alt="">&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
@@ -193,14 +193,14 @@
 &lt;p>3.接下来我们先运行&lt;code>deploy.sh&lt;/code>推送一下文件到仓库,等推送上去之后,我们才能完成接下来的操作.&lt;/p>
 &lt;blockquote>
 &lt;p>注意,第一次运行deploy.sh可能会出现如图这种情况,直接输入yes回车即可,如果仓库里没发现上传的文件可以再运行一次&lt;code>deploy.sh&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/deployyes.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/ba70b755586b654137ed9ae2c6c8f1f7.webp" alt="">&lt;/p>
 &lt;/blockquote>
 &lt;p>这里贴出我的GitHub Action运行状况&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/actionstatus.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/668c8bc6abee9e4e17c7d38dbc5481f4.webp" alt="">&lt;/p>
 &lt;hr>
 &lt;h3 id="开启github-page">🍺开启Github Page&lt;/h3>
 &lt;p>等待&lt;code>Github Action&lt;/code>完成后,我们需要开启&lt;code>GitHub page&lt;/code>,首先进入blog这个仓库,然后打开设置,找到&lt;code>page&lt;/code>项,根据如下设置即可.&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/githubpage.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/93437cfc4b41faa223a0018736e845b0.webp" alt="">&lt;/p>
 &lt;p>到这里我们就成功上线我们的博客了.至于自定义域名可以在网上找到很多教程,这里就不写了,毕竟我比较懒.&lt;/p>
 &lt;h2 id="利用vercel部署你的hugo博客">🥝利用Vercel部署你的Hugo博客&lt;/h2>
 &lt;p>由于Vercel相比与GitHub在国内的访问速度更快,所以我比较推荐使用Vercel部署,但是Vercel分配的二级域名已经被墙了,所以需要绑定自定义的域名才能解决国内的访问问题.接着上面的操作.&lt;/p>
@@ -208,13 +208,13 @@
 &lt;p>首先我们需要登录一下Vercel,由于Vercel支持直接使用GitHub登录,所以直接用GitHub登录就行了.&lt;/p>
 &lt;h3 id="导入博客">🎈导入博客&lt;/h3>
 &lt;p>登录Vercel后,点击页面右上角的&lt;code>Add New ...&lt;/code>按钮,选择&lt;code>Project&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/addproject.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/d2245f0e5d033d7b73e20a6ff8762348.webp" alt="">&lt;/p>
 &lt;p>然后选择我们在&lt;code>GitHub&lt;/code>创建的&lt;code>Blog&lt;/code>项目,点击&lt;code>Import&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/import.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/226a9a04b9349ef730df77a721af1c46.webp" alt="">&lt;/p>
 &lt;p>接着其他什么都保持默认即可,直接点击&lt;code>Deploy&lt;/code>等待部署完成&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/verceldeploy.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/cfca9b2634f0d2df8bd77d8931beea80.webp" alt="">&lt;/p>
 &lt;p>等待导入完毕后会自动分配一个二级域名给你,但是这个被墙了,所以我们要自定义域名,先点击刚刚导入的项目,选择&lt;code>Setting&lt;/code>s,然后选择&lt;code>Domains&lt;/code>,在输入框中输入自己的域名,然后按照提示在域名服务商中添加解析即可.&lt;/p>
-&lt;p>&lt;img src="https://blog.linsnow.cn/p/deploy-hugo/domain.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/9044c6ec41099a8179ec2e83a4c690e8.webp" alt="">&lt;/p>
 &lt;p>这样子我们就完成博客在Vercel的部署了.🎉&lt;/p></description></item><item><title>docker容器常用命令</title><link>https://jimugou.com/post/025/</link><pubDate>Mon, 31 Jul 2023 10:34:39 +0800</pubDate><guid>https://jimugou.com/post/025/</guid><description>&lt;h2 id="一docker-常用基础命令总结">一、docker 常用基础命令总结&lt;/h2>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
