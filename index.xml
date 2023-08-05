@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 05 Aug 2023 14:03:46 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>利用Docker轻松搭建独角发卡！人人都可以开一个线上小店</title><link>https://jimugou.com/post/032/</link><pubDate>Sat, 05 Aug 2023 14:03:46 +0800</pubDate><guid>https://jimugou.com/post/032/</guid><description/></item><item><title>绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户</title><link>https://jimugou.com/post/031/</link><pubDate>Sat, 05 Aug 2023 11:04:51 +0800</pubDate><guid>https://jimugou.com/post/031/</guid><description>&lt;p>感谢 @WM 的推荐，来自 X 的用户 @StarIight✨ 分享了一个 Featured/Bug：只需要在安装 Windows 11 时，使用用户名 &lt;a href="mailto:no@thankyou.com">no@thankyou.com&lt;/a> 登录，即可跳过联网账户，轻松创建本地账。@Appinn&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 05 Aug 2023 14:03:46 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>利用Docker轻松搭建独角发卡！人人都可以开一个线上小店</title><link>https://jimugou.com/post/032/</link><pubDate>Sat, 05 Aug 2023 14:03:46 +0800</pubDate><guid>https://jimugou.com/post/032/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/6ce3a13e4e0b2ce8ee8fb1ddf4ed31f7.webp" alt="">&lt;/p>
+&lt;h2 id="1-独角数卡简单介绍">1. 独角数卡简单介绍&lt;/h2>
+&lt;h3 id="系统优势">系统优势&lt;/h3>
+&lt;ul>
+&lt;li>采用业界流行的 laravel 框架，安全及稳定性提升。&lt;/li>
+&lt;li>支持自定义前端模板功能&lt;/li>
+&lt;li>支持国际化多语言包（需自行翻译）&lt;/li>
+&lt;li>代码全部开源，所有扩展包采用 composer 加载，代码所有内容可溯源！&lt;/li>
+&lt;li>长期技术更新支持！&lt;/li>
+&lt;/ul>
+&lt;h3 id="支付接口已集成">支付接口已集成&lt;/h3>
+&lt;ul>
+&lt;li>支付宝当面付&lt;/li>
+&lt;li>支付宝 PC 支付&lt;/li>
+&lt;li>支付宝手机支付&lt;/li>
+&lt;li>payjs 微信扫码.&lt;/li>
+&lt;li>Paysapi (支付宝 / 微信).&lt;/li>
+&lt;li>码支付 (QQ / 支付宝 / 微信)&lt;/li>
+&lt;li>微信企业扫码支付&lt;/li>
+&lt;li>Paypal 支付 (默认美元)&lt;/li>
+&lt;li>V 免签支付&lt;/li>
+&lt;li>全网易支付支持 (通用彩虹版)&lt;/li>
+&lt;li>stripe&lt;/li>
+&lt;/ul>
+&lt;p>附上 GitHub 上的免责声明：&lt;/p>
+&lt;ul>
+&lt;li>独角数卡程序是免费开源的产品，仅用于学习交流使用！&lt;/li>
+&lt;li>不可用于任何违反中华人民共和国 (含台湾省) 或使用者所在地区法律法规的用途。&lt;/li>
+&lt;li>因为作者即本人仅完成代码的开发和开源活动 (开源即任何人都可以下载使用)，从未参与用户的任何运营和盈利活动。&lt;/li>
+&lt;li>且不知晓用户后续将程序源代码用于何种用途，故用户使用过程中所带来的任何法律责任即由用户自己承担。&lt;/li>
+&lt;/ul></description></item><item><title>绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户</title><link>https://jimugou.com/post/031/</link><pubDate>Sat, 05 Aug 2023 11:04:51 +0800</pubDate><guid>https://jimugou.com/post/031/</guid><description>&lt;p>感谢 @WM 的推荐，来自 X 的用户 @StarIight✨ 分享了一个 Featured/Bug：只需要在安装 Windows 11 时，使用用户名 &lt;a href="mailto:no@thankyou.com">no@thankyou.com&lt;/a> 登录，即可跳过联网账户，轻松创建本地账。@Appinn&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/d9e3cb6fa7ef31f63892d6960cddaac6.webp" alt="">&lt;/p>
 &lt;p>这就…当青小蛙看到这个的时候，只能卧槽了…&lt;/p>
 &lt;p>就在前几天，青小蛙还在论坛分享了这个：《不联网，无网络安装 Windows 11》&lt;/p>
