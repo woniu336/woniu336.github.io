@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 05 Aug 2023 00:19:04 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>目前最简单、最安全、最稳定的专属节点搭建方法</title><link>https://jimugou.com/post/030/</link><pubDate>Sat, 05 Aug 2023 00:19:04 +0800</pubDate><guid>https://jimugou.com/post/030/</guid><description>&lt;style>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 05 Aug 2023 11:04:51 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户</title><link>https://jimugou.com/post/031/</link><pubDate>Sat, 05 Aug 2023 11:04:51 +0800</pubDate><guid>https://jimugou.com/post/031/</guid><description>&lt;p>感谢 @WM 的推荐，来自 X 的用户 @StarIight✨ 分享了一个 Featured/Bug：只需要在安装 Windows 11 时，使用用户名 &lt;a href="mailto:no@thankyou.com">no@thankyou.com&lt;/a> 登录，即可跳过联网账户，轻松创建本地账。@Appinn&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/d9e3cb6fa7ef31f63892d6960cddaac6.webp" alt="">&lt;/p>
+&lt;p>这就…当青小蛙看到这个的时候，只能卧槽了…&lt;/p>
+&lt;p>就在前几天，青小蛙还在论坛分享了这个：《不联网，无网络安装 Windows 11》&lt;/p>
+&lt;p>在 Windows 11 的最新版本 22H2 中，微软干掉了“我没有 Internet 连接”按钮，没登陆不让你装系统。&lt;/p>
+&lt;p>有些电脑网卡没有驱动就直接卡在这里了。 此时你可以按下 Shift+F10 打开命令提示符，输入 &lt;code>oobe\BypassNRO.cmd&lt;/code> 即可重启进入带有跳过按钮的 OOBE。&lt;/p>
+&lt;hr>
+&lt;h2 id="nothankyoucom">&lt;a href="mailto:no@thankyou.com">no@thankyou.com&lt;/a>&lt;/h2>
+&lt;p>而这个莫名其妙又有些好笑的账户，基本上就是替代上面的命令行，只需要登录时输入，密码随意，就能跟着向导创建本地账户了。&lt;/p>
+&lt;p>简直…太好用。&lt;/p>
+&lt;p>微软你说你是不是深井冰。&lt;/p></description></item><item><title>目前最简单、最安全、最稳定的专属节点搭建方法</title><link>https://jimugou.com/post/030/</link><pubDate>Sat, 05 Aug 2023 00:19:04 +0800</pubDate><guid>https://jimugou.com/post/030/</guid><description>&lt;style>
 .meta-media {
 position: relative;
 margin-bottom: 30px;
@@ -4107,67 +4117,4 @@ import React from &amp;#39;react&amp;#39;;
 &lt;ol>
 &lt;li>&lt;a href="https://huangzhongde.cn/post/2020-02-21-hugo-code-copy-to-clipboard/">https://huangzhongde.cn/post/2020-02-21-hugo-code-copy-to-clipboard/&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.tomspencer.dev/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/">https://www.tomspencer.dev/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/&lt;/a>&lt;/li>
-&lt;/ol></description></item><item><title>hugo子模块错误提示解决办法</title><link>https://jimugou.com/post/013/</link><pubDate>Thu, 27 Jul 2023 14:46:23 +0800</pubDate><guid>https://jimugou.com/post/013/</guid><description>&lt;p>错误信息 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo;&lt;/p>
-&lt;p>表明在你的 Git 项目中的 .gitmodules 文件中找不到 &amp;ldquo;themes/jane&amp;rdquo; 子模块的 URL。&lt;/p>
-&lt;p>.gitmodules 文件是一个包含子模块配置信息的文件，它用于跟踪和管理项目中使用的子模块。子模块允许你在一个 Git 项目中嵌套另一个 Git 项目，并将其作为你项目的一部分来管理。&lt;/p>
-&lt;p>出现这个错误可能有几种原因：&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>缺少 .gitmodules 文件：首先，确保你的项目根目录下有一个名为 .gitmodules 的文件。如果没有该文件，你需要创建一个新的 .gitmodules 文件并添加相应的子模块配置。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Themes/jane 子模块不存在：如果 themes/jane 子模块确实存在，但它没有被正确地添加为项目的子模块，则需要检查是否正确地添加了子模块。&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>解决方法：&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>确保 .gitmodules 文件存在：在项目根目录下，使用文本编辑器创建一个新的 .gitmodules 文件，或确保已存在的 .gitmodules 文件没有被移除或重命名。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>添加子模块的 URL：在 .gitmodules 文件中添加 themes/jane 子模块的 URL。例如：&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>submodule &lt;span style="color:#4070a0">&amp;#34;themes/jane&amp;#34;&lt;/span>&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">path&lt;/span> &lt;span style="color:#666">=&lt;/span> themes/jane
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">url&lt;/span> &lt;span style="color:#666">=&lt;/span> https://github.com/xianmin/hugo-theme-jane.git
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>请将上述 URL 替换为 themes/jane 子模块的实际 Git 仓库 URL。&lt;/p>
-&lt;ol start="3">
-&lt;li>初始化子模块：运行以下命令来初始化和更新子模块：&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git submodule init
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git submodule update
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>这将会初始化并获取你在 .gitmodules 文件中配置的子模块。&lt;/p>
-&lt;ol start="4">
-&lt;li>提交更改：一旦子模块配置正常并成功初始化，确保将 .gitmodules 文件和项目的其他更改提交到 Git 仓库：&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git add .
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git commit -m &lt;span style="color:#4070a0">&amp;#34;Added themes/jane submodule&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git push
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>以上步骤应该能帮助你解决 &amp;ldquo;No url found for submodule path &amp;rsquo;themes/jane&amp;rsquo; in .gitmodules&amp;rdquo; 错误。如果你还有其他问题或需要进一步的帮助，请随时向我询问。&lt;/p></description></item></channel></rss>
+&lt;/ol></description></item></channel></rss>
