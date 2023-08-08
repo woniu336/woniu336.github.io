@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 08 Aug 2023 14:00:20 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux VPS服务器SSH端口一键修改脚本</title><link>https://jimugou.com/post/035/</link><pubDate>Tue, 08 Aug 2023 14:00:20 +0800</pubDate><guid>https://jimugou.com/post/035/</guid><description>&lt;p>说明：我们的很多&lt;code>VPS&lt;/code>服务器，默认的端口都是&lt;code>22&lt;/code>，所以一直会被人扫描爆破，很容易会出现问题，所以我们需要通过修改端口来尽可能减少这种事情发生，之前发过手动修改教程，但对于很多小白或者很懒的人来说，更喜欢一键脚本就能完成的方法，这里就整了个&lt;code>SSH&lt;/code>端口一键修改脚本。从&lt;code>OneinStack&lt;/code>一键安装包上扒下来的。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 08 Aug 2023 14:45:36 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>开源自动工作流工具 n8n 发布 1.0 版本</title><link>https://jimugou.com/post/036/</link><pubDate>Tue, 08 Aug 2023 14:45:36 +0800</pubDate><guid>https://jimugou.com/post/036/</guid><description>&lt;p>开源自动工作流工具 &lt;a href="https://www.appinn.com/n8n-io/">n8n&lt;/a> 前几天在&lt;a href="https://blog.n8n.io/n8n-version-1/">官方博客&lt;/a>上宣布了新里程碑 1.0 版本，拥有更加稳定的性能，并且提供了 Python 支持，新增&lt;a href="https://semver.org/lang/zh-CN/">语义版本控制&lt;/a>，代表着 n8n 可以用于更苛刻的生产环境。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/e4e9283c1a8f50181993eb6ef9235700.webp" alt="">&lt;/p>
+&lt;p>小众软件在 2019 年介绍过 &lt;a href="https://www.appinn.com/n8n-io/">n8n&lt;/a>，这是一个开源的自动工作流服务，类似 IFTTT、Zapier，可以互联互通包括 GitHub、Dropbox、Google、NextCLoud、RSS、Slack、Telegram 在内的几十款在线服务。实现当 A 条件发生，触发 B 服务这样的自动工作流程。&lt;/p>
+&lt;p>你可以直接使用 n8n 提供的服务，也可以自托管使用自己的服务器来处理工作流。&lt;/p>
+&lt;p>一键自托管安装（基于 Docker）：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n docker.n8n.io/n8nio/n8n
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后，就可以使用 ip:5678 来访问控制台了。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/5ddf6def2032cd1448b369d7e164254c.webp" alt="">&lt;/p>
+&lt;p>附：n8n 更新日志：&lt;/p>
+&lt;p>我们很高兴地宣布，n8n版本1.0已经发布，这是我们的工作流自动化平台的最新迭代。有了这个版本，n8n自信地走上了作为生产就绪服务的舞台，磨砺以满足我们的云、自托管和企业用户的需求。&lt;/p>
+&lt;p>我们对稳定性和性能的承诺比以往任何时候都更加坚定。在版本1.0中，我们优化了n8n，以支持您的关键工作流，使其成为您自动化旅程中的坚定伙伴。&lt;/p>
+&lt;p>响应广大用户的需求，n8n现在提供了Python支持，这为依赖Python进行自动化任务的用户提供了新的能力。&lt;/p>
+&lt;p>为了简化您的更新过程，我们采用了语义化版本。这保证了您能体验到可预测的、无麻烦的更新，保持与我们最新的增强和bug修复同步。&lt;/p>
+&lt;p>版本1.0体现了我们致力于在最具挑战性的环境中使n8n变得可行的承诺。我们推出了单点登录（SSO）等功能，以便顺利地与您现有的身份验证系统集成。您现在可以在多个环境中同步工作流，并使用全局变量、日志流式处理和高级执行过滤器来增强您的工作流和简化自动化过程。&lt;/p>
+&lt;p>请注意，版本1.0引入了一些重大变化。我们准备了完整的迁移指南，确保您现有工作流的顺利过渡。 在庆祝这个里程碑的同时，我们向活跃的n8n社区表达了诚挚的感谢。您持续的支持和深思熟虑的反馈对于塑造今天的n8n有着重大的作用。&lt;/p>
+&lt;p>拥抱自动化的未来。自动化愉快！&lt;/p>
+&lt;p>n8n团队&lt;/p></description></item><item><title>Linux VPS服务器SSH端口一键修改脚本</title><link>https://jimugou.com/post/035/</link><pubDate>Tue, 08 Aug 2023 14:00:20 +0800</pubDate><guid>https://jimugou.com/post/035/</guid><description>&lt;p>说明：我们的很多&lt;code>VPS&lt;/code>服务器，默认的端口都是&lt;code>22&lt;/code>，所以一直会被人扫描爆破，很容易会出现问题，所以我们需要通过修改端口来尽可能减少这种事情发生，之前发过手动修改教程，但对于很多小白或者很懒的人来说，更喜欢一键脚本就能完成的方法，这里就整了个&lt;code>SSH&lt;/code>端口一键修改脚本。从&lt;code>OneinStack&lt;/code>一键安装包上扒下来的。&lt;/p>
 &lt;h2 id="方法">方法&lt;/h2>
 &lt;p>系统要求：支持&lt;code>Debian&lt;/code>、&lt;code>Ubuntu&lt;/code>、&lt;code>CentOS&lt;/code>系统。&lt;br>
 运行以下命令：&lt;/p>
@@ -3010,33 +3033,4 @@ allowfullscreen="true"
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">version&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#40a070">1.5.8&lt;/span>&lt;span style="color:#bbb"> &lt;/span>// 这个版本号要自己手动修改，和twikoo的版本号要对得上&lt;span style="color:#bbb">
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>完结!&lt;/p></description></item><item><title>🤝友链</title><link>https://jimugou.com/friend/</link><pubDate>Sat, 29 Jul 2023 00:48:22 +0800</pubDate><guid>https://jimugou.com/friend/</guid><description>&lt;a target="_blank" href=https://blog.csdn.net/u010066597?type&amp;#61;blog title=Z字骚年 class="friendurl">
-&lt;div class="frienddiv">
-&lt;div class="frienddivleft">
-&lt;img class="myfriend" src=https://avatars.githubusercontent.com/u/3828072?v&amp;#61;4&amp;amp;s&amp;#61;160 />
-&lt;/div>
-&lt;div class="frienddivright">
-&lt;div class="friendname">Z字骚年&lt;/div>
-&lt;div class="friendinfo">Joe Zou&amp;#39;s Blog&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/a>
-&lt;a target="_blank" href=https://www.cnblogs.com/meshare/#/c/subject/category/default.html title=木瓜有点甜 class="friendurl">
-&lt;div class="frienddiv">
-&lt;div class="frienddivleft">
-&lt;img class="myfriend" src=https://avatars3.githubusercontent.com/u/12484497?v&amp;#61;4&amp;amp;s&amp;#61;160 />
-&lt;/div>
-&lt;div class="frienddivright">
-&lt;div class="friendname">木瓜有点甜&lt;/div>
-&lt;div class="friendinfo">木瓜哥的博客&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/a>
-&lt;p>👉 友链格式&lt;/p>
-&lt;p>名称： 阿甘知识库&lt;/p>
-&lt;p>网址： &lt;a href="https://jimugou.com">https://jimugou.com&lt;/a>&lt;/p>
-&lt;p>图标： &lt;a href="https://i.imgtg.com/2023/07/31/Oi3cqX.png">https://i.imgtg.com/2023/07/31/Oi3cqX.png&lt;/a>&lt;/p>
-&lt;p>描述： 一个记录技术、阅读、生活的博客&lt;/p>
-&lt;p> &lt;/p>
-&lt;p>👉 友链申请要求&lt;/p>
-&lt;p>秉承互换友链原则、文章定期更新、不能有太多广告、个人描述字数控制在15字内&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;p>完结!&lt;/p></description></item></channel></rss>
