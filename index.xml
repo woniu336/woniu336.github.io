@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 08 Aug 2023 01:15:48 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>一条命令激活 Windows 系统</title><link>https://jimugou.com/post/034/</link><pubDate>Tue, 08 Aug 2023 01:15:48 +0800</pubDate><guid>https://jimugou.com/post/034/</guid><description>&lt;h2 id="windows-激活方法">Windows 激活方法&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 08 Aug 2023 14:00:20 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux VPS服务器SSH端口一键修改脚本</title><link>https://jimugou.com/post/035/</link><pubDate>Tue, 08 Aug 2023 14:00:20 +0800</pubDate><guid>https://jimugou.com/post/035/</guid><description>&lt;p>说明：我们的很多&lt;code>VPS&lt;/code>服务器，默认的端口都是&lt;code>22&lt;/code>，所以一直会被人扫描爆破，很容易会出现问题，所以我们需要通过修改端口来尽可能减少这种事情发生，之前发过手动修改教程，但对于很多小白或者很懒的人来说，更喜欢一键脚本就能完成的方法，这里就整了个&lt;code>SSH&lt;/code>端口一键修改脚本。从&lt;code>OneinStack&lt;/code>一键安装包上扒下来的。&lt;/p>
+&lt;h2 id="方法">方法&lt;/h2>
+&lt;p>系统要求：支持&lt;code>Debian&lt;/code>、&lt;code>Ubuntu&lt;/code>、&lt;code>CentOS&lt;/code>系统。&lt;br>
+运行以下命令：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://www.moerats.com/usr/down/sshport.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash sshport.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输入端口确认。再打开防火墙端口：&lt;/p>
+&lt;p>&lt;code>#如果防火墙使用的iptables（Centos 6），修改端口为8080&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>iptables -I INPUT -p tcp --dport &lt;span style="color:#40a070">8080&lt;/span> -j ACCEPT
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service iptables save
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service iptables restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>#如果使用的是firewall（CentOS 7）&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>firewall-cmd --zone&lt;span style="color:#666">=&lt;/span>public --add-port&lt;span style="color:#666">=&lt;/span>8080/tcp --permanent
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>firewall-cmd --reload
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>最后重启&lt;code>ssh&lt;/code>生效：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#CentOS系统&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service sshd restart
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#Debian/Ubuntu系统&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service ssh restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后就可以使用新端口&lt;code>SSH&lt;/code>登录了&lt;/p></description></item><item><title>一条命令激活 Windows 系统</title><link>https://jimugou.com/post/034/</link><pubDate>Tue, 08 Aug 2023 01:15:48 +0800</pubDate><guid>https://jimugou.com/post/034/</guid><description>&lt;h2 id="windows-激活方法">Windows 激活方法&lt;/h2>
 &lt;p>打开 命令提示符 (管理员)，复制以下命令到命令提示符并回车。&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -2979,16 +3045,4 @@ allowfullscreen="true"
 &lt;p>描述： 一个记录技术、阅读、生活的博客&lt;/p>
 &lt;p> &lt;/p>
 &lt;p>👉 友链申请要求&lt;/p>
-&lt;p>秉承互换友链原则、文章定期更新、不能有太多广告、个人描述字数控制在15字内&lt;/p></description></item><item><title>关于我</title><link>https://jimugou.com/about/</link><pubDate>Sat, 29 Jul 2023 00:48:22 +0800</pubDate><guid>https://jimugou.com/about/</guid><description>&lt;h2 id="个人介绍">个人介绍&lt;/h2>
-&lt;p>个人网站： &lt;a href="https://jimugou.com/">https://jimugou.com&lt;/a>&lt;/p>
-&lt;p>目前定居&lt;strong>广西&lt;/strong>，勤勤恳恳的守法公民。&lt;/p>
-&lt;p>&lt;code>互联网领域自媒体博主&lt;/code>，在自媒体平台上分享最新的科技互联网相关软件、产品、使用教程。&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;h3 id="博客存在的意义">博客存在的意义&lt;/h3>
-&lt;blockquote>
-&lt;p>写博客是为了和过去以及未来的自己对话&lt;/p>
-&lt;/blockquote>
-&lt;p>博客可以作为一个见证，它既可以见证过去也可以见证未来，看自己以前的文章，可以回顾自己的成长，就算是黑历史，也可以和现在的我打个照面，看看自己的改变，目前正在写的博文也将是未来我的“参考历史”，给自己留下一个悬念，期待一下现在的自己和未来的自己又会有怎样的不同。博客可以作为一个时间的媒介，它可以历尽沧海仍不变，供它的主人来了解其本身。&lt;/p>
-&lt;p>于是，个人博客从来不是写给别人看的。我拥有自己的三观，却从未去打量过自己；看多了别人的思想，却从未想过表达自己。从开始建博客到现在，我饶了一大圈，终于又回到了自己身上：个人博客是写给自己的。&lt;/p>
-&lt;p>个人博客如同自己的一座花园，里面种的都是自己丰硕的思维花朵，只为自己欣赏，不为追求别人的褒扬之词，即便如此，当有人路过时，我还是希望他能说一句：&lt;/p>
-&lt;p>“嘿，你的花真漂亮。”&lt;/p></description></item></channel></rss>
+&lt;p>秉承互换友链原则、文章定期更新、不能有太多广告、个人描述字数控制在15字内&lt;/p></description></item></channel></rss>
