@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 09 Aug 2023 14:34:31 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>将hugo博客部署至IPFS</title><link>https://jimugou.com/post/041/</link><pubDate>Wed, 09 Aug 2023 14:34:31 +0800</pubDate><guid>https://jimugou.com/post/041/</guid><description>&lt;p>官网: &lt;a href="https://fleek.co/hosting/">https://fleek.co/hosting/&lt;/a>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 09 Aug 2023 21:48:07 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>vps使用rclone挂载Google Drive教程</title><link>https://jimugou.com/post/042/</link><pubDate>Wed, 09 Aug 2023 21:48:07 +0800</pubDate><guid>https://jimugou.com/post/042/</guid><description>&lt;p>其实 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code> 网上的教程已经很多了，但是大多数的教程都有一点点过时，与现在的实际操作有一点出入，故整理了当前的挂载操作，以防忘记。&lt;/p>
+&lt;h2 id="一-安装并配置-rclone">一、 安装并配置 rclone&lt;/h2>
+&lt;p>&lt;code>首先在 vps 上一键安装 rclone：&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl https://rclone.org/install.sh | sudo bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>接下来在本地电脑上下载命令行操作的 rclone：&lt;/p>
+&lt;p>访问 &lt;a href="https://rclone.org/downloads/">rclone 下载地址&lt;/a>，选择您的操作系统下载相应的 zip 包并解压。一会需要用得着。&lt;/p>
+&lt;p>软件准备好中，&lt;code>在 vps 上开始配置&lt;/code>，执行：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>您应该会看见&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>2022/05/28 08:56:05 NOTICE: Config file &amp;#34;/root/.config/rclone/rclone.conf&amp;#34; not found - using defaults
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>No remotes found, make a new one?
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>n) New remote
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>s) Set configuration password
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>q) Quit config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>将hugo博客部署至IPFS</title><link>https://jimugou.com/post/041/</link><pubDate>Wed, 09 Aug 2023 14:34:31 +0800</pubDate><guid>https://jimugou.com/post/041/</guid><description>&lt;p>官网: &lt;a href="https://fleek.co/hosting/">https://fleek.co/hosting/&lt;/a>&lt;/p>
 &lt;p>免费套餐: 每月50G流量&lt;/p>
 &lt;p>&lt;a href="https://fleek.co/pricing/">https://fleek.co/pricing/&lt;/a>&lt;/p>
 &lt;table>
@@ -2813,10 +2852,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;p>&lt;code>-debian 9-12&lt;/code>：Debian 9 及更高版本&lt;/p>
 &lt;p>&lt;code>-centos 7&lt;/code> 或 8/9-stream：CentOS 7 及更高版本&lt;/p>
 &lt;p>&lt;code>-ubuntu 20.04&lt;/code>/22.04：Ubuntu 20.04 及更高版本&lt;/p>
-&lt;p>&lt;code>-windows 10&lt;/code>/11/2012/2016/2019/2022：Windows 10 Enterprise LTSC、Windows 11 Pro for Workstation 22H2、Windows Server 2012 R2、Windows Server 2016、Windows Server 2019、Windows Server 2022。支持 IPv4 dhcp 和静态、扩展当前操作系统磁盘分区。用户登录后必须执行自动步骤。&lt;/p></description></item><item><title>vercel部署hugo记录配置</title><link>https://jimugou.com/post/022/</link><pubDate>Sun, 30 Jul 2023 00:19:18 +0800</pubDate><guid>https://jimugou.com/post/022/</guid><description>&lt;h2 id="构建和开发设置">构建和开发设置&lt;/h2>
-&lt;p>在新项目中使用框架时，系统会自动检测到该框架。因此，会自动配置多个项目设置，以达到最佳效果。你可以在下面覆盖它们。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/220f80a9913bb8fe05a176cf44145503.webp" alt="">&lt;/p>
-&lt;h2 id="环境变量">环境变量&lt;/h2>
-&lt;p>为了在构建和运行时为您的部署提供环境变量，您可以在这里为您选择的环境输入环境变量。&lt;/p>
-&lt;p>指定&lt;code>hugo版本&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/07/6112283a5fae16e078ecf419e739fc55.webp" alt="">&lt;/p></description></item></channel></rss>
+&lt;p>&lt;code>-windows 10&lt;/code>/11/2012/2016/2019/2022：Windows 10 Enterprise LTSC、Windows 11 Pro for Workstation 22H2、Windows Server 2012 R2、Windows Server 2016、Windows Server 2019、Windows Server 2022。支持 IPv4 dhcp 和静态、扩展当前操作系统磁盘分区。用户登录后必须执行自动步骤。&lt;/p></description></item></channel></rss>
