@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 09 Aug 2023 12:20:03 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>公共DNS汇总</title><link>https://jimugou.com/post/040/</link><pubDate>Wed, 09 Aug 2023 12:20:03 +0800</pubDate><guid>https://jimugou.com/post/040/</guid><description>&lt;p>公共DNS汇总,互联网企业&amp;amp;高校DNS&lt;/p>
 &lt;h2 id="互联网企业高校dns">&lt;strong>互联网企业&amp;amp;高校DNS&lt;/strong>&lt;/h2>
+&lt;p>&lt;code>(推荐中科大)&lt;/code>&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -9,6 +10,21 @@
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
+&lt;tr>
+&lt;td>中科大DNS 中国电信&lt;/td>
+&lt;td>202.141.162.123&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>中科大DNS 中国移动&lt;/td>
+&lt;td>202.141.176.93&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>中科大DNS 教育网&lt;/td>
+&lt;td>202.38.93.153&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
 &lt;tr>
 &lt;td>114 DNS&lt;/td>
 &lt;td>114.114.114.114&lt;/td>
@@ -30,21 +46,6 @@
 &lt;td>223.6.6.6&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>阿里 AliDNS DoH&lt;/td>
-&lt;td>&lt;a href="https://dns.alidns.com/dns-query">https://dns.alidns.com/dns-query&lt;/a>&lt;/td>
-&lt;td>&lt;a href="https://223.5.5.5/dns-query">https://223.5.5.5/dns-query&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;a href="https://223.5.5.5/dns-query">https://223.5.5.5/dns-query&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>阿里 AliDNS DoT&lt;/td>
-&lt;td>&lt;a href="http://dns.alidns.com/">http://dns.alidns.com&lt;/a>&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
 &lt;td>百度 BaiduDNS&lt;/td>
 &lt;td>180.76.76.76&lt;/td>
 &lt;td>&lt;/td>
@@ -58,16 +59,6 @@
 &lt;td>&lt;/td>
 &lt;td>182.254.116.116&lt;/td>
 &lt;td>182.254.118.118&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>DNSPod/腾讯DNS DoH&lt;/td>
-&lt;td>&lt;a href="https://doh.pub/dns-query">https://doh.pub/dns-query&lt;/a>&lt;/td>
-&lt;td>&lt;a href="https://1.12.12.12/dns-query">https://1.12.12.12/dns-query&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;a href="https://sm2.doh.pub/dns-query">https://sm2.doh.pub/dns-query&lt;/a> (国密)&lt;/td>
-&lt;td>&lt;a href="https://120.53.53.53/dns-query">https://120.53.53.53/dns-query&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>DNSPod/腾讯DNS DoT&lt;/td>
@@ -95,33 +86,8 @@
 &lt;td>52.80.60.30&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>360DNS DoH&lt;/td>
-&lt;td>&lt;a href="https://doh.360.cn/dns-query">https://doh.360.cn/dns-query&lt;/a>&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>360DNS DoT&lt;/td>
-&lt;td>&lt;a href="http://dot.360.cn/">http://dot.360.cn&lt;/a>&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
 &lt;td>清华大学 TUNA&lt;/td>
 &lt;td>101.6.6.6&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>中科大DNS 中国电信&lt;/td>
-&lt;td>202.141.162.123&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>中科大DNS 中国移动&lt;/td>
-&lt;td>202.141.176.93&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>中科大DNS 教育网&lt;/td>
-&lt;td>202.38.93.153&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
