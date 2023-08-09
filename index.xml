@@ -20,7 +20,7 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone config
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>您应该会看见&lt;/p>
+&lt;/div>&lt;p>&lt;code>选择 n&lt;/code>，新建一个&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
@@ -30,15 +30,217 @@
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5">5&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>2022/05/28 08:56:05 NOTICE: Config file &amp;#34;/root/.config/rclone/rclone.conf&amp;#34; not found - using defaults
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>No remotes found, make a new one?
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>No remotes found, make a new one?
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>n) New remote
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>s) Set configuration password
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>q) Quit config
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>n/s/q&amp;gt; n
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;code>选择 n&lt;/code>，新建配置：&lt;/p>
-&lt;p>此时&lt;code>rclone&lt;/code>会要你选择要挂载什么网盘，找到 &lt;code>google drive&lt;/code> 并选择。&lt;/p></description></item><item><title>将hugo博客部署至IPFS</title><link>https://jimugou.com/post/041/</link><pubDate>Wed, 09 Aug 2023 14:34:31 +0800</pubDate><guid>https://jimugou.com/post/041/</guid><description>&lt;p>官网: &lt;a href="https://fleek.co/hosting/">https://fleek.co/hosting/&lt;/a>&lt;/p>
+&lt;/div>&lt;p>输入新建的名称，随意写:比如 &lt;code>283pan&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>Enter name for new remote.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>name&amp;gt;283pan
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>选择要挂载的网盘类型，&lt;code>选择18&lt;/code>，&lt;code>Google Drive&lt;/code>&lt;/p>
+&lt;p>填写OAuth client ID，输入&lt;code>client_id&lt;/code>、&lt;code>client_secret&lt;/code>&lt;/p>
+&lt;p>选择Rclone对Google Drive 谷歌云盘的操作权限，我这里选择1，完整的访问权限&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-19">19&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>Option scope.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Scope that rclone should use when requesting access from drive.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Choose a number from below, or type in your own value.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Press Enter to leave empty.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 1 / Full access all files, excluding Application Data Folder.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> \ (drive)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 2 / Read-only access to file metadata and file contents.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> \ (drive.readonly)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> / Access to files created by rclone only.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3 | These are visible in the drive website.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> | File authorization is revoked when the user deauthorizes the app.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> \ (drive.file)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> / Allows read and write access to the Application Data folder.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 4 | This is not visible in the drive website.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> \ (drive.appfolder)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> / Allows read-only access to file metadata but
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 5 | does not allow any access to read or download file content.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> \ (drive.metadata.readonly)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>scope&amp;gt; 1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>回车默认&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-6">6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-7">7&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>Option service_account_file.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Service Account Credentials JSON file path.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Leave blank normally.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Needed only if you want use SA instead of interactive login.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Leading `~` will be expanded in the file name as will environment variables such as `${RCLONE_CONFIG_DIR}`.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Enter a value. Press Enter to leave empty.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service_account_file&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>是否要编辑高级配置，我这里选择n&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>Edit advanced config?
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>y) Yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>n) No (default)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>y/n&amp;gt; n
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p> &lt;/p>
+&lt;p>询问是不是自动配置，选择n&lt;/p>
+&lt;h4 id="复制rclone-authorize-drive-your-token-code这一长串代码红色框起来的地方">复制&lt;code>rclone authorize &amp;quot;drive&amp;quot; &amp;quot;Your Token Code&amp;quot;&lt;/code>这一长串代码,&lt;code>红色框起来的地方&lt;/code>&lt;/h4>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/18f7604b412944b0a8c5b77be8b50b0c.webp" alt="">&lt;/p>
+&lt;h2 id="二下载rclone-windows版">二、下载rclone windows版&lt;/h2>
+&lt;p>&lt;a href="https://rclone.org/downloads/">https://rclone.org/downloads/&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/0a3618be8579c7bb4517a897dabe8a10.webp" alt="">&lt;/p>
+&lt;h4 id="下载在本地的-rclone-压缩包解压后你应该能看到一个-rcloneexe类似下图">下载在本地的 &lt;code>rclone&lt;/code> 压缩包解压后，你应该能看到一个 &lt;code>rclone.exe&lt;/code>，类似下图&lt;/h4>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/c2ff2f533fff4be0a135dfe6cde0eee2.webp" alt="">&lt;/p>
+&lt;p>空白处右键&amp;ndash;&lt;code>在此处打开命令行窗口&lt;/code>，或者&lt;code>cmd&lt;/code>进入你的&lt;code>rclone目录&lt;/code>&lt;/p>
+&lt;p>打开cmd,粘贴前面复制的代码回车（红色框起来的地方）&lt;/p>
+&lt;p>（&lt;code>浏览器&lt;/code>自动打开进入到谷歌账号登录界面，并&lt;code>选择同意授权&lt;/code>。由于是新申请的 API，所以谷歌会提醒该应用未经验证。但是左下角有一行小灰字，&lt;code>点击选择继续就能授权&lt;/code>）&lt;/p>
+&lt;p>授权成功浏览器会提示 &lt;code>success：&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/3fde03baf64fa2e8c9bdc91d3123645f.webp" alt="">&lt;/p>
+&lt;p>此时返回命令行，等待几秒就能看见授权的 code 了。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/c8e213c767691b9501779bfb24632785.webp" alt="">&lt;/p>
+&lt;hr>
+&lt;p>&lt;code>如果出现下面这种情况（waiting for code），请往下看第五点&lt;/code>&lt;/p>
+&lt;hr>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/75387d004d80bef3b490d4f7118add2a.webp" alt="image-20230810012334426">&lt;/p>
+&lt;p>复制授权，回到SSH终端，粘贴到 rclone 中。红色框起来的地方&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/ea69ccbf3d99b7112129e248e86c757f.webp" alt="image-20230810011049452">&lt;/p>
+&lt;p>接下来 rclone 会询问是否为团队盘：&lt;code>选择n&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>Configure this as a Shared Drive (Team Drive)?
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>y) Yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>n) No (default)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果您要挂载的就是团队盘，那么选择 y，不是的话就选择 n&lt;/p>
+&lt;p>此时配置就已经结束了，退出 clone，开始挂载。&lt;/p>
+&lt;h2 id="三-挂载-google-drive">三、 挂载 Google Drive&lt;/h2>
+&lt;p>首先新建一个文件夹用于挂载：&lt;/p>
+&lt;pre tabindex="0">&lt;code>mkdir /google
+&lt;/code>&lt;/pre>&lt;p>开始挂载：&lt;/p>
+&lt;p>&lt;code>rclone mount 283pan: /google --allow-other --allow-non-empty --vfs-cache-mode writes &amp;amp;&lt;/code>&lt;/p>
+&lt;p>其中 &lt;code>283pan&lt;/code> 是 rclone 配置时输入的配置名称，&lt;code>/google&lt;/code> 是挂载目录&lt;/p>
+&lt;hr>
+&lt;p>​ 挂载出错请往下看第四点&lt;/p>
+&lt;hr>
+&lt;p>检查挂载：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>df -h
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/626fa1df5fe52993cd3bd8b4868d373a.webp" alt="image-20230810011416520">&lt;/p>
+&lt;p>卸载挂载：（/google 为挂载目录）&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fusermount -u /google
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p> &lt;/p>
+&lt;h2 id="四挂载出错解决">四，挂载出错解决&lt;/h2>
+&lt;p>可能会报错：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>Fatal error: mount not ready
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>一般是因为缺少依赖导致的，我们选择安装&lt;/p>
+&lt;p>centos 系使用：&lt;/p>
+&lt;pre tabindex="0">&lt;code>yum install -y fuse fuse3 或者 yum install fuse3
+&lt;/code>&lt;/pre>&lt;p>debian 系使用：&lt;/p>
+&lt;pre tabindex="0">&lt;code>apt-get install fuse3
+&lt;/code>&lt;/pre>&lt;p>再次执行挂载命令，如果没有报错，就是挂载成功了。&lt;/p>
+&lt;h2 id="五解决rclone生成不了token-code的问题">五，解决Rclone生成不了token code的问题&lt;/h2>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/20c21f5c2bd1496164aecb572c258dd2.webp" alt="image-20230810012334426">&lt;/p>
+&lt;p>这是因为开了&lt;code>科学上网&lt;/code>，但是cmd没走代理。这里我用的是小狐狸，的端口是&lt;code>7890&lt;/code>，如果和我一样，那就复制了往里敲&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">http_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>配置完之后，我们再跑一次 &lt;code>rclone authorize&lt;/code>，code显示出来了&lt;/p>
+&lt;p>取消sock5代理&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-15-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-15-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-15-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-15-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">http_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>将hugo博客部署至IPFS</title><link>https://jimugou.com/post/041/</link><pubDate>Wed, 09 Aug 2023 14:34:31 +0800</pubDate><guid>https://jimugou.com/post/041/</guid><description>&lt;p>官网: &lt;a href="https://fleek.co/hosting/">https://fleek.co/hosting/&lt;/a>&lt;/p>
 &lt;p>免费套餐: 每月50G流量&lt;/p>
 &lt;p>&lt;a href="https://fleek.co/pricing/">https://fleek.co/pricing/&lt;/a>&lt;/p>
 &lt;table>
