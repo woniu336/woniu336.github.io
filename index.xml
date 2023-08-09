@@ -38,8 +38,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>&lt;code>选择 n&lt;/code>，新建配置：&lt;/p>
-&lt;p>此时&lt;code>rclone&lt;/code>会要你选择要挂载什么网盘，找到 &lt;code>google drive&lt;/code> 并选择。&lt;/p>
-&lt;p>注意是 google drive，不是 google cloud 或 google photos。&lt;/p></description></item><item><title>将hugo博客部署至IPFS</title><link>https://jimugou.com/post/041/</link><pubDate>Wed, 09 Aug 2023 14:34:31 +0800</pubDate><guid>https://jimugou.com/post/041/</guid><description>&lt;p>官网: &lt;a href="https://fleek.co/hosting/">https://fleek.co/hosting/&lt;/a>&lt;/p>
+&lt;p>此时&lt;code>rclone&lt;/code>会要你选择要挂载什么网盘，找到 &lt;code>google drive&lt;/code> 并选择。&lt;/p></description></item><item><title>将hugo博客部署至IPFS</title><link>https://jimugou.com/post/041/</link><pubDate>Wed, 09 Aug 2023 14:34:31 +0800</pubDate><guid>https://jimugou.com/post/041/</guid><description>&lt;p>官网: &lt;a href="https://fleek.co/hosting/">https://fleek.co/hosting/&lt;/a>&lt;/p>
 &lt;p>免费套餐: 每月50G流量&lt;/p>
 &lt;p>&lt;a href="https://fleek.co/pricing/">https://fleek.co/pricing/&lt;/a>&lt;/p>
 &lt;table>
