@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 09 Aug 2023 22:28:32 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>vps使用rclone挂载OneDrive详细记录</title><link>https://jimugou.com/post/043/</link><pubDate>Wed, 09 Aug 2023 22:28:32 +0800</pubDate><guid>https://jimugou.com/post/043/</guid><description/></item><item><title>vps使用rclone挂载Google Drive教程</title><link>https://jimugou.com/post/042/</link><pubDate>Wed, 09 Aug 2023 21:48:07 +0800</pubDate><guid>https://jimugou.com/post/042/</guid><description>&lt;p>其实 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code> 网上的教程已经很多了，但是大多数的教程都有一点点过时，与现在的实际操作有一点出入，故整理了当前的挂载操作，以防忘记。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 09 Aug 2023 22:28:32 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>10个可以免费白嫖VPS、云服务器的网站！给大家都罗列出来了….</title><link>https://jimugou.com/post/043/</link><pubDate>Wed, 09 Aug 2023 22:28:32 +0800</pubDate><guid>https://jimugou.com/post/043/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/ff30b428f4733701436f1ed9403985f3.webp" alt="">&lt;/p>
+&lt;p>1.LinuxOne （无需信用卡）：【&lt;strong>&lt;a href="https://linuxone.cloud.marist.edu/#/login">链接&lt;/a>&lt;/strong>】 需要按视频教程的步骤进行设置。&lt;/p>
+&lt;p>2.Hax VPS （无需信用卡）：【&lt;strong>&lt;a href="https://hax.co.id/">链接&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>3.Oracle Cloud 甲骨文云：【&lt;a href="https://www.freedidi.com/6075.html">&lt;strong>链接和工具&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>4.AWS 亚马逊云：【&lt;strong>&lt;a href="https://www.freedidi.com/7568.html">注册链接&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>5.Vultr：&lt;strong>注册首充35刀就送100美元&lt;/strong>【&lt;strong>&lt;a href="https://www.vultr.com/?ref=8941239-8H">优惠链接&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>6.GCP 谷歌云 ：【&lt;strong>&lt;a href="https://cloud.google.com/">官方链接&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>7.Linode：【&lt;strong>&lt;a href="https://linode.gvw92c.net/1re6ng">链接直达&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>8.Ditital Ocean：&lt;strong>充值25刀可以获得额外200美元&lt;/strong>【&lt;strong>&lt;a href="https://m.do.co/c/6769296f9fda">优惠链接&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>9.Kamatera：【&lt;strong>&lt;a href="https://www.kamatera.com/express/compute/">注册链接&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>10.CIVO： 【&lt;strong>&lt;a href="https://www.civo.com/">官方链接&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>11.Evolution Host：【&lt;a href="https://evolution-host.com/free-vps.php">&lt;strong>申请链接&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>连接VPS、云服务器的工具：&lt;/p>
+&lt;p>1.WinSCP：&lt;a href="https://winscp.net/">https://winscp.net&lt;/a>&lt;/p>
+&lt;p>2.Putty：&lt;a href="https://www.putty.org/">https://www.putty.org&lt;/a>&lt;/p>
+&lt;p>3.tabby: &lt;a href="https://tabby.sh/">https://tabby.sh/&lt;/a>&lt;/p></description></item><item><title>vps使用rclone挂载Google Drive教程</title><link>https://jimugou.com/post/042/</link><pubDate>Wed, 09 Aug 2023 21:48:07 +0800</pubDate><guid>https://jimugou.com/post/042/</guid><description>&lt;p>其实 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code> 网上的教程已经很多了，但是大多数的教程都有一点点过时，与现在的实际操作有一点出入，故整理了当前的挂载操作，以防忘记。&lt;/p>
 &lt;h2 id="一-安装并配置-rclone">一、 安装并配置 rclone&lt;/h2>
 &lt;p>&lt;code>首先在 vps 上一键安装 rclone：&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
