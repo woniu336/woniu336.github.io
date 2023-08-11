@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 11 Aug 2023 15:04:25 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>好用免费开源同步工具Syncthing安装教程</title><link>https://jimugou.com/post/044/</link><pubDate>Fri, 11 Aug 2023 15:04:25 +0800</pubDate><guid>https://jimugou.com/post/044/</guid><description>&lt;h2 id="1特点">1.特点&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 12 Aug 2023 01:01:01 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>独角数卡发卡宝塔安装教程</title><link>https://jimugou.com/post/045/</link><pubDate>Sat, 12 Aug 2023 01:01:01 +0800</pubDate><guid>https://jimugou.com/post/045/</guid><description>&lt;p>独角数卡发卡宝塔安装教程详细记录(转载于github)&lt;/p>
+&lt;h2 id="前景概要">前景概要&lt;/h2>
+&lt;pre tabindex="0">&lt;code>⚠️正式上线后一定要将.env配置里面的APP_DEBUG设置为false⚠️`
+`⚠️正式上线后一定要将.env配置里面的APP_DEBUG设置为false⚠️`
+`⚠️正式上线后一定要将.env配置里面的APP_DEBUG设置为false⚠️
+&lt;/code>&lt;/pre>&lt;h3 id="搭配视频教程食用更佳">搭配视频教程食用更佳&lt;/h3>
+&lt;p>请自备梯子🪜科学上网
+&lt;a href="https://t.me/dujiaoshuka/22">视频教程👉🏻https://t.me/dujiaoshuka/22&lt;/a>&lt;/p>
+&lt;p>首先： 你需要一台内存&lt;code>512M&lt;/code>或以上为最佳的vps或云服务器
+其次 你的服务器操作系统要为 &lt;code>linux&lt;/code> 内核，我可不管你是什么&lt;code>centos&lt;/code>党还是&lt;code>ubuntu&lt;/code>党&lt;/p>
+&lt;p>什么？ 没有？ 那请点击浏览器右上角的X号!&lt;/p>
+&lt;h2 id="宝塔安装">宝塔安装&lt;/h2>
+&lt;p>直接自己去看吧: &lt;a href="https://bt.cn/">bt.cn&lt;/a>。
+如果宝塔都不会玩我建议你放弃~&lt;/p>
+&lt;h2 id="必装环境">必装环境&lt;/h2>
+&lt;p>接下来我们安装一下下图六个软件：
+&lt;img src="https://r2.leshans.eu.org/2023/08/e839e695ceb7b2e61838198628bccbb9." alt="必装软件">&lt;/p>
+&lt;p>最好是编译安装哦，性能更好。
+🙋由于在之前版本很多同学不会使用&lt;code>supervisor&lt;/code>，所以2.0.+版本我们会采用较为简单的&lt;code>堡塔应用管理器&lt;/code>来实现守护进程。&lt;/p>
+&lt;h2 id="php环境确认">PHP环境确认&lt;/h2>
+&lt;h3 id="一-接下来我们按照步骤删除一下php的禁用函数">一、 接下来我们按照步骤删除一下php的禁用函数&lt;/h3>
+&lt;p>（ps:宝塔默认会禁用一些php的函数，导致artisan命令无法正确运行）&lt;/p>
+&lt;p>点击【软件商店】-&amp;gt;【PHP设置】-&amp;gt;【禁用函数列表】 将以下函数删除！！
+&lt;code>putenv&lt;/code>，&lt;code>proc_open&lt;/code>，&lt;code>pcntl_signal&lt;/code>，&lt;code>pcntl_alarm&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/944c5a01c8b2a7a9089978445c5a1af0." alt="禁用函数列表.png">&lt;/p>
+&lt;h3 id="二-我们再装一下必要的两个扩展">二、 我们再装一下必要的两个扩展&lt;/h3>
+&lt;p>点击【软件商店】-&amp;gt;【PHP设置】-&amp;gt;【安装扩展】
+安装以下三个扩展：
+&lt;code>fileinfo&lt;/code>、&lt;code>redis&lt;/code>、&lt;code>opcache(可选安装，性能加强)&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/7354d8fe886cb9f0ddb5ba45e06b6cd6." alt="安装扩展.png">&lt;/p>
+&lt;h2 id="新建一个网站">新建一个网站&lt;/h2>
+&lt;h3 id="一在宝塔里新建一个网站用于运行本项目">一、在宝塔里新建一个网站用于运行本项目&lt;/h3>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/8649ff9becb474e7673a90568280bd27." alt="新建一个网站.png">&lt;/p>
+&lt;h3 id="二上传我们的项目代码">二、上传我们的项目代码&lt;/h3>
+&lt;p>请选择xxx_build.tar.gz压缩包。
+⚠️一定要选择带build字样的包，才有依赖！
+独角数卡发行版本下载地址：&lt;a href="https://github.com/assimon/dujiaoka/releases">独角数卡各发行版本&lt;/a>&lt;/p>
+&lt;h3 id="三设置项目伪静态和运行目录">三、设置项目伪静态和运行目录&lt;/h3>
+&lt;p>解压项目代码后，我们点击网站的&lt;code>设置&lt;/code>
+设置运行目录： &lt;img src="https://r2.leshans.eu.org/2023/08/f467f7b615a5318d4577f287015a74cc." alt="设置网站运行目录.png"> 设置伪静态：
+&lt;img src="https://r2.leshans.eu.org/2023/08/f96333932694eb54bbf5e48a2560e66f." alt="伪静态.png">&lt;/p>
+&lt;h2 id="开始安装">开始安装&lt;/h2>
+&lt;h3 id="一访问你的网站域名进入安装流程">一、访问你的网站域名，进入安装流程&lt;/h3>
+&lt;h3 id="二按实际情况填写网站配置信息">二、按实际情况填写网站配置信息&lt;/h3>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/30a7266885d4d8013a6a4a9d54cd66bf." alt="安装页面">&lt;/p>
+&lt;h2 id="配置守护进程">配置守护进程&lt;/h2>
+&lt;p>注意，很多人嫌麻烦不配置这一步，那你出了问题别哔哔！⚠ ⚠ ⚠
+注意，很多人嫌麻烦不配置这一步，那你出了问题别哔哔！⚠ ⚠ ⚠
+注意，很多人嫌麻烦不配置这一步，那你出了问题别哔哔！⚠ ⚠ ⚠&lt;/p>
+&lt;p>&lt;code>堡塔应用管理器&lt;/code>是我们用来管理laravel队列进程的工具。&lt;/p>
+&lt;p>很多同学喜欢问可不可以不执行这一步。&lt;/p>
+&lt;p>现在我明确的告诉你，不可以！请按照教程来，不然可以选择不使用。🙅‍♀️&lt;/p>
+&lt;p>没有它的话你的程序执行会异常！&lt;/p>
+&lt;p>如果不喜欢使用&lt;code>堡塔应用管理器&lt;/code>，那么使用1.x版本&lt;code>supervisor&lt;/code>也是可以的，两个必须选一个！ 必选题！&lt;/p>
+&lt;h3 id="一堡塔应用管理器配置教程">一、堡塔应用管理器配置教程&lt;/h3>
+&lt;p>进入宝塔控制面板： 步骤：【软件商店】-&amp;gt;【堡塔应用管理器设置】-&amp;gt;【添加应用】 如图： &lt;img src="https://r2.leshans.eu.org/2023/08/e83930603e2cf3ad2f5a5f47e3d346c2." alt="守护进程配置">&lt;/p>
+&lt;p>名称：随意，如dujiao
+应用环境: 选择php7.4
+启动文件: 网站根目录 + &lt;code>/artisan&lt;/code>
+执行目录: 网站根目录
+启动参数: &lt;code> queue:work&lt;/code>&lt;/p>
+&lt;p>保存即可!&lt;/p>
+&lt;p>如果遇到没有自己的php版本怎么办？或者系统有多个php版本，但是应用环境没有自己想要的那个php版本怎么办？&lt;/p>
+&lt;p>请看下一步新增应用环境&lt;/p>
+&lt;h4 id="新增应用环境">新增应用环境&lt;/h4>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/f16f93e99135622c62d6574b1a967e4d." alt="新增应用环境">&lt;/p>
+&lt;p>环境名称可以随便填。&lt;/p>
+&lt;p>启动文件一般是 &lt;code>/www/server/php/72/bin/php&lt;/code>&lt;/p>
+&lt;p>⚠️注意哦，我这里是72就是php7.2，你可能是73或者74。按照自己来，我这里只是举例！&lt;/p>
+&lt;h3 id="二supervisor配置教程">二、supervisor配置教程&lt;/h3>
+&lt;p>步骤：【软件商店】-&amp;gt;【Supervisor设置】-&amp;gt;【添加守护进程】 如图： &lt;img src="https://r2.leshans.eu.org/2023/08/d87497f07bf1ddd37920e1d4aab00027." alt="守护进程配置">&lt;/p>
+&lt;p>命令参考：&lt;/p>
+&lt;pre tabindex="0">&lt;code>/www/server/php/74/bin/php /www/wwwroot/dujiaoka/artisan queue:work
+&lt;/code>&lt;/pre>&lt;p>名称：随意填写
+启动用户：选择www
+运行目录：选择程序根目录
+启动命令：/www/server/php/你的php版本/bin/php /www/wwwroot/你的网站根目录/artisan queue:work&lt;/p>
+&lt;p>请注意你自己的php版本和网站根目录。不要瞎抄照着我的写？ 注意命令之间的空格。&lt;/p></description></item><item><title>好用免费开源同步工具Syncthing安装教程</title><link>https://jimugou.com/post/044/</link><pubDate>Fri, 11 Aug 2023 15:04:25 +0800</pubDate><guid>https://jimugou.com/post/044/</guid><description>&lt;h2 id="1特点">1.特点&lt;/h2>
 &lt;p>&lt;code>Syncthing&lt;/code> 是一个连续的文件同步程序。它可以在两台或更多的计算机之间同步文件。&lt;/p>
 &lt;p>总结下面几个特点：&lt;/p>
 &lt;ul>
@@ -2833,160 +2910,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/cfca9b2634f0d2df8bd77d8931beea80.webp" alt="">&lt;/p>
 &lt;p>等待导入完毕后会自动分配一个二级域名给你,但是这个被墙了,所以我们要自定义域名,先点击刚刚导入的项目,选择&lt;code>Setting&lt;/code>s,然后选择&lt;code>Domains&lt;/code>,在输入框中输入自己的域名,然后按照提示在域名服务商中添加解析即可.&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/9044c6ec41099a8179ec2e83a4c690e8.webp" alt="">&lt;/p>
-&lt;p>这样子我们就完成博客在Vercel的部署了.🎉&lt;/p></description></item><item><title>docker容器常用命令</title><link>https://jimugou.com/post/025/</link><pubDate>Mon, 31 Jul 2023 10:34:39 +0800</pubDate><guid>https://jimugou.com/post/025/</guid><description>&lt;h2 id="一docker-常用基础命令总结">一、docker 常用基础命令总结&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-24">24&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-25">25&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--启动docker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl start docker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--停止dokcer
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl stop docker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--查看docker状态
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl status docker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--重启docker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl restart docker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--设置docker 开机自启
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl &lt;span style="color:#007020">enable&lt;/span> docker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--查看docker 版本
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker version
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--查看docker 镜像
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker images
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--查看docker 运行列表
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker ps
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--查看docker （运行、停止）
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker ps -aq
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--删除容器
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker rm -f 容器ID/容器名称&lt;span style="color:#666">(&lt;/span>CONTAINER ID/NAMES&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-- 删除多个容器（空格隔开）
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker rm -f 容器ID/容器名称 容器ID/容器名称 ...
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--删除全部容器
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker rm -f &lt;span style="color:#007020;font-weight:bold">$(&lt;/span>docker ps -aq&lt;span style="color:#007020;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="二停止一个正在运行的容器">二、停止一个正在运行的容器&lt;/h2>
-&lt;ol>
-&lt;li>
-&lt;p>&lt;code>docker stop&lt;/code> 容器ID或容器名&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>docker stop -t=60&lt;/code> 容器ID或容器名 (参数 -t：关闭容器的限时)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>docker kill&lt;/code> 容器ID或容器名 :直接关闭容器&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;blockquote>
-&lt;p>stop和kill的区别:stop给与一定的关闭时间，kill直接关闭容器&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="三重启一个容器">三、重启一个容器&lt;/h2>
-&lt;ol>
-&lt;li>
-&lt;p>&lt;code>docker ps&lt;/code> 查看正在运行的容器信息&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>docker restart&lt;/code> 容器ID或容器名&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;h2 id="四工作中常用docker命令">四、工作中常用docker命令&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6">6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7">7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8">8&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>--查看docker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker ps
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--进入容器
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker &lt;span style="color:#007020">exec&lt;/span> -it 容器ID/容器名称&lt;span style="color:#666">(&lt;/span>CONTAINER ID/NAMES&lt;span style="color:#666">)&lt;/span> /bin/bash
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker &lt;span style="color:#007020">exec&lt;/span> -it 容器ID/容器名称&lt;span style="color:#666">(&lt;/span>CONTAINER ID/NAMES&lt;span style="color:#666">)&lt;/span> bash
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--例如
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker &lt;span style="color:#007020">exec&lt;/span> -it 56f0b18af626 /bin/bash
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker &lt;span style="color:#007020">exec&lt;/span> -it postgres10.7 bash
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="五设置搭建好容器开机自启">五、设置搭建好容器开机自启&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker ps -qa
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker update --restart&lt;span style="color:#666">=&lt;/span>always 容器ID/容器名
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker update --restart&lt;span style="color:#666">=&lt;/span>always 56f0b18af626
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="六开启docker-容器端口号">六、开启docker 容器端口号&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-15">15&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>--启动firewalld
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl status firewalld.service
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl start firewalld.service
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--开放端口号
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>firewall-cmd --zone&lt;span style="color:#666">=&lt;/span>public --add-port&lt;span style="color:#666">=&lt;/span>5432/tcp --permanent &lt;span style="color:#666">(&lt;/span>permanent永久生效，没有此参数重启后失效&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--更新防火墙策略
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>firewall-cmd --reload
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--查看开放端口
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>firewall-cmd --zone&lt;span style="color:#666">=&lt;/span>public --list-ports
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--查看5432
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>firewall-cmd --zone&lt;span style="color:#666">=&lt;/span> public --query-port&lt;span style="color:#666">=&lt;/span>5432/tcp
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--删除端口
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>firewall-cmd --zone&lt;span style="color:#666">=&lt;/span>public --remove-port&lt;span style="color:#666">=&lt;/span>5432/tcp --permanent
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--注：每次更改firewall规则后需重新加载（firewall-cmd --reload）
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;p>这样子我们就完成博客在Vercel的部署了.🎉&lt;/p></description></item></channel></rss>
