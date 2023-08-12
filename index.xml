@@ -307,7 +307,9 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl start syncthing
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>独角数卡发卡宝塔安装教程</title><link>https://jimugou.com/post/045/</link><pubDate>Sat, 12 Aug 2023 01:01:01 +0800</pubDate><guid>https://jimugou.com/post/045/</guid><description>&lt;p>独角数卡发卡宝塔安装教程详细记录(转载于github)&lt;/p>
+&lt;/div>&lt;h2 id="syncthing-tray-简单小巧的文件同步工具">Syncthing Tray 简单小巧的文件同步工具&lt;/h2>
+&lt;p>点击下载:&lt;/p>
+&lt;p>&lt;a href="https://github.com/Martchus/syncthingtray/releases/download/v1.4.4/syncthingtray-1.4.4-x86_64-w64-mingw32.exe.zip">Syncthing Tray&lt;/a>&lt;/p></description></item><item><title>独角数卡发卡宝塔安装教程</title><link>https://jimugou.com/post/045/</link><pubDate>Sat, 12 Aug 2023 01:01:01 +0800</pubDate><guid>https://jimugou.com/post/045/</guid><description>&lt;p>独角数卡发卡宝塔安装教程详细记录(转载于github)&lt;/p>
 &lt;h2 id="前景概要">前景概要&lt;/h2>
 &lt;pre tabindex="0">&lt;code>⚠️正式上线后一定要将.env配置里面的APP_DEBUG设置为false⚠️`
 `⚠️正式上线后一定要将.env配置里面的APP_DEBUG设置为false⚠️`
