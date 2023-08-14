@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 14 Aug 2023 21:23:24 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>测试</title><link>https://jimugou.com/post/051/</link><pubDate>Mon, 14 Aug 2023 21:23:24 +0800</pubDate><guid>https://jimugou.com/post/051/</guid><description/></item><item><title>1Panel 是新一代的 Linux 服务器运维管理面板</title><link>https://jimugou.com/post/050/</link><pubDate>Mon, 14 Aug 2023 12:27:00 +0800</pubDate><guid>https://jimugou.com/post/050/</guid><description>&lt;h1 id="在线安装">在线安装&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 14 Aug 2023 12:27:00 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>1Panel 是新一代的 Linux 服务器运维管理面板</title><link>https://jimugou.com/post/050/</link><pubDate>Mon, 14 Aug 2023 12:27:00 +0800</pubDate><guid>https://jimugou.com/post/050/</guid><description>&lt;h1 id="在线安装">在线安装&lt;/h1>
 &lt;h2 id="1-环境要求">1 环境要求&lt;/h2>
 &lt;p>&lt;strong>安装前请确保您的系统符合安装条件：&lt;/strong>&lt;/p>
 &lt;ul>
@@ -1683,4 +1683,56 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;h2 id="nothankyoucom">&lt;a href="mailto:no@thankyou.com">no@thankyou.com&lt;/a>&lt;/h2>
 &lt;p>而这个莫名其妙又有些好笑的账户，基本上就是替代上面的命令行，只需要登录时输入，密码随意，就能跟着向导创建本地账户了。&lt;/p>
 &lt;p>简直…太好用。&lt;/p>
-&lt;p>微软你说你是不是深井冰。&lt;/p></description></item></channel></rss>
+&lt;p>微软你说你是不是深井冰。&lt;/p></description></item><item><title>目前最简单、最安全、最稳定的专属节点搭建方法</title><link>https://jimugou.com/post/030/</link><pubDate>Sat, 05 Aug 2023 00:19:04 +0800</pubDate><guid>https://jimugou.com/post/030/</guid><description>&lt;style>
+.meta-media {
+position: relative;
+margin-bottom: 30px;
+display: flex;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.video {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;div class="meta-media">
+&lt;iframe src="https://www.youtube.com/embed/SpxTFes1B8U" frameborder="no" scrolling="yes"
+allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
+&lt;/iframe>
+&lt;/div>
+&lt;h2 id="安装x-ui">安装X-UI&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash &amp;lt;&lt;span style="color:#666">(&lt;/span>curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/956bf85bbac978d56c0e319c5fac2d6db7df9564/install.sh&lt;span style="color:#666">)&lt;/span> 0.3.4.4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="各平台客户端">各平台客户端&lt;/h2>
+&lt;p>Windows（v2rayN）：&lt;a href="https://github.com/2dust/v2rayN/releases/tag/6.23">https://github.com/2dust/v2rayN/releases/tag/6.23&lt;/a>&lt;/p>
+&lt;p>Android（v2rayNG）：&lt;a href="https://github.com/2dust/v2rayNG/releases/tag/1.8.5">https://github.com/2dust/v2rayNG/releases/tag/1.8.5&lt;/a>&lt;/p>
+&lt;p>IOS（shadowrocket）：&lt;a href="https://apps.apple.com/app/shadowrocket/id932747118">https://apps.apple.com/app/shadowrocket/id932747118&lt;/a>&lt;/p>
+&lt;h2 id="搭建vision节点申请证书">搭建vision节点申请证书&lt;/h2>
+&lt;p>#安装证书工具：&lt;/p>
+&lt;p>&lt;code>curl https://get.acme.sh | sh; apt install socat -y || yum install socat -y; ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt&lt;/code>&lt;/p>
+&lt;p>#三种方式任选其中一种，申请失败则更换方式&lt;/p>
+&lt;p>#申请证书方式1：&lt;/p>
+&lt;p>&lt;code>~/.acme.sh/acme.sh --issue -d 你的域名 --standalone -k ec-256 --force --insecure&lt;/code>&lt;/p>
+&lt;p>#申请证书方式2：&lt;/p>
+&lt;p>&lt;code>~/.acme.sh/acme.sh --register-account -m &amp;quot;${RANDOM}@chacuo.net&amp;quot; --server buypass --force --insecure &amp;amp;&amp;amp; ~/.acme.sh/acme.sh --issue -d 你的域名 --standalone -k ec-256 --force --insecure --server buypass&lt;/code>&lt;/p>
+&lt;p>#申请证书方式3：&lt;/p>
+&lt;p>&lt;code>~/.acme.sh/acme.sh --register-account -m &amp;quot;${RANDOM}@chacuo.net&amp;quot; --server zerossl --force --insecure &amp;amp;&amp;amp; ~/.acme.sh/acme.sh --issue -d 你的域名 --standalone -k ec-256 --force --insecure --server zerossl&lt;/code>&lt;/p>
+&lt;p>#安装证书：&lt;/p>
+&lt;p>&lt;code>~/.acme.sh/acme.sh --install-cert -d 你的域名 --ecc --key-file /etc/x-ui/server.key --fullchain-file /etc/x-ui/server.crt&lt;/code>&lt;/p>
+&lt;h2 id="reality寻找适合的目标网站">Reality寻找适合的目标网站&lt;/h2>
+&lt;p>查询ASN：&lt;a href="https://tools.ipip.net/as.php">https://tools.ipip.net/as.php&lt;/a>&lt;/p>
+&lt;p>寻找目标：&lt;a href="https://fofa.info/">https://fofa.info&lt;/a>&lt;/p>
+&lt;p>&lt;code>asn==&amp;quot;25820&amp;quot; &amp;amp;&amp;amp; country==&amp;quot;US&amp;quot; &amp;amp;&amp;amp; port==&amp;quot;443&amp;quot; &amp;amp;&amp;amp; cert!=&amp;quot;Let's Encrypt&amp;quot; &amp;amp;&amp;amp; cert.issuer!=&amp;quot;ZeroSSL&amp;quot; &amp;amp;&amp;amp; status_code=&amp;quot;200&amp;quot;&lt;/code>&lt;/p>
+&lt;h3 id="检测端口是否被封">检测端口是否被封&lt;/h3>
+&lt;p>&lt;a href="https://tcp.ping.pe/">https://tcp.ping.pe/&lt;/a>&lt;/p></description></item></channel></rss>
