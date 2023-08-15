@@ -101,9 +101,6 @@
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-4">4&lt;/a>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-5">5&lt;/a>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-6">6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-7">7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-8">8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-9">9&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema_max_table_instances&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span>
@@ -112,9 +109,6 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">table_open_cache&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">64&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_chunk_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">query_cache_size&lt;/span>&lt;span style="color:#666">=&lt;/span>16M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">tmp_table_size&lt;/span>&lt;span style="color:#666">=&lt;/span>18M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">key_buffer_size&lt;/span>&lt;span style="color:#666">=&lt;/span>32m
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>各参数对应的意义为&lt;/p>
