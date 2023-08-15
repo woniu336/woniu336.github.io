@@ -226,8 +226,31 @@ SECRET_KEY_BASE=填刚刚生成的那个密钥
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>脚本展示图&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/6b80bc27b5e17a89d65e68115a359dea.webp" alt="Pasted image 20230813220236">&lt;/p>
+&lt;/div>&lt;p>根目录执行&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nano .bashrc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在内容最下方添加这行数据，定义k按键调用&lt;code>kejilion.sh&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">alias&lt;/span> &lt;span style="color:#bb60d5">k&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#39;curl -sS -O https://kejilion.pro/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/4f4f7aea12ec40ecab2446aad75434fb.webp" alt="Pasted image 20230815141922">&lt;/p>
+&lt;p>退出nano编辑器, &lt;code>ctrl+x&lt;/code> &lt;code> y&lt;/code>  回车&lt;/p>
+&lt;p>更新下文件&lt;/p>
+&lt;pre tabindex="0">&lt;code>source ~/.bashrc
+&lt;/code>&lt;/pre>&lt;p>好了，尝试k键召唤科技lion一键脚本工具吧！&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/968a3bc2ead5dd1e347207379deed93e.webp" alt="Pasted image 20230815142106">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/478388c2efcb07b65699946a1a730b9c.webp" alt="Pasted image 20230813220236">&lt;/p>
 &lt;p>目前只支持&lt;code>Ubuntu&lt;/code>和&lt;code>Debian&lt;/code>系统，暂不支持其它系统！&lt;/p>
 &lt;p>此脚本目前比较基础，会不断进化，整合大家常用的脚本。方便使用。&lt;/p>
 &lt;p>&lt;code>LDNMP&lt;/code>属于原创内容，&lt;code>建站&lt;/code>更方便。&lt;/p>
