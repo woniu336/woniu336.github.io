@@ -1,4 +1,158 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 15 Aug 2023 03:29:47 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Umami替代品，Plausible网站流量统计工具</title><link>https://jimugou.com/post/051/</link><pubDate>Tue, 15 Aug 2023 03:29:47 +0800</pubDate><guid>https://jimugou.com/post/051/</guid><description>&lt;p>这一期，来介绍另一个流量统计的项目——Plausible。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 15 Aug 2023 15:17:31 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>docker部署mysql并修改其占用内存大小</title><link>https://jimugou.com/post/052/</link><pubDate>Tue, 15 Aug 2023 15:17:31 +0800</pubDate><guid>https://jimugou.com/post/052/</guid><description>&lt;p>因为自己部署服务内存比较小，而mysql在docker初始化就占500M，所以可优化其占用内存大小&lt;/p>
+&lt;h3 id="一安装mysql">一.安装mysql&lt;/h3>
+&lt;p>1.下载好镜像&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker pull mysql:8.0.18
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>2.创建&lt;code>MySQL&lt;/code>容器&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run -id --name mysql -p 3306:3306 -e &lt;span style="color:#bb60d5">MYSQL_ROOT_PASSWORD&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">123456&lt;/span> mysql:8.0.18
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>3.查看安装情况&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker ps -l
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="二修改mysql占用内存大小">二.修改mysql占用内存大小&lt;/h3>
+&lt;p>因为自己部署服务内存比较小，而mysql在docker初始化就占500M，所以可优化其占用内存大小&lt;/p>
+&lt;p>1.查看运行内存&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>root@ ~&lt;span style="color:#666">]&lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># docker stats&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>CONTAINER ID NAME CPU % MEM USAGE / LIMIT MEM % NET I/O BLOCK I/O PIDS
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>a28d702be74a mysql 0.34% 400.49MiB / 1.694GiB 24.33% 0B / 0B 19.3MB / 14.1MB &lt;span style="color:#40a070">38&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>c8adbf02c7a5 kafka 0.30% 435.7MiB / 1.694GiB 25.11% 1.77MB / 2.93MB 130MB / 86kB &lt;span style="color:#40a070">65&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>92187cc1f68e zookeeper 0.07% 89.78MiB / 1.694GiB 5.18% 2.93MB / 1.77MB 99.5MB / 127kB &lt;span style="color:#40a070">19&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p> 
+ 
+ 2.进入mysql容器终端&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-perl" data-lang="perl">&lt;span style="display:flex;">&lt;span>docker &lt;span style="color:#007020">exec&lt;/span> &lt;span style="color:#666">-&lt;/span>it mysql bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>3.切换进入/etc/mysql/conf.d 目录&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cobol" data-lang="cobol">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"> cd /e&lt;/span>&lt;span style="color:#bb60d5">tc&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">mysql&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">conf&lt;/span>.&lt;span style="color:#bb60d5">d&lt;/span>&lt;span style="">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>4.我们需要进入容器当中进行修改容器里面的配置文件，可能有的服务器是没有安装vim的，所以我们没有的需要安装的&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-get install vim
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>5.docker进入mysql容器内，进入/etc/mysql/conf.d 目录执行 vim docker.cnf&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-undefined" data-lang="undefined">vim docker.cnf
+&lt;/code>&lt;/pre>&lt;p>6.在对应文件后面添加下面的参数&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-6">6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-7">7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-8">8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-9">9&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema_max_table_instances&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">table_definition_cache&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema&lt;/span>&lt;span style="color:#666">=&lt;/span>off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">table_open_cache&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">64&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_chunk_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">query_cache_size&lt;/span>&lt;span style="color:#666">=&lt;/span>16M
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">tmp_table_size&lt;/span>&lt;span style="color:#666">=&lt;/span>18M
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">key_buffer_size&lt;/span>&lt;span style="color:#666">=&lt;/span>32m
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>各参数对应的意义为&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-6">6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-7">7&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>mysqld&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema_max_table_instances&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">table_definition_cache&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span> &lt;span style="color:#60a0b0;font-style:italic">#缓存&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema&lt;/span>&lt;span style="color:#666">=&lt;/span>off &lt;span style="color:#60a0b0;font-style:italic">#用于监控MySQL server在一个较低级别的运行过程中的资源消耗、资源东西&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">table_open_cache&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">64&lt;/span> &lt;span style="color:#60a0b0;font-style:italic">#打开表的缓存&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_chunk_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M &lt;span style="color:#60a0b0;font-style:italic">#InnoDB缓冲池大小调整操作的块大小&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M &lt;span style="color:#60a0b0;font-style:italic">#InnoDB 存储引擎的表数据和索引数据的最大内存缓冲区大小&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>7.退出&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-php" data-lang="php">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">exit&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>8.重启mysql容器&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cobol" data-lang="cobol">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">docker&lt;/span> &lt;span style="color:#007020;font-weight:bold">stop&lt;/span> &lt;span style="color:#bb60d5">mysql&lt;/span>&lt;span style="">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="">&lt;/span>&lt;span style="color:#60a0b0;font-style:italic">docker&lt;/span> &lt;span style="color:#007020;font-weight:bold">start&lt;/span> &lt;span style="color:#bb60d5">mysql&lt;/span>&lt;span style="">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>9.观察修改后的内存情况&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker stats
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/8823a3c3155b5abcffa69fc03c6ffcbb.webp" alt="Pasted image 20230815152734">&lt;/p></description></item><item><title>Umami替代品，Plausible网站流量统计工具</title><link>https://jimugou.com/post/051/</link><pubDate>Tue, 15 Aug 2023 03:29:47 +0800</pubDate><guid>https://jimugou.com/post/051/</guid><description>&lt;p>这一期，来介绍另一个流量统计的项目——Plausible。&lt;/p>
 &lt;blockquote>
 &lt;p>Plausible Analytics 是一个简单、开源、轻量级（&amp;lt; 1 KB）且注重隐私的 Google Analytics 替代品。Plausible 被超过10,000个付费订阅用户信任，用于提供他们网站和业务洞察力。我们完全独立、自筹资金并自给自足。&lt;/p>
 &lt;/blockquote>
@@ -1858,14 +2012,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;p>比如你想搜索原神相关的内容，聊天窗口直接输入原神，就搜索了所有原神相关的内容，下面的图标可以过滤类型，聊天图标就是群组和频道，然后点击群组就只过滤群组，然后直接找到第一个群组：原神 提瓦特大陆加入群组。&lt;/p>
 &lt;h3 id="加入群组">加入群组&lt;/h3>
 &lt;p>你可以把 机器人加入群组，来自动回复和支持chatgpt在群内聊天。&lt;/p>
-&lt;p>我这里教你创建一个群组加入机器人来回复消息。&lt;/p></description></item><item><title>绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户</title><link>https://jimugou.com/post/031/</link><pubDate>Sat, 05 Aug 2023 11:04:51 +0800</pubDate><guid>https://jimugou.com/post/031/</guid><description>&lt;p>感谢 @WM 的推荐，来自 X 的用户 @StarIight✨ 分享了一个 Featured/Bug：只需要在安装 Windows 11 时，使用用户名 &lt;a href="mailto:no@thankyou.com">no@thankyou.com&lt;/a> 登录，即可跳过联网账户，轻松创建本地账。@Appinn&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/d9e3cb6fa7ef31f63892d6960cddaac6.webp" alt="">&lt;/p>
-&lt;p>这就…当青小蛙看到这个的时候，只能卧槽了…&lt;/p>
-&lt;p>就在前几天，青小蛙还在论坛分享了这个：《不联网，无网络安装 Windows 11》&lt;/p>
-&lt;p>在 Windows 11 的最新版本 22H2 中，微软干掉了“我没有 Internet 连接”按钮，没登陆不让你装系统。&lt;/p>
-&lt;p>有些电脑网卡没有驱动就直接卡在这里了。 此时你可以按下 Shift+F10 打开命令提示符，输入 &lt;code>oobe\BypassNRO.cmd&lt;/code> 即可重启进入带有跳过按钮的 OOBE。&lt;/p>
-&lt;hr>
-&lt;h2 id="nothankyoucom">&lt;a href="mailto:no@thankyou.com">no@thankyou.com&lt;/a>&lt;/h2>
-&lt;p>而这个莫名其妙又有些好笑的账户，基本上就是替代上面的命令行，只需要登录时输入，密码随意，就能跟着向导创建本地账户了。&lt;/p>
-&lt;p>简直…太好用。&lt;/p>
-&lt;p>微软你说你是不是深井冰。&lt;/p></description></item></channel></rss>
+&lt;p>我这里教你创建一个群组加入机器人来回复消息。&lt;/p></description></item></channel></rss>
