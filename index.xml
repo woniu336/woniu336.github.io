@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 16 Aug 2023 11:47:29 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker搭建Gogs一个轻量 Git 服务端</title><link>https://jimugou.com/post/055/</link><pubDate>Wed, 16 Aug 2023 11:47:29 +0800</pubDate><guid>https://jimugou.com/post/055/</guid><description>&lt;h2 id="为何选择-gogs-">为何选择 Gogs ？&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 16 Aug 2023 13:29:51 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>发卡网轻松装！独角数卡1分钟安装攻略</title><link>https://jimugou.com/post/056/</link><pubDate>Wed, 16 Aug 2023 13:29:51 +0800</pubDate><guid>https://jimugou.com/post/056/</guid><description>&lt;p>独角数卡是一款精巧的卡密销售系统，具备强大功能。&lt;/p>
+&lt;p>您可按照作者提供的文档，依赖 mysql 和 redis 进行顺利安装。&lt;/p>
+&lt;p>或者，您也可以采用本文的Docker镜像，比官方推荐更优。&lt;/p>
+&lt;p>这个镜像集成了所有组件，一分钟内即可搭建完毕。使您迅速体验到这一卓越系统的便捷和高效。&lt;/p>
+&lt;p>项目地址: &lt;a href="https://github.com/assimon/dujiaoka">https://github.com/assimon/dujiaoka&lt;/a>&lt;/p>
+&lt;h2 id="步骤-1-安装-docker">步骤 1 安装 docker&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -fsSL https://get.docker.com | sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -L &lt;span style="color:#4070a0">&amp;#34;https://github.com/docker/compose/releases/latest/download/docker-compose-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -s&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -m&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod +x /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="步骤2-安装部署独角数卡">步骤2 安装部署独角数卡&lt;/h2>
+&lt;p>事前你准备好一个域名，abc.com 这个域名设置好指向 你VPS的IP地址&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash &amp;lt;&lt;span style="color:#666">(&lt;/span>curl -L -s https://raw.githubusercontent.com/woniu336/open_shell/main/dujiao.sh&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>提示输入域名 , 店铺名字随意&lt;/p>
+&lt;ol>
+&lt;li>开通Https[Y/N]N 选择N&lt;/li>
+&lt;/ol>
+&lt;p>安装好之后就会显示一些安装的信息&lt;/p>
+&lt;h2 id="网页安装">网页安装&lt;/h2>
+&lt;p>&lt;code>注意端口号是: 3080&lt;/code>&lt;/p>
+&lt;p>打开域名:3080 ,例如 &lt;a href="http://baidu.com:3080">http://baidu.com:3080&lt;/a>&lt;/p>
+&lt;p>后面可以使用&lt;code>反向代理&lt;/code>方式去掉3080端口&lt;/p>
+&lt;p>访问域名开始安装：&lt;/p>
+&lt;ul>
+&lt;li>将&lt;code>mysql&lt;/code>的地址改为&lt;code>db&lt;/code>&lt;/li>
+&lt;li>将&lt;code>mysql&lt;/code>的用户名改为&lt;code>dujiaoka&lt;/code>&lt;/li>
+&lt;li>将&lt;code>mysql&lt;/code>密码改为终端显示的密码&lt;/li>
+&lt;li>将&lt;code>redis&lt;/code>的地址改为&lt;code>redis&lt;/code>&lt;/li>
+&lt;li>填写网站名称&lt;/li>
+&lt;li>网站 url 填写完整域名地址，例如&lt;code>http://shop.ioiox.com&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>点击安装，并成功安装，&lt;/p>
+&lt;p>然后在域名后面加上 &lt;code>/admin&lt;/code>，账户密码都是&lt;code>admin&lt;/code> 就可以正常登录后台了！&lt;/p>
+&lt;p>记得改一下用户名和密码！&lt;/p>
+&lt;h2 id="关于https的问题">关于https的问题&lt;/h2>
+&lt;p>后台登录出现0err或者其他登录异常问题，大概率是开启了https而后台没有开启，把下面的false改为true即可&lt;/p>
+&lt;p>修改配置文件:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vim /root/dujiao/env.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>把 &lt;code>ADMIN_HTTPS=false&lt;/code> 改成 &lt;code>ADMIN_HTTPS=true&lt;/code>&lt;/p>
+&lt;p>&lt;code>APP_URL&lt;/code> 域名也改一下(https)&lt;/p>
+&lt;p>重启docker&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>systemctl restart docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>设置docker 开机自启&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>systemctl &lt;span style="color:#007020">enable&lt;/span> docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>⚠️正式上线后一定要将env.conf配置里面的&lt;code>APP_DEBUG&lt;/code>设置为&lt;code>false&lt;/code>⚠️&lt;/p></description></item><item><title>Docker搭建Gogs一个轻量 Git 服务端</title><link>https://jimugou.com/post/055/</link><pubDate>Wed, 16 Aug 2023 11:47:29 +0800</pubDate><guid>https://jimugou.com/post/055/</guid><description>&lt;h2 id="为何选择-gogs-">为何选择 Gogs ？&lt;/h2>
 &lt;p>我选择了 &lt;a href="https://gogs.io/">Gogs&lt;/a> 来讲解，主要是出于以下几个原因：&lt;/p>
 &lt;ol>
 &lt;li>Gogs 是一个轻量化的 Git 服务，对系统占用较小。&lt;/li>
@@ -2082,64 +2166,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;p>版本1.0体现了我们致力于在最具挑战性的环境中使n8n变得可行的承诺。我们推出了单点登录（SSO）等功能，以便顺利地与您现有的身份验证系统集成。您现在可以在多个环境中同步工作流，并使用全局变量、日志流式处理和高级执行过滤器来增强您的工作流和简化自动化过程。&lt;/p>
 &lt;p>请注意，版本1.0引入了一些重大变化。我们准备了完整的迁移指南，确保您现有工作流的顺利过渡。 在庆祝这个里程碑的同时，我们向活跃的n8n社区表达了诚挚的感谢。您持续的支持和深思熟虑的反馈对于塑造今天的n8n有着重大的作用。&lt;/p>
 &lt;p>拥抱自动化的未来。自动化愉快！&lt;/p>
-&lt;p>n8n团队&lt;/p></description></item><item><title>Linux VPS服务器SSH端口一键修改脚本</title><link>https://jimugou.com/post/035/</link><pubDate>Tue, 08 Aug 2023 14:00:20 +0800</pubDate><guid>https://jimugou.com/post/035/</guid><description>&lt;p>说明：我们的很多&lt;code>VPS&lt;/code>服务器，默认的端口都是&lt;code>22&lt;/code>，所以一直会被人扫描爆破，很容易会出现问题，所以我们需要通过修改端口来尽可能减少这种事情发生，之前发过手动修改教程，但对于很多小白或者很懒的人来说，更喜欢一键脚本就能完成的方法，这里就整了个&lt;code>SSH&lt;/code>端口一键修改脚本。从&lt;code>OneinStack&lt;/code>一键安装包上扒下来的。&lt;/p>
-&lt;h2 id="方法">方法&lt;/h2>
-&lt;p>系统要求：支持&lt;code>Debian&lt;/code>、&lt;code>Ubuntu&lt;/code>、&lt;code>CentOS&lt;/code>系统。&lt;br>
-运行以下命令：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://raw.githubusercontent.com/woniu336/open_shell/main/sshport.sh&lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bash sshport.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>输入端口确认。再打开防火墙端口：&lt;/p>
-&lt;p>&lt;code>#如果防火墙使用的iptables（Centos 6），修改端口为8080&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>iptables -I INPUT -p tcp --dport &lt;span style="color:#40a070">8080&lt;/span> -j ACCEPT
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service iptables save
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service iptables restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;code>#如果使用的是firewall（CentOS 7）&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>firewall-cmd --zone&lt;span style="color:#666">=&lt;/span>public --add-port&lt;span style="color:#666">=&lt;/span>8080/tcp --permanent
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>firewall-cmd --reload
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>最后重启&lt;code>ssh&lt;/code>生效：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#CentOS系统&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service sshd restart
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#Debian/Ubuntu系统&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service ssh restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>然后就可以使用新端口&lt;code>SSH&lt;/code>登录了&lt;/p></description></item></channel></rss>
+&lt;p>n8n团队&lt;/p></description></item></channel></rss>
