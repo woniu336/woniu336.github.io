@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 16 Aug 2023 13:29:51 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>发卡网轻松装！独角数卡1分钟安装攻略</title><link>https://jimugou.com/post/056/</link><pubDate>Wed, 16 Aug 2023 13:29:51 +0800</pubDate><guid>https://jimugou.com/post/056/</guid><description>&lt;p>独角数卡是一款精巧的卡密销售系统，具备强大功能。&lt;/p>
-&lt;p>您可按照作者提供的文档，依赖 mysql 和 redis 进行顺利安装。&lt;/p>
-&lt;p>或者，您也可以采用本文的Docker镜像，比官方推荐更优。&lt;/p>
+&lt;p>您可按照作者提供的文档，依赖 &lt;code>mysql&lt;/code> 和 &lt;code>redis&lt;/code> 进行顺利安装。&lt;/p>
+&lt;p>或者，您也可以采用本文的&lt;code>Docker镜像&lt;/code>，比官方推荐更优。&lt;/p>
 &lt;p>这个镜像集成了所有组件，一分钟内即可搭建完毕。使您迅速体验到这一卓越系统的便捷和高效。&lt;/p>
 &lt;p>项目地址: &lt;a href="https://github.com/assimon/dujiaoka">https://github.com/assimon/dujiaoka&lt;/a>&lt;/p>
 &lt;h2 id="步骤-1-安装-docker">步骤 1 安装 docker&lt;/h2>
@@ -21,7 +21,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="步骤2-安装部署独角数卡">步骤2 安装部署独角数卡&lt;/h2>
-&lt;p>事前你准备好一个域名，abc.com 这个域名设置好指向 你VPS的IP地址&lt;/p>
+&lt;p>事先解析好你的域名, 指向你VPS的IP地址&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
@@ -30,13 +30,14 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash &amp;lt;&lt;span style="color:#666">(&lt;/span>curl -L -s https://raw.githubusercontent.com/woniu336/open_shell/main/dujiao.sh&lt;span style="color:#666">)&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>提示输入域名 , 店铺名字随意&lt;/p>
-&lt;ol>
+&lt;/div>&lt;ol>
+&lt;li>提示输入域名: 输入解析好的域名&lt;/li>
+&lt;li>店铺名字: 随意&lt;/li>
 &lt;li>开通Https[Y/N]N 选择N&lt;/li>
 &lt;/ol>
-&lt;p>安装好之后就会显示一些安装的信息&lt;/p>
-&lt;h2 id="网页安装">网页安装&lt;/h2>
-&lt;p>&lt;code>注意端口号是: 3080&lt;/code>&lt;/p>
+&lt;p>安装好之后,终端底部会显示一些安装的信息&lt;/p>
+&lt;h2 id="步骤3-网页安装-重点">步骤3 网页安装 重点&lt;/h2>
+&lt;p>&lt;code>注意端口号&lt;/code>是: 3080&lt;/p>
 &lt;p>打开域名:3080 ,例如 &lt;a href="http://baidu.com:3080">http://baidu.com:3080&lt;/a>&lt;/p>
 &lt;p>后面可以使用&lt;code>反向代理&lt;/code>方式去掉3080端口&lt;/p>
 &lt;p>访问域名开始安装：&lt;/p>
@@ -48,8 +49,8 @@
 &lt;li>填写网站名称&lt;/li>
 &lt;li>网站 url 填写完整域名地址，例如&lt;code>http://shop.ioiox.com&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;p>点击安装，并成功安装，&lt;/p>
-&lt;p>然后在域名后面加上 &lt;code>/admin&lt;/code>，账户密码都是&lt;code>admin&lt;/code> 就可以正常登录后台了！&lt;/p>
+&lt;p>点击安装，并成功安装，登录后台:&lt;/p>
+&lt;p>在域名后面加上 &lt;code>/admin&lt;/code>，账户密码都是&lt;code>admin&lt;/code> 就可以正常登录后台了！&lt;/p>
 &lt;p>记得改一下用户名和密码！&lt;/p>
 &lt;h2 id="关于https的问题">关于https的问题&lt;/h2>
 &lt;p>后台登录出现0err或者其他登录异常问题，大概率是开启了https而后台没有开启，把下面的false改为true即可&lt;/p>
