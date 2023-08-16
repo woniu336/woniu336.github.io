@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 16 Aug 2023 00:46:03 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>手把手教你：Git分支创建与代码提交的细致流程</title><link>https://jimugou.com/post/054/</link><pubDate>Wed, 16 Aug 2023 00:46:03 +0800</pubDate><guid>https://jimugou.com/post/054/</guid><description>&lt;p>其实最基本的流程就是新建分支，在这个分支上改动代码，再提交上去，跟master分支合并。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 16 Aug 2023 11:47:29 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker搭建Gogs一个轻量 Git 服务端</title><link>https://jimugou.com/post/055/</link><pubDate>Wed, 16 Aug 2023 11:47:29 +0800</pubDate><guid>https://jimugou.com/post/055/</guid><description>&lt;h2 id="为何选择-gogs-">为何选择 Gogs ？&lt;/h2>
+&lt;p>我选择了 &lt;a href="https://gogs.io/">Gogs&lt;/a> 来讲解，主要是出于以下几个原因：&lt;/p>
+&lt;ol>
+&lt;li>Gogs 是一个轻量化的 Git 服务，对系统占用较小。&lt;/li>
+&lt;li>Gogs 的功能够用。&lt;/li>
+&lt;li>Gogs 的安装流程简便。&lt;/li>
+&lt;/ol>
+&lt;p>其中第一点最重要，因为 Gitlab 对系统配置的要求比较高，单是内存这一项就要求大于 4 GB，如果是 2 GB 内存则会直接无法运行，这个要求已经可以淘汰掉一些入门级服务器了。而 Gogs 在 NAS、树莓派、入门级服务器上都可以无压力运行，长期运行也不会影响其他服务。&lt;/p>
+&lt;p>而且我们介绍的场景也不是多人开发协作，只是个人同步笔记用，不需要过多的开发相关功能，有最基本的 Git 服务和一个便于操作的网页就足够了。&lt;/p>
+&lt;p>Gogs 的安装过程也比较简单，官方的 Docker 版本基本做到了开箱即用，连数据库都不需要额外配置，有个文件夹存放数据就可以。&lt;/p>
+&lt;h2 id="如何在图形界面中安装-docker-版-gogs">如何在图形界面中安装 Docker 版 Gogs&lt;/h2>
+&lt;p>我通常建议通过图形化界面来管理 Docker，这样能够直观看到容器的运行状态，像启动、停止、修改配置这样的操作，都能以最简单的方式完成。&lt;/p>
+&lt;p>所以先来讲讲在图像界面下如何安装 Docker 版本的 Gogs。&lt;/p>
+&lt;h3 id="了解-docker-的关键配置">了解 Docker 的关键配置&lt;/h3>
+&lt;p>我们借助 Gogs 顺便了解一下通过 Docker 跑一个服务需要做什么配置。&lt;/p>
+&lt;p>首先我们找到 Gogs 在 &lt;code>hub.docker.com&lt;/code> 中的包：&lt;a href="https://hub.docker.com/r/gogs/gogs/">Gogs - Docker Hub&lt;/a> 。&lt;/p>
+&lt;p>根据它下方的文档提示可以得知，Gogs 的必要配置很少，我们根据它的官方配置可以得知，它需要这下面两行核心代码就可以完成部署。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker pull gogs/gogs
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker run --name&lt;span style="color:#666">=&lt;/span>gogs -p 10022:22 -p 10880:3000 -v /var/gogs:/data gogs/gogs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="如何使用-gogs">如何使用 Gogs&lt;/h2>
+&lt;p>使用 Gogs 创建仓库和 Github 类似，注册账户，创建仓库……图形化界面总是容易让人理解。这里就不再赘述了。&lt;/p>
+&lt;p>不过有一点需要注意。在完成仓库创建后，我们需要通过 git clone 把仓库下载到本地。往常在 Github 中 git clone 仓库后再尝试 push 时会提示用账号密码登录，然后由服务器判别你是否有这个仓库的更多权限，允许你做进一步的操作。&lt;/p></description></item><item><title>手把手教你：Git分支创建与代码提交的细致流程</title><link>https://jimugou.com/post/054/</link><pubDate>Wed, 16 Aug 2023 00:46:03 +0800</pubDate><guid>https://jimugou.com/post/054/</guid><description>&lt;p>其实最基本的流程就是新建分支，在这个分支上改动代码，再提交上去，跟master分支合并。&lt;/p>
 &lt;h2 id="1-新建分支">1. 新建分支&lt;/h2>
 &lt;p>首先，在你新建分支之前，你应该在master分支，并且要保证你当前的是最新代码，要不然就是找死，最后提交代码就会出问题。&lt;/p>
 &lt;ol>
@@ -2113,14 +2142,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service ssh restart
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>然后就可以使用新端口&lt;code>SSH&lt;/code>登录了&lt;/p></description></item><item><title>一条命令激活 Windows 系统</title><link>https://jimugou.com/post/034/</link><pubDate>Tue, 08 Aug 2023 01:15:48 +0800</pubDate><guid>https://jimugou.com/post/034/</guid><description>&lt;h2 id="windows-激活方法">Windows 激活方法&lt;/h2>
-&lt;p>打开 命令提示符 (管理员)，复制以下命令到命令提示符并回车。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>slmgr /skms kms.v0v.bid &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> slmgr /ato
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>激活成功。&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;p>然后就可以使用新端口&lt;code>SSH&lt;/code>登录了&lt;/p></description></item></channel></rss>
