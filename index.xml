@@ -1045,7 +1045,32 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>双击打开运行&lt;code>vps.sh&lt;/code>即可自动推送文件到仓库,以后写完博客或修改博客后都需要运行一下&lt;code>vps.sh&lt;/code>,才能部署到云端&lt;/p>
-&lt;p>注意,第一次运行&lt;code>vps.sh&lt;/code>可能会出现如图这种情况,直接输入yes回车即可,如果仓库里没发现上传的文件可以再运行一次&lt;code>vps.sh&lt;/code>&lt;/p></description></item><item><title>Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘</title><link>https://jimugou.com/post/046/</link><pubDate>Sat, 12 Aug 2023 11:18:50 +0800</pubDate><guid>https://jimugou.com/post/046/</guid><description>&lt;p>实时同步网盘，其实可以选择也挺多的，OneDrive、Google Drive、Dropbox、Box.com、iCloud等都是支持自动同步备份的，只可惜这些网盘很多都是打不开的。国内的坚果云在同步这一块做得不错，但是免费的额度太少了，不能满足大量同步的需要。&lt;/p>
+&lt;p>注意,第一次运行&lt;code>vps.sh&lt;/code>可能会出现如图这种情况,直接输入yes回车即可,如果仓库里没发现上传的文件可以再运行一次&lt;code>vps.sh&lt;/code>&lt;/p>
+&lt;h3 id="5-拉取远程更改并合并">5. 拉取远程更改并合并&lt;/h3>
+&lt;ol>
+&lt;li>在运行 &lt;code>git push&lt;/code> 之前，先运行以下命令来拉取远程仓库的更改并尝试合并它们到你的本地分支：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-27-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-27-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git pull origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果出现冲突，需要解决冲突后再次提交&lt;/p>
+&lt;ol start="2">
+&lt;li>&lt;strong>强制推送：&lt;/strong> 如果你确定你的本地更改是正确的，而且你不需要保留远程仓库的更改，可以使用强制推送。但要注意，强制推送会覆盖远程分支的历史，可能会导致数据丢失。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-28-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-28-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push -f origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘</title><link>https://jimugou.com/post/046/</link><pubDate>Sat, 12 Aug 2023 11:18:50 +0800</pubDate><guid>https://jimugou.com/post/046/</guid><description>&lt;p>实时同步网盘，其实可以选择也挺多的，OneDrive、Google Drive、Dropbox、Box.com、iCloud等都是支持自动同步备份的，只可惜这些网盘很多都是打不开的。国内的坚果云在同步这一块做得不错，但是免费的额度太少了，不能满足大量同步的需要。&lt;/p>
 &lt;p>本篇文章要分享的开源免费跨平台的文件同步工具&lt;code>Syncthing&lt;/code>，可以实现实时同步备份搭建个人同步网盘的功能，试用了一下发现Syncthing完全可以替代市面上这些同步网盘。Syncthing可以运行在&lt;code>Windows&lt;/code>、&lt;code>Linux&lt;/code>、&lt;code>MacOS&lt;/code>等全平台上，而且提供了安卓手机APP，功能非常强大。&lt;/p>
 &lt;p>GitHub 项目地址：&lt;a href="https://github.com/syncthing/syncthing">https://github.com/syncthing/syncthing&lt;/a>&lt;/p>
 &lt;p>文档地址：&lt;a href="https://docs.syncthing.net/intro/getting-started.html">https://docs.syncthing.net/intro/getting-started.html&lt;/a>&lt;/p>
