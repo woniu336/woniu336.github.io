@@ -895,7 +895,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/div>&lt;p>命令后，网站根目录内生成一个 &lt;code>public&lt;/code> 文件夹，里面是静态网页文件，把这个 &lt;code>public&lt;/code>文件夹整个 push 到我们刚刚在服务器端配置的 &lt;code>hugo.git&lt;/code> 仓库里面&lt;/p>
 &lt;p>远程 git 仓库地址格式, 例如&lt;code>ip&lt;/code>是 &lt;code>8.8.8.8&lt;/code>举例&lt;/p>
 &lt;pre tabindex="0">&lt;code>git@8.8.8.8:/home/git/hugo.git
-&lt;/code>&lt;/pre>&lt;p>git@[服务器IP]:[hugo.git路径]&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>注意: 默认ssh是22 如果不是,请往下看&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-16-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-16-1">1&lt;/a>
@@ -915,13 +915,35 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如果一切顺利，那么 hugo 站点已经成功部署在云服务器上，配置好&lt;code>Nginx&lt;/code>, 访问域名即可显示&lt;/p>
-&lt;h2 id="4-自动推送脚本">4. 自动推送脚本&lt;/h2>
-&lt;p>每次都需要生成静态文件再推到服务端仓库，很麻烦，所以写一个脚本&lt;/p>
-&lt;p>网站根目录 &lt;code>Mysite&lt;/code> 下新建一个 &lt;code>vps.sh&lt;/code> 脚本文件&lt;/p>
+&lt;p>&lt;code>如果端口号不是22,比如33&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-1">1&lt;/a>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote add origin ssh://git@8.8.8.8:33/home/git/hugo.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git push -u origin master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push -u ssh://git@8.8.8.8:33/home/git/hugo.git master
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="4-自动推送脚本">4. 自动推送脚本&lt;/h2>
+&lt;p>每次都需要生成静态文件再推到服务端仓库，很麻烦，所以写一个脚本&lt;/p>
+&lt;p>网站根目录 &lt;code>Mysite&lt;/code> 下新建一个 &lt;code>vps.sh&lt;/code> 脚本文件&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-2">2&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> Mysite
@@ -931,13 +953,13 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/div>&lt;p>向其中添加内容：记得修改为你的 &lt;code>ip&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-6">6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-7">7&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-20-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-20-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-20-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-20-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-20-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-20-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-20-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-20-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-20-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-20-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-20-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-20-6">6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-20-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-20-7">7&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">#!/bin/bash
