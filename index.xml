@@ -19,7 +19,7 @@
 &lt;p>新建 &lt;code>SecretId&lt;/code>、&lt;code>SecretKey&lt;/code>、&lt;code>Bucket&lt;/code>、 &lt;code>Region&lt;/code> 四个密钥。其中 SecretId、SecretKey 为上面复制保存的，Bucket(存储桶名称)、 Region(所属地域 如:&lt;code>ap-guangzhou&lt;/code> )在 COS 中存储桶列表中获取。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>![[../附件/Pasted image 20230819194348.png]]&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/8fc672e50e662e5d15089fc9e2c1033d.webp" alt="">&lt;/p>
 &lt;h2 id="自动构建">自动构建&lt;/h2>
 &lt;p>在博客仓库根目录下新建 &lt;code>.github/workflows&lt;/code> 文件夹，新建一个 &lt;code>deploy.yml&lt;/code>（文件名随意），作用：借助 &lt;code>Github Action&lt;/code> 实现自动部署&lt;/p>
 &lt;pre tabindex="0">&lt;code>注意: 第5 38 40 行
