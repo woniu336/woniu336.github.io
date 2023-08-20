@@ -22,12 +22,12 @@
 &lt;li>对于非 Docker，需要下载并安装&lt;code>cloudflared&lt;/code>。&lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/&lt;/a>&lt;/li>
 &lt;li>对于非 Docker Windows 用户，您可以在其 Github 版本上下载 msi 安装程序：&lt;a href="https://github.com/cloudflare/cloudflared/releases/latest">https://github.com/cloudflare/cloudflared/releases/latest&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h2 id="长话短说">长话短说&lt;/h2>
+&lt;h2 id="四个步骤">四个步骤&lt;/h2>
 &lt;ol>
-&lt;li>&lt;a href="https://dash.teams.cloudflare.com/">在Cloudflare 零信任&lt;/a>上创建隧道。&lt;/li>
+&lt;li>&lt;a href="https://dash.teams.cloudflare.com/">在Cloudflare Zero Trust&lt;/a>上创建隧道。&lt;/li>
 &lt;li>获取您的隧道令牌并将其设置到您的 Uptime Kuma 实例中。&lt;/li>
-&lt;li>映射到&lt;a href="http://localhost:3001/">http://localhost:3001&lt;/a>。&lt;/li>
-&lt;li>利润。&lt;/li>
+&lt;li>将域名映射到&lt;a href="http://localhost:3001/">http://localhost:3001&lt;/a>。&lt;/li>
+&lt;li>启动。&lt;/li>
 &lt;/ol>
 &lt;h2 id="开始吧">开始吧&lt;/h2>
 &lt;p>步骤其实非常简单。然而，由于这个概念对任何人来说都是相当新的，所以详细地写出来可能会更好。&lt;/p>
