@@ -1,4 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 19 Aug 2023 19:28:45 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Actions自动构建Hugo并同步到腾讯COS</title><link>https://jimugou.com/post/058/</link><pubDate>Sat, 19 Aug 2023 19:28:45 +0800</pubDate><guid>https://jimugou.com/post/058/</guid><description>&lt;p>借助强大的 &lt;code>Github Action&lt;/code>，我们能够轻松地实现博客的自动化构建与部署，让整个流程更加优雅高效。在这个过程中，我们选用了 &lt;code>Hugo&lt;/code> 这一优秀的工具，它与 hexo 一样，都是出色的静态博客生成器。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 20 Aug 2023 13:05:54 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://jimugou.com/post/059/</link><pubDate>Sun, 20 Aug 2023 13:05:54 +0800</pubDate><guid>https://jimugou.com/post/059/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>&lt;code>Cloudflare R2&lt;/code>存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。也算是带宽联盟一员。类似于阿里云国际的OSS免费5G空间，流量收费，但是使用自定义域名套用Cloudflare的cdn就流量免费，&lt;code>Cloudflare自己的R2存储流量不收费&lt;/code>，收费的是&lt;code>存储空间&lt;/code>和&lt;code>请求次数&lt;/code>。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>免费&lt;/th>
+&lt;th>付费 - 费率&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>贮存&lt;/td>
+&lt;td>10 GB/月&lt;/td>
+&lt;td>每月 0.015 美元/GB&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>A 类操作&lt;/td>
+&lt;td>每月 100 万个请求&lt;/td>
+&lt;td>4.50 美元/百万请求&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>B 类操作&lt;/td>
+&lt;td>每月 1000 万个请求&lt;/td>
+&lt;td>0.36 美元/百万请求&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>也就是说，可以&lt;code>免费存储10G&lt;/code>的文件，每个月可以上传&lt;code>100万次&lt;/code>，&lt;code>访问1000万次&lt;/code>，假如用作图床，一般是用不到这个量级的。并且可以绑定自定义域名，套用页面规则以后可以设置浏览器缓存，这样可以减少一些请求次数并且可以防止被人刷请求次数导致一晚上过去，房子就不属于自己了。不自定义域名也是可以的，也就是说你甚至不需要拥有域名就可以拥有一个图床。&lt;/p>
+&lt;p>存储也是比较便宜的，超出10G以后，1G文件基本上每个月只要1毛人民币。当然和B2那种5刀一个月1T是没法比的，用作图床的话还有种阿里云国际的OSS的40G年付包也是比较有性价比，这里扯远了。下面详细说一下怎么白嫖R2做图床。&lt;/p>
+&lt;p>本文的图就放在R2上，只不过域名是自定义的。&lt;/p>
+&lt;h2 id="设置r2">设置R2&lt;/h2>
+&lt;h3 id="开通r2">开通R2&lt;/h3>
+&lt;p>首先当然是拥有一个Cloudflare账号，并且点击右上角的语言设置中文。&lt;/p>
+&lt;p>第一步当然是开通R2，侧边栏找到R2然后点击开通。这里可以绑定支持外币支付的卡，或者直接绑定paypal，中国区的paypal也是可以的。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/0d53d7aa084e049bf725df031e52b5ba.webp" alt="">&lt;/p>
+&lt;p>第二步是创建存储桶，可以自己选取位置，&lt;code>不建议无脑选亚太地区&lt;/code>，亚太地区虽然近但是国际访问速度受限，我这里选择&lt;code>北美西部&lt;/code>。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/548bc9e55db5ac3a49113996ab79196c.webp" alt="">&lt;/p>
+&lt;p>第三步是创建完存储桶后，点进就到&lt;code>存储桶&lt;/code>的设置，然后找到【R2.dev 子域】，将其开启，下图是我已经开启的状态。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/050f7957c03da2dbba3f384a11057386.webp" alt="">&lt;/p>
+&lt;p>大家可以认为你的存储同并没有域名绑定，开启这个子域名以后，cf就分配了一个域名给你的存储桶，如果你绑定了&lt;code>自定义域名&lt;/code>到存储桶的话，可以把这个开关给关了，可以少一些问题。如果你没有购买域名没法自定义域名，一直用cf给你的这个域名也是可以的。自定义域名的好处是不限速，而且可以享受cloudflare上面的一系列缓存和自定义限速等设置，防止被刷访问次数。&lt;/p>
+&lt;p>然后，你就可以通过cf网站上传器上传图片到&lt;code>R2&lt;/code>了，便可正常访问。&lt;/p>
+&lt;h2 id="开通api">开通API&lt;/h2>
+&lt;p>回到R2的概述界面，点击右上角的 &lt;code>管理 R2 API 令牌&lt;/code>，然后点击右上角的&lt;code>创建api令牌&lt;/code>，如果要使用&lt;code>picgo&lt;/code>进行图片的上传，请记得在权限选项把对象读和写打开，在ttl选项可以设置api令牌的有效期，这里可以&lt;code>选择永久&lt;/code>。大概如下图所示。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/eefdb595e0f458b63b9f0c9bce9271e6.webp" alt="">&lt;/p>
+&lt;p>创建完成令牌以后请把 &lt;strong>访问密钥 ID&lt;/strong> 和 &lt;strong>机密访问密钥&lt;/strong> 收藏好，只会显示这一次，以后用的时候就找不到了，记下来以后还能用到。当然，如果没记住的话，以后再创建一个api令牌也是可以的。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/790af159211e85a796585ce38a1eeb69.webp" alt="">&lt;/p>
+&lt;h2 id="使用picgo进行上传操作">使用picgo进行上传操作&lt;/h2>
+&lt;p>PICGO项目地址：https://github.com/Molunerfinn/PicGo&lt;/p>
+&lt;p>安装好PicGo后，点击【插件设置】搜索【S3】，安装下图插件。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/54061e7c9c84f11d90526d6538f8b584.webp" alt="">&lt;/p>
+&lt;p>安装完成后，点击左侧-侧边栏的图床设置，里面多了一个AMAZON S3这个选项，进去设置。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/29e0a651a09dc9fa3412da33a4f5330e.webp" alt="">&lt;/p>
+&lt;p>应用密钥ID填写我们刚刚复制的&lt;strong>访问密钥 ID&lt;/strong>&lt;/p>
+&lt;p>应用密钥填写我们刚刚复制的&lt;strong>机密访问密钥&lt;/strong>&lt;/p>
+&lt;p>桶命就写我们存储桶的名字，这里是duangks&lt;/p>
+&lt;p>文件路径自己设置，默认也是可以的&lt;/p>
+&lt;p>地区可以不用填写，默认跳转就可以&lt;/p>
+&lt;p>自定义节点需要填写一下，在R2中点击存储桶，到存储桶的管理界面，点击设置，里面的S3 api就是需要复制的。例如&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/e544d2319a8fb8eb7758b3cee4f3f8d3.webp" alt="">&lt;/p>
+&lt;p>自定义域名需要注意一下，复制咱们开通的R2.dev 子域，然后在后面加上/你的桶名。&lt;/p>
+&lt;p>例如，我开通的R2.dev 子域是 &lt;a href="https://pu1-082231df54234f2b90d1bd5432310a4b.r2.dev">https://pu1-082231df54234f2b90d1bd5432310a4b.r2.dev&lt;/a>&lt;/p>
+&lt;p>需要在软件里面填写的自定义域名就是 &lt;a href="https://pu1-082231df54234f2b90d1bd5432310a4b.r2.dev/duangks">https://pu1-082231df54234f2b90d1bd5432310a4b.r2.dev/duangks&lt;/a>&lt;/p>
+&lt;p>然后就可以愉快的使用picgo了。&lt;/p>
+&lt;h2 id="自定义域名">自定义域名&lt;/h2>
+&lt;p>假如你在cf里面托管有域名的话，可以直接在R2存储桶的设置界面设置自定义域名，填写一个二级域名以后不需要自己去设置dns，cf就会自动帮你映射好。&lt;/p>
+&lt;p>然后就可以顺路把R2.dev 子域给关了。&lt;/p>
+&lt;p>记得到时候在picgo里面自定义域名也需要加后缀，就像这样 https://你的自定义域名/你的存储桶名&lt;/p>
+&lt;p>最后，推荐大家使用以下picgo的二开项目PICLIST，直接去github搜就行，相比picgo多了一个自带的图片管理功能，可以对图片进行有损/无损压缩和变换格式，以及添加水印。还多了个管理功能，可以通过设置以后直接管理你上传的文件。&lt;/p></description></item><item><title>GitHub Actions自动构建Hugo并同步到腾讯COS</title><link>https://jimugou.com/post/058/</link><pubDate>Sat, 19 Aug 2023 19:28:45 +0800</pubDate><guid>https://jimugou.com/post/058/</guid><description>&lt;p>借助强大的 &lt;code>Github Action&lt;/code>，我们能够轻松地实现博客的自动化构建与部署，让整个流程更加优雅高效。在这个过程中，我们选用了 &lt;code>Hugo&lt;/code> 这一优秀的工具，它与 hexo 一样，都是出色的静态博客生成器。&lt;/p>
 &lt;p>考虑国内网络环境，我们选择了&lt;code>腾讯云COS&lt;/code>来部署博客，以提供更快速、稳定的访问体验。这个策略让博客的美感与技术有机融合，为读者呈现出精致的阅读空间。&lt;/p>
 &lt;h3 id="准备工作">准备工作：&lt;/h3>
 &lt;ol>
@@ -2446,129 +2514,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;p>如果要反向代理，且反向代理的服务与 umami 在一台服务器上，可以不用放行 &lt;code>3000&lt;/code> 端口。&lt;/p>
 &lt;h2 id="最后">最后&lt;/h2>
 &lt;p>目前用了大半年了，感觉效果不错，有一个缺点是不能统计到搜索的关键词。&lt;/p>
-&lt;p>类似的统计服务还有百度统计、谷歌统计、Matoma 等等，不过他们都没有这个这么轻量&lt;/p></description></item><item><title>EasyImage：一个简洁的开源图床程序</title><link>https://jimugou.com/post/038/</link><pubDate>Tue, 08 Aug 2023 22:03:39 +0800</pubDate><guid>https://jimugou.com/post/038/</guid><description>&lt;h2 id="easyimagehttpswwwnbmaocomarchivestageasyimage-view-all-posts-in-easyimage简单图床-20">&lt;a href="https://www.nbmao.com/archives/tag/easyimage" title="View all posts in EasyImage">EasyImage&lt;/a> 简单图床 2.0&lt;/h2>
-&lt;p>支持多文件上传,简单无数据库,返回图片url,markdown,bbscode,html的一款&lt;a href="https://www.nbmao.com/archives/tag/%e5%9b%be%e5%ba%8a%e7%a8%8b%e5%ba%8f" title="View all posts in 图床程序">图床程序&lt;/a>&lt;/p>
-&lt;p>演示地址：&lt;a href="https://png.cm/">png.cm&lt;/a>&lt;/p>
-&lt;p>在当前html5流行大势所趋下，遂利用基础知识新写了一个以html5为默认上传并且支持flash,向下兼容至IE9。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/04aa116342309a2a4d7d04a8ea7ed536.webp" alt="">&lt;/p>
-&lt;h4 id="功能支持">功能支持：&lt;/h4>
-&lt;ul>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  支持仅登录后上传&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  支持设置图片质量&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  支持上传图片转换为指定格式&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  支持文字/图片水印&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  支持设置图片指定宽/高&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  支持限制最低宽度/高度上传&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  支持设置广告&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  支持开启/关闭api上传&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  在线管理图片(增、删、改、查)&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  支持网站统计 请将统计代码放入:public/static/hm.js&lt;/li>
-&lt;li>&lt;input checked="" disabled="" type="checkbox">  更多·····&lt;/li>
-&lt;/ul>
-&lt;h4 id="httpsgithubcomicreteasyimages20e6b3a8e6848f注意">&lt;a href="https://github.com/icret/easyImages2.0#%E6%B3%A8%E6%84%8F">&lt;/a>注意：&lt;/h4>
-&lt;ol>
-&lt;li>安装之前先使用浏览器访问check.php检查扩展是否都安装！&lt;/li>
-&lt;li>请将所有文件赋予0755权限或www权限&lt;/li>
-&lt;li>上传后必须修改config.php的位置：
-&lt;ul>
-&lt;li>domain 当前图片域名&lt;/li>
-&lt;li>password 登录管理密码！&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>如果无法登陆管理界面或上传图片，请先打开check.php检查扩展或者使用phpinfo检查。&lt;/li>
-&lt;li>可以使用浏览器的 F12调试模式-&amp;gt;console查看错误&lt;/li>
-&lt;li>如果对php不太熟悉的话，不要将&lt;a href="https://www.nbmao.com/archives/tag/%e5%9b%be%e5%ba%8a%e7%a8%8b%e5%ba%8f" title="View all posts in 图床程序">图床程序&lt;/a>放置于二级目录&lt;/li>
-&lt;li>下载源码后可以删除一些文件：README.md,check.php,LICENSE&lt;/li>
-&lt;/ol>
-&lt;h4 id="api上传示例">API上传示例：&lt;/h4>
-&lt;p>参数：&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align:center">参数名称&lt;/th>
-&lt;th style="text-align:center">类型&lt;/th>
-&lt;th style="text-align:center">是否必须&lt;/th>
-&lt;th style="text-align:center">说明&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align:center">image&lt;/td>
-&lt;td style="text-align:center">file&lt;/td>
-&lt;td style="text-align:center">是&lt;/td>
-&lt;td style="text-align:center">需上传的图片&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">api&lt;/td>
-&lt;td style="text-align:center">text&lt;/td>
-&lt;td style="text-align:center">是&lt;/td>
-&lt;td style="text-align:center">token&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>html form上传示例:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>&amp;lt;&lt;span style="color:#062873;font-weight:bold">form&lt;/span> &lt;span style="color:#4070a0">action&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;../index.php&amp;#34;&lt;/span> &lt;span style="color:#4070a0">method&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;post&amp;#34;&lt;/span> &lt;span style="color:#4070a0">enctype&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;multipart/form-data&amp;#34;&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#062873;font-weight:bold">input&lt;/span> &lt;span style="color:#4070a0">type&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;file&amp;#34;&lt;/span> &lt;span style="color:#4070a0">name&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;image&amp;#34;&lt;/span> &lt;span style="color:#4070a0">accept&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;image/*&amp;#34;&lt;/span> &amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#062873;font-weight:bold">input&lt;/span> &lt;span style="color:#4070a0">type&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;text&amp;#34;&lt;/span> &lt;span style="color:#4070a0">name &lt;/span>&lt;span style="color:#666">=&lt;/span> &lt;span style="color:#4070a0">&amp;#34;token&amp;#34;&lt;/span> &lt;span style="color:#4070a0">placeholder&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;在tokenList文件找到token并输入&amp;#34;&lt;/span>/&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &amp;lt;&lt;span style="color:#062873;font-weight:bold">input&lt;/span> &lt;span style="color:#4070a0">type&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;submit&amp;#34;&lt;/span> /&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/&lt;span style="color:#062873;font-weight:bold">form&lt;/span>&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>api上传成功后返回json：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">// 参数:&amp;#34;sucess&amp;#34;上传成功 &amp;#34;url&amp;#34; 图片链接 &amp;#34;del&amp;#34; 删除链接 &amp;#34;failed&amp;#34; 上传失败 &amp;#34;message&amp;#34; 错误信息
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">&lt;/span>{&lt;span style="color:#062873;font-weight:bold">&amp;#34;result&amp;#34;&lt;/span>:&lt;span style="color:#4070a0">&amp;#34;success&amp;#34;&lt;/span>,&lt;span style="color:#062873;font-weight:bold">&amp;#34;url&amp;#34;&lt;/span>:&lt;span style="color:#4070a0">&amp;#34;http:\/\/192.168.1.15\/i\/2021\/05\/03\/u34au6_2.jpg&amp;#34;&lt;/span>,&lt;span style="color:#062873;font-weight:bold">&amp;#34;del&amp;#34;&lt;/span>:&lt;span style="color:#4070a0">&amp;#34;http:\/\/192.168.1.15\/api\/api-web.php?hash=XH%BB2Z%D1%08%D8%E2%D7%048%DFJ%86n%C0%06%DAD%DCP%3E%CF%C4%1B%60%E5%C4Pli&amp;#34;&lt;/span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="httpsgithubcomicreteasyimages20e5ae89e585a8e9858de7bdae安全配置">&lt;a href="https://github.com/icret/easyImages2.0#%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE">&lt;/a>安全配置&lt;/h4>
-&lt;ul>
-&lt;li>Apache配置文件默认设置上传目录不可运行&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-apache" data-lang="apache">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">RewriteEngine&lt;/span> &lt;span style="color:#007020;font-weight:bold">on&lt;/span> RewriteCond % !^$
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">RewriteRule&lt;/span> i/(.*).(php)$ – [F]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">RewriteRule&lt;/span> public/(.*).(php)$ – [F]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">RewriteRule&lt;/span> config/(.*).(php)$ – [F]
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ul>
-&lt;li>Nginx请在Nginx配置：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-nginx" data-lang="nginx">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#60a0b0;font-style:italic"># 禁止运行php的目录
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">&lt;/span> &lt;span style="color:#007020;font-weight:bold">location&lt;/span> ~&lt;span style="color:#235388">*&lt;/span> &lt;span style="color:#4070a0">^/(i|public|config)/.*\.(php|php5)&lt;/span>$
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">deny&lt;/span> &lt;span style="color:#4070a0">all&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;p>类似的统计服务还有百度统计、谷歌统计、Matoma 等等，不过他们都没有这个这么轻量&lt;/p></description></item></channel></rss>
