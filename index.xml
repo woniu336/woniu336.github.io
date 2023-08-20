@@ -1,4 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 20 Aug 2023 13:05:54 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://jimugou.com/post/059/</link><pubDate>Sun, 20 Aug 2023 13:05:54 +0800</pubDate><guid>https://jimugou.com/post/059/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 20 Aug 2023 13:57:08 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>利用Cloudflare Tunnel为Uptime Kuma设置反向代理</title><link>https://jimugou.com/post/060/</link><pubDate>Sun, 20 Aug 2023 13:57:08 +0800</pubDate><guid>https://jimugou.com/post/060/</guid><description>&lt;h2 id="描述">描述&lt;/h2>
+&lt;p>这是迄今为止我见过的最简单的反向代理！&lt;/p>
+&lt;p>她就是&lt;code>Cloudflare Tunnel&lt;/code>&lt;/p>
+&lt;p>不用安装Nginx 或 Apache&lt;/p>
+&lt;p>安装好&lt;code>Uptime Kuma&lt;/code>( docker 安装)，您只需在“设置”中提供 &lt;code>Cloudflare Tunnel&lt;/code> 令牌，即可在 Internet 上浏览 Uptime Kuma。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/14cffc608eff11aff6879f4c46a46f54.webp" alt="Pasted image 20230820140831">&lt;/p>
+&lt;p>优点：&lt;/p>
+&lt;ul>
+&lt;li>免费&lt;/li>
+&lt;li>完整的 GUI，零配置文件&lt;/li>
+&lt;li>您可以将 Uptime Kuma 置于防火墙后面&lt;/li>
+&lt;li>无需暴露您的真实IP&lt;/li>
+&lt;li>公开 Docker 端口是可选的&lt;/li>
+&lt;li>不需要 Nginx、Caddy 或 Traefik 等反向代理软件&lt;/li>
+&lt;li>零配置 SSL&lt;/li>
+&lt;li>免费SSL&lt;/li>
+&lt;/ul>
+&lt;h2 id="要求">要求&lt;/h2>
+&lt;ul>
+&lt;li>您域名的 DNS 由 Cloudflare 管理。&lt;/li>
+&lt;li>对于 Docker，仅 Debian或ubuntu 基础支持。&lt;/li>
+&lt;li>对于非 Docker，需要下载并安装&lt;code>cloudflared&lt;/code>。&lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/&lt;/a>&lt;/li>
+&lt;li>对于非 Docker Windows 用户，您可以在其 Github 版本上下载 msi 安装程序：&lt;a href="https://github.com/cloudflare/cloudflared/releases/latest">https://github.com/cloudflare/cloudflared/releases/latest&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="长话短说">长话短说&lt;/h2>
+&lt;ol>
+&lt;li>&lt;a href="https://dash.teams.cloudflare.com/">在Cloudflare 零信任&lt;/a>上创建隧道。&lt;/li>
+&lt;li>获取您的隧道令牌并将其设置到您的 Uptime Kuma 实例中。&lt;/li>
+&lt;li>映射到&lt;a href="http://localhost:3001/">http://localhost:3001&lt;/a>。&lt;/li>
+&lt;li>利润。&lt;/li>
+&lt;/ol>
+&lt;h2 id="开始吧">开始吧&lt;/h2>
+&lt;p>步骤其实非常简单。然而，由于这个概念对任何人来说都是相当新的，所以详细地写出来可能会更好。&lt;/p>
+&lt;p>但相信我，一旦您学会了，您将再次记住如何在没有本指南的情况下进行配置！而对于 Nginx 或 Traefik，我永远不记得如何在不谷歌搜索的情况下进行配置。&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>前往&lt;a href="https://dash.teams.cloudflare.com/">Cloudflare Zero Trust&lt;/a>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Access&lt;/code>&amp;raquo; &lt;code>Tunnels&lt;/code>_&lt;code>Create Tunnel&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/d042170a98d589ed54049eebd00086dc.webp" alt="">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>键入&lt;code>Tunnel name&lt;/code>诸如&lt;code>uptime-kuma&lt;/code>并保存隧道。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>单击令牌进行复制。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/7b81d0bde06c988536c8118c7943ec5e.webp" alt="">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>转到您的 Uptime Kuma 实例。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/5243e955b868eca72505829a116ef9d9.webp" alt="">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>Settings&lt;/code>&amp;gt;&lt;code>Reverse Proxy&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>将令牌粘贴到&lt;code>Cloudflare Tunnel Token&lt;/code>字段中。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>点击&lt;code>Start cloudflared&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>返回到&lt;code>Cloudflare Zero Trust&lt;/code>，如果您看到连接器，则单击&lt;code>Next&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/0bf2af2207e9b775d09b821a37cab580.webp" alt="">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>选择您最喜欢的域名并映射到&lt;code>http://localhost:3001&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/ceb29fd37fa199fb99abda3965539b51.webp" alt="">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>点击&lt;code>Save&lt;/code>并转到您的域名&lt;code>https://&amp;lt;your domain name&amp;gt;&lt;/code>并获利！是的，它还会自动为您提供 SSL！&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/3cbf563f8867f0e5bda906d925056bc5.webp" alt="">&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="如何停止">如何停止&lt;/h2>
+&lt;ul>
+&lt;li>选项 1.您可以删除 Cloudflare 上的地图。&lt;/li>
+&lt;li>选项 2. 您可以在 Uptime Kuma 中单击&lt;code>Stop cloudflared&lt;/code>和。&lt;code>Remove Token&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="环境变量">环境变量&lt;/h2>
+&lt;p>或者，您可以通过环境变量设置令牌。cloudflared 将自动启动。&lt;/p>
+&lt;p>通过这种方法，您甚至不需要将容器端口暴露给主机。&lt;/p>
+&lt;p>UPTIME_KUMA_CLOUDFLARED_TOKEN=&lt;code>&amp;lt;your token&amp;gt;&lt;/code>&lt;/p></description></item><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://jimugou.com/post/059/</link><pubDate>Sun, 20 Aug 2023 13:05:54 +0800</pubDate><guid>https://jimugou.com/post/059/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>&lt;code>Cloudflare R2&lt;/code>存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。Cloudflare R2存储&lt;code>流量不收费&lt;/code>，收费的是&lt;strong>存储空间&lt;/strong>和&lt;strong>请求次数&lt;/strong>。A类操作和B类操作分开收费，&lt;code>上传&lt;/code>属于A类操作，&lt;code>下载和访问&lt;/code>属于B类操作。&lt;/p>
 &lt;table>
 &lt;thead>
@@ -2376,142 +2459,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>搭建一个小而美的网站流量监控 ——Umami</title><link>https://jimugou.com/post/039/</link><pubDate>Tue, 08 Aug 2023 22:30:23 +0800</pubDate><guid>https://jimugou.com/post/039/</guid><description>&lt;p>这一期带大家来搭建一个网站流量的监控，看看自己的小破站到底有多少人看，是不是 1 ip 呢？&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/a071cb19d51b8e08e2f9944b04cd73e6.webp" alt="">&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/43e48fd11b5fcae50b7c4b3f31b8ab3b.webp" alt="">&lt;/p>
-&lt;p>非常清爽，满足小博客使用已经足够了，&lt;/p>
-&lt;h3 id="开始搭建">开始搭建&lt;/h3>
-&lt;h4 id="1安装-dockercurlgitvimwget-等必备的工具">1、安装 docker、curl、git、vim、wget 等必备的工具&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-15">15&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt update -y
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt install -y wget vim sudo curl git
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -qO- get.docker.com | bash
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker -v
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl &lt;span style="color:#007020">enable&lt;/span> docker
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo curl -L &lt;span style="color:#4070a0">&amp;#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -s&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -m&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod +x /usr/local/bin/docker-compose
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker-compose --version
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="2然后到-github-上接取项目进入目录">2、然后到 github 上接取项目，进入目录&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> ~
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkdir -p ~/data/docker_data/umami
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> ~/data/docker_data/umami
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="3编辑配置文件">3、编辑配置文件&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nano docker-compose.yml
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="4写入-docker-compose-代码">4、写入 Docker-compose 代码&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-24">24&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>---
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>version: &lt;span style="color:#4070a0">&amp;#39;3&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>services:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> umami:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> image: docker.umami.dev/umami-software/umami:postgresql-latest
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ports:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#4070a0">&amp;#34;3000:3000&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> environment:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DATABASE_URL: postgresql://umami:umami@db:5432/umami
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> DATABASE_TYPE: postgresql
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> APP_SECRET: replace-me-with-a-random-string
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> depends_on:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - db
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart: always
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> db:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> image: postgres:15-alpine
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> environment:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> POSTGRES_DB: umami
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> POSTGRES_USER: umami
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> POSTGRES_PASSWORD: umami
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> volumes:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - ./sql/schema.postgresql.sql:/docker-entrypoint-initdb.d/schema.postgresql.sql:ro
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - ./umami-db-data:/var/lib/postgresql/data
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart: always
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>检查完毕之后，&lt;code>ctrl+x&lt;/code> 退出，按 &lt;code>y&lt;/code> 确认修改内容， &lt;code>enter&lt;/code> 确认&lt;/p>
-&lt;h4 id="5启动-umami">5、启动 Umami&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker-compose up -d
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>此时，访问 &lt;code>http://ip:3000&lt;/code> 就可以访问了，打开的是英文界面，右上方可以切换语言，默认用户名为 &lt;code>admin&lt;/code>，密码为 &lt;code>umami&lt;/code>&lt;/p>
-&lt;p>宝塔用户需要打开防火墙，放行 &lt;code>3000&lt;/code> 端口，腾讯云、阿里云等用户还需要在官网后台服务器页面放行官方防火墙的 &lt;code>3000&lt;/code> 端口。&lt;/p>
-&lt;p>如果要反向代理，且反向代理的服务与 umami 在一台服务器上，可以不用放行 &lt;code>3000&lt;/code> 端口。&lt;/p>
-&lt;h2 id="最后">最后&lt;/h2>
-&lt;p>目前用了大半年了，感觉效果不错，有一个缺点是不能统计到搜索的关键词。&lt;/p>
-&lt;p>类似的统计服务还有百度统计、谷歌统计、Matoma 等等，不过他们都没有这个这么轻量&lt;/p></description></item></channel></rss>
+&lt;/table></description></item></channel></rss>
