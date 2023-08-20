@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 20 Aug 2023 13:05:54 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://jimugou.com/post/059/</link><pubDate>Sun, 20 Aug 2023 13:05:54 +0800</pubDate><guid>https://jimugou.com/post/059/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>&lt;code>Cloudflare R2&lt;/code>存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。也算是带宽联盟一员。类似于阿里云国际的OSS免费5G空间，流量收费，但是使用自定义域名套用Cloudflare的cdn就流量免费，&lt;code>Cloudflare自己的R2存储流量不收费&lt;/code>，收费的是&lt;code>存储空间&lt;/code>和&lt;code>请求次数&lt;/code>。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。&lt;/p>
+&lt;p>&lt;code>Cloudflare R2&lt;/code>存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。Cloudflare R2存储&lt;code>流量不收费&lt;/code>，收费的是&lt;strong>存储空间&lt;/strong>和&lt;strong>请求次数&lt;/strong>。A类操作和B类操作分开收费，&lt;code>上传&lt;/code>属于A类操作，&lt;code>下载和访问&lt;/code>属于B类操作。&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -31,8 +31,8 @@
 &lt;p>本文的图就放在R2上，只不过域名是自定义的。&lt;/p>
 &lt;h2 id="设置r2">设置R2&lt;/h2>
 &lt;h3 id="开通r2">开通R2&lt;/h3>
-&lt;p>首先当然是拥有一个Cloudflare账号，并且点击右上角的语言设置中文。&lt;/p>
-&lt;p>第一步当然是开通R2，侧边栏找到R2然后点击开通。这里可以绑定支持外币支付的卡，或者直接绑定paypal，中国区的paypal也是可以的。&lt;/p>
+&lt;p>首先当然是拥有一个&lt;code>Cloudflare&lt;/code>账号，并且点击右上角的语言设置中文。&lt;/p>
+&lt;p>第一步当然是开通R2，&lt;code>侧边栏找到R2&lt;/code>然后点击开通。这里可以绑定支持外币支付的卡，或者直接绑定&lt;code>paypal&lt;/code>，中国区的paypal也是可以的。&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/0d53d7aa084e049bf725df031e52b5ba.webp" alt="">&lt;/p>
 &lt;p>第二步是创建存储桶，可以自己选取位置，&lt;code>不建议无脑选亚太地区&lt;/code>，亚太地区虽然近但是国际访问速度受限，我这里选择&lt;code>北美西部&lt;/code>。&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/548bc9e55db5ac3a49113996ab79196c.webp" alt="">&lt;/p>
