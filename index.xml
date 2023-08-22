@@ -1,42 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 22 Aug 2023 11:03:25 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Git配置、提交到多个远程仓库</title><link>https://jimugou.com/post/062/</link><pubDate>Tue, 22 Aug 2023 11:03:25 +0800</pubDate><guid>https://jimugou.com/post/062/</guid><description>&lt;p>优雅地配置并将代码推&lt;code>送至多个远程仓库&lt;/code>，如 GitHub 和 Gitee，是一项重要的开发实践。通过巧妙配置 Git，你可以无缝管理多个代码托管平台。&lt;/p>
 &lt;p>在&lt;code>gitee&lt;/code>平台,你可以将&lt;code>github&lt;/code>上的项目导入进来,只需要填上github仓库 &lt;code>URL&lt;/code>即可.非常方便&lt;/p>
 &lt;h2 id="同时提交到github和gitee">同时提交到github和gitee&lt;/h2>
-&lt;blockquote>
-&lt;p>有以下两种方式,任选其一&lt;/p>
-&lt;/blockquote>
-&lt;h4 id="1-通过命令行set-url---add添加">1. 通过命令行&lt;code>set-url --add&lt;/code> 添加&lt;/h4>
-&lt;p>添加第一个仓库：&lt;code>git remote add &amp;lt;主机名，如 origin&amp;gt; &amp;lt;远程仓库地址1&amp;gt;&lt;/code>&lt;/p>
-&lt;p>添加第二个仓库：&lt;code>git remote set-url --add &amp;lt;主机名，如 origin&amp;gt; &amp;lt;远程仓库地址2&amp;gt;&lt;/code>&lt;/p>
-&lt;p>例如:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>git remote add origin git@github.com:xxx/xxx.git
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git remote set-url --add origin git@gitee.com:xxx/xxx.git
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="2-直接编辑配置文件gitconfig添加或修改">2. 直接编辑配置文件&lt;code>.git/config&lt;/code>，添加或修改：&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0">[remote&lt;/span> &lt;span style="color:#4070a0">&amp;#34;origin&amp;#34;]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">url&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;lt;远程仓库地址1&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">fetch&lt;/span> &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#4070a0">+refs/heads/*:refs/remotes/origin/*&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">url&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;lt;远程仓库地址2&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>提交方式：通过 &lt;code>git push &amp;lt;主机名，如 origin&amp;gt; --all&lt;/code>&lt;/strong>&lt;/p>
+&lt;h2 id="方法一">方法一&lt;/h2>
+&lt;p>通过命令行&lt;code>set-url --add&lt;/code> 添加&lt;/p>
+&lt;hr>
+&lt;h4 id="1使用如下命令添加远程仓库">1.使用如下命令添加远程仓库&lt;/h4>
+&lt;p>例如：&lt;/p>
+&lt;pre tabindex="0">&lt;code>git remote set-url --add oginin https://gitee.com/ganace/Ganace.git
+&lt;/code>&lt;/pre>&lt;h4 id="2查看远程仓库情况">2.查看远程仓库情况&lt;/h4>
+&lt;pre tabindex="0">&lt;code>git remote -v
+&lt;/code>&lt;/pre>&lt;p>可以看到gitee的仓库地址已经添加进去了&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>origin &lt;span style="color:#517918">https&lt;/span>:&lt;span style="color:#235388">//&lt;/span>github&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">.&lt;/span>github&lt;span style="color:#666">.&lt;/span>io&lt;span style="color:#666">.&lt;/span>git (fetch)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>origin &lt;span style="color:#517918">https&lt;/span>:&lt;span style="color:#235388">//&lt;/span>github&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">.&lt;/span>github&lt;span style="color:#666">.&lt;/span>io&lt;span style="color:#666">.&lt;/span>git (push)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>origin &lt;span style="color:#517918">https&lt;/span>:&lt;span style="color:#235388">//&lt;/span>gitee&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>ganace&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">.&lt;/span>git (push)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="方法二">方法二&lt;/h2>
+&lt;p>打开&lt;code>/.git/config&lt;/code>文件，在&lt;code>[remote “origin”]&lt;/code>项中添加多个需要同时提交的git远程仓库url。&lt;/p>
+&lt;p>例如：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>remote &lt;span style="color:#4070a0">&amp;#34;origin&amp;#34;&lt;/span>&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#517918">https&lt;/span>:&lt;span style="color:#235388">//&lt;/span>github&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">.&lt;/span>github&lt;span style="color:#666">.&lt;/span>io&lt;span style="color:#666">.&lt;/span>git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#517918">https&lt;/span>:&lt;span style="color:#235388">//&lt;/span>gitee&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>ganace&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">.&lt;/span>git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fetch &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#666">+&lt;/span>refs&lt;span style="color:#666">/&lt;/span>heads&lt;span style="color:#666">/*&lt;/span>&lt;span style="color:#517918">:refs&lt;/span>&lt;span style="color:#666">/&lt;/span>remotes&lt;span style="color:#666">/&lt;/span>origin&lt;span style="color:#666">/*&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="提交">提交&lt;/h2>
+&lt;p>使用&lt;code>git push -f&lt;/code> 统一提交到所有仓库，并且强制统一版本。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push -f origin --all
