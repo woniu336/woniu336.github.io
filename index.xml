@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Aug 2023 06:02:09 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>CloudFlare Tunnel 内网穿透和反向代理</title><link>https://jimugou.com/post/061/</link><pubDate>Mon, 21 Aug 2023 06:02:09 +0800</pubDate><guid>https://jimugou.com/post/061/</guid><description>&lt;p>将您的本地服务扩展到全球网络：&lt;code>Cloudflare Tunnel&lt;/code>的魔力&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 22 Aug 2023 11:03:25 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Git配置、提交到多个远程仓库</title><link>https://jimugou.com/post/062/</link><pubDate>Tue, 22 Aug 2023 11:03:25 +0800</pubDate><guid>https://jimugou.com/post/062/</guid><description>&lt;p>优雅地配置并将代码推&lt;code>送至多个远程仓库&lt;/code>，如 GitHub 和 Gitee，是一项重要的开发实践。通过巧妙配置 Git，你可以无缝管理多个代码托管平台。&lt;/p>
+&lt;p>在&lt;code>gitee&lt;/code>平台,你可以将&lt;code>github&lt;/code>上的项目导入进来,只需要填上github仓库 &lt;code>URL&lt;/code>即可.非常方便&lt;/p>
+&lt;h2 id="同时提交到github和gitee">同时提交到github和gitee&lt;/h2>
+&lt;blockquote>
+&lt;p>有以下两种方式,任选其一&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="1-通过命令行set-url---add添加">1. 通过命令行&lt;code>set-url --add&lt;/code> 添加&lt;/h4>
+&lt;p>添加第一个仓库：&lt;code>git remote add &amp;lt;主机名，如 origin&amp;gt; &amp;lt;远程仓库地址1&amp;gt;&lt;/code>&lt;/p>
+&lt;p>添加第二个仓库：&lt;code>git remote set-url --add &amp;lt;主机名，如 origin&amp;gt; &amp;lt;远程仓库地址2&amp;gt;&lt;/code>&lt;/p>
+&lt;p>例如:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>git remote add origin git@github.com:xxx/xxx.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git remote set-url --add origin git@gitee.com:xxx/xxx.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="2-直接编辑配置文件gitconfig添加或修改">2. 直接编辑配置文件&lt;code>.git/config&lt;/code>，添加或修改：&lt;/h4>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0">[remote&lt;/span> &lt;span style="color:#4070a0">&amp;#34;origin&amp;#34;]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">url&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;lt;远程仓库地址1&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">fetch&lt;/span> &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#4070a0">+refs/heads/*:refs/remotes/origin/*&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">url&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;lt;远程仓库地址2&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>提交方式：通过 &lt;code>git push &amp;lt;主机名，如 origin&amp;gt; --all&lt;/code>&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push -f origin --all
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>CloudFlare Tunnel 内网穿透和反向代理</title><link>https://jimugou.com/post/061/</link><pubDate>Mon, 21 Aug 2023 06:02:09 +0800</pubDate><guid>https://jimugou.com/post/061/</guid><description>&lt;p>将您的本地服务扩展到全球网络：&lt;code>Cloudflare Tunnel&lt;/code>的魔力&lt;/p>
 &lt;p>&lt;code>Cloudflare Tunnel&lt;/code>是您连接全球网络的完美伙伴。无论您是个人开发者还是企业用户，通过Cloudflare Tunnel，您可以轻松将您的&lt;code>本地或电脑上&lt;/code>的服务提供给全球用户。这款强大的工具可以安全地将您的服务引导到&lt;code>Cloudflare的分布式&lt;/code>网络中，确保数据的安全性和隐私。通过加密通信和强大的安全功能，您的Web服务将免受恶意攻击和数据泄露的威胁。&lt;/p>
 &lt;h2 id="1下载与安装">1.下载与安装&lt;/h2>
 &lt;p>安装教程: &lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/install-and-setup/tunnel-guide/local/">点击打开&lt;/a>&lt;/p>
@@ -2484,66 +2528,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>将hugo博客部署至IPFS</title><link>https://jimugou.com/post/041/</link><pubDate>Wed, 09 Aug 2023 14:34:31 +0800</pubDate><guid>https://jimugou.com/post/041/</guid><description>&lt;p>官网: &lt;a href="https://fleek.co/hosting/">https://fleek.co/hosting/&lt;/a>&lt;/p>
-&lt;p>免费套餐: 每月50G流量&lt;/p>
-&lt;p>&lt;a href="https://fleek.co/pricing/">https://fleek.co/pricing/&lt;/a>&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>特点&lt;/th>
-&lt;th>优势&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Git 集成&lt;/td>
-&lt;td>简化代码管理和部署流程&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>自动部署&lt;/td>
-&lt;td>省时省力地将站点部署到网络&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>自动SSL&lt;/td>
-&lt;td>自动为站点提供SSL安全证书&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>全球CDN&lt;/td>
-&lt;td>加速内容全球分发&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>速度极快&lt;/td>
-&lt;td>利用边缘网络提供快速加载&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>便于使用&lt;/td>
-&lt;td>用户友好的界面和操作&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>协作性&lt;/td>
-&lt;td>便于团队协作和版本控制&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>可定制&lt;/td>
-&lt;td>支持灵活的定制需求&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>优势&lt;/th>
-&lt;th>描述&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>速度快&lt;/td>
-&lt;td>Fleek的边缘网络结合了IPFS和边缘计算技术，为用户提供极快的加载时间，同时部署到Fleek Edge。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>去中心化&lt;/td>
-&lt;td>使用Fleek，您的IPFS托管网站和应用程序不仅备份在其服务器上，还会自动存档到去中心化存储网络Filecoin，作为开放网络中的附加备份层。&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
