@@ -10,11 +10,13 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> sudo dpkg -i cloudflared-linux-amd64.deb
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>也可以先到&lt;code>控制台&lt;/code>创建隧道，再获取代码&lt;/p>
-&lt;p>意思是有两种方式,控制台创建 或者 &lt;code>命令行&lt;/code>创建&lt;/p>
+&lt;/div>&lt;blockquote>
+&lt;p>有两种运行隧道的方式: &lt;code>控制台&lt;/code>和&lt;code>命令行&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>区别:&lt;/strong> 控制台添加&lt;code>第2个隧道&lt;/code>的时候提示你已经安装过cloudflared服务了,你需要卸载才能继续, 命令行则可以运行多个&lt;code>配置文件&lt;/code>,也就是多个服务,所以&lt;code>没有限制&lt;/code>&lt;/p>
 &lt;p>本文使用的是&lt;code>命令行&lt;/code>方式&lt;/p>
 &lt;p>&lt;a href="https://one.dash.cloudflare.com/">打开控制台&amp;ndash;Access&amp;ndash;Tunnels&lt;/a>&lt;/p>
-&lt;p>![[../附件/Pasted image 20230821060949.png]]&lt;/p>
+&lt;p>&lt;img src="https://cdn.bilicdn.tk/gh/woniu336/blog-image@main/img/Pasted%20image%2020230821060949.webp" alt="Pasted image 20230821060949">&lt;/p>
 &lt;h2 id="2登录">2.登录&lt;/h2>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -26,8 +28,8 @@
 &lt;/div>
 &lt;/div>&lt;p>会自动&lt;code>打开浏览器&lt;/code>，登录后&lt;code>选择域名&lt;/code>，完成验证&lt;/p>
 &lt;p>此时 Cloudflare 会创建一个 &lt;code>cert.pem&lt;/code> 文件放在你的 &lt;code>~/.cloudflared&lt;/code> 目录下。&lt;/p>
-&lt;p>![[../附件/Pasted image 20230821061103.png]]&lt;/p>
-&lt;p>![[../附件/Pasted image 20230821061328.png]]&lt;/p>
+&lt;p>&lt;img src="https://cdn.bilicdn.tk/gh/woniu336/blog-image@main/img/Pasted%20image%2020230821061103.webp" alt="Pasted image 20230821061103">&lt;/p>
+&lt;p>&lt;img src="https://cdn.bilicdn.tk/gh/woniu336/blog-image@main/img/Pasted%20image%2020230821061328.webp" alt="Pasted image 20230821061328">&lt;/p>
 &lt;h2 id="3创建隧道">3.创建隧道&lt;/h2>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -38,45 +40,32 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>此时会输出一些&lt;code>隧道 ID&lt;/code> 之类的信息&lt;/p>
-&lt;h3 id="删除隧道">删除隧道&lt;/h3>
+&lt;h2 id="4配置隧道">4.配置隧道&lt;/h2>
+&lt;p>给隧道创建一个&lt;code>域名&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel delete 隧道名
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="列出隧道">列出隧道&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel list
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="4配置隧道">4.配置隧道&lt;/h2>
-&lt;p>给隧道创建一个&lt;code>域名&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel route dns 隧道名 刚才选择的域名
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="5-创建配置文件">5. 创建配置文件&lt;/h2>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>这里有个坑&lt;/strong>: 回到域名的&lt;code>DNS解析&lt;/code>,把CNAME 记录名称改回来&lt;/p>
+&lt;p>比如: tt.baidu.com改为mm.baidu.com&lt;/p>
+&lt;p>内容改为: &lt;code>隧道UUID.cfargotunnel.com&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="5-创建配置文件">5. 创建配置文件&lt;/h2>
 &lt;p>比如我打算放在 &lt;code>~/.cloudflared/config.yml&lt;/code>，文件内容如下：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-6">6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-7">7&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-6">6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-7">7&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>tunnel: &lt;span style="color:#666">[&lt;/span>tunnel 的名称或 UUID&lt;span style="color:#666">]&lt;/span>
@@ -91,7 +80,7 @@
 &lt;/div>&lt;h3 id="启动隧道">启动隧道：&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel --config ~/.cloudflared/config.yml run
@@ -108,23 +97,42 @@
 2022-03-26T06:52:34Z INF Connection 7a3ec8f7-482c-4fe5-93c4-69d1177ca457 registered connIndex=1 location=NRT
 2022-03-26T06:52:35Z INF Connection 7d571bdb-96d2-49d3-b8bf-14754aa6cf8b registered connIndex=2 location=KIX
 2022-03-26T06:52:36Z INF Connection 473e30ae-e98b-4da1-8768-12bf5304c7ab registered connIndex=3 location=NRT
-&lt;/code>&lt;/pre>&lt;h3 id="体验隧道">体验隧道&lt;/h3>
+&lt;/code>&lt;/pre>&lt;h2 id="6-其他">6. 其他&lt;/h2>
+&lt;h3 id="体验隧道">体验隧道&lt;/h3>
 &lt;p>由官方提供测试域名 &lt;code>重新启动体验隧道域名会变&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel --url localhost:你http服务端口号
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="5运行隧道">5.运行隧道&lt;/h2>
+&lt;/div>&lt;h3 id="运行隧道-有时会失败">&lt;del>运行隧道 (有时会失败)&lt;/del>&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel run --url localhost:你http服务端口号 隧道名字
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="删除隧道">删除隧道&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel delete 隧道名
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="列出隧道">列出隧道&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel run --url localhost:你http服务端口号 隧道名字
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel list
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h2 id="配置为系统服务">配置为系统服务&lt;/h2>
@@ -147,7 +155,7 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>ystemctl&lt;span style=""> &lt;/span>start&lt;span style=""> &lt;/span>cloudflared.service
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h2 id="卸载隧道">卸载隧道&lt;/h2>
+&lt;/div>&lt;h2 id="7-卸载隧道">7. 卸载隧道&lt;/h2>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
