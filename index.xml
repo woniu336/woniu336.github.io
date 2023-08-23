@@ -119,11 +119,11 @@
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-7">7&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>tunnel: &lt;span style="color:#666">[&lt;/span>tunnel 的名称或 UUID&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>credentials-file: /root/.cloudflared/&lt;span style="color:#666">[&lt;/span>tunnel 的 UUID&lt;span style="color:#666">]&lt;/span>.json
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>tunnel: UUID
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>credentials-file: /root/.cloudflared/UUID.json
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ingress:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - hostname: &lt;span style="color:#666">[&lt;/span>CNAME 记录名称&lt;span style="color:#666">]&lt;/span>.&lt;span style="color:#666">[&lt;/span>接入 CLoudflare 的域名&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - hostname: xx.baidu.com
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> service: http://localhost:80
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - service: http_status:404
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
