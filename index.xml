@@ -6,7 +6,7 @@
 &lt;hr>
 &lt;h4 id="1使用如下命令添加远程仓库">1.使用如下命令添加远程仓库&lt;/h4>
 &lt;p>例如：&lt;/p>
-&lt;pre tabindex="0">&lt;code>git remote set-url --add oginin https://gitee.com/ganace/Ganace.git
+&lt;pre tabindex="0">&lt;code>git remote set-url --add origin https://gitee.com/ganace/Ganace.git
 &lt;/code>&lt;/pre>&lt;h4 id="2查看远程仓库情况">2.查看远程仓库情况&lt;/h4>
 &lt;pre tabindex="0">&lt;code>git remote -v
 &lt;/code>&lt;/pre>&lt;p>可以看到gitee的仓库地址已经添加进去了&lt;/p>
