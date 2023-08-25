@@ -1,4 +1,189 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 24 Aug 2023 12:32:50 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Gravatar头像 镜像地址大全</title><link>https://jimugou.com/post/063/</link><pubDate>Thu, 24 Aug 2023 12:32:50 +0800</pubDate><guid>https://jimugou.com/post/063/</guid><description>&lt;h2 id="介绍">介绍&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 24 Aug 2023 14:05:35 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>使用Nginx反向代理，自建CDN加速节点</title><link>https://jimugou.com/post/064/</link><pubDate>Thu, 24 Aug 2023 14:05:35 +0800</pubDate><guid>https://jimugou.com/post/064/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
+&lt;h3 id="1安装nginx">1、安装Nginx&lt;/h3>
+&lt;p>&lt;a href="https://lnmp.org/install.html">这里使用的是军哥的LNMP&lt;/a> &lt;em>单独安装Nginx&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>wget http://soft.vpser.net/lnmp/lnmp2.0.tar.gz -O lnmp2.0.tar.gz &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> tar zxf lnmp2.0.tar.gz &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#007020">cd&lt;/span> lnmp2.0 &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./install.sh nginx
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="2cdn配置">2、CDN配置&lt;/h3>
+&lt;p>假如我需要对&lt;code>www.moerats.com&lt;/code>搭建&lt;code>CDN&lt;/code>节点，数据放在&lt;code>192.168.1.100&lt;/code>，需要先修改&lt;code>hosts&lt;/code>指向，告知&lt;code>CDN&lt;/code>节点去哪里去获取网站数据，也就是回源地址，做如下修改：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vi /etc/hosts
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>192.168.1.100 www.moerats.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后创建&lt;code>nginx&lt;/code>配置文件&lt;code>moerats.com.conf&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#创建缓存目录&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkdir -p /usr/local/nginx/caches/www.moerats.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#设置缓存目录权限&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chown -R www:www /usr/local/nginx/caches/www.moerats.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#创建moerats.com.conf&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>vi /usr/local/nginx/conf/vhost/moerats.com.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在&lt;code>moerats.com.conf&lt;/code>中添加下面的内容，缓存目录/缓存时间请根据实际情况调整。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-19">19&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-20">20&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>proxy_cache_path /usr/local/nginx/caches/www.moerats.com &lt;span style="color:#bb60d5">levels&lt;/span>&lt;span style="color:#666">=&lt;/span>1:2 &lt;span style="color:#bb60d5">keys_zone&lt;/span>&lt;span style="color:#666">=&lt;/span>xiaoz:50m &lt;span style="color:#bb60d5">inactive&lt;/span>&lt;span style="color:#666">=&lt;/span>30m &lt;span style="color:#bb60d5">max_size&lt;/span>&lt;span style="color:#666">=&lt;/span>50m;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>server &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> listen 80;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server_name www.moerats.com;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> charset utf-8,gbk;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> location / &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header Accept-Encoding &lt;span style="color:#4070a0">&amp;#34;&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_pass https://www.moerats.com;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_redirect off;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Real-IP &lt;span style="color:#bb60d5">$remote_addr&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Forwarded-For &lt;span style="color:#bb60d5">$proxy_add_x_forwarded_for&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache xiaoz;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">200&lt;/span> &lt;span style="color:#40a070">304&lt;/span> 30m;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">301&lt;/span> 24h;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">500&lt;/span> &lt;span style="color:#40a070">502&lt;/span> &lt;span style="color:#40a070">503&lt;/span> &lt;span style="color:#40a070">504&lt;/span> 0s;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid any 1s;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_min_uses 1;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> expires 12h;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>参数说明：&lt;/strong>&lt;/p>
+&lt;p>&lt;code>/usr/local/nginx/caches/www.moerats.com&lt;/code>：为缓存目录&lt;/p>
+&lt;p>&lt;code>levels&lt;/code>：指定该缓存空间有两层hash目录，第一层目录为1个字母，第二层为2个字母。&lt;/p>
+&lt;p>&lt;code>keys_zone=xiaoz:50m&lt;/code>：为缓存空间起个名字，这里取名为“xiaoz”，后面的50m指内存缓存空间&lt;/p>
+&lt;p>&lt;code>inactive=30m&lt;/code>：如果30分钟内该资源没有被访问则删除&lt;/p>
+&lt;p>&lt;code>max_size=50m&lt;/code>：指硬盘缓存大小为50MB&lt;/p>
+&lt;p>&lt;code>proxy_cache_valid&lt;/code>：指定状态码缓存时间，前面写状态码，后面写缓存时间。&lt;/p>
+&lt;h3 id="3-然后重启nginx生效">3. 然后重启Nginx生效&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/etc/init.d/nginx reload
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="4https配置">4、Https配置&lt;/h3>
+&lt;p>如果是&lt;code>https&lt;/code>网站，配置文件参考：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-19">19&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-20">20&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-21">21&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-22">22&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-23">23&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-24">24&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-25">25&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-26">26&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-27">27&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-28">28&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-29">29&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-30">30&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-31">31&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-32">32&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-33">33&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-34">34&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-35">35&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-36">36&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>proxy_cache_path /data/wwwroot/caches/www.moerats.com &lt;span style="color:#bb60d5">levels&lt;/span>&lt;span style="color:#666">=&lt;/span>1:2 &lt;span style="color:#bb60d5">keys_zone&lt;/span>&lt;span style="color:#666">=&lt;/span>Rats:50m &lt;span style="color:#bb60d5">inactive&lt;/span>&lt;span style="color:#666">=&lt;/span>30m &lt;span style="color:#bb60d5">max_size&lt;/span>&lt;span style="color:#666">=&lt;/span>50m;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>server &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> listen &lt;span style="color:#40a070">443&lt;/span> ssl http2;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_certificate /home/moerats.com.crt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_certificate_key /home/moerats.com.key;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_session_timeout 1d;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_session_cache builtin:1000 shared:SSL:10m;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_dhparam /data/ssl/dhparam.pem;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_ciphers &lt;span style="color:#4070a0">&amp;#39;ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA:ECDHE-ECDSA-DES-CBC3-SHA:ECDHE-RSA-DES-CBC3-SHA:EDH-RSA-DES-CBC3-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:DES-CBC3-SHA:!DSS&amp;#39;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_prefer_server_ciphers on;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_stapling on;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_stapling_verify on;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server_name www.moerats.com;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> access_log /data/wwwlogs/moerats.com_nginx.log combined;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> charset utf-8,gbk;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> location / &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header Accept-Encoding &lt;span style="color:#4070a0">&amp;#34;&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_pass https://www.moerats.com;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_redirect off;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Real-IP &lt;span style="color:#bb60d5">$remote_addr&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Forwarded-For &lt;span style="color:#bb60d5">$proxy_add_x_forwarded_for&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache Rats;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">200&lt;/span> &lt;span style="color:#40a070">304&lt;/span> 30m;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">301&lt;/span> 24h;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">500&lt;/span> &lt;span style="color:#40a070">502&lt;/span> &lt;span style="color:#40a070">503&lt;/span> &lt;span style="color:#40a070">504&lt;/span> 0s;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid any 1s;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_min_uses 1;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> expires 12h;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>server &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> listen &lt;span style="color:#40a070">80&lt;/span> default_server;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">return&lt;/span> &lt;span style="color:#40a070">301&lt;/span> https://&lt;span style="color:#bb60d5">$host$request_uri&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>你也可以使用多台&lt;code>VPS&lt;/code>，利用&lt;code>CloudXNS&lt;/code>智能解析，将不同地区的&lt;code>DNS&lt;/code>解析到最近的&lt;code>VPS&lt;/code>上，进行&lt;code>CND&lt;/code>加速。&lt;/p></description></item><item><title>Gravatar头像 镜像地址大全</title><link>https://jimugou.com/post/063/</link><pubDate>Thu, 24 Aug 2023 12:32:50 +0800</pubDate><guid>https://jimugou.com/post/063/</guid><description>&lt;h2 id="介绍">介绍&lt;/h2>
 &lt;p>当我们在很多博客或者网站留言，评论的时候会看到有的人头像很酷很个性化，但是这个博客和网站本身并没有提供设置头像的功能，感觉有点神奇，那么是怎么做到的呢？&lt;code>其实这是使用了Gravatar&lt;/code>。&lt;/p>
 &lt;p>Gravatar，全称&lt;code>Globally Recognized Avatar&lt;/code>。翻译成中文为&lt;code>全球通用头像&lt;/code>。&lt;/p>
 &lt;p>Gravatar的概念首先是在国外的独立WordPress博客中兴起的，当你到任何一个支持Gravatar的网站留言时，这个网站都会根据你所提供的Email地址为你显示出匹配的头像。当然，这个头像，是需要你事先到Gravatar的网站注册并上传的，否则，在这个网站上，就只会显示成一个默认的头像。&lt;/p>
@@ -2303,19 +2488,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker-compose up -d
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>访问：&lt;code>http:服务ip:8384&lt;/code> 即可。&lt;/p></description></item><item><title>10个可以免费白嫖VPS、云服务器的网站！给大家都罗列出来了….</title><link>https://jimugou.com/post/043/</link><pubDate>Wed, 09 Aug 2023 22:28:32 +0800</pubDate><guid>https://jimugou.com/post/043/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/ff30b428f4733701436f1ed9403985f3.webp" alt="">&lt;/p>
-&lt;p>1.LinuxOne （无需信用卡）：【&lt;strong>&lt;a href="https://linuxone.cloud.marist.edu/#/login">链接&lt;/a>&lt;/strong>】 需要按视频教程的步骤进行设置。&lt;/p>
-&lt;p>2.Hax VPS （无需信用卡）：【&lt;strong>&lt;a href="https://hax.co.id/">链接&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>3.Oracle Cloud 甲骨文云：【&lt;a href="https://www.freedidi.com/6075.html">&lt;strong>链接和工具&lt;/strong>&lt;/a>】&lt;/p>
-&lt;p>4.AWS 亚马逊云：【&lt;strong>&lt;a href="https://www.freedidi.com/7568.html">注册链接&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>5.Vultr：&lt;strong>注册首充35刀就送100美元&lt;/strong>【&lt;strong>&lt;a href="https://www.vultr.com/?ref=8941239-8H">优惠链接&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>6.GCP 谷歌云 ：【&lt;strong>&lt;a href="https://cloud.google.com/">官方链接&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>7.Linode：【&lt;strong>&lt;a href="https://linode.gvw92c.net/1re6ng">链接直达&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>8.Ditital Ocean：&lt;strong>充值25刀可以获得额外200美元&lt;/strong>【&lt;strong>&lt;a href="https://m.do.co/c/6769296f9fda">优惠链接&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>9.Kamatera：【&lt;strong>&lt;a href="https://www.kamatera.com/express/compute/">注册链接&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>10.CIVO： 【&lt;strong>&lt;a href="https://www.civo.com/">官方链接&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>11.Evolution Host：【&lt;a href="https://evolution-host.com/free-vps.php">&lt;strong>申请链接&lt;/strong>&lt;/a>】&lt;/p>
-&lt;p>连接VPS、云服务器的工具：&lt;/p>
-&lt;p>1.WinSCP：&lt;a href="https://winscp.net/">https://winscp.net&lt;/a>&lt;/p>
-&lt;p>2.Putty：&lt;a href="https://www.putty.org/">https://www.putty.org&lt;/a>&lt;/p>
-&lt;p>3.tabby: &lt;a href="https://tabby.sh/">https://tabby.sh/&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;p>访问：&lt;code>http:服务ip:8384&lt;/code> 即可。&lt;/p></description></item></channel></rss>
