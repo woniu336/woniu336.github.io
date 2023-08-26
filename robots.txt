@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://jimugou.com/sitemap.xml
+Sitemap: https://blog.taoshuge.eu.org/sitemap.xml

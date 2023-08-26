@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 24 Aug 2023 14:05:35 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>使用Nginx反向代理，自建CDN加速节点</title><link>https://jimugou.com/post/064/</link><pubDate>Thu, 24 Aug 2023 14:05:35 +0800</pubDate><guid>https://jimugou.com/post/064/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 24 Aug 2023 14:05:35 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>使用Nginx反向代理，自建CDN加速节点</title><link>https://blog.taoshuge.eu.org/post/064/</link><pubDate>Thu, 24 Aug 2023 14:05:35 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/064/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
 &lt;h3 id="1安装nginx">1、安装Nginx&lt;/h3>
 &lt;p>&lt;a href="https://lnmp.org/install.html">这里使用的是军哥的LNMP&lt;/a> &lt;em>单独安装Nginx&lt;/em>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -183,7 +183,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>你也可以使用多台&lt;code>VPS&lt;/code>，利用&lt;code>CloudXNS&lt;/code>智能解析，将不同地区的&lt;code>DNS&lt;/code>解析到最近的&lt;code>VPS&lt;/code>上，进行&lt;code>CND&lt;/code>加速。&lt;/p></description></item><item><title>Gravatar头像 镜像地址大全</title><link>https://jimugou.com/post/063/</link><pubDate>Thu, 24 Aug 2023 12:32:50 +0800</pubDate><guid>https://jimugou.com/post/063/</guid><description>&lt;h2 id="介绍">介绍&lt;/h2>
+&lt;/div>&lt;p>你也可以使用多台&lt;code>VPS&lt;/code>，利用&lt;code>CloudXNS&lt;/code>智能解析，将不同地区的&lt;code>DNS&lt;/code>解析到最近的&lt;code>VPS&lt;/code>上，进行&lt;code>CND&lt;/code>加速。&lt;/p></description></item><item><title>Gravatar头像 镜像地址大全</title><link>https://blog.taoshuge.eu.org/post/063/</link><pubDate>Thu, 24 Aug 2023 12:32:50 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/063/</guid><description>&lt;h2 id="介绍">介绍&lt;/h2>
 &lt;p>当我们在很多博客或者网站留言，评论的时候会看到有的人头像很酷很个性化，但是这个博客和网站本身并没有提供设置头像的功能，感觉有点神奇，那么是怎么做到的呢？&lt;code>其实这是使用了Gravatar&lt;/code>。&lt;/p>
 &lt;p>Gravatar，全称&lt;code>Globally Recognized Avatar&lt;/code>。翻译成中文为&lt;code>全球通用头像&lt;/code>。&lt;/p>
 &lt;p>Gravatar的概念首先是在国外的独立WordPress博客中兴起的，当你到任何一个支持Gravatar的网站留言时，这个网站都会根据你所提供的Email地址为你显示出匹配的头像。当然，这个头像，是需要你事先到Gravatar的网站注册并上传的，否则，在这个网站上，就只会显示成一个默认的头像。&lt;/p>
@@ -215,7 +215,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- 极客族：&lt;span style="color:#666">[&lt;/span>https://sdn.geekzu.org/avatar/&lt;span style="color:#666">]&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Git配置、提交到多个远程仓库</title><link>https://jimugou.com/post/062/</link><pubDate>Tue, 22 Aug 2023 11:03:25 +0800</pubDate><guid>https://jimugou.com/post/062/</guid><description>&lt;p>优雅地配置并将代码推&lt;code>送至多个远程仓库&lt;/code>，如 GitHub 和 Gitee，是一项重要的开发实践。通过巧妙配置 Git，你可以无缝管理多个代码托管平台。&lt;/p>
+&lt;/div></description></item><item><title>Git配置、提交到多个远程仓库</title><link>https://blog.taoshuge.eu.org/post/062/</link><pubDate>Tue, 22 Aug 2023 11:03:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/062/</guid><description>&lt;p>优雅地配置并将代码推&lt;code>送至多个远程仓库&lt;/code>，如 GitHub 和 Gitee，是一项重要的开发实践。通过巧妙配置 Git，你可以无缝管理多个代码托管平台。&lt;/p>
 &lt;p>在&lt;code>gitee&lt;/code>平台,你可以将&lt;code>github&lt;/code>上的项目导入进来,只需要填上github仓库 &lt;code>URL&lt;/code>即可.非常方便&lt;/p>
 &lt;h2 id="同时提交到github和gitee">同时提交到github和gitee&lt;/h2>
 &lt;h2 id="方法一">方法一&lt;/h2>
@@ -274,7 +274,7 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push -f origin --all
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>CloudFlare Tunnel 内网穿透和反向代理</title><link>https://jimugou.com/post/061/</link><pubDate>Mon, 21 Aug 2023 06:02:09 +0800</pubDate><guid>https://jimugou.com/post/061/</guid><description>&lt;p>将您的本地服务扩展到全球网络：&lt;code>Cloudflare Tunnel&lt;/code>的魔力&lt;/p>
+&lt;/div></description></item><item><title>CloudFlare Tunnel 内网穿透和反向代理</title><link>https://blog.taoshuge.eu.org/post/061/</link><pubDate>Mon, 21 Aug 2023 06:02:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/061/</guid><description>&lt;p>将您的本地服务扩展到全球网络：&lt;code>Cloudflare Tunnel&lt;/code>的魔力&lt;/p>
 &lt;p>&lt;code>Cloudflare Tunnel&lt;/code>是您连接全球网络的完美伙伴。无论您是个人开发者还是企业用户，通过Cloudflare Tunnel，您可以轻松将您的&lt;code>本地或电脑上&lt;/code>的服务提供给全球用户。这款强大的工具可以安全地将您的服务引导到&lt;code>Cloudflare的分布式&lt;/code>网络中，确保数据的安全性和隐私。通过加密通信和强大的安全功能，您的Web服务将免受恶意攻击和数据泄露的威胁。&lt;/p>
 &lt;h2 id="1下载与安装">1.下载与安装&lt;/h2>
 &lt;p>安装教程: &lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/install-and-setup/tunnel-guide/local/">点击打开&lt;/a>&lt;/p>
@@ -454,7 +454,7 @@
 &lt;p>另外，毕竟是穿透到国外，CF什么速度懂得都懂，跨境速度就挺差，国内穿透还是可以考虑阿里的钉钉免费内网穿透，走的阿里BGP（海外主电信副联通）&lt;/p>
 &lt;h1 id="参考文档">参考文档&lt;/h1>
 &lt;p>&lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/create-tunnel">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/create-tunnel&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/trycloudflare">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/trycloudflare&lt;/a>&lt;/p></description></item><item><title>利用Cloudflare Tunnel为Uptime Kuma设置反向代理</title><link>https://jimugou.com/post/060/</link><pubDate>Sun, 20 Aug 2023 13:57:08 +0800</pubDate><guid>https://jimugou.com/post/060/</guid><description>&lt;h2 id="描述">描述&lt;/h2>
+&lt;p>&lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/trycloudflare">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/trycloudflare&lt;/a>&lt;/p></description></item><item><title>利用Cloudflare Tunnel为Uptime Kuma设置反向代理</title><link>https://blog.taoshuge.eu.org/post/060/</link><pubDate>Sun, 20 Aug 2023 13:57:08 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/060/</guid><description>&lt;h2 id="描述">描述&lt;/h2>
 &lt;p>这是迄今为止我见过的最简单的反向代理！&lt;/p>
 &lt;p>她就是&lt;code>Cloudflare Tunnel&lt;/code>&lt;/p>
 &lt;p>不用安装Nginx 或 Apache&lt;/p>
@@ -537,7 +537,7 @@
 &lt;h2 id="环境变量">环境变量&lt;/h2>
 &lt;p>或者，您可以通过环境变量设置令牌。cloudflared 将自动启动。&lt;/p>
 &lt;p>通过这种方法，您甚至不需要将容器端口暴露给主机。&lt;/p>
-&lt;p>UPTIME_KUMA_CLOUDFLARED_TOKEN=&lt;code>&amp;lt;your token&amp;gt;&lt;/code>&lt;/p></description></item><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://jimugou.com/post/059/</link><pubDate>Sun, 20 Aug 2023 13:05:54 +0800</pubDate><guid>https://jimugou.com/post/059/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>UPTIME_KUMA_CLOUDFLARED_TOKEN=&lt;code>&amp;lt;your token&amp;gt;&lt;/code>&lt;/p></description></item><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://blog.taoshuge.eu.org/post/059/</link><pubDate>Sun, 20 Aug 2023 13:05:54 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/059/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>&lt;code>Cloudflare R2&lt;/code>存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。Cloudflare R2存储&lt;code>流量不收费&lt;/code>，收费的是&lt;strong>存储空间&lt;/strong>和&lt;strong>请求次数&lt;/strong>。A类操作和B类操作分开收费，&lt;code>上传&lt;/code>属于A类操作，&lt;code>下载和访问&lt;/code>属于B类操作。&lt;/p>
 &lt;table>
 &lt;thead>
@@ -605,7 +605,7 @@
 &lt;p>假如你在cf里面托管有域名的话，可以直接在R2存储桶的设置界面设置自定义域名，填写一个二级域名以后不需要自己去设置dns，cf就会自动帮你映射好。&lt;/p>
 &lt;p>然后就可以顺路把R2.dev 子域给关了。&lt;/p>
 &lt;p>记得到时候在picgo里面自定义域名也需要加后缀，就像这样 https://你的自定义域名/你的存储桶名&lt;/p>
-&lt;p>最后，推荐大家使用以下picgo的二开项目PICLIST，直接去github搜就行，相比picgo多了一个自带的图片管理功能，可以对图片进行有损/无损压缩和变换格式，以及添加水印。还多了个管理功能，可以通过设置以后直接管理你上传的文件。&lt;/p></description></item><item><title>GitHub Actions自动构建Hugo并同步到腾讯COS</title><link>https://jimugou.com/post/058/</link><pubDate>Sat, 19 Aug 2023 19:28:45 +0800</pubDate><guid>https://jimugou.com/post/058/</guid><description>&lt;p>借助强大的 &lt;code>Github Action&lt;/code>，我们能够轻松地实现博客的自动化构建与部署，让整个流程更加优雅高效。在这个过程中，我们选用了 &lt;code>Hugo&lt;/code> 这一优秀的工具，它与 hexo 一样，都是出色的静态博客生成器。&lt;/p>
+&lt;p>最后，推荐大家使用以下picgo的二开项目PICLIST，直接去github搜就行，相比picgo多了一个自带的图片管理功能，可以对图片进行有损/无损压缩和变换格式，以及添加水印。还多了个管理功能，可以通过设置以后直接管理你上传的文件。&lt;/p></description></item><item><title>GitHub Actions自动构建Hugo并同步到腾讯COS</title><link>https://blog.taoshuge.eu.org/post/058/</link><pubDate>Sat, 19 Aug 2023 19:28:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/058/</guid><description>&lt;p>借助强大的 &lt;code>Github Action&lt;/code>，我们能够轻松地实现博客的自动化构建与部署，让整个流程更加优雅高效。在这个过程中，我们选用了 &lt;code>Hugo&lt;/code> 这一优秀的工具，它与 hexo 一样，都是出色的静态博客生成器。&lt;/p>
 &lt;p>考虑国内网络环境，我们选择了&lt;code>腾讯云COS&lt;/code>来部署博客，以提供更快速、稳定的访问体验。这个策略让博客的美感与技术有机融合，为读者呈现出精致的阅读空间。&lt;/p>
 &lt;h3 id="准备工作">准备工作：&lt;/h3>
 &lt;ol>
@@ -845,7 +845,7 @@
 &lt;p>&lt;code>SOURCE_DIR&lt;/code>您想要同步/上传到 B2 的本地目录。例如，&lt;code>./public&lt;/code>&lt;/p>
 &lt;p>&lt;code>B2_BUCKET&lt;/code>您要同步到的存储桶的名称。例如，&lt;code>my_files&lt;/code>&lt;/p>
 &lt;p>&lt;code>B2_APPKEY_ID&lt;/code>您的 Backblaze 应用程序密钥 ID。&lt;a href="https://secure.backblaze.com/app_keys.htm">在这里生成它。&lt;/a>&lt;/p>
-&lt;p>&lt;code>B2_APPKEY&lt;/code>您的 Backblaze 应用程序密钥 — 又名“秘密”密钥。&lt;a href="https://secure.backblaze.com/app_keys.htm">在这里生成它。&lt;/a>&lt;/p></description></item><item><title>使用cosfs挂载腾讯云COS到VPS服务器上</title><link>https://jimugou.com/post/057/</link><pubDate>Sat, 19 Aug 2023 13:09:53 +0800</pubDate><guid>https://jimugou.com/post/057/</guid><description>&lt;h2 id="事前准备">事前准备&lt;/h2>
+&lt;p>&lt;code>B2_APPKEY&lt;/code>您的 Backblaze 应用程序密钥 — 又名“秘密”密钥。&lt;a href="https://secure.backblaze.com/app_keys.htm">在这里生成它。&lt;/a>&lt;/p></description></item><item><title>使用cosfs挂载腾讯云COS到VPS服务器上</title><link>https://blog.taoshuge.eu.org/post/057/</link><pubDate>Sat, 19 Aug 2023 13:09:53 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/057/</guid><description>&lt;h2 id="事前准备">事前准备&lt;/h2>
 &lt;ol>
 &lt;li>
 &lt;p>准备好用于挂载的Bucket，配置好权限&lt;/p>
@@ -920,7 +920,7 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fusermount -u /home/cos
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>发卡网轻松装！独角数卡1分钟安装攻略</title><link>https://jimugou.com/post/056/</link><pubDate>Wed, 16 Aug 2023 13:29:51 +0800</pubDate><guid>https://jimugou.com/post/056/</guid><description>&lt;p>独角数卡是一款精巧的卡密销售系统，具备强大功能。&lt;/p>
+&lt;/div></description></item><item><title>发卡网轻松装！独角数卡1分钟安装攻略</title><link>https://blog.taoshuge.eu.org/post/056/</link><pubDate>Wed, 16 Aug 2023 13:29:51 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/056/</guid><description>&lt;p>独角数卡是一款精巧的卡密销售系统，具备强大功能。&lt;/p>
 &lt;p>您可按照作者提供的文档，依赖 &lt;code>mysql&lt;/code> 和 &lt;code>redis&lt;/code> 进行顺利安装。&lt;/p>
 &lt;p>或者，您也可以采用本文的&lt;code>Docker镜像&lt;/code>，比官方推荐更优。&lt;/p>
 &lt;p>这个镜像集成了所有组件，一分钟内即可搭建完毕。使您迅速体验到这一卓越系统的便捷和高效。&lt;/p>
@@ -1005,7 +1005,7 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>systemctl &lt;span style="color:#007020">enable&lt;/span> docker
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>⚠️正式上线后一定要将env.conf配置里面的&lt;code>APP_DEBUG&lt;/code>设置为&lt;code>false&lt;/code>⚠️&lt;/p></description></item><item><title>Docker搭建Gogs一个轻量 Git 服务端</title><link>https://jimugou.com/post/055/</link><pubDate>Wed, 16 Aug 2023 11:47:29 +0800</pubDate><guid>https://jimugou.com/post/055/</guid><description>&lt;h2 id="为何选择-gogs-">为何选择 Gogs ？&lt;/h2>
+&lt;/div>&lt;p>⚠️正式上线后一定要将env.conf配置里面的&lt;code>APP_DEBUG&lt;/code>设置为&lt;code>false&lt;/code>⚠️&lt;/p></description></item><item><title>Docker搭建Gogs一个轻量 Git 服务端</title><link>https://blog.taoshuge.eu.org/post/055/</link><pubDate>Wed, 16 Aug 2023 11:47:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/055/</guid><description>&lt;h2 id="为何选择-gogs-">为何选择 Gogs ？&lt;/h2>
 &lt;p>我选择了 &lt;a href="https://gogs.io/">Gogs&lt;/a> 来讲解，主要是出于以下几个原因：&lt;/p>
 &lt;ol>
 &lt;li>Gogs 是一个轻量化的 Git 服务，对系统占用较小。&lt;/li>
@@ -1034,7 +1034,7 @@
 &lt;/div>
 &lt;/div>&lt;h2 id="如何使用-gogs">如何使用 Gogs&lt;/h2>
 &lt;p>使用 Gogs 创建仓库和 Github 类似，注册账户，创建仓库……图形化界面总是容易让人理解。这里就不再赘述了。&lt;/p>
-&lt;p>不过有一点需要注意。在完成仓库创建后，我们需要通过 git clone 把仓库下载到本地。往常在 Github 中 git clone 仓库后再尝试 push 时会提示用账号密码登录，然后由服务器判别你是否有这个仓库的更多权限，允许你做进一步的操作。&lt;/p></description></item><item><title>手把手教你：Git分支创建与代码提交的细致流程</title><link>https://jimugou.com/post/054/</link><pubDate>Wed, 16 Aug 2023 00:46:03 +0800</pubDate><guid>https://jimugou.com/post/054/</guid><description>&lt;p>其实最基本的流程就是新建分支，在这个分支上改动代码，再提交上去，跟master分支合并。&lt;/p>
+&lt;p>不过有一点需要注意。在完成仓库创建后，我们需要通过 git clone 把仓库下载到本地。往常在 Github 中 git clone 仓库后再尝试 push 时会提示用账号密码登录，然后由服务器判别你是否有这个仓库的更多权限，允许你做进一步的操作。&lt;/p></description></item><item><title>手把手教你：Git分支创建与代码提交的细致流程</title><link>https://blog.taoshuge.eu.org/post/054/</link><pubDate>Wed, 16 Aug 2023 00:46:03 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/054/</guid><description>&lt;p>其实最基本的流程就是新建分支，在这个分支上改动代码，再提交上去，跟master分支合并。&lt;/p>
 &lt;h2 id="1-新建分支">1. 新建分支&lt;/h2>
 &lt;p>首先，在你新建分支之前，你应该在master分支，并且要保证你当前的是最新代码，要不然就是找死，最后提交代码就会出问题。&lt;/p>
 &lt;ol>
@@ -1094,7 +1094,7 @@
 &lt;p>当你跟别人共用一个分支的时候（有时候前端会共用一个分支），如果别人新建了一个分支（此时远端应该已经有了你们要用的分支），你要做的就是把远端的分支拉到自己本地。&lt;br>
 &lt;strong>&lt;code>git fetch origin &amp;lt;分支名&amp;gt;: &amp;lt;分支名&amp;gt;&lt;/code>&lt;/strong>&lt;/p>
 &lt;h2 id="6合并分支">6.合并分支&lt;/h2>
-&lt;p>如果你基于主分支master新建了分支dev，再基于dev分支新建了一个分支test，在test分支开发完成后，需要将test合并到dev分支上。此时，先用&lt;code>git branch&lt;/code> 查看自己在哪个分支上，然后&lt;code>git checkout dev&lt;/code>(切换到需要合并的分支上)，最后&lt;code>git merge test&lt;/code>（在dev分支上执行这句，意思是将test合并到dev分支上）&lt;/p></description></item><item><title>使用Git实现稳定的Obsidian同步方案</title><link>https://jimugou.com/post/053/</link><pubDate>Tue, 15 Aug 2023 21:54:23 +0800</pubDate><guid>https://jimugou.com/post/053/</guid><description>&lt;p>关于 Obsidian 同步这件事，似乎总能让人感到头疼。同步方案不是太少，而是太多。多到你难以辨别哪种方案是最合适自己的。而且有不少同步方法是未经验证的，一些想当然的方案其实并不适合 Obsidian。&lt;/p>
+&lt;p>如果你基于主分支master新建了分支dev，再基于dev分支新建了一个分支test，在test分支开发完成后，需要将test合并到dev分支上。此时，先用&lt;code>git branch&lt;/code> 查看自己在哪个分支上，然后&lt;code>git checkout dev&lt;/code>(切换到需要合并的分支上)，最后&lt;code>git merge test&lt;/code>（在dev分支上执行这句，意思是将test合并到dev分支上）&lt;/p></description></item><item><title>使用Git实现稳定的Obsidian同步方案</title><link>https://blog.taoshuge.eu.org/post/053/</link><pubDate>Tue, 15 Aug 2023 21:54:23 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/053/</guid><description>&lt;p>关于 Obsidian 同步这件事，似乎总能让人感到头疼。同步方案不是太少，而是太多。多到你难以辨别哪种方案是最合适自己的。而且有不少同步方法是未经验证的，一些想当然的方案其实并不适合 Obsidian。&lt;/p>
 &lt;p>这篇文章我想先聊聊 PC 之间的 Obsidian 库同步。也就是不论系统，可以在 Windows、macOS、Linux 之间稳定完成同步的方法：Git 同步方案。&lt;/p>
 &lt;h2 id="准备工作">准备工作&lt;/h2>
 &lt;p>在开始之前，确保你已经安装了Git和Obsidian软件。接下来，我们将一步步进行配置。&lt;/p>
@@ -1202,7 +1202,7 @@
 &lt;p>VSCode 内置了一个非常方便的功能：Timeline，它可以清晰的看到每个文件在每次 Git 提交中的变化情况。&lt;/p>
 &lt;p>你可以在 VSCode 中打开 Obsidian 仓库，在左侧文件目录下方找到“时间线”，就可以回顾这个文件经历了哪些版本了。&lt;/p>
 &lt;h2 id="小结">小结&lt;/h2>
-&lt;p>使用Git实现Obsidian的稳定同步方案需要进行一些准备工作，但它能为你提供可靠的版本管理和同步功能。通过Obsidian Git插件，你可以在Obsidian中轻松地进行备份和同步操作，同时也可以通过VSCode的Timeline功能查看文件的变动历史。无论是个人使用还是团队协作，Git都是一个强大的工具，能够帮助你更好地管理和同步Obsidian笔记库。&lt;/p></description></item><item><title>docker部署mysql并修改其占用内存大小</title><link>https://jimugou.com/post/052/</link><pubDate>Tue, 15 Aug 2023 15:17:31 +0800</pubDate><guid>https://jimugou.com/post/052/</guid><description>&lt;p>因为自己部署服务内存比较小，而mysql在docker初始化就占500M，所以可优化其占用内存大小&lt;/p>
+&lt;p>使用Git实现Obsidian的稳定同步方案需要进行一些准备工作，但它能为你提供可靠的版本管理和同步功能。通过Obsidian Git插件，你可以在Obsidian中轻松地进行备份和同步操作，同时也可以通过VSCode的Timeline功能查看文件的变动历史。无论是个人使用还是团队协作，Git都是一个强大的工具，能够帮助你更好地管理和同步Obsidian笔记库。&lt;/p></description></item><item><title>docker部署mysql并修改其占用内存大小</title><link>https://blog.taoshuge.eu.org/post/052/</link><pubDate>Tue, 15 Aug 2023 15:17:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/052/</guid><description>&lt;p>因为自己部署服务内存比较小，而mysql在docker初始化就占500M，所以可优化其占用内存大小&lt;/p>
 &lt;h3 id="一安装mysql">一.安装mysql&lt;/h3>
 &lt;p>1.下载好镜像&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -1365,7 +1365,7 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker stats
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/8823a3c3155b5abcffa69fc03c6ffcbb.webp" alt="Pasted image 20230815152734">&lt;/p></description></item><item><title>Umami替代品，Plausible网站流量统计工具</title><link>https://jimugou.com/post/051/</link><pubDate>Tue, 15 Aug 2023 03:29:47 +0800</pubDate><guid>https://jimugou.com/post/051/</guid><description>&lt;p>这一期，来介绍另一个流量统计的项目——Plausible。&lt;/p>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/8823a3c3155b5abcffa69fc03c6ffcbb.webp" alt="Pasted image 20230815152734">&lt;/p></description></item><item><title>Umami替代品，Plausible网站流量统计工具</title><link>https://blog.taoshuge.eu.org/post/051/</link><pubDate>Tue, 15 Aug 2023 03:29:47 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/051/</guid><description>&lt;p>这一期，来介绍另一个流量统计的项目——Plausible。&lt;/p>
 &lt;blockquote>
 &lt;p>Plausible Analytics 是一个简单、开源、轻量级（&amp;lt; 1 KB）且注重隐私的 Google Analytics 替代品。Plausible 被超过10,000个付费订阅用户信任，用于提供他们网站和业务洞察力。我们完全独立、自筹资金并自给自足。&lt;/p>
 &lt;/blockquote>
@@ -1527,7 +1527,7 @@
 &lt;/div>&lt;pre tabindex="0">&lt;code>BASE_URL=填你打算给plausible准备的域名，比如https://analytics.baidu.com
 SECRET_KEY_BASE=填刚刚生成的那个密钥
 &lt;/code>&lt;/pre>&lt;p>修改好之后，注意切换成英文输入法，然后按一下 &lt;code>esc&lt;/code>，然后 &lt;code>:wq&lt;/code> 保存退出。&lt;/p>
-&lt;p>更多参数配置，请看文档：&lt;a href="https://plausible.io/docs/self-hosting-configuration">https://plausible.io/docs/self-hosting-configuration&lt;/a>&lt;/p></description></item><item><title>1Panel 是新一代的 Linux 服务器运维管理面板</title><link>https://jimugou.com/post/050/</link><pubDate>Mon, 14 Aug 2023 12:27:00 +0800</pubDate><guid>https://jimugou.com/post/050/</guid><description>&lt;h1 id="在线安装">在线安装&lt;/h1>
+&lt;p>更多参数配置，请看文档：&lt;a href="https://plausible.io/docs/self-hosting-configuration">https://plausible.io/docs/self-hosting-configuration&lt;/a>&lt;/p></description></item><item><title>1Panel 是新一代的 Linux 服务器运维管理面板</title><link>https://blog.taoshuge.eu.org/post/050/</link><pubDate>Mon, 14 Aug 2023 12:27:00 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/050/</guid><description>&lt;h1 id="在线安装">在线安装&lt;/h1>
 &lt;h2 id="1-环境要求">1 环境要求&lt;/h2>
 &lt;p>&lt;strong>安装前请确保您的系统符合安装条件：&lt;/strong>&lt;/p>
 &lt;ul>
@@ -1575,7 +1575,7 @@ SECRET_KEY_BASE=填刚刚生成的那个密钥
 &lt;li>&lt;strong>ssh 登录 1Panel 服务器后，执行 1pctl user-info 命令可获取安全入口（entrance）&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>安装成功后，可使用 &lt;a href="https://1panel.cn/docs/installation/cli/">1pctl&lt;/a> 命令行工具来维护 1Panel&lt;/p>
-&lt;p>&lt;a href="https://1panel.cn/docs/installation/cli/">https://1panel.cn/docs/installation/cli/&lt;/a>&lt;/p></description></item><item><title>好用的LDNMP一键建站脚本工具</title><link>https://jimugou.com/post/048/</link><pubDate>Sat, 12 Aug 2023 17:04:38 +0000</pubDate><guid>https://jimugou.com/post/048/</guid><description>&lt;p>安装下载工具:&lt;/p>
+&lt;p>&lt;a href="https://1panel.cn/docs/installation/cli/">https://1panel.cn/docs/installation/cli/&lt;/a>&lt;/p></description></item><item><title>好用的LDNMP一键建站脚本工具</title><link>https://blog.taoshuge.eu.org/post/048/</link><pubDate>Sat, 12 Aug 2023 17:04:38 +0000</pubDate><guid>https://blog.taoshuge.eu.org/post/048/</guid><description>&lt;p>安装下载工具:&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
@@ -1642,7 +1642,7 @@ top: 0;
 &lt;iframe src="https://www.youtube.com/embed/0o7oH3Dit70" frameborder="no" scrolling="yes"
 allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
 &lt;/iframe>
-&lt;/div></description></item><item><title>迁移 hugo 博客到服务器上</title><link>https://jimugou.com/post/047/</link><pubDate>Sat, 12 Aug 2023 14:00:50 +0800</pubDate><guid>https://jimugou.com/post/047/</guid><description>&lt;p>不管是在腾讯云,阿里云,还是海外vps上部署hugo博客,本教程均适用,详细记录,以备不时之需.&lt;/p>
+&lt;/div></description></item><item><title>迁移 hugo 博客到服务器上</title><link>https://blog.taoshuge.eu.org/post/047/</link><pubDate>Sat, 12 Aug 2023 14:00:50 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/047/</guid><description>&lt;p>不管是在腾讯云,阿里云,还是海外vps上部署hugo博客,本教程均适用,详细记录,以备不时之需.&lt;/p>
 &lt;h2 id="1-场景">1. 场景&lt;/h2>
 &lt;p>&lt;code>ubuntu 20.04&lt;/code>，使用&lt;code>root&lt;/code>账号，创建普通账号，并赋予&lt;code>root&lt;/code>权限。&lt;/p>
 &lt;p>查看系统发行版本，命令如下：&lt;/p>
@@ -1992,7 +1992,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push -f origin master
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘</title><link>https://jimugou.com/post/046/</link><pubDate>Sat, 12 Aug 2023 11:18:50 +0800</pubDate><guid>https://jimugou.com/post/046/</guid><description>&lt;p>实时同步网盘，其实可以选择也挺多的，OneDrive、Google Drive、Dropbox、Box.com、iCloud等都是支持自动同步备份的，只可惜这些网盘很多都是打不开的。国内的坚果云在同步这一块做得不错，但是免费的额度太少了，不能满足大量同步的需要。&lt;/p>
+&lt;/div></description></item><item><title>Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘</title><link>https://blog.taoshuge.eu.org/post/046/</link><pubDate>Sat, 12 Aug 2023 11:18:50 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/046/</guid><description>&lt;p>实时同步网盘，其实可以选择也挺多的，OneDrive、Google Drive、Dropbox、Box.com、iCloud等都是支持自动同步备份的，只可惜这些网盘很多都是打不开的。国内的坚果云在同步这一块做得不错，但是免费的额度太少了，不能满足大量同步的需要。&lt;/p>
 &lt;p>本篇文章要分享的开源免费跨平台的文件同步工具&lt;code>Syncthing&lt;/code>，可以实现实时同步备份搭建个人同步网盘的功能，试用了一下发现Syncthing完全可以替代市面上这些同步网盘。Syncthing可以运行在&lt;code>Windows&lt;/code>、&lt;code>Linux&lt;/code>、&lt;code>MacOS&lt;/code>等全平台上，而且提供了安卓手机APP，功能非常强大。&lt;/p>
 &lt;p>GitHub 项目地址：&lt;a href="https://github.com/syncthing/syncthing">https://github.com/syncthing/syncthing&lt;/a>&lt;/p>
 &lt;p>文档地址：&lt;a href="https://docs.syncthing.net/intro/getting-started.html">https://docs.syncthing.net/intro/getting-started.html&lt;/a>&lt;/p>
@@ -2303,7 +2303,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/div>
 &lt;/div>&lt;h2 id="syncthing-tray-简单小巧的文件同步工具">Syncthing Tray 简单小巧的文件同步工具&lt;/h2>
 &lt;p>点击下载:&lt;/p>
-&lt;p>&lt;a href="https://github.com/Martchus/syncthingtray/releases/download/v1.4.4/syncthingtray-1.4.4-x86_64-w64-mingw32.exe.zip">Syncthing Tray&lt;/a>&lt;/p></description></item><item><title>独角数卡发卡宝塔安装教程</title><link>https://jimugou.com/post/045/</link><pubDate>Sat, 12 Aug 2023 01:01:01 +0800</pubDate><guid>https://jimugou.com/post/045/</guid><description>&lt;p>独角数卡发卡宝塔安装教程详细记录(转载于github)&lt;/p>
+&lt;p>&lt;a href="https://github.com/Martchus/syncthingtray/releases/download/v1.4.4/syncthingtray-1.4.4-x86_64-w64-mingw32.exe.zip">Syncthing Tray&lt;/a>&lt;/p></description></item><item><title>独角数卡发卡宝塔安装教程</title><link>https://blog.taoshuge.eu.org/post/045/</link><pubDate>Sat, 12 Aug 2023 01:01:01 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/045/</guid><description>&lt;p>独角数卡发卡宝塔安装教程详细记录(转载于github)&lt;/p>
 &lt;h2 id="前景概要">前景概要&lt;/h2>
 &lt;pre tabindex="0">&lt;code>⚠️正式上线后一定要将.env配置里面的APP_DEBUG设置为false⚠️`
 `⚠️正式上线后一定要将.env配置里面的APP_DEBUG设置为false⚠️`
@@ -2380,7 +2380,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 启动用户：选择www
 运行目录：选择程序根目录
 启动命令：/www/server/php/你的php版本/bin/php /www/wwwroot/你的网站根目录/artisan queue:work&lt;/p>
-&lt;p>请注意你自己的php版本和网站根目录。不要瞎抄照着我的写？ 注意命令之间的空格。&lt;/p></description></item><item><title>好用免费开源同步工具Syncthing安装教程</title><link>https://jimugou.com/post/044/</link><pubDate>Fri, 11 Aug 2023 15:04:25 +0800</pubDate><guid>https://jimugou.com/post/044/</guid><description>&lt;h2 id="1特点">1.特点&lt;/h2>
+&lt;p>请注意你自己的php版本和网站根目录。不要瞎抄照着我的写？ 注意命令之间的空格。&lt;/p></description></item><item><title>好用免费开源同步工具Syncthing安装教程</title><link>https://blog.taoshuge.eu.org/post/044/</link><pubDate>Fri, 11 Aug 2023 15:04:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/044/</guid><description>&lt;h2 id="1特点">1.特点&lt;/h2>
 &lt;p>&lt;code>Syncthing&lt;/code> 是一个连续的文件同步程序。它可以在两台或更多的计算机之间同步文件。&lt;/p>
 &lt;p>总结下面几个特点：&lt;/p>
 &lt;ul>
