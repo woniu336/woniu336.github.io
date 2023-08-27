@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 24 Aug 2023 14:05:35 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>使用Nginx反向代理，自建CDN加速节点</title><link>https://blog.taoshuge.eu.org/post/064/</link><pubDate>Thu, 24 Aug 2023 14:05:35 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/064/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 27 Aug 2023 23:27:46 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>推荐8个宝藏级的开源软件！来自Github的免费精品项目</title><link>https://blog.taoshuge.eu.org/post/065/</link><pubDate>Sun, 27 Aug 2023 23:27:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/065/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/87400406fde62d7161f6d5c3e000eab7.webp" alt="Pasted image 20230827232940">&lt;/p>
+&lt;p>1.Malware-Patch：阻止 Windows 流氓软体授权的工具。它轻巧、无需后台运行，可用于阻止指定软体的管理员授权。&lt;/p>
+&lt;p>【&lt;strong>&lt;a href="https://github.com/the1812/Malware-Patch/blob/master">开源项目&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>2.Rocket.Chat：一款可自由定制的企业级开源通信平台源码。用它来可以搭建一个功能丰富的通信平台，可自託管做为 Slack 的开源替代品。支持创建频道、团队和讨论等多种不同功能的群聊，消息支持图片、文件、视频和语音，拥有包括 Windows、Linux、macOS、Android 和 iOS 在内的多种客户端。 如果你需要搭建一个安全加密，且具有高度私密性的通信平台，那麽这款开源项目就非常适合你了。&lt;/p>
+&lt;p>【&lt;a href="https://github.com/RocketChat/Rocket.Chat">&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>3.hackingtool：黑客工具全家桶。该项目收录了各种黑客工具，包括破解密码、SQL 注入、钓鱼攻击、XSS、DDos 等。堪称黑客军火库的开源项目啊&lt;br>
+【&lt;strong>&lt;a href="https://github.com/Z4nzu/hackingtool">开源项目&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>4.sniffnet：可轻鬆监控网路流量的工具。这是一个简单、可靠、炫酷的网路监控应用，可以让你一目了然地了解设备的网路流量。&lt;br>
+【&lt;a href="https://github.com/GyulyVGC/sniffnet">&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>5.changedetection ：简单好用的网站变更检测、监控和通知服务。基于 Flask+Selenium 构建的 Web 服务，可以在目标网站发生变化时发出通知，可用于监控商品降价、工作机会、版本发布、最新内容等，支持 Docker 的安装方式。&lt;/p>
+&lt;p>【&lt;a href="https://github.com/dgtlmoon/changedetection.io">&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>6.calibre：一款完全免费开源且功能强大的电子书管理工具。它是集下载、格式转化、制作、管理于一体的电子书工具，比如可以将 txt 文本，转化成包含作者信息和书籍封面的 mobi 文件，制作完成后还可以直接发送到 Kindle 设备上。 支持多种电子书格式，包括EPUB、MOBI、PDF等等。Calibre的功能非常强大，可以帮助用户轻鬆地管理自己的电子书库，包括添加、删除、重命名和搜索等。此外，它还提供了阅读器功能，用户可以在软体内直接阅读电子书，而不需要另外下载阅读器。你还可以可通过插件/扩展实现更多的功能。&lt;/p>
+&lt;p>【&lt;a href="https://github.com/kovidgoyal/calibre">&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>7.Magisk：Android 获取 Root 许可权的工具。它可以快速、无痛地获得 Android 的超级用户许可权，支持 Android 5.0 以上的设备。&lt;br>
+【&lt;strong>&lt;a href="https://github.com/topjohnwu/Magisk">开源项目&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>8.uptime-kuma：一款极简的 uptime 监控工具。该项目可以用来监控服务正常运行时间，它界面美观、支持 Docker 一键部署，提供了中文界面、通知、多状态页面等实用功能。&lt;/p>
+&lt;p>【&lt;strong>&lt;a href="https://github.com/louislam/uptime-kuma">开源项目&lt;/a>&lt;/strong>】&lt;/p></description></item><item><title>使用Nginx反向代理，自建CDN加速节点</title><link>https://blog.taoshuge.eu.org/post/064/</link><pubDate>Thu, 24 Aug 2023 14:05:35 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/064/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
 &lt;h3 id="1安装nginx">1、安装Nginx&lt;/h3>
 &lt;p>&lt;a href="https://lnmp.org/install.html">这里使用的是军哥的LNMP&lt;/a> &lt;em>单独安装Nginx&lt;/em>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -2380,112 +2396,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 启动用户：选择www
 运行目录：选择程序根目录
 启动命令：/www/server/php/你的php版本/bin/php /www/wwwroot/你的网站根目录/artisan queue:work&lt;/p>
-&lt;p>请注意你自己的php版本和网站根目录。不要瞎抄照着我的写？ 注意命令之间的空格。&lt;/p></description></item><item><title>好用免费开源同步工具Syncthing安装教程</title><link>https://blog.taoshuge.eu.org/post/044/</link><pubDate>Fri, 11 Aug 2023 15:04:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/044/</guid><description>&lt;h2 id="1特点">1.特点&lt;/h2>
-&lt;p>&lt;code>Syncthing&lt;/code> 是一个连续的文件同步程序。它可以在两台或更多的计算机之间同步文件。&lt;/p>
-&lt;p>总结下面几个特点：&lt;/p>
-&lt;ul>
-&lt;li>中文友好（支持&lt;code>中文界面&lt;/code>）&lt;/li>
-&lt;li>设置简单，易上手&lt;/li>
-&lt;li>支持 Linux、Windows、macOS（NAS 也可以方便部署）&lt;/li>
-&lt;li>同步效率不错&lt;/li>
-&lt;li>支持版本控制（可以恢复到指定的版本）&lt;/li>
-&lt;li>&lt;code>Docker 部署方便&lt;/code>&lt;/li>
-&lt;li>支持同步加密，保护数据安全（不过咕咕还不知道如果解密，后续可以阅读一下文档，有知道的小伙伴也欢迎留言区留言和大家分享一下）&lt;/li>
-&lt;li>支持一对多、多对一、一对一&lt;/li>
-&lt;li>使用的人比较多，发现问题可以比较容易搜索到解决方案。（毕竟 GitHub 上都有 &lt;code>4 万多的 star&lt;/code>）&lt;/li>
-&lt;/ul>
-&lt;h2 id="2-项目展示">2. 项目展示&lt;/h2>
-&lt;p>GitHub 项目地址：&lt;a href="https://github.com/syncthing/syncthing">https://github.com/syncthing/syncthing&lt;/a>&lt;/p>
-&lt;p>文档地址：&lt;a href="https://docs.syncthing.net/intro/getting-started.html">https://docs.syncthing.net/intro/getting-started.html&lt;/a>&lt;/p>
-&lt;p>客户端下载：&lt;a href="https://github.com/syncthing/syncthing/releases">https://github.com/syncthing/syncthing/releases&lt;/a>&lt;/p>
-&lt;p>本文用的 Docker 镜像：&lt;a href="https://hub.docker.com/r/linuxserver/syncthing">https://hub.docker.com/r/linuxserver/syncthing&lt;/a>&lt;/p>
-&lt;h2 id="3-搭建方式">3. 搭建方式&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt update -y &lt;span style="color:#60a0b0;font-style:italic"># 升级packages &lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt install wget curl sudo vim git &lt;span style="color:#60a0b0;font-style:italic"># 推荐Debian&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>创建一下安装的目录：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir -p /home/data/docker_data/syncthing
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /home/data/docker_data/syncthing
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>nano docker-compose.yml
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;code>docker-compose.yml&lt;/code> 填入以下内容：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-21">21&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>---
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>version: &lt;span style="color:#4070a0">&amp;#34;2.1&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>services:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> syncthing:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> image: lscr.io/linuxserver/syncthing
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> container_name: syncthing
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> hostname: syncthing &lt;span style="color:#60a0b0;font-style:italic">#optional&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> environment:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#bb60d5">PUID&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">1000&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#bb60d5">PGID&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">1000&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#bb60d5">TZ&lt;/span>&lt;span style="color:#666">=&lt;/span>Asia/Shanghai
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> volumes:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - /home/data/docker_data/syncthing/config:/config
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - /home/data/docker_data/syncthing/Documents:/Documents
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - /home/data/docker_data/syncthing/Media:/Media
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ports:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - 8384:8384
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - 22000:22000/tcp
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - 22000:22000/udp
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - 21027:21027/udp
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> restart: unless-stopped
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>没问题的话，&lt;code>ctrl+x&lt;/code> 退出，按 &lt;code>y&lt;/code> 保存，&lt;code>enter&lt;/code> 确认。&lt;/p>
-&lt;p>然后运行：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker-compose up -d
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>访问：&lt;code>http:服务ip:8384&lt;/code> 即可。&lt;/p></description></item></channel></rss>
+&lt;p>请注意你自己的php版本和网站根目录。不要瞎抄照着我的写？ 注意命令之间的空格。&lt;/p></description></item></channel></rss>
