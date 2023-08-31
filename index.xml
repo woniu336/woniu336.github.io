@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 29 Aug 2023 00:12:32 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 acme.sh 申请 Google 的免费 SSL 证书</title><link>https://blog.taoshuge.eu.org/post/066/</link><pubDate>Tue, 29 Aug 2023 00:12:32 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/066/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 31 Aug 2023 23:29:34 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>9款高效实用又非常有趣的软件！完全免费开源！！</title><link>https://blog.taoshuge.eu.org/post/067/</link><pubDate>Thu, 31 Aug 2023 23:29:34 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/067/</guid><description>
+&lt;link rel="stylesheet" href="https://blog.taoshuge.eu.org/css/hugo-easy-gallery.css" />
+&lt;div class="box">
+&lt;figure itemprop="associatedMedia"
+itemscope itemtype="http://schema.org/ImageObject" >
+&lt;div class="img">
+&lt;img itemprop="thumbnail" src="" />
+&lt;/div>
+&lt;/figure>
+&lt;/div>
+&lt;p>1、FreeRDP：完全免费的远程桌面管理工具。通过它可以轻松实现 macOS 或 Linux 远程操作 Windows 桌面系统反之亦可，使用起来十分方便和流畅。&lt;br>
+【&lt;strong>&lt;a href="https://github.com/FreeRDP/FreeRDP">开源软件&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>2、min：一款最小化的浏览器。它是仅包含搜索、书签、密码管理、广告屏蔽器等最基础功能的极简浏览器，适用于 Windows、Linux、macOS 操作系统。&lt;/p>
+&lt;p>【&lt;strong>&lt;a href="https://github.com/minbrowser/min">开源软件&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>3.wechat-backup：本地备份微信聊天记录的工具。它能够将手机上的微信聊天记录，解密后保存在电脑上，支持查看、搜索、恢复微信聊天记录。&lt;/p>
+&lt;p>【&lt;strong>&lt;a href="https://github.com/greycodee/wechat-backup">开源软件&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>4、ServerStatus：多服务器云监控。轻松监控多台服务器状态的工具，用于解决多个不同平台下的服务器状态监控问题&lt;/p>
+&lt;p>【&lt;a href="https://github.com/cppla/ServerStatus">&lt;strong>开源软件&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>5.vanblog：实用的一站式个人博客系统。一款简洁优雅的博客系统，追求极致响应速度和博客体验。快到极致的响应速度，Lighthouse 接近满分。前后台均为响应式，支持 Docker 一键部署。前台为静态页面并支持增量渲染，按需构建更新页面。拒绝花里胡哨的功能，专注于个人博客场景。&lt;/p>
+&lt;p>【&lt;a href="https://github.com/Mereithhh/vanblog">&lt;strong>开源软件&lt;/strong>&lt;/a>】&lt;/p>
+&lt;hr>
+&lt;p>不同的【&lt;a href="https://vanblog.mereith.com/guide/get-started.html#%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82">安装方式&lt;/a>】&lt;/p>
+&lt;p>6.TowerDefense-GameFramework-Demo：开源的塔防游戏示例。此项目主要用来上手和学习基于 Unity 引擎的游戏框架 GameFramework，感兴趣的同学可以把玩一下。游戏共有五个关卡，玩家通过击杀敌人和建造能量塔获取资源，消耗能量建造防御塔阻止敌人攻击基地&lt;/p>
+&lt;p>【&lt;strong>&lt;a href="https://github.com/DrFlower/TowerDefense-GameFramework-Demo">开源软件&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>7.nightingale：开源的云原生监控系统。支持 Docker 等多种部署方式，集数据采集、监控告警、可视化为一体的企业级监控平台。借助高性能时序库，可以满足数亿时间线的采集、存储和告警分析的场景。该项目已在上千家企业部署落地，经历了各种生产环境的检验。&lt;/p>
+&lt;p>【&lt;a href="https://github.com/ccfos/nightingale/blob/main/README_zh.md">&lt;strong>开源软件&lt;/strong>&lt;/a>】&lt;/p>
+&lt;p>8.ghidra：一款免费开源的软件逆向分析工具。该项目由美国国安局开源，可用于分析编译后的代码。&lt;/p>
+&lt;p>【&lt;strong>&lt;a href="https://github.com/NationalSecurityAgency/ghidra">开源软件&lt;/a>&lt;/strong>】&lt;/p>
+&lt;p>9.HackBrowserData：一款浏览器数据导出工具。能够导出本地浏览器的密码、历史记录、Cookie、书签、下载记录、localStorage 等数据的命令行工具，支持多平台下的多种主流浏览器。&lt;/p>
+&lt;p>【&lt;strong>&lt;a href="https://github.com/moonD4rk/HackBrowserData">开源软件&lt;/a>&lt;/strong>】&lt;/p></description></item><item><title>使用 acme.sh 申请 Google 的免费 SSL 证书</title><link>https://blog.taoshuge.eu.org/post/066/</link><pubDate>Tue, 29 Aug 2023 00:12:32 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/066/</guid><description>&lt;blockquote>
 &lt;p>上个月 30 日，Google Cloud 在其博客发表文章 &lt;a href="https://cuojue.org/go/#aHR0cHM6Ly9jbG91ZC5nb29nbGUuY29tL2Jsb2cvcHJvZHVjdHMvaWRlbnRpdHktc2VjdXJpdHkvYXV0b21hdGUtcHVibGljLWNlcnRpZmljYXRlLWxpZmVjeWNsZS1tYW5hZ2VtZW50LXZpYS0tYWNtZS1jbGllbnQtYXBp">Automate Public Certificates Lifecycle Management via RFC 8555 (ACME)&lt;/a> 发布了测试版的自动化公共 CA 管理程序。&lt;br>
 简而言之就是 Google 也开放了类似于 Let’s Encrypt 的免费证书申请。并且和 Google 各项服务使用相同的根证书。&lt;/p>
 &lt;/blockquote>
@@ -2441,315 +2470,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push -f origin master
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘</title><link>https://blog.taoshuge.eu.org/post/046/</link><pubDate>Sat, 12 Aug 2023 11:18:50 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/046/</guid><description>&lt;p>实时同步网盘，其实可以选择也挺多的，OneDrive、Google Drive、Dropbox、Box.com、iCloud等都是支持自动同步备份的，只可惜这些网盘很多都是打不开的。国内的坚果云在同步这一块做得不错，但是免费的额度太少了，不能满足大量同步的需要。&lt;/p>
-&lt;p>本篇文章要分享的开源免费跨平台的文件同步工具&lt;code>Syncthing&lt;/code>，可以实现实时同步备份搭建个人同步网盘的功能，试用了一下发现Syncthing完全可以替代市面上这些同步网盘。Syncthing可以运行在&lt;code>Windows&lt;/code>、&lt;code>Linux&lt;/code>、&lt;code>MacOS&lt;/code>等全平台上，而且提供了安卓手机APP，功能非常强大。&lt;/p>
-&lt;p>GitHub 项目地址：&lt;a href="https://github.com/syncthing/syncthing">https://github.com/syncthing/syncthing&lt;/a>&lt;/p>
-&lt;p>文档地址：&lt;a href="https://docs.syncthing.net/intro/getting-started.html">https://docs.syncthing.net/intro/getting-started.html&lt;/a>&lt;/p>
-&lt;p>客户端下载：&lt;a href="https://github.com/syncthing/syncthing/releases">https://github.com/syncthing/syncthing/releases&lt;/a>&lt;/p>
-&lt;h2 id="开始安装">开始安装&lt;/h2>
-&lt;p>&lt;code>推荐使用普通用户安装,请往下看&lt;/code>&lt;/p>
-&lt;p>&lt;code>本文只记录在ubuntu20.04上怎么搭建&lt;/code>&lt;/p>
-&lt;p>更新一下组件&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt update -y &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> apt install -y curl &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> apt install -y socat &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> apt install wget -y
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>然后:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://github.com/syncthing/syncthing/releases/download/v1.23.7/syncthing-linux-amd64-v1.23.7.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -zxvf syncthing-linux-amd64-v1.23.7.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> syncthing-linux-amd64-v1.23.7
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cp syncthing /usr/local/bin/
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>接着:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>syncthing
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>使用&lt;code>CTRL + C&lt;/code>停止运行,修改文件&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>vim /root/.config/syncthing/config.xml
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>将&lt;code>127.0.0.1:8384&lt;/code>改成 &lt;code>0.0.0.0:8384&lt;/code> 即可,保存退出&lt;/p>
-&lt;p>再输入&lt;code>syncthing&lt;/code>运行它。然后在浏览器输入&lt;code>服务器IP:8384&lt;/code>访问。&lt;/p>
-&lt;h2 id="保持后台运行">保持后台运行&lt;/h2>
-&lt;p>对于VPS主机运行syncthing如果关闭终端，syncthing也会停止运行，可以将syncthing放在后台，命令如下：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>nohup syncthing &amp;amp;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="开机自动启动并保持运行">开机自动启动并保持运行&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>vim /usr/lib/systemd/system/syncthing@.service
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>加入以下内容&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-13">13&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>Unit&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">Description&lt;/span>&lt;span style="color:#666">=&lt;/span>Syncthing - Open Source Continuous File Synchronization &lt;span style="color:#007020;font-weight:bold">for&lt;/span> %I
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">Documentation&lt;/span>&lt;span style="color:#666">=&lt;/span>man:syncthing&lt;span style="color:#666">(&lt;/span>1&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">After&lt;/span>&lt;span style="color:#666">=&lt;/span>network.target
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>Service&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">User&lt;/span>&lt;span style="color:#666">=&lt;/span>%i
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">ExecStart&lt;/span>&lt;span style="color:#666">=&lt;/span>/usr/local/bin/syncthing -no-browser -no-restart -logflags&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">Restart&lt;/span>&lt;span style="color:#666">=&lt;/span>on-failure
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">SuccessExitStatus&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">3&lt;/span> &lt;span style="color:#40a070">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">RestartForceExitStatus&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">3&lt;/span> &lt;span style="color:#40a070">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>Install&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">WantedBy&lt;/span>&lt;span style="color:#666">=&lt;/span>multi-user.target
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>然后保存退出，之后就可以通过systemd进行启动和管理了，注意注意把命令里面的&lt;code>root&lt;/code>替换成自己的用户名：&lt;/p>
-&lt;p>启动&lt;code>syncthing&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>systemctl start syncthing@root.service
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>设置&lt;code>syncthing&lt;/code>开机自启&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>systemctl &lt;span style="color:#007020">enable&lt;/span> syncthing@root.service
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>查看syncthing运行状态&lt;/p>
-&lt;pre tabindex="0">&lt;code>systemctl status syncthing@root.service
-&lt;/code>&lt;/pre>&lt;p>停止syncthing&lt;/p>
-&lt;pre tabindex="0">&lt;code>systemctl stop syncthing@root.service
-&lt;/code>&lt;/pre>&lt;p>关闭syncthing开机自启&lt;/p>
-&lt;pre tabindex="0">&lt;code>systemctl disable syncthing@root.service
-&lt;/code>&lt;/pre>&lt;p>或者可以用&lt;code>--user&lt;/code>参数来运行&lt;/p>
-&lt;pre tabindex="0">&lt;code>1systemctl –root start syncthing
-&lt;/code>&lt;/pre>&lt;h2 id="禁止ip访问">禁止IP访问&lt;/h2>
-&lt;p>如果你已经成功绑定了域名到&lt;code>Syncthing&lt;/code>，想要禁止使用IP访问Syncthing，那么把配置文件作如下修改即可。&lt;/p>
-&lt;p>把端口设置成：0.0.0.0:8384，那么syncthing可以通过ip进行访问 。&lt;br>
-把端口设置成：127.0.0.1:8384，那么只能通过域名访问，这个时候只有通过nginx反向代理才能访问到127.0.0.1这个本地地址。&lt;/p>
-&lt;h2 id="更新-syncthing">更新 Syncthing&lt;/h2>
-&lt;p>把 &lt;code>v1.23.7&lt;/code> 改成最新版本即可&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-11">11&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>wget https://github.com/syncthing/syncthing/releases/download/v1.23.7/syncthing-linux-amd64-v1.23.7.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -zxvf syncthing-linux-amd64-v1.23.7.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> syncthing-linux-amd64-v1.23.7
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl stop syncthing@root.service
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cp syncthing /usr/local/bin/
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl start syncthing@root.service
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="使用普通用户安装">使用普通用户安装&lt;/h2>
-&lt;p>如果以 root 用户启动 Syncthing 会被提示不建议在 root 用户下运行，所以在正式使用之前，&lt;/p>
-&lt;h3 id="建立新用户">建立新用户&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>adduser sync
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>设置密码 然后一路回车默认 最后 &lt;code>y&lt;/code>&lt;/p>
-&lt;p>&lt;code>切换用户:&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-15-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-15-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo su sync
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;code>进入主目录:&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-16-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-16-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /home/sync
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="开始安装-1">开始安装:&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-6">6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-7">7&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>wget https://github.com/syncthing/syncthing/releases/download/v1.23.7/syncthing-linux-amd64-v1.23.7.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -zxvf syncthing-linux-amd64-v1.23.7.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> syncthing-linux-amd64-v1.23.7
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cp syncthing /home/sync/syncthing
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>运行一次 &lt;code>syncthing&lt;/code>，程序会将配置文件释放出来。&lt;/p>
-&lt;p>停止运行程序，先编辑配置文件。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>vim /home/sync/.config/syncthing/config.xml
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>找到 &lt;code>&amp;lt;address&amp;gt;&lt;/code> 这行，将 &lt;code>127.0.0.1&lt;/code> 改为 &lt;code>0.0.0.0&lt;/code>，这样就可以从公网访问 Web UI 了，保存退出。&lt;/p>
-&lt;p>再次直接运行 &lt;code>syncthing&lt;/code>，然后在地址栏输入 &lt;code>http://w.x.y.z:8384/&lt;/code> 进入 Syncthing 的 Web UI 管理界面，第一次访问时会提醒设置账号及密码，建议设置并重启 Syncthing。&lt;/p>
-&lt;p>这时候 &lt;code>syncthing&lt;/code> 就已经可以开始正常使用了，如果使用了防火墙，在过程中对相应的规则进行放行。&lt;/p>
-&lt;p>那么将执行以下命令：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>iptables -I INPUT -p tcp --dport &lt;span style="color:#40a070">8384&lt;/span> -j ACCEPT
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="开机自启">开机自启&lt;/h3>
-&lt;p>切换回&lt;code>root&lt;/code>: sudo su root&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-20-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-20-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vim /lib/systemd/system/syncthing.service
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-21">21&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>Unit&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">Description&lt;/span>&lt;span style="color:#666">=&lt;/span>Syncthing
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">Documentation&lt;/span>&lt;span style="color:#666">=&lt;/span>man:syncthing&lt;span style="color:#666">(&lt;/span>1&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">After&lt;/span>&lt;span style="color:#666">=&lt;/span>network.target
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>Service&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">User&lt;/span>&lt;span style="color:#666">=&lt;/span>sync
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">ExecStart&lt;/span>&lt;span style="color:#666">=&lt;/span>/home/sync/syncthing -no-browser -no-restart -logflags&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">Restart&lt;/span>&lt;span style="color:#666">=&lt;/span>on-failure
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">SuccessExitStatus&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">3&lt;/span> &lt;span style="color:#40a070">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">RestartForceExitStatus&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">3&lt;/span> &lt;span style="color:#40a070">4&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># Hardening&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">ProtectSystem&lt;/span>&lt;span style="color:#666">=&lt;/span>full
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">PrivateTmp&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">SystemCallArchitectures&lt;/span>&lt;span style="color:#666">=&lt;/span>native
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">MemoryDenyWriteExecute&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">NoNewPrivileges&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020">true&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>Install&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">WantedBy&lt;/span>&lt;span style="color:#666">=&lt;/span>multi-user.target
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>最后:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-22-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-22-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-22-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-22-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-22-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-22-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>systemctl &lt;span style="color:#007020">enable&lt;/span> syncthing
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>systemctl start syncthing
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="syncthing-tray-简单小巧的文件同步工具">Syncthing Tray 简单小巧的文件同步工具&lt;/h2>
-&lt;p>点击下载:&lt;/p>
-&lt;p>&lt;a href="https://github.com/Martchus/syncthingtray/releases/download/v1.4.4/syncthingtray-1.4.4-x86_64-w64-mingw32.exe.zip">Syncthing Tray&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
