@@ -1,4 +1,121 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 01 Sep 2023 22:54:09 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>腾讯Gtimg图床-苹果cms教程</title><link>https://blog.taoshuge.eu.org/post/068/</link><pubDate>Fri, 01 Sep 2023 22:54:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/068/</guid><description>&lt;p>&lt;a href="https://gouya.lanzouf.com/iGgeI07zodmh">安装插件需要先安装盒子，安装插件，更新插件点击这里，新萌必看，不看必出错&lt;/a>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 03 Sep 2023 10:09:30 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub加速终极教程</title><link>https://blog.taoshuge.eu.org/post/069/</link><pubDate>Sun, 03 Sep 2023 10:09:30 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/069/</guid><description>&lt;p>本文意图解决使用 GitHub 访问(https) 或者 git clone（https or ssh）慢的问题。在此分享我的方法，我所了解的 GitHub 加速最佳方案。&lt;/p>
+&lt;blockquote>
+&lt;p>前提是，你的木弟子应该还行，木弟子越好，GitHub 体验越好&lt;/p>
+&lt;/blockquote>
+&lt;p>很多文章没有讲全面，只讲了 &lt;code>http proxy&lt;/code>，而没有讲 &lt;code>ssh proxy&lt;/code>。事实上大部分程序员使用 GitHub 都会使用 SSH keys（普通用户可能就不会了），在本机生成 &lt;code>rsa&lt;/code> 公私钥(其他的类型还有 dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk)，然后把公钥内容拷贝、设置进 GitHub。&lt;/p>
+&lt;p>所以程序员 clone 一个仓库一般是 ssh clone 而不是 https clone&lt;/p>
+&lt;p>1&lt;/p>
+&lt;p>&lt;code>$ git clone git@github.com:xxx/yyy.git&lt;/code>&lt;/p>
+&lt;p>如果你不配置 ssh 代理或者没有透明代理之类的网络环境（其实还有一些代理工具，不过更加小众），直接硬拖到本地大概率是很慢的。如果使用 http 代理，如果木弟子质量好，其实也还行&lt;/p>
+&lt;p>1&lt;/p>
+&lt;p>&lt;code>$ git clone https://github.com/xxx/yyy.git&lt;/code>&lt;/p>
+&lt;p>但这样不如 ssh clone 稳定。下面我们来设置 &lt;code>http proxy&lt;/code> 和 &lt;code>ssh proxy&lt;/code>。&lt;/p>
+&lt;h2 id="设置-http-proxy">设置 Http Proxy&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git config --global http.proxy socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git config --global https.proxy socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>好了，说回来。但这样配置的话会使本机所有的 git 服务都走了代理，假如你在良心云上（国内主机）部署了自己的 gitea，服务地址 &lt;code>https://gitea.example.com&lt;/code>，那么可以只配置 GitHub 的 http proxy，即&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样做实际上是修改了 &lt;code>~/.gitconfig&lt;/code> 文件，添加了如下内容&lt;/p>
+&lt;pre tabindex="0">&lt;code>[http &amp;#34;https://github.com&amp;#34;]
+proxy = socks5://127.0.0.1:7890
+&lt;/code>&lt;/pre>&lt;h2 id="设置-ssh-proxy">设置 SSH Proxy&lt;/h2>
+&lt;h3 id="linux--macos">Linux &amp;amp; macOS&lt;/h3>
+&lt;p>配置文件在用户家目录下的 .ssh/config 其中 &lt;code>nc&lt;/code> 程序位于 &lt;code>/usr/bin/nc&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6">6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7">7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8">8&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat ~/.ssh/config
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Host github.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Hostname ssh.github.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> IdentityFile /xxx/.ssh/github_id_rsa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> User git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Port &lt;span style="color:#40a070">443&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ProxyCommand nc -v -x 127.0.0.1:7890 %h %p
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="windows">Windows&lt;/h3>
+&lt;p>Win 下与之对应的 netcat 程序是 &lt;code>connect.exe&lt;/code>，程序位于 Git 安装路径 &lt;code>C:\Program Files\Git\mingw64\bin&lt;/code>，win 下推荐使用 &lt;code>Git Bash&lt;/code>，路径也是 Linux style&lt;/p>
+&lt;p>因为 connect 程序内置在 Git 中，只要是正常安装 Git 的电脑环境都有这个程序，在 Git Bash 终端输入 &lt;code>connect&lt;/code> 即可知晓程序路径在 &lt;code>C:\Program Files\Git\mingw64\bin\connect.exe&lt;/code>&lt;/p>
+&lt;p>添加&lt;code>config&lt;/code>文件&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>nano ~/.ssh/config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>配置:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>Host github.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Hostname ssh.github.com
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> IdentityFile ~/.ssh/id_rsa
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> User git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Port &lt;span style="color:#40a070">443&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ProxyCommand &lt;span style="color:#4070a0">&amp;#34;C:\Program Files\Git\mingw64\bin\connect.exe&amp;#34;&lt;/span> -S 127.0.0.1:7890 %h %p
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>按 &lt;code>Ctrl&lt;/code> + &lt;code>O&lt;/code> 保存文件，然后按 &lt;code>Ctrl&lt;/code> + &lt;code>X&lt;/code> 退出。&lt;/p>
+&lt;p>现在，你的 Git 配置已经正确添加到 &lt;code>~/.ssh/config&lt;/code> 文件中，可以在 Bash 中使用 Git 时生效了。&lt;/p>
+&lt;h2 id="一键设置ssh-proxy--windows">一键设置SSH Proxy (windows)&lt;/h2>
+&lt;p>要使用 Bash 命令自动运行并保存上述 SSH 配置到 &lt;code>~/.ssh/config&lt;/code> 文件，你可以使用以下命令：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-6">6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-7">7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-8">8&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat &lt;span style="color:#4070a0">&amp;lt;&amp;lt;EOL &amp;gt;&amp;gt; ~/.ssh/config
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0">Host github.com
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0"> Hostname ssh.github.com
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0"> IdentityFile ~/.ssh/id_rsa
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0"> User git
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0"> Port 443
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0"> ProxyCommand &amp;#34;C:\Program Files\Git\mingw64\bin\connect.exe&amp;#34; -S 127.0.0.1:7890 %h %p
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0">EOL&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>腾讯Gtimg图床-苹果cms教程</title><link>https://blog.taoshuge.eu.org/post/068/</link><pubDate>Fri, 01 Sep 2023 22:54:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/068/</guid><description>&lt;p>&lt;a href="https://gouya.lanzouf.com/iGgeI07zodmh">安装插件需要先安装盒子，安装插件，更新插件点击这里，新萌必看，不看必出错&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>苹果cms盒子云端安装对接后支持在线一键安装苹果cms模板 目前云端安装仅支持苹果cmsv10免费模板，因云端数据存储无法管理的问题苹果cms8 收费模板以及插件不支持云端安装。&lt;/p>
 &lt;/blockquote>
@@ -2110,71 +2227,4 @@ SECRET_KEY_BASE=填刚刚生成的那个密钥
 &lt;li>&lt;strong>ssh 登录 1Panel 服务器后，执行 1pctl user-info 命令可获取安全入口（entrance）&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>安装成功后，可使用 &lt;a href="https://1panel.cn/docs/installation/cli/">1pctl&lt;/a> 命令行工具来维护 1Panel&lt;/p>
-&lt;p>&lt;a href="https://1panel.cn/docs/installation/cli/">https://1panel.cn/docs/installation/cli/&lt;/a>&lt;/p></description></item><item><title>好用的LDNMP一键建站脚本工具</title><link>https://blog.taoshuge.eu.org/post/048/</link><pubDate>Sat, 12 Aug 2023 17:04:38 +0000</pubDate><guid>https://blog.taoshuge.eu.org/post/048/</guid><description>&lt;p>安装下载工具:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>apt update -y  &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> apt install -y curl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>一键脚本工具:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>根目录执行&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nano .bashrc
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>在内容最下方添加这行数据，定义k按键调用&lt;code>kejilion.sh&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">alias&lt;/span> &lt;span style="color:#bb60d5">k&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#39;curl -sS -O https://kejilion.pro/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/4f4f7aea12ec40ecab2446aad75434fb.webp" alt="Pasted image 20230815141922">&lt;/p>
-&lt;p>退出nano编辑器, &lt;code>ctrl+x&lt;/code> &lt;code> y&lt;/code>  回车&lt;/p>
-&lt;p>更新下文件&lt;/p>
-&lt;pre tabindex="0">&lt;code>source ~/.bashrc
-&lt;/code>&lt;/pre>&lt;p>好了，尝试k键召唤科技lion一键脚本工具吧！&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/968a3bc2ead5dd1e347207379deed93e.webp" alt="Pasted image 20230815142106">&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/478388c2efcb07b65699946a1a730b9c.webp" alt="Pasted image 20230813220236">&lt;/p>
-&lt;p>目前只支持&lt;code>Ubuntu&lt;/code>和&lt;code>Debian&lt;/code>系统，暂不支持其它系统！&lt;/p>
-&lt;p>此脚本目前比较基础，会不断进化，整合大家常用的脚本。方便使用。&lt;/p>
-&lt;p>&lt;code>LDNMP&lt;/code>属于原创内容，&lt;code>建站&lt;/code>更方便。&lt;/p>
-&lt;style>
-.meta-media {
-position: relative;
-margin-bottom: 30px;
-display: flex;
-width: 100%;
-height: 0;
-padding-bottom: 75%;
-}
-.video {
-position: absolute;
-width: 100%;
-height: 100%;
-left: 0;
-top: 0;
-}
-&lt;/style>
-&lt;div class="meta-media">
-&lt;iframe src="https://www.youtube.com/embed/0o7oH3Dit70" frameborder="no" scrolling="yes"
-allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
-&lt;/iframe>
-&lt;/div></description></item></channel></rss>
+&lt;p>&lt;a href="https://1panel.cn/docs/installation/cli/">https://1panel.cn/docs/installation/cli/&lt;/a>&lt;/p></description></item></channel></rss>
