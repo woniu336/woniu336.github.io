@@ -33,7 +33,7 @@
 &lt;/div>&lt;p>这样做实际上是修改了 &lt;code>~/.gitconfig&lt;/code> 文件，添加了如下内容&lt;/p>
 &lt;pre tabindex="0">&lt;code>[http &amp;#34;https://github.com&amp;#34;]
 proxy = socks5://127.0.0.1:7890
-&lt;/code>&lt;/pre>&lt;h2 id="设置-ssh-proxy">设置 SSH Proxy&lt;/h2>
+&lt;/code>&lt;/pre>&lt;h2 id="设置-ssh-proxy-推荐">设置 SSH Proxy (推荐)&lt;/h2>
 &lt;h3 id="linux--macos">Linux &amp;amp; macOS&lt;/h3>
 &lt;p>配置文件在用户家目录下的 .ssh/config 其中 &lt;code>nc&lt;/code> 程序位于 &lt;code>/usr/bin/nc&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
