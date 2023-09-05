@@ -72,7 +72,8 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
-&lt;p>git clone 时要使用 https 协议，因为设置的是 HTTPS 代理，所以使用 SSH 克隆还是很慢…&lt;/p>
+&lt;p>git clone 时要使用 https 协议，因为设置的是 HTTPS 代理，所以使用 SSH 克隆还是很慢,
+解决办法: 请看本站 # &lt;code>GitHub加速终极教程&lt;/code>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="设置终端代理">设置终端代理&lt;/h2>
 &lt;p>Windows 用户可以跳过这里了，这边主要是针对 Linux 或 macOS 的终端进行设置&lt;/p>
@@ -155,6 +156,9 @@
 &lt;pre tabindex="0">&lt;code>[http &amp;#34;https://github.com&amp;#34;]
 proxy = socks5://127.0.0.1:7890
 &lt;/code>&lt;/pre>&lt;h2 id="设置-ssh-proxy-推荐">设置 SSH Proxy (推荐)&lt;/h2>
+&lt;blockquote>
+&lt;p>设置ssh代理,可加速 git clone SSH协议下载&lt;/p>
+&lt;/blockquote>
 &lt;h3 id="linux--macos">Linux &amp;amp; macOS&lt;/h3>
 &lt;p>配置文件在用户家目录下的 .ssh/config 其中 &lt;code>nc&lt;/code> 程序位于 &lt;code>/usr/bin/nc&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
