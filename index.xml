@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Sep 2023 10:39:56 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Clash：科学上网的究极解决方案</title><link>https://blog.taoshuge.eu.org/post/070/</link><pubDate>Tue, 05 Sep 2023 10:39:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/070/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Sep 2023 12:47:54 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>使用 squoosh-cli 批量压缩图片</title><link>https://blog.taoshuge.eu.org/post/071/</link><pubDate>Tue, 05 Sep 2023 12:47:54 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/071/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>去年之前，我写博客时并未意识到&lt;code>需要对图片进行压缩&lt;/code>。有时，文章加载的图片太多，其中一些图片过大，导致浏览体验不佳。但后来，我开始使用&lt;code>Squoosh&lt;/code>项目，每次写文章都会压缩配图。主要是因为&lt;code>Squoosh&lt;/code>太出色了，而且还是免费软件。&lt;/p>
+&lt;p>去年，我制作了一个Squoosh的&lt;code>Docker&lt;/code>镜像，可以在本地轻松启动一个图片压缩服务。但当时，我每次都是逐张压缩图片，因为我要为每张图片调整质量，以确保它们在本地存储中具有适当的大小。我自己搭建的图床运行在本地，使用本地SSD进行存储，所以之前的做法也很正常。然而，这次需要批量压缩大量图片让我意识到了批量处理的重要性。尽管可能无法完美平衡图片压缩后的&lt;code>质量和存储大小&lt;/code>，但在博客写作（关注图片质量）和本地存储之间做出一些妥协后，带来了极大的轻松和满足感，这绝对是值得的。&lt;/p>
+&lt;h2 id="正文">正文&lt;/h2>
+&lt;p>下面我讲讲如何使用 squoosh-cli 进行图片的批量压缩，之所以推荐在自建的 &lt;code>docker&lt;/code> 容器中运行 &lt;code>squoosh-cli&lt;/code> 命令，是因为容器里是 Linux 环境，命令行友好，不像 &lt;code>cmd&lt;/code> 和 &lt;code>powershell&lt;/code> 可能需要各种转义，引号，还有&lt;code>通配符&lt;/code>问题。&lt;/p>
+&lt;h3 id="新建一个专用压缩文件夹">新建一个专用压缩文件夹&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir -p /home/dk/squooshfiles
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod -R &lt;span style="color:#40a070">0755&lt;/span> /home/dk/squooshfiles
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="下面启动-squoosh-容器命令如下">下面启动 squoosh 容器，命令如下&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run -d --name squoosh &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> --restart unless-stopped &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -p 7701:8080 &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -v /home/dk/squooshfiles:/app/squooshfiles &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> dko0/squoosh:1.12.0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解析：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>/home/dk/squooshfiles&lt;/code>本地批量压缩图片文件夹&lt;/li>
+&lt;li>这将在容器中自动创建目录 &lt;code>/app/squooshfiles&lt;/code>&lt;/li>
+&lt;li>本地对 &lt;code>/home/dk/squooshfiles&lt;/code> 的修改和容器中对 &lt;code>/app/squooshfiles&lt;/code> 的修改将完全同步&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>注意: 下面的步骤都是在容器中进行操作&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="然后进入容器">然后进入容器&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker &lt;span style="color:#007020">exec&lt;/span> -it squoosh ash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="安装-squoosh-cli-npm-包">安装 squoosh-cli npm 包&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm i -g @squoosh/cli
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>安装完成之后执行 &lt;code>squoosh-cli --help&lt;/code> 应能获取命令行帮助。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/301c689fdd2bee47108cf1ba7329dcc8.webp" alt="Pasted image 20230905125527">&lt;/p>
+&lt;h3 id="进入压缩目录然后创建一个文件夹例如-0805">进入压缩目录,然后创建一个文件夹,例如 &lt;code>0805&lt;/code>&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> .. &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#007020">cd&lt;/span> squooshfiles
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir &lt;span style="color:#40a070">0805&lt;/span> &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#007020">cd&lt;/span> &lt;span style="color:#40a070">0805&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>把要批量压缩的照片拷贝到0805目录&lt;/p>
+&lt;h3 id="最后使用squoosh-cli命令执行批量压缩">最后使用 &lt;code>squoosh-cli&lt;/code> 命令执行批量压缩&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>squoosh-cli --mozjpeg &lt;span style="color:#4070a0">&amp;#39;{&amp;#34;quality&amp;#34;:40,&amp;#34;baseline&amp;#34;:false,&amp;#34;arithmetic&amp;#34;:false,&amp;#34;progressive&amp;#34;:true,&amp;#34;optimize_coding&amp;#34;:true,&amp;#34;smoothing&amp;#34;:0,&amp;#34;color_space&amp;#34;:3,&amp;#34;quant_table&amp;#34;:3,&amp;#34;trellis_multipass&amp;#34;:false,&amp;#34;trellis_opt_zero&amp;#34;:false,&amp;#34;trellis_opt_table&amp;#34;:false,&amp;#34;trellis_loops&amp;#34;:1,&amp;#34;auto_subsample&amp;#34;:true,&amp;#34;chroma_subsample&amp;#34;:2,&amp;#34;separate_chroma_quality&amp;#34;:false,&amp;#34;chroma_quality&amp;#34;:75}&amp;#39;&lt;/span> &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span>-d output1 &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span>-s small &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span>*.jpg
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解释&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>mozjpeg&lt;/code> 是最常用的压缩算法了，综合来说最推荐。&lt;/li>
+&lt;li>&lt;code>quality&lt;/code> 就是压缩质量了，在网页端可以直接预览压缩后的效果&lt;/li>
+&lt;li>&lt;code>-d&lt;/code> 设置输出目录&lt;/li>
+&lt;li>&lt;code>-s&lt;/code> 设置一个输出的文件名后缀，默认是空字符串&lt;/li>
+&lt;li> &lt;code>*.jpg&lt;/code> 只压缩当前目录下的所有 jpg 扩展名图片&lt;/li>
+&lt;/ul>
+&lt;p>批量压缩成功。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/3b00962b29df7e0a169e44aed3485d2b.webp" alt="Pasted image 20230905130018">&lt;/p>
+&lt;p>最后感谢 squoosh 项目，写博客压缩图片利器，完全免费开源，非常推荐各位博主使用。&lt;/p>
+&lt;ul>
+&lt;li>squoosh cli npm package: &lt;a href="https://www.npmjs.com/package/@squoosh/cli">https://www.npmjs.com/package/@squoosh/cli&lt;/a>&lt;/li>
+&lt;li>squoosh cli: &lt;a href="https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli">https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="一个重要的插曲解决报错">一个重要的插曲，解决报错&lt;/h3>
+&lt;p>TypeError: Cannot read properties of undefined (reading &amp;lsquo;writeText&amp;rsquo;)&lt;/p>
+&lt;p>这是 Chrome 限制了非安全网站的 API 使用，在非安全网站上 block 了 &lt;code>navigator.clipboard&lt;/code> 的 api 使用权限，所以无法拷贝 npx 命令出来。下面解决这个问题。&lt;/p>
+&lt;p>&lt;strong>open chrome，type &lt;code>chrome://flags/&lt;/code> in address bar, then find item &lt;code>Insecure origins treated as secure&lt;/code>, type &lt;code>http://10.10.10.5:7701&lt;/code> then enable it and relaunch your chrome.&lt;/strong>&lt;/p>
+&lt;p>Chrome 在此处认为的安全的网站&lt;/p>
+&lt;ul>
+&lt;li>必须 https&lt;/li>
+&lt;li>或 localhost&lt;/li>
+&lt;li>或 127.0.0.1&lt;/li>
+&lt;/ul>
+&lt;p>所以我们有必要加个白名单，这样好操作。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/b07bf1566bf9574ff227290d1802146e.webp" alt="insecure origins.jpg">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>http://10.10.10.5:7701&lt;/code> 是我 squoosh 的运行环境地址。如果有多个地址需要设“白名单”，使用英文逗号隔开它们即可。&lt;/p>
+&lt;/blockquote></description></item><item><title>Clash：科学上网的究极解决方案</title><link>https://blog.taoshuge.eu.org/post/070/</link><pubDate>Tue, 05 Sep 2023 10:39:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/070/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>早期，我一直对&lt;code>Clash&lt;/code>的工作原理一知半解，只知道它是一种探索互联网世界的神奇工具。&lt;/p>
 &lt;p>每次需要&lt;code>科学上网&lt;/code>时，只需点击一下“系统代理”按钮，瞬间解决了各种无法访问网站的问题。&lt;/p>
 &lt;p>久而久之，不免觉得这一过程有些繁琐：&lt;code>打开网站 —— 拒绝访问 —— 启动 Clash—— 开启系统代理 —— 完成&lt;/code>。我曾经尝试简化这个步骤，最初的尝试是保持规则代理一直开启，通过配置文件来管理流量的转发规则。&lt;/p>
@@ -2142,166 +2266,4 @@ keyId: xxxxxxxxxxxx]
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker stats
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/8823a3c3155b5abcffa69fc03c6ffcbb.webp" alt="Pasted image 20230815152734">&lt;/p></description></item><item><title>Umami替代品，Plausible网站流量统计工具</title><link>https://blog.taoshuge.eu.org/post/051/</link><pubDate>Tue, 15 Aug 2023 03:29:47 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/051/</guid><description>&lt;p>这一期，来介绍另一个流量统计的项目——Plausible。&lt;/p>
-&lt;blockquote>
-&lt;p>Plausible Analytics 是一个简单、开源、轻量级（&amp;lt; 1 KB）且注重隐私的 Google Analytics 替代品。Plausible 被超过10,000个付费订阅用户信任，用于提供他们网站和业务洞察力。我们完全独立、自筹资金并自给自足。&lt;/p>
-&lt;/blockquote>
-&lt;p>来自&lt;a href="https://plausible.io/docs">官方Docs&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/cc105dd01b8626e5c7380daea0bf6226.webp" alt="Pasted image 20230815033226">&lt;/p>
-&lt;h2 id="2-项目展示">2. 项目展示&lt;/h2>
-&lt;p>直接丢几个图：&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/83d091eae0849ed4fc4f77b879dac011.webp" alt="Pasted image 20230815033247">&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/dccf1ae8b332495b56c8723d9838dd2a.webp" alt="Pasted image 20230815033255">&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/d1e9b296ae1d172dfe2059079068c7a1.webp" alt="Pasted image 20230815033303">&lt;/p>
-&lt;h3 id="21-特点">2.1 特点&lt;/h3>
-&lt;ul>
-&lt;li>支持docker一键部署，轻量级Docker镜像（使用Alpine Linux）&lt;/li>
-&lt;li>支持谷歌API，链接谷歌分析、谷歌关键词工具&lt;/li>
-&lt;li>支持自定义事件&lt;/li>
-&lt;li>颜值高&lt;/li>
-&lt;/ul>
-&lt;h2 id="3-相关地址">3. 相关地址&lt;/h2>
-&lt;p>GitHub官方仓库：&lt;a href="https://github.com/plausible/analytics">https://github.com/plausible/analytics&lt;/a>&lt;br>
-官方文档地址：&lt;a href="https://plausible.io/docs">https://plausible.io/docs&lt;/a>&lt;/p>
-&lt;h2 id="4-搭建方式">4. 搭建方式&lt;/h2>
-&lt;p>创建一下安装的目录：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6">6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7">7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8">8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9">9&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo -i
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkdir -p /root/data/docker_data/plausible
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /root/data/docker_data/plausible
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git clone https://github.com/plausible/hosting
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> hosting
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vim docker-compose.yml
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>英文输入法下，按 &lt;code>i&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-24">24&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-25">25&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-26">26&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-27">27&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-28">28&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-29">29&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-30">30&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-31">31&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-32">32&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-33">33&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-34">34&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-35">35&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-36">36&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-37">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-37">37&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-38">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-38">38&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-39">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-39">39&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#062873;font-weight:bold">version&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#4070a0">&amp;#34;3.3&amp;#34;&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#062873;font-weight:bold">services&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">mail&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">image&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>bytemark/smtp&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">restart&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>always&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">plausible_db&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># supported versions are 12, 13, and 14&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">image&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>postgres:14-alpine&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">restart&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>always&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">volumes&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- ./db-data:/var/lib/postgresql/data&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">environment&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- POSTGRES_PASSWORD=postgres&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">plausible_events_db&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">image&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>clickhouse/clickhouse-server:23.3.7.5-alpine&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">restart&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>always&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">volumes&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- ./event-data:/var/lib/clickhouse&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- ./clickhouse/clickhouse-config.xml:/etc/clickhouse-server/config.d/logging.xml:ro&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- ./clickhouse/clickhouse-user-config.xml:/etc/clickhouse-server/users.d/logging.xml:ro&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">ulimits&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">nofile&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">soft&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#40a070">262144&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">hard&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#40a070">262144&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">plausible&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">image&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>plausible/analytics:v2.0&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">restart&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>always&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">command&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>sh -c &amp;#34;sleep 10 &amp;amp;&amp;amp; /entrypoint.sh db createdb &amp;amp;&amp;amp; /entrypoint.sh db migrate &amp;amp;&amp;amp; /entrypoint.sh run&amp;#34;&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">depends_on&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- plausible_db&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- plausible_events_db&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- mail&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">ports&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#40a070">8090&lt;/span>:&lt;span style="color:#40a070">8000&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">env_file&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- plausible-conf.env&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>大家可以用默认的设置，也可以和咕咕一样修改一下，修改好之后，注意切换成英文输入法，然后按一下 &lt;code>esc&lt;/code>，然后 &lt;code>:wq&lt;/code> 保存退出。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>openssl rand -base64 &lt;span style="color:#40a070">64&lt;/span> | tr -d &lt;span style="color:#4070a0">&amp;#39;\n&amp;#39;&lt;/span> ; &lt;span style="color:#007020">echo&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>保存下来。&lt;/p>
-&lt;p>打开环境配置文件：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vim plausible-conf.env
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;pre tabindex="0">&lt;code>BASE_URL=填你打算给plausible准备的域名，比如https://analytics.baidu.com
-SECRET_KEY_BASE=填刚刚生成的那个密钥
-&lt;/code>&lt;/pre>&lt;p>修改好之后，注意切换成英文输入法，然后按一下 &lt;code>esc&lt;/code>，然后 &lt;code>:wq&lt;/code> 保存退出。&lt;/p>
-&lt;p>更多参数配置，请看文档：&lt;a href="https://plausible.io/docs/self-hosting-configuration">https://plausible.io/docs/self-hosting-configuration&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/8823a3c3155b5abcffa69fc03c6ffcbb.webp" alt="Pasted image 20230815152734">&lt;/p></description></item></channel></rss>
