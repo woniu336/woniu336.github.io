@@ -1,4 +1,311 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Sep 2023 22:32:24 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>利用免费GitHub私人仓库：定时备份网站数据</title><link>https://blog.taoshuge.eu.org/post/072/</link><pubDate>Tue, 05 Sep 2023 22:32:24 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/072/</guid><description>&lt;p>随着&lt;code>GitHub&lt;/code>被微软收购后，私人仓库已经变得免费，为我们提供了一个无限的创造&lt;code>空间&lt;/code>。现在，我们可以尽情发挥其潜力，将其用于定时备份网站和服务器重要数据，确保数据安全与可靠性。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 09 Sep 2023 14:51:26 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>rclone常用命令参数详解</title><link>https://blog.taoshuge.eu.org/post/073/</link><pubDate>Sat, 09 Sep 2023 14:51:26 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/073/</guid><description>&lt;h2 id="rclone常用命令">rclone：常用命令&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone config - 进入交互式配置选项，进行添加、删除、管理网盘等操作。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone config file - 显示配置文件的路径，一般配置文件在 ~/.config/rclone/rclone.conf，更换服务器可直接copy该文件。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone config show - 显示配置文件信息
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="命令语法">命令语法&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 本地到网盘&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone &lt;span style="color:#666">[&lt;/span>功能选项&lt;span style="color:#666">]&lt;/span> &amp;lt;本地路径&amp;gt; &amp;lt;网盘名称:路径&amp;gt; &lt;span style="color:#666">[&lt;/span>参数&lt;span style="color:#666">]&lt;/span> &lt;span style="color:#666">[&lt;/span>参数&lt;span style="color:#666">]&lt;/span> ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 网盘到本地&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone &lt;span style="color:#666">[&lt;/span>功能选项&lt;span style="color:#666">]&lt;/span> &amp;lt;网盘名称:路径&amp;gt; &amp;lt;本地路径&amp;gt; &lt;span style="color:#666">[&lt;/span>参数&lt;span style="color:#666">]&lt;/span> &lt;span style="color:#666">[&lt;/span>参数&lt;span style="color:#666">]&lt;/span> ...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 网盘到网盘&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone &lt;span style="color:#666">[&lt;/span>功能选项&lt;span style="color:#666">]&lt;/span> &amp;lt;网盘名称:路径&amp;gt; &amp;lt;网盘名称:路径&amp;gt; &lt;span style="color:#666">[&lt;/span>参数&lt;span style="color:#666">]&lt;/span> &lt;span style="color:#666">[&lt;/span>参数&lt;span style="color:#666">]&lt;/span> ...
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="用法示例">用法示例:&lt;/h2>
+&lt;p>建议添加 &lt;code>--drive-acknowledge-abuse&lt;/code> 来处理被Google Drive标识为恶意软件的文件&lt;/p>
+&lt;p>复制: &lt;code>rclone copy&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone copy /up gd:upload --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>16M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>同步: &lt;code>rclone sync&lt;/code> 添加 &lt;code>--drive-acknowledge-abuse&lt;/code>参数&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone sync /up gd:upload --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>16M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span> --drive-acknowledge-abuse
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>以下是对每个参数的解释：&lt;/p>
+&lt;/blockquote>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>rclone copy&lt;/code> 为功能选项, 即&lt;code>复制&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>/up&lt;/code>: 本地路径，表示要复制的文件或目录的位置。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>gd:upload&lt;/code>: 这是目标路径，&lt;code>gd&lt;/code>是网盘名称,&lt;code>upload&lt;/code>是网盘路径,表示要将文件或目录复制到的位置。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--ignore-existing&lt;/code>: 这是一个选项，指示rclone在复制文件时忽略已经存在于目标位置的文件，即不覆盖已存在的文件，仅复制源中不存在于目标位置的文件。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-u&lt;/code>（或 &lt;code>--update&lt;/code>）: 这是一个选项，指示rclone仅复制源中新于目标的文件或文件夹。如果目标上已有相同文件名但内容不同的文件，它不会被覆盖。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-v&lt;/code>（或 &lt;code>--verbose&lt;/code>）: 这是一个选项，用于启用详细的输出，显示更多有关操作进展的信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-P&lt;/code>（或 &lt;code>--progress&lt;/code>）: 这是一个选项，用于显示传输进度，包括已传输的数据量和传输速度等信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--transfers=10&lt;/code>: 这是一个选项，指示rclone一次并发执行最多10个文件传输操作。这可以加快复制速度。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--ignore-errors&lt;/code>: 这是一个选项，指示rclone在遇到错误时继续进行操作而不中断。如果某些文件无法复制，它会继续复制其他文件，而不会停止整个操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--buffer-size=16M&lt;/code>: 这是一个选项，用于指定rclone在内存中使用的缓冲区大小，以提高性能。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--check-first&lt;/code>: 这是一个选项，指示rclone在实际开始复制操作之前，首先检查源和目标之间的差异。这可以节省不必要的复制操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--checkers=10&lt;/code>: 这是一个选项，用于指定rclone在进行检查（check）操作时并发执行的检查器数量。这可以加快检查操作的速度。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--drive-acknowledge-abuse&lt;/code> 标志来处理恶意文件.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;blockquote>
+&lt;p>综合起来，这个命令的目标是从源路径 &lt;code>/up&lt;/code> 复制文件或目录到目标路径 &lt;code>gd:upload&lt;/code>，在复制过程中忽略已存在的文件，仅复制新的或不同的文件，同时提供详细的进度信息，最多同时进行10个文件传输，忽略复制中的错误，使用16MB的缓冲区大小，并在复制之前检查源和目标之间的差异。&lt;/p>
+&lt;/blockquote>
+&lt;p>常用功能选项&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-13">13&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone copy - 复制
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone move - 移动，如果要在移动后删除空源目录，请加上 --delete-empty-src-dirs 参数
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone sync - 同步：将源目录同步到目标目录，只更改目标目录。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone delete - 删除路径下的文件内容。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone purge - 删除路径及其所有文件内容。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone mkdir - 创建目录。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone rmdir - 删除目录。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone rmdirs - 删除指定灵境下的空目录。如果加上 --leave-root 参数，则不会删除根目录。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone check - 检查源和目的地址数据是否匹配。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone ls - 列出指定路径下的所有的文件以及文件大小和路径。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone lsl - 比上面多一个显示上传时间。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone lsd 列出指定路径下的目录
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone lsf - 列出指定路径下的目录和文件
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>常用参数&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>-n &lt;span style="color:#666">=&lt;/span> --dry-run - 测试运行，用来查看 rclone 在实际运行中会进行哪些操作。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-P &lt;span style="color:#666">=&lt;/span> --progress - 显示实时传输进度。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--cache-chunk-size SizeSuffi - 块的大小，默认 5M，理论上是越大上传速度越快，同时占用内存也越多。如果设置得太大，可能会导致进程中断。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--cache-chunk-total-size SizeSuffix - 块可以在本地磁盘上占用的总大小，默认 10G。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--transfers&lt;span style="color:#666">=&lt;/span>N - 并行文件数，默认为 4。在比较小的内存的 VPS 上建议调小这个参数，比如 128M 的小鸡上使用建议设置为 1。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--config string - 指定配置文件路径，string 为配置文件路径。比如在使用宝塔面板输入命令操作时可能会遇到找不到配置文件的问题，这时就需要指定配置文件路径。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="日志">日志&lt;/h2>
+&lt;p>rclone 有 4 个级别的日志记录，ERROR，NOTICE，INFO 和 DEBUG。&lt;/p>
+&lt;p>默认情况下，rclone 将生成 ERROR 和 NOTICE 级别消息。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>-q rclone 将仅生成 ERROR 消息。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-v rclone 将生成 ERROR，NOTICE 和 INFO 消息，推荐此项。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-vv rclone 将生成 ERROR，NOTICE，INFO 和 DEBUG 消息。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--log-level LEVEL 标志控制日志级别。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输出日志到文件&lt;/p>
+&lt;p>使用 &amp;ndash;log-file=FILE 选项，rclone 会将 Error，Info 和 Debug 消息以及标准错误重定向到 FILE，这里的 FILE 是你指定的日志文件路径。&lt;/p>
+&lt;p>另一种方法是使用系统的指向命令，比如：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone sync -v Onedrive:/DRIVEX Gdrive:/DRIVEX &amp;gt; &lt;span style="color:#4070a0">&amp;#34;~/DRIVEX.log&amp;#34;&lt;/span> 2&amp;gt;&amp;amp;&lt;span style="color:#40a070">1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="文件过滤">文件过滤&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>--exclude 排除文件或目录。比如 --exclude *.bak，排除所有 bak 文件。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--include 包含文件或目录。比如 --include *.&lt;span style="color:#666">{&lt;/span>png,jpg&lt;span style="color:#666">}&lt;/span> ，包含所有 png 和 jpg 文件，排除其他文件。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--delete-excluded 删除排除的文件。需配合过滤参数使用，否则无效。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="目录过滤">目录过滤&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>--exclude .git/ 排除所有目录下的 .git 目录。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--exclude /.git/ 只排除根目录下的 .git 目录。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>以/开头只会匹配根目录，而如果没有，则是匹配所目录。同样适用于文件。&lt;/p>
+&lt;p>文件大小过滤&lt;/p>
+&lt;p>默认大小单位为 kBytes ，但可以使用 k ，M 或 G 后缀。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>--min-size 过滤小于指定大小的文件。比如 --min-size &lt;span style="color:#40a070">50&lt;/span> 表示不会传输小于 50k 的文件。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>--max-size 过滤大于指定大小的文件。比如 --max-size 1G 表示不会传输大于 1G 的文件。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>文件过滤规则&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>--filter-from &amp;lt;规则文件&amp;gt; 从文件添加包含 / 排除规则。比如 --filter-from filter-file.txt。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>过滤规则文件示例：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-6">6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-7">7&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>- secret*.jpg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>+ *.jpg
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>+ *.png
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>+ file2.avi
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- /dir/Trash/**
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>+ /dir/**
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- *
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>是包含，- 是排除&lt;/li>
+&lt;/ul>
+&lt;p>这里只举例比较常用和简单的一些过滤用法，更复杂和高端的用法可以查看官方文档。&lt;/p>
+&lt;h2 id="googledrive网盘挂载到云主机vps上">GoogleDrive网盘挂载到云主机/VPS上&lt;/h2>
+&lt;p>新建一个你要挂载的目录，例如挂载到/home/gdrive&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir -p /home/google
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>再执行挂载命令：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone mount gd: /home/google --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &amp;amp;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>gd&lt;/code> 为 rclone 的&lt;code>配置名称&lt;/code>，比如你在创建配置 rclone 的时候 &lt;code>Name&lt;/code> 填的 gd，&lt;code>/home/google&lt;/code> 为本地路径；&lt;/p>
+&lt;p>这里还可以自定义设置网盘里的文件夹路径，例如：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-15-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-15-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone mount gd:backup /home/google --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &amp;amp;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>gd&lt;/code> 为 rclone 的配置名称：&lt;code>backup&lt;/code> 为网盘里的目录名&lt;/p>
+&lt;p>重连后查看是否挂载成功：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-16-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-16-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>df -h
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>有看到gd硬盘、使用量和本地主机路径即成功挂载&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>gd: 15G 1.1M 15G 1% /home/gdrive
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>卸载 Google Drive 磁盘&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fusermount -qzu /home/google
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>利用免费GitHub私人仓库：定时备份网站数据</title><link>https://blog.taoshuge.eu.org/post/072/</link><pubDate>Tue, 05 Sep 2023 22:32:24 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/072/</guid><description>&lt;p>随着&lt;code>GitHub&lt;/code>被微软收购后，私人仓库已经变得免费，为我们提供了一个无限的创造&lt;code>空间&lt;/code>。现在，我们可以尽情发挥其潜力，将其用于定时备份网站和服务器重要数据，确保数据安全与可靠性。&lt;/p>
 &lt;h2 id="教程">教程&lt;/h2>
 &lt;p>首先你肯定需要一个&lt;a href="https://so.csdn.net/so/search?q=Github&amp;amp;spm=1001.2101.3001.7020">Github&lt;/a>账号，没有的可以去注册一个，地址：&lt;a href="https://github.com/">&lt;/a>&lt;a href="https://github.com/">https://github.com&lt;/a>。有了账号就继续看。&lt;/p>
 &lt;h3 id="1配置git-ssh密钥">1、配置Git SSH密钥&lt;/h3>
@@ -2217,112 +2524,4 @@ keyId: xxxxxxxxxxxx]
 &lt;p>当你跟别人共用一个分支的时候（有时候前端会共用一个分支），如果别人新建了一个分支（此时远端应该已经有了你们要用的分支），你要做的就是把远端的分支拉到自己本地。&lt;br>
 &lt;strong>&lt;code>git fetch origin &amp;lt;分支名&amp;gt;: &amp;lt;分支名&amp;gt;&lt;/code>&lt;/strong>&lt;/p>
 &lt;h2 id="6合并分支">6.合并分支&lt;/h2>
-&lt;p>如果你基于主分支master新建了分支dev，再基于dev分支新建了一个分支test，在test分支开发完成后，需要将test合并到dev分支上。此时，先用&lt;code>git branch&lt;/code> 查看自己在哪个分支上，然后&lt;code>git checkout dev&lt;/code>(切换到需要合并的分支上)，最后&lt;code>git merge test&lt;/code>（在dev分支上执行这句，意思是将test合并到dev分支上）&lt;/p></description></item><item><title>使用Git实现稳定的Obsidian同步方案</title><link>https://blog.taoshuge.eu.org/post/053/</link><pubDate>Tue, 15 Aug 2023 21:54:23 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/053/</guid><description>&lt;p>关于 Obsidian 同步这件事，似乎总能让人感到头疼。同步方案不是太少，而是太多。多到你难以辨别哪种方案是最合适自己的。而且有不少同步方法是未经验证的，一些想当然的方案其实并不适合 Obsidian。&lt;/p>
-&lt;p>这篇文章我想先聊聊 PC 之间的 Obsidian 库同步。也就是不论系统，可以在 Windows、macOS、Linux 之间稳定完成同步的方法：Git 同步方案。&lt;/p>
-&lt;h2 id="准备工作">准备工作&lt;/h2>
-&lt;p>在开始之前，确保你已经安装了Git和Obsidian软件。接下来，我们将一步步进行配置。&lt;/p>
-&lt;h3 id="创建git仓库">创建Git仓库&lt;/h3>
-&lt;p>首先，选择一个Git平台作为仓库托管，这里我们以GitHub为例。如果你还没有GitHub账号，请先在&lt;a href="https://github.com/">GitHub官网&lt;/a>注册一个账号。&lt;/p>
-&lt;ol>
-&lt;li>登录GitHub账号，点击右上角的“+”按钮，选择“New repository”。&lt;/li>
-&lt;li>填写仓库名称，选择公开或私有，其他设置保持默认，点击“Create repository”。&lt;/li>
-&lt;/ol>
-&lt;h3 id="将仓库同步到本地">将仓库同步到本地&lt;/h3>
-&lt;p>你可以使用命令行或图形化工具，这里我们介绍使用GitHub Desktop。&lt;/p>
-&lt;ol>
-&lt;li>下载并安装&lt;a href="https://desktop.github.com/">GitHub Desktop&lt;/a>。&lt;/li>
-&lt;li>打开GitHub Desktop，登录你的GitHub账号。&lt;/li>
-&lt;li>点击“File”菜单，选择“Clone repository”。&lt;/li>
-&lt;li>选择你刚创建的仓库，选择本地存放位置，点击“Clone”按钮。&lt;/li>
-&lt;/ol>
-&lt;h3 id="合并obsidian库和git仓库">合并Obsidian库和Git仓库&lt;/h3>
-&lt;ol>
-&lt;li>打开Obsidian软件，找到你想同步的笔记库所在的文件夹。&lt;/li>
-&lt;li>将笔记库文件夹（包括隐藏的 .obsidian 文件夹）复制到刚刚克隆的Git仓库文件夹中。&lt;/li>
-&lt;li>使用GitHub Desktop提交和推送至远程仓库&lt;/li>
-&lt;/ol>
-&lt;h3 id="安装obsidian-git插件">安装Obsidian Git插件&lt;/h3>
-&lt;ol>
-&lt;li>在Obsidian中打开刚刚合并的仓库文件夹。&lt;/li>
-&lt;li>点击左侧导航栏的插件图标。&lt;/li>
-&lt;li>在插件搜索框中输入“Obsidian Git”并安装。&lt;/li>
-&lt;/ol>
-&lt;h2 id="安装-obsidian-git-插件进行后续的同步">安装 Obsidian Git 插件进行后续的同步&lt;/h2>
-&lt;p>接下来你需要进 Obsidian ，打开这个转移好的目录，并在这个库中，安装一个名为 &lt;a href="https://github.com/denolehov/obsidian-git">Obsidian Git&lt;/a> 的插件。&lt;/p>
-&lt;p>安装完成后应该会自动出现一个 Git Control View 的侧边栏。如果没有，则按下 Ctrl + P，搜索 &lt;code>Obsidian Git: Open Source Control View&lt;/code> ，就可以打开这个面板。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/36f682a6be487f7bf782503a8c5bb342.webp" alt="Pasted image 20230815212603">&lt;/p>
-&lt;p>有了这个插件，以后的同步操作你都可以在 Obsidian 内部进行了。&lt;/p>
-&lt;p>这个插件顶部的按钮对应了 Git 中最常见的几个操作。如果你对 Git 有一定的了解，应该对这些操作不会陌生。&lt;/p>
-&lt;ol>
-&lt;li>Backup：备份，提交所有的更改，并且执行推送。&lt;/li>
-&lt;li>Commit：确认提交，但不推送。&lt;/li>
-&lt;li>Stage all：存储当前的变更。&lt;/li>
-&lt;li>Unstage all：取消存储变更。&lt;/li>
-&lt;li>Push：推送到远端，可以理解为推送到 Github。&lt;/li>
-&lt;li>Pull：从远端拉取到本地，可以理解为从 Github 拉取最新数据到本地。&lt;/li>
-&lt;li>Change Layout：改变下方文件的排布方式。&lt;/li>
-&lt;li>Refresh：刷新当前的文件变更情况。&lt;/li>
-&lt;/ol>
-&lt;p>如果你不想了解他们具体是干什么的，只想知道怎么做同步，那其实就两个按键有用：&lt;/p>
-&lt;ol>
-&lt;li>Backup，第一个按钮，一次性完成提交并推送到 Github。&lt;/li>
-&lt;li>Pull，第六个按钮，从 Github 同步到本地。&lt;/li>
-&lt;/ol>
-&lt;p>到这一步就完成了所有的配置工作，第一次使用时，点击 Backup 就可以。&lt;/p>
-&lt;h3 id="补充初次使用-git-时出现报错的解决方法">补充：初次使用 git 时出现报错的解决方法&lt;/h3>
-&lt;p>有读者提到，如果此前从未使用过 git ，直接使用 Github Desktop 进行同步是可行的。&lt;/p>
-&lt;p>但此时打开 Obsidian 会提示两个错误：&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/73bc68fa05e30d5d855d101bd9da3594.webp" alt="Pasted image 20230815212649">&lt;/p>
-&lt;p>这两个错误的意思分别是：没有指定分支、没有读取到用户名。所以这是一个账号设置错误。&lt;/p>
-&lt;p>至于在 Github Desktop 中能够正常使用，在 Obsidian 中却不行。究其原因，是因为授权方式是通过 Github 的账号密码进行登录的。而 Obsidian 用的是命令行，采用的授权方式不同，导致只有 Obsidian 无法访问 Github。&lt;/p>
-&lt;p>所以解决方法如下：&lt;/p>
-&lt;ol>
-&lt;li>打开终端，输入 &lt;code>cd 存储库位置&lt;/code>，比如 &lt;code>cd D:\ObsidianLibrary&lt;/code> 来打开存储库。&lt;/li>
-&lt;li>输入 &lt;code>git remote show origin&lt;/code> 来检查当前分支情况，依据更详细的报错，可以解决第一个问题。&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote show origin
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol start="3">
-&lt;li>如果此时尚未登陆，应该会弹出一个登录窗口，提示进行登录，此时输入“账号 + 令牌”，就可以完成登录了。注意这个时候的令牌与密码不同，要用 Github 的个人访问令牌登录。参考文档《&lt;a href="https://www.w3cschool.cn/githubcn/githubcn-34sx3acb.html">创建个人访问令牌&lt;/a>》&lt;a href="https://utgd.net/article/9642#fn2">[2|2]&lt;/a> 就可以生成令牌。&lt;/li>
-&lt;/ol>
-&lt;p>你也可以直接使用以下命令来设置全局身份。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>git config --global credential.helper store
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>这行命令的作用是在 git 中全局启用凭证存储，启用后第一次 &lt;code>git clone&lt;/code> 或者 &lt;code>git push&lt;/code> 时会提示你输入“账户 + 令牌”。之后执行 git 操作都不再需要密码。&lt;/p>
-&lt;h2 id="更多的配置">更多的配置&lt;/h2>
-&lt;h3 id="如何启用自动同步">如何启用自动同步&lt;/h3>
-&lt;p>刚开始使用时，你也许不习惯每次手动点一下 Pull 按钮。&lt;/p>
-&lt;p>那你可以在 Obsidian Git 插件里启用选项 &lt;code>Auto Backup after file change&lt;/code> ，让它每隔一段时间自动进行同步，默认是 10 分钟进行一次推送。下面有一个 &lt;code>Auto pull&lt;/code> 的选项，默认 10 分钟进行一次拉取。&lt;/p>
-&lt;h3 id="如何解决文件同步冲突">如何解决文件同步冲突？&lt;/h3>
-&lt;p>如果你在一台电脑上改动了文件，但是忘记同步了，并且在自动同步之前关机了。然后继续在另一台电脑上修改了同一个文件，那么回到这台电脑上做同步时就有可能发生冲突了。&lt;/p>
-&lt;p>此时你可以选择自己手动解决这些冲突，在 Obsidian Git 界面中，每次提交时都会告诉你这些文件发生了哪些变化。&lt;/p>
-&lt;p>由于 Git 的应用非常普遍，如果出现了其他报错，根据报错提示进行搜索，往往可以在搜索引擎中找到答案。&lt;/p>
-&lt;h3 id="不想同步布局和某些配置怎么办">不想同步布局和某些配置怎么办？&lt;/h3>
-&lt;p>通过调整 Git 仓库目录下的隐藏文件 &lt;code>.gitignore&lt;/code> 文件，可以选择不同步某些文件。&lt;/p>
-&lt;p>根据 Obsidian 的官方文档，他们建议你在 .gitignore 中添加 &lt;code>.obsidian/workspace&lt;/code> 。&lt;/p>
-&lt;p>如果你已经同步了，那就输入这行命令，这会从仓库中删除文件，未来也不再同步到仓库里，但保留本地文件。&lt;/p>
-&lt;pre tabindex="0">&lt;code>git rm .obsidian/workspace --cached
-&lt;/code>&lt;/pre>&lt;h2 id="自动同步和解决冲突">自动同步和解决冲突&lt;/h2>
-&lt;p>你可以在Obsidian Git插件设置中启用自动同步选项，定期自动进行备份和拉取。&lt;/p>
-&lt;p>如果在多台设备上同时修改了同一个文件，可能会出现冲突。Obsidian Git插件会提示你哪些文件发生了变化，你可以手动解决这些冲突。&lt;/p>
-&lt;h2 id="文件变动timeline和其他配置">文件变动Timeline和其他配置&lt;/h2>
-&lt;p>如果想查看文件变动的时间线，你可以使用VSCode软件，打开Obsidian仓库所在的文件夹，然后在VSCode的左侧文件目录下方找到“Timeline”功能，以查看每个文件在每次Git提交中的变化情况。&lt;/p>
-&lt;p>如果你不想同步某些文件，可以通过在Git仓库目录下的&lt;code>.gitignore&lt;/code>文件中添加文件路径来实现。例如，添加&lt;code>.obsidian/workspace&lt;/code>以忽略同步工作区文件。&lt;/p>
-&lt;h3 id="如何查看文件变动-timeline">如何查看文件变动 Timeline&lt;/h3>
-&lt;p>Obsidian 的 Obsidian Git 插件，主要作用是进行提交、拉取、推送这些操作。只能列举某次提交产生的所有变化，不能直观地看到单个文件变动的历史情况。&lt;/p>
-&lt;p>VSCode 内置了一个非常方便的功能：Timeline，它可以清晰的看到每个文件在每次 Git 提交中的变化情况。&lt;/p>
-&lt;p>你可以在 VSCode 中打开 Obsidian 仓库，在左侧文件目录下方找到“时间线”，就可以回顾这个文件经历了哪些版本了。&lt;/p>
-&lt;h2 id="小结">小结&lt;/h2>
-&lt;p>使用Git实现Obsidian的稳定同步方案需要进行一些准备工作，但它能为你提供可靠的版本管理和同步功能。通过Obsidian Git插件，你可以在Obsidian中轻松地进行备份和同步操作，同时也可以通过VSCode的Timeline功能查看文件的变动历史。无论是个人使用还是团队协作，Git都是一个强大的工具，能够帮助你更好地管理和同步Obsidian笔记库。&lt;/p></description></item></channel></rss>
+&lt;p>如果你基于主分支master新建了分支dev，再基于dev分支新建了一个分支test，在test分支开发完成后，需要将test合并到dev分支上。此时，先用&lt;code>git branch&lt;/code> 查看自己在哪个分支上，然后&lt;code>git checkout dev&lt;/code>(切换到需要合并的分支上)，最后&lt;code>git merge test&lt;/code>（在dev分支上执行这句，意思是将test合并到dev分支上）&lt;/p></description></item></channel></rss>
