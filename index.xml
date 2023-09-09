@@ -7,7 +7,7 @@
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone config - 进入交互式配置选项，进行添加、删除、管理网盘等操作。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone config file - 显示配置文件的路径，一般配置文件在 ~/.config/rclone/rclone.conf，更换服务器可直接copy该文件。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone config paths - 显示配置文件的路径，一般配置文件在 ~/.config/rclone/rclone.conf，更换服务器可直接copy该文件。
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone config show - 显示配置文件信息
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
