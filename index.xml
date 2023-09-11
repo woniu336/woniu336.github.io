@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Sep 2023 15:51:37 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>免费白嫖Office 365 E5，5TB onedrive空间！</title><link>https://blog.taoshuge.eu.org/post/077/</link><pubDate>Sun, 10 Sep 2023 15:51:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/077/</guid><description>&lt;p>注册入口&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Sep 2023 14:19:43 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>从网页视频到MP4：轻松使用M3U8下载器保存你喜爱的视频</title><link>https://blog.taoshuge.eu.org/post/079/</link><pubDate>Mon, 11 Sep 2023 14:19:43 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/079/</guid><description>&lt;h2 id="项目">项目&lt;/h2>
+&lt;h3 id="猫抓">猫抓：&lt;/h3>
+&lt;p>&lt;a href="https://github.com/xifangczy/cat-catch/releases">https://github.com/xifangczy/cat-catch/releases&lt;/a>&lt;/p>
+&lt;p>安装地址: &lt;a href="https://o2bmm.gitbook.io/cat-catch/docs/install">https://o2bmm.gitbook.io/cat-catch/docs/install&lt;/a>&lt;/p>
+&lt;p>文档: &lt;a href="https://o2bmm.gitbook.io/cat-catch/">https://o2bmm.gitbook.io/cat-catch/&lt;/a>&lt;/p>
+&lt;h3 id="m3u8下载器">m3u8下载器：&lt;/h3>
+&lt;p>&lt;a href="https://github.com/nilaoda/N_m3u8DL-CLI/releases">https://github.com/nilaoda/N_m3u8DL-CLI/releases&lt;/a>&lt;/p>
+&lt;p>下载解压,cmd命令&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>N_m3u8DL-CLI_v3.0.2.exe --registerUrlProtocol
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>打开浏览器: 进入需要下载的播放页面&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/bb12786f973e177337ecfe68a9f2928b.webp" alt="Pasted image 20230911144224">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/8ed2be91d6de5b83d6432d25d40d77f6.webp" alt="Pasted image 20230911144302">&lt;/p></description></item><item><title>openwrt n1 安装alist</title><link>https://blog.taoshuge.eu.org/post/078/</link><pubDate>Mon, 11 Sep 2023 14:12:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/078/</guid><description>&lt;p>项目地址 : &lt;a href="https://github.com/sbwml/luci-app-alist">https://github.com/sbwml/luci-app-alist&lt;/a>&lt;/p>
+&lt;p>OpenWrt 查看CPU架构命令：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat /etc/os-release |grep ARCH
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>AList文档：https://alist.nn.ci/zh/&lt;/p>
+&lt;p>下载插件: &lt;a href="https://github.com/sbwml/luci-app-alist/releases/download/v3.27.0/openwrt-21.02-aarch64_cortex-a53.tar.gz">点击下载&lt;/a>&lt;/p>
+&lt;p>&lt;code>视频教程&lt;/code>&lt;/p>
+&lt;!DOCTYPE HTML>
+&lt;html>
+&lt;head>
+&lt;style type="text/css">
+.aspect-ratio {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.aspect-ratio iframe {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class="aspect-ratio">
+&lt;iframe
+src="https://player.bilibili.com/player.html?bvid=BV1PW4y1V78f&amp;page=1&amp;high_quality=1&amp;danmaku=0"
+scrolling="no"
+border="0"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;/body>
+&lt;/html></description></item><item><title>免费白嫖Office 365 E5，5TB onedrive空间！</title><link>https://blog.taoshuge.eu.org/post/077/</link><pubDate>Sun, 10 Sep 2023 15:51:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/077/</guid><description>&lt;p>注册入口&lt;/p>
 &lt;p>&lt;a href="https://developer.microsoft.com/zh-cn/microsoft-365/dev-program">https://developer.microsoft.com/zh-cn/microsoft-365/dev-program&lt;/a>&lt;/p>
 &lt;p>1T改成5T&lt;/p>
 &lt;p>&lt;a href="https://admin.onedrive.com/?v=StorageSettings">https://admin.onedrive.com/?v=StorageSettings&lt;/a>&lt;/p>
@@ -2793,312 +2856,4 @@ keyId: xxxxxxxxxxxx]
 &lt;h2 id="环境变量">环境变量&lt;/h2>
 &lt;p>或者，您可以通过环境变量设置令牌。cloudflared 将自动启动。&lt;/p>
 &lt;p>通过这种方法，您甚至不需要将容器端口暴露给主机。&lt;/p>
-&lt;p>UPTIME_KUMA_CLOUDFLARED_TOKEN=&lt;code>&amp;lt;your token&amp;gt;&lt;/code>&lt;/p></description></item><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://blog.taoshuge.eu.org/post/059/</link><pubDate>Sun, 20 Aug 2023 13:05:54 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/059/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>&lt;code>Cloudflare R2&lt;/code>存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。Cloudflare R2存储&lt;code>流量不收费&lt;/code>，收费的是&lt;strong>存储空间&lt;/strong>和&lt;strong>请求次数&lt;/strong>。A类操作和B类操作分开收费，&lt;code>上传&lt;/code>属于A类操作，&lt;code>下载和访问&lt;/code>属于B类操作。&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>&lt;/th>
-&lt;th>免费&lt;/th>
-&lt;th>付费 - 费率&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>贮存&lt;/td>
-&lt;td>10 GB/月&lt;/td>
-&lt;td>每月 0.015 美元/GB&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>A 类操作&lt;/td>
-&lt;td>每月 100 万个请求&lt;/td>
-&lt;td>4.50 美元/百万请求&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>B 类操作&lt;/td>
-&lt;td>每月 1000 万个请求&lt;/td>
-&lt;td>0.36 美元/百万请求&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>也就是说，可以&lt;code>免费存储10G&lt;/code>的文件，每个月可以上传&lt;code>100万次&lt;/code>，&lt;code>访问1000万次&lt;/code>，假如用作图床，一般是用不到这个量级的。并且可以绑定自定义域名，套用页面规则以后可以设置浏览器缓存，这样可以减少一些请求次数并且可以防止被人刷请求次数导致一晚上过去，房子就不属于自己了。不自定义域名也是可以的，也就是说你甚至不需要拥有域名就可以拥有一个图床。&lt;/p>
-&lt;p>存储也是比较便宜的，超出10G以后，1G文件基本上每个月只要1毛人民币。当然和B2那种5刀一个月1T是没法比的，用作图床的话还有种阿里云国际的OSS的40G年付包也是比较有性价比，这里扯远了。下面详细说一下怎么白嫖R2做图床。&lt;/p>
-&lt;p>本文的图就放在R2上，只不过域名是自定义的。&lt;/p>
-&lt;h2 id="设置r2">设置R2&lt;/h2>
-&lt;h3 id="开通r2">开通R2&lt;/h3>
-&lt;p>首先当然是拥有一个&lt;code>Cloudflare&lt;/code>账号，并且点击右上角的语言设置中文。&lt;/p>
-&lt;p>第一步当然是开通R2，&lt;code>侧边栏找到R2&lt;/code>然后点击开通。这里可以绑定支持外币支付的卡，或者直接绑定&lt;code>paypal&lt;/code>，中国区的paypal也是可以的。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/0d53d7aa084e049bf725df031e52b5ba.webp" alt="">&lt;/p>
-&lt;p>第二步是创建存储桶，可以自己选取位置，&lt;code>不建议无脑选亚太地区&lt;/code>，亚太地区虽然近但是国际访问速度受限，我这里选择&lt;code>北美西部&lt;/code>。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/548bc9e55db5ac3a49113996ab79196c.webp" alt="">&lt;/p>
-&lt;p>第三步是创建完存储桶后，点进就到&lt;code>存储桶&lt;/code>的设置，然后找到【R2.dev 子域】，将其开启，下图是我已经开启的状态。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/050f7957c03da2dbba3f384a11057386.webp" alt="">&lt;/p>
-&lt;p>大家可以认为你的存储同并没有域名绑定，开启这个子域名以后，cf就分配了一个域名给你的存储桶，如果你绑定了&lt;code>自定义域名&lt;/code>到存储桶的话，可以把这个开关给关了，可以少一些问题。如果你没有购买域名没法自定义域名，一直用cf给你的这个域名也是可以的。自定义域名的好处是不限速，而且可以享受cloudflare上面的一系列缓存和自定义限速等设置，防止被刷访问次数。&lt;/p>
-&lt;p>然后，你就可以通过cf网站上传器上传图片到&lt;code>R2&lt;/code>了，便可正常访问。&lt;/p>
-&lt;h2 id="开通api">开通API&lt;/h2>
-&lt;p>回到R2的概述界面，点击右上角的 &lt;code>管理 R2 API 令牌&lt;/code>，然后点击右上角的&lt;code>创建api令牌&lt;/code>，如果要使用&lt;code>picgo&lt;/code>进行图片的上传，请记得在权限选项把对象读和写打开，在ttl选项可以设置api令牌的有效期，这里可以&lt;code>选择永久&lt;/code>。大概如下图所示。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/eefdb595e0f458b63b9f0c9bce9271e6.webp" alt="">&lt;/p>
-&lt;p>创建完成令牌以后请把 &lt;strong>访问密钥 ID&lt;/strong> 和 &lt;strong>机密访问密钥&lt;/strong> 收藏好，只会显示这一次，以后用的时候就找不到了，记下来以后还能用到。当然，如果没记住的话，以后再创建一个api令牌也是可以的。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/790af159211e85a796585ce38a1eeb69.webp" alt="">&lt;/p>
-&lt;h2 id="使用picgo进行上传操作">使用picgo进行上传操作&lt;/h2>
-&lt;p>PICGO项目地址：https://github.com/Molunerfinn/PicGo&lt;/p>
-&lt;p>安装好PicGo后，点击【插件设置】搜索【S3】，安装下图插件。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/54061e7c9c84f11d90526d6538f8b584.webp" alt="">&lt;/p>
-&lt;p>安装完成后，点击左侧-侧边栏的图床设置，里面多了一个AMAZON S3这个选项，进去设置。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/29e0a651a09dc9fa3412da33a4f5330e.webp" alt="">&lt;/p>
-&lt;p>应用密钥ID填写我们刚刚复制的&lt;strong>访问密钥 ID&lt;/strong>&lt;/p>
-&lt;p>应用密钥填写我们刚刚复制的&lt;strong>机密访问密钥&lt;/strong>&lt;/p>
-&lt;p>桶命就写我们存储桶的名字，这里是duangks&lt;/p>
-&lt;p>文件路径自己设置，默认也是可以的&lt;/p>
-&lt;p>地区可以不用填写，默认跳转就可以&lt;/p>
-&lt;p>自定义节点需要填写一下，在R2中点击存储桶，到存储桶的管理界面，点击设置，里面的S3 api就是需要复制的。例如&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/e544d2319a8fb8eb7758b3cee4f3f8d3.webp" alt="">&lt;/p>
-&lt;p>自定义域名需要注意一下，复制咱们开通的R2.dev 子域，然后在后面加上/你的桶名。&lt;/p>
-&lt;p>例如，我开通的R2.dev 子域是 &lt;a href="https://pu1-082231df54234f2b90d1bd5432310a4b.r2.dev">https://pu1-082231df54234f2b90d1bd5432310a4b.r2.dev&lt;/a>&lt;/p>
-&lt;p>需要在软件里面填写的自定义域名就是 &lt;a href="https://pu1-082231df54234f2b90d1bd5432310a4b.r2.dev/duangks">https://pu1-082231df54234f2b90d1bd5432310a4b.r2.dev/duangks&lt;/a>&lt;/p>
-&lt;p>然后就可以愉快的使用picgo了。&lt;/p>
-&lt;h2 id="自定义域名">自定义域名&lt;/h2>
-&lt;p>假如你在cf里面托管有域名的话，可以直接在R2存储桶的设置界面设置自定义域名，填写一个二级域名以后不需要自己去设置dns，cf就会自动帮你映射好。&lt;/p>
-&lt;p>然后就可以顺路把R2.dev 子域给关了。&lt;/p>
-&lt;p>记得到时候在picgo里面自定义域名也需要加后缀，就像这样 https://你的自定义域名/你的存储桶名&lt;/p>
-&lt;p>最后，推荐大家使用以下picgo的二开项目PICLIST，直接去github搜就行，相比picgo多了一个自带的图片管理功能，可以对图片进行有损/无损压缩和变换格式，以及添加水印。还多了个管理功能，可以通过设置以后直接管理你上传的文件。&lt;/p></description></item><item><title>GitHub Actions自动构建Hugo并同步到腾讯COS</title><link>https://blog.taoshuge.eu.org/post/058/</link><pubDate>Sat, 19 Aug 2023 19:28:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/058/</guid><description>&lt;p>借助强大的 &lt;code>Github Action&lt;/code>，我们能够轻松地实现博客的自动化构建与部署，让整个流程更加优雅高效。在这个过程中，我们选用了 &lt;code>Hugo&lt;/code> 这一优秀的工具，它与 hexo 一样，都是出色的静态博客生成器。&lt;/p>
-&lt;p>考虑国内网络环境，我们选择了&lt;code>腾讯云COS&lt;/code>来部署博客，以提供更快速、稳定的访问体验。这个策略让博客的美感与技术有机融合，为读者呈现出精致的阅读空间。&lt;/p>
-&lt;h3 id="准备工作">准备工作：&lt;/h3>
-&lt;ol>
-&lt;li>到腾讯云&amp;ndash;&lt;code>访问管理&lt;/code>—&lt;code>用户列表&lt;/code>，新建一个账户&lt;/li>
-&lt;/ol>
-&lt;p>地址: &lt;a href="https://console.cloud.tencent.com/cam">https://console.cloud.tencent.com/cam&lt;/a>&lt;/p>
-&lt;ol start="2">
-&lt;li>
-&lt;p>访问方式改为&amp;quot;编程访问”，用户权限添加&amp;quot;&lt;code>QcloudCOSDataFullControl&lt;/code>、 &lt;code>QcloudCDNFullAccess&lt;/code>&amp;quot;。完成之后将生成的 SecretId、SecretKey 复制保存。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>到 Github 新建一个仓库(私有公共都行)，把自己 hugo 生成的站点源文件(不是 public 下文件)同步过去。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>在刚创建的仓库——&lt;code>Settings&lt;/code>——&lt;code>Secrets and variables&lt;/code>——&lt;code>Actions&lt;/code>，&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>新建 &lt;code>SecretId&lt;/code>、&lt;code>SecretKey&lt;/code>、&lt;code>Bucket&lt;/code>、 &lt;code>Region&lt;/code> 四个密钥。其中 SecretId、SecretKey 为上面复制保存的，Bucket(存储桶名称)、 Region(所属地域 如:&lt;code>ap-guangzhou&lt;/code> )在 COS 中存储桶列表中获取。&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/8fc672e50e662e5d15089fc9e2c1033d.webp" alt="">&lt;/p>
-&lt;h2 id="自动构建">自动构建&lt;/h2>
-&lt;p>在博客仓库根目录下新建 &lt;code>.github/workflows&lt;/code> 文件夹，新建一个 &lt;code>deploy.yml&lt;/code>（文件名随意），作用：借助 &lt;code>Github Action&lt;/code> 实现自动部署&lt;/p>
-&lt;pre tabindex="0">&lt;code>注意: 第5 38 40 行
-第5行触发的分支是main还是master,
-第38行改为你的用户名和仓库名,比如: 111/222
-第40行是Github Pages 所在分支
-最后两行是同步根目录还是public目录
-&lt;/code>&lt;/pre>&lt;h3 id="完整脚本">完整脚本&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-24">24&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-25">25&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-26">26&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-27">27&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-28">28&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-29">29&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-30">30&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-31">31&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-32">32&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-33">33&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-34">34&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-35">35&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-36">36&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-37">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-37">37&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-38">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-38">38&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-39">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-39">39&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-40">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-40">40&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-41">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-41">41&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-42">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-42">42&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-43">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-43">43&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-44">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-44">44&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-45">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-45">45&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-46">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-46">46&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-47">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-47">47&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-48">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-48">48&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-49">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-49">49&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-50">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-50">50&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-51">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-51">51&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-52">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-52">52&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-53">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-53">53&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-54">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-54">54&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-55">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-55">55&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-56">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-56">56&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-57">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-57">57&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-58">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-58">58&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-59">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-59">59&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-60">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-60">60&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-61">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-61">61&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-62">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-62">62&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-63">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-63">63&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Auto Deploy hugo&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#062873;font-weight:bold">on&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">push&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">branches&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- main&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># 更新触发的分支&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#062873;font-weight:bold">jobs&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">build-deploy&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># runs-on: ubuntu-latest&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">runs-on&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>ubuntu-20.04&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">steps&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Check out repository code&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>actions/checkout@v3&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">with&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">submodules&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>recursive&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># Fetch Hugo themes (true OR recursive)&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">fetch-depth&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#40a070">0&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># Fetch all history for .GitInfo and .Lastmod&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Setup hugo&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>peaceiris/actions-hugo@v2&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">with&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># hugo-version: &amp;#34;latest&amp;#34; # 可以修改为你使用的 Hugo 版本&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">hugo-version&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#4070a0">&amp;#34;0.113.0&amp;#34;&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">extended&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#007020;font-weight:bold">true&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># 设置是否需要 extended 版本&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Cache resources&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># 缓存 resource 文件加快生成速度&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>actions/cache@v3&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">with&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">path&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>resources&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># 检查照片文件变化&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">key&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ runner.os }}-hugocache-${{ hashFiles(&amp;#39;content/**/*&amp;#39;) }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">restore-keys&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ runner.os }}-hugocache-&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Build Hugo static files&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># 部署静态资源&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">run&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>hugo --gc --minify&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Deploy to Github Pages &lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># 部署到Github Pages页面&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>peaceiris/actions-gh-pages@v3&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">with&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">personal_token&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.PERSONAL_TOKEN }}&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># 两个仓库请使用 deploy_key&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">external_repository&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#40a070">111&lt;/span>/222 &lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># 如果在同一个仓库请注释&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">publish_dir&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>./public&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># hugo 生成到 public 作为跟目录&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">publish_branch&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>main&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># Github Pages 所在分支&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">commit_message&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ github.event.head_commit.message }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># 上传到腾讯COS存储桶&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Setup Python&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>actions/setup-python@v4&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">with&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">python-version&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#40a070">3.9&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Setup coscmd and sdk&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">run&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>sudo pip install coscmd&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Configure coscmd&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">env&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">SECRET_ID&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.SecretId }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">SECRET_KEY&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.SecretKey }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">BUCKET&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.Bucket }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">REGION&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.Region }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">run&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>coscmd config -a $SECRET_ID -s $SECRET_KEY -b $BUCKET -r $REGION&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Upload to COS&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">run&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>coscmd upload -rfs --delete ./ /&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># run: coscmd upload -rfs --delete public/ /&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="其他代码">其他代码&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-13">13&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 上传到腾讯COS存储桶&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Install coscmd&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">run&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>sudo pip install coscmd&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Configure coscmd&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">env&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">COS_SECRET_ID&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.COS_SECRET_ID }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">COS_SECRET_KEY&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.COS_SECRET_KEY }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">COS_BUCKET_NAME&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>jpcos-1253486782&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># Change for yourself&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">COS_BUCKET_REGION&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>ap-tokyo&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># Change for yourself&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">run&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>coscmd config -a $COS_SECRET_ID -s $COS_SECRET_KEY -b $COS_BUCKET_NAME -r $COS_BUCKET_REGION&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Deploy to COS Bucket&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">run&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>coscmd upload -rfs --delete ./ /&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#60a0b0;font-style:italic"># run: coscmd upload -rfs --delete public/ /&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="同步到backblaze-b2">同步到Backblaze B2&lt;/h3>
-&lt;p>地址:&lt;a href="https://www.backblaze.com/cloud-storage">https://www.backblaze.com/cloud-storage&lt;/a>&lt;/p>
-&lt;p>&lt;code>10GB&lt;/code> 免费存储空间。&lt;/p>
-&lt;p>&lt;code>Backblaze B2&lt;/code>每月免费 10G 存储及每天 1G 的流量，如果套壳 Cloudflare，流量个人使用等于不要钱。折腾的乐趣，就在于不停的折腾～&lt;/p>
-&lt;p>Backblaze B2 同步，&lt;code>B2_APPKEY_ID&lt;/code> &lt;code>B2_APPKEY&lt;/code>在&lt;a href="https://secure.backblaze.com/app_keys.htm">Application Keys&lt;/a>菜单下生成就行。要特别注意的是&lt;code>B2_BUCKET&lt;/code>写法，完整的写法是&lt;code>b2://xxx&lt;/code>，其中&lt;code>xxx&lt;/code>为存储桶名称。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-15">15&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 同步到Backblaze B2 &lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#062873;font-weight:bold">name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>Sync B2 Bucket&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#062873;font-weight:bold">on&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>push&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#062873;font-weight:bold">jobs&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">deploy&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">runs-on&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>ubuntu-latest&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">steps&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>actions/checkout@master&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#062873;font-weight:bold">uses&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>jakejarvis/backblaze-b2-action@master&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">env&lt;/span>:&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">SOURCE_DIR&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#4070a0">&amp;#39;./&amp;#39;&lt;/span>&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">B2_BUCKET&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.B2_BUCKET }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">B2_APPKEY_ID&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.B2_APPKEY_ID }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">B2_APPKEY&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>${{ secrets.B2_APPKEY }}&lt;span style="color:#bbb">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="所需的环境变量">所需的环境变量&lt;/h3>
-&lt;p>&lt;code>SOURCE_DIR&lt;/code>您想要同步/上传到 B2 的本地目录。例如，&lt;code>./public&lt;/code>&lt;/p>
-&lt;p>&lt;code>B2_BUCKET&lt;/code>您要同步到的存储桶的名称。例如，&lt;code>my_files&lt;/code>&lt;/p>
-&lt;p>&lt;code>B2_APPKEY_ID&lt;/code>您的 Backblaze 应用程序密钥 ID。&lt;a href="https://secure.backblaze.com/app_keys.htm">在这里生成它。&lt;/a>&lt;/p>
-&lt;p>&lt;code>B2_APPKEY&lt;/code>您的 Backblaze 应用程序密钥 — 又名“秘密”密钥。&lt;a href="https://secure.backblaze.com/app_keys.htm">在这里生成它。&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>UPTIME_KUMA_CLOUDFLARED_TOKEN=&lt;code>&amp;lt;your token&amp;gt;&lt;/code>&lt;/p></description></item></channel></rss>
