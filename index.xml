@@ -1,4 +1,157 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Sep 2023 14:19:43 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>从网页视频到MP4：轻松使用M3U8下载器保存你喜爱的视频</title><link>https://blog.taoshuge.eu.org/post/079/</link><pubDate>Mon, 11 Sep 2023 14:19:43 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/079/</guid><description>&lt;h2 id="项目">项目&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Sep 2023 16:58:58 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>定时将R2图床同步到腾讯云对象存储</title><link>https://blog.taoshuge.eu.org/post/081/</link><pubDate>Mon, 11 Sep 2023 16:58:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/081/</guid><description>&lt;p>请确保您的系统上已经&lt;code>安装了 rclone&lt;/code>，并且命令的路径正确。&lt;/p>
+&lt;p>要将定时任务添加到您的系统中，您可以按照以下步骤进行操作：&lt;/p>
+&lt;p>打开&lt;code>终端&lt;/code>或命令提示符，登录到您的系统。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>r2&lt;/code>为cloudflare r2 , &lt;code>cos&lt;/code>是腾讯云cos&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="在linux中">在linux中&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>crontab -e
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在打开的定时任务配置文件中，添加以下内容：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#40a070">0&lt;/span> &lt;span style="color:#40a070">2&lt;/span> * * * rclone sync r2:blog cos:shenma-1253486782/blog --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>保存并关闭文件。&lt;/p>
+&lt;p>系统将自动加载新的定时任务配置。&lt;/p>
+&lt;p>现在，您的系统将在&lt;code>每天的凌晨2点&lt;/code>执行指定的命令。请注意，这是基于&lt;code>系统的时区&lt;/code>设置，如果您的系统时区设置为东八区，那么任务将在东八区的凌晨2点执行。&lt;/p>
+&lt;p>查看任务&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>crontab -l
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>调整时区:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>timedatectl set-timezone Asia/Shanghai &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> hwclock --systohc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="在-windows-系统中">在 Windows 系统中&lt;/h2>
+&lt;p>您可以使用任务计划程序（Task Scheduler）来创建定时任务。以下是在 Windows 上创建定时任务的具体步骤：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>打开“任务计划程序”。您可以通过按下 Win + R 键，在运行对话框中输入 &lt;code>taskschd.msc&lt;/code>，然后按下 Enter 键来打开它。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在任务计划程序窗口中，点击左侧的 &amp;ldquo;创建任务&amp;rdquo;。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在 &amp;ldquo;常规&amp;rdquo; 选项卡中，输入任务的名称和描述。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>切换到 &amp;ldquo;触发器&amp;rdquo; 选项卡，点击 &amp;ldquo;新建&amp;rdquo; 来创建一个新的触发器。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在触发器设置中，选择 &amp;ldquo;每天&amp;rdquo;，并设置执行任务的时间为 16:40。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>切换到 &amp;ldquo;操作&amp;rdquo; 选项卡，点击 &amp;ldquo;新建&amp;rdquo; 来创建一个新的操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在操作设置中，选择 &amp;ldquo;启动程序&amp;rdquo;，然后在程序/脚本字段中输入 &lt;code>rclone&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在 &amp;ldquo;添加参数&amp;rdquo; 字段中输入 &lt;code>sync r2:blog cos:shenma-1253486782/blog --ignore-existing -u -v -P --transfers=20 --ignore-errors --buffer-size=128M --check-first --checkers=10&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>配置其他可选设置，如 &amp;ldquo;条件&amp;rdquo;、&amp;ldquo;设置&amp;rdquo; 等。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>点击 &amp;ldquo;确定&amp;rdquo; 保存任务。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>现在，您已经成功创建了一个在每天的16点40分执行指定命令的定时任务。请确保您的系统上已经安装了 rclone，并且命令的路径正确。您可以根据需要进行进一步的调整和修改。&lt;/p>
+&lt;h2 id="bat一键运行">bat一键运行&lt;/h2>
+&lt;p>将以下内容保存为&lt;code>bat文件&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>@echo off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /d D:&lt;span style="color:#4070a0;font-weight:bold">\r&lt;/span>clone-v1.63.0-windows-amd64
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone sync r2:blog cos:shenma-1253486782/blog --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Debian服务器更改时区为中国</title><link>https://blog.taoshuge.eu.org/post/080/</link><pubDate>Mon, 11 Sep 2023 16:19:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/080/</guid><description>&lt;p>有时候我们安装服务器会用默认的UTC( Universal Time Coordinated)时区，造成后继一些软件记录时间上显示的不够直观，所以需要手动更改为中国/上海时区。&lt;br>
+更改很简单，如下2条命令即可：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo rm /etc/localtime
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>timedatectl set-timezone Asia/Shanghai
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用 &lt;code>timedatectl&lt;/code>命令可以查看时区&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>timedatectl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用date -s &amp;ldquo;yyyy-MM-dd hh:mm:ss&amp;rdquo;，例如将当前系统时间设置为2021年1月4日12:00:00&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>date -s &lt;span style="color:#4070a0">&amp;#34;yyyy-MM-dd hh:mm:ss&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用&lt;code>hwclock --systohc&lt;/code>可以将系统时间同步到硬件时间。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>hwclock --systohc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>是否NTP服务器同步&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>timedatectl set-ntp yes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>从网页视频到MP4：轻松使用M3U8下载器保存你喜爱的视频</title><link>https://blog.taoshuge.eu.org/post/079/</link><pubDate>Mon, 11 Sep 2023 14:19:43 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/079/</guid><description>&lt;h2 id="项目">项目&lt;/h2>
 &lt;h3 id="猫抓">猫抓：&lt;/h3>
 &lt;p>&lt;a href="https://github.com/xifangczy/cat-catch/releases">https://github.com/xifangczy/cat-catch/releases&lt;/a>&lt;/p>
 &lt;p>安装地址: &lt;a href="https://o2bmm.gitbook.io/cat-catch/docs/install">https://o2bmm.gitbook.io/cat-catch/docs/install&lt;/a>&lt;/p>
@@ -2593,267 +2746,4 @@ keyId: xxxxxxxxxxxx]
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push -f origin --all
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>CloudFlare Tunnel 内网穿透和反向代理</title><link>https://blog.taoshuge.eu.org/post/061/</link><pubDate>Mon, 21 Aug 2023 06:02:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/061/</guid><description>&lt;p>将您的本地服务扩展到全球网络：&lt;code>Cloudflare Tunnel&lt;/code>的魔力&lt;/p>
-&lt;p>&lt;code>Cloudflare Tunnel&lt;/code>是您连接全球网络的完美伙伴。无论您是个人开发者还是企业用户，通过Cloudflare Tunnel，您可以轻松将您的&lt;code>本地或电脑上&lt;/code>的服务提供给全球用户。这款强大的工具可以安全地将您的服务引导到&lt;code>Cloudflare的分布式&lt;/code>网络中，确保数据的安全性和隐私。通过加密通信和强大的安全功能，您的Web服务将免受恶意攻击和数据泄露的威胁。&lt;/p>
-&lt;h2 id="1下载与安装">1.下载与安装&lt;/h2>
-&lt;p>安装教程: &lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/install-and-setup/tunnel-guide/local/">点击打开&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> sudo dpkg -i cloudflared-linux-amd64.deb
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>有两种运行隧道的方式: &lt;code>控制台&lt;/code>和&lt;code>命令行&lt;/code>&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;strong>区别:&lt;/strong> 控制台添加&lt;code>第2个隧道&lt;/code>的时候提示你已经安装过cloudflared服务了,你需要卸载才能继续, 命令行则可以运行多个&lt;code>配置文件&lt;/code>,也就是多个服务,所以&lt;code>没有限制&lt;/code>&lt;/p>
-&lt;p>本文使用的是&lt;code>命令行&lt;/code>方式&lt;/p>
-&lt;p>&lt;a href="https://one.dash.cloudflare.com/">打开控制台&amp;ndash;Access&amp;ndash;Tunnels&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://cdn.bilicdn.tk/gh/woniu336/blog-image@main/img/Pasted%20image%2020230821060949.webp" alt="Pasted image 20230821060949">&lt;/p>
-&lt;h2 id="2登录">2.登录&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel login
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>会自动&lt;code>打开浏览器&lt;/code>，登录后&lt;code>选择域名&lt;/code>，完成验证&lt;/p>
-&lt;p>此时 Cloudflare 会创建一个 &lt;code>cert.pem&lt;/code> 文件放在你的 &lt;code>~/.cloudflared&lt;/code> 目录下。&lt;/p>
-&lt;p>&lt;img src="https://cdn.bilicdn.tk/gh/woniu336/blog-image@main/img/Pasted%20image%2020230821061103.webp" alt="Pasted image 20230821061103">&lt;/p>
-&lt;p>&lt;img src="https://cdn.bilicdn.tk/gh/woniu336/blog-image@main/img/Pasted%20image%2020230821061328.webp" alt="Pasted image 20230821061328">&lt;/p>
-&lt;h2 id="3创建隧道">3.创建隧道&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel create 隧道名
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>此时会输出一些&lt;code>隧道 ID&lt;/code> 之类的信息&lt;/p>
-&lt;h2 id="4配置隧道">4.配置隧道&lt;/h2>
-&lt;p>给隧道创建一个&lt;code>域名&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel route dns 隧道名 刚才选择的域名
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>&lt;strong>这里有个坑&lt;/strong>: 回到域名的&lt;code>DNS解析&lt;/code>,把CNAME 记录名称改回来&lt;/p>
-&lt;p>比如: tt.baidu.com改为mm.baidu.com&lt;/p>
-&lt;p>内容改为: &lt;code>隧道UUID.cfargotunnel.com&lt;/code>&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="5-创建配置文件">5. 创建配置文件&lt;/h2>
-&lt;p>比如我打算放在 &lt;code>~/.cloudflared/config.yml&lt;/code>，文件内容如下：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-6">6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-7">7&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>tunnel: UUID
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>credentials-file: /root/.cloudflared/UUID.json
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ingress:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - hostname: xx.baidu.com
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> service: http://localhost:80
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - service: http_status:404
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="启动隧道">启动隧道：&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel --config ~/.cloudflared/config.yml run
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>此时会有一些调试信息，比如它告诉你连接到了哪些 Cloudflare 节点之类的：&lt;/p>
-&lt;pre tabindex="0">&lt;code>022-03-26T06:52:31Z INF Starting tunnel tunnelID=xxxxxxx-5b0e-xxxx-8034-xxxxxxx
-2022-03-26T06:52:31Z INF Version 2022.3.4
-...
-2022-03-26T06:52:31Z INF Generated Connector ID: 624aa020-a90a-4bef-91da-330c74edb02f
-2022-03-26T06:52:31Z INF Initial protocol http2
-2022-03-26T06:52:31Z INF Starting metrics server on 127.0.0.1:44143/metrics
-2022-03-26T06:52:33Z INF Connection 34504363-646c-46a2-973d-bd112943c58f registered connIndex=0 location=KIX
-2022-03-26T06:52:34Z INF Connection 7a3ec8f7-482c-4fe5-93c4-69d1177ca457 registered connIndex=1 location=NRT
-2022-03-26T06:52:35Z INF Connection 7d571bdb-96d2-49d3-b8bf-14754aa6cf8b registered connIndex=2 location=KIX
-2022-03-26T06:52:36Z INF Connection 473e30ae-e98b-4da1-8768-12bf5304c7ab registered connIndex=3 location=NRT
-&lt;/code>&lt;/pre>&lt;h2 id="6-其他">6. 其他&lt;/h2>
-&lt;h3 id="体验隧道">体验隧道&lt;/h3>
-&lt;p>由官方提供测试域名 &lt;code>重新启动体验隧道域名会变&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel --url localhost:你http服务端口号
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="运行隧道-有时会失败">&lt;del>运行隧道 (有时会失败)&lt;/del>&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel run --url localhost:你http服务端口号 隧道名字
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="删除隧道">删除隧道&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel delete 隧道名
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="列出隧道">列出隧道&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cloudflared tunnel list
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="配置为系统服务">配置为系统服务&lt;/h2>
-&lt;p>执行&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>cloudflared&lt;span style=""> &lt;/span>service&lt;span style=""> &lt;/span>install
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>cloudflared 会新建 systemd 文件&lt;/p>
-&lt;p>开启服务&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>ystemctl&lt;span style=""> &lt;/span>start&lt;span style=""> &lt;/span>cloudflared.service
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="7-卸载隧道">7. 卸载隧道&lt;/h2>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo cloudflared service uninstall
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>记得删除&lt;code>cloudflared.service&lt;/code>残留文件&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo rm /etc/systemd/system/cloudflared.service
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h1 id="后记">后记&lt;/h1>
-&lt;p>理论上不限制流量，比之前的worker法好一点，适合没有独立公网v4的nat，内网机器，省去自己内网穿透，端口转发的麻烦&lt;/p>
-&lt;p>另外，毕竟是穿透到国外，CF什么速度懂得都懂，跨境速度就挺差，国内穿透还是可以考虑阿里的钉钉免费内网穿透，走的阿里BGP（海外主电信副联通）&lt;/p>
-&lt;h1 id="参考文档">参考文档&lt;/h1>
-&lt;p>&lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/create-tunnel">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/create-tunnel&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/trycloudflare">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/trycloudflare&lt;/a>&lt;/p></description></item><item><title>利用Cloudflare Tunnel为Uptime Kuma设置反向代理</title><link>https://blog.taoshuge.eu.org/post/060/</link><pubDate>Sun, 20 Aug 2023 13:57:08 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/060/</guid><description>&lt;h2 id="描述">描述&lt;/h2>
-&lt;p>这是迄今为止我见过的最简单的反向代理！&lt;/p>
-&lt;p>她就是&lt;code>Cloudflare Tunnel&lt;/code>&lt;/p>
-&lt;p>不用安装Nginx 或 Apache&lt;/p>
-&lt;p>安装好&lt;code>Uptime Kuma&lt;/code>( docker 安装)，您只需在“设置”中提供 &lt;code>Cloudflare Tunnel&lt;/code> 令牌，即可在 Internet 上浏览 Uptime Kuma。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/14cffc608eff11aff6879f4c46a46f54.webp" alt="Pasted image 20230820140831">&lt;/p>
-&lt;p>优点：&lt;/p>
-&lt;ul>
-&lt;li>免费&lt;/li>
-&lt;li>完整的 GUI，零配置文件&lt;/li>
-&lt;li>您可以将 Uptime Kuma 置于防火墙后面&lt;/li>
-&lt;li>无需暴露您的真实IP&lt;/li>
-&lt;li>公开 Docker 端口是可选的&lt;/li>
-&lt;li>不需要 Nginx、Caddy 或 Traefik 等反向代理软件&lt;/li>
-&lt;li>零配置 SSL&lt;/li>
-&lt;li>免费SSL&lt;/li>
-&lt;/ul>
-&lt;h2 id="要求">要求&lt;/h2>
-&lt;ul>
-&lt;li>您域名的 DNS 由 Cloudflare 管理。&lt;/li>
-&lt;li>对于 Docker，仅 Debian或ubuntu 基础支持。&lt;/li>
-&lt;li>对于非 Docker，需要下载并安装&lt;code>cloudflared&lt;/code>。&lt;a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/">https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/installation/&lt;/a>&lt;/li>
-&lt;li>对于非 Docker Windows 用户，您可以在其 Github 版本上下载 msi 安装程序：&lt;a href="https://github.com/cloudflare/cloudflared/releases/latest">https://github.com/cloudflare/cloudflared/releases/latest&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="四个步骤">四个步骤&lt;/h2>
-&lt;ol>
-&lt;li>&lt;a href="https://dash.teams.cloudflare.com/">在Cloudflare Zero Trust&lt;/a>上创建隧道。&lt;/li>
-&lt;li>获取您的隧道令牌并将其设置到您的 Uptime Kuma 实例中。&lt;/li>
-&lt;li>将域名映射到&lt;a href="http://localhost:3001/">http://localhost:3001&lt;/a>。&lt;/li>
-&lt;li>启动。&lt;/li>
-&lt;/ol>
-&lt;h2 id="开始吧">开始吧&lt;/h2>
-&lt;p>步骤其实非常简单。然而，由于这个概念对任何人来说都是相当新的，所以详细地写出来可能会更好。&lt;/p>
-&lt;p>但相信我，一旦您学会了，您将再次记住如何在没有本指南的情况下进行配置！而对于 Nginx 或 Traefik，我永远不记得如何在不谷歌搜索的情况下进行配置。&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>前往&lt;a href="https://dash.teams.cloudflare.com/">Cloudflare Zero Trust&lt;/a>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>Access&lt;/code>&amp;raquo; &lt;code>Tunnels&lt;/code>_&lt;code>Create Tunnel&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/d042170a98d589ed54049eebd00086dc.webp" alt="">&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>键入&lt;code>Tunnel name&lt;/code>诸如&lt;code>uptime-kuma&lt;/code>并保存隧道。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>单击令牌进行复制。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/7b81d0bde06c988536c8118c7943ec5e.webp" alt="">&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>转到您的 Uptime Kuma 实例。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/5243e955b868eca72505829a116ef9d9.webp" alt="">&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>Settings&lt;/code>&amp;gt;&lt;code>Reverse Proxy&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>将令牌粘贴到&lt;code>Cloudflare Tunnel Token&lt;/code>字段中。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>点击&lt;code>Start cloudflared&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>返回到&lt;code>Cloudflare Zero Trust&lt;/code>，如果您看到连接器，则单击&lt;code>Next&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/0bf2af2207e9b775d09b821a37cab580.webp" alt="">&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>选择您最喜欢的域名并映射到&lt;code>http://localhost:3001&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/ceb29fd37fa199fb99abda3965539b51.webp" alt="">&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>点击&lt;code>Save&lt;/code>并转到您的域名&lt;code>https://&amp;lt;your domain name&amp;gt;&lt;/code>并获利！是的，它还会自动为您提供 SSL！&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/3cbf563f8867f0e5bda906d925056bc5.webp" alt="">&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;h2 id="如何停止">如何停止&lt;/h2>
-&lt;ul>
-&lt;li>选项 1.您可以删除 Cloudflare 上的地图。&lt;/li>
-&lt;li>选项 2. 您可以在 Uptime Kuma 中单击&lt;code>Stop cloudflared&lt;/code>和。&lt;code>Remove Token&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="环境变量">环境变量&lt;/h2>
-&lt;p>或者，您可以通过环境变量设置令牌。cloudflared 将自动启动。&lt;/p>
-&lt;p>通过这种方法，您甚至不需要将容器端口暴露给主机。&lt;/p>
-&lt;p>UPTIME_KUMA_CLOUDFLARED_TOKEN=&lt;code>&amp;lt;your token&amp;gt;&lt;/code>&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
