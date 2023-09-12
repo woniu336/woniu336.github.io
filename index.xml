@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Sep 2023 16:58:58 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>定时将R2图床同步到腾讯云对象存储</title><link>https://blog.taoshuge.eu.org/post/081/</link><pubDate>Mon, 11 Sep 2023 16:58:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/081/</guid><description>&lt;p>请确保您的系统上已经&lt;code>安装了 rclone&lt;/code>，并且命令的路径正确。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Sep 2023 14:08:04 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>升级Node.js版本</title><link>https://blog.taoshuge.eu.org/post/082/</link><pubDate>Tue, 12 Sep 2023 14:08:04 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/082/</guid><description>&lt;p>根据错误消息，您的 Node.js 版本不符合 &lt;code>typescript@5.2.2&lt;/code> 所需的最低 Node.js 版本。TypeScript 5.2.2 要求 Node.js 版本 &lt;code>&amp;gt;=14.17&lt;/code>，但您的系统上的 Node.js 版本是 &lt;code>v12.22.12&lt;/code>。&lt;/p>
+&lt;p>为了解决这个问题，您可以考虑升级 Node.js 到 &lt;code>&amp;gt;=14.17&lt;/code> 版本，然后再安装 TypeScript。以下是一些步骤来升级 Node.js：&lt;/p>
+&lt;ol>
+&lt;li>首先，您可以使用 &lt;code>nvm&lt;/code>（Node Version Manager）来管理 Node.js 版本。如果您尚未安装 &lt;code>nvm&lt;/code>，您可以按照以下步骤安装它：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者使用 &lt;code>wget&lt;/code> 安装：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;pre>&lt;code>注意：请查看 `nvm` 的官方网站以获取最新版本的安装脚本链接。
+&lt;/code>&lt;/pre>
+&lt;ol start="2">
+&lt;li>
+&lt;p>安装完 &lt;code>nvm&lt;/code> 后，关闭并重新打开终端窗口以确保 &lt;code>nvm&lt;/code> 生效。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>接下来，安装所需的 Node.js &lt;code>版本&lt;/code>。请运行以下命令：&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm install 14.17
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="4">
+&lt;li>使用以下命令将新安装的 Node.js 版本设置为默认版本：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nvm use 14.17
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="5">
+&lt;li>确认 Node.js 版本是否升级成功，可以运行以下命令检查 Node.js 和 npm 版本：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>node -v
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>npm -v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;pre>&lt;code>确保它们显示了新的版本号。
+&lt;/code>&lt;/pre>
+&lt;ol start="6">
+&lt;li>最后，重新运行以下命令来安装 TypeScript：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm install -g typescript@latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>现在，您应该能够成功安装 TypeScript 并编译您的项目。如果您在这些步骤中遇到任何问题，请随时提供更多信息，以便我可以提供进一步的帮助。&lt;/p></description></item><item><title>定时将R2图床同步到腾讯云对象存储</title><link>https://blog.taoshuge.eu.org/post/081/</link><pubDate>Mon, 11 Sep 2023 16:58:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/081/</guid><description>&lt;p>请确保您的系统上已经&lt;code>安装了 rclone&lt;/code>，并且命令的路径正确。&lt;/p>
 &lt;p>要将定时任务添加到您的系统中，您可以按照以下步骤进行操作：&lt;/p>
 &lt;p>打开&lt;code>终端&lt;/code>或命令提示符，登录到您的系统。&lt;/p>
 &lt;blockquote>
@@ -2685,65 +2762,6 @@ keyId: xxxxxxxxxxxx]
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- V2EX源：&lt;span style="color:#666">[&lt;/span>https://cdn.v2ex.com/gravatar/&lt;span style="color:#666">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- Loli源：&lt;span style="color:#666">[&lt;/span>https://gravatar.loli.net/avatar/&lt;span style="color:#666">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- 极客族：&lt;span style="color:#666">[&lt;/span>https://sdn.geekzu.org/avatar/&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>Git配置、提交到多个远程仓库</title><link>https://blog.taoshuge.eu.org/post/062/</link><pubDate>Tue, 22 Aug 2023 11:03:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/062/</guid><description>&lt;p>优雅地配置并将代码推&lt;code>送至多个远程仓库&lt;/code>，如 GitHub 和 Gitee，是一项重要的开发实践。通过巧妙配置 Git，你可以无缝管理多个代码托管平台。&lt;/p>
-&lt;p>在&lt;code>gitee&lt;/code>平台,你可以将&lt;code>github&lt;/code>上的项目导入进来,只需要填上github仓库 &lt;code>URL&lt;/code>即可.非常方便&lt;/p>
-&lt;h2 id="同时提交到github和gitee">同时提交到github和gitee&lt;/h2>
-&lt;h2 id="方法一">方法一&lt;/h2>
-&lt;p>通过命令行&lt;code>set-url --add&lt;/code> 添加&lt;/p>
-&lt;hr>
-&lt;h4 id="1使用如下命令添加远程仓库">1.使用如下命令添加远程仓库&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote set-url --add origin
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>例如：&lt;/p>
-&lt;pre tabindex="0">&lt;code>git remote set-url --add origin https://gitee.com/ganace/Ganace.git
-&lt;/code>&lt;/pre>&lt;h4 id="2查看远程仓库情况">2.查看远程仓库情况&lt;/h4>
-&lt;pre tabindex="0">&lt;code>git remote -v
-&lt;/code>&lt;/pre>&lt;p>可以看到gitee的仓库地址已经添加进去了&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>origin &lt;span style="color:#517918">https&lt;/span>:&lt;span style="color:#235388">//&lt;/span>github&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">.&lt;/span>github&lt;span style="color:#666">.&lt;/span>io&lt;span style="color:#666">.&lt;/span>git (fetch)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>origin &lt;span style="color:#517918">https&lt;/span>:&lt;span style="color:#235388">//&lt;/span>github&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">.&lt;/span>github&lt;span style="color:#666">.&lt;/span>io&lt;span style="color:#666">.&lt;/span>git (push)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>origin &lt;span style="color:#517918">https&lt;/span>:&lt;span style="color:#235388">//&lt;/span>gitee&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>ganace&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">.&lt;/span>git (push)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="方法二">方法二&lt;/h2>
-&lt;p>打开&lt;code>/.git/config&lt;/code>文件，在&lt;code>[remote “origin”]&lt;/code>项中添加多个需要同时提交的git远程仓库url。&lt;/p>
-&lt;p>例如：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-ruby" data-lang="ruby">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>remote &lt;span style="color:#4070a0">&amp;#34;origin&amp;#34;&lt;/span>&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#517918">https&lt;/span>:&lt;span style="color:#235388">//&lt;/span>github&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">.&lt;/span>github&lt;span style="color:#666">.&lt;/span>io&lt;span style="color:#666">.&lt;/span>git
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#517918">https&lt;/span>:&lt;span style="color:#235388">//&lt;/span>gitee&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>ganace&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#60add5">Ganace&lt;/span>&lt;span style="color:#666">.&lt;/span>git
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fetch &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#666">+&lt;/span>refs&lt;span style="color:#666">/&lt;/span>heads&lt;span style="color:#666">/*&lt;/span>&lt;span style="color:#517918">:refs&lt;/span>&lt;span style="color:#666">/&lt;/span>remotes&lt;span style="color:#666">/&lt;/span>origin&lt;span style="color:#666">/*&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="提交">提交&lt;/h2>
-&lt;p>使用&lt;code>git push -f&lt;/code> 统一提交到所有仓库，并且强制统一版本。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push -f origin --all
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item></channel></rss>
