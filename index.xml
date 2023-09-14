@@ -1,4 +1,479 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Sep 2023 14:08:04 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>升级Node.js版本</title><link>https://blog.taoshuge.eu.org/post/082/</link><pubDate>Tue, 12 Sep 2023 14:08:04 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/082/</guid><description>&lt;p>根据错误消息，您的 Node.js 版本不符合 &lt;code>typescript@5.2.2&lt;/code> 所需的最低 Node.js 版本。TypeScript 5.2.2 要求 Node.js 版本 &lt;code>&amp;gt;=14.17&lt;/code>，但您的系统上的 Node.js 版本是 &lt;code>v12.22.12&lt;/code>。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Sep 2023 18:49:40 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Openwrt安装alist和阿里云盘webdav</title><link>https://blog.taoshuge.eu.org/post/084/</link><pubDate>Thu, 14 Sep 2023 18:49:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/084/</guid><description>&lt;blockquote>
+&lt;p>以下插件只适用于斐讯 N1,其他没测试过&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="一-使用方法">一: 使用方法&lt;/h3>
+&lt;p>下载插件,然后进入软路由: &lt;code>系统&lt;/code>&amp;ndash;&lt;code>文件上传&lt;/code>&amp;ndash;&lt;code>安装&lt;/code>&lt;/p>
+&lt;p>&lt;code>例如: 斐讯 N1 盒子软路由&lt;/code>&lt;/p>
+&lt;h3 id="二-阿里云盘webdav插件">二: 阿里云盘webdav插件&lt;/h3>
+&lt;p>插件下载:&lt;/p>
+&lt;p>&lt;a href="https://github.com/woniu336/openwrt-ipk/tree/master/N1%E5%AE%89%E8%A3%85%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav">https://github.com/woniu336/openwrt-ipk/tree/master/N1安装阿里云盘webdav&lt;/a>&lt;/p>
+&lt;p>项目地址 : &lt;a href="https://github.com/messense/aliyundrive-webdav">https://github.com/messense/aliyundrive-webdav&lt;/a>&lt;/p>
+&lt;h3 id="三alist插件">三:Alist插件&lt;/h3>
+&lt;p>OpenWrt 查看CPU架构命令：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat /etc/os-release |grep ARCH
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>插件下载:&lt;/p>
+&lt;p>&lt;a href="https://github.com/woniu336/openwrt-ipk/tree/master/N1%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%AE%89%E8%A3%85alist">https://github.com/woniu336/openwrt-ipk/tree/master/N1软路由安装alist&lt;/a>&lt;/p>
+&lt;p>项目地址 : &lt;a href="https://github.com/sbwml/luci-app-alist">https://github.com/sbwml/luci-app-alist&lt;/a>&lt;/p>
+&lt;p>AList文档：https://alist.nn.ci/zh/guide/&lt;/p>
+&lt;h3 id="四-docker-安装阿里云盘webdav">四: Docker 安装阿里云盘webdav&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run -d --name&lt;span style="color:#666">=&lt;/span>aliyundrive-webdav --restart&lt;span style="color:#666">=&lt;/span>unless-stopped -p 8080:8080 &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -v /etc/aliyundrive-webdav/:/etc/aliyundrive-webdav/ &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -e &lt;span style="color:#bb60d5">REFRESH_TOKEN&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#39;your refresh token&amp;#39;&lt;/span> &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -e &lt;span style="color:#bb60d5">WEBDAV_AUTH_USER&lt;/span>&lt;span style="color:#666">=&lt;/span>admin &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -e &lt;span style="color:#bb60d5">WEBDAV_AUTH_PASSWORD&lt;/span>&lt;span style="color:#666">=&lt;/span>admin &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> messense/aliyundrive-webdav
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中，&lt;code>REFRESH_TOKEN&lt;/code> 环境变量为你的阿里云盘 &lt;code>refresh_token&lt;/code>，&lt;code>WEBDAV_AUTH_USER&lt;/code> 和 &lt;code>WEBDAV_AUTH_PASSWORD&lt;/code> 为连接 WebDAV 服务的用户名和密码。&lt;/p></description></item><item><title>Openwrt安装阿里云盘 WebDAV</title><link>https://blog.taoshuge.eu.org/post/083/</link><pubDate>Thu, 14 Sep 2023 18:18:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/083/</guid><description>&lt;p>阿里云盘 WebDAV 服务，主要使用场景为配合支持 WebDAV 协议的客户端 App 如 &lt;a href="https://firecore.com/infuse">Infuse&lt;/a>、&lt;a href="https://nplayer.com">nPlayer&lt;/a>
+等实现在电视上直接观看云盘视频内容， 支持客户端 App 直接从阿里云盘获取文件播放而不经过运行本应用的服务器中转, 支持上传文件，但受限于 WebDAV 协议不支持文件秒传。&lt;/p>
+&lt;p>&lt;strong>请注意：V2 版本基于阿里云盘开放平台接口实现，不再支持阿里云盘 Web 和 App 版本获取的 refresh token。&lt;/strong>
+&lt;strong>由于本项目作者不再使用梅林固件，V2 版本不再免费支持 Koolshare 梅林固件系统，如有需要请考虑&lt;a href="https://github.com/messense/aliyundrive-webdav/discussions/778">付费支持&lt;/a>。&lt;/strong>&lt;/p>
+&lt;h2 id="安装">安装&lt;/h2>
+&lt;p>可以从 &lt;a href="https://github.com/messense/aliyundrive-webdav/releases">GitHub Releases&lt;/a> 页面下载预先构建的二进制包， 也可以使用 pip 从 PyPI 下载:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>pip install aliyundrive-webdav
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果系统支持 &lt;a href="https://snapcraft.io">Snapcraft&lt;/a> 比如 Ubuntu、Debian 等，也可以使用 snap 安装：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo snap install aliyundrive-webdav
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="openwrt-路由器">OpenWrt 路由器&lt;/h3>
+&lt;p>&lt;a href="https://github.com/messense/aliyundrive-webdav/releases">GitHub Releases&lt;/a> 中有预编译的 ipk 文件， 目前提供了
+aarch64/arm/mipsel/x86_64/i686 等架构的版本，可以下载后使用 opkg 安装，以 nanopi r4s 为例：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.3.2/aliyundrive-webdav_2.3.2-1_aarch64_generic.ipk
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.3.2/luci-app-aliyundrive-webdav_2.3.2_all.ipk
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.3.2/luci-i18n-aliyundrive-webdav-zh-cn_2.3.2-1_all.ipk
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>opkg install aliyundrive-webdav_2.3.2-1_aarch64_generic.ipk
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>opkg install luci-app-aliyundrive-webdav_2.3.2_all.ipk
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>opkg install luci-i18n-aliyundrive-webdav-zh-cn_2.3.2-1_all.ipk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其它 CPU 架构的路由器可在 &lt;a href="https://github.com/messense/aliyundrive-webdav/releases">GitHub Releases&lt;/a> 页面中查找对应的架构的主程序 ipk 文件下载安装， 常见
+OpenWrt 路由器 CPU 架构如下表（欢迎补充）：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>路由器&lt;/th>
+&lt;th>CPU 架构&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>nanopi r4s&lt;/td>
+&lt;td>aarch64_generic&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>小米 AX3600&lt;/td>
+&lt;td>aarch64_cortex-a53&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>斐讯 N1 盒子&lt;/td>
+&lt;td>aarch64_cortex-a53&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Newifi D2&lt;/td>
+&lt;td>mipsel_24kc&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Pogoplug&lt;/td>
+&lt;td>arm_mpcore&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>Tips: 不清楚 CPU 架构类型可通过运行 &lt;code>opkg print-architecture&lt;/code> 命令查询。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/ab37d11644e919f925437a1008c2a593.webp" alt="Pasted image 20230914182516">&lt;/p>
+&lt;h2 id="docker-运行">Docker 运行&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run -d --name&lt;span style="color:#666">=&lt;/span>aliyundrive-webdav --restart&lt;span style="color:#666">=&lt;/span>unless-stopped -p 8080:8080 &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -v /etc/aliyundrive-webdav/:/etc/aliyundrive-webdav/ &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -e &lt;span style="color:#bb60d5">REFRESH_TOKEN&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#39;your refresh token&amp;#39;&lt;/span> &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -e &lt;span style="color:#bb60d5">WEBDAV_AUTH_USER&lt;/span>&lt;span style="color:#666">=&lt;/span>admin &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -e &lt;span style="color:#bb60d5">WEBDAV_AUTH_PASSWORD&lt;/span>&lt;span style="color:#666">=&lt;/span>admin &lt;span style="color:#4070a0;font-weight:bold">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> messense/aliyundrive-webdav
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中，&lt;code>REFRESH_TOKEN&lt;/code> 环境变量为你的阿里云盘 &lt;code>refresh_token&lt;/code>，&lt;code>WEBDAV_AUTH_USER&lt;/code>
+和 &lt;code>WEBDAV_AUTH_PASSWORD&lt;/code> 为连接 WebDAV 服务的用户名和密码。&lt;/p>
+&lt;h3 id="qnap-威联通-nas">QNAP 威联通 NAS&lt;/h3>
+&lt;h4 id="qnap-插件">QNAP 插件&lt;/h4>
+&lt;p>&lt;a href="https://github.com/iranee/qnap-aliyunpan-webdav">qnap-aliyunpan-webdav&lt;/a> by
+&lt;a href="https://github.com/iranee">@iranee&lt;/a>.&lt;/p>
+&lt;h4 id="containerstation-docker">ContainerStation (Docker)&lt;/h4>
+&lt;p>管理员登陆 NAS 后安装 ContainerStation 并启动服务，在 Management (管理) 标签中 Create Application (新建应用)，配置如下&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-10">10&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#062873;font-weight:bold">version&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#4070a0">&amp;#39;3.3&amp;#39;&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb">&lt;/span>&lt;span style="color:#062873;font-weight:bold">services&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">aliyundrive-webdav&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">container_name&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>aliyundrive-webdav&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">restart&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>unless-stopped&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">ports&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#4070a0">&amp;#39;8080:8080&amp;#39;&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">environment&lt;/span>:&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>- &lt;span style="color:#4070a0">&amp;#39;REFRESH_TOKEN=mytoken...&amp;#39;&lt;/span>&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#062873;font-weight:bold">image&lt;/span>:&lt;span style="color:#bbb"> &lt;/span>messense/aliyundrive-webdav&lt;span style="color:#bbb">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中 &lt;code>REFRESH_TOKEN&lt;/code> 文档最下面说明；&lt;code>:8080&lt;/code> 网盘访问映射端口，可以按需改为其他的。&lt;/p>
+&lt;p>点击 Create (创建)后启动，访问 http://nas地址:8080/ 即可看到你网盘的自动生成索引网页文件。&lt;/p>
+&lt;p>参考文档&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://docs.docker.com/compose/">https://docs.docker.com/compose/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.composerize.com/">https://www.composerize.com/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="rclone">rclone&lt;/h2>
+&lt;p>为了避免重复上传文件，使用 rclone 时推荐使用 &lt;a href="https://rclone.org/webdav/#nextcloud">Nextcloud WebDAV&lt;/a> 模式，可以支持 sha1 checksums.
+另外需要配合 &lt;code>--no-update-modtime&lt;/code> 参数，否则 rclone 为了更新文件修改时间还是会强制重新上传。&lt;/p>
+&lt;p>举个例子：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone --no-update-modtime copy abc.pdf aliyundrive-nc://docs/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="获取-refresh-token">获取 refresh token&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://messense-aliyundrive-webdav-backendrefresh-token-ucs0wn.streamlit.app/">通过在线工具获取 refresh token&lt;/a>&lt;/li>
+&lt;li>命令行运行 &lt;code>aliyundrive-webdav qr login&lt;/code> 扫码授权后会输出 refresh token&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/967aba8993fb3956185f8f9ae808cc68.webp" alt="Pasted image 20230914182724">&lt;/p>
+&lt;h2 id="命令行用法">命令行用法&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-10"> 10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-11"> 11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-12"> 12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-13"> 13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-14"> 14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-15"> 15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-16"> 16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-17"> 17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-18"> 18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-19"> 19&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-20"> 20&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-21"> 21&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-22"> 22&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-23"> 23&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-24"> 24&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-25"> 25&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-26"> 26&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-27"> 27&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-28"> 28&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-29"> 29&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-30"> 30&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-31"> 31&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-32"> 32&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-33"> 33&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-34"> 34&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-35"> 35&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-36"> 36&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-37">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-37"> 37&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-38">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-38"> 38&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-39">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-39"> 39&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-40">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-40"> 40&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-41">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-41"> 41&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-42">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-42"> 42&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-43">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-43"> 43&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-44">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-44"> 44&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-45">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-45"> 45&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-46">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-46"> 46&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-47">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-47"> 47&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-48">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-48"> 48&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-49">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-49"> 49&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-50">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-50"> 50&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-51">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-51"> 51&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-52">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-52"> 52&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-53">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-53"> 53&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-54">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-54"> 54&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-55">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-55"> 55&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-56">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-56"> 56&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-57">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-57"> 57&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-58">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-58"> 58&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-59">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-59"> 59&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-60">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-60"> 60&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-61">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-61"> 61&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-62">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-62"> 62&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-63">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-63"> 63&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-64">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-64"> 64&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-65">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-65"> 65&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-66">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-66"> 66&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-67">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-67"> 67&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-68">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-68"> 68&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-69">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-69"> 69&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-70">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-70"> 70&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-71">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-71"> 71&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-72">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-72"> 72&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-73">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-73"> 73&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-74">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-74"> 74&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-75">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-75"> 75&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-76">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-76"> 76&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-77">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-77"> 77&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-78">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-78"> 78&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-79">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-79"> 79&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-80">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-80"> 80&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-81">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-81"> 81&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-82">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-82"> 82&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-83">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-83"> 83&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-84">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-84"> 84&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-85">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-85"> 85&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-86">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-86"> 86&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-87">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-87"> 87&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-88">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-88"> 88&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-89">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-89"> 89&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-90">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-90"> 90&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-91">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-91"> 91&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-92">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-92"> 92&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-93">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-93"> 93&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-94">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-94"> 94&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-95">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-95"> 95&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-96">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-96"> 96&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-97">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-97"> 97&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-98">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-98"> 98&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-99">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-99"> 99&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-100">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-100">100&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-101">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-101">101&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-102">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-102">102&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-103">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-103">103&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-104">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-104">104&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-105">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-105">105&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-106">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-106">106&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-107">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-107">107&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-108">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-108">108&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-109">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-109">109&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-110">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-110">110&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-111">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-111">111&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-112">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-112">112&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-113">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-113">113&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-114">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-114">114&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-115">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-115">115&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-116">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-116">116&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-117">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-117">117&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-118">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-118">118&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-119">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-119">119&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-120">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-120">120&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-121">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-121">121&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-122">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-122">122&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-123">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-123">123&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-124">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-124">124&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-125">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-125">125&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-126">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-126">126&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-127">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-127">127&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-128">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-128">128&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-129">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-129">129&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-130">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-130">130&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ aliyundrive-webdav --help
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>WebDAV server &lt;span style="color:#007020;font-weight:bold">for&lt;/span> AliyunDrive
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Usage: aliyundrive-webdav &lt;span style="color:#666">[&lt;/span>OPTIONS&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> aliyundrive-webdav &amp;lt;COMMAND&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Commands:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> qr Scan QRCode
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">help&lt;/span> Print this message or the &lt;span style="color:#007020">help&lt;/span> of the given subcommand&lt;span style="color:#666">(&lt;/span>s&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Options:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --host &amp;lt;HOST&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Listen host
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">HOST&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>default: 0.0.0.0&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -p, --port &amp;lt;PORT&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Listen port
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">PORT&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>default: 8080&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --client-id &amp;lt;CLIENT_ID&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Aliyun drive client_id
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">CLIENT_ID&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --client-secret &amp;lt;CLIENT_SECRET&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Aliyun drive client_secret
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">CLIENT_SECRET&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --drive-type &amp;lt;DRIVE_TYPE&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Aliyun drive &lt;span style="color:#007020">type&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">DRIVE_TYPE&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Possible values:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - resource: Resource drive
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - backup: Backup drive
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - default: Default drive
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -r, --refresh-token &amp;lt;REFRESH_TOKEN&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Aliyun drive refresh token
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">REFRESH_TOKEN&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -U, --auth-user &amp;lt;AUTH_USER&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> WebDAV authentication username
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">WEBDAV_AUTH_USER&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -W, --auth-password &amp;lt;AUTH_PASSWORD&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> WebDAV authentication password
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">WEBDAV_AUTH_PASSWORD&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -I, --auto-index
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Automatically generate index.html
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -S, --read-buffer-size &amp;lt;READ_BUFFER_SIZE&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Read/download buffer size in bytes, defaults to 10MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>default: 10485760&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --upload-buffer-size &amp;lt;UPLOAD_BUFFER_SIZE&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Upload buffer size in bytes, defaults to 16MB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>default: 16777216&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --cache-size &amp;lt;CACHE_SIZE&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Directory entries cache size
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>default: 1000&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --cache-ttl &amp;lt;CACHE_TTL&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Directory entries cache expiration &lt;span style="color:#007020">time&lt;/span> in seconds
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>default: 600&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --root &amp;lt;ROOT&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Root directory path
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>default: /&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -w, --workdir &amp;lt;WORKDIR&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Working directory, refresh_token will be stored in there &lt;span style="color:#007020;font-weight:bold">if&lt;/span> specified
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --no-trash
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Delete file permanently instead of trashing it
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --read-only
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Enable &lt;span style="color:#007020">read&lt;/span> only mode
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --tls-cert &amp;lt;TLS_CERT&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> TLS certificate file path
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">TLS_CERT&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --tls-key &amp;lt;TLS_KEY&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> TLS private key file path
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">TLS_KEY&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --strip-prefix &amp;lt;STRIP_PREFIX&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Prefix to be stripped off when handling request
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">[&lt;/span>env: &lt;span style="color:#bb60d5">WEBDAV_STRIP_PREFIX&lt;/span>&lt;span style="color:#666">=]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --debug
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Enable debug log
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --no-self-upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Disable self auto upgrade
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --skip-upload-same-size
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Skip uploading same size file
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --prefer-http-download
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Prefer downloading using HTTP protocol
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --redirect
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Enable &lt;span style="color:#40a070">302&lt;/span> redirect when possible
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -h, --help
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Print &lt;span style="color:#007020">help&lt;/span> &lt;span style="color:#666">(&lt;/span>see a summary with &lt;span style="color:#4070a0">&amp;#39;-h&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -V, --version
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Print version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>&lt;/p>
+&lt;p>注意：TLS/HTTPS 暂不支持 MIPS 架构。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>Note&lt;/strong>&lt;/p>
+&lt;p>注意：启用 &lt;code>--skip-upload-same-size&lt;/code> 选项虽然能加速上传但可能会导致修改过的同样大小的文件不会被上传&lt;/p>
+&lt;/blockquote></description></item><item><title>升级Node.js版本</title><link>https://blog.taoshuge.eu.org/post/082/</link><pubDate>Tue, 12 Sep 2023 14:08:04 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/082/</guid><description>&lt;p>根据错误消息，您的 Node.js 版本不符合 &lt;code>typescript@5.2.2&lt;/code> 所需的最低 Node.js 版本。TypeScript 5.2.2 要求 Node.js 版本 &lt;code>&amp;gt;=14.17&lt;/code>，但您的系统上的 Node.js 版本是 &lt;code>v12.22.12&lt;/code>。&lt;/p>
 &lt;p>为了解决这个问题，您可以考虑升级 Node.js 到 &lt;code>&amp;gt;=14.17&lt;/code> 版本，然后再安装 TypeScript。以下是一些步骤来升级 Node.js：&lt;/p>
 &lt;ol>
 &lt;li>首先，您可以使用 &lt;code>nvm&lt;/code>（Node Version Manager）来管理 Node.js 版本。如果您尚未安装 &lt;code>nvm&lt;/code>，您可以按照以下步骤安装它：&lt;/li>
@@ -2582,221 +3057,4 @@ keyId: xxxxxxxxxxxx]
 &lt;p>7.Magisk：Android 获取 Root 许可权的工具。它可以快速、无痛地获得 Android 的超级用户许可权，支持 Android 5.0 以上的设备。&lt;br>
 【&lt;strong>&lt;a href="https://github.com/topjohnwu/Magisk">开源项目&lt;/a>&lt;/strong>】&lt;/p>
 &lt;p>8.uptime-kuma：一款极简的 uptime 监控工具。该项目可以用来监控服务正常运行时间，它界面美观、支持 Docker 一键部署，提供了中文界面、通知、多状态页面等实用功能。&lt;/p>
-&lt;p>【&lt;strong>&lt;a href="https://github.com/louislam/uptime-kuma">开源项目&lt;/a>&lt;/strong>】&lt;/p></description></item><item><title>使用Nginx反向代理，自建CDN加速节点</title><link>https://blog.taoshuge.eu.org/post/064/</link><pubDate>Thu, 24 Aug 2023 14:05:35 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/064/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
-&lt;h3 id="1安装nginx">1、安装Nginx&lt;/h3>
-&lt;p>&lt;a href="https://lnmp.org/install.html">这里使用的是军哥的LNMP&lt;/a> &lt;em>单独安装Nginx&lt;/em>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>wget http://soft.vpser.net/lnmp/lnmp2.0.tar.gz -O lnmp2.0.tar.gz &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> tar zxf lnmp2.0.tar.gz &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#007020">cd&lt;/span> lnmp2.0 &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./install.sh nginx
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="2cdn配置">2、CDN配置&lt;/h3>
-&lt;p>假如我需要对&lt;code>www.moerats.com&lt;/code>搭建&lt;code>CDN&lt;/code>节点，数据放在&lt;code>192.168.1.100&lt;/code>，需要先修改&lt;code>hosts&lt;/code>指向，告知&lt;code>CDN&lt;/code>节点去哪里去获取网站数据，也就是回源地址，做如下修改：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vi /etc/hosts
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>192.168.1.100 www.moerats.com
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>然后创建&lt;code>nginx&lt;/code>配置文件&lt;code>moerats.com.conf&lt;/code>。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6">6&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#创建缓存目录&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mkdir -p /usr/local/nginx/caches/www.moerats.com
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#设置缓存目录权限&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chown -R www:www /usr/local/nginx/caches/www.moerats.com
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#创建moerats.com.conf&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>vi /usr/local/nginx/conf/vhost/moerats.com.conf
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>在&lt;code>moerats.com.conf&lt;/code>中添加下面的内容，缓存目录/缓存时间请根据实际情况调整。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-20">20&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>proxy_cache_path /usr/local/nginx/caches/www.moerats.com &lt;span style="color:#bb60d5">levels&lt;/span>&lt;span style="color:#666">=&lt;/span>1:2 &lt;span style="color:#bb60d5">keys_zone&lt;/span>&lt;span style="color:#666">=&lt;/span>xiaoz:50m &lt;span style="color:#bb60d5">inactive&lt;/span>&lt;span style="color:#666">=&lt;/span>30m &lt;span style="color:#bb60d5">max_size&lt;/span>&lt;span style="color:#666">=&lt;/span>50m;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>server &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> listen 80;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server_name www.moerats.com;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> charset utf-8,gbk;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> location / &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header Accept-Encoding &lt;span style="color:#4070a0">&amp;#34;&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_pass https://www.moerats.com;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_redirect off;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Real-IP &lt;span style="color:#bb60d5">$remote_addr&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Forwarded-For &lt;span style="color:#bb60d5">$proxy_add_x_forwarded_for&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache xiaoz;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">200&lt;/span> &lt;span style="color:#40a070">304&lt;/span> 30m;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">301&lt;/span> 24h;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">500&lt;/span> &lt;span style="color:#40a070">502&lt;/span> &lt;span style="color:#40a070">503&lt;/span> &lt;span style="color:#40a070">504&lt;/span> 0s;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid any 1s;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_min_uses 1;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> expires 12h;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>参数说明：&lt;/strong>&lt;/p>
-&lt;p>&lt;code>/usr/local/nginx/caches/www.moerats.com&lt;/code>：为缓存目录&lt;/p>
-&lt;p>&lt;code>levels&lt;/code>：指定该缓存空间有两层hash目录，第一层目录为1个字母，第二层为2个字母。&lt;/p>
-&lt;p>&lt;code>keys_zone=xiaoz:50m&lt;/code>：为缓存空间起个名字，这里取名为“xiaoz”，后面的50m指内存缓存空间&lt;/p>
-&lt;p>&lt;code>inactive=30m&lt;/code>：如果30分钟内该资源没有被访问则删除&lt;/p>
-&lt;p>&lt;code>max_size=50m&lt;/code>：指硬盘缓存大小为50MB&lt;/p>
-&lt;p>&lt;code>proxy_cache_valid&lt;/code>：指定状态码缓存时间，前面写状态码，后面写缓存时间。&lt;/p>
-&lt;h3 id="3-然后重启nginx生效">3. 然后重启Nginx生效&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/etc/init.d/nginx reload
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="4https配置">4、Https配置&lt;/h3>
-&lt;p>如果是&lt;code>https&lt;/code>网站，配置文件参考：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-24">24&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-25">25&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-26">26&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-27">27&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-28">28&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-29">29&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-30">30&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-31">31&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-32">32&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-33">33&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-34">34&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-35">35&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-36">36&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>proxy_cache_path /data/wwwroot/caches/www.moerats.com &lt;span style="color:#bb60d5">levels&lt;/span>&lt;span style="color:#666">=&lt;/span>1:2 &lt;span style="color:#bb60d5">keys_zone&lt;/span>&lt;span style="color:#666">=&lt;/span>Rats:50m &lt;span style="color:#bb60d5">inactive&lt;/span>&lt;span style="color:#666">=&lt;/span>30m &lt;span style="color:#bb60d5">max_size&lt;/span>&lt;span style="color:#666">=&lt;/span>50m;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>server &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> listen &lt;span style="color:#40a070">443&lt;/span> ssl http2;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_certificate /home/moerats.com.crt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_certificate_key /home/moerats.com.key;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_session_timeout 1d;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_session_cache builtin:1000 shared:SSL:10m;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_dhparam /data/ssl/dhparam.pem;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_ciphers &lt;span style="color:#4070a0">&amp;#39;ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA:ECDHE-ECDSA-DES-CBC3-SHA:ECDHE-RSA-DES-CBC3-SHA:EDH-RSA-DES-CBC3-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:DES-CBC3-SHA:!DSS&amp;#39;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_prefer_server_ciphers on;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_stapling on;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ssl_stapling_verify on;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> server_name www.moerats.com;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> access_log /data/wwwlogs/moerats.com_nginx.log combined;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> charset utf-8,gbk;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> location / &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header Accept-Encoding &lt;span style="color:#4070a0">&amp;#34;&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_pass https://www.moerats.com;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_redirect off;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Real-IP &lt;span style="color:#bb60d5">$remote_addr&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Forwarded-For &lt;span style="color:#bb60d5">$proxy_add_x_forwarded_for&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache Rats;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">200&lt;/span> &lt;span style="color:#40a070">304&lt;/span> 30m;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">301&lt;/span> 24h;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid &lt;span style="color:#40a070">500&lt;/span> &lt;span style="color:#40a070">502&lt;/span> &lt;span style="color:#40a070">503&lt;/span> &lt;span style="color:#40a070">504&lt;/span> 0s;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_valid any 1s;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_cache_min_uses 1;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> expires 12h;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>server &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> listen &lt;span style="color:#40a070">80&lt;/span> default_server;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">return&lt;/span> &lt;span style="color:#40a070">301&lt;/span> https://&lt;span style="color:#bb60d5">$host$request_uri&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>你也可以使用多台&lt;code>VPS&lt;/code>，利用&lt;code>CloudXNS&lt;/code>智能解析，将不同地区的&lt;code>DNS&lt;/code>解析到最近的&lt;code>VPS&lt;/code>上，进行&lt;code>CND&lt;/code>加速。&lt;/p></description></item><item><title>Gravatar头像 镜像地址大全</title><link>https://blog.taoshuge.eu.org/post/063/</link><pubDate>Thu, 24 Aug 2023 12:32:50 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/063/</guid><description>&lt;h2 id="介绍">介绍&lt;/h2>
-&lt;p>当我们在很多博客或者网站留言，评论的时候会看到有的人头像很酷很个性化，但是这个博客和网站本身并没有提供设置头像的功能，感觉有点神奇，那么是怎么做到的呢？&lt;code>其实这是使用了Gravatar&lt;/code>。&lt;/p>
-&lt;p>Gravatar，全称&lt;code>Globally Recognized Avatar&lt;/code>。翻译成中文为&lt;code>全球通用头像&lt;/code>。&lt;/p>
-&lt;p>Gravatar的概念首先是在国外的独立WordPress博客中兴起的，当你到任何一个支持Gravatar的网站留言时，这个网站都会根据你所提供的Email地址为你显示出匹配的头像。当然，这个头像，是需要你事先到Gravatar的网站注册并上传的，否则，在这个网站上，就只会显示成一个默认的头像。&lt;/p>
-&lt;p>当你访问支持&lt;code>gravatar&lt;/code>头像的网站时，只要输入你注册的邮箱账号，&lt;code>即会自动调用gravatar的api&lt;/code>，转换成保存的头像。这样就可以为广大程序提供个人头像存储服务。&lt;/p>
-&lt;h2 id="使用">使用&lt;/h2>
-&lt;p>使用该服务时需要去&lt;a href="https://cn.gravatar.com/">官网&lt;/a>中注册一个账号，并上传头像。&lt;/p>
-&lt;p>注意头像上传后会审核，然后管理员会按图片包含的内容划分一个等级（G 普通级、PG 辅导级、R 和 X 为限制级）。&lt;/p>
-&lt;p>通过之后这个头像就可以使用了。在任何支持Gravatar的地方，在评论填写email地址时，请填写你申请注册头像用的这个email地址。你的头像就会出现在留言中。就这样可以展示给大家看了&lt;/p>
-&lt;h2 id="调用">调用&lt;/h2>
-&lt;p>由于gravatar目前服务极不稳定，调用时推荐用国内的源。&lt;/p>
-&lt;p>以下个人整理备份。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6">6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7">7&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>- gravatar官方的www源：&lt;span style="color:#666">[&lt;/span>https://www.gravatar.com/avatar/&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- gravatar官方的cn源：&lt;span style="color:#666">[&lt;/span>https://cn.gravatar.com/avatar/&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- gravatar官方的en源：&lt;span style="color:#666">[&lt;/span>https://en.gravatar.com/avatar/&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- gravatar官方的secure源：&lt;span style="color:#666">[&lt;/span>https://secure.gravatar.com/avatar/&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- V2EX源：&lt;span style="color:#666">[&lt;/span>https://cdn.v2ex.com/gravatar/&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- Loli源：&lt;span style="color:#666">[&lt;/span>https://gravatar.loli.net/avatar/&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>- 极客族：&lt;span style="color:#666">[&lt;/span>https://sdn.geekzu.org/avatar/&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;p>【&lt;strong>&lt;a href="https://github.com/louislam/uptime-kuma">开源项目&lt;/a>&lt;/strong>】&lt;/p></description></item></channel></rss>
