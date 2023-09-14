@@ -17,7 +17,7 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>socks5://127.0.0.1:7890
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>![[../附件/Pasted image 20230914213555.png]]&lt;/p>
+&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/72357bce2dd126d95f386ba7f2c9fb6f.webp" alt="Pasted image 20230914213555">&lt;/p>
 &lt;p>cmd终端开启代理:&lt;/p>
 &lt;p>小狐狸:&lt;/p>
 &lt;p>set http_proxy=socks5://127.0.0.1:7890
