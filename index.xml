@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Sep 2023 18:49:40 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Openwrt安装alist和阿里云盘webdav</title><link>https://blog.taoshuge.eu.org/post/084/</link><pubDate>Thu, 14 Sep 2023 18:49:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/084/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Sep 2023 21:35:50 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>Rclone Browser代理设置</title><link>https://blog.taoshuge.eu.org/post/085/</link><pubDate>Thu, 14 Sep 2023 21:35:50 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/085/</guid><description>&lt;p>如果在windows挂载谷歌硬盘,是无法查询的,但是如果你已经开启了科学上网,则按照下面的方法&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>socks5://127.0.0.1:10808
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>10808&lt;/code>端口是v2ray的代理端口&lt;/p>
+&lt;p>如果是小狐狸则是 &lt;code>7890&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>![[../附件/Pasted image 20230914213555.png]]&lt;/p>
+&lt;p>cmd终端开启代理:&lt;/p>
+&lt;p>小狐狸:&lt;/p>
+&lt;p>set http_proxy=socks5://127.0.0.1:7890
+set https_proxy=socks5://127.0.0.1:7890&lt;/p>
+&lt;p>v2ray:&lt;/p>
+&lt;p>set http_proxy=socks5://127.0.0.1:10808
+set https_proxy=socks5://127.0.0.1:10808&lt;/p>
+&lt;p>取消代理:&lt;/p>
+&lt;p>set http_proxy=
+set https_proxy=&lt;/p></description></item><item><title>Openwrt安装alist和阿里云盘webdav</title><link>https://blog.taoshuge.eu.org/post/084/</link><pubDate>Thu, 14 Sep 2023 18:49:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/084/</guid><description>&lt;blockquote>
 &lt;p>以下插件只适用于斐讯 N1,其他没测试过&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="一-使用方法">一: 使用方法&lt;/h3>
@@ -3041,20 +3070,4 @@ keyId: xxxxxxxxxxxx]
 &lt;pre tabindex="0">&lt;code>acme.sh --upgrade --auto-upgrade 0
 &lt;/code>&lt;/pre>&lt;h3 id="官方文档">官方文档&lt;/h3>
 &lt;p>&lt;a href="https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E">https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/acmesh-official/acme.sh/wiki/dnsapi#dns_cf">https://github.com/acmesh-official/acme.sh/wiki/dnsapi#dns_cf&lt;/a>&lt;/p></description></item><item><title>推荐8个宝藏级的开源软件！来自Github的免费精品项目</title><link>https://blog.taoshuge.eu.org/post/065/</link><pubDate>Sun, 27 Aug 2023 23:27:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/065/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/08/87400406fde62d7161f6d5c3e000eab7.webp" alt="Pasted image 20230827232940">&lt;/p>
-&lt;p>1.Malware-Patch：阻止 Windows 流氓软体授权的工具。它轻巧、无需后台运行，可用于阻止指定软体的管理员授权。&lt;/p>
-&lt;p>【&lt;strong>&lt;a href="https://github.com/the1812/Malware-Patch/blob/master">开源项目&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>2.Rocket.Chat：一款可自由定制的企业级开源通信平台源码。用它来可以搭建一个功能丰富的通信平台，可自託管做为 Slack 的开源替代品。支持创建频道、团队和讨论等多种不同功能的群聊，消息支持图片、文件、视频和语音，拥有包括 Windows、Linux、macOS、Android 和 iOS 在内的多种客户端。 如果你需要搭建一个安全加密，且具有高度私密性的通信平台，那麽这款开源项目就非常适合你了。&lt;/p>
-&lt;p>【&lt;a href="https://github.com/RocketChat/Rocket.Chat">&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
-&lt;p>3.hackingtool：黑客工具全家桶。该项目收录了各种黑客工具，包括破解密码、SQL 注入、钓鱼攻击、XSS、DDos 等。堪称黑客军火库的开源项目啊&lt;br>
-【&lt;strong>&lt;a href="https://github.com/Z4nzu/hackingtool">开源项目&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>4.sniffnet：可轻鬆监控网路流量的工具。这是一个简单、可靠、炫酷的网路监控应用，可以让你一目了然地了解设备的网路流量。&lt;br>
-【&lt;a href="https://github.com/GyulyVGC/sniffnet">&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
-&lt;p>5.changedetection ：简单好用的网站变更检测、监控和通知服务。基于 Flask+Selenium 构建的 Web 服务，可以在目标网站发生变化时发出通知，可用于监控商品降价、工作机会、版本发布、最新内容等，支持 Docker 的安装方式。&lt;/p>
-&lt;p>【&lt;a href="https://github.com/dgtlmoon/changedetection.io">&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
-&lt;p>6.calibre：一款完全免费开源且功能强大的电子书管理工具。它是集下载、格式转化、制作、管理于一体的电子书工具，比如可以将 txt 文本，转化成包含作者信息和书籍封面的 mobi 文件，制作完成后还可以直接发送到 Kindle 设备上。 支持多种电子书格式，包括EPUB、MOBI、PDF等等。Calibre的功能非常强大，可以帮助用户轻鬆地管理自己的电子书库，包括添加、删除、重命名和搜索等。此外，它还提供了阅读器功能，用户可以在软体内直接阅读电子书，而不需要另外下载阅读器。你还可以可通过插件/扩展实现更多的功能。&lt;/p>
-&lt;p>【&lt;a href="https://github.com/kovidgoyal/calibre">&lt;strong>开源项目&lt;/strong>&lt;/a>】&lt;/p>
-&lt;p>7.Magisk：Android 获取 Root 许可权的工具。它可以快速、无痛地获得 Android 的超级用户许可权，支持 Android 5.0 以上的设备。&lt;br>
-【&lt;strong>&lt;a href="https://github.com/topjohnwu/Magisk">开源项目&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>8.uptime-kuma：一款极简的 uptime 监控工具。该项目可以用来监控服务正常运行时间，它界面美观、支持 Docker 一键部署，提供了中文界面、通知、多状态页面等实用功能。&lt;/p>
-&lt;p>【&lt;strong>&lt;a href="https://github.com/louislam/uptime-kuma">开源项目&lt;/a>&lt;/strong>】&lt;/p></description></item></channel></rss>
+&lt;p>&lt;a href="https://github.com/acmesh-official/acme.sh/wiki/dnsapi#dns_cf">https://github.com/acmesh-official/acme.sh/wiki/dnsapi#dns_cf&lt;/a>&lt;/p></description></item></channel></rss>
