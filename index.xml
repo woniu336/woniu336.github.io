@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Sep 2023 17:57:22 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>强大的网盘同步工具--rclone工具箱</title><link>https://blog.taoshuge.eu.org/post/086/</link><pubDate>Sun, 17 Sep 2023 17:57:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/086/</guid><description>&lt;p>如果你在寻找专业且易用的网盘拷贝与同步工具，那就让&lt;code>Rclone&lt;/code>成为你的云端合作伙伴吧。它虽然不会说笑话，但它绝对会在云端任务中&lt;code>带来欢笑&lt;/code>。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Sep 2023 23:30:46 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./tool.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
+&lt;/blockquote>
+&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
+&lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>强大的网盘同步工具--rclone工具箱</title><link>https://blog.taoshuge.eu.org/post/086/</link><pubDate>Sun, 17 Sep 2023 17:57:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/086/</guid><description>&lt;p>如果你在寻找专业且易用的网盘拷贝与同步工具，那就让&lt;code>Rclone&lt;/code>成为你的云端合作伙伴吧。它虽然不会说笑话，但它绝对会在云端任务中&lt;code>带来欢笑&lt;/code>。&lt;/p>
 &lt;p>一键安装rclone工具箱&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -2654,33 +2667,4 @@ proxy = socks5://127.0.0.1:7890
 &lt;p>1.移除模板相关代码&lt;/p>
 &lt;p>2.移除SG11加密组件，无需在安装加密组件了，直接使用即可&lt;/p>
 &lt;p>3.移除不使用的代码&lt;/p>
-&lt;p>注：因苹果cms版本问题可能出现兼容，点击安装，启用，卸载没反应，如果遇到这种问题刷新一下即可。&lt;/p></description></item><item><title>9款高效实用又非常有趣的软件！完全免费开源！！</title><link>https://blog.taoshuge.eu.org/post/067/</link><pubDate>Thu, 31 Aug 2023 23:29:34 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/067/</guid><description>
-&lt;link rel="stylesheet" href="https://blog.taoshuge.eu.org/css/hugo-easy-gallery.css" />
-&lt;div class="box">
-&lt;figure itemprop="associatedMedia"
-itemscope itemtype="http://schema.org/ImageObject" >
-&lt;div class="img">
-&lt;img itemprop="thumbnail" src="" />
-&lt;/div>
-&lt;/figure>
-&lt;/div>
-&lt;p>1、FreeRDP：完全免费的远程桌面管理工具。通过它可以轻松实现 macOS 或 Linux 远程操作 Windows 桌面系统反之亦可，使用起来十分方便和流畅。&lt;br>
-【&lt;strong>&lt;a href="https://github.com/FreeRDP/FreeRDP">开源软件&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>2、min：一款最小化的浏览器。它是仅包含搜索、书签、密码管理、广告屏蔽器等最基础功能的极简浏览器，适用于 Windows、Linux、macOS 操作系统。&lt;/p>
-&lt;p>【&lt;strong>&lt;a href="https://github.com/minbrowser/min">开源软件&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>3.wechat-backup：本地备份微信聊天记录的工具。它能够将手机上的微信聊天记录，解密后保存在电脑上，支持查看、搜索、恢复微信聊天记录。&lt;/p>
-&lt;p>【&lt;strong>&lt;a href="https://github.com/greycodee/wechat-backup">开源软件&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>4、ServerStatus：多服务器云监控。轻松监控多台服务器状态的工具，用于解决多个不同平台下的服务器状态监控问题&lt;/p>
-&lt;p>【&lt;a href="https://github.com/cppla/ServerStatus">&lt;strong>开源软件&lt;/strong>&lt;/a>】&lt;/p>
-&lt;p>5.vanblog：实用的一站式个人博客系统。一款简洁优雅的博客系统，追求极致响应速度和博客体验。快到极致的响应速度，Lighthouse 接近满分。前后台均为响应式，支持 Docker 一键部署。前台为静态页面并支持增量渲染，按需构建更新页面。拒绝花里胡哨的功能，专注于个人博客场景。&lt;/p>
-&lt;p>【&lt;a href="https://github.com/Mereithhh/vanblog">&lt;strong>开源软件&lt;/strong>&lt;/a>】&lt;/p>
-&lt;hr>
-&lt;p>不同的【&lt;a href="https://vanblog.mereith.com/guide/get-started.html#%E9%85%8D%E7%BD%AE%E8%A6%81%E6%B1%82">安装方式&lt;/a>】&lt;/p>
-&lt;p>6.TowerDefense-GameFramework-Demo：开源的塔防游戏示例。此项目主要用来上手和学习基于 Unity 引擎的游戏框架 GameFramework，感兴趣的同学可以把玩一下。游戏共有五个关卡，玩家通过击杀敌人和建造能量塔获取资源，消耗能量建造防御塔阻止敌人攻击基地&lt;/p>
-&lt;p>【&lt;strong>&lt;a href="https://github.com/DrFlower/TowerDefense-GameFramework-Demo">开源软件&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>7.nightingale：开源的云原生监控系统。支持 Docker 等多种部署方式，集数据采集、监控告警、可视化为一体的企业级监控平台。借助高性能时序库，可以满足数亿时间线的采集、存储和告警分析的场景。该项目已在上千家企业部署落地，经历了各种生产环境的检验。&lt;/p>
-&lt;p>【&lt;a href="https://github.com/ccfos/nightingale/blob/main/README_zh.md">&lt;strong>开源软件&lt;/strong>&lt;/a>】&lt;/p>
-&lt;p>8.ghidra：一款免费开源的软件逆向分析工具。该项目由美国国安局开源，可用于分析编译后的代码。&lt;/p>
-&lt;p>【&lt;strong>&lt;a href="https://github.com/NationalSecurityAgency/ghidra">开源软件&lt;/a>&lt;/strong>】&lt;/p>
-&lt;p>9.HackBrowserData：一款浏览器数据导出工具。能够导出本地浏览器的密码、历史记录、Cookie、书签、下载记录、localStorage 等数据的命令行工具，支持多平台下的多种主流浏览器。&lt;/p>
-&lt;p>【&lt;strong>&lt;a href="https://github.com/moonD4rk/HackBrowserData">开源软件&lt;/a>&lt;/strong>】&lt;/p></description></item></channel></rss>
+&lt;p>注：因苹果cms版本问题可能出现兼容，点击安装，启用，卸载没反应，如果遇到这种问题刷新一下即可。&lt;/p></description></item></channel></rss>
