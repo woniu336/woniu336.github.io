@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Sep 2023 23:30:46 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿甘知识库</title><link>https://jimugou.com/</link><description>Recent content on 阿甘知识库</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Sep 2023 23:30:46 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://jimugou.com/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://jimugou.com/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;blockquote>
@@ -6,7 +6,7 @@
 &lt;/blockquote>
 &lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>强大的网盘同步工具--rclone工具箱</title><link>https://blog.taoshuge.eu.org/post/086/</link><pubDate>Sun, 17 Sep 2023 17:57:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/086/</guid><description>&lt;p>如果你在寻找专业且易用的网盘拷贝与同步工具，那就让&lt;code>Rclone&lt;/code>成为你的云端合作伙伴吧。它虽然不会说笑话，但它绝对会在云端任务中&lt;code>带来欢笑&lt;/code>。&lt;/p>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>强大的网盘同步工具--rclone工具箱</title><link>https://jimugou.com/post/086/</link><pubDate>Sun, 17 Sep 2023 17:57:22 +0800</pubDate><guid>https://jimugou.com/post/086/</guid><description>&lt;p>如果你在寻找专业且易用的网盘拷贝与同步工具，那就让&lt;code>Rclone&lt;/code>成为你的云端合作伙伴吧。它虽然不会说笑话，但它绝对会在云端任务中&lt;code>带来欢笑&lt;/code>。&lt;/p>
 &lt;p>一键安装rclone工具箱&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -19,7 +19,7 @@
 &lt;/div>&lt;p>当谈到强大的&lt;code>网盘拷贝与同步&lt;/code>工具时，&lt;code>Rclone&lt;/code>绝对是那位总是低调却又非常值得注意的明星。它就像是那个坐在后排的天才学生，总是默默地在背后完成任务，而不是在台前卖弄自己。&lt;/p>
 &lt;p>首先，&lt;code>Rclone&lt;/code>是一名真正的变身专家。它可以从一个网盘变成另一个网盘，仿佛是魔术师一样。无论你是想从&lt;code>Google Drive&lt;/code>变身为&lt;code>Dropbox&lt;/code>，还是从&lt;code>OneDrive&lt;/code>蜕变为&lt;code>Amazon S3&lt;/code>，Rclone都能帮你完成。这就像是在玩一场云端变装派对，而Rclone是你的变装专家，总是能帮你换上最适合的服装。&lt;/p>
 &lt;p>而且，Rclone也是一个&lt;code>同步&lt;/code>的奇才。它可以确保你的文件在不同的云存储之间保持同步，就像是一个精密的交响乐团指挥家，确保每个乐器都在正确的时刻奏响。无论你是在办公室工作还是在沙滩度假，Rclone都能确保你的文件不会在云端丢失节奏。&lt;/p>
-&lt;p>但是，尽管&lt;code>Rclone&lt;/code>是一位技术高手，但它并不是那种自恋自大的软件。它没有花哨的用户界面，也不会在社交媒体上炫耀自己的成就。它只是&lt;code>默默地坚守在后台&lt;/code>，为你完成工作，就像是那位永远不会抢镜的配角演员，但却是整个剧组的支持力量。&lt;/p></description></item><item><title>Rclone Browser代理设置</title><link>https://blog.taoshuge.eu.org/post/085/</link><pubDate>Thu, 14 Sep 2023 21:35:50 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/085/</guid><description>&lt;p>假设你已经安装了&lt;code>rclone&lt;/code>,并配置好了各大网盘&lt;/p>
+&lt;p>但是，尽管&lt;code>Rclone&lt;/code>是一位技术高手，但它并不是那种自恋自大的软件。它没有花哨的用户界面，也不会在社交媒体上炫耀自己的成就。它只是&lt;code>默默地坚守在后台&lt;/code>，为你完成工作，就像是那位永远不会抢镜的配角演员，但却是整个剧组的支持力量。&lt;/p></description></item><item><title>Rclone Browser代理设置</title><link>https://jimugou.com/post/085/</link><pubDate>Thu, 14 Sep 2023 21:35:50 +0800</pubDate><guid>https://jimugou.com/post/085/</guid><description>&lt;p>假设你已经安装了&lt;code>rclone&lt;/code>,并配置好了各大网盘&lt;/p>
 &lt;p>那么在&lt;code>Rclone Browser&lt;/code>查看谷歌硬盘内容,是看不了的,但是如果你已经开启了&lt;code>科学上网&lt;/code>,则按照下面的方法&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -81,7 +81,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Openwrt安装alist和阿里云盘webdav</title><link>https://blog.taoshuge.eu.org/post/084/</link><pubDate>Thu, 14 Sep 2023 18:49:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/084/</guid><description>&lt;blockquote>
+&lt;/div></description></item><item><title>Openwrt安装alist和阿里云盘webdav</title><link>https://jimugou.com/post/084/</link><pubDate>Thu, 14 Sep 2023 18:49:40 +0800</pubDate><guid>https://jimugou.com/post/084/</guid><description>&lt;blockquote>
 &lt;p>以下插件只适用于斐讯 N1,其他没测试过&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="一-使用方法">一: 使用方法&lt;/h3>
@@ -124,7 +124,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> messense/aliyundrive-webdav
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>其中，&lt;code>REFRESH_TOKEN&lt;/code> 环境变量为你的阿里云盘 &lt;code>refresh_token&lt;/code>，&lt;code>WEBDAV_AUTH_USER&lt;/code> 和 &lt;code>WEBDAV_AUTH_PASSWORD&lt;/code> 为连接 WebDAV 服务的用户名和密码。&lt;/p></description></item><item><title>Openwrt安装阿里云盘 WebDAV</title><link>https://blog.taoshuge.eu.org/post/083/</link><pubDate>Thu, 14 Sep 2023 18:18:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/083/</guid><description>&lt;p>阿里云盘 WebDAV 服务，主要使用场景为配合支持 WebDAV 协议的客户端 App 如 &lt;a href="https://firecore.com/infuse">Infuse&lt;/a>、&lt;a href="https://nplayer.com">nPlayer&lt;/a>
+&lt;/div>&lt;p>其中，&lt;code>REFRESH_TOKEN&lt;/code> 环境变量为你的阿里云盘 &lt;code>refresh_token&lt;/code>，&lt;code>WEBDAV_AUTH_USER&lt;/code> 和 &lt;code>WEBDAV_AUTH_PASSWORD&lt;/code> 为连接 WebDAV 服务的用户名和密码。&lt;/p></description></item><item><title>Openwrt安装阿里云盘 WebDAV</title><link>https://jimugou.com/post/083/</link><pubDate>Thu, 14 Sep 2023 18:18:27 +0800</pubDate><guid>https://jimugou.com/post/083/</guid><description>&lt;p>阿里云盘 WebDAV 服务，主要使用场景为配合支持 WebDAV 协议的客户端 App 如 &lt;a href="https://firecore.com/infuse">Infuse&lt;/a>、&lt;a href="https://nplayer.com">nPlayer&lt;/a>
 等实现在电视上直接观看云盘视频内容， 支持客户端 App 直接从阿里云盘获取文件播放而不经过运行本应用的服务器中转, 支持上传文件，但受限于 WebDAV 协议不支持文件秒传。&lt;/p>
 &lt;p>&lt;strong>请注意：V2 版本基于阿里云盘开放平台接口实现，不再支持阿里云盘 Web 和 App 版本获取的 refresh token。&lt;/strong>
 &lt;strong>由于本项目作者不再使用梅林固件，V2 版本不再免费支持 Koolshare 梅林固件系统，如有需要请考虑&lt;a href="https://github.com/messense/aliyundrive-webdav/discussions/778">付费支持&lt;/a>。&lt;/strong>&lt;/p>
@@ -556,7 +556,7 @@ OpenWrt 路由器 CPU 架构如下表（欢迎补充）：&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>Note&lt;/strong>&lt;/p>
 &lt;p>注意：启用 &lt;code>--skip-upload-same-size&lt;/code> 选项虽然能加速上传但可能会导致修改过的同样大小的文件不会被上传&lt;/p>
-&lt;/blockquote></description></item><item><title>升级Node.js版本</title><link>https://blog.taoshuge.eu.org/post/082/</link><pubDate>Tue, 12 Sep 2023 14:08:04 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/082/</guid><description>&lt;p>根据错误消息，您的 Node.js 版本不符合 &lt;code>typescript@5.2.2&lt;/code> 所需的最低 Node.js 版本。TypeScript 5.2.2 要求 Node.js 版本 &lt;code>&amp;gt;=14.17&lt;/code>，但您的系统上的 Node.js 版本是 &lt;code>v12.22.12&lt;/code>。&lt;/p>
+&lt;/blockquote></description></item><item><title>升级Node.js版本</title><link>https://jimugou.com/post/082/</link><pubDate>Tue, 12 Sep 2023 14:08:04 +0800</pubDate><guid>https://jimugou.com/post/082/</guid><description>&lt;p>根据错误消息，您的 Node.js 版本不符合 &lt;code>typescript@5.2.2&lt;/code> 所需的最低 Node.js 版本。TypeScript 5.2.2 要求 Node.js 版本 &lt;code>&amp;gt;=14.17&lt;/code>，但您的系统上的 Node.js 版本是 &lt;code>v12.22.12&lt;/code>。&lt;/p>
 &lt;p>为了解决这个问题，您可以考虑升级 Node.js 到 &lt;code>&amp;gt;=14.17&lt;/code> 版本，然后再安装 TypeScript。以下是一些步骤来升级 Node.js：&lt;/p>
 &lt;ol>
 &lt;li>首先，您可以使用 &lt;code>nvm&lt;/code>（Node Version Manager）来管理 Node.js 版本。如果您尚未安装 &lt;code>nvm&lt;/code>，您可以按照以下步骤安装它：&lt;/li>
@@ -668,7 +668,7 @@ OpenWrt 路由器 CPU 架构如下表（欢迎补充）：&lt;/p>
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm init
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>现在，您应该能够成功安装 TypeScript 并编译您的项目。如果您在这些步骤中遇到任何问题，请随时提供更多信息，以便我可以提供进一步的帮助。&lt;/p></description></item><item><title>定时将R2图床同步到腾讯云对象存储</title><link>https://blog.taoshuge.eu.org/post/081/</link><pubDate>Mon, 11 Sep 2023 16:58:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/081/</guid><description>&lt;p>请确保您的系统上已经&lt;code>安装了 rclone&lt;/code>，并且命令的路径正确。&lt;/p>
+&lt;/div>&lt;p>现在，您应该能够成功安装 TypeScript 并编译您的项目。如果您在这些步骤中遇到任何问题，请随时提供更多信息，以便我可以提供进一步的帮助。&lt;/p></description></item><item><title>定时将R2图床同步到腾讯云对象存储</title><link>https://jimugou.com/post/081/</link><pubDate>Mon, 11 Sep 2023 16:58:58 +0800</pubDate><guid>https://jimugou.com/post/081/</guid><description>&lt;p>请确保您的系统上已经&lt;code>安装了 rclone&lt;/code>，并且命令的路径正确。&lt;/p>
 &lt;p>要将定时任务添加到您的系统中，您可以按照以下步骤进行操作：&lt;/p>
 &lt;p>打开&lt;code>终端&lt;/code>或命令提示符，登录到您的系统。&lt;/p>
 &lt;blockquote>
@@ -764,7 +764,7 @@ OpenWrt 路由器 CPU 架构如下表（欢迎补充）：&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Debian服务器更改时区为中国</title><link>https://blog.taoshuge.eu.org/post/080/</link><pubDate>Mon, 11 Sep 2023 16:19:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/080/</guid><description>&lt;p>有时候我们安装服务器会用默认的UTC( Universal Time Coordinated)时区，造成后继一些软件记录时间上显示的不够直观，所以需要手动更改为中国/上海时区。&lt;br>
+&lt;/div></description></item><item><title>Debian服务器更改时区为中国</title><link>https://jimugou.com/post/080/</link><pubDate>Mon, 11 Sep 2023 16:19:05 +0800</pubDate><guid>https://jimugou.com/post/080/</guid><description>&lt;p>有时候我们安装服务器会用默认的UTC( Universal Time Coordinated)时区，造成后继一些软件记录时间上显示的不够直观，所以需要手动更改为中国/上海时区。&lt;br>
 更改很简单，如下2条命令即可：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -821,7 +821,7 @@ OpenWrt 路由器 CPU 架构如下表（欢迎补充）：&lt;/p>
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>timedatectl set-ntp yes
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>从网页视频到MP4：轻松使用M3U8下载器保存你喜爱的视频</title><link>https://blog.taoshuge.eu.org/post/079/</link><pubDate>Mon, 11 Sep 2023 14:19:43 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/079/</guid><description>&lt;h2 id="项目">项目&lt;/h2>
+&lt;/div></description></item><item><title>从网页视频到MP4：轻松使用M3U8下载器保存你喜爱的视频</title><link>https://jimugou.com/post/079/</link><pubDate>Mon, 11 Sep 2023 14:19:43 +0800</pubDate><guid>https://jimugou.com/post/079/</guid><description>&lt;h2 id="项目">项目&lt;/h2>
 &lt;h3 id="猫抓">猫抓：&lt;/h3>
 &lt;p>&lt;a href="https://github.com/xifangczy/cat-catch/releases">https://github.com/xifangczy/cat-catch/releases&lt;/a>&lt;/p>
 &lt;p>安装地址: &lt;a href="https://o2bmm.gitbook.io/cat-catch/docs/install">https://o2bmm.gitbook.io/cat-catch/docs/install&lt;/a>&lt;/p>
@@ -839,7 +839,7 @@ OpenWrt 路由器 CPU 架构如下表（欢迎补充）：&lt;/p>
 &lt;/div>
 &lt;/div>&lt;p>打开浏览器: 进入需要下载的播放页面&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/bb12786f973e177337ecfe68a9f2928b.webp" alt="Pasted image 20230911144224">&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/8ed2be91d6de5b83d6432d25d40d77f6.webp" alt="Pasted image 20230911144302">&lt;/p></description></item><item><title>openwrt n1 安装alist</title><link>https://blog.taoshuge.eu.org/post/078/</link><pubDate>Mon, 11 Sep 2023 14:12:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/078/</guid><description>&lt;p>项目地址 : &lt;a href="https://github.com/sbwml/luci-app-alist">https://github.com/sbwml/luci-app-alist&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/8ed2be91d6de5b83d6432d25d40d77f6.webp" alt="Pasted image 20230911144302">&lt;/p></description></item><item><title>openwrt n1 安装alist</title><link>https://jimugou.com/post/078/</link><pubDate>Mon, 11 Sep 2023 14:12:38 +0800</pubDate><guid>https://jimugou.com/post/078/</guid><description>&lt;p>项目地址 : &lt;a href="https://github.com/sbwml/luci-app-alist">https://github.com/sbwml/luci-app-alist&lt;/a>&lt;/p>
 &lt;p>OpenWrt 查看CPU架构命令：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -884,7 +884,7 @@ allowfullscreen="true"
 &lt;/iframe>
 &lt;/div>
 &lt;/body>
-&lt;/html></description></item><item><title>免费白嫖Office 365 E5，5TB onedrive空间！</title><link>https://blog.taoshuge.eu.org/post/077/</link><pubDate>Sun, 10 Sep 2023 15:51:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/077/</guid><description>&lt;p>注册入口&lt;/p>
+&lt;/html></description></item><item><title>免费白嫖Office 365 E5，5TB onedrive空间！</title><link>https://jimugou.com/post/077/</link><pubDate>Sun, 10 Sep 2023 15:51:37 +0800</pubDate><guid>https://jimugou.com/post/077/</guid><description>&lt;p>注册入口&lt;/p>
 &lt;p>&lt;a href="https://developer.microsoft.com/zh-cn/microsoft-365/dev-program">https://developer.microsoft.com/zh-cn/microsoft-365/dev-program&lt;/a>&lt;/p>
 &lt;p>1T改成5T&lt;/p>
 &lt;p>&lt;a href="https://admin.onedrive.com/?v=StorageSettings">https://admin.onedrive.com/?v=StorageSettings&lt;/a>&lt;/p>
@@ -915,7 +915,7 @@ top: 0;
 &lt;iframe src="https://www.youtube.com/embed/4NmPlEf4FTk" frameborder="no" scrolling="yes"
 allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
 &lt;/iframe>
-&lt;/div></description></item><item><title>vps使用rclone挂载Google Drive详细记录</title><link>https://blog.taoshuge.eu.org/post/076/</link><pubDate>Sun, 10 Sep 2023 15:33:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/076/</guid><description>&lt;p>其实 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code> 网上的教程已经很多了，但是大多数的教程都有一点点过时，与现在的实际操作有一点出入，故整理了当前的挂载操作，以防忘记。&lt;/p>
+&lt;/div></description></item><item><title>vps使用rclone挂载Google Drive详细记录</title><link>https://jimugou.com/post/076/</link><pubDate>Sun, 10 Sep 2023 15:33:02 +0800</pubDate><guid>https://jimugou.com/post/076/</guid><description>&lt;p>其实 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code> 网上的教程已经很多了，但是大多数的教程都有一点点过时，与现在的实际操作有一点出入，故整理了当前的挂载操作，以防忘记。&lt;/p>
 &lt;h2 id="一-安装并配置-rclone">一、 安装并配置 rclone&lt;/h2>
 &lt;p>首先在 vps 上一键安装 rclone：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -1071,7 +1071,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rf &lt;span style="color:#007020">test&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>如果能够顺利执行，则说明挂载没有问题。&lt;/p></description></item><item><title>VPS利剑！全面解析如何用rclone挂载OneDrive</title><link>https://blog.taoshuge.eu.org/post/075/</link><pubDate>Sun, 10 Sep 2023 13:17:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/075/</guid><description>&lt;p>之前写过一篇使用 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code>的记录，这次来补上挂载 &lt;code>onedrive&lt;/code> 的坑。挂载方法其实大同小异，网上也有许多文章进行介绍。&lt;/p>
+&lt;/div>&lt;p>如果能够顺利执行，则说明挂载没有问题。&lt;/p></description></item><item><title>VPS利剑！全面解析如何用rclone挂载OneDrive</title><link>https://jimugou.com/post/075/</link><pubDate>Sun, 10 Sep 2023 13:17:27 +0800</pubDate><guid>https://jimugou.com/post/075/</guid><description>&lt;p>之前写过一篇使用 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code>的记录，这次来补上挂载 &lt;code>onedrive&lt;/code> 的坑。挂载方法其实大同小异，网上也有许多文章进行介绍。&lt;/p>
 &lt;p>不过有些介绍实在是太简略了，甚至只是简单的复制了官方的示例，导致依旧看的一头雾水，所以我对 &lt;code>rclone&lt;/code> 挂载 &lt;code>onedrive&lt;/code> 的流程进行了整理和记录，希望能对大家有所帮助，能一次解决问题。&lt;/p>
 &lt;h2 id="1-创建-onedrive-api">1. 创建 OneDrive API&lt;/h2>
 &lt;p>&lt;em>为了实际使用中更稳定的体验，避免因为共享 API 达到使用限制而引发错误，绝对推荐创建自己的 API。&lt;/em>&lt;/p>
@@ -1225,7 +1225,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/div>&lt;p>应该看到（我这里是用挂载名 song，挂载目录 /music 进行的测试截图）：&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/18ec1bf4ba0819c90008c401c482619d.webp" alt="">&lt;/p>
 &lt;p>挂载成功&lt;/p>
-&lt;p>接下来可以进行一些测试，如果能正常读写文件，证明挂载没有问题。&lt;/p></description></item><item><title>极速上手：精通rclone云盘同步工具</title><link>https://blog.taoshuge.eu.org/post/074/</link><pubDate>Sun, 10 Sep 2023 11:58:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/074/</guid><description>&lt;p>Rclone 是一款的命令行工具，支持在不同对象存储、网盘间同步、上传、下载数据。&lt;/p>
+&lt;p>接下来可以进行一些测试，如果能正常读写文件，证明挂载没有问题。&lt;/p></description></item><item><title>极速上手：精通rclone云盘同步工具</title><link>https://jimugou.com/post/074/</link><pubDate>Sun, 10 Sep 2023 11:58:40 +0800</pubDate><guid>https://jimugou.com/post/074/</guid><description>&lt;p>Rclone 是一款的命令行工具，支持在不同对象存储、网盘间同步、上传、下载数据。&lt;/p>
 &lt;p>官网网址：&lt;a href="https://rclone.org/">https://rclone.org/&lt;/a>&lt;/p>
 &lt;p>Github 项目：&lt;a href="https://github.com/rclone/rclone">https://github.com/rclone/rclone&lt;/a>&lt;/p>
 &lt;h2 id="安装rclone">安装rclone&lt;/h2>
@@ -1710,7 +1710,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;p>另外还可以设置代理，见下图：&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/afb25f6d96616f4204e5db240cabd443.webp" alt="Pasted image 20230910013704">&lt;/p>
 &lt;p>这样挂载谷歌云端硬盘就很方便了。&lt;/p>
-&lt;p>完结~~&lt;/p></description></item><item><title>rclone常用命令参数详解</title><link>https://blog.taoshuge.eu.org/post/073/</link><pubDate>Sat, 09 Sep 2023 14:51:26 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/073/</guid><description>&lt;h2 id="rclone常用命令">rclone：常用命令&lt;/h2>
+&lt;p>完结~~&lt;/p></description></item><item><title>rclone常用命令参数详解</title><link>https://jimugou.com/post/073/</link><pubDate>Sat, 09 Sep 2023 14:51:26 +0800</pubDate><guid>https://jimugou.com/post/073/</guid><description>&lt;h2 id="rclone常用命令">rclone：常用命令&lt;/h2>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
@@ -2017,7 +2017,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>fusermount -qzu /home/google
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>利用免费GitHub私人仓库：定时备份网站数据</title><link>https://blog.taoshuge.eu.org/post/072/</link><pubDate>Tue, 05 Sep 2023 22:32:24 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/072/</guid><description>&lt;p>随着&lt;code>GitHub&lt;/code>被微软收购后，私人仓库已经变得免费，为我们提供了一个无限的创造&lt;code>空间&lt;/code>。现在，我们可以尽情发挥其潜力，将其用于定时备份网站和服务器重要数据，确保数据安全与可靠性。&lt;/p>
+&lt;/div></description></item><item><title>利用免费GitHub私人仓库：定时备份网站数据</title><link>https://jimugou.com/post/072/</link><pubDate>Tue, 05 Sep 2023 22:32:24 +0800</pubDate><guid>https://jimugou.com/post/072/</guid><description>&lt;p>随着&lt;code>GitHub&lt;/code>被微软收购后，私人仓库已经变得免费，为我们提供了一个无限的创造&lt;code>空间&lt;/code>。现在，我们可以尽情发挥其潜力，将其用于定时备份网站和服务器重要数据，确保数据安全与可靠性。&lt;/p>
 &lt;h2 id="教程">教程&lt;/h2>
 &lt;p>首先你肯定需要一个&lt;a href="https://so.csdn.net/so/search?q=Github&amp;amp;spm=1001.2101.3001.7020">Github&lt;/a>账号，没有的可以去注册一个，地址：&lt;a href="https://github.com/">&lt;/a>&lt;a href="https://github.com/">https://github.com&lt;/a>。有了账号就继续看。&lt;/p>
 &lt;h3 id="1配置git-ssh密钥">1、配置Git SSH密钥&lt;/h3>
@@ -2239,7 +2239,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;pre>&lt;code> 假设找到的是:/home/user1/mysql/bin/mysql
 &lt;/code>&lt;/pre>
 &lt;p>建立软连接 cd /usr/bin &amp;amp;&amp;amp; ln -fs /home/user1/mysql/bin/mysql mysql&lt;/p>
-&lt;p>完结撒花~~~&lt;/p></description></item><item><title>使用 squoosh-cli 批量压缩图片</title><link>https://blog.taoshuge.eu.org/post/071/</link><pubDate>Tue, 05 Sep 2023 12:47:54 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/071/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>完结撒花~~~&lt;/p></description></item><item><title>使用 squoosh-cli 批量压缩图片</title><link>https://jimugou.com/post/071/</link><pubDate>Tue, 05 Sep 2023 12:47:54 +0800</pubDate><guid>https://jimugou.com/post/071/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>去年之前，我写博客时并未意识到&lt;code>需要对图片进行压缩&lt;/code>。有时，文章加载的图片太多，其中一些图片过大，导致浏览体验不佳。但后来，我开始使用&lt;code>Squoosh&lt;/code>项目，每次写文章都会压缩配图。主要是因为&lt;code>Squoosh&lt;/code>太出色了，而且还是免费软件。&lt;/p>
 &lt;p>去年，我制作了一个Squoosh的&lt;code>Docker&lt;/code>镜像，可以在本地轻松启动一个图片压缩服务。但当时，我每次都是逐张压缩图片，因为我要为每张图片调整质量，以确保它们在本地存储中具有适当的大小。我自己搭建的图床运行在本地，使用本地SSD进行存储，所以之前的做法也很正常。然而，这次需要批量压缩大量图片让我意识到了批量处理的重要性。尽管可能无法完美平衡图片压缩后的&lt;code>质量和存储大小&lt;/code>，但在博客写作（关注图片质量）和本地存储之间做出一些妥协后，带来了极大的轻松和满足感，这绝对是值得的。&lt;/p>
 &lt;h2 id="正文">正文&lt;/h2>
@@ -2363,7 +2363,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/b07bf1566bf9574ff227290d1802146e.webp" alt="insecure origins.jpg">&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;code>http://10.10.10.5:7701&lt;/code> 是我 squoosh 的运行环境地址。如果有多个地址需要设“白名单”，使用英文逗号隔开它们即可。&lt;/p>
-&lt;/blockquote></description></item><item><title>Clash：科学上网的究极解决方案</title><link>https://blog.taoshuge.eu.org/post/070/</link><pubDate>Tue, 05 Sep 2023 10:39:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/070/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;/blockquote></description></item><item><title>Clash：科学上网的究极解决方案</title><link>https://jimugou.com/post/070/</link><pubDate>Tue, 05 Sep 2023 10:39:56 +0800</pubDate><guid>https://jimugou.com/post/070/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
 &lt;p>早期，我一直对&lt;code>Clash&lt;/code>的工作原理一知半解，只知道它是一种探索互联网世界的神奇工具。&lt;/p>
 &lt;p>每次需要&lt;code>科学上网&lt;/code>时，只需点击一下“系统代理”按钮，瞬间解决了各种无法访问网站的问题。&lt;/p>
 &lt;p>久而久之，不免觉得这一过程有些繁琐：&lt;code>打开网站 —— 拒绝访问 —— 启动 Clash—— 开启系统代理 —— 完成&lt;/code>。我曾经尝试简化这个步骤，最初的尝试是保持规则代理一直开启，通过配置文件来管理流量的转发规则。&lt;/p>
@@ -2485,7 +2485,7 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>或者单独使用 &lt;code>proxy&lt;/code> 一行命令开启代理，如果想关闭代理直接把当前终端窗口关掉就行，因为是一次性的&lt;/p>
-&lt;p>当然，如果是永久代理就需要手动注释掉添加的两行代码才能关闭代理 🤡&lt;/p></description></item><item><title>GitHub加速终极教程</title><link>https://blog.taoshuge.eu.org/post/069/</link><pubDate>Sun, 03 Sep 2023 10:09:30 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/069/</guid><description>&lt;p>本文意图解决使用 GitHub 访问(https) 或者 git clone（https or ssh）慢的问题。在此分享我的方法，我所了解的 GitHub 加速最佳方案。&lt;/p>
+&lt;p>当然，如果是永久代理就需要手动注释掉添加的两行代码才能关闭代理 🤡&lt;/p></description></item><item><title>GitHub加速终极教程</title><link>https://jimugou.com/post/069/</link><pubDate>Sun, 03 Sep 2023 10:09:30 +0800</pubDate><guid>https://jimugou.com/post/069/</guid><description>&lt;p>本文意图解决使用 GitHub 访问(https) 或者 git clone（https or ssh）慢的问题。在此分享我的方法，我所了解的 GitHub 加速最佳方案。&lt;/p>
 &lt;blockquote>
 &lt;p>前提是，你的木弟子应该还行，木弟子越好，GitHub 体验越好&lt;/p>
 &lt;/blockquote>
@@ -2605,7 +2605,7 @@ proxy = socks5://127.0.0.1:7890
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0">EOL&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>腾讯Gtimg图床-苹果cms教程</title><link>https://blog.taoshuge.eu.org/post/068/</link><pubDate>Fri, 01 Sep 2023 22:54:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/068/</guid><description>&lt;p>&lt;a href="https://gouya.lanzouf.com/iGgeI07zodmh">安装插件需要先安装盒子，安装插件，更新插件点击这里，新萌必看，不看必出错&lt;/a>&lt;/p>
+&lt;/div></description></item><item><title>腾讯Gtimg图床-苹果cms教程</title><link>https://jimugou.com/post/068/</link><pubDate>Fri, 01 Sep 2023 22:54:09 +0800</pubDate><guid>https://jimugou.com/post/068/</guid><description>&lt;p>&lt;a href="https://gouya.lanzouf.com/iGgeI07zodmh">安装插件需要先安装盒子，安装插件，更新插件点击这里，新萌必看，不看必出错&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>苹果cms盒子云端安装对接后支持在线一键安装苹果cms模板 目前云端安装仅支持苹果cmsv10免费模板，因云端数据存储无法管理的问题苹果cms8 收费模板以及插件不支持云端安装。&lt;/p>
 &lt;/blockquote>
