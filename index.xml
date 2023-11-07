@@ -18,8 +18,6 @@ rewrite ^/frim/index(.+?)\.html$ /list/index.php?$1 last;
 rewrite ^/movie/index(.+?)\.html$ /detail/index.php?$1 last;
 rewrite ^/play/([0-9]+)-([0-9]+)-([0-9]+)\.html$ /video/index.php?$1-$2-$3 last;
 rewrite ^/topic/index(.+?)\.html$ /topic/index.php?$1 last;
-rewrite ^/index.php(.*)$ /index.php?s=$1 last;
-rewrite ^/(.*)$ /index.php?s=$1 last;
 rewrite ^/topiclist/index(.+?).html$ /topiclist/index.php?$1 last;
 rewrite ^/index\.html$ index.php permanent;
 rewrite ^/news\.html$ news/ permanent;
