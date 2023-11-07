@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://jimugou.com/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 11 Oct 2023 14:11:05 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://jimugou.com/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://jimugou.com/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://jimugou.com/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 07 Nov 2023 10:49:46 +0800</lastBuildDate><atom:link href="https://jimugou.com/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://jimugou.com/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://jimugou.com/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -11,7 +11,22 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>使用代理设置 Git 克隆</title><link>https://jimugou.com/post/090/</link><pubDate>Wed, 11 Oct 2023 14:11:05 +0800</pubDate><guid>https://jimugou.com/post/090/</guid><description>&lt;h3 id="git-clone-ssh-走代理">git clone ssh 走代理&lt;/h3>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>海洋cms伪静态</title><link>https://jimugou.com/post/091/</link><pubDate>Tue, 07 Nov 2023 10:49:46 +0800</pubDate><guid>https://jimugou.com/post/091/</guid><description>&lt;p>海洋CMS又名SEACMS，完全开源免费，自适应电脑、手机、平板、APP多终端，无加密、更安全，是您最佳的建站工具!&lt;/p>
+&lt;p>爬滚打多年，海洋CMS有着丰富的经验和技术积累，并且能够随着流行趋势加入更多当下流行的功能。&lt;/p>
+&lt;pre tabindex="0">&lt;code>location / {
+rewrite ^/frim/index(.+?)\.html$ /list/index.php?$1 last;
+rewrite ^/movie/index(.+?)\.html$ /detail/index.php?$1 last;
+rewrite ^/play/([0-9]+)-([0-9]+)-([0-9]+)\.html$ /video/index.php?$1-$2-$3 last;
+rewrite ^/topic/index(.+?)\.html$ /topic/index.php?$1 last;
+rewrite ^/index.php(.*)$ /index.php?s=$1 last;
+rewrite ^/(.*)$ /index.php?s=$1 last;
+rewrite ^/topiclist/index(.+?).html$ /topiclist/index.php?$1 last;
+rewrite ^/index\.html$ index.php permanent;
+rewrite ^/news\.html$ news/ permanent;
+rewrite ^/part/index(.+?)\.html$ /articlelist/index.php?$1 last;
+rewrite ^/article/index(.+?)\.html$ /article/index.php?$1 last;
+}
+&lt;/code>&lt;/pre></description></item><item><title>使用代理设置 Git 克隆</title><link>https://jimugou.com/post/090/</link><pubDate>Wed, 11 Oct 2023 14:11:05 +0800</pubDate><guid>https://jimugou.com/post/090/</guid><description>&lt;h3 id="git-clone-ssh-走代理">git clone ssh 走代理&lt;/h3>
 &lt;p>新建一个 &lt;code>C:\Users\你的用户名\.ssh\config&lt;/code> 文件（没有扩展名，如果已存在此文件则不用新建），编辑此文件增加以下内容：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -2314,128 +2329,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;pre>&lt;code> 假设找到的是:/home/user1/mysql/bin/mysql
 &lt;/code>&lt;/pre>
 &lt;p>建立软连接 cd /usr/bin &amp;amp;&amp;amp; ln -fs /home/user1/mysql/bin/mysql mysql&lt;/p>
-&lt;p>完结撒花~~~&lt;/p></description></item><item><title>使用 squoosh-cli 批量压缩图片</title><link>https://jimugou.com/post/071/</link><pubDate>Tue, 05 Sep 2023 12:47:54 +0800</pubDate><guid>https://jimugou.com/post/071/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>去年之前，我写博客时并未意识到&lt;code>需要对图片进行压缩&lt;/code>。有时，文章加载的图片太多，其中一些图片过大，导致浏览体验不佳。但后来，我开始使用&lt;code>Squoosh&lt;/code>项目，每次写文章都会压缩配图。主要是因为&lt;code>Squoosh&lt;/code>太出色了，而且还是免费软件。&lt;/p>
-&lt;p>去年，我制作了一个Squoosh的&lt;code>Docker&lt;/code>镜像，可以在本地轻松启动一个图片压缩服务。但当时，我每次都是逐张压缩图片，因为我要为每张图片调整质量，以确保它们在本地存储中具有适当的大小。我自己搭建的图床运行在本地，使用本地SSD进行存储，所以之前的做法也很正常。然而，这次需要批量压缩大量图片让我意识到了批量处理的重要性。尽管可能无法完美平衡图片压缩后的&lt;code>质量和存储大小&lt;/code>，但在博客写作（关注图片质量）和本地存储之间做出一些妥协后，带来了极大的轻松和满足感，这绝对是值得的。&lt;/p>
-&lt;h2 id="正文">正文&lt;/h2>
-&lt;p>下面我讲讲如何使用 squoosh-cli 进行图片的批量压缩，之所以推荐在自建的 &lt;code>docker&lt;/code> 容器中运行 &lt;code>squoosh-cli&lt;/code> 命令，是因为容器里是 Linux 环境，命令行友好，不像 &lt;code>cmd&lt;/code> 和 &lt;code>powershell&lt;/code> 可能需要各种转义，引号，还有&lt;code>通配符&lt;/code>问题。&lt;/p>
-&lt;h3 id="新建一个专用压缩文件夹">新建一个专用压缩文件夹&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir -p /home/dk/squooshfiles
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod -R &lt;span style="color:#40a070">0755&lt;/span> /home/dk/squooshfiles
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="下面启动-squoosh-容器命令如下">下面启动 squoosh 容器，命令如下&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run -d --name squoosh &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> --restart unless-stopped &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -p 7701:8080 &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -v /home/dk/squooshfiles:/app/squooshfiles &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> dko0/squoosh:1.12.0
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>解析：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>/home/dk/squooshfiles&lt;/code>本地批量压缩图片文件夹&lt;/li>
-&lt;li>这将在容器中自动创建目录 &lt;code>/app/squooshfiles&lt;/code>&lt;/li>
-&lt;li>本地对 &lt;code>/home/dk/squooshfiles&lt;/code> 的修改和容器中对 &lt;code>/app/squooshfiles&lt;/code> 的修改将完全同步&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>注意: 下面的步骤都是在容器中进行操作&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="然后进入容器">然后进入容器&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker &lt;span style="color:#007020">exec&lt;/span> -it squoosh ash
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="安装-squoosh-cli-npm-包">安装 squoosh-cli npm 包&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>npm i -g @squoosh/cli
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>安装完成之后执行 &lt;code>squoosh-cli --help&lt;/code> 应能获取命令行帮助。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/301c689fdd2bee47108cf1ba7329dcc8.webp" alt="Pasted image 20230905125527">&lt;/p>
-&lt;h3 id="进入压缩目录然后创建一个文件夹例如-0805">进入压缩目录,然后创建一个文件夹,例如 &lt;code>0805&lt;/code>&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> .. &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#007020">cd&lt;/span> squooshfiles
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir &lt;span style="color:#40a070">0805&lt;/span> &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> &lt;span style="color:#007020">cd&lt;/span> &lt;span style="color:#40a070">0805&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>把要批量压缩的照片拷贝到0805目录&lt;/p>
-&lt;h3 id="最后使用squoosh-cli命令执行批量压缩">最后使用 &lt;code>squoosh-cli&lt;/code> 命令执行批量压缩&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>squoosh-cli --mozjpeg &lt;span style="color:#4070a0">&amp;#39;{&amp;#34;quality&amp;#34;:40,&amp;#34;baseline&amp;#34;:false,&amp;#34;arithmetic&amp;#34;:false,&amp;#34;progressive&amp;#34;:true,&amp;#34;optimize_coding&amp;#34;:true,&amp;#34;smoothing&amp;#34;:0,&amp;#34;color_space&amp;#34;:3,&amp;#34;quant_table&amp;#34;:3,&amp;#34;trellis_multipass&amp;#34;:false,&amp;#34;trellis_opt_zero&amp;#34;:false,&amp;#34;trellis_opt_table&amp;#34;:false,&amp;#34;trellis_loops&amp;#34;:1,&amp;#34;auto_subsample&amp;#34;:true,&amp;#34;chroma_subsample&amp;#34;:2,&amp;#34;separate_chroma_quality&amp;#34;:false,&amp;#34;chroma_quality&amp;#34;:75}&amp;#39;&lt;/span> &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span>-d output1 &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span>-s small &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span>*.jpg
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>解释&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>mozjpeg&lt;/code> 是最常用的压缩算法了，综合来说最推荐。&lt;/li>
-&lt;li>&lt;code>quality&lt;/code> 就是压缩质量了，在网页端可以直接预览压缩后的效果&lt;/li>
-&lt;li>&lt;code>-d&lt;/code> 设置输出目录&lt;/li>
-&lt;li>&lt;code>-s&lt;/code> 设置一个输出的文件名后缀，默认是空字符串&lt;/li>
-&lt;li> &lt;code>*.jpg&lt;/code> 只压缩当前目录下的所有 jpg 扩展名图片&lt;/li>
-&lt;/ul>
-&lt;p>批量压缩成功。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/3b00962b29df7e0a169e44aed3485d2b.webp" alt="Pasted image 20230905130018">&lt;/p>
-&lt;p>最后感谢 squoosh 项目，写博客压缩图片利器，完全免费开源，非常推荐各位博主使用。&lt;/p>
-&lt;ul>
-&lt;li>squoosh cli npm package: &lt;a href="https://www.npmjs.com/package/@squoosh/cli">https://www.npmjs.com/package/@squoosh/cli&lt;/a>&lt;/li>
-&lt;li>squoosh cli: &lt;a href="https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli">https://github.com/GoogleChromeLabs/squoosh/tree/dev/cli&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="一个重要的插曲解决报错">一个重要的插曲，解决报错&lt;/h3>
-&lt;p>TypeError: Cannot read properties of undefined (reading &amp;lsquo;writeText&amp;rsquo;)&lt;/p>
-&lt;p>这是 Chrome 限制了非安全网站的 API 使用，在非安全网站上 block 了 &lt;code>navigator.clipboard&lt;/code> 的 api 使用权限，所以无法拷贝 npx 命令出来。下面解决这个问题。&lt;/p>
-&lt;p>&lt;strong>open chrome，type &lt;code>chrome://flags/&lt;/code> in address bar, then find item &lt;code>Insecure origins treated as secure&lt;/code>, type &lt;code>http://10.10.10.5:7701&lt;/code> then enable it and relaunch your chrome.&lt;/strong>&lt;/p>
-&lt;p>Chrome 在此处认为的安全的网站&lt;/p>
-&lt;ul>
-&lt;li>必须 https&lt;/li>
-&lt;li>或 localhost&lt;/li>
-&lt;li>或 127.0.0.1&lt;/li>
-&lt;/ul>
-&lt;p>所以我们有必要加个白名单，这样好操作。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/b07bf1566bf9574ff227290d1802146e.webp" alt="insecure origins.jpg">&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;code>http://10.10.10.5:7701&lt;/code> 是我 squoosh 的运行环境地址。如果有多个地址需要设“白名单”，使用英文逗号隔开它们即可。&lt;/p>
-&lt;/blockquote></description></item></channel></rss>
+&lt;p>完结撒花~~~&lt;/p></description></item></channel></rss>
