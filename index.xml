@@ -12,7 +12,29 @@
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
 &lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>雷池waf社区版反代上高防</title><link>https://woniu336.github.io/post/093/</link><pubDate>Sat, 25 Nov 2023 19:33:31 +0800</pubDate><guid>https://woniu336.github.io/post/093/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/585052f90362007594fe1b25e707eb86.jpg" alt="">&lt;/p>
-&lt;p>我们经常用&lt;code>NPM可视化面板&lt;/code>反代服务到域名上，我发现一个更加强大的面板，&lt;code>雷池&lt;/code>是个web防火墙面板，基于nginx，反向代理只是基础，重点是还能防御站点，拦截网络恶意攻击。你可以理解为反代加高防的存在，&lt;/p>
+&lt;p>&lt;style>
+.meta-media {
+position: relative;
+margin-bottom: 30px;
+display: flex;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.video {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;div class="meta-media">
+&lt;iframe src="https://www.youtube.com/embed/8RLfPjk1nA8" frameborder="no" scrolling="yes"
+allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
+&lt;/iframe>
+&lt;/div>
+我们经常用&lt;code>NPM可视化面板&lt;/code>反代服务到域名上，我发现一个更加强大的面板，&lt;code>雷池&lt;/code>是个web防火墙面板，基于nginx，反向代理只是基础，重点是还能防御站点，拦截网络恶意攻击。你可以理解为反代加高防的存在，&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/0def04e0ccd10ef58ad357b00811846e.jpg" alt="">&lt;/p>
 &lt;p>&lt;strong>使用方法&lt;/strong>&lt;/p>
 &lt;p>Debian/Ubuntu安装下载工具&lt;/p>
