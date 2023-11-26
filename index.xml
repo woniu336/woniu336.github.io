@@ -852,20 +852,46 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;p>美国-圣何塞（电信CN2+联通AS9929+移动CMIN2）：http://v.ps5.zhujiceping.net/&lt;/p>
 &lt;p>英国-伦敦（联通AS9929）：http://v.ps6.zhujiceping.net&lt;/p>
 &lt;p>德国-法兰克福（联通AS9929）：http://v.ps7.zhujiceping.net&lt;/p>
-&lt;p>荷兰-阿姆斯特丹（电信CN2+联通AS9929+移动CMI）：http://v.ps8.zhujiceping.net/&lt;/p></description></item><item><title>海洋cms伪静态</title><link>https://woniu336.github.io/post/091/</link><pubDate>Tue, 07 Nov 2023 10:49:46 +0800</pubDate><guid>https://woniu336.github.io/post/091/</guid><description>&lt;p>海洋CMS又名SEACMS，完全开源免费，自适应电脑、手机、平板、APP多终端，无加密、更安全，是您最佳的建站工具!&lt;/p>
+&lt;p>荷兰-阿姆斯特丹（电信CN2+联通AS9929+移动CMI）：http://v.ps8.zhujiceping.net/&lt;/p></description></item><item><title>amh搭建海洋cms注意事项</title><link>https://woniu336.github.io/post/091/</link><pubDate>Tue, 07 Nov 2023 10:49:46 +0800</pubDate><guid>https://woniu336.github.io/post/091/</guid><description>&lt;p>海洋CMS又名SEACMS，完全开源免费，自适应电脑、手机、平板、APP多终端，无加密、更安全，是您最佳的建站工具!&lt;/p>
 &lt;p>爬滚打多年，海洋CMS有着丰富的经验和技术积累，并且能够随着流行趋势加入更多当下流行的功能。&lt;/p>
-&lt;pre tabindex="0">&lt;code>location / {
-rewrite ^/frim/index(.+?)\.html$ /list/index.php?$1 last;
-rewrite ^/movie/index(.+?)\.html$ /detail/index.php?$1 last;
-rewrite ^/play/([0-9]+)-([0-9]+)-([0-9]+)\.html$ /video/index.php?$1-$2-$3 last;
-rewrite ^/topic/index(.+?)\.html$ /topic/index.php?$1 last;
-rewrite ^/topiclist/index(.+?).html$ /topiclist/index.php?$1 last;
-rewrite ^/index\.html$ index.php permanent;
-rewrite ^/news\.html$ news/ permanent;
-rewrite ^/part/index(.+?)\.html$ /articlelist/index.php?$1 last;
-rewrite ^/article/index(.+?)\.html$ /article/index.php?$1 last;
-}
-&lt;/code>&lt;/pre></description></item><item><title>使用代理设置 Git 克隆</title><link>https://woniu336.github.io/post/090/</link><pubDate>Wed, 11 Oct 2023 14:11:05 +0800</pubDate><guid>https://woniu336.github.io/post/090/</guid><description>&lt;h3 id="git-clone-ssh-走代理">git clone ssh 走代理&lt;/h3>
+&lt;h2 id="注意几点">注意几点&lt;/h2>
+&lt;ol>
+&lt;li>根目录删除&lt;code>.user.ini&lt;/code> 文件&lt;/li>
+&lt;li>data目录设置&lt;code>权限为777&lt;/code>,其余&lt;code>555&lt;/code>&lt;/li>
+&lt;li>如果导入数据库文件后缀为&lt;code>sql.gz&lt;/code>,先解压为&lt;code>sql&lt;/code>&lt;/li>
+&lt;li>修改&lt;code>common.inc.php&lt;/code>数据库信息&lt;/li>
+&lt;li>伪静态规则&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>伪静态规则&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-11">11&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>location / &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rewrite ^/frim/index&lt;span style="color:#666">(&lt;/span>.+?&lt;span style="color:#666">)&lt;/span>&lt;span style="color:#4070a0;font-weight:bold">\.&lt;/span>html$ /list/index.php?&lt;span style="color:#bb60d5">$1&lt;/span> last;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rewrite ^/movie/index&lt;span style="color:#666">(&lt;/span>.+?&lt;span style="color:#666">)&lt;/span>&lt;span style="color:#4070a0;font-weight:bold">\.&lt;/span>html$ /detail/index.php?&lt;span style="color:#bb60d5">$1&lt;/span> last;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rewrite ^/play/&lt;span style="color:#666">([&lt;/span>0-9&lt;span style="color:#666">]&lt;/span>+&lt;span style="color:#666">)&lt;/span>-&lt;span style="color:#666">([&lt;/span>0-9&lt;span style="color:#666">]&lt;/span>+&lt;span style="color:#666">)&lt;/span>-&lt;span style="color:#666">([&lt;/span>0-9&lt;span style="color:#666">]&lt;/span>+&lt;span style="color:#666">)&lt;/span>&lt;span style="color:#4070a0;font-weight:bold">\.&lt;/span>html$ /video/index.php?&lt;span style="color:#bb60d5">$1&lt;/span>-&lt;span style="color:#bb60d5">$2&lt;/span>-&lt;span style="color:#bb60d5">$3&lt;/span> last;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rewrite ^/topic/index&lt;span style="color:#666">(&lt;/span>.+?&lt;span style="color:#666">)&lt;/span>&lt;span style="color:#4070a0;font-weight:bold">\.&lt;/span>html$ /topic/index.php?&lt;span style="color:#bb60d5">$1&lt;/span> last;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rewrite ^/topiclist/index&lt;span style="color:#666">(&lt;/span>.+?&lt;span style="color:#666">)&lt;/span>.html$ /topiclist/index.php?&lt;span style="color:#bb60d5">$1&lt;/span> last;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rewrite ^/index&lt;span style="color:#4070a0;font-weight:bold">\.&lt;/span>html$ index.php permanent;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rewrite ^/news&lt;span style="color:#4070a0;font-weight:bold">\.&lt;/span>html$ news/ permanent;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rewrite ^/part/index&lt;span style="color:#666">(&lt;/span>.+?&lt;span style="color:#666">)&lt;/span>&lt;span style="color:#4070a0;font-weight:bold">\.&lt;/span>html$ /articlelist/index.php?&lt;span style="color:#bb60d5">$1&lt;/span> last;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rewrite ^/article/index&lt;span style="color:#666">(&lt;/span>.+?&lt;span style="color:#666">)&lt;/span>&lt;span style="color:#4070a0;font-weight:bold">\.&lt;/span>html$ /article/index.php?&lt;span style="color:#bb60d5">$1&lt;/span> last;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>使用代理设置 Git 克隆</title><link>https://woniu336.github.io/post/090/</link><pubDate>Wed, 11 Oct 2023 14:11:05 +0800</pubDate><guid>https://woniu336.github.io/post/090/</guid><description>&lt;h3 id="git-clone-ssh-走代理">git clone ssh 走代理&lt;/h3>
 &lt;p>新建一个 &lt;code>C:\Users\你的用户名\.ssh\config&lt;/code> 文件（没有扩展名，如果已存在此文件则不用新建），编辑此文件增加以下内容：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
