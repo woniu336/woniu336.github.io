@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://woniu336.github.io/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 26 Nov 2023 14:30:45 +0800</lastBuildDate><atom:link href="https://woniu336.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://woniu336.github.io/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://woniu336.github.io/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://woniu336.github.io/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 26 Nov 2023 16:17:17 +0800</lastBuildDate><atom:link href="https://woniu336.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://woniu336.github.io/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://woniu336.github.io/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -11,7 +11,110 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>哪吒探针美化</title><link>https://woniu336.github.io/post/094/</link><pubDate>Sun, 26 Nov 2023 14:30:45 +0800</pubDate><guid>https://woniu336.github.io/post/094/</guid><description>&lt;p>哪吒探针文档: &lt;a href="https://nezha.wiki/guide/dashboard.html">https://nezha.wiki/guide/dashboard.html&lt;/a>&lt;/p>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>portainer-ce中文纯净版</title><link>https://woniu336.github.io/post/095/</link><pubDate>Sun, 26 Nov 2023 16:17:17 +0800</pubDate><guid>https://woniu336.github.io/post/095/</guid><description>&lt;p>源码仓库 &lt;a href="https://github.com/eysp/portainer-ce">https://github.com/eysp/portainer-ce&lt;/a>&lt;/p>
+&lt;h1 id="portainer-ce中文版">portainer-ce中文版&lt;/h1>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/e00632772fde1afb994b9b2aea480fe4.jpg" alt="">&lt;/p>
+&lt;p>&lt;strong>其中arm和ppc64le架构没有设备测试，反馈bug 到GitHub issues&lt;/strong>&lt;/p>
+&lt;p>已更新到&lt;code>2.19.1&lt;/code>，新版删除左上角升级企业版的广告，删除首次登录弹出英文提示的公告，汉化的广告也隐藏，总之这是一个&lt;code>纯净版&lt;/code>&lt;/p>
+&lt;p>如果汉化对你有帮助请往下拉支持我，另外欢迎大家进q群交流，群号&lt;code>758648462&lt;/code>（备注portainer）&lt;/p>
+&lt;h1 id="感谢群里我不是矿神-指导js精简--52fancy-提供编译脚本">感谢群里@我不是矿神 指导js精简 | @52Fancy 提供编译脚本&lt;/h1>
+&lt;p>&lt;em>一键安装代码&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>docker run -d --restart&lt;span style="color:#666">=&lt;/span>always --name&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;portainer&amp;#34;&lt;/span> -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock 6053537/portainer-ce
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>163镜像安装，portainer-ce中文，访问dockerhub网速不好的尝试&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>docker run -d --restart&lt;span style="color:#666">=&lt;/span>always --name&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;portainer&amp;#34;&lt;/span> -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock hub-mirror.c.163.com/6053537/portainer-ce
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>访问hub.docker.com网络慢，或者以上代码都无法安装成功尝试以下代码&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>docker pull hub-mirror.c.163.com/6053537/portainer-ce
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker run -d --restart&lt;span style="color:#666">=&lt;/span>always --name&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;portainer&amp;#34;&lt;/span> -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data 6053537/portainer-ce
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>如果你要启用ssl访问，远程主机建议启用，端口443和证书路径/certs请自行更改&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>docker run -d -p 443:9000 --name portainer --restart always -v
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ~/local-certs:/certs -v portainer_data:/data 6053537/portainer-ce -v /var/run/docker.sock:/var/run/docker.sock --ssl
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --sslcert /certs/portainer.crt --sslkey /certs/portainer.key
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>或者你也可以启用Nginx反代，下面是代码&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-10">10&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span> location / &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_pass http://127.0.0.1:9000;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header Host &lt;span style="color:#bb60d5">$host&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Real-IP &lt;span style="color:#bb60d5">$remote_addr&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Forwarded-For &lt;span style="color:#bb60d5">$proxy_add_x_forwarded_for&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_read_timeout 300s;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_http_version 1.1;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header Upgrade &lt;span style="color:#bb60d5">$http_upgrade&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header Connection &lt;span style="color:#4070a0">&amp;#34;upgrade&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;em>如果你只想要访问youname.com/portainer这样的子目录也可以&lt;/em>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-10">10&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span> location ^~ /portainer/ &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_pass http://127.0.0.1:9000/;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header Host &lt;span style="color:#bb60d5">$host&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Real-IP &lt;span style="color:#bb60d5">$remote_addr&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header X-Forwarded-For &lt;span style="color:#bb60d5">$proxy_add_x_forwarded_for&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_read_timeout 300s;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_http_version 1.1;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header Upgrade &lt;span style="color:#bb60d5">$http_upgrade&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy_set_header Connection &lt;span style="color:#4070a0">&amp;#34;upgrade&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>哪吒探针美化</title><link>https://woniu336.github.io/post/094/</link><pubDate>Sun, 26 Nov 2023 14:30:45 +0800</pubDate><guid>https://woniu336.github.io/post/094/</guid><description>&lt;p>哪吒探针文档: &lt;a href="https://nezha.wiki/guide/dashboard.html">https://nezha.wiki/guide/dashboard.html&lt;/a>&lt;/p>
 &lt;h3 id="截图预览">截图预览&lt;/h3>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/b2932ac72373a815b04e6cfba2feddf5.jpg" alt="">&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/b90ba894557c351b187dec8d2d132e7b.jpg" alt="">&lt;/p>
@@ -1851,158 +1954,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rf &lt;span style="color:#007020">test&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>如果能够顺利执行，则说明挂载没有问题。&lt;/p></description></item><item><title>VPS利剑！全面解析如何用rclone挂载OneDrive</title><link>https://woniu336.github.io/post/075/</link><pubDate>Sun, 10 Sep 2023 13:17:27 +0800</pubDate><guid>https://woniu336.github.io/post/075/</guid><description>&lt;p>之前写过一篇使用 &lt;code>rclone&lt;/code> 挂载 &lt;code>Google Drive&lt;/code>的记录，这次来补上挂载 &lt;code>onedrive&lt;/code> 的坑。挂载方法其实大同小异，网上也有许多文章进行介绍。&lt;/p>
-&lt;p>不过有些介绍实在是太简略了，甚至只是简单的复制了官方的示例，导致依旧看的一头雾水，所以我对 &lt;code>rclone&lt;/code> 挂载 &lt;code>onedrive&lt;/code> 的流程进行了整理和记录，希望能对大家有所帮助，能一次解决问题。&lt;/p>
-&lt;h2 id="1-创建-onedrive-api">1. 创建 OneDrive API&lt;/h2>
-&lt;p>&lt;em>为了实际使用中更稳定的体验，避免因为共享 API 达到使用限制而引发错误，绝对推荐创建自己的 API。&lt;/em>&lt;/p>
-&lt;p>&lt;em>若要创建自己的 API，务必确保你的账号拥有 API 权限！&lt;/em>&lt;/p>
-&lt;h3 id="11-获取-client_id">1.1 获取 client_id&lt;/h3>
-&lt;p>首先访问 &lt;a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps">Microsoft Azur&lt;/a>&lt;a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps">e 应用注册&lt;/a>，登录账号后点击&lt;strong>应用注册&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/dcb8a72dfdad00b4f98aeb6324ec41fa.webp" alt="">&lt;/p>
-&lt;p>应用注册&lt;/p>
-&lt;p>点击左上角的&lt;strong>新注册&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/c77eb0cad25a852bcde2020c94bea4ae.webp" alt="">&lt;/p>
-&lt;p>新注册&lt;/p>
-&lt;p>如图所示进行配置，名称可以随便写，账户类型选择第三项&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/3f1cdbb403f98fc91f8cb284927dabb6.webp" alt="">&lt;/p>
-&lt;p>注册应用程序&lt;/p>
-&lt;p>点击注册后可以看到你的应用的相关信息，复制好 应用程序 (客户端) ID ，这个就是 client_id&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/d7a132861c1e91b2abbab93f1c20c802.webp" alt="">&lt;/p>
-&lt;p>获取 client_id&lt;/p>
-&lt;h3 id="12-获取-client_secret">1.2 获取 client_secret&lt;/h3>
-&lt;p>依次点击&lt;strong>证书和密码&lt;/strong>，&lt;strong>新客户端密码&lt;/strong>，在截止期限中将时间选择为最长（即两年）&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/928cbd118607fec1f2603a73c69bce73.webp" alt="">&lt;/p>
-&lt;p>创建新客户端密码&lt;/p>
-&lt;p>然后就可以看见值和机密 ID，我们只需要记录下 值 就可以，这个就是 client_secret 。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/48ffac8b3c907b3f836f8138f30e0bae.webp" alt="">&lt;/p>
-&lt;p>获取 client_secret&lt;/p>
-&lt;h3 id="13-添加-api-权限">1.3 添加 API 权限&lt;/h3>
-&lt;p>依次点击 &lt;strong>API 权限&lt;/strong>，&lt;strong>添加权限&lt;/strong>，&lt;strong>Microsoft Graph&lt;/strong>，在右边栏搜索并添加权限。&lt;/p>
-&lt;p>&lt;code>Files.Read&lt;/code>,&lt;code>Files.ReadWrite&lt;/code>,&lt;code>Files.Read.All&lt;/code>,&lt;code>Files.ReadWrite.All&lt;/code>,&lt;code>offline_access&lt;/code>,&lt;code>User.Read&lt;/code>这几项&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/c421c592df0809fe62cdba55117252c9.webp" alt="">&lt;/p>
-&lt;p>添加权限&lt;/p>
-&lt;p>添加完成后应该是这样&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/53136b466330aeb7d18e921db51611ad.webp" alt="">&lt;/p>
-&lt;p>API 权限展示&lt;/p>
-&lt;h3 id="14-添加身份验证">1.4 添加身份验证&lt;/h3>
-&lt;p>依次点击&lt;strong>身份验证&lt;/strong>，&lt;strong>添加平台&lt;/strong>，&lt;strong>Web&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/9bd5081f6aa45690320c04d290292944.webp" alt="">&lt;/p>
-&lt;p>添加身份验证, 在重定向 URI 中输入 &lt;/p>
-&lt;pre tabindex="0">&lt;code>http://localhost
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/f180ee860062e528227d36317a5c0c25.webp" alt="">&lt;/p>
-&lt;p>设置重定向&lt;/p>
-&lt;p>至此，OneDrive API 创建完成&lt;/p>
-&lt;h2 id="2-添加-rclone-配置">2. 添加 rclone 配置&lt;/h2>
-&lt;p>&lt;em>注：由于 OneDrive 的授权 key 可能会很长导致 rclone 远程配置中无法接受 key，目前 rclone 没有解决这个问题，因此可能挂载过程中会出现问题，如果出现了下文描述的问题，请参考第三部分来解决。&lt;/em>&lt;/p>
-&lt;h3 id="21-安装-rclone">2.1 安装 rclone&lt;/h3>
-&lt;p>由于 vps 中没有桌面环境，无法独立完成配置，所以 vps 和本地电脑都要安装 rclone。&lt;/p>
-&lt;p>vps 中执行&lt;/p>
-&lt;pre tabindex="0">&lt;code>curl https://rclone.org/install.sh | sudo bash
-&lt;/code>&lt;/pre>&lt;p>即可成功安装&lt;/p>
-&lt;p>本地电脑请&lt;a href="https://rclone.org/downloads/">点此下载 rclone&lt;/a> 并解压&lt;/p>
-&lt;h3 id="22-在-rclone-中配置-onedrive">2.2 在 rclone 中配置 OneDrive&lt;/h3>
-&lt;p>首先在 vps 中执行&lt;/p>
-&lt;pre tabindex="0">&lt;code>rclone config
-&lt;/code>&lt;/pre>&lt;p>初始状态下什么配置都没有，点击 n 创建一个新配置&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/a5a77da141d2f7a250b34716d1a19b9b.webp" alt="">&lt;/p>
-&lt;p>添加配置&lt;/p>
-&lt;p>接着会让你填写一个名称，这个随意填，例如 &lt;code>od&lt;/code>&lt;/p>
-&lt;p>然后会要求选择要挂载的网盘，找到 &lt;code>Microsoft OneDrive&lt;/code> 并输入其前面的&lt;code>序号31&lt;/code>&lt;/p>
-&lt;p>接下来会要求输入 &lt;code>client_id &lt;/code>和 &lt;code>client_secret&lt;/code> ，将第一步中获取的值依次输入。&lt;/p>
-&lt;p>地区按照你的账号选择，比如我的就是普通的全球账户，就选择 1&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/32537f14f449c2fae797c0e6bacd1f30.webp" alt="">&lt;/p>
-&lt;p>填写信息&lt;/p>
-&lt;p>接下来会让你选择你是否有桌面环境，因为 vps 环境下没有桌面环境，因此选择 N 。&lt;/p>
-&lt;p>输入后会看到一段提示，将红框内这段命令复制到本地的电脑执行。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/6e85e40e589c3b7717edfa4971d77d54.webp" alt="">&lt;/p>
-&lt;p>填写信息 2&lt;/p>
-&lt;p>现在在本地打开命令行，进入到 rclone 所在的文件夹内，粘贴上面的命令并执行&lt;/p>
-&lt;p>不出意外的话，会弹出浏览器窗口让你登录并授权，按要求操作即可。&lt;/p>
-&lt;p>操作完成后，会看到成功的提示&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/864d67bb29a587fbca27f718ce70bc66.webp" alt="">&lt;/p>
-&lt;p>成功授权&lt;/p>
-&lt;p>此时回到本地的命令行查看，会发现出现了一段授权 code，复制这段 code 并粘贴回 vps。&lt;/p>
-&lt;p>&lt;em>注：如果成功看到下一步操作，请忽略第三节并继续配置，如果出现以下错误，不要担心，请按照第三节的方法操作。&lt;/em>&lt;/p>
-&lt;p>如果遇到类似下图的错误：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>Couldn&lt;span style="color:#4070a0">&amp;#39;t decode response - try again (make sure you are using a matching version of rclone on both sides: invalid character &amp;#39;&lt;/span>e&lt;span style="">&amp;#39;&lt;/span> looking &lt;span style="color:#007020;font-weight:bold">for&lt;/span> beginning of value
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/65701738b7890cc457e70adb04ba4577.webp" alt="">&lt;/p>
-&lt;p>rclone 的 bug&lt;/p>
-&lt;p>则按照第三节的处理。&lt;/p>
-&lt;p>接下来会选择使用哪种类型的账户，我使用的是 OneDrive，故选择 1&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/ff68ee3a2817cbeb5ea0041cf7feaeb0.webp" alt="">&lt;/p>
-&lt;p>选择账户类型&lt;/p>
-&lt;p>选择 drive&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/a4684065fc4c26453ee9f9aaf8a9abed.webp" alt="">&lt;/p>
-&lt;p>选择 drive&lt;/p>
-&lt;p>结束！请看第四节挂载。&lt;/p>
-&lt;h2 id="3-挂载失败的解决方法">3. 挂载失败的解决方法&lt;/h2>
-&lt;p>其实解决这个问题我们要使用的就是最简单粗暴的方式，没错：在本地配置好，把配置文件复制过去！&lt;/p>
-&lt;p>打开本地命令行并进入 rclone 目录下，按照类似于第二节的方式重新配置，只不过这次选择是否有桌面环境时选择 Y ，这样子登录账户授权后就会直接成功，不会出现之前的问题了。&lt;/p>
-&lt;p>在本地成功添加配置后，在本地 rclone 目录下和远程 vps 分别执行&lt;/p>
-&lt;pre tabindex="0">&lt;code>rclone config file
-&lt;/code>&lt;/pre>&lt;p>这个获取到的是 rclone 配置文件的目录。现在，直接把本地配置完成的配置文件复制到 vps 上去！&lt;/p>
-&lt;p>放心，这个配置文件在 vps 上也是能直接用的，复制完成后，在 vps 上执行&lt;/p>
-&lt;pre tabindex="0">&lt;code>rclone config
-&lt;/code>&lt;/pre>&lt;p>嗯，能看到你在本地添加的 OneDrive 配置就是没问题了。&lt;/p>
-&lt;h2 id="4-挂载到-vps">4. 挂载到 vps&lt;/h2>
-&lt;p>首先新建一个文件夹用于挂载：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>mkdir -p /home/onedrive
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>开始挂载：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone mount od: /home/onedrive --allow-other --vfs-cache-mode writes --allow-non-empty --no-modtime &amp;amp;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>其中 &lt;code>od&lt;/code> 是 rclone 配置时输入的&lt;code>配置名称&lt;/code>，&lt;code>/home/onedrive&lt;/code> 是挂载目录，&lt;code>&amp;amp;&lt;/code> 是指后台运行。&lt;/p>
-&lt;p>此时可能会报错：&lt;/p>
-&lt;pre tabindex="0">&lt;code>Fatal error: mount not ready
-&lt;/code>&lt;/pre>&lt;p>这是因为缺少依赖，我们选择安装&lt;/p>
-&lt;p>centos 系使用：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>yum install -y fuse3
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>debian 系使用：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install -y fuse3
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>再次执行挂载命令，如果没有报错，就是挂载成功了。&lt;/p>
-&lt;p>检查挂载：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>df -h
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>应该看到（我这里是用挂载名 song，挂载目录 /music 进行的测试截图）：&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/18ec1bf4ba0819c90008c401c482619d.webp" alt="">&lt;/p>
-&lt;p>挂载成功&lt;/p>
-&lt;p>接下来可以进行一些测试，如果能正常读写文件，证明挂载没有问题。&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;p>如果能够顺利执行，则说明挂载没有问题。&lt;/p></description></item></channel></rss>
