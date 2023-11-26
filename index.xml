@@ -20,16 +20,18 @@
 &lt;p>3.固定卡片宽度，栅格化(若剩余宽度不足以容下一个卡片，则换行显示)解决原版主题页面宽度变小后仍然制一行显示4个导致布局错误&lt;/p>
 &lt;p>4.解决弹出看卡片位置不合适导致被顶部菜单栏遮挡问题&lt;/p>
 &lt;p>5.增加一些我常用的主机信息显示在卡片上，方便查看（不爱喜欢可以自行修改哈）&lt;/p>
-&lt;p>6.底部版权信息可以在template文件夹里的footer.html里更改7.swap未开启显示提示&lt;/p>
+&lt;p>6.底部版权信息可以在template文件夹里的footer.html里更改&lt;/p>
+&lt;p>7.swap未开启显示提示&lt;/p>
 &lt;h3 id="使用方法">使用方法&lt;/h3>
-&lt;p>1.template里面的文件解压出来放到服务端/opt/nezha/dashboard/theme-custom/template目录里面&lt;/p>
-&lt;p>2.重启哪吒面板服务&lt;/p>
-&lt;p>3.在哪吒面板后台主题选择Custom(local)&lt;/p>
-&lt;p>4.将css.txt里面的CSS样式代码复制到哪吒面板后台的“自定义代码”文本框里&lt;/p>
+&lt;p>1.template里面的文件解压出来放到服务端模板目录里面&lt;/p>
+&lt;pre tabindex="0">&lt;code>/opt/nezha/dashboard/theme-custom/template
+&lt;/code>&lt;/pre>&lt;p>2.重启哪吒面板服务&lt;/p>
+&lt;p>3.在哪吒面板后台主题选择&lt;code>Custom(local)&lt;/code>&lt;/p>
+&lt;p>4.将&lt;code>css.txt&lt;/code>里面的CSS样式代码复制到哪吒面板后台的“自定义代码”文本框里&lt;/p>
 &lt;h3 id="一些信息的修改地址">一些信息的修改地址&lt;/h3>
-&lt;p>1.站点图标header.html文件的第17行，替换掉https://cdn.amzayo.top/static/public/luban/luban_head.png&lt;/p>
-&lt;p>2.页面左上角logomenu.html文件的第5行，替换掉https://cdn.amzayo.top/static/public/luban/test_head.e7b54515.png&lt;/p>
-&lt;p>3.底部版权信息footer.html文件的第4到8行，依照demo底部的文字按需替换&lt;/p>
+&lt;p>1.站点图标 &lt;code>header.html&lt;/code> 文件的第17行，替换掉&lt;code>https://cdn.amzayo.top/static/public/luban/luban_head.png&lt;/code>&lt;/p>
+&lt;p>2.页面左上角 &lt;code>logomenu.html&lt;/code> 文件的第5行，替换掉&lt;code>https://cdn.amzayo.top/static/public/luban/test_head.e7b54515.png&lt;/code>&lt;/p>
+&lt;p>3.底部版权信息&lt;code> footer.html&lt;/code> 文件的第4到8行，依照demo底部的文字按需替换&lt;/p>
 &lt;h2 id="下载地址--点我下载httpsgithubcomwoniu336open_shellblobmainamzayo_template_fin_291zip">下载地址&amp;ndash;&amp;gt;&lt;a href="https://github.com/woniu336/open_shell/blob/main/amzayo_template_fin_2.91.zip">点我下载&lt;/a>&lt;/h2></description></item><item><title>雷池waf社区版反代上高防</title><link>https://woniu336.github.io/post/093/</link><pubDate>Sat, 25 Nov 2023 19:33:31 +0800</pubDate><guid>https://woniu336.github.io/post/093/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/585052f90362007594fe1b25e707eb86.jpg" alt="">&lt;/p>
 &lt;p>&lt;style>
 .meta-media {
