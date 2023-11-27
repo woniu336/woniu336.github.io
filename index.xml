@@ -18,11 +18,8 @@
 &lt;p>支持GPTs，最新UI&lt;/p>
 &lt;p>支持多种登录方式：（相当于Pandora Cloud）&lt;/p>
 &lt;p>账号/密码&lt;br>
-Access Token&lt;br>
-Session Token&lt;br>
-Refresh Token&lt;br>
-Share Token&lt;br>
-可内置tokens（可使用上述所有Token），支持设置密码。（相当于Pandora Server）&lt;/p>
+&lt;code>Access Token&lt;/code> &lt;code>Session Token&lt;/code> &lt;code>Refresh Token&lt;/code> &lt;code>Share Token&lt;/code>&lt;/p>
+&lt;p>可内置tokens（可使用上述所有Token），支持设置密码。（相当于Pandora Server）&lt;/p>
 &lt;h4 id="demo">demo&lt;/h4>
 &lt;p>&lt;a href="https://pdn.ywsj.gq/">https://pdn.ywsj.gq/&lt;/a>&lt;/p>
 &lt;p>准备条件&lt;br>
@@ -35,7 +32,16 @@ Share Token&lt;br>
 这里需要一个github账号&lt;br>
 这个账号注册天数需要大于180天用来授权，否则会是以下提示&lt;/p>
 &lt;h3 id="教程开始">教程开始&lt;/h3>
-&lt;ol>
+&lt;p>一键脚本: `&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/pandoranext.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x pandoranext.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./pandoranext.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol>
 &lt;li>
 &lt;p>访问这个网页&lt;code>https://dash.pandoranext.com&lt;/code>&lt;/p>
 &lt;/li>
@@ -45,19 +51,10 @@ Share Token&lt;br>
 &lt;/ol>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/c4af2df94c38d45dd020901af0f7eceb.jpg" alt="">&lt;/p>
 &lt;ol start="3">
-&lt;li>复制授权地址,注意地址格式是(&lt;code>不带curl -fLO&lt;/code>):
-&lt;code>https://dash.pandoranext.com/data/byoPtESbYfhq3enA-5ahGfXNR8I6Oi4_nttxtwrs76664/license.jwt&lt;/code>(请替换成自己的)下面要用到&lt;/li>
+&lt;li>复制授权地址到ssh,注意地址不带curl -fLO,例如:&lt;/li>
 &lt;/ol>
-&lt;p>然后输入一键脚本: `&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x pandoranext.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./pandoranext.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>安装成功以后打开自己VPS的端口加ip进入web页面&lt;/p>
+&lt;p>&lt;code>https://dash.pandoranext.com/data/byoPtESbYfhq3enA-5ahGfXNR8I6Oi4_nttxtwrs76664/license.jwt&lt;/code>(请替换成自己的)&lt;/p>
+&lt;h4 id="安装成功以后ip加端口进入web页面">安装成功以后ip加端口进入web页面&lt;/h4>
 &lt;p>&lt;code>http://ip:8181 端口: 8181&lt;/code>&lt;/p>
 &lt;p>可以用&lt;code>账号密码&lt;/code>登录或者用&lt;code>Access Token&lt;/code>登录&lt;/p>
 &lt;p>&lt;code>如果你是gpt4.0也是可以直接使用的 &lt;/code>&lt;/p>
