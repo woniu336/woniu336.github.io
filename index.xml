@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://woniu336.github.io/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Nov 2023 01:52:09 +0800</lastBuildDate><atom:link href="https://woniu336.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://woniu336.github.io/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://woniu336.github.io/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://woniu336.github.io/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 27 Nov 2023 13:39:19 +0800</lastBuildDate><atom:link href="https://woniu336.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://woniu336.github.io/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://woniu336.github.io/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -11,7 +11,64 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>amh7.0安装苹果cms的一些坑和注意事项</title><link>https://woniu336.github.io/post/098/</link><pubDate>Mon, 27 Nov 2023 01:52:09 +0800</pubDate><guid>https://woniu336.github.io/post/098/</guid><description>&lt;p>&lt;code>1.数据库导入的问题 &lt;/code>&lt;/p>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>PandoraNext项目私有化部署教程</title><link>https://woniu336.github.io/post/099/</link><pubDate>Mon, 27 Nov 2023 13:39:19 +0800</pubDate><guid>https://woniu336.github.io/post/099/</guid><description>&lt;h4 id="前言">前言&lt;/h4>
+&lt;p>由于之前的潘多拉项目已经凉凉了，所以今天给大家出个PandoraNext项目的搭建教程&lt;/p>
+&lt;h4 id="简介">简介&lt;/h4>
+&lt;p>&lt;code>Pandora Cloud + Pandora Server + Shared Chat = PandoraNext &lt;/code>&lt;/p>
+&lt;p>支持GPTs，最新UI&lt;/p>
+&lt;p>支持多种登录方式：（相当于Pandora Cloud）&lt;/p>
+&lt;p>账号/密码&lt;br>
+Access Token&lt;br>
+Session Token&lt;br>
+Refresh Token&lt;br>
+Share Token&lt;br>
+可内置tokens（可使用上述所有Token），支持设置密码。（相当于Pandora Server）&lt;/p>
+&lt;h4 id="demo">demo&lt;/h4>
+&lt;p>&lt;a href="https://pdn.ywsj.gq/">https://pdn.ywsj.gq/&lt;/a>&lt;/p>
+&lt;p>准备条件&lt;br>
+1）一台服务器&lt;br>
+需要便宜VPS的可以参考这个&lt;br>
+&lt;a href="https://duan.yyzq.cf/vps">https://duan.yyzq.cf/vps&lt;/a>&lt;br>
+2）此项目的github&lt;br>
+&lt;a href="https://github.com/pandora-next/deploy">https://github.com/pandora-next/deploy&lt;/a>&lt;br>
+3）license.jwt文件&lt;br>
+这里需要一个github账号&lt;br>
+这个账号注册天数需要大于180天用来授权，否则会是以下提示&lt;/p>
+&lt;h3 id="教程开始">教程开始&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>访问这个网页&lt;code>https://dash.pandoranext.com&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>登录github账号获取到授权文件license.jwt&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/c4af2df94c38d45dd020901af0f7eceb.jpg" alt="">&lt;/p>
+&lt;ol start="3">
+&lt;li>复制授权地址,注意地址格式是(&lt;code>不带curl -fLO&lt;/code>):
+&lt;code>https://dash.pandoranext.com/data/byoPtESbYfhq3enA-5ahGfXNR8I6Oi4_nttxtwrs76664/license.jwt&lt;/code>(请替换成自己的)下面要用到&lt;/li>
+&lt;/ol>
+&lt;p>然后输入一键脚本: `&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x pandoranext.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./pandoranext.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>安装成功以后打开自己VPS的端口加ip进入web页面&lt;/p>
+&lt;p>&lt;code>http://ip:8181 端口: 8181&lt;/code>&lt;/p>
+&lt;p>可以用&lt;code>账号密码&lt;/code>登录或者用&lt;code>Access Token&lt;/code>登录&lt;/p>
+&lt;p>&lt;code>如果你是gpt4.0也是可以直接使用的 &lt;/code>&lt;/p>
+&lt;p>五、更新网站&lt;br>
+docker-compose down #停止容器&lt;br>
+docker-compose pull #拉取最新镜像&lt;br>
+docker-compose up -d #启动新容器&lt;/p>
+&lt;h3 id="附access-token获取方法">附：Access Token获取方法&lt;/h3>
+&lt;p>官方登录，然后访问&lt;a href="https://chat.openai.com/api/auth/session">这里&lt;/a> 拿 &lt;code>Access Token&lt;/code>&lt;br>
+当然可以访问 &lt;a href="https://ai.fakeopen.com/auth">这里&lt;/a>拿 Access Token&lt;br>
+Access Token &lt;code>有效期 14&lt;/code> 天，期间访问&lt;code>不需要魔法&lt;/code>。这意味着你在手机上也可使用。&lt;/p></description></item><item><title>amh7.0安装苹果cms的一些坑和注意事项</title><link>https://woniu336.github.io/post/098/</link><pubDate>Mon, 27 Nov 2023 01:52:09 +0800</pubDate><guid>https://woniu336.github.io/post/098/</guid><description>&lt;p>&lt;code>1.数据库导入的问题 &lt;/code>&lt;/p>
 &lt;p> ①先上传到备份目录，在解压，然后在导入 &lt;/p>
 &lt;p> ②数据库设置那里要&lt;code>启用远程开启 &lt;/code>&lt;/p>
 &lt;p>&lt;code> 2.任务计划 &lt;/code>&lt;/p>
@@ -1818,22 +1875,4 @@ OpenWrt 路由器 CPU 架构如下表（欢迎补充）：&lt;/p>
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>timedatectl set-ntp yes
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>从网页视频到MP4：轻松使用M3U8下载器保存你喜爱的视频</title><link>https://woniu336.github.io/post/079/</link><pubDate>Mon, 11 Sep 2023 14:19:43 +0800</pubDate><guid>https://woniu336.github.io/post/079/</guid><description>&lt;h2 id="项目">项目&lt;/h2>
-&lt;h3 id="猫抓">猫抓：&lt;/h3>
-&lt;p>&lt;a href="https://github.com/xifangczy/cat-catch/releases">https://github.com/xifangczy/cat-catch/releases&lt;/a>&lt;/p>
-&lt;p>安装地址: &lt;a href="https://o2bmm.gitbook.io/cat-catch/docs/install">https://o2bmm.gitbook.io/cat-catch/docs/install&lt;/a>&lt;/p>
-&lt;p>文档: &lt;a href="https://o2bmm.gitbook.io/cat-catch/">https://o2bmm.gitbook.io/cat-catch/&lt;/a>&lt;/p>
-&lt;h3 id="m3u8下载器">m3u8下载器：&lt;/h3>
-&lt;p>&lt;a href="https://github.com/nilaoda/N_m3u8DL-CLI/releases">https://github.com/nilaoda/N_m3u8DL-CLI/releases&lt;/a>&lt;/p>
-&lt;p>下载解压,cmd命令&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>N_m3u8DL-CLI_v3.0.2.exe --registerUrlProtocol
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>打开浏览器: 进入需要下载的播放页面&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/bb12786f973e177337ecfe68a9f2928b.webp" alt="Pasted image 20230911144224">&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/8ed2be91d6de5b83d6432d25d40d77f6.webp" alt="Pasted image 20230911144302">&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
