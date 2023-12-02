@@ -14,6 +14,39 @@
 &lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>玩客云刷Openwrt</title><link>https://woniu336.github.io/post/102/</link><pubDate>Sat, 02 Dec 2023 12:06:43 +0800</pubDate><guid>https://woniu336.github.io/post/102/</guid><description>&lt;h1 id="玩客云openwrt固件">玩客云Openwrt固件&lt;/h1>
 &lt;p>玩客云固件：链接: https://pan.baidu.com/s/1q3gVWrsVoRiS2m3VKoqgoQ?pwd=p8ic 提取码: p8ic &lt;/p>
 &lt;p>&lt;code>ip:10.0.0.1密码:root&lt;/code>&lt;/p>
+&lt;!DOCTYPE HTML>
+&lt;html>
+&lt;head>
+&lt;style type="text/css">
+.aspect-ratio {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.aspect-ratio iframe {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class="aspect-ratio">
+&lt;iframe
+src="https://player.bilibili.com/player.html?bvid=BV1DV411g7nK&amp;page=1&amp;high_quality=1&amp;danmaku=0"
+scrolling="no"
+border="0"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;/body>
+&lt;/html>
 &lt;h1 id="小雅命令">小雅命令&lt;/h1>
 &lt;p>bash -c &amp;ldquo;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;rdquo;                              输入ip后面加:5678&lt;/p>
 &lt;p>或者bash -c &amp;ldquo;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;rdquo; -s host                  输入ip后面加:6789&lt;/p>
