@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://woniu336.github.io/sitemap.xml
+Sitemap: https://blog.taoshuge.eu.org/sitemap.xml
