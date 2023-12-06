@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 06 Dec 2023 01:34:55 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Dec 2023 00:45:27 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -11,7 +11,46 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>WebShell扫描检测查杀工具</title><link>https://blog.taoshuge.eu.org/post/103/</link><pubDate>Wed, 06 Dec 2023 01:34:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/103/</guid><description>&lt;p>&lt;code>webshell&lt;/code>是一种可以在web服务器上执行后台脚本或者命令的后门，黑客通过入侵网站上传webshell后获得服务器的执行操作权限，比如执行系统命令、窃取用户数据、删除web页面、修改主页等，其危害不言而喻。而WebShell扫描检测工具可辅助查出该后门。&lt;/p>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>WordPress网站更改后台登录地址保姆级图文教程</title><link>https://blog.taoshuge.eu.org/post/104/</link><pubDate>Thu, 07 Dec 2023 00:45:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/104/</guid><description>&lt;h2 id="背景">背景&lt;/h2>
+&lt;p>WordPress系统默认的&lt;code>后台地址&lt;/code>是 域名&lt;code>/wp-admin&lt;/code> 或域名&lt;code>/wp-login.php&lt;/code>&lt;/p>
+&lt;p>这就意味着所有用WordPress的人都可以用这个地址打开你的后台登录页面，很明显谁都知道这很不安全。那么如何更改Wordpress的后台登录地址呢？&lt;/p>
+&lt;p>引入
+搜了好多帖子，方式主要有两种，一种是使用插件，这种方法比较快。但是网上提供插件居多，我安装测试的插件没几个是最后成功的。第二种是直接修改代码文件，最后决定用这种方式。这里以宝塔面板为例，把图文过程写下来，大家参考下。&lt;/p>
+&lt;h3 id="第一步">第一步：&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>打开WordPress所在的目录，找到 WordPress 目录下的 &lt;code>wp-login.php&lt;/code>，这个文件是我们后台登录的地址，把它重命名成别的，例如：&lt;code>admin.php&lt;/code> ，这就意味着你可以通过 http://域名/admin.php 的方式来访问后台。
+&lt;img src="https://r2.leshans.eu.org/2023/12/a7978211df683a9c44f8647bce38a7ee.png" alt="">&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>但是这还不够，我们打开刚才重命名的文件，把里面所有的 &lt;code>wp-login&lt;/code> 替换成 &lt;code>admin&lt;/code> ，这样第一步完成。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/0f6da20e2ebfac71616fc7ea369cc96f.png" alt="">&lt;/p>
+&lt;h3 id="第二步">第二步：&lt;/h3>
+&lt;p>打开 WordPress 目录下 &lt;code>wp-includes&lt;/code> ，找到其目录内的 &lt;code>general-template.php&lt;/code> 文件，打开文件，把里面所有的 &lt;code>wp-login&lt;/code> 全部替换成 &lt;code>admin &lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/7d39bff7da60672e54f6b30c486ed6fa.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/f671d4040afb36d5363ebf3f9379370c.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/85447ecaff32bad7847cc6300118eac0.png" alt="">&lt;/p>
+&lt;h3 id="第三步">第三步：&lt;/h3>
+&lt;p>打开文件 &lt;code>general-template.php&lt;/code> ，点击搜索变量 &lt;code>$login_url&lt;/code>&lt;/p>
+&lt;p>$login_url
+将site_url 里面第一个参数改成&lt;code> index.php&lt;/code> ，如下&lt;/p>
+&lt;p>&lt;code>$login_url = site_url( 'index.php', 'login' );&lt;/code>&lt;/p>
+&lt;p>其中 index.php 可以换成别的，保存默认的 wp-login 也可以，这行的意思是定义当有人通过 http:// 域名 /wp-admin/ 地址访问网站时或者直接访问后台某个地址时进行跳转到 site_url() 设置的地址内，所以防止别人探索你的地址。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/8b812e1c278259b89de21413bae68219.png" alt="">&lt;/p>
+&lt;p>END
+以后要登录后台，就可以通过 &lt;code>http://域名/admin.php &lt;/code>访问了。&lt;/p>
+&lt;p>一键脚本：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/wp.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x wp.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./wp.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>WebShell扫描检测查杀工具</title><link>https://blog.taoshuge.eu.org/post/103/</link><pubDate>Wed, 06 Dec 2023 01:34:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/103/</guid><description>&lt;p>&lt;code>webshell&lt;/code>是一种可以在web服务器上执行后台脚本或者命令的后门，黑客通过入侵网站上传webshell后获得服务器的执行操作权限，比如执行系统命令、窃取用户数据、删除web页面、修改主页等，其危害不言而喻。而WebShell扫描检测工具可辅助查出该后门。&lt;/p>
 &lt;p>&lt;code>WebShell&lt;/code>扫描工具适用&lt;/p>
 &lt;ul>
 &lt;li>网上下载的源码&lt;/li>
@@ -1239,47 +1278,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Openwrt安装alist和阿里云盘webdav</title><link>https://blog.taoshuge.eu.org/post/084/</link><pubDate>Thu, 14 Sep 2023 18:49:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/084/</guid><description>&lt;blockquote>
-&lt;p>以下插件只适用于斐讯 N1,其他没测试过&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="一-使用方法">一: 使用方法&lt;/h3>
-&lt;p>下载插件,然后进入软路由: &lt;code>系统&lt;/code>&amp;ndash;&lt;code>文件上传&lt;/code>&amp;ndash;&lt;code>安装&lt;/code>&lt;/p>
-&lt;p>&lt;code>例如: 斐讯 N1 盒子软路由&lt;/code>&lt;/p>
-&lt;h3 id="二-阿里云盘webdav插件">二: 阿里云盘webdav插件&lt;/h3>
-&lt;p>插件下载:&lt;/p>
-&lt;p>&lt;a href="https://github.com/woniu336/openwrt-ipk/tree/master/N1%E5%AE%89%E8%A3%85%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav">https://github.com/woniu336/openwrt-ipk/tree/master/N1安装阿里云盘webdav&lt;/a>&lt;/p>
-&lt;p>项目地址 : &lt;a href="https://github.com/messense/aliyundrive-webdav">https://github.com/messense/aliyundrive-webdav&lt;/a>&lt;/p>
-&lt;h3 id="三alist插件">三:Alist插件&lt;/h3>
-&lt;p>OpenWrt 查看CPU架构命令：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat /etc/os-release |grep ARCH
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>插件下载:&lt;/p>
-&lt;p>&lt;a href="https://github.com/woniu336/openwrt-ipk/tree/master/N1%E8%BD%AF%E8%B7%AF%E7%94%B1%E5%AE%89%E8%A3%85alist">https://github.com/woniu336/openwrt-ipk/tree/master/N1软路由安装alist&lt;/a>&lt;/p>
-&lt;p>项目地址 : &lt;a href="https://github.com/sbwml/luci-app-alist">https://github.com/sbwml/luci-app-alist&lt;/a>&lt;/p>
-&lt;p>AList文档：https://alist.nn.ci/zh/guide/&lt;/p>
-&lt;h3 id="四-docker-安装阿里云盘webdav">四: Docker 安装阿里云盘webdav&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6">6&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>docker run -d --name&lt;span style="color:#666">=&lt;/span>aliyundrive-webdav --restart&lt;span style="color:#666">=&lt;/span>unless-stopped -p 8080:8080 &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -v /etc/aliyundrive-webdav/:/etc/aliyundrive-webdav/ &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -e &lt;span style="color:#bb60d5">REFRESH_TOKEN&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#39;your refresh token&amp;#39;&lt;/span> &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -e &lt;span style="color:#bb60d5">WEBDAV_AUTH_USER&lt;/span>&lt;span style="color:#666">=&lt;/span>admin &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> -e &lt;span style="color:#bb60d5">WEBDAV_AUTH_PASSWORD&lt;/span>&lt;span style="color:#666">=&lt;/span>admin &lt;span style="color:#4070a0;font-weight:bold">\
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0;font-weight:bold">&lt;/span> messense/aliyundrive-webdav
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>其中，&lt;code>REFRESH_TOKEN&lt;/code> 环境变量为你的阿里云盘 &lt;code>refresh_token&lt;/code>，&lt;code>WEBDAV_AUTH_USER&lt;/code> 和 &lt;code>WEBDAV_AUTH_PASSWORD&lt;/code> 为连接 WebDAV 服务的用户名和密码。&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
