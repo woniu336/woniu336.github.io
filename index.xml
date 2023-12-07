@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Dec 2023 00:45:27 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Dec 2023 21:07:15 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -11,7 +11,88 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>WordPress网站更改后台登录地址保姆级图文教程</title><link>https://blog.taoshuge.eu.org/post/104/</link><pubDate>Thu, 07 Dec 2023 00:45:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/104/</guid><description>&lt;h2 id="背景">背景&lt;/h2>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>GitHub图床加速</title><link>https://blog.taoshuge.eu.org/post/105/</link><pubDate>Thu, 07 Dec 2023 21:07:15 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/105/</guid><description>&lt;h1 id="github图床使用">Github图床使用&lt;/h1>
+&lt;p>网络上关于&lt;code>GitHub+Jsdelivr&lt;/code>实现&lt;code>图床加速&lt;/code>的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。&lt;/p>
+&lt;blockquote>
+&lt;p>方法1：Jsdelivr镜像站 &lt;a href="https://jsd.cdn.zzko.cn/">https://jsd.cdn.zzko.cn&lt;/a> （公益）&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>方法2：通过&lt;code>Cloudflare Workers&lt;/code>实现反代&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>即使镜像站点跑路了，Cloudflare还在，速度慢点&lt;/p>
+&lt;/blockquote>
+&lt;p>以上方法都要配合PicGo或者PicList使用，本人使用的是PicList&lt;/p>
+&lt;p>配合图床工具: &lt;a href="https://github.com/Kuingsmile/PicList">PicList&lt;/a>&lt;/p>
+&lt;p>&lt;code>PicList&lt;/code> 是一款基于&lt;code>PicGo&lt;/code> 深度二次开发,云储存/图床管理和文件上传客户端工具&lt;/p>
+&lt;p>完美兼容PicGo&lt;/p>
+&lt;p>官网: &lt;a href="https://piclist.cn">https://piclist.cn&lt;/a>&lt;/p>
+&lt;h3 id="1通过cloudflare-workers实现反代">1.通过Cloudflare Workers实现反代&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>addEventListener&lt;span style="color:#666">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">&amp;#34;fetch&amp;#34;&lt;/span>&lt;span style="color:#666">,&lt;/span>event &lt;span style="color:#666">=&amp;gt;&lt;/span> &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> let url&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020;font-weight:bold">new&lt;/span> URL&lt;span style="color:#666">(&lt;/span>event&lt;span style="color:#666">.&lt;/span>&lt;span style="color:#4070a0">request&lt;/span>&lt;span style="color:#666">.&lt;/span>&lt;span style="color:#4070a0">url&lt;/span>&lt;span style="color:#666">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url&lt;span style="color:#666">.&lt;/span>&lt;span style="color:#4070a0">hostname&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;raw.githubusercontent.com&amp;#34;&lt;/span>&lt;span style="color:#666">;&lt;/span> &lt;span style="color:#60a0b0;font-style:italic">//反代github域名
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">&lt;/span> let request&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020;font-weight:bold">new&lt;/span> Request&lt;span style="color:#666">(&lt;/span>url&lt;span style="color:#666">,&lt;/span>event&lt;span style="color:#666">.&lt;/span>&lt;span style="color:#4070a0">request&lt;/span>&lt;span style="color:#666">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> event&lt;span style="color:#666">.&lt;/span> &lt;span style="color:#06287e">respondWith&lt;/span>&lt;span style="color:#666">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fetch&lt;span style="color:#666">(&lt;/span>request&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>具体教程网上很多，需要你在Cloudflare有域名&lt;/p>
+&lt;h3 id="2配合piclist">2.配合PicList&lt;/h3>
+&lt;p>请替换为你自己的&lt;code>仓库名&lt;/code> 以及分支，准备好&lt;code>token&lt;/code>&lt;/p>
+&lt;p>反代图&lt;/p>
+&lt;p>&lt;img src="https://github.leshans.eu.org/woniu336/blog-image/main/img/2023-12-07_212014.png" alt="">&lt;/p>
+&lt;p>下图为镜像站
+&lt;!-- raw HTML omitted -->&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/2023-12-07_212014.png" alt="">&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>仓库名: &lt;code>woniu336/blog-image&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>分支: &lt;code>main&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>存储路径: &lt;code>img/&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>自定义域名1: &lt;a href="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main">https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main&lt;/a> （境内站: &lt;a href="https://jsd.cdn.zzko.cn">https://jsd.cdn.zzko.cn&lt;/a>）&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>自定义域名2: &lt;a href="https://github.leshans.eu.org/woniu336/blog-image/main">https://github.leshans.eu.org/woniu336/blog-image/main&lt;/a> (Cloudflare Workers实现反代)&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>自定义域名格式: &lt;a href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/&lt;/a>用户名/仓库名@分支&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>图片测试:&lt;/p>
+&lt;p>&lt;img src="https://github.leshans.eu.org/woniu336/blog-image/main/img/202310061243776.jpg" alt="">&lt;/p></description></item><item><title>WordPress网站更改后台登录地址保姆级图文教程</title><link>https://blog.taoshuge.eu.org/post/104/</link><pubDate>Thu, 07 Dec 2023 00:45:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/104/</guid><description>&lt;h2 id="背景">背景&lt;/h2>
 &lt;p>WordPress系统默认的&lt;code>后台地址&lt;/code>是 域名&lt;code>/wp-admin&lt;/code> 或域名&lt;code>/wp-login.php&lt;/code>&lt;/p>
 &lt;p>这就意味着所有用WordPress的人都可以用这个地址打开你的后台登录页面，很明显谁都知道这很不安全。那么如何更改Wordpress的后台登录地址呢？&lt;/p>
 &lt;p>引入
@@ -1216,66 +1297,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/div>&lt;p>当谈到强大的&lt;code>网盘拷贝与同步&lt;/code>工具时，&lt;code>Rclone&lt;/code>绝对是那位总是低调却又非常值得注意的明星。它就像是那个坐在后排的天才学生，总是默默地在背后完成任务，而不是在台前卖弄自己。&lt;/p>
 &lt;p>首先，&lt;code>Rclone&lt;/code>是一名真正的变身专家。它可以从一个网盘变成另一个网盘，仿佛是魔术师一样。无论你是想从&lt;code>Google Drive&lt;/code>变身为&lt;code>Dropbox&lt;/code>，还是从&lt;code>OneDrive&lt;/code>蜕变为&lt;code>Amazon S3&lt;/code>，Rclone都能帮你完成。这就像是在玩一场云端变装派对，而Rclone是你的变装专家，总是能帮你换上最适合的服装。&lt;/p>
 &lt;p>而且，Rclone也是一个&lt;code>同步&lt;/code>的奇才。它可以确保你的文件在不同的云存储之间保持同步，就像是一个精密的交响乐团指挥家，确保每个乐器都在正确的时刻奏响。无论你是在办公室工作还是在沙滩度假，Rclone都能确保你的文件不会在云端丢失节奏。&lt;/p>
-&lt;p>但是，尽管&lt;code>Rclone&lt;/code>是一位技术高手，但它并不是那种自恋自大的软件。它没有花哨的用户界面，也不会在社交媒体上炫耀自己的成就。它只是&lt;code>默默地坚守在后台&lt;/code>，为你完成工作，就像是那位永远不会抢镜的配角演员，但却是整个剧组的支持力量。&lt;/p></description></item><item><title>Rclone Browser代理设置</title><link>https://blog.taoshuge.eu.org/post/085/</link><pubDate>Thu, 14 Sep 2023 21:35:50 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/085/</guid><description>&lt;p>假设你已经安装了&lt;code>rclone&lt;/code>,并配置好了各大网盘&lt;/p>
-&lt;p>那么在&lt;code>Rclone Browser&lt;/code>查看谷歌硬盘内容,是看不了的,但是如果你已经开启了&lt;code>科学上网&lt;/code>,则按照下面的方法&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>socks5://127.0.0.1:10808
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;code>10808&lt;/code>端口是v2ray的代理端口&lt;/p>
-&lt;p>如果是小狐狸则是 &lt;code>7890&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>socks5://127.0.0.1:7890
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/a7a2b0af127a3a1e82a8b4ea2bf67582.webp" alt="Pasted image 20230914213555">&lt;/p>
-&lt;p>下载的时候要加上参数,避免有些文件被误认为病毒无法下载:&lt;/p>
-&lt;pre tabindex="0">&lt;code>--drive-acknowledge-abuse
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/09/3f3048d9fc55b43d561e0eeef6a12186.webp" alt="Pasted image 20230914221303">&lt;/p>
-&lt;p>cmd终端开启代理:&lt;/p>
-&lt;p>小狐狸:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">http_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:7890
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:7890
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>v2ray:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">http_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:10808
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:10808
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>取消代理:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">http_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;p>但是，尽管&lt;code>Rclone&lt;/code>是一位技术高手，但它并不是那种自恋自大的软件。它没有花哨的用户界面，也不会在社交媒体上炫耀自己的成就。它只是&lt;code>默默地坚守在后台&lt;/code>，为你完成工作，就像是那位永远不会抢镜的配角演员，但却是整个剧组的支持力量。&lt;/p></description></item></channel></rss>
