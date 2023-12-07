@@ -78,12 +78,13 @@
 &lt;/blockquote>
 &lt;blockquote>
 &lt;ul>
-&lt;li>自定义域名1: &lt;a href="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main">https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main&lt;/a> （境内站: &lt;a href="https://jsd.cdn.zzko.cn">https://jsd.cdn.zzko.cn&lt;/a>）&lt;/li>
+&lt;li>自定义域名1(镜像站) : &lt;a href="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main">https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/blockquote>
 &lt;blockquote>
 &lt;ul>
-&lt;li>自定义域名2: &lt;a href="https://github.leshans.eu.org/woniu336/blog-image/main">https://github.leshans.eu.org/woniu336/blog-image/main&lt;/a> (Cloudflare Workers实现反代)&lt;/li>
+&lt;li>自定义域名2(CF反代)
+: &lt;a href="https://github.leshans.eu.org/woniu336/blog-image/main">https://github.leshans.eu.org/woniu336/blog-image/main&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/blockquote>
 &lt;blockquote>
