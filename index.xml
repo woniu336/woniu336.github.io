@@ -54,9 +54,7 @@
 &lt;p>如一键开心，可不用以下操作。文件路径：www/server/panel/data/plugin.json&lt;br>
 搜索字符串：“endtime”: -1 全部替换为 “endtime”: 999999999999&lt;/p>
 &lt;p>手动阻止解锁插件后自动修复为免费版：&lt;/p>
-&lt;p>chattr +i /www/server/panel/data/plugin.json&lt;/p>
-&lt;p>最新书记版，更新到8.0.3企业开心版&lt;/p>
-&lt;p>curl &lt;a href="http://io.bt.sy/install/update6.sh">http://io.bt.sy/install/update6.sh&lt;/a>|bash&lt;/p></description></item><item><title>GitHub图床加速</title><link>https://blog.taoshuge.eu.org/post/105/</link><pubDate>Thu, 07 Dec 2023 21:07:15 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/105/</guid><description>&lt;h1 id="github图床使用">Github图床使用&lt;/h1>
+&lt;p>chattr +i /www/server/panel/data/plugin.json&lt;/p></description></item><item><title>GitHub图床加速</title><link>https://blog.taoshuge.eu.org/post/105/</link><pubDate>Thu, 07 Dec 2023 21:07:15 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/105/</guid><description>&lt;h1 id="github图床使用">Github图床使用&lt;/h1>
 &lt;p>网络上关于&lt;code>GitHub+Jsdelivr&lt;/code>实现&lt;code>图床加速&lt;/code>的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。&lt;/p>
 &lt;blockquote>
 &lt;p>方法1：Jsdelivr镜像站 &lt;a href="https://jsd.cdn.zzko.cn/">https://jsd.cdn.zzko.cn&lt;/a> （公益）&lt;/p>
