@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Dec 2023 21:07:15 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Dec 2023 03:06:24 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -11,7 +11,52 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>GitHub图床加速</title><link>https://blog.taoshuge.eu.org/post/105/</link><pubDate>Thu, 07 Dec 2023 21:07:15 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/105/</guid><description>&lt;h1 id="github图床使用">Github图床使用&lt;/h1>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>宝塔面板v7.7.0 Github纯净版 优化脚本 手动解锁插件</title><link>https://blog.taoshuge.eu.org/post/106/</link><pubDate>Sun, 10 Dec 2023 03:06:24 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/106/</guid><description>&lt;p>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/202312100312630.png" alt="">&lt;/p>
+&lt;h3 id="相关介绍">相关介绍&lt;/h3>
+&lt;p>目前最实用的宝塔7.7.0系列，本地安装纯净版本，并去除了强制绑定帐号、自动创建垃圾文件、活动推荐、在线客服，去除面板日志与网站绑定域名、手动解锁所有付费插件等等。&lt;/p>
+&lt;h3 id="一安装宝塔面板v770本地版">一、安装宝塔面板v7.7.0本地版&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sSO https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/install_panel.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> bash install_panel.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>备用脚本，如果访问不了github：&lt;/p>
+&lt;pre tabindex="0">&lt;code>http://d.moe.ms/AAAAA/btpanel-v7.7.0/install/install_panel.sh
+&lt;/code>&lt;/pre>&lt;h3 id="二一键开心补丁">二、一键开心补丁&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/one_key_happy.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x one_key_happy.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./one_key_happy.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="三彩虹优化补丁">三、彩虹优化补丁&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/optimize.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x optimize.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./optimize.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>1.去除宝塔面板强制绑定账号；&lt;br>
+2.去除各种删除操作时的计算题与延时等待；&lt;br>
+3.去除创建网站自动创建的垃圾文件（index.html、404.html、.htaccess）&lt;br>
+4.关闭未绑定域名提示页面，防止有人访问未绑定域名直接看出来是用的宝塔面板；&lt;br>
+5.关闭活动推荐与在线客服；&lt;br>
+6.去除自动校验文件与上报信息定时任务；&lt;br>
+7.去除面板日志与网站绑定域名上报。&lt;/p>
+&lt;h3 id="四手动解锁插件过期时间">四、手动解锁插件过期时间&lt;/h3>
+&lt;p>如一键开心，可不用以下操作。文件路径：www/server/panel/data/plugin.json&lt;br>
+搜索字符串：“endtime”: -1 全部替换为 “endtime”: 999999999999&lt;/p>
+&lt;p>手动阻止解锁插件后自动修复为免费版：&lt;/p>
+&lt;p>chattr +i /www/server/panel/data/plugin.json&lt;/p>
+&lt;p>最新书记版，更新到8.0.3企业开心版&lt;/p>
+&lt;p>curl &lt;a href="http://io.bt.sy/install/update6.sh">http://io.bt.sy/install/update6.sh&lt;/a>|bash&lt;/p></description></item><item><title>GitHub图床加速</title><link>https://blog.taoshuge.eu.org/post/105/</link><pubDate>Thu, 07 Dec 2023 21:07:15 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/105/</guid><description>&lt;h1 id="github图床使用">Github图床使用&lt;/h1>
 &lt;p>网络上关于&lt;code>GitHub+Jsdelivr&lt;/code>实现&lt;code>图床加速&lt;/code>的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。&lt;/p>
 &lt;blockquote>
 &lt;p>方法1：Jsdelivr镜像站 &lt;a href="https://jsd.cdn.zzko.cn/">https://jsd.cdn.zzko.cn&lt;/a> （公益）&lt;/p>
@@ -1285,17 +1330,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;h3 id="三-启动服务">三: 启动服务&lt;/h3>
 &lt;p>将&lt;code>cloudflared.exe&lt;/code>和项目文件放在同一个文件夹,&lt;/p>
 &lt;p>然后双击 &lt;code>menu.bat&lt;/code> 开启你的穿透之旅吧&lt;/p>
-&lt;!-- raw HTML omitted --></description></item><item><title>强大的网盘同步工具--rclone工具箱</title><link>https://blog.taoshuge.eu.org/post/086/</link><pubDate>Sun, 17 Sep 2023 17:57:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/086/</guid><description>&lt;p>如果你在寻找专业且易用的网盘拷贝与同步工具，那就让&lt;code>Rclone&lt;/code>成为你的云端合作伙伴吧。它虽然不会说笑话，但它绝对会在云端任务中&lt;code>带来欢笑&lt;/code>。&lt;/p>
-&lt;p>一键安装rclone工具箱&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rclone.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x rclone.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./rclone.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>当谈到强大的&lt;code>网盘拷贝与同步&lt;/code>工具时，&lt;code>Rclone&lt;/code>绝对是那位总是低调却又非常值得注意的明星。它就像是那个坐在后排的天才学生，总是默默地在背后完成任务，而不是在台前卖弄自己。&lt;/p>
-&lt;p>首先，&lt;code>Rclone&lt;/code>是一名真正的变身专家。它可以从一个网盘变成另一个网盘，仿佛是魔术师一样。无论你是想从&lt;code>Google Drive&lt;/code>变身为&lt;code>Dropbox&lt;/code>，还是从&lt;code>OneDrive&lt;/code>蜕变为&lt;code>Amazon S3&lt;/code>，Rclone都能帮你完成。这就像是在玩一场云端变装派对，而Rclone是你的变装专家，总是能帮你换上最适合的服装。&lt;/p>
-&lt;p>而且，Rclone也是一个&lt;code>同步&lt;/code>的奇才。它可以确保你的文件在不同的云存储之间保持同步，就像是一个精密的交响乐团指挥家，确保每个乐器都在正确的时刻奏响。无论你是在办公室工作还是在沙滩度假，Rclone都能确保你的文件不会在云端丢失节奏。&lt;/p>
-&lt;p>但是，尽管&lt;code>Rclone&lt;/code>是一位技术高手，但它并不是那种自恋自大的软件。它没有花哨的用户界面，也不会在社交媒体上炫耀自己的成就。它只是&lt;code>默默地坚守在后台&lt;/code>，为你完成工作，就像是那位永远不会抢镜的配角演员，但却是整个剧组的支持力量。&lt;/p></description></item></channel></rss>
+&lt;!-- raw HTML omitted --></description></item></channel></rss>
