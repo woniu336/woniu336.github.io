@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Dec 2023 07:40:57 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Dec 2023 15:18:31 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -11,7 +11,9 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>小雅网盘</title><link>https://blog.taoshuge.eu.org/post/107/</link><pubDate>Sun, 10 Dec 2023 07:40:57 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/107/</guid><description>&lt;h3 id="小雅网盘基于alist">小雅网盘（基于alist）&lt;/h3>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>免费 FRP 内网穿透服务</title><link>https://blog.taoshuge.eu.org/post/108/</link><pubDate>Sun, 10 Dec 2023 15:18:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/108/</guid><description>&lt;p>建议访问官方 Github 项目来查阅文档,可以使用更多本文没有提到的参数来提高穿透服务器的安全性和效率.&lt;/p>
+&lt;p>地址：&lt;a href="https://freefrp.net/">https://freefrp.net/&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/202312101519995.png" alt="">&lt;/p></description></item><item><title>小雅网盘</title><link>https://blog.taoshuge.eu.org/post/107/</link><pubDate>Sun, 10 Dec 2023 07:40:57 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/107/</guid><description>&lt;h3 id="小雅网盘基于alist">小雅网盘（基于alist）&lt;/h3>
 &lt;p>网址：&lt;a href="https://alist.xiaoya.pro/">https://alist.xiaoya.pro/&lt;/a>&lt;/p>
 &lt;p>alist文档：&lt;a href="https://alist.nn.ci/zh/">https://alist.nn.ci/zh//&lt;/a>&lt;/p>
 &lt;p>小雅文档： &lt;a href="https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f">https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f&lt;/a>&lt;/p>
@@ -2506,35 +2508,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git config --global https.proxy &lt;span style="color:#4070a0">&amp;#34;http://127.0.0.1:7890&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>其中 &lt;code>127.0.0.1:7890&lt;/code> 替换为自己的代理服务器地址。&lt;/p></description></item><item><title>谷歌云注册细节</title><link>https://blog.taoshuge.eu.org/post/089/</link><pubDate>Tue, 10 Oct 2023 12:11:16 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/089/</guid><description>&lt;h3 id="准备东西">准备东西:&lt;/h3>
-&lt;ol>
-&lt;li>香港节点(科学上网)&lt;/li>
-&lt;li>打开edge浏览器- 隐私窗口&lt;/li>
-&lt;li>香港地址: 香港岛-大坑- 香港南区大潭水塘道624号&lt;/li>
-&lt;li>香港电话号码(无忧行)&lt;/li>
-&lt;li>信用卡(万里汇)&lt;/li>
-&lt;/ol>
-&lt;p>注册地址: &lt;a href="https://cloud.google.com/free?hl=zh-cn">https://cloud.google.com/free?hl=zh-cn&lt;/a>&lt;/p>
-&lt;p>老账号续期教程:&lt;/p>
-&lt;style>
-.meta-media {
-position: relative;
-margin-bottom: 30px;
-display: flex;
-width: 100%;
-height: 0;
-padding-bottom: 75%;
-}
-.video {
-position: absolute;
-width: 100%;
-height: 100%;
-left: 0;
-top: 0;
-}
-&lt;/style>
-&lt;div class="meta-media">
-&lt;iframe src="https://www.youtube.com/embed/fkFSrtCUI4s" frameborder="no" scrolling="yes"
-allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video">
-&lt;/iframe>
-&lt;/div></description></item></channel></rss>
+&lt;/div>&lt;p>其中 &lt;code>127.0.0.1:7890&lt;/code> 替换为自己的代理服务器地址。&lt;/p></description></item></channel></rss>
