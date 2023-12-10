@@ -11,7 +11,7 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>小雅网盘</title><link>https://blog.taoshuge.eu.org/post/107/</link><pubDate>Sun, 10 Dec 2023 07:40:57 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/107/</guid><description>&lt;h2 id="小雅网盘基于alist">小雅网盘（基于alist）&lt;/h2>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>小雅网盘</title><link>https://blog.taoshuge.eu.org/post/107/</link><pubDate>Sun, 10 Dec 2023 07:40:57 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/107/</guid><description>&lt;h3 id="小雅网盘基于alist">小雅网盘（基于alist）&lt;/h3>
 &lt;p>网址：&lt;a href="https://alist.xiaoya.pro/">https://alist.xiaoya.pro/&lt;/a>&lt;/p>
 &lt;p>文档： &lt;a href="https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f">https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f&lt;/a>&lt;/p>
 &lt;p>终端安装命令，端口 &lt;code>5678&lt;/code>&lt;/p>
@@ -36,7 +36,8 @@
 &lt;p>阿里opentoken地址：&lt;a href="https://alist.nn.ci/tool/aliyundrive/request.html">https://alist.nn.ci/tool/aliyundrive/request.html&lt;/a>&lt;/p>
 &lt;p>转存文件夹ID：网页版阿里云，进转存文件夹，地址栏内最后64开头的数字&lt;/p>
 &lt;p>创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像&lt;/p>
-&lt;h2 id="定时清理缓存">定时清理缓存&lt;/h2>
+&lt;h3 id="定时清理缓存">定时清理缓存&lt;/h3>
+&lt;p>&lt;code>可以不加-tg&lt;/code>&lt;/p>
 &lt;p>模式3：创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -55,7 +56,39 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>bash -c &lt;span style="color:#4070a0">&amp;#34;&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span> -s &lt;span style="color:#40a070">5&lt;/span> -tg
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;strong>内容描述：&lt;/strong>&lt;/p>
+&lt;/div>&lt;h3 id="套娃挂载">套娃挂载：&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>docker &lt;span style="color:#007020">exec&lt;/span> -i xiaoya sqlite3 data/data.db &lt;span style="color:#4070a0">&amp;lt;&amp;lt;EOF
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0">select value from x_setting_items where key = &amp;#34;token&amp;#34;;
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#4070a0">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>驱动：alist v3 &lt;code>输入令牌&lt;/code> &lt;code>输入链接&lt;/code> 注意&lt;code>docker&lt;/code>名称，可能你的不一样&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="同步小雅网盘">同步小雅网盘&lt;/h3>
+&lt;p>如果你是基于Linux系统的（包括openwrt），可以用以下方法设置定时更新，终端执行&lt;/p>
+&lt;pre tabindex="0">&lt;code>crontab -e
+&lt;/code>&lt;/pre>&lt;p>添加一条记录&lt;/p>
+&lt;pre tabindex="0">&lt;code>0 6 * * * docker restart xiaoya
+&lt;/code>&lt;/pre>&lt;ol>
+&lt;li>按 &lt;code>o&lt;/code> 插入一行&lt;/li>
+&lt;li>然后把这堆文字输入进去&lt;/li>
+&lt;li>然后按键盘左上角 ESC键退出编辑模式&lt;/li>
+&lt;li>输入 &lt;code>:wq&lt;/code> 保存退出&lt;/li>
+&lt;/ol>
+&lt;p>就是每天凌晨6点自动重启xiaoya docker去同步数据，你把6改成13，那就是下午1点&lt;/p>
+&lt;h3 id="其他内容扩充">其他内容扩充&lt;/h3>
 &lt;ul>
 &lt;li>
 &lt;p>执行时机和清理缓存的操作是完全相同的。&lt;/p>
