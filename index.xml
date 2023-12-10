@@ -13,7 +13,8 @@
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
 &lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>小雅网盘</title><link>https://blog.taoshuge.eu.org/post/107/</link><pubDate>Sun, 10 Dec 2023 07:40:57 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/107/</guid><description>&lt;h3 id="小雅网盘基于alist">小雅网盘（基于alist）&lt;/h3>
 &lt;p>网址：&lt;a href="https://alist.xiaoya.pro/">https://alist.xiaoya.pro/&lt;/a>&lt;/p>
-&lt;p>文档： &lt;a href="https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f">https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f&lt;/a>&lt;/p>
+&lt;p>alist文档：&lt;a href="https://alist.nn.ci/zh/">https://alist.nn.ci/zh//&lt;/a>&lt;/p>
+&lt;p>小雅文档： &lt;a href="https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f">https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f&lt;/a>&lt;/p>
 &lt;p>终端安装命令，端口 &lt;code>5678&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -57,6 +58,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="套娃挂载">套娃挂载：&lt;/h3>
+&lt;p>输入命令，获取&lt;code>令牌&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
@@ -74,7 +76,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
-&lt;p>驱动：alist v3 &lt;code>输入令牌&lt;/code> &lt;code>输入链接&lt;/code> 注意&lt;code>docker&lt;/code>名称，可能你的不一样&lt;/p>
+&lt;p>挂载 ：alist v3 &lt;code>输入令牌&lt;/code> &lt;code>输入链接&lt;/code> 注意&lt;code>docker&lt;/code>名称&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="同步小雅网盘">同步小雅网盘&lt;/h3>
 &lt;p>如果你是基于Linux系统的（包括openwrt），可以用以下方法设置定时更新，终端执行&lt;/p>
