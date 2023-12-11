@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 10 Dec 2023 15:18:31 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Dec 2023 22:32:02 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -11,7 +11,39 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>免费 FRP 内网穿透服务</title><link>https://blog.taoshuge.eu.org/post/108/</link><pubDate>Sun, 10 Dec 2023 15:18:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/108/</guid><description>&lt;p>建议访问官方 Github 项目来查阅文档,可以使用更多本文没有提到的参数来提高穿透服务器的安全性和效率.&lt;/p>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>PayPal 注册与提现以及万里汇虚拟外币卡</title><link>https://blog.taoshuge.eu.org/post/109/</link><pubDate>Mon, 11 Dec 2023 22:32:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/109/</guid><description>&lt;p>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/202312112233021.png" alt="">&lt;/p>
+&lt;p>准备工作：一张国内四大行的I类卡（一个银行一个人只能办一张）或者申请一张外币信用卡（建议招行），&lt;strong>==本次以招行为例作为演示==&lt;/strong>&lt;/p>
+&lt;p>中国大陆手续费：【&lt;a href="https://www.paypal.com/c2/webapps/mpp/merchant-fees">点击进入&lt;/a>】 香港地区手续费：【&lt;a href="https://www.paypal.com/hk/webapps/mpp/merchant-fees#additional-percentage">点击进入&lt;/a>】&lt;/p>
+&lt;p>1、注册香港paypal账户，参考视频：【&lt;a href="https://www.paypal.com/c2/webapps/mpp/account-selection">点击进入&lt;/a>】&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>记录下PayPal商家号&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>后续国外的款项用此账户作为收款账号&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>2、注册并设置万里汇账户：【&lt;a href="https://www.worldfirst.com.cn/cn/">点击进入&lt;/a>】（&lt;strong>==注：如果要删除店铺收款账号，提供需要关闭的货币账户币种以及收款账号（或尾号）到此邮箱，进行人工删除：mscn@service.worldfirst.com==&lt;/strong>==）==&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>设置收款人管理——搜索招行——点击客服——点击个人业务——输入：境外汇入路径——把对应的BIC、收款行、前面准备好的卡号填写进来&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>设置店铺/收款管理——新增店铺收款账户——选择其他电商平台——选择Google Shopping——自定义一个店铺名称——点击申请——申请完成后，不要直接添加信息——再次点击店铺/收款管理——点击补充信息——填写完成后保存&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>再次点击店铺/收款管理——找到刚添加的账号，点击进去——点击查看账户详情——回到paypal——点击关联卡或银行账户——点击关联银行账户——点击关联美国或中国香港特别行政区的银行账户——选择香港——点击下一页——然后把账户详情里面的相关信息添加进来——完成后，点击关联您的银行账户&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>3、前面的流程操作完成后，具体收款流程如下：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>用paypal账户进行收款——paypal收到款项后——然后把款项提现到万里汇支票账户——万里汇的支票账户收到后（一般要几个工作日）——在万里汇首页点击提款——选择前面添加的美元账户——银行收到钱后——在手机APP掌上生活上搜索：溢缴款领回——选择美元——输入领回金额——选择收款账户/借记卡&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>这里有三个情况需要注意的：1、如果是自己在APP上操作是不需要手续费的，如果需要人工帮忙划转，是需要收取一定的手续费的；2、如果是外币信用卡需要人工划转；3、目前了解到I类卡是支持全币种的，收款是没问题的（招行）&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>免费 FRP 内网穿透服务</title><link>https://blog.taoshuge.eu.org/post/108/</link><pubDate>Sun, 10 Dec 2023 15:18:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/108/</guid><description>&lt;p>建议访问官方 Github 项目来查阅文档,可以使用更多本文没有提到的参数来提高穿透服务器的安全性和效率.&lt;/p>
 &lt;p>地址：&lt;a href="https://freefrp.net/">https://freefrp.net/&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/202312101519995.png" alt="">&lt;/p></description></item><item><title>小雅网盘</title><link>https://blog.taoshuge.eu.org/post/107/</link><pubDate>Sun, 10 Dec 2023 07:40:57 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/107/</guid><description>&lt;h3 id="小雅网盘基于alist">小雅网盘（基于alist）&lt;/h3>
 &lt;p>网址：&lt;a href="https://alist.xiaoya.pro/">https://alist.xiaoya.pro/&lt;/a>&lt;/p>
@@ -2482,30 +2514,4 @@ allowfullscreen="allowfullscreen" high_quality="1" framespacing="1" class="video
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>使用代理设置 Git 克隆</title><link>https://blog.taoshuge.eu.org/post/090/</link><pubDate>Wed, 11 Oct 2023 14:11:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/090/</guid><description>&lt;h3 id="git-clone-ssh-走代理">git clone ssh 走代理&lt;/h3>
-&lt;p>新建一个 &lt;code>C:\Users\你的用户名\.ssh\config&lt;/code> 文件（没有扩展名，如果已存在此文件则不用新建），编辑此文件增加以下内容：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>Host github.com *.github.com
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> User git
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ProxyCommand connect -S 127.0.0.1:7890 %h %p
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>其中 &lt;code>Host&lt;/code> 右边为需要走代理的域名列表，&lt;code>127.0.0.1:7890&lt;/code> 替换为自己的代理服务器地址。&lt;/p>
-&lt;h3 id="git-clone-https-走代理">git clone http(s) 走代理&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>git config --global http.proxy &lt;span style="color:#4070a0">&amp;#34;http://127.0.0.1:7890&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git config --global https.proxy &lt;span style="color:#4070a0">&amp;#34;http://127.0.0.1:7890&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>其中 &lt;code>127.0.0.1:7890&lt;/code> 替换为自己的代理服务器地址。&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
