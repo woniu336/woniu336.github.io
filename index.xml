@@ -36,10 +36,10 @@
 &lt;/blockquote>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/46e10abc6d3ec0c29cfa214478a3183f.webp" alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展">&lt;/p>
 &lt;p>从果酱大佬的描述中我们可以发现：batcache+memcached是一种非常不错的&lt;a href="https://www.xcbtmw.com/tag/wordpress_optimization" title="查看所有文章关于 WordPress优化">WordPress优化&lt;/a>手段，接下来老白跟大家分享下如何无插件开启&lt;/p>
-&lt;h4 id="31-php安装memcached拓展">3.1 PHP安装memcached拓展&lt;/h4>
+&lt;h3 id="31-php安装memcached拓展">3.1 PHP安装memcached拓展&lt;/h3>
 &lt;p>以&lt;a href="https://www.xcbtmw.com/tag/bt_panel" title="查看所有文章关于 宝塔面板">宝塔面板&lt;/a>为例，打开软件商店，PHP安装拓展，勾选即可（老白推荐安装opcache+memcached）&lt;/p>
 &lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/61a0b46e011a24ec5c32544723d87838.webp" alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展">&lt;/p>
-&lt;h4 id="32-batcachemem强化拓展下载">3.2 batcache+mem强化拓展下载&lt;/h4>
+&lt;h3 id="32-batcachemem强化拓展下载">3.2 batcache+mem强化拓展下载&lt;/h3>
 &lt;p>下载文件（batcache和memcached均来自于官方插件，大家也可以自行下载）&lt;/p>
 &lt;p>batcache+mem下载：&lt;a href="https://qtrj.lanzoul.com/i6nSD18cy6eb">https://qtrj.lanzoul.com/i6nSD18cy6eb&lt;/a>&lt;/p>
 &lt;p>然后放到WordPress的/wp-content目录下，比如老白博客的：&lt;/p>
@@ -51,30 +51,70 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-php" data-lang="php">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">/&lt;/span>www&lt;span style="color:#666">.&lt;/span>xcbtmw&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>wp&lt;span style="color:#666">-&lt;/span>content
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h4 id="33-激活使用batcachemem">3.3 激活使用batcache+mem&lt;/h4>
+&lt;/div>&lt;h3 id="33-激活使用batcachemem">3.3 激活使用batcache+mem&lt;/h3>
 &lt;p>把上述文件放到对应目录后，还需要在WordPress根目录的wp-config.php进行下面的设置，不然会报错&lt;/p>
-&lt;p>&lt;strong>此处为隐藏内容，&lt;a href="https://www.xcbtmw.com/29717.html?replytocom" title="评论本文">评论&lt;/a>后查看&lt;/strong>&lt;/p>
-&lt;h4 id="34-batcache缓存设置">3.4 batcache缓存设置&lt;/h4>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>//设置缓存头，这里testxcbtmw可以随意设置-https://www.xcbtmw.com/29717.html
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>define&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;WP_CACHE_KEY_SALT&amp;#39;&lt;/span>, &lt;span style="color:#4070a0">&amp;#39;testxcbtmw&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>//激活memcached
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>define&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;ENABLE_CACHE&amp;#39;&lt;/span>, &lt;span style="color:#007020">true&lt;/span>&lt;span style="color:#666">)&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>//激活batcache
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>define&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;WP_CACHE&amp;#39;&lt;/span>, &lt;span style="color:#007020">true&lt;/span>&lt;span style="color:#666">)&lt;/span>;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="34-batcache缓存设置">3.4 batcache缓存设置&lt;/h3>
 &lt;p>编辑batcache的advanced-cache.php文件进行设置&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-markup" data-lang="markup">var $max_age = 300; // 缓存过期时间(0表示禁用batcache)
-var $remote = 0; // 禁止向远程数据中心发送缓冲区(从不发送req/sec)
-var $times = 2; // 一个页面被访问了多少次之后进行缓存(两个或两个以上)
-var $seconds = 0; // …在这么多秒内(0表示忽略它，立即使用batcache)
-var $group = &amp;#39;batcache&amp;#39;; // memcached组的名称。您可以通过更改此选项来模拟缓存刷新。
-var $unique = array(); // 如果您有条件地提供不同的内容，请将变量值放在这里。
-var $vary = array(); // 函数数组，用于create_function。返回值被添加到上面的$unique中。
-var $headers = array(); // 在这里添加头作为name=&amp;gt;值或name=&amp;gt;数组(值)。这些将与缓存中的每个响应一起发送。
-var $cache_redirects = false; // 设置true启用重定向缓存。
-var $redirect_status = false; // 这将在重定向期间设置为响应代码。
-var $redirect_location = false; // 这被设置为重定向位置。
-var $use_stale = true; // 更新缓存时是否可以返回过期的缓存响应?
-var $uncached_headers = array(&amp;#39;transfer-encoding&amp;#39;); // 这些头将永远不会缓存。应用函数。
-var $debug = true; // 设置false以隐藏batcache信息 &amp;lt;!-- comment --&amp;gt;
-var $cache_control = true; // 将false设置为禁用Last-Modified和Cache-Control头
-var $cancel = false; // 更改此选项以取消输出缓冲区。使用batcache_cancel ();
-var $noskip_cookies = array( &amp;#39;wordpress_test_cookie&amp;#39; ); // cookie的名称——如果它们存在并且缓存通常会被绕过，那么不要绕过它。
-&lt;/code>&lt;/pre>&lt;p>这里大家不作修改也行，老白已经设置好了，保持默认也可&lt;/p>
-&lt;h4 id="35-batcache缓存清除">3.5 batcache缓存清除&lt;/h4>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-17">17&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$max_age&lt;/span> &lt;span style="color:#666">=&lt;/span> 300; // 缓存过期时间&lt;span style="color:#666">(&lt;/span>0表示禁用batcache&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$remote&lt;/span> &lt;span style="color:#666">=&lt;/span> 0; // 禁止向远程数据中心发送缓冲区&lt;span style="color:#666">(&lt;/span>从不发送req/sec&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$times&lt;/span> &lt;span style="color:#666">=&lt;/span> 2; // 一个页面被访问了多少次之后进行缓存&lt;span style="color:#666">(&lt;/span>两个或两个以上&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$seconds&lt;/span> &lt;span style="color:#666">=&lt;/span> 0; // …在这么多秒内&lt;span style="color:#666">(&lt;/span>0表示忽略它，立即使用batcache&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$group&lt;/span> &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#4070a0">&amp;#39;batcache&amp;#39;&lt;/span>; // memcached组的名称。您可以通过更改此选项来模拟缓存刷新。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$unique&lt;/span> &lt;span style="color:#666">=&lt;/span> array&lt;span style="color:#666">()&lt;/span>; // 如果您有条件地提供不同的内容，请将变量值放在这里。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$vary&lt;/span> &lt;span style="color:#666">=&lt;/span> array&lt;span style="color:#666">()&lt;/span>; // 函数数组，用于create_function。返回值被添加到上面的&lt;span style="color:#bb60d5">$unique&lt;/span>中。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$headers&lt;/span> &lt;span style="color:#666">=&lt;/span> array&lt;span style="color:#666">()&lt;/span>; // 在这里添加头作为name&lt;span style="color:#666">=&lt;/span>&amp;gt;值或name&lt;span style="color:#666">=&lt;/span>&amp;gt;数组&lt;span style="color:#666">(&lt;/span>值&lt;span style="color:#666">)&lt;/span>。这些将与缓存中的每个响应一起发送。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$cache_redirects&lt;/span> &lt;span style="color:#666">=&lt;/span> false; // 设置true启用重定向缓存。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$redirect_status&lt;/span> &lt;span style="color:#666">=&lt;/span> false; // 这将在重定向期间设置为响应代码。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$redirect_location&lt;/span> &lt;span style="color:#666">=&lt;/span> false; // 这被设置为重定向位置。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$use_stale&lt;/span> &lt;span style="color:#666">=&lt;/span> true; // 更新缓存时是否可以返回过期的缓存响应?
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$uncached_headers&lt;/span> &lt;span style="color:#666">=&lt;/span> array&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;transfer-encoding&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span>; // 这些头将永远不会缓存。应用函数。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$debug&lt;/span> &lt;span style="color:#666">=&lt;/span> true; // 设置false以隐藏batcache信息 &amp;lt;!-- comment --&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$cache_control&lt;/span> &lt;span style="color:#666">=&lt;/span> true; // 将false设置为禁用Last-Modified和Cache-Control头
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$cancel&lt;/span> &lt;span style="color:#666">=&lt;/span> false; // 更改此选项以取消输出缓冲区。使用batcache_cancel &lt;span style="color:#666">()&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$noskip_cookies&lt;/span> &lt;span style="color:#666">=&lt;/span> array&lt;span style="color:#666">(&lt;/span> &lt;span style="color:#4070a0">&amp;#39;wordpress_test_cookie&amp;#39;&lt;/span> &lt;span style="color:#666">)&lt;/span>; // cookie的名称——如果它们存在并且缓存通常会被绕过，那么不要绕过它。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里大家不作修改也行，老白已经设置好了，保持默认也可&lt;/p>
+&lt;h3 id="35-batcache缓存清除">3.5 batcache缓存清除&lt;/h3>
 &lt;p>关于缓存文件的生成，batcache&lt;strong>不生成物理文件来存储缓存&lt;/strong>的页面。相反，它使用内存缓存（例如Memcached或APCu）来存储页面的副本。这种方式比将页面保存为静态HTML文件更为高效，因为读取内存缓存比读取磁盘上的文件要快得多。&lt;/p>
 &lt;p>内存缓存只是临时存储数据的一种方式，并不持久化保存数据。&lt;/p>
 &lt;p>因此，在重启服务器或清除缓存时，存储在内存缓存中的页面副本将会被清空，并重新生成，&lt;strong>强硬的刷新缓存方案就是重启下memcached&lt;/strong>&lt;/p></description></item><item><title>wordpress无需插件实现页面缓存静态化，提效显著</title><link>https://blog.taoshuge.eu.org/post/112/</link><pubDate>Sun, 17 Dec 2023 15:14:08 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/112/</guid><description>&lt;p> wordpress使用了大量插件，发表了很多文章图片以后速度直线下降，就像蜗牛爬一样慢！&lt;/p>
