@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 21 Dec 2023 22:56:32 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Dec 2023 20:14:09 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;p>安装依赖&lt;/p>
@@ -20,7 +20,239 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>微力同步</title><link>https://blog.taoshuge.eu.org/post/116/</link><pubDate>Thu, 21 Dec 2023 22:56:32 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/116/</guid><description>&lt;p>微力同步是一款可让您在多个设备上同步文件的应用程序，在您自己的机器组成的私有云上，在其中一台机器上创建，修改或删除文件会自动复制同步到其他设备。微力同步不会将您的数据上传到公有云端，而是在您自己的机器组成的私有云上互相同步交换数据。&lt;/p>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.taoshuge.eu.org/post/119/</link><pubDate>Sat, 23 Dec 2023 20:14:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/119/</guid><description>&lt;h3 id="为什么要设置cloudflare的页面规则-page-rules进行全站缓存">为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？&lt;/h3>
+&lt;p>当你接入Cloudflare的CDN，并点亮小云朵之后。你的网站就已经通过Cloudflare的CDN节点进行中转了。默认情况下，Cloudflare 会对你网站中的图片、JS、CSS文件等静态文件进行缓存。&lt;/p>
+&lt;p>当访客访问你网站页面的时候，所有的静态文件都是由Cloudflare的节点直接给到访客的，但是HTML文件是默认不缓存的。也就意味着访客访问你的某一页面的时候。仍然会&lt;strong>回源你的&lt;/strong>&lt;a href="https://cloud.tencent.com/act/pro/promotion-cvm?from_column=20065&amp;amp;from=20065">&lt;strong>服务器&lt;/strong>&lt;/a>。&lt;/p>
+&lt;p>所以，本篇文章就是教你如何使用Cloudflare的页面规则（Page Rules）把整个HTML页面给缓存。 使访客访问被缓存的页面的时候，直接交由Cloudflare进行服务，甚至你的源服务器不会收到任何GET请求。&lt;/p>
+&lt;p>&lt;strong>这样做的好处是，可以大大减少源服务器的负载开支，使得你的站点能够承载更多的访客及流量。&lt;/strong>&lt;/p>
+&lt;p>&lt;em>下面两张演示图片就是使用了Cloudflare页面规则之后，节省的源站服务器的请求及流量。&lt;/em>&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/ef3ec775cc2e7f873aebe2446daff8bc.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/a6e19dd394d7a2881a752be9cc7e9721.webp" alt="">&lt;/p>
+&lt;h3 id="如何通过浏览器判断某个页面是否被cloudflare的cdn进行缓存">如何通过浏览器判断某个页面是否被Cloudflare的CDN进行缓存？&lt;/h3>
+&lt;p>在学会如何判断之前，我们要先熟悉一个CDN中常见的术语：&lt;strong>“HIT”&lt;/strong>，中文叫做**“命中”**。我们先看下面这样演示的图片：&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/a051176bbae607346c8c0d0016292e11.webp" alt="">&lt;/p>
+&lt;p>可见，图中对过往24小时之内的所有请求有一个统计，统计分为：&lt;strong>命中&lt;/strong>、&lt;strong>未命中&lt;/strong>、&lt;strong>动态&lt;/strong>、&lt;strong>绕过&lt;/strong>……等等状态。&lt;/p>
+&lt;ul>
+&lt;li>【命中】&lt;em>状态就表示已经整网页完全被Cloudflare的CDN提供了服务；&lt;/em>&lt;/li>
+&lt;li>【绕过】&lt;em>状态则表示直接绕过Cloudflare的CDN由源站进行服务；&lt;/em>&lt;/li>
+&lt;li>【动态】&lt;em>状态则表示部分资源被Cloudflare的CDN缓存并服务，但混合了一些源站的请求；&lt;/em>&lt;/li>
+&lt;li>【未命中】&lt;em>因为命中与否是一个概率问题。Cloudflare 也并不能保证在缓存规则中的所有资源都完整的命中。&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>**注：如果你开启了小云朵，但并未配置页面规则。**那么你的绝大多数状态都是【&lt;strong>动态&lt;/strong>】，因为访客访问页面中的静态资源交由Cloudflare进行提供，还是有一些请求是通过源站来服务的。&lt;/p>
+&lt;p>接下来，我们以Chrome为示范。教大家判断一个网页在开启Cloudflare CDN之后的缓存状态到底是**【命中】&lt;strong>亦或是&lt;/strong>【动态】**&lt;/p>
+&lt;blockquote>
+&lt;p>打开接入Cloudflare的网站页面，这里以陌涛小站首页示范。 “F12” 进入“&lt;a href="https://cloud.tencent.com/product/cclid?from_column=20065&amp;amp;from=20065">开发者工具&lt;/a>”，点击“Network”选项卡。 “Control + F5” 刷新该页面（苹果系统请使用 Command + R），并在“Name”栏中选择“网址”。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/d47c2de2c5124340260ab60a3245817a.webp" alt="">&lt;/p>
+&lt;p>&lt;strong>从上图中可以看到 cf-cache-status 的值为 “HIT”，则说明该页面已经完全缓存。&lt;/strong>&lt;/p>
+&lt;h3 id="其他状态解释如下">其他状态解释如下：&lt;/h3>
+&lt;p>&lt;strong>cf-cache-status:DYNAMIC （动态）&lt;/strong> 如果是“DYNAMIC”则说明，该站可能只开启了小云朵，并没有配置整站完全缓存。 &lt;strong>cf-cache-status:BYPASS （绕过）&lt;/strong> 如果是“BYPASS”则说明，该站针对这个页面设置了绕过，不允许缓存。&lt;/p>
+&lt;h3 id="cloudflare的缓存机制">Cloudflare的缓存机制&lt;/h3>
+&lt;p>假设你的站点有 &lt;a href="https://www.renao.org/1.html">www.renao.org/1.html&lt;/a> 和 &lt;a href="https://www.renao.org/2.html">www.renao.org/2.html&lt;/a> 两个页面。&lt;/p>
+&lt;p>&lt;strong>当访客A 访问1.html这个页面的时候，首先会经由Cloudflare，这个时候你的页面规则就起作用了。&lt;/strong> Cloudflare会发现，吼吼，这个站有个1.html 我给它缓存下来，并且转发给A。&lt;/p>
+&lt;p>&lt;strong>当访客B 在Edge Cache过期时间之前，重复访问1.html的时候。&lt;/strong> Cloudflare会思考一下。哈哈哈，这个1.html我有。不用麻烦源站了。我直接给到B就可以了。&lt;/p>
+&lt;p>这就是所谓的命中率，如果这个页面被完全命中，那么B访问1.html虽然得到了网页，但是是由Cloudflare直接提供的。你的源站甚至连客户的IP都统计不到。&lt;/p>
+&lt;p>但是，2.html 这个页面在你的规则建立开始时从未有任何访客访问过。那么Cloudflare也不知道这个页面的存在，也不会缓存。除非等到真的有人访问过，Cloudflare才会发现，并对其进行缓存。&lt;/p>
+&lt;p>&lt;strong>好了，冗长的理论知识讲完了，我们来进行实战。&lt;/strong> &lt;strong>这里以Wordpress源站举例，来详细讲解如何设置页面规则才能够进行全站缓存。&lt;/strong>&lt;/p>
+&lt;h3 id="一cloudflare-页面规则-免费版3条规则配置">一、Cloudflare 页面规则 免费版3条规则配置&lt;/h3>
+&lt;p>由于Cloudflare&lt;strong>免费版只提供了三条免费的规则&lt;/strong>，所以我们的想法有很多，但是真正实现起来肯定要有所取舍。下面提供了三种陌涛小站测试过的方法。根据你网站的具体情况选择即可。&lt;/p>
+&lt;p>&lt;em>在所有的规则配置中，“*”代表通配符，另外，规则注意上下排序。默认从第一条规则顺延到第二条规则，然后才是第三条规则。具体请参照以下【三种方法】的详细配置说明。&lt;/em>&lt;/p>
+&lt;h4 id="方法一常规无人值守方法网上流传配置方法">方法一、常规无人值守方法（网上流传配置方法）&lt;/h4>
+&lt;ul>
+&lt;li>&lt;em>.imotao.xyz/wp-login&lt;/em>&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/wp-admin&lt;/em>&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/f2cf9aedd914b1efccaa125464e1184a.webp" alt="">&lt;/p>
+&lt;p>&lt;strong>第一条和第二条：&lt;/strong> 研究Wordpress后台目录，我们发现：wp-login 和 wp-admin 两个页面或目录分别是Wordpress后台的登陆页面和后台管理目录。为了让Cloudflare不缓存这些内容。我们在第一条和第二条中。建立的规则是&lt;strong>Bypass&lt;/strong>，也就是绕过。&lt;/p>
+&lt;p>&lt;strong>第三条：&lt;/strong> 此条规则很简单，也很容易理解。就是告诉Cloudflare 进行全局缓存。无论是图片、html、js、css、等等统统给我缓存。当然，按照上面提到的排序规则。Cloudflare会过滤掉以上我们不想要缓存的第一条、第二条。&lt;/p>
+&lt;h3 id="方法二常规无人值守方法">方法二、常规无人值守方法&lt;/h3>
+&lt;ul>
+&lt;li>*.imotao.xyz/&lt;em>preview=true&lt;/em>&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/&lt;/em>.php*&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/e6e716c806f051b67082655879d4eded.webp" alt="">&lt;/p>
+&lt;p>&lt;strong>第一条：&lt;/strong> 由于Wordpress 提供了预览页面，我们研究Wordpress 的预览页面URL可以发现一个特征，预览页面的URL都含有**“preview=ture”&lt;strong>这个字段，所以通过第一条规则，可以限制Cloudflare 缓存我们的&lt;/strong>预览页面**。如果没有此条规则，Cloudflare会缓存我们预览的页面。但实际缓存了&lt;strong>预览页面&lt;/strong>对网站本身的影响并不大。&lt;/p>
+&lt;p>&lt;strong>第二条：&lt;/strong> 这条规则可以说是十分重要了。如果不设置此条规则，那么我们的&lt;strong>后台页面&lt;/strong>、甚至包括&lt;strong>登陆页面&lt;/strong>也都会被Cloudflare给缓存进去。曾经有小伙伴的wp-login页面（Wordpress默认登陆页面）连带着登陆账号密码统统被缓存了。访客直接可以通过缓存的账号密码进入Wordpress的后台，你说恐怖不恐怖？ &lt;strong>此条规则是我们为了防止Cloudflare缓存我们的动态页面（登陆页、后台页）。这条简单粗暴的直接将所有带有“.php”的页面请求全部Bypass 也就是不缓存。&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>第三条：&lt;/strong> 同【方法一】的第三条&lt;/p>
+&lt;h3 id="方法三常规无人值守并为针对搜索功能的cc攻击单独开启5秒盾">方法三、常规无人值守（并为针对“搜索功能的CC攻击”单独开启5秒盾）&lt;/h3>
+&lt;ul>
+&lt;li>&lt;em>.imotao.xyz/?s=&lt;/em>&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/&lt;/em>.php*&lt;/li>
+&lt;li>&lt;em>.imotao.xyz/&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/849d93d720510f97438d02b8c6973fe3.webp" alt="">&lt;/p>
+&lt;p>&lt;strong>第一条：&lt;/strong> 将所有在Wordpress站内搜索的用户开启5秒盾。一般针对Wordpress的CC攻击都是通过随机UA、随机搜索内容来创建数千、数万的URL。并通过大量的代理IP来模拟真实用户访问。毕竟搜索在Wordpress这个系统中是需要调用&lt;a href="https://cloud.tencent.com/solution/database?from_column=20065&amp;amp;from=20065">数据库&lt;/a>，很消耗服务器资源的。 如果攻击者不清楚你的Page Rules 的配置规则，通过站内搜索对你的站点进行CC攻击的时候，此规则就能够很好的帮助你缓解攻击。除非他技术高超可以穿&lt;strong>5秒盾&lt;/strong>。&lt;/p>
+&lt;p>&lt;strong>第二条：&lt;/strong> 同【方法二】的第二条&lt;/p>
+&lt;p>&lt;strong>第三条：&lt;/strong> 同【方法二】的第三条&lt;/p>
+&lt;p>&lt;strong>使用此种方法，将会舍弃上面方法二提到的【文章预览】功能不缓存，影响并不大。&lt;/strong>&lt;/p>
+&lt;h4 id="特别注意">特别注意&lt;/h4>
+&lt;p>如果你留意到了上面提到的缓存机制的时候，一定要注意一件事情。就是若作为管理着的你登陆在Cloudflare的后台。有些主题在登陆状态下浏览文章是有“登陆条”的。所以尴尬的事情会发生。就是Cloudflare会无差别的把你的登陆条给缓存上去。真正的访客登陆到页面的时候，能看到你的用户名、留言数、等等关键信息。 所以，你需要&lt;strong>在Wordpress的设置中关掉显示登陆条的功能&lt;/strong>。&lt;/p>
+&lt;h3 id="二cloudflare-pro-页面规则-20或30条规则配置">二、Cloudflare Pro 页面规则 20或30条规则配置&lt;/h3>
+&lt;p>如果你有&lt;strong>Cloudflare Pro的付费版本&lt;/strong>，那么恭喜你可以配置&lt;strong>20条&lt;/strong>页面规则。&lt;/p>
+&lt;p>这里贴出一个配置的示范。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/2bb554c9fd849698bdae26d159c51c65.webp" alt="">&lt;/p>
+&lt;p>&lt;strong>这里的第6条，设置之后，所有的动态页面（php）的请求全部301重定向到了陌涛小站的首页。也就意味着我自己也不能登陆后台进行编辑了。当我需要写文章的时候，将此条规则临时关闭,并清楚本地浏览器缓存就可以了。&lt;/strong>&lt;/p>
+&lt;h2 id="三其他cloudflare-常见功能">三、其他Cloudflare 常见功能&lt;/h2>
+&lt;p>**清除缓存：**当我们的页面已经被完全缓存之后，更新页面需要单独删除此链接的缓存，以便Cloudflare重新从源站抓取。&lt;/p>
+&lt;p>**I’m In Attack：**开启5秒盾模式&lt;/p>
+&lt;p>**调试模式：**开启之后默认绕过所有缓存，以便我们进行调试。&lt;/p></description></item><item><title>新版 CloudFlare CDN 防攻击设置</title><link>https://blog.taoshuge.eu.org/post/118/</link><pubDate>Sat, 23 Dec 2023 14:45:21 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/118/</guid><description>&lt;p>前段时间网站一直被攻击，然后博主扛不住了搬去了 CloudFlare 。初期因为设置问题，攻击还是透过了CloudFlare 打到了源站。后面经过多次的设置后已经可以完全阻止攻击请求了。下面给大家分享下我的设置，如果你的网站被攻击了，可以根据自己的实际情况微调修改下。&lt;/p>
+&lt;h2 id="1设置前说明">1.设置前说明&lt;/h2>
+&lt;p>网站程序为WordPress，不同程序可能需要微调下策略。&lt;/p>
+&lt;p>CloudFlare免费版默认设置是针对整个域名的，如果你有其他二级域名站点，需要注意下这个策略对你其他站点有没有影响。&lt;/p>
+&lt;p>在你使用CloudFlare前确保你的源站IP没有暴露，否则对方可以直接指定hosts到你的源站IP，CloudFlare就形同虚设。&lt;/p>
+&lt;p>如果源站IP已经暴露，先把数据备份出来。开一台新服务器创建站点。&lt;/p>
+&lt;p>关于CloudFlare接入的基础操作这里就不讲了，比如SSL设置之类。&lt;/p>
+&lt;p>下面的规则自己实际使用后一定不要暴露出来，否则攻击者会针对性的进行攻击。建议自己进行规则微调。&lt;/p>
+&lt;h2 id="2策略详情">2.策略详情&lt;/h2>
+&lt;p>策略设置有优先级，排名靠前的优先级大于后方策略。所以说针对搜索引擎蜘蛛的策略，一定放在第一个！&lt;/p>
+&lt;h3 id="21-waf设置">2.1 waf设置&lt;/h3>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/3dba1fc4f195038aef6c62f81de194a5.webp" alt="">&lt;/p>
+&lt;p>WAF策略总览&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/d5a8a08c755bbb71c08db7d7da82cca1.webp" alt="Pasted image 20231223195734">&lt;/p>
+&lt;h4 id="211搜索引擎蜘蛛策略">2.1.1搜索引擎蜘蛛策略&lt;/h4>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/64d67ae80d5db08b92a66bfe9e704d74.webp" alt="Pasted image 20231223195823">&lt;/p>
+&lt;p>表达式：(cf.client.bot)&lt;/p>
+&lt;p>主要作用：CloudFlare 对于常见搜索引擎蜘蛛IP有自己的一份数据库，符合此要求的请求将会直接访问网站数据。不会经过 CloudFlare 的 WAF 策略等。避免正常蜘蛛访问被拦截。&lt;/p>
+&lt;h4 id="212登录页策略">2.1.2登录页策略&lt;/h4>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/983e7100f57fc0161d0dce271ae8a0b3.webp" alt="Pasted image 20231223195859">&lt;/p>
+&lt;p>网站我们正常运行必然有访客进行注册登录，针对我们的登录页以及常见被扫描的地址，我们可以单独设置一下人机验证。&lt;/p>
+&lt;p>主要作用：本站是WordPress程序，所以设置了xmlrpc.php和wp-login.php地址。其他程序根据自己实际情况设置。优先级低于蜘蛛，放到第二也是为了防止有些访客挂着代理被后续的策略阻止。&lt;/p>
+&lt;h4 id="213威胁分数策略">2.1.3威胁分数策略&lt;/h4>
+&lt;p>此策略是防攻击的主力策略，这一项可以阻挡90%的攻击。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/796fe0d9b6d6e8272990da11d76d706c.webp" alt="">&lt;/p>
+&lt;p>主要作用：威胁分数大于等于2，可以阻挡90%的恶意IP。CloudFlare 默认推荐分数5实测基本给攻击全漏了进来，设置3同样有漏IP。所以根据2023年9月目前的网络来说这里建议设置为2！&lt;/p>
+&lt;p>rss是因为站点有很多人通过RSS进行订阅，所以针对此类请求我们不要对他进行人机验证。&lt;/p>
+&lt;p>这里针对RSS策略比较简单，如果攻击者知道了你的策略可能会针对性攻击，我们实际使用时可以适当变通一下。&lt;/p>
+&lt;h4 id="214细化攻击策略">2.1.4细化攻击策略&lt;/h4>
+&lt;p>上一个策略是简单的通过威胁分数判断，现在这个策略则是针对漏进来的攻击IP进行针对性的过滤。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/af351b2c645362a9f7e1e35c3ae78519.webp" alt="">&lt;/p>
+&lt;p>主要作用：首先过滤国家不等于china，因为来自国内的攻击IP极少。我们的访客绝大多数也来自china所以直接略过国家。&lt;/p>
+&lt;p>/feed是我们的RSS订阅地址，我们同样略过此地址。&lt;/p>
+&lt;p>IP源地址是我们的源站IP，针对源站IP来的请求数据我们同样略过。&lt;/p>
+&lt;p>URL不包含.html是因为本次攻击地址都不是.html地址，所以略过了。我网闸对于.html地址也有缓存。大家自己设置时候这一个可以删掉。&lt;/p>
+&lt;p>UA字段WellKnownBot，这个是当时翻策略拦截日志发现的一个UA，好像是个正常请求。所以给他过滤了。&lt;/p>
+&lt;p>威胁分数大于3，这里是保证整个策略不至于过于严格，只针对威胁分数大于 3 的 IP 生效。&lt;/p>
+&lt;h4 id="215地区策略">2.1.5地区策略&lt;/h4>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/a368e1e69eb1e394d4ff91e062487370.webp" alt="">&lt;/p>
+&lt;p>这里一般不需要设置，我是看攻击IP有大量来自印尼的IP，网站基本也没印尼的访客，所以来自印尼的IP全部进行CAPTCHA交互式人机验证。&lt;/p>
+&lt;h3 id="22-ddos策略">2.2 DDOS策略&lt;/h3>
+&lt;p>CloudFlare针对DDOS有自己的分析策略可供我们使用。&lt;/p>
+&lt;p>这里CloudFlare的DDOS实际是包含我们常说的CC攻击的，七层和四层区别。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/623ca365716f31312d53777313bab8df.webp" alt="">&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/80cc3f724ed4f14b427b64102a542778.webp" alt="">&lt;/p>
+&lt;p>CloudFlare会分析请求是否是DDOS，对于符合的请求我们可以选择进行验证。另外规则集敏感度也可以进行调整。&lt;/p>
+&lt;p>这里如果你正在被攻击，可以将敏感度设置为高。实测误比较少，如果网站长期套CloudFlare，我们可以设置为中。&lt;/p>
+&lt;h3 id="23-其他waf设置">2.3 其他WAF设置&lt;/h3>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/cd5768beb7f4737dfe4fef8bb06b9fa7.webp" alt="">&lt;/p>
+&lt;h3 id="24-缓存设置">2.4 缓存设置&lt;/h3>
+&lt;p>缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。&lt;/p>
+&lt;p>缓存设置是在多个位置进行的。下面大家看截图就好。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/49e69d9ac882e0c7062d903b66e9971f.webp" alt="">&lt;/p>
+&lt;p>创建一个静态文件的缓存规则。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/42d62b8007da050d26a6969fe2415723.webp" alt="">&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/6aece4369ee5b5085ef270633796d8a3.webp" alt="">&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/dc0a76d8ef331938a885e9d9571cf938.webp" alt="">&lt;/p>
+&lt;p>上面的是基础缓存，对于页面的缓存我们使用下面的规则。&lt;/p>
+&lt;h4 id="241-页面规则">2.4.1 页面规则&lt;/h4>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/65ed589edffc9425952eaf6acbe5d9ea.webp" alt="">&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/9bd2660918d3519f86c1ab64e4b260e3.webp" alt="">&lt;/p>
+&lt;p>下面这个是我针对RSS地址的缓存设置。实际可以不设置这个规则。&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/d5f30dc0e4d52516161c82b7a48c369f.webp" alt="">&lt;/p>
+&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/aaa6398af125b8d113969a8a664861c0.webp" alt="">&lt;/p>
+&lt;h3 id="25-其他杂项">2.5 其他杂项&lt;/h3>
+&lt;p>一些设置比较散乱，这里给大家列出来。&lt;/p>
+&lt;p>Tor洋葱路由关闭，否则攻击可能穿进源服务器。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/aaa6398af125b8d113969a8a664861c0.webp" alt="">&lt;/p>
+&lt;h3 id="26-最终防御5秒盾">2.6 最终防御5秒盾&lt;/h3>
+&lt;p>目前本站遇到的攻击无需开启五秒盾。&lt;/p>
+&lt;p>如果你的攻击比较大，而且依靠上面规则无法抵挡的话，就开启这个吧。开启后所有请求都会进行人机验证，影响较大。&lt;/p>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/190e53d2717d62f9ec3712b234ae7cb0.webp" alt="">&lt;/p></description></item><item><title>全网最新的Python爬虫教程+实战项目案例，超适合小白练手的实战项目！</title><link>https://blog.taoshuge.eu.org/post/117/</link><pubDate>Fri, 22 Dec 2023 23:49:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/117/</guid><description>&lt;p>Python项目源码、教程、工具合集，由于经常私信受限，或者回复大家不及时，耽误大家时间，所以up主把内部链接放这里了，需要的点击自行拿走。&lt;/p>
+&lt;p>（需要各类安装包和秒杀源码的宝子可以添加文章下方哦）&lt;/p>
+&lt;p>（链接直接复制到百度/夸克网盘打开就可以获取了）&lt;/p>
+&lt;p>1.音乐源码&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1QwEFWLGxp-PSn1E_ajaHjg?pwd=386d &lt;/p>
+&lt;p>提取码：386d &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>2.小说&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/17_r-A95tt-FF2kvcr46-fA?pwd=g1x7 &lt;/p>
+&lt;p>提取码：g1x7 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>3.WiFi密码获取&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1EG44DeW20YYclrcIkfiSzQ?pwd=T94p &lt;/p>
+&lt;p>提取码：T94p &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>4.Python大麦抢票&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/19xq7wdPb327GISXUgrmSNw?pwd=32jb &lt;/p>
+&lt;p>提取码：32jb &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p> &lt;/p>
+&lt;p>5.Python百度文库&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1b-IpYM9H8LYQs55T23LDhg?pwd=649w &lt;/p>
+&lt;p>提取码：649w &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>6.鲜花&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1KPextm2UPF4rEQLzh6dtfA?pwd=7tcL &lt;/p>
+&lt;p>提取码：7tcL &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>7.爱心代码&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1HhpFZVWV7im1HBQxJ6SB1w?pwd=7ow1 &lt;/p>
+&lt;p>提取码：7ow1 &lt;/p>
+&lt;p>8.VIP视频&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/16t82q9llmOwtzYqa6OFN1A?pwd=1Ta4 &lt;/p>
+&lt;p>提取码：1Ta4 &lt;/p>
+&lt;p>9.短信源码&lt;/p>
+&lt;p>复制整段内容，打开最新版「夸克APP」即可获取。&lt;/p>
+&lt;p>链接：https://pan.quark.cn/s/b3282faf09c3&lt;/p>
+&lt;p>10.爬取b站视频&lt;/p>
+&lt;p>&lt;a href="https://pan.baidu.com/s/1uLvILTSIkDYYIOkcQLSlpw?pwd=2hpd">https://pan.baidu.com/s/1uLvILTSIkDYYIOkcQLSlpw?pwd=2hpd&lt;/a> &lt;/p>
+&lt;p>提取码：2hpd &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>11.微博爬虫&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1F3Stg49dy-LX1i-rUYlGYw?pwd=y138 &lt;/p>
+&lt;p>提取码：y138 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>12.视频素材下载&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1W_jjbTMWsEpLFDT35GrCMQ?pwd=MyC9 &lt;/p>
+&lt;p>提取码：MyC9 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>13.MySQL安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1BobuIRyqkWW_cDImFcbf5w?pwd=g356 &lt;/p>
+&lt;p>提取码：g356 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>14.anaconda安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1TLOnDZmVV5crxi4Fqy8W4A?pwd=a61m &lt;/p>
+&lt;p>提取码：a61m &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>15.Vmware安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1ag2EaRz68fjXTFlXh2EC5A?pwd=fnc9 &lt;/p>
+&lt;p>提取码：fnc9 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>16.vscode安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1eJvCGArOmzsV0zjGjekG4w?pwd=Btp2 &lt;/p>
+&lt;p>提取码：Btp2 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>17.MATLAB安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1vj_gYYIBTJgcnunwGiPb8A?pwd=53MF &lt;/p>
+&lt;p>提取码：53MF &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>18.navicat安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1uUtKM-s5GgDGAeLq3eJoAg?pwd=qzxq &lt;/p>
+&lt;p>提取码：qzxq &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>19.unity安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1tSQM1YGoK5MY4A_IdwFqQQ?pwd=6B7u &lt;/p>
+&lt;p>提取码：6B7u &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>20.clion安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1DpETVEqRFonrW4sgWABjJQ?pwd=4Ds1 &lt;/p>
+&lt;p>提取码：4Ds1 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
+&lt;p>21.eclipse安装包&lt;/p>
+&lt;p>链接：https://pan.baidu.com/s/1JHsEYIHkzd44KaUO_iRJNg?pwd=H4g6 &lt;/p>
+&lt;p>提取码：H4g6 &lt;/p>
+&lt;p>复制这段内容打开「百度网盘APP 即可获取」 作者：山寨静香 &lt;a href="https://www.bilibili.com/read/cv27611437/">https://www.bilibili.com/read/cv27611437/&lt;/a> 出处：bilibili&lt;/p></description></item><item><title>微力同步</title><link>https://blog.taoshuge.eu.org/post/116/</link><pubDate>Thu, 21 Dec 2023 22:56:32 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/116/</guid><description>&lt;p>微力同步是一款可让您在多个设备上同步文件的应用程序，在您自己的机器组成的私有云上，在其中一台机器上创建，修改或删除文件会自动复制同步到其他设备。微力同步不会将您的数据上传到公有云端，而是在您自己的机器组成的私有云上互相同步交换数据。&lt;/p>
 &lt;p>微力同步可在台式机，笔记本电脑，智能手机，平板电脑和网络连接的外围设备之间提供安全的点对点数据同步交换。 没有中心节点存储数据文件，所有数据的传输通过AES加密传送，确保数据的安全性，所有数据都存在自己管理的机器硬盘上，安全性有了更高的保障。&lt;/p>
 &lt;h2 id="linux-自动化安装脚本">Linux 自动化安装脚本&lt;/h2>
 &lt;p>该自动安装器目前适配Centos/Debian/Ubuntu 3大主流系统，其它的使用systemd的系统应该也可以使用，暂未测试&lt;/p>
@@ -1922,145 +2154,4 @@ allowfullscreen="true"
 &lt;/li>
 &lt;/ul></description></item><item><title>XShell 7和XFTP 7 家庭或学校免费版移除标签限制</title><link>https://blog.taoshuge.eu.org/post/101/</link><pubDate>Thu, 30 Nov 2023 12:09:50 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/101/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/5eeb4732db8fb1954fc7c01b17ca32f1.png" alt="">&lt;/p>
 &lt;p>更新：&lt;code>从 2022/02/16 开始，我们的免费许可证的标签限制已被删除&lt;/code>。所有免费用户现在都可以通过下载下面的最新版本来访问无限的标签。当前用户必须下载最新版本并在现有安装上进行安装。&lt;/p>
-&lt;p>申请地址：&lt;a href="https://www.xshell.com/zh/free-for-home-school/">https://www.xshell.com/zh/free-for-home-school/&lt;/a>&lt;/p></description></item><item><title>X99一键鸡血工具更新了!!</title><link>https://blog.taoshuge.eu.org/post/100/</link><pubDate>Wed, 29 Nov 2023 03:30:06 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/100/</guid><description>&lt;p>提取bios出错？鸡血后不开机？亲测鸡血后巨稳定有想法的可以壮胆冲啊…至强万岁E5万岁&lt;/p>
-&lt;p>&lt;a href="https://wwcb.lanzouw.com/i5YWS1e0pcmf">https://wwcb.lanzouw.com/i5YWS1e0pcmf&lt;/a>&lt;br>
-密码:TLDGJ&lt;/p>
-&lt;!DOCTYPE HTML>
-&lt;html>
-&lt;head>
-&lt;style type="text/css">
-.aspect-ratio {
-position: relative;
-width: 100%;
-height: 0;
-padding-bottom: 75%;
-}
-.aspect-ratio iframe {
-position: absolute;
-width: 100%;
-height: 100%;
-left: 0;
-top: 0;
-}
-&lt;/style>
-&lt;/head>
-&lt;body>
-&lt;div class="aspect-ratio">
-&lt;iframe
-src="https://player.bilibili.com/player.html?bvid=BV15G41197jv&amp;page=1&amp;high_quality=1&amp;danmaku=0"
-scrolling="no"
-border="0"
-frameborder="no"
-framespacing="0"
-allowfullscreen="true"
->
-&lt;/iframe>
-&lt;/div>
-&lt;/body>
-&lt;/html></description></item><item><title>PandoraNext项目私有化部署教程</title><link>https://blog.taoshuge.eu.org/post/099/</link><pubDate>Mon, 27 Nov 2023 13:39:19 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/099/</guid><description>&lt;h4 id="前言">前言&lt;/h4>
-&lt;p>项目地址: &lt;a href="https://github.com/pandora-next/deploy">https://github.com/pandora-next/deploy&lt;/a>&lt;/p>
-&lt;p>由于之前的潘多拉项目已经凉凉了，所以今天给大家出个PandoraNext项目的搭建教程&lt;/p>
-&lt;h4 id="简介">简介&lt;/h4>
-&lt;p>&lt;code>Pandora Cloud + Pandora Server + Shared Chat = PandoraNext &lt;/code>&lt;/p>
-&lt;p>支持GPTs，最新UI , 支持多种登录方式：（相当于Pandora Cloud）&lt;/p>
-&lt;p>可内置tokens，支持设置密码。（相当于Pandora Server）&lt;/p>
-&lt;h4 id="demo">demo&lt;/h4>
-&lt;p>&lt;a href="https://pdn.ywsj.gq/">https://pdn.ywsj.gq/&lt;/a>&lt;/p>
-&lt;p>准备条件&lt;br>
-1）一台服务器&lt;br>
-需要便宜VPS的可以参考这个&lt;br>
-&lt;a href="https://www.zhujiceping.com/vps">https://www.zhujiceping.com/vps&lt;/a>&lt;br>
-2）此项目的github&lt;br>
-&lt;a href="https://github.com/pandora-next/deploy">https://github.com/pandora-next/deploy&lt;/a>&lt;br>
-3）获取license_id&lt;/p>
-&lt;p>这里需要一个github账号
-这个账号注册天数需要大于180天用来授权&lt;/p>
-&lt;h3 id="教程开始">教程开始&lt;/h3>
-&lt;p>前提是要安装docker,一键安装docker脚本:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -fsSL https://get.docker.com | sh
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -L &lt;span style="color:#4070a0">&amp;#34;https://github.com/docker/compose/releases/latest/download/docker-compose-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -s&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">-&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>uname -m&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span> -o /usr/local/bin/docker-compose
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod +x /usr/local/bin/docker-compose
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>PandoraNext一键脚本:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/pandoranext.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x pandoranext.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./pandoranext.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol>
-&lt;li>
-&lt;p>访问这个网页&lt;code>https://dash.pandoranext.com&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>登录github账号获取&lt;code>license_id&lt;/code>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/c4af2df94c38d45dd020901af0f7eceb.jpg" alt="">&lt;/p>
-&lt;h4 id="安装成功以后ip加端口进入web页面">安装成功以后ip加端口进入web页面&lt;/h4>
-&lt;p>&lt;code>http://ip:8181 端口: 8181&lt;/code>&lt;/p>
-&lt;p>可以用&lt;code>账号密码&lt;/code>登录或者用&lt;code>Access Token&lt;/code>登录&lt;/p>
-&lt;p>&lt;code>如果你是gpt4.0也是可以直接使用的 &lt;/code>&lt;/p>
-&lt;p>五、更新网站&lt;br>
-docker-compose down #停止容器&lt;br>
-docker-compose pull #拉取最新镜像&lt;br>
-docker-compose up -d #启动新容器&lt;/p>
-&lt;h3 id="附access-token获取方法">附：Access Token获取方法&lt;/h3>
-&lt;p>官方登录，然后访问&lt;a href="https://chat.openai.com/api/auth/session">这里&lt;/a> 拿 &lt;code>Access Token&lt;/code>&lt;br>
-当然可以访问 &lt;a href="https://ai.fakeopen.com/auth">这里&lt;/a>拿 Access Token&lt;br>
-Access Token &lt;code>有效期 14&lt;/code> 天，期间访问&lt;code>不需要魔法&lt;/code>。这意味着你在手机上也可使用。&lt;/p></description></item><item><title>amh7.0安装苹果cms的一些坑和注意事项</title><link>https://blog.taoshuge.eu.org/post/098/</link><pubDate>Mon, 27 Nov 2023 01:52:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/098/</guid><description>&lt;p>&lt;code>1.数据库导入的问题 &lt;/code>&lt;/p>
-&lt;p> ①先上传到备份目录，在解压，然后在导入 &lt;/p>
-&lt;p> ②数据库设置那里要&lt;code>启用远程开启 &lt;/code>&lt;/p>
-&lt;p>&lt;code> 2.任务计划 &lt;/code>&lt;/p>
-&lt;p> ①注意时区 &lt;/p>
-&lt;p>&lt;code> 3.数据库同步 &lt;/code>&lt;/p>
-&lt;p> ①记得打开数据库二进制 &lt;/p>
-&lt;p>&lt;code> 4.一键还原 &lt;/code>&lt;/p>
-&lt;p>① 注意需要相同的环境组件&lt;/p>
-&lt;p>&lt;code>5.安装memcached注意事项&lt;/code>&lt;/p>
-&lt;p>php需安装 &lt;code>bcmath&lt;/code> 扩展&lt;/p>
-&lt;h3 id="总结">总结:&lt;/h3>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>操作&lt;/th>
-&lt;th>注意事项&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>数据库导入&lt;/td>
-&lt;td>上传备份至目标目录并解压，启用远程访问。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>任务计划&lt;/td>
-&lt;td>注意时区设置。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>数据库同步&lt;/td>
-&lt;td>打开数据库的二进制日志功能。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>一键还原&lt;/td>
-&lt;td>确保还原环境具有相同的组件。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>安装 Memcached&lt;/td>
-&lt;td>PHP需安装bcmath扩展。&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table></description></item></channel></rss>
+&lt;p>申请地址：&lt;a href="https://www.xshell.com/zh/free-for-home-school/">https://www.xshell.com/zh/free-for-home-school/&lt;/a>&lt;/p></description></item></channel></rss>
