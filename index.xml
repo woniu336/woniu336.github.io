@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Dec 2023 20:14:09 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 07 Jan 2024 13:10:06 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;p>安装依赖&lt;/p>
@@ -20,7 +20,60 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.taoshuge.eu.org/post/119/</link><pubDate>Sat, 23 Dec 2023 20:14:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/119/</guid><description>&lt;h3 id="为什么要设置cloudflare的页面规则-page-rules进行全站缓存">为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？&lt;/h3>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>利用谷歌邮箱别名获取无限Gmail邮箱</title><link>https://blog.taoshuge.eu.org/post/120/</link><pubDate>Sun, 07 Jan 2024 13:10:06 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/120/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>我们注册有些国外的服务时，是不能用国内邮箱注册的，这时一个Gmail邮箱就显得很有必要。而有时候我们会需要注册多个账号，当然你可以用多个Gmail邮箱来注册。但多个Gmail邮箱又不好管理，而且现在Gmail邮箱也不是那么好注册了，这时你就会需要下面我要介绍的内容了，利用Gmail邮箱的别名功能来实现同一邮箱获取无限多个Gmail邮箱号。&lt;/p>
+&lt;p>在这之前你需要有一个谷歌账号（Gmail邮箱）。没有的话去到这里注册：&lt;a href="http://mail.google.com/">http://mail.google.com&lt;/a>（目前注册可能需要特殊方法，请自行搜索解决）。&lt;/p>
+&lt;h2 id="gmail邮箱别名设置">Gmail邮箱别名设置&lt;/h2>
+&lt;p>这里我们假设你的Gmail邮箱为：&lt;code>abcdef@gmail.com&lt;/code> ，那就可以通过以下办法得到无限的谷歌邮箱别名。&lt;/p>
+&lt;h3 id="1用户名之间加英文半角">1.用户名之间加 &lt;code>.&lt;/code> （英文半角）&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>abc.def@gmail.com&lt;/code>&lt;/p>
+&lt;p>因为Gmail的用户名是不区分 &lt;code>.&lt;/code> 符号的，所以下面其实都是同一个用户名&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>abcde.f&lt;/li>
+&lt;li>a.bcdef&lt;/li>
+&lt;li>ab.cdef&lt;/li>
+&lt;li>a.b.cdef&lt;/li>
+&lt;li>abc.d.ef&lt;/li>
+&lt;/ul>
+&lt;h3 id="2用户名后面加任意字符">2.用户名后面加 &lt;code>+任意字符&lt;/code>&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>abcdef+dev@gmail.com&lt;/code>&lt;/p>
+&lt;p>&lt;code>+&lt;/code> 号后面可以是任意字符，例如：&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>+dev&lt;/li>
+&lt;li>+my&lt;/li>
+&lt;li>+sub&lt;/li>
+&lt;li>……&lt;/li>
+&lt;/ul>
+&lt;p>**PS：**使用“+”号法，在许多网站注册时候，并不识别邮箱地址中的“+”，会提示你邮箱错误。&lt;/p>
+&lt;h3 id="3改变用户名中任意字符的大小写">3.改变用户名中任意字符的大小写&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>aBCdef@gmail.com&lt;/code>&lt;/p>
+&lt;p>可以是用户名里的某个或多个字符，&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="mailto:Abcdef@gmail.com">Abcdef@gmail.com&lt;/a>&lt;/li>
+&lt;li>&lt;a href="mailto:AbcDeF@gmail.com">AbcDeF@gmail.com&lt;/a>&lt;/li>
+&lt;li>&lt;a href="mailto:abcdEf@gmail.com">abcdEf@gmail.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="4-把后缀变为googlemailcom">4. 把后缀变为 &lt;code>googlemail.com&lt;/code>&lt;/h3>
+&lt;blockquote>
+&lt;p>因为之前Gmail在某些国家的商标没有谈好，不能使用Gmail商标，只好用googlemail，这个很好理解。（貌似现在全球的商标都已经谈妥了）&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>abcdef@googlemail.com&lt;/code>&lt;/p>
+&lt;h3 id="５以上４种方法的结合">５.以上４种方法的结合&lt;/h3>
+&lt;blockquote>
+&lt;p>可以结合上面的4种方法来实现理论上的无限别名。例如：&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>&lt;a href="mailto:aBcdef+dev@googlemail.com">aBcdef+dev@googlemail.com&lt;/a>&lt;/li>
+&lt;li>&lt;a href="mailto:AbcDEf+sub@googlemail.com">AbcDEf+sub@googlemail.com&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="总结">总结&lt;/h2>
+&lt;p>了解了上面的Gmail别名设置的方法后，当你要注册一些服务的时候，只要在填写Gmail邮箱的时候填写通过上述的方法得到的别名邮箱就可以了。无需到Gmail设置，所有的别名邮箱的邮件都会发送到你原来的邮箱 &lt;code>abcdef@gmail.com&lt;/code> 中。&lt;/p></description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.taoshuge.eu.org/post/119/</link><pubDate>Sat, 23 Dec 2023 20:14:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/119/</guid><description>&lt;h3 id="为什么要设置cloudflare的页面规则-page-rules进行全站缓存">为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？&lt;/h3>
 &lt;p>当你接入Cloudflare的CDN，并点亮小云朵之后。你的网站就已经通过Cloudflare的CDN节点进行中转了。默认情况下，Cloudflare 会对你网站中的图片、JS、CSS文件等静态文件进行缓存。&lt;/p>
 &lt;p>当访客访问你网站页面的时候，所有的静态文件都是由Cloudflare的节点直接给到访客的，但是HTML文件是默认不缓存的。也就意味着访客访问你的某一页面的时候。仍然会&lt;strong>回源你的&lt;/strong>&lt;a href="https://cloud.tencent.com/act/pro/promotion-cvm?from_column=20065&amp;amp;from=20065">&lt;strong>服务器&lt;/strong>&lt;/a>。&lt;/p>
 &lt;p>所以，本篇文章就是教你如何使用Cloudflare的页面规则（Page Rules）把整个HTML页面给缓存。 使访客访问被缓存的页面的时候，直接交由Cloudflare进行服务，甚至你的源服务器不会收到任何GET请求。&lt;/p>
@@ -2152,6 +2205,4 @@ allowfullscreen="true"
 &lt;li>所有模式加上&lt;code>-tg&lt;/code>功能均可绑定消息推送的TG账号，只有第一次运行需要加上&lt;code>-tg&lt;/code>参数。&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>XShell 7和XFTP 7 家庭或学校免费版移除标签限制</title><link>https://blog.taoshuge.eu.org/post/101/</link><pubDate>Thu, 30 Nov 2023 12:09:50 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/101/</guid><description>&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/11/5eeb4732db8fb1954fc7c01b17ca32f1.png" alt="">&lt;/p>
-&lt;p>更新：&lt;code>从 2022/02/16 开始，我们的免费许可证的标签限制已被删除&lt;/code>。所有免费用户现在都可以通过下载下面的最新版本来访问无限的标签。当前用户必须下载最新版本并在现有安装上进行安装。&lt;/p>
-&lt;p>申请地址：&lt;a href="https://www.xshell.com/zh/free-for-home-school/">https://www.xshell.com/zh/free-for-home-school/&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>
