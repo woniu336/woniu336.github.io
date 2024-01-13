@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 07 Jan 2024 15:24:01 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 12 Jan 2024 19:38:09 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;p>安装依赖&lt;/p>
@@ -20,7 +20,167 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>2023年最新可采集CMS视频资源站网址合集</title><link>https://blog.taoshuge.eu.org/post/121/</link><pubDate>Sun, 07 Jan 2024 15:24:01 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/121/</guid><description>&lt;ol>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>萌芽采集插件启用提示“发现冲突文件”解决办法</title><link>https://blog.taoshuge.eu.org/post/124/</link><pubDate>Fri, 12 Jan 2024 19:38:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/124/</guid><description>&lt;h1 id="问题描述">问题描述&lt;/h1>
+&lt;p>重复安装启用插件，或之前有过旧文件，再次启用插件可能会提示“发现冲突文件”，而导致无法启用插件&lt;/p>
+&lt;h1 id="下载地址-">下载地址 ：&lt;/h1>
+&lt;p>&lt;a href="https://lzui.lanzouj.com/iTHdz1kx36mb">https://lzui.lanzouj.com/iTHdz1kx36mb&lt;/a>&lt;/p>
+&lt;h1 id="解决办法">解决办法&lt;/h1>
+&lt;p>在你程序内去检查以下插件文件，并删除&lt;/p>
+&lt;p>1、 先找到下方这个路径的文件夹，将这个文件夹删除&lt;/p>
+&lt;pre tabindex="0">&lt;code>/static/mycj/
+&lt;/code>&lt;/pre>&lt;p>2、再找到以下路径的文件并删除&lt;/p>
+&lt;pre tabindex="0">&lt;code>/application/extra/cjuser.php
+/application/extra/cjfaves.php 
+/application/extra/cjversion.php
+&lt;/code>&lt;/pre>&lt;p>3、然后再删除下面这个路径的文件&lt;/p>
+&lt;pre tabindex="0">&lt;code>/application/admin/controller/Mycj.php
+&lt;/code>&lt;/pre>&lt;p>4、最后删除这个路径的文件夹即可&lt;/p>
+&lt;pre tabindex="0">&lt;code>/application/admin/view/mycj/
+&lt;/code>&lt;/pre>&lt;p>将以上几个地方的文件删除，再重新上传插件，并启用试试看。&lt;/p>
+&lt;p>若提示启用成功，后台快捷菜单处没有显示快捷菜单，那么手动添加一下快捷菜单即可&lt;/p>
+&lt;pre tabindex="0">&lt;code>萌芽采集资源,mycj/union
+&lt;/code>&lt;/pre>&lt;p>复制上方快捷菜单代码，添加到快捷菜单里面并保存即可&lt;/p>
+&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/30c1ac6daef2b01604cedb562b962657.webp" alt="">&lt;/p></description></item><item><title>苹果cms通用清理php后门自动脚本</title><link>https://blog.taoshuge.eu.org/post/123/</link><pubDate>Fri, 12 Jan 2024 12:17:18 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/123/</guid><description>&lt;h3 id="一键清理挂马脚本">一键清理挂马脚本：&lt;/h3>
+&lt;pre tabindex="0">&lt;code>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/xiu.sh &amp;amp;&amp;amp; chmod +x xiu.sh &amp;amp;&amp;amp; ./xiu.sh
+&lt;/code>&lt;/pre>&lt;p>1：脚本会把网站配置文件备份到&lt;code>/home/back&lt;/code>目录&lt;/p>
+&lt;p>2：/template 以及 /upload目录内的所有 .php 文件删除&lt;/p>
+&lt;p>3：检查并处理 template 和 upload 文件夹内的文件&lt;/p>
+&lt;p>4：删除 template 和 upload 文件夹内包含 &amp;lt;?php 或 {php 代码段的文件&lt;/p>
+&lt;p>5：将删除的文件备份到&lt;code>/home/back&lt;/code>目录&lt;/p>
+&lt;p>这样的好处是，但你查看&lt;code>/home/back&lt;/code>，你会看到哪些文件是添加了&amp;lt;?php 或 {php 代码的，&lt;/p>
+&lt;p>除了配置文件本身存在一个&amp;lt;?php内是一个return array返回数组,如果还有其他&amp;lt;?php块就是后门&lt;/p>
+&lt;p>剩下的html文件请仔细检查&lt;/p>
+&lt;h3 id="注意为了安全起见-每次发现被挂马后应该用以下方法来处理">注意：为了安全起见 每次发现被挂马后应该用以下方法来处理！！！&lt;/h3>
+&lt;p>黑客入侵后可能在数据库挂js，可能在网站目录任何角落留下php后门，用以下方法可以快速清理干净php后门，不用一个一个文件去分析。&lt;/p>
+&lt;p>1，备份原网站配置文件 ，并检查里边是否有后门代码，正常情况下&amp;lt;?php内是一个return array返回数组，如果还有其他&amp;lt;?php块就是后门。&lt;br>
+\application\database.php&lt;br>
+\application\route.php&lt;br>
+\application\extra\maccms.php&lt;br>
+\application\extra\bind.php&lt;br>
+\application\extra\timming.php&lt;br>
+\application\extra\vodplayer.php&lt;br>
+\application\extra\voddowner.php&lt;br>
+\application\extra\vodserver.php&lt;/p>
+&lt;p>2，检查以下目录搜索 *.php ，删除所有;并检查模板文件内是否有&amp;lt;?php或{php代码段删除。&lt;br>
+\template\&lt;br>
+\upload\&lt;/p>
+&lt;p>3，删除原有目录及所有文件，并下载最新程序包，覆盖&lt;br>
+\addons\&lt;br>
+\application\&lt;br>
+\extend\&lt;br>
+\static\&lt;br>
+\runtime\&lt;br>
+\thinkphp\&lt;br>
+\vendor\&lt;br>
+\说明文档\&lt;br>
+\admin.php 自定义后台入口文件&lt;br>
+\api.php 自定义api入口文件&lt;br>
+\index.php&lt;br>
+\install.php&lt;/p>
+&lt;p>4，把刚才备份的配置文件覆盖到application下即可&lt;/p>
+&lt;p>5，修改后台入口文件名；登录后台检查管理员账号并修改密码，删除多余被黑客创建的账号；&lt;/p></description></item><item><title>海洋cms自动采集之宝塔面板定时任务</title><link>https://blog.taoshuge.eu.org/post/122/</link><pubDate>Sun, 07 Jan 2024 15:43:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/122/</guid><description>&lt;p>&lt;strong>第一步：获取脚本代码&lt;/strong>&lt;br>
+下面是自动采集脚本代码&lt;/p>
+&lt;pre tabindex="0">&lt;code>#!/bin/bash
+########################################################
+# 程序名称: 海洋CMS自动采集脚本
+# 版本信息：seacmsbot/ v2.0
+# 发布链接: https://www.seacms.net/
+# 使用方法：直接复制代码到宝塔计划任务shell脚本内容里添加每小时任务使用
+# 更新时间：2019.9.26
+##########################################################
+#①请修改下面的网站域名及管理目录
+web_site=&amp;#34;http://你的域名/管理目录/admin_reslib2.php&amp;#34;
+#②请修改下面项内容为&amp;#34;admin_reslib2.php&amp;#34;里设置的访问密码(默认为系统设置的cookie密码)
+web_pwd=&amp;#34;111111111111111111&amp;#34;
+#③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。
+#每日采集链接获取方法:选择&amp;#34;后台-采集-资源库列表&amp;#34;,复制资源站右边的&amp;#34;采集每天&amp;#34;的链接地址,去掉?前面的内容。
+web_api=(
+&amp;#39;?ac=day&amp;amp;rid=2&amp;amp;url=https://ikunzyapi.com/api.php/seaxml/vod/at/xml&amp;#39;
+&amp;#39;?ac=day&amp;amp;rid=3&amp;amp;url=https://taopianapi.com/cjapi/sea/vod/xml/m3u8.html&amp;#39;
+)
+#模拟用户浏览器ua,请勿随意修改，以免被目标防火墙拦截!
+web_ua=&amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/76.0.3809.100 Safari/537.36 seacmsbot/1.2;&amp;#34;
+#采集单页
+function get_content() {
+echo &amp;#34;正在采集第$page页...&amp;#34;
+#echo &amp;#34; get_content: ---&amp;gt;url:---&amp;gt;$1&amp;#34;
+cResult=$(curl --connect-timeout 10 -m 20 -k -s -L -A &amp;#34;$web_ua&amp;#34; &amp;#34;$1&amp;#34; )
+echo $cResult | grep -q &amp;#34;采集&amp;#34;
+#echo -e &amp;#34;$1\n$cResult&amp;#34;
+if [ &amp;#34;$?&amp;#34; = &amp;#34;0&amp;#34; ]; then
+next_content &amp;#34;$cResult&amp;#34;
+else
+echo -e &amp;#34;采集失败,请检查设置!\n失败链接--&amp;gt;$1\n返回信息--&amp;gt;$cResult\n采集结束，共0页&amp;#34;
+fi
+}
+#采集下页
+function next_content() {
+#统计数据
+Result=$(echo &amp;#34;$1&amp;#34; | tr &amp;#34;
+&amp;#34; &amp;#34;\n&amp;#34;)
+a=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;采集成功&amp;#34;)
+b=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;更新数据&amp;#34;)
+c=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;无需更新&amp;#34;)
+d=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;跳过&amp;#34;)
+echo &amp;#34;采集成功--&amp;gt;已更$c部,新增$a部,更新$b部,跳过$d部&amp;#34;
+let add+=$a
+let update+=$b
+let none+=$c
+let jmp+=$d
+#检测并采集下页
+next_url=${1##*location.href=\&amp;#39;}
+next_url=${next_url%%\&amp;#39;*}
+#echo $next_url
+if [ &amp;#34;${next_url:0:1}&amp;#34; = &amp;#34;?&amp;#34; ]
+then
+let page++
+get_content &amp;#34;$web_site$next_url&amp;#34;
+else
+echo &amp;#34;采集结束，共$page页&amp;#34;
+fi
+}
+#脚本入口
+echo &amp;#34;海洋CMS自动采集脚本开始执行 版本：v1.2&amp;#34;
+starttime=$(date +%s)
+update=0 #更新
+add=0 #新增
+none=0 #无变化
+jmp=0 # 跳过
+for url in ${web_api[@]};
+do
+if [[ ! -z $url ]]
+then
+web_param=&amp;#34;$web_site$url&amp;amp;password=$web_pwd&amp;#34;
+page=1
+echo &amp;#34;开始采集：$url&amp;#34;
+get_content $web_param
+fi
+done
+endtime=$(date +%s)
+echo &amp;#34;============================&amp;#34;
+echo &amp;#34;入库--&amp;gt;$add部&amp;#34;
+echo &amp;#34;更新--&amp;gt;$update部&amp;#34;
+echo &amp;#34;跳过--&amp;gt;$jmp部(未绑定分类或链接错误)&amp;#34;
+echo &amp;#34;今日--&amp;gt;$[none+add+update]部&amp;#34;
+echo &amp;#34;============================&amp;#34;
+echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>第二步：修改脚本&lt;/strong>&lt;br>
+需要修改脚本里面的3项内容：&lt;/p>
+&lt;pre tabindex="0">&lt;code>#①请修改下面的网站域名及管理目录
+web_site=&amp;#34;http://网站域名/管理目录/admin_reslib2.php&amp;#34;
+这个是需要修改成你的“网站域名”和“海洋cms后台的管理目录”。域名大家都能理解，后台的管理目录这个对于新手来说需要多讲两句，首先你要能登录你的后台才可以知道你的后台目录。举例说明：假如我的后台登录地址是 mytheme.cn/xxxx/那么这里的“xxxx”就是后台的管理目录，得到了管理目录我们直接填写到代码里即可。
+#②请修改下面项内容为&amp;#34;admin_reslib2.php&amp;#34;里设置的访问密码(默认为系统设置的cookie密码)
+web_pwd=&amp;#34;8888e82e85bd4540f0defa3fb7a8e888&amp;#34;
+这个修改需要到海洋cms系统后台得到我们的cookie密码进行替换才可以，具体步骤：系统-网站设置-cookie密码。得到自己网站的cookie密码后替换即可。
+#③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。
+#每日采集链接获取方法:选择&amp;#34;后台-采集-资源库列表&amp;#34;,复制资源站右边的&amp;#34;采集每天&amp;#34;的链接地址,去掉?前面的内容。
+web_api=(
+&amp;#39;?ac=day&amp;amp;rid=1&amp;amp;url=https://api.iokzy.com/inc/ldg_seackm3u8s.php&amp;#39;
+&amp;#39;?ac=day&amp;amp;rid=2&amp;amp;url=http://www.zdziyuan.com/inc/s_ldgm3u8_sea.php&amp;#39;
+)
+这个是代码里需要修改的最后一项，里面是代码里默认提供的2个采集链接地址，我们需要获取自己的采集链接API地址添加到里面。
+&lt;/code>&lt;/pre></description></item><item><title>2023年最新可采集CMS视频资源站网址合集</title><link>https://blog.taoshuge.eu.org/post/121/</link><pubDate>Sun, 07 Jan 2024 15:24:01 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/121/</guid><description>&lt;ol>
 &lt;li>飞速资源 &lt;a href="https://help.feisuzyapi.com/">https://help.feisuzyapi.com/&lt;/a>&lt;/li>
 &lt;li>闪电资源 &lt;a href="http://shan04.com/">http://shan04.com/&lt;/a>&lt;/li>
 &lt;li>樱花资源 &lt;a href="https://yhzy.cc/">https://yhzy.cc/&lt;/a>&lt;/li>
@@ -1993,140 +2153,4 @@
 &lt;p>如一键开心，可不用以下操作。文件路径：www/server/panel/data/plugin.json&lt;br>
 搜索字符串：“endtime”: -1 全部替换为 “endtime”: 999999999999&lt;/p>
 &lt;p>手动阻止解锁插件后自动修复为免费版：&lt;/p>
-&lt;p>chattr +i /www/server/panel/data/plugin.json&lt;/p></description></item><item><title>GitHub图床加速</title><link>https://blog.taoshuge.eu.org/post/105/</link><pubDate>Thu, 07 Dec 2023 21:07:15 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/105/</guid><description>&lt;h1 id="github图床使用">Github图床使用&lt;/h1>
-&lt;p>网络上关于&lt;code>GitHub+Jsdelivr&lt;/code>实现&lt;code>图床加速&lt;/code>的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。&lt;/p>
-&lt;blockquote>
-&lt;p>方法1：Jsdelivr镜像站 &lt;a href="https://jsd.cdn.zzko.cn/">https://jsd.cdn.zzko.cn&lt;/a> （公益）&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>方法2：通过&lt;code>Cloudflare Workers&lt;/code>实现反代&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>即使镜像站点跑路了，Cloudflare还在，速度慢点&lt;/p>
-&lt;/blockquote>
-&lt;p>以上方法都要配合PicGo或者PicList使用，本人使用的是PicList&lt;/p>
-&lt;p>配合图床工具: &lt;a href="https://github.com/Kuingsmile/PicList">PicList&lt;/a>&lt;/p>
-&lt;p>&lt;code>PicList&lt;/code> 是一款基于&lt;code>PicGo&lt;/code> 深度二次开发,云储存/图床管理和文件上传客户端工具&lt;/p>
-&lt;p>完美兼容PicGo&lt;/p>
-&lt;p>官网: &lt;a href="https://piclist.cn">https://piclist.cn&lt;/a>&lt;/p>
-&lt;h3 id="1通过cloudflare-workers实现反代">1.通过Cloudflare Workers实现反代&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>addEventListener&lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#4070a0">&amp;#34;fetch&amp;#34;&lt;/span>&lt;span style="color:#666">,&lt;/span>event &lt;span style="color:#666">=&amp;gt;&lt;/span> &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> let url&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020;font-weight:bold">new&lt;/span> URL&lt;span style="color:#666">(&lt;/span>event&lt;span style="color:#666">.&lt;/span>&lt;span style="color:#4070a0">request&lt;/span>&lt;span style="color:#666">.&lt;/span>&lt;span style="color:#4070a0">url&lt;/span>&lt;span style="color:#666">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> url&lt;span style="color:#666">.&lt;/span>&lt;span style="color:#4070a0">hostname&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;raw.githubusercontent.com&amp;#34;&lt;/span>&lt;span style="color:#666">;&lt;/span> &lt;span style="color:#60a0b0;font-style:italic">//反代github域名
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">&lt;/span> let request&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020;font-weight:bold">new&lt;/span> Request&lt;span style="color:#666">(&lt;/span>url&lt;span style="color:#666">,&lt;/span>event&lt;span style="color:#666">.&lt;/span>&lt;span style="color:#4070a0">request&lt;/span>&lt;span style="color:#666">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> event&lt;span style="color:#666">.&lt;/span> &lt;span style="color:#06287e">respondWith&lt;/span>&lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fetch&lt;span style="color:#666">(&lt;/span>request&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>具体教程网上很多，需要你在Cloudflare有域名&lt;/p>
-&lt;h3 id="2配合piclist">2.配合PicList&lt;/h3>
-&lt;p>请替换为你自己的&lt;code>仓库名&lt;/code> 以及分支，准备好&lt;code>token&lt;/code>&lt;/p>
-&lt;p>反代图&lt;/p>
-&lt;p>&lt;img src="https://github.leshans.eu.org/woniu336/blog-image/main/img/2023-12-07_212014.png" alt="">&lt;/p>
-&lt;p>下图为镜像站
-&lt;!-- raw HTML omitted -->&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/2023-12-07_212014.png" alt="">&lt;/p>
-&lt;blockquote>
-&lt;ul>
-&lt;li>仓库名: &lt;code>woniu336/blog-image&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;ul>
-&lt;li>分支: &lt;code>main&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;ul>
-&lt;li>存储路径: &lt;code>img/&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;ul>
-&lt;li>自定义域名1(镜像站) : &lt;a href="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main">https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;ul>
-&lt;li>自定义域名2(CF反代)
-: &lt;a href="https://github.leshans.eu.org/woniu336/blog-image/main">https://github.leshans.eu.org/woniu336/blog-image/main&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;ul>
-&lt;li>自定义域名格式: &lt;a href="https://cdn.jsdelivr.net/gh/">https://cdn.jsdelivr.net/gh/&lt;/a>用户名/仓库名@分支&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
-&lt;p>图片测试:&lt;/p>
-&lt;p>&lt;img src="https://github.leshans.eu.org/woniu336/blog-image/main/img/202310061243776.jpg" alt="">&lt;/p></description></item><item><title>WordPress网站更改后台登录地址保姆级图文教程</title><link>https://blog.taoshuge.eu.org/post/104/</link><pubDate>Thu, 07 Dec 2023 00:45:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/104/</guid><description>&lt;h2 id="背景">背景&lt;/h2>
-&lt;p>WordPress系统默认的&lt;code>后台地址&lt;/code>是 域名&lt;code>/wp-admin&lt;/code> 或域名&lt;code>/wp-login.php&lt;/code>&lt;/p>
-&lt;p>这就意味着所有用WordPress的人都可以用这个地址打开你的后台登录页面，很明显谁都知道这很不安全。那么如何更改Wordpress的后台登录地址呢？&lt;/p>
-&lt;p>引入
-搜了好多帖子，方式主要有两种，一种是使用插件，这种方法比较快。但是网上提供插件居多，我安装测试的插件没几个是最后成功的。第二种是直接修改代码文件，最后决定用这种方式。这里以宝塔面板为例，把图文过程写下来，大家参考下。&lt;/p>
-&lt;h3 id="第一步">第一步：&lt;/h3>
-&lt;ol>
-&lt;li>
-&lt;p>打开WordPress所在的目录，找到 WordPress 目录下的 &lt;code>wp-login.php&lt;/code>，这个文件是我们后台登录的地址，把它重命名成别的，例如：&lt;code>admin.php&lt;/code> ，这就意味着你可以通过 http://域名/admin.php 的方式来访问后台。
-&lt;img src="https://r2.leshans.eu.org/2023/12/a7978211df683a9c44f8647bce38a7ee.png" alt="">&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>但是这还不够，我们打开刚才重命名的文件，把里面所有的 &lt;code>wp-login&lt;/code> 替换成 &lt;code>admin&lt;/code> ，这样第一步完成。&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/0f6da20e2ebfac71616fc7ea369cc96f.png" alt="">&lt;/p>
-&lt;h3 id="第二步">第二步：&lt;/h3>
-&lt;p>打开 WordPress 目录下 &lt;code>wp-includes&lt;/code> ，找到其目录内的 &lt;code>general-template.php&lt;/code> 文件，打开文件，把里面所有的 &lt;code>wp-login&lt;/code> 全部替换成 &lt;code>admin &lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/7d39bff7da60672e54f6b30c486ed6fa.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/f671d4040afb36d5363ebf3f9379370c.png" alt="">&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/85447ecaff32bad7847cc6300118eac0.png" alt="">&lt;/p>
-&lt;h3 id="第三步">第三步：&lt;/h3>
-&lt;p>打开文件 &lt;code>general-template.php&lt;/code> ，点击搜索变量 &lt;code>$login_url&lt;/code>&lt;/p>
-&lt;p>$login_url
-将site_url 里面第一个参数改成&lt;code> index.php&lt;/code> ，如下&lt;/p>
-&lt;p>&lt;code>$login_url = site_url( 'index.php', 'login' );&lt;/code>&lt;/p>
-&lt;p>其中 index.php 可以换成别的，保存默认的 wp-login 也可以，这行的意思是定义当有人通过 http:// 域名 /wp-admin/ 地址访问网站时或者直接访问后台某个地址时进行跳转到 site_url() 设置的地址内，所以防止别人探索你的地址。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/8b812e1c278259b89de21413bae68219.png" alt="">&lt;/p>
-&lt;p>END
-以后要登录后台，就可以通过 &lt;code>http://域名/admin.php &lt;/code>访问了。&lt;/p>
-&lt;p>一键脚本：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/wp.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x wp.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./wp.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>WebShell扫描检测查杀工具</title><link>https://blog.taoshuge.eu.org/post/103/</link><pubDate>Wed, 06 Dec 2023 01:34:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/103/</guid><description>&lt;p>&lt;code>webshell&lt;/code>是一种可以在web服务器上执行后台脚本或者命令的后门，黑客通过入侵网站上传webshell后获得服务器的执行操作权限，比如执行系统命令、窃取用户数据、删除web页面、修改主页等，其危害不言而喻。而WebShell扫描检测工具可辅助查出该后门。&lt;/p>
-&lt;p>&lt;code>WebShell&lt;/code>扫描工具适用&lt;/p>
-&lt;ul>
-&lt;li>网上下载的源码&lt;/li>
-&lt;li>特定文件检测是否是木马&lt;/li>
-&lt;li>检测目标程序或文件是否存在后门&lt;/li>
-&lt;li>免杀检测识别率测试&lt;/li>
-&lt;/ul>
-&lt;h3 id="1河马查杀">1.河马查杀&lt;/h3>
-&lt;p>在线查杀地址：&lt;a href="https://n.shellpub.com">https://n.shellpub.com/&lt;/a>&lt;/p>
-&lt;p>&lt;strong>windows版：&lt;/strong>&lt;/p>
-&lt;p>&lt;a href="https://dl.shellpub.com/hm-ui/latest/HmSetup.zip?version=1.8.2">https://dl.shellpub.com/hm-ui/latest/HmSetup.zip?version=1.8.2&lt;/a>&lt;/p>
-&lt;p>&lt;strong>linux-amd64版：&lt;/strong>&lt;/p>
-&lt;p>&lt;a href="https://dl.shellpub.com/hm/latest/hm-linux-amd64.tgz?version=1.8.3">https://dl.shellpub.com/hm/latest/hm-linux-amd64.tgz?version=1.8.3&lt;/a>&lt;/p>
-&lt;p>&lt;strong>linux-386版：&lt;/strong>&lt;/p>
-&lt;p>&lt;a href="https://dl.shellpub.com/hm/latest/hm-linux-386.tgz?version=1.8.3">https://dl.shellpub.com/hm/latest/hm-linux-386.tgz?version=1.8.3&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>chattr +i /www/server/panel/data/plugin.json&lt;/p></description></item></channel></rss>

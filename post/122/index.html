@@ -1,0 +1,132 @@
+<!doctype html><html lang=zh-cn itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>海洋cms自动采集之宝塔面板定时任务 - 路飞博客</title><meta name=renderer content="webkit"><meta name=viewport content="width=device-width,initial-scale=1,user-scalable=yes"><meta name=MobileOptimized content="width"><meta name=HandheldFriendly content="true"><meta name=applicable-device content="pc,mobile"><meta name=theme-color content="#f8f5ec"><meta name=msapplication-navbutton-color content="#f8f5ec"><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="#f8f5ec"><meta name=mobile-web-app-capable content="yes"><meta name=author content="路飞"><meta name=description content="第一步：获取脚本代码 下面是自动采集脚本代码 #!/bin/bash ######################################################## # 程序名称: 海洋CMS自动采集脚本 # 版本信息：seacmsbot/ v2.0 # 发布链接: https://www.seacms.net/ # 使用方法："><meta name=keywords content="路飞博客,路飞工具箱,vps技巧,docker应用,建站教程"><meta name=generator content="Hugo 0.113.0"><link rel=canonical href=https://blog.taoshuge.eu.org/post/122/><link rel=icon href=/favicon.ico><link rel=stylesheet href=/sass/jane.min.8d42854de6a48f14b87356e051ba38661ae7defb658f22cde4747ba7fce25f5a.css integrity="sha256-jUKFTeakjxS4c1bgUbo4Zhrn3vtljyLN5HR7p/ziX1o=" media=screen crossorigin=anonymous><meta property="og:title" content="海洋cms自动采集之宝塔面板定时任务"><meta property="og:description" content="第一步：获取脚本代码 下面是自动采集脚本代码 #!/bin/bash ######################################################## # 程序名称: 海洋CMS自动采集脚本 # 版本信息：seacmsbot/ v2.0 # 发布链接: https://www.seacms.net/ # 使用方法："><meta property="og:type" content="article"><meta property="og:url" content="https://blog.taoshuge.eu.org/post/122/"><meta property="article:section" content="post"><meta property="article:published_time" content="2024-01-07T15:43:46+08:00"><meta property="article:modified_time" content="2024-01-13T21:59:16+08:00"><meta itemprop=name content="海洋cms自动采集之宝塔面板定时任务"><meta itemprop=description content="第一步：获取脚本代码 下面是自动采集脚本代码 #!/bin/bash ######################################################## # 程序名称: 海洋CMS自动采集脚本 # 版本信息：seacmsbot/ v2.0 # 发布链接: https://www.seacms.net/ # 使用方法："><meta itemprop=datePublished content="2024-01-07T15:43:46+08:00"><meta itemprop=dateModified content="2024-01-13T21:59:16+08:00"><meta itemprop=wordCount content="1613"><meta itemprop=keywords content><meta name=twitter:card content="summary"><meta name=twitter:title content="海洋cms自动采集之宝塔面板定时任务"><meta name=twitter:description content="第一步：获取脚本代码 下面是自动采集脚本代码 #!/bin/bash ######################################################## # 程序名称: 海洋CMS自动采集脚本 # 版本信息：seacmsbot/ v2.0 # 发布链接: https://www.seacms.net/ # 使用方法："><!--[if lte IE 9]><script src=https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js></script><![endif]--><!--[if lt IE 9]><script src=https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js></script>
+<script src=https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js></script><![endif]--><a id=search-btn style=display:inline-block href=javascript:void(0);><span class=icon-search>搜一下</span></a><div id=fastSearch><input id=searchInput tabindex=0><ul id=searchResults></ul></div><script src=/js/fuse.min.js></script>
+<script src=/js/fastsearch.js></script></head><body><div id=back-to-top></div><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css integrity="sha256-LWdHSKWG7zv3DTpee8YAgoTfkj3gNkfauF624h4P2Nw=" crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css integrity="sha256-Q9bBMw/rHRRag46GDWY84J3elDNc8JJjKXL9tIC4oe8=" crossorigin=anonymous><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header id=header class=header><div class=logo-wrapper><a href=/ class=logo>路飞博客</a></div><nav class=site-navbar><ul id=menu class=menu><li class=menu-item><a class=menu-item-link href=https://blog.taoshuge.eu.org/>主页</a></li><li class=menu-item><a class=menu-item-link href=https://blog.taoshuge.eu.org/post/>归档</a></li><li class=menu-item><a class=menu-item-link href=https://blog.taoshuge.eu.org/tags/>标签</a></li><li class=menu-item><a class=menu-item-link href=https://blog.taoshuge.eu.org/categories/>分类</a></li></ul></nav></header><div id=mobile-panel><main id=main class="main bg-llight wallpaper"><div class=content-wrapper><div id=content class=content><article class=post><header class=post-header><h1 class=post-title>海洋cms自动采集之宝塔面板定时任务</h1><div class=post-meta><div class=post-meta-author>by
+<a href=/about><span class=post-meta-author-name>路飞</span></a></div><div class=post-meta-time><time datetime=2024-01-07>2024-01-07</time></div><div class=post-meta-lastmod>(上次更新:
+2024-01-13)</div><div class=post-meta__right><span class=post-meta-more>约 1613 字 -
+预计阅读 4 分钟</span></div></div></header><div class=post-content><p><strong>第一步：获取脚本代码</strong><br>下面是自动采集脚本代码</p><pre tabindex=0><code>#!/bin/bash
+########################################################
+# 程序名称: 海洋CMS自动采集脚本
+# 版本信息：seacmsbot/ v2.0
+# 发布链接: https://www.seacms.net/
+# 使用方法：直接复制代码到宝塔计划任务shell脚本内容里添加每小时任务使用
+# 更新时间：2019.9.26
+##########################################################
+#①请修改下面的网站域名及管理目录
+web_site=&#34;http://你的域名/管理目录/admin_reslib2.php&#34;
+  
+#②请修改下面项内容为&#34;admin_reslib2.php&#34;里设置的访问密码(默认为系统设置的cookie密码)
+web_pwd=&#34;111111111111111111&#34;
+  
+#③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。
+#每日采集链接获取方法:选择&#34;后台-采集-资源库列表&#34;,复制资源站右边的&#34;采集每天&#34;的链接地址,去掉?前面的内容。
+web_api=(   
+      &#39;?ac=day&amp;rid=2&amp;url=https://ikunzyapi.com/api.php/seaxml/vod/at/xml&#39;
+     &#39;?ac=day&amp;rid=3&amp;url=https://taopianapi.com/cjapi/sea/vod/xml/m3u8.html&#39; 
+)
+#模拟用户浏览器ua,请勿随意修改，以免被目标防火墙拦截!
+web_ua=&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/76.0.3809.100 Safari/537.36 seacmsbot/1.2;&#34;
+  
+#采集单页
+function get_content() {
+  echo  &#34;正在采集第$page页...&#34;
+  #echo  &#34; get_content: ---&gt;url:---&gt;$1&#34;
+  cResult=$(curl  --connect-timeout 10 -m 20  -k -s   -L -A &#34;$web_ua&#34;  &#34;$1&#34; )
+  echo $cResult | grep -q &#34;采集&#34;
+  #echo  -e  &#34;$1\n$cResult&#34;
+ if [ &#34;$?&#34; = &#34;0&#34; ]; then
+     next_content &#34;$cResult&#34;
+else
+    echo  -e &#34;采集失败,请检查设置!\n失败链接--&gt;$1\n返回信息--&gt;$cResult\n采集结束，共0页&#34;
+fi
+}
+#采集下页
+function next_content() {
+    #统计数据
+     Result=$(echo &#34;$1&#34; | tr &#34;
+&#34; &#34;\n&#34;)
+     a=$(echo &#34;$Result&#34; | grep -c  &#34;采集成功&#34;)
+     b=$(echo &#34;$Result&#34; | grep -c  &#34;更新数据&#34;)
+     c=$(echo &#34;$Result&#34; | grep -c  &#34;无需更新&#34;)
+     d=$(echo &#34;$Result&#34; | grep -c  &#34;跳过&#34;)
+     echo &#34;采集成功--&gt;已更$c部,新增$a部,更新$b部,跳过$d部&#34;
+     let add+=$a
+     let update+=$b
+     let none+=$c
+     let jmp+=$d
+    #检测并采集下页
+     next_url=${1##*location.href=\&#39;}
+     next_url=${next_url%%\&#39;*}
+      #echo $next_url
+      if [ &#34;${next_url:0:1}&#34; = &#34;?&#34; ]
+          then
+          let page++
+          get_content &#34;$web_site$next_url&#34;
+    else
+         echo &#34;采集结束，共$page页&#34;
+       fi  
+}
+#脚本入口
+echo &#34;海洋CMS自动采集脚本开始执行 版本：v1.2&#34;
+starttime=$(date +%s)
+update=0  #更新
+add=0     #新增
+none=0  #无变化
+jmp=0  # 跳过
+for url in ${web_api[@]};
+do  
+if [[ ! -z $url ]]
+     then
+           web_param=&#34;$web_site$url&amp;password=$web_pwd&#34;
+           page=1
+           echo &#34;开始采集：$url&#34;
+           get_content $web_param
+  fi
+done
+endtime=$(date +%s)
+echo &#34;============================&#34;
+echo &#34;入库--&gt;$add部&#34;
+echo &#34;更新--&gt;$update部&#34;
+echo &#34;跳过--&gt;$jmp部(未绑定分类或链接错误)&#34;
+echo &#34;今日--&gt;$[none+add+update]部&#34;
+echo &#34;============================&#34;
+echo  &#34;全部采集结束,耗时$[endtime - starttime]秒&#34;
+</code></pre><p><strong>第二步：修改脚本</strong><br>需要修改脚本里面的3项内容：</p><pre tabindex=0><code>#①请修改下面的网站域名及管理目录
+web_site=&#34;http://网站域名/管理目录/admin_reslib2.php&#34;
+这个是需要修改成你的“网站域名”和“海洋cms后台的管理目录”。域名大家都能理解，后台的管理目录这个对于新手来说需要多讲两句，首先你要能登录你的后台才可以知道你的后台目录。举例说明：假如我的后台登录地址是 mytheme.cn/xxxx/那么这里的“xxxx”就是后台的管理目录，得到了管理目录我们直接填写到代码里即可。
+
+#②请修改下面项内容为&#34;admin_reslib2.php&#34;里设置的访问密码(默认为系统设置的cookie密码)
+web_pwd=&#34;8888e82e85bd4540f0defa3fb7a8e888&#34;
+这个修改需要到海洋cms系统后台得到我们的cookie密码进行替换才可以，具体步骤：系统-网站设置-cookie密码。得到自己网站的cookie密码后替换即可。
+
+#③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。
+#每日采集链接获取方法:选择&#34;后台-采集-资源库列表&#34;,复制资源站右边的&#34;采集每天&#34;的链接地址,去掉?前面的内容。
+web_api=(   
+      &#39;?ac=day&amp;rid=1&amp;url=https://api.iokzy.com/inc/ldg_seackm3u8s.php&#39;
+     &#39;?ac=day&amp;rid=2&amp;url=http://www.zdziyuan.com/inc/s_ldgm3u8_sea.php&#39;  
+)
+这个是代码里需要修改的最后一项，里面是代码里默认提供的2个采集链接地址，我们需要获取自己的采集链接API地址添加到里面。
+</code></pre></div><div class=post-copyright><p class=copyright-item><span class=item-title>文章作者</span>
+<span class=item-content>路飞</span></p><p class=copyright-item><span class=item-title>上次更新</span>
+<span class=item-content>2024-01-13</span></p><p class=copyright-item><span class=item-title>许可协议</span>
+<span class=item-content><a rel="license noopener" href=https://creativecommons.org/licenses/by-nc-nd/4.0/ target=_blank>CC BY-NC-ND 4.0</a></span></p></div><footer class=post-footer><nav class=post-nav><a class=prev href=/post/123/><i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417l277.93508-310.326815c11.338233-12.190647 11.035334-32.285311-.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"/></svg></i><span class="prev-text nav-default">苹果cms通用清理php后门自动脚本</span>
+<span class="prev-text nav-mobile">上一篇</span></a>
+<a class=next href=/post/121/><span class="next-text nav-default">2023年最新可采集CMS视频资源站网址合集</span>
+<span class="prev-text nav-mobile">下一篇</span>
+<i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18"><path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697c-11.777231-11.500939-30.216186-10.304694-41.178865 2.712784z"/></svg></i></a></nav></footer></article></div></div></main><footer id=footer class=footer><div class=icon-links><a href=mailto:meiduihome@hotmail.com rel="me noopener" class=iconfont title=email><svg class="icon" viewBox="0 0 1451 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36"><path d="M664.781909 681.472759.0 97.881301C0 3.997201 71.046997.0 71.046997.0H474.477909 961.649408h399.992405s71.046998 3.997201 71.046998 97.881301L771.345323 681.472759S764.482731 685.154773 753.594283 688.65053V688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858V688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759zm53.281707 130.131124C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633.0 212.052267.0 212.052267V942.809523S0 1024 83.726336 1024H682.532949 753.579947h595.368192C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523V212.052267S893.138176 701.759633 817.019477 767.734955c-39.771477 34.470494-74.671786 43.295855-98.955861 43.868928z"/></svg></a><a href=https://blog.taoshuge.eu.org/index.xml rel="noopener alternate" type=application/rss+xml class=iconfont title=rss target=_blank><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"><path d="M819.157333 1024C819.157333 574.592 449.408 204.8.0 204.8V0c561.706667.0 1024 462.293333 1024 1024H819.157333zM140.416 743.04a140.8 140.8.0 01140.501333 140.586667A140.928 140.928.0 01140.074667 1024C62.72 1024 0 961.109333.0 883.626667S62.933333 743.082667 140.416 743.04zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667v-199.04c372.352.0 678.784 306.517333 678.784 678.826667z"/></svg></a></div><div class=copyright><span class=power-by>Powered by <a class=hexo-link href=https://gohugo.io>Hugo</a></span>
+<span class=division>|</span>
+<span class=theme-info>托管于 <a class=theme-link href=https://github.com>Github</a></span>
+<span class=copyright-year>&copy;
+2023 -
+2024
+<span class=heart><i class=iconfont><svg class="icon" viewBox="0 0 1025 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14"><path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7.0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1.0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2.0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3.1-42.5-8-83.6-24-122.2z" fill="#8a8a8a"/></svg></i></span><span class=author>路飞</span></span></div></footer><div class=button__back-to-top><a href=#back-to-top><i class=iconfont><svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35"><path d="M510.866688 227.694839 95.449397 629.218702h235.761562L329.15309 958.01517h362.40389L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777h894.052392v131.813095H63.840492V63.962777zm0 0"/></svg></i></a></div></div><script type=text/javascript src=https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js crossorigin=anonymous></script>
+<script type=text/javascript src=https://cdn.bootcss.com/slideout/1.0.1/slideout.min.js crossorigin=anonymous></script>
+<script type=text/javascript src=/js/main.015599b8f9fa9f00491a0bfa1f1395b5af27343eb50271af63076600eec727fd.js integrity="sha256-AVWZuPn6nwBJGgv6HxOVta8nND61AnGvYwdmAO7HJ/0=" crossorigin=anonymous></script>
+<script src=/js/load-photoswipe.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin=anonymous></script>
+<script src=/js/clipboard.js></script><div class=post-password></div></body></html>
