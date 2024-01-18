@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 17 Jan 2024 12:53:36 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 18 Jan 2024 14:01:13 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;p>安装依赖&lt;/p>
@@ -20,7 +20,14 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/post/126/</link><pubDate>Wed, 17 Jan 2024 12:53:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/126/</guid><description>&lt;h3 id="添加防火墙规则表达式">添加防火墙规则表达式&lt;/h3>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>paypal转账手续费</title><link>https://blog.taoshuge.eu.org/post/127/</link><pubDate>Thu, 18 Jan 2024 14:01:13 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/127/</guid><description>&lt;p>收款：4.4%+0.3USD&lt;/p>
+&lt;p>比如我转30给你，你实际收到的是：30 -（30*4.4%+0.3）=28.38&lt;/p>
+&lt;p>中国paypal转账到香港paypal，损耗5.5%&lt;/p>
+&lt;p>包括：2%交易总额+3.5%交易汇率=5.5%&lt;/p>
+&lt;p>假设中国paypal转50美金到香港paypal,如果香港paypal要到账50美金，则需要：&lt;/p>
+&lt;p>50*（1+5.5%）=52.75&lt;/p>
+&lt;p>汇率换算地址：&lt;a href="https://wise.com/zh-cn/currency-converter/usd-to-cny-rate?amount=1">https://wise.com/zh-cn/currency-converter/usd-to-cny-rate?amount=1&lt;/a>&lt;/p>
+&lt;p>中国大陆手续费：【&lt;a href="https://www.paypal.com/c2/webapps/mpp/merchant-fees">点击进入&lt;/a>】 香港地区手续费：【&lt;a href="https://www.paypal.com/hk/webapps/mpp/merchant-fees#additional-percentage">点击进入&lt;/a>】&lt;/p></description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/post/126/</link><pubDate>Wed, 17 Jan 2024 12:53:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/126/</guid><description>&lt;h3 id="添加防火墙规则表达式">添加防火墙规则表达式&lt;/h3>
 &lt;h5 id="第一恶意流量阻止">第一：恶意流量阻止&lt;/h5>
 &lt;p>操作：托管质询&lt;/p>
 &lt;p>(cf.threat_score ge 5 and not cf.client.bot) or (not http.request.version in {&amp;ldquo;HTTP/1.2&amp;rdquo; &amp;ldquo;HTTP/2&amp;rdquo; &amp;ldquo;HTTP/3&amp;rdquo; &amp;ldquo;SPDY/3.1&amp;rdquo;}) or (not http.user_agent contains &amp;ldquo;Mozilla/&amp;rdquo;)&lt;/p>
@@ -1162,6 +1169,4 @@ web_api=(
 &lt;li>
 &lt;p>这里有三个情况需要注意的：1、如果是自己在APP上操作是不需要手续费的，如果需要人工帮忙划转，是需要收取一定的手续费的；2、如果是外币信用卡需要人工划转；3、目前了解到I类卡是支持全币种的，收款是没问题的（招行）&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>免费 FRP 内网穿透服务</title><link>https://blog.taoshuge.eu.org/post/108/</link><pubDate>Sun, 10 Dec 2023 15:18:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/108/</guid><description>&lt;p>建议访问官方 Github 项目来查阅文档,可以使用更多本文没有提到的参数来提高穿透服务器的安全性和效率.&lt;/p>
-&lt;p>地址：&lt;a href="https://freefrp.net/">https://freefrp.net/&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/202312101519995.png" alt="">&lt;/p></description></item></channel></rss>
+&lt;/ul></description></item></channel></rss>
