@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 18 Jan 2024 14:01:13 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 22 Jan 2024 04:41:27 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;p>安装依赖&lt;/p>
@@ -20,7 +20,205 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>paypal转账手续费</title><link>https://blog.taoshuge.eu.org/post/127/</link><pubDate>Thu, 18 Jan 2024 14:01:13 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/127/</guid><description>&lt;p>收款：4.4%+0.3USD&lt;/p>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>github反代列表</title><link>https://blog.taoshuge.eu.org/post/131/</link><pubDate>Mon, 22 Jan 2024 04:41:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/131/</guid><description>&lt;h1 id="反代列表">反代列表&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>站源&lt;/th>
+&lt;th>地址&lt;/th>
+&lt;th>缓存&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>github.com&lt;/td>
+&lt;td>hub.fgit.cf&lt;/td>
+&lt;td>无&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>raw.githubusercontent.com&lt;/td>
+&lt;td>raw.fgit.cf&lt;/td>
+&lt;td>无&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>github.githubassets.com&lt;/td>
+&lt;td>assets.fgit.cf&lt;/td>
+&lt;td>无&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>官方地址：&lt;a href="https://doc.fastgit.org/zh-cn/node.html">https://doc.fastgit.org/zh-cn/node.html&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>替换：https://raw.fgit.cf/用户名/仓库名/分支/文件&amp;hellip;&lt;/p>
+&lt;/blockquote>
+&lt;p>例如&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>替换成：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>https://raw.fgit.cf/kejilion/sh/main/kejilion.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>动漫资源更新中。。</title><link>https://blog.taoshuge.eu.org/post/130/</link><pubDate>Sun, 21 Jan 2024 20:54:23 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/130/</guid><description>&lt;blockquote>
+&lt;p>切片资源&lt;/p>
+&lt;/blockquote>
+&lt;p>高清 &lt;a href="https://1080zyk1.com/">https://1080zyk1.com/&lt;/a>&lt;/p>
+&lt;p>淘片 &lt;a href="https://www.taopianzy.com/index.html">https://www.taopianzy.com/index.html&lt;/a>&lt;/p>
+&lt;p>iKun资源 &lt;a href="https://www.ikunzy.com/">https://www.ikunzy.com/&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>在线动漫&lt;/p>
+&lt;/blockquote>
+&lt;p>NyaFun动漫 &lt;a href="https://www.nyafun.net/">https://www.nyafun.net/&lt;/a>&lt;/p>
+&lt;p>喵物次元 &lt;a href="https://catw.moe/">https://catw.moe/&lt;/a>&lt;/p>
+&lt;p>次元城 &lt;a href="https://www.cycdm01.top/">https://www.cycdm01.top/&lt;/a>&lt;/p></description></item><item><title>RackNerd优惠码和促销活动整理 (2024最新版) 年付10美元vps</title><link>https://blog.taoshuge.eu.org/post/129/</link><pubDate>Sat, 20 Jan 2024 16:07:08 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/129/</guid><description>&lt;blockquote>
+&lt;p>线路测试：&lt;a href="https://lg-lax02.racknerd.com/">https://lg-lax02.racknerd.com/&lt;/a>&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;a href="https://walixz.com/go/racknerd">RackNerd&lt;/a>是美国一家基础架构即服务IaaS云服务供应商，由云计算行业资深人士成立。这家公司主要提供虚拟主机、&lt;a href="https://walixz.com/cheap-vps.html" title="便宜VPS">便宜VPS&lt;/a>服务器和独立服务器等产品，以及经营代托管业务。由于价格实惠性价比高，所以RackNerd可以作为个人建站极好的选择。&lt;/p>
+&lt;p>在这篇文章中，瓦力箱子整理下RackNerd优惠码和最新的促销活动分享，有需要可以购买。&lt;/p>
+&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/f9b91566c3bdb66d72b949de05bc7788.webp" alt="RackNerd优惠码">&lt;/p>
+&lt;h2 id="1-racknerd-vps最新优惠">1. RackNerd VPS最新优惠&lt;/h2>
+&lt;p>2024年1月更新：过完圣诞节，2024年新年马上就要来临。RackNerd为大家准备了4款便宜VPS套餐，来庆祝元旦的到来，最低配置只需要11美元/年。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>CPU&lt;/th>
+&lt;th>内存&lt;/th>
+&lt;th>SSD&lt;/th>
+&lt;th>月流量&lt;/th>
+&lt;th>价格&lt;/th>
+&lt;th>详情&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1核心&lt;/td>
+&lt;td>1G&lt;/td>
+&lt;td>21G&lt;/td>
+&lt;td>1500G&lt;/td>
+&lt;td>$11/年&lt;/td>
+&lt;td>&lt;strong>&lt;a href="https://my.racknerd.com/aff.php?aff=1338&amp;amp;pid=826">查看详情&lt;/a>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1核心&lt;/td>
+&lt;td>2G&lt;/td>
+&lt;td>35G&lt;/td>
+&lt;td>2500G&lt;/td>
+&lt;td>$17/年&lt;/td>
+&lt;td>&lt;strong>&lt;a href="https://my.racknerd.com/aff.php?aff=1338&amp;amp;pid=827">查看详情&lt;/a>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2核心&lt;/td>
+&lt;td>3G&lt;/td>
+&lt;td>45G&lt;/td>
+&lt;td>5000G&lt;/td>
+&lt;td>$27/年&lt;/td>
+&lt;td>&lt;strong>&lt;a href="https://my.racknerd.com/aff.php?aff=1338&amp;amp;pid=828">查看详情&lt;/a>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2核心&lt;/td>
+&lt;td>4G&lt;/td>
+&lt;td>60G&lt;/td>
+&lt;td>8000G&lt;/td>
+&lt;td>$37/年&lt;/td>
+&lt;td>&lt;strong>&lt;a href="https://my.racknerd.com/aff.php?aff=1338&amp;amp;pid=829">查看详情&lt;/a>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>所有VPS方案均配置1Gbps大带宽，提供一个独立IP地址和具有完全的root权限，可以根据自己的实际需求选择。共有9个机房可以选择，推荐速度较快的美国西海岸的洛杉矶、圣何塞或西雅图机房。不过这次的RackNerd促销没有512M内存方案，有需要的可以查看往期活动。&lt;/p>
+&lt;h2 id="2-racknerd便宜vps整理往期活动">2. RackNerd便宜VPS整理(往期活动)&lt;/h2>
+&lt;p>瓦力箱子发现不久以前的RackNerd往期优惠活动还有部分机型可选，合适的可以入手。加起来还有十来款性价比较高的VPS主机可选，价格最低的VPS年付只需要$10美元左右。&lt;/p>
+&lt;h3 id="黑色星期五和网络星期一活动">黑色星期五和网络星期一活动&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>CPU&lt;/th>
+&lt;th>内存&lt;/th>
+&lt;th>SSD&lt;/th>
+&lt;th>月流量&lt;/th>
+&lt;th>价格&lt;/th>
+&lt;th>详情&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1核心&lt;/td>
+&lt;td>768M&lt;/td>
+&lt;td>15G&lt;/td>
+&lt;td>1000G&lt;/td>
+&lt;td>$10.18/年&lt;/td>
+&lt;td>&lt;strong>&lt;a href="https://my.racknerd.com/aff.php?aff=1338&amp;amp;pid=792">查看详情&lt;/a>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>1核心&lt;/td>
+&lt;td>2G&lt;/td>
+&lt;td>30G&lt;/td>
+&lt;td>2500G&lt;/td>
+&lt;td>$16.98/年&lt;/td>
+&lt;td>&lt;strong>&lt;a href="https://my.racknerd.com/aff.php?aff=1338&amp;amp;pid=793">查看详情&lt;/a>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2核心&lt;/td>
+&lt;td>2.5G&lt;/td>
+&lt;td>50G&lt;/td>
+&lt;td>5000G&lt;/td>
+&lt;td>$25.49/年&lt;/td>
+&lt;td>&lt;strong>&lt;a href="https://my.racknerd.com/aff.php?aff=1338&amp;amp;pid=794">查看详情&lt;/a>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2核心&lt;/td>
+&lt;td>4G&lt;/td>
+&lt;td>80G&lt;/td>
+&lt;td>8000G&lt;/td>
+&lt;td>$38.88/年&lt;/td>
+&lt;td>&lt;strong>&lt;a href="https://my.racknerd.com/aff.php?aff=1338&amp;amp;pid=795">查看详情&lt;/a>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4核心&lt;/td>
+&lt;td>4.5G&lt;/td>
+&lt;td>115G&lt;/td>
+&lt;td>10000G&lt;/td>
+&lt;td>$52.49/年&lt;/td>
+&lt;td>&lt;strong>&lt;a href="https://my.racknerd.com/aff.php?aff=1338&amp;amp;pid=796">查看详情&lt;/a>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>宝塔 Linux Java 环境安装教程</title><link>https://blog.taoshuge.eu.org/post/128/</link><pubDate>Sat, 20 Jan 2024 15:41:01 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/128/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>本教程将帮助你如何在linux系统下的宝塔面板上，快速的安装和配置Java环境 。&lt;/p>
+&lt;h2 id="1-打开终端">#1 打开终端&lt;/h2>
+&lt;p>打开宝塔的终端并输入以下命令&lt;/p>
+&lt;p>PS：一行一个，不要多次输入 。&lt;/p>
+&lt;p>第一步，创建 java 路径 。&lt;/p>
+&lt;pre tabindex="0">&lt;code>mkdir -p /usr/lib/jvm
+&lt;/code>&lt;/pre>&lt;p>第二步，移动到，上一步创建的文件夹 。&lt;/p>
+&lt;pre tabindex="0">&lt;code>cd /usr/lib/jvm
+&lt;/code>&lt;/pre>&lt;p>第三步，在此文件夹下下载 java sdk ，耐心等待，国内服务器可能需要 2-10 分钟 。&lt;/p>
+&lt;p>PS: 该版本的 sdk 版本为 17&lt;/p>
+&lt;pre tabindex="0">&lt;code>wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz
+&lt;/code>&lt;/pre>&lt;p>第四步，解压上一步下载的 sdk 。&lt;/p>
+&lt;pre tabindex="0">&lt;code>tar -zxvf jdk-17_linux-x64_bin.tar.gz
+&lt;/code>&lt;/pre>&lt;p>第五步，重命名解压后的文件夹 为 jdk17 注意版本号&lt;/p>
+&lt;pre tabindex="0">&lt;code>mv jdk-17.0.10 jdk17
+&lt;/code>&lt;/pre>&lt;p>至此，java 17安装完成，现在开始配置 Java sdk的环境变量 。&lt;/p>
+&lt;h2 id="2-配置环境变量">#2 配置环境变量&lt;/h2>
+&lt;p>打开宝塔文件根目录的以下路径 ==/etc/profile==&lt;/p>
+&lt;p>并在 profile 文件的末尾添加以下环境变量&lt;/p>
+&lt;pre tabindex="0">&lt;code>export JAVA_HOME=/usr/lib/jvm/jdk17
+export PATH=$JAVA_HOME/bin:$PATH
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/9b201ba416eafce85648312f23174f18.webp" alt="">&lt;/p>
+&lt;p>返回终端，输入以下命令，刷新配置文件&lt;/p>
+&lt;pre tabindex="0">&lt;code>source /etc/profile
+&lt;/code>&lt;/pre>&lt;p>再输入以下命令，如果出现 java 版本即代表环境配置成功 。&lt;/p>
+&lt;pre tabindex="0">&lt;code>java -version
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/9750070fe7df93ec71020759bdd974c8.webp" alt="">&lt;/p></description></item><item><title>paypal转账手续费</title><link>https://blog.taoshuge.eu.org/post/127/</link><pubDate>Thu, 18 Jan 2024 14:01:13 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/127/</guid><description>&lt;p>收款：4.4%+0.3USD&lt;/p>
 &lt;p>比如我转30给你，你实际收到的是：30 -（30*4.4%+0.3）=28.38&lt;/p>
 &lt;p>中国paypal转账到香港paypal，损耗5.5%&lt;/p>
 &lt;p>包括：2%交易总额+3.5%交易汇率=5.5%&lt;/p>
@@ -957,216 +1155,4 @@ web_api=(
 &lt;h3 id="35-batcache缓存清除">3.5 batcache缓存清除&lt;/h3>
 &lt;p>关于缓存文件的生成，batcache&lt;strong>不生成物理文件来存储缓存&lt;/strong>的页面。相反，它使用内存缓存（例如Memcached或APCu）来存储页面的副本。这种方式比将页面保存为静态HTML文件更为高效，因为读取内存缓存比读取磁盘上的文件要快得多。&lt;/p>
 &lt;p>内存缓存只是临时存储数据的一种方式，并不持久化保存数据。&lt;/p>
-&lt;p>因此，在重启服务器或清除缓存时，存储在内存缓存中的页面副本将会被清空，并重新生成，&lt;strong>强硬的刷新缓存方案就是重启下memcached&lt;/strong>&lt;/p></description></item><item><title>wordpress无需插件实现页面缓存静态化，提效显著</title><link>https://blog.taoshuge.eu.org/post/112/</link><pubDate>Sun, 17 Dec 2023 15:14:08 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/112/</guid><description>&lt;p> wordpress使用了大量插件，发表了很多文章图片以后速度直线下降，就像蜗牛爬一样慢！&lt;/p>
-&lt;p>各位wordpress站长普遍采用的是wordpress缓存插件，如&lt;code>WP Super Cache&lt;/code>或者&lt;code>Hyper Cache&lt;/code>之类的，这些插件对wordpress有着非常明显的加速优化效果，该插件的Mod_rewrite加速模式加速效果非常好，因为这种模式是直接将网站的页面生成静态的html页面，然后使用Mod_rewrite将请求转发到静态文件，这样就跳过了php解析这一步直接将页面吐出到浏览器，从而达到加速的效果。但是这是使用插件实现缓存效果，那么可否&lt;code>无插件&lt;/code>实现wordpress&lt;code>页面静态化&lt;/code>呢？&lt;/p>
-&lt;p>答案是能，下面将告诉大家操作方法，首先复制以下代码：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-24">24&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-25">25&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-26">26&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-27">27&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-28">28&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-29">29&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-30">30&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-31">31&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-32">32&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-33">33&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-34">34&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-35">35&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-36">36&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-37">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-37">37&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-38">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-38">38&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-39">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-39">39&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-40">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-40">40&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-41">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-41">41&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-42">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-42">42&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-43">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-43">43&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-44">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-44">44&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-45">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-45">45&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-46">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-46">46&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-47">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-47">47&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-48">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-48">48&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-49">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-49">49&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-50">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-50">50&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-51">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-51">51&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-52">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-52">52&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-53">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-53">53&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-54">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-54">54&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-55">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-55">55&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-56">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-56">56&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-57">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-57">57&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&amp;lt;?php
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>define&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;CACHE_ROOT&amp;#39;&lt;/span>, dirname&lt;span style="color:#666">(&lt;/span>__FILE__&lt;span style="color:#666">)&lt;/span>.&lt;span style="color:#4070a0">&amp;#39;/cache&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>define&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;CACHE_LIFE&amp;#39;&lt;/span>, 86400&lt;span style="color:#666">)&lt;/span>; //缓存文件的生命期，单位秒，86400秒是一天
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>define&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;CACHE_SUFFIX&amp;#39;&lt;/span>,&lt;span style="color:#4070a0">&amp;#39;.html&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span>; //缓存文件的扩展名，千万别用 .php .asp .jsp .pl 等等
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">$file_name&lt;/span> &lt;span style="color:#666">=&lt;/span> md5&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$_SERVER&lt;/span>&lt;span style="color:#666">[&lt;/span>&lt;span style="color:#4070a0">&amp;#39;REQUEST_URI&amp;#39;&lt;/span>&lt;span style="color:#666">])&lt;/span>.CACHE_SUFFIX; //缓存文件名
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>//缓存目录，根据md5的前两位把缓存文件分散开。避免文件过多。如果有必要，可以用第三四位为名，再加一层目录。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>//256个目录每个目录1000个文件的话，就是25万个页面。两层目录的话就是65536*1000&lt;span style="color:#666">=&lt;/span>六千五百万。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>//不要让单个目录多于1000，以免影响性能。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">$cache_dir&lt;/span> &lt;span style="color:#666">=&lt;/span> CACHE_ROOT.&lt;span style="color:#4070a0">&amp;#39;/&amp;#39;&lt;/span>.substr&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$file_name&lt;/span>,0,2&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">$cache_file&lt;/span> &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#bb60d5">$cache_dir&lt;/span>.&lt;span style="color:#4070a0">&amp;#39;/&amp;#39;&lt;/span>.&lt;span style="color:#bb60d5">$file_name&lt;/span>; //缓存文件存放路径
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span>&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$_SERVER&lt;/span>&lt;span style="color:#666">[&lt;/span>&lt;span style="color:#4070a0">&amp;#39;REQUEST_METHOD&amp;#39;&lt;/span>&lt;span style="color:#666">]==&lt;/span>&lt;span style="color:#4070a0">&amp;#39;GET&amp;#39;&lt;/span>&lt;span style="color:#666">){&lt;/span> //GET方式请求才缓存，POST之后一般都希望看到最新的结果
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">if&lt;/span>&lt;span style="color:#666">(&lt;/span>file_exists&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$cache_file&lt;/span>&lt;span style="color:#666">)&lt;/span> &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> time&lt;span style="color:#666">()&lt;/span> - filemtime&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$cache_file&lt;/span>&lt;span style="color:#666">)&lt;/span> &amp;lt; CACHE_LIFE&lt;span style="color:#666">){&lt;/span> //如果缓存文件存在，并且没有过期，就把它读出来。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">$fp&lt;/span> &lt;span style="color:#666">=&lt;/span> fopen&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$cache_file&lt;/span>,&lt;span style="color:#4070a0">&amp;#39;rb&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fpassthru&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$fp&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fclose&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$fp&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> exit&lt;span style="color:#666">()&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> elseif&lt;span style="color:#666">(&lt;/span>!file_exists&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$cache_dir&lt;/span>&lt;span style="color:#666">)){&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">if&lt;/span>&lt;span style="color:#666">(&lt;/span>!file_exists&lt;span style="color:#666">(&lt;/span>CACHE_ROOT&lt;span style="color:#666">)){&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> mkdir&lt;span style="color:#666">(&lt;/span>CACHE_ROOT,0777&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> chmod&lt;span style="color:#666">(&lt;/span>CACHE_ROOT,0777&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> mkdir&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$cache_dir&lt;/span>,0777&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> chmod&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$cache_dir&lt;/span>,0777&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">function&lt;/span> auto_cache&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$contents&lt;/span>&lt;span style="color:#666">){&lt;/span> //回调函数，当程序结束时自动调用此函数
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> global &lt;span style="color:#bb60d5">$cache_file&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">$fp&lt;/span> &lt;span style="color:#666">=&lt;/span> fopen&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$cache_file&lt;/span>,&lt;span style="color:#4070a0">&amp;#39;wb&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fwrite&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$fp&lt;/span>,&lt;span style="color:#bb60d5">$contents&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fclose&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$fp&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> chmod&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$cache_file&lt;/span>,0777&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> clean_old_cache&lt;span style="color:#666">()&lt;/span>; //生成新缓存的同时，自动删除所有的老缓存。以节约空间。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">return&lt;/span> &lt;span style="color:#bb60d5">$contents&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">function&lt;/span> clean_old_cache&lt;span style="color:#666">(){&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> chdir&lt;span style="color:#666">(&lt;/span>CACHE_ROOT&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> foreach &lt;span style="color:#666">(&lt;/span>glob&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#34;*/*&amp;#34;&lt;/span>.CACHE_SUFFIX&lt;span style="color:#666">)&lt;/span> as &lt;span style="color:#bb60d5">$file&lt;/span>&lt;span style="color:#666">){&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">if&lt;/span>&lt;span style="color:#666">(&lt;/span>time&lt;span style="color:#666">()&lt;/span>-filemtime&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$file&lt;/span>&lt;span style="color:#666">)&lt;/span>&amp;gt;CACHE_LIFE&lt;span style="color:#666">){&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> unlink&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$file&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ob_start&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;auto_cache&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span>; //回调函数 auto_cache
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">else&lt;/span>&lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">if&lt;/span>&lt;span style="color:#666">(&lt;/span>file_exists&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$cache_file&lt;/span>&lt;span style="color:#666">)){&lt;/span> //file_exists&lt;span style="color:#666">()&lt;/span> 函数检查文件或目录是否存在。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> unlink&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$cache_file&lt;/span>&lt;span style="color:#666">)&lt;/span>; //不是GET的请求就删除缓存文件。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>?&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>将以上代码保存为&lt;code>cache.php&lt;/code>文件然后放置到网站根目录，然后在根目录下新建一个名为cache的目录，权限更改为777（修改权限可写，写入缓存文件用的）&lt;/p>
-&lt;p>然后在index.php的 &lt;code>&amp;lt;?php&lt;/code>之后加上以下代码：&lt;/p>
-&lt;p>&lt;code>require('cache.php');&lt;/code>&lt;/p>
-&lt;p>一定要保证缓存目录的可写。&lt;/p>
-&lt;p>一定要加到文件的最上方，不然等页面完全加载完了才吐出缓存页面那就等于没缓存一样。&lt;/p></description></item><item><title>日主题绕过授权破解</title><link>https://blog.taoshuge.eu.org/post/111/</link><pubDate>Fri, 15 Dec 2023 04:56:20 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/111/</guid><description>&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>步骤&lt;/th>
-&lt;th>操作&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>1.&lt;/td>
-&lt;td>创建一个网站，绑定 &lt;code>ritheme.com&lt;/code> 域名，并开启 &lt;code>SSL&lt;/code>（随便找个域名的证书就行），上传以下源码：&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;/td>
-&lt;td>&lt;a href="https://wwsj.lanzout.com/b028fzepa">https://wwsj.lanzout.com/b028fzepa&lt;/a>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;/td>
-&lt;td>密码: &lt;code>bx7r&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2.&lt;/td>
-&lt;td>刚才源码中的 &lt;code>keygen.php&lt;/code> 上传到任意地方，访问后，生成授权码和 &lt;code>token&lt;/code>。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>3.&lt;/td>
-&lt;td>在 &lt;code>wp&lt;/code> 服务器修改 &lt;code>hosts&lt;/code> 指向该授权服务器 IP。如果是在同一个服务器搭建的，修改 &lt;code>/etc/hosts&lt;/code>，加上这一行：&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;/td>
-&lt;td>127.0.0.1 ritheme.com&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>4.&lt;/td>
-&lt;td>使用生成的授权码激活。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>注&lt;/td>
-&lt;td>资源来自于网上，与本站无关，本站只做收集。&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table></description></item><item><title>免翻墙注册chatgpt账号,国内直连chatgpt一站式解决方案</title><link>https://blog.taoshuge.eu.org/post/110/</link><pubDate>Mon, 11 Dec 2023 23:02:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/110/</guid><description>&lt;h2 id="相关链接">相关链接&lt;/h2>
-&lt;p>项目地址：&lt;a href="https://github.com/pandora-next/deploy">https://github.com/pandora-next/deploy&lt;/a>&lt;/p>
-&lt;p>项目文档：&lt;a href="https://fakeopen.org/PandoraNext">https://fakeopen.org/PandoraNext&lt;/a>&lt;/p>
-&lt;p>官方获取Access Token和Session Token：&lt;a href="https://chat.openai.com/api/auth/session">https://chat.openai.com/api/auth/session&lt;/a>&lt;/p>
-&lt;p>获取Access Token和Session Token：&lt;a href="https://ai.fakeopen.com/auth">https://ai.fakeopen.com/auth&lt;/a>&lt;/p>
-&lt;p>生成Share Token：&lt;a href="https://ai.fakeopen.com/token">https://ai.fakeopen.com/token&lt;/a>&lt;/p>
-&lt;p>生成Pool Token：&lt;a href="https://ai.fakeopen.com/pool">https://ai.fakeopen.com/pool&lt;/a>&lt;/p>
-&lt;p>第三方WebUI：&lt;a href="https://github.com/Yidadaa/ChatGPT-Next-Web">https://github.com/Yidadaa/ChatGPT-Next-Web&lt;/a>&lt;/p>
-&lt;h2 id="使用web模式">使用Web模式&lt;/h2>
-&lt;p>免费账号共享池：&lt;a href="https://baipiao.io/chatgpt">https://baipiao.io/chatgpt&lt;/a>&lt;/p>
-&lt;p>官方演示地址一：&lt;a href="https://chat.oaifree.com">https://chat.oaifree.com&lt;/a>&lt;/p>
-&lt;p>官方演示地址二：&lt;a href="https://chat1.zhile.io">https://chat1.zhile.io&lt;/a>&lt;/p>
-&lt;p>别人搭建的网址：&lt;a href="https://fofa.info/result?qbase64=Ym9keT0iQ29udGludWUgd2l0aCBBY2Nlc3MgVG9rZW4iICYmIHRpdGxlPSJQYW5kb3JhTmV4dCIgJiYgY291bnRyeT0iQ04i">https://fofa.info/result?qbase64=Ym9keT0iQ29udGludWUgd2l0aCBBY2Nlc3MgVG9rZW4iICYmIHRpdGxlPSJQYW5kb3JhTmV4dCIgJiYgY291bnRyeT0iQ04i&lt;/a>&lt;/p></description></item><item><title>PayPal 注册与提现以及万里汇虚拟外币卡</title><link>https://blog.taoshuge.eu.org/post/109/</link><pubDate>Mon, 11 Dec 2023 22:32:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/109/</guid><description>&lt;p>&lt;img src="https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main/img/202312112233021.png" alt="">&lt;/p>
-&lt;p>准备工作：一张国内四大行的I类卡（一个银行一个人只能办一张）或者申请一张外币信用卡（建议招行），&lt;strong>==本次以招行为例作为演示==&lt;/strong>&lt;/p>
-&lt;p>中国大陆手续费：【&lt;a href="https://www.paypal.com/c2/webapps/mpp/merchant-fees">点击进入&lt;/a>】 香港地区手续费：【&lt;a href="https://www.paypal.com/hk/webapps/mpp/merchant-fees#additional-percentage">点击进入&lt;/a>】&lt;/p>
-&lt;p>1、注册香港paypal账户，参考视频：【&lt;a href="https://www.paypal.com/c2/webapps/mpp/account-selection">点击进入&lt;/a>】&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>记录下PayPal商家号&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>后续国外的款项用此账户作为收款账号&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>2、注册并设置万里汇账户：【&lt;a href="https://www.worldfirst.com.cn/cn/">点击进入&lt;/a>】（&lt;strong>==注：如果要删除店铺收款账号，提供需要关闭的货币账户币种以及收款账号（或尾号）到此邮箱，进行人工删除：mscn@service.worldfirst.com==&lt;/strong>==）==&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>设置收款人管理——搜索招行——点击客服——点击个人业务——输入：境外汇入路径——把对应的BIC、收款行、前面准备好的卡号填写进来&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>设置店铺/收款管理——新增店铺收款账户——选择其他电商平台——选择Google Shopping——自定义一个店铺名称——点击申请——申请完成后，不要直接添加信息——再次点击店铺/收款管理——点击补充信息——填写完成后保存&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>再次点击店铺/收款管理——找到刚添加的账号，点击进去——点击查看账户详情——回到paypal——点击关联卡或银行账户——点击关联银行账户——点击关联美国或中国香港特别行政区的银行账户——选择香港——点击下一页——然后把账户详情里面的相关信息添加进来——完成后，点击关联您的银行账户&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>3、前面的流程操作完成后，具体收款流程如下：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>用paypal账户进行收款——paypal收到款项后——然后把款项提现到万里汇支票账户——万里汇的支票账户收到后（一般要几个工作日）——在万里汇首页点击提款——选择前面添加的美元账户——银行收到钱后——在手机APP掌上生活上搜索：溢缴款领回——选择美元——输入领回金额——选择收款账户/借记卡&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>这里有三个情况需要注意的：1、如果是自己在APP上操作是不需要手续费的，如果需要人工帮忙划转，是需要收取一定的手续费的；2、如果是外币信用卡需要人工划转；3、目前了解到I类卡是支持全币种的，收款是没问题的（招行）&lt;/p>
-&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;p>因此，在重启服务器或清除缓存时，存储在内存缓存中的页面副本将会被清空，并重新生成，&lt;strong>强硬的刷新缓存方案就是重启下memcached&lt;/strong>&lt;/p></description></item></channel></rss>
