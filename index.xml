@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 22 Jan 2024 04:41:27 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 23 Jan 2024 14:05:40 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
 &lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
 &lt;/blockquote>
 &lt;p>安装依赖&lt;/p>
@@ -20,7 +20,140 @@
 &lt;/div>
 &lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
 &lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>github反代列表</title><link>https://blog.taoshuge.eu.org/post/131/</link><pubDate>Mon, 22 Jan 2024 04:41:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/131/</guid><description>&lt;h1 id="反代列表">反代列表&lt;/h1>
+&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>域名有效期监控的最佳方案</title><link>https://blog.taoshuge.eu.org/post/132/</link><pubDate>Tue, 23 Jan 2024 14:05:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/132/</guid><description>&lt;h3 id="不喜欢开场白还是直接上干货">不喜欢开场白，还是直接上干货&amp;hellip;&lt;/h3>
+&lt;blockquote>
+&lt;p>使用方法:&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;code>for d in baidu.com bing.com&lt;/code> 修改为你的域名，多个用空格隔开&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>登录&lt;a href="https://slack.com/get-started">https://slack.com/get-started&lt;/a> 获取&lt;code>Webhook URL&lt;/code> 教程在后面&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://hooks.slack.com/services/xxx/xxx/xxx">https://hooks.slack.com/services/xxx/xxx/xxx&lt;/a> 修改为你的&lt;code>Webhook URL&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;ol start="4">
+&lt;li>测试要点：修改参数&lt;code>n=129600000&lt;/code>将改好的脚本放到宝塔面板计划任务测试，运行，就会收到消息，测试收到消息再改回来2592000(单位秒)，也就是30天到期提醒&lt;/li>
+&lt;/ol>
+&lt;p>5.微信接收消息技巧: 将你的邮件转发到QQ邮箱，打开微信，设置&amp;ndash;通用&amp;ndash;辅助功能&amp;ndash;QQ邮箱提醒
+slack默认15分钟发送一次新的消息&lt;/p>
+&lt;pre tabindex="0">&lt;code>#!/bin/bash
+#检测域名是否过期
+#博客：blog.leshans.eu.org
+#日期：20240123
+#版本：v0.1
+#当前日期时间戳，用于和域名的到期时间做比较
+currentTimestamp=`date +%s`
+#检测whois命令是否存在，不存在则安装whois包
+isInstallWhois()
+{
+which whois &amp;gt;/dev/null 2&amp;gt;/dev/null
+if [ $? -ne 0 ]
+then
+yum install -y whois || apt-get install whois -y
+fi
+}
+notify()
+{
+expiredate=`whois $1 |grep &amp;#39;Registry Expiry Date&amp;#39; |awk &amp;#39;{print $4}&amp;#39; |cut -d &amp;#39;T&amp;#39; -f 1`
+#上面的$1代表域名，遍历循环出来的。
+#如果e_d的值为空，则过滤关键词&amp;#39;Expiration Time&amp;#39;
+if [ -z &amp;#34;$expiredate&amp;#34; ]
+then
+expiredate=`whois $1|grep &amp;#39;Expiration Time&amp;#39; |awk &amp;#39;{print $3}&amp;#39;`
+fi
+#将域名过期的日期转化为时间戳
+expiredatestamp=`date -d $expiredate +%s`
+#计算半个月一共有多少秒
+# 15d 1296000 30d 2592000 35d 3024000 40d 3456000
+n=2592000
+timeBeforce=$[$expiredatestamp - $n] #过期时间30d以前的时间戳
+timeAfter=$[$expiredatestamp + $n] #过期时间30d以后的时间戳
+if [ $currentTimestamp -ge $timeBeforce ] &amp;amp;&amp;amp; [ $currentTimestamp -lt $expiredatestamp ]
+then
+curl -X POST \
+-H &amp;#39;Content-type: application/json&amp;#39; \
+--data &amp;#39;{&amp;#34;text&amp;#34;:&amp;#34;⚠️域名 &amp;#39;$1&amp;#39; 将在30天内过期. 域名 &amp;#39;$1&amp;#39; 到期日是 &amp;#39;$expiredate&amp;#39; @xuexiaobai&amp;#34;}&amp;#39; \
+https://hooks.slack.com/services/xxx/xxx/xxx
+fi
+if [ $currentTimestamp -ge $expiredatestamp ]
+then
+curl -X POST \
+-H &amp;#39;Content-type: application/json&amp;#39; \
+--data &amp;#39;{
+&amp;#34;text&amp;#34;:&amp;#34;⁉️域名 &amp;#39;$1&amp;#39; 已过期. 域名 &amp;#39;$1&amp;#39; 到期日是 &amp;#39;$expiredate&amp;#39; @xuexiaobai&amp;#34;}&amp;#39; \
+https://hooks.slack.com/services/xxx/xxx/xxx
+fi
+}
+#检测上次运行的whois查询进程是否存在
+#若存在，需要杀死进程，以免影响本次脚本执行
+if pgrep whois &amp;amp;&amp;gt;/dev/null
+then
+killall -9 whois
+fi
+isInstallWhois
+for d in baidu.com bing.com
+do
+notify $d
+done
+&lt;/code>&lt;/pre>&lt;h3 id="获取webhook-url教程">获取&lt;code>Webhook URL&lt;/code>教程&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>&lt;strong>创建 Slack 团队：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>如果你还没有 Slack 团队，可以在 &lt;a href="https://slack.com/get-started">Slack 官方网站&lt;/a>上创建一个免费的团队账户。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>创建工作区：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>一旦你的团队创建好，你可以创建一个工作区，用于组织你的团队成员和频道。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>创建频道：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>频道是 Slack 中组织和分类消息的方式。你可以创建不同的频道，例如项目频道、团队频道等。&lt;/li>
+&lt;li>在 Slack 的左侧导航栏中，点击加号（+）按钮，然后选择 &amp;ldquo;创建频道&amp;rdquo;。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>添加团队成员：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>在 Slack 中邀请团队成员加入工作区，以便他们能够参与到你的工作和讨论中。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>获取 Incoming Webhook URL：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>如果你想使用脚本中的 Slack 通知功能，你需要创建一个 Incoming Webhook。&lt;/li>
+&lt;li>在 Slack 中，进入你想要接收通知的频道，点击频道名称，然后选择 &amp;ldquo;集成&amp;rdquo;。&lt;/li>
+&lt;li>在 &amp;ldquo;集成&amp;rdquo; 页面中，找到 &amp;ldquo;Incoming Webhooks&amp;rdquo; 并点击 &amp;ldquo;添加到此频道&amp;rdquo;。&lt;/li>
+&lt;li>配置 Incoming Webhook，并获取 Webhook URL。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>使用 Slack Webhook URL：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>在脚本中，你需要将 Slack Webhook URL 替换为你的 Incoming Webhook URL。这个 URL 用于向 Slack 发送通知消息。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>运行脚本：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>通过终端或脚本执行环境运行你的脚本，以开始监控域名有效期并发送通知到 Slack。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>查看通知：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>前提是域名过期或接近过期，Slack 将会收到相应的通知消息。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol></description></item><item><title>github反代列表</title><link>https://blog.taoshuge.eu.org/post/131/</link><pubDate>Mon, 22 Jan 2024 04:41:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/131/</guid><description>&lt;h1 id="反代列表">反代列表&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -75,6 +208,8 @@
 &lt;p>高清 &lt;a href="https://1080zyk1.com/">https://1080zyk1.com/&lt;/a>&lt;/p>
 &lt;p>淘片 &lt;a href="https://www.taopianzy.com/index.html">https://www.taopianzy.com/index.html&lt;/a>&lt;/p>
 &lt;p>iKun资源 &lt;a href="https://www.ikunzy.com/">https://www.ikunzy.com/&lt;/a>&lt;/p>
+&lt;p>非凡资源 &lt;a href="http://ffzy1.tv/">http://ffzy1.tv/&lt;/a>&lt;/p>
+&lt;p>光速资源 &lt;a href="https://guangsuzy.com/">https://guangsuzy.com/&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>在线动漫&lt;/p>
 &lt;/blockquote>
@@ -225,14 +360,21 @@ export PATH=$JAVA_HOME/bin:$PATH
 &lt;p>假设中国paypal转50美金到香港paypal,如果香港paypal要到账50美金，则需要：&lt;/p>
 &lt;p>50*（1+5.5%）=52.75&lt;/p>
 &lt;p>汇率换算地址：&lt;a href="https://wise.com/zh-cn/currency-converter/usd-to-cny-rate?amount=1">https://wise.com/zh-cn/currency-converter/usd-to-cny-rate?amount=1&lt;/a>&lt;/p>
-&lt;p>中国大陆手续费：【&lt;a href="https://www.paypal.com/c2/webapps/mpp/merchant-fees">点击进入&lt;/a>】 香港地区手续费：【&lt;a href="https://www.paypal.com/hk/webapps/mpp/merchant-fees#additional-percentage">点击进入&lt;/a>】&lt;/p></description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/post/126/</link><pubDate>Wed, 17 Jan 2024 12:53:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/126/</guid><description>&lt;h3 id="添加防火墙规则表达式">添加防火墙规则表达式&lt;/h3>
+&lt;p>中国大陆手续费：【&lt;a href="https://www.paypal.com/c2/webapps/mpp/merchant-fees">点击进入&lt;/a>】 香港地区手续费：【&lt;a href="https://www.paypal.com/hk/webapps/mpp/merchant-fees#additional-percentage">点击进入&lt;/a>】&lt;/p></description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/post/126/</link><pubDate>Wed, 17 Jan 2024 12:53:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/126/</guid><description>&lt;h3 id="添加防火墙规则表达式-复制代码即可">添加防火墙规则表达式 复制代码即可&lt;/h3>
 &lt;h5 id="第一恶意流量阻止">第一：恶意流量阻止&lt;/h5>
 &lt;p>操作：托管质询&lt;/p>
-&lt;p>(cf.threat_score ge 5 and not cf.client.bot) or (not http.request.version in {&amp;ldquo;HTTP/1.2&amp;rdquo; &amp;ldquo;HTTP/2&amp;rdquo; &amp;ldquo;HTTP/3&amp;rdquo; &amp;ldquo;SPDY/3.1&amp;rdquo;}) or (not http.user_agent contains &amp;ldquo;Mozilla/&amp;rdquo;)&lt;/p>
-&lt;h5 id="第二放行爬虫seo">第二：放行爬虫（seo）&lt;/h5>
+&lt;pre tabindex="0">&lt;code>(cf.threat_score ge 5 and not cf.client.bot) or (not http.request.version in {&amp;#34;HTTP/1.2&amp;#34; &amp;#34;HTTP/2&amp;#34; &amp;#34;HTTP/3&amp;#34; &amp;#34;SPDY/3.1&amp;#34;}) or (not http.user_agent contains &amp;#34;Mozilla/&amp;#34;)
+&lt;/code>&lt;/pre>&lt;h5 id="第二放行爬虫seo">第二：放行爬虫（seo）&lt;/h5>
 &lt;p>操作：跳过&lt;/p>
-&lt;p>(cf.client.bot) or (http.user_agent contains &amp;ldquo;duckduckgo&amp;rdquo;) or (http.user_agent contains &amp;ldquo;facebookexternalhit&amp;rdquo;) or (http.user_agent contains &amp;ldquo;Feedfetcher-Google&amp;rdquo;) or (http.user_agent contains &amp;ldquo;LinkedInBot&amp;rdquo;) or (http.user_agent contains &amp;ldquo;Mediapartners-Google&amp;rdquo;) or (http.user_agent contains &amp;ldquo;msnbot&amp;rdquo;) or (http.user_agent contains &amp;ldquo;Slackbot&amp;rdquo;) or (http.user_agent contains &amp;ldquo;TwitterBot&amp;rdquo;) or (http.user_agent contains &amp;ldquo;ia_archive&amp;rdquo;) or (http.user_agent contains &amp;ldquo;yahoo&amp;rdquo;)&lt;/p>
-&lt;h5 id="第三其他">第三：其他&lt;/h5>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">(&lt;/span>cf.client.bot&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;duckduckgo&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;facebookexternalhit&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;Feedfetcher-Google&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;LinkedInBot&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;Mediapartners-Google&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;msnbot&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;Slackbot&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;TwitterBot&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;ia_archive&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;yahoo&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h5 id="第三其他">第三：其他&lt;/h5>
 &lt;p>跳过源站IP、区域或国家阻止&lt;/p>
 &lt;h3 id="cf的waf的防火墙规则">CF的WAF的防火墙规则！&lt;/h3>
 &lt;p>&lt;img src="https://r2.jimugou.com/2024/01/b443160daf498dfe9cacfc1a70d9724d.webp" alt="">&lt;/p>
@@ -1049,110 +1191,4 @@ web_api=(
 &lt;p>&lt;a href="https://www.designevo.com">https://www.designevo.com&lt;/a> 可以免费下载低画质的 logo，支持自定义。&lt;/p>
 &lt;p>&lt;a href="http://yeelogo.com">http://yeelogo.com&lt;/a> 纯免费&lt;/p>
 &lt;p>去除图片背景网站
-&lt;a href="https://www.remove.bg">https://www.remove.bg&lt;/a> 免费下载，抠图效果很好。&lt;/p></description></item><item><title>纯代码免插件优化WordPress6.3实现0sql-强化拓展</title><link>https://blog.taoshuge.eu.org/post/113/</link><pubDate>Sun, 17 Dec 2023 22:47:53 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/113/</guid><description>&lt;blockquote>
-&lt;p>在WordPress各种优化插件、各种手段层出不穷的时代，各方大佬均在推荐各类插件，比如super cache、cache master和litespeed cache等。不过对于老白博客个人而言，就想图个清净，不喜欢插件太多，设置一大堆，复杂！所以呢，今天就掏出一个“无代码版”优化WordPress（强化拓展），再结合最新版本的WordPress6.3，轻松实现首页0sql，网站毫秒级加载。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/7d1e1e7e82ddc7ea6952ee65acb369b3.webp" alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展">&lt;/p>
-&lt;h3 id="1batcache效果演示">1.batcache效果演示&lt;/h3>
-&lt;p>演示网站：&lt;a href="https://test.xcbtmw.com/">https://test.xcbtmw.com/&lt;/a>&lt;/p>
-&lt;p>网站底部就能看到（未使用前首页查询次数为63）：&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/b50dff4746c68d6be01a6227ac656fdb.webp" alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展">&lt;/p>
-&lt;p>附带一个显示查询次数和时间的代码&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-markup" data-lang="markup">&amp;lt;?php echo get_num_queries().&amp;#39;次查询，耗时&amp;#39;.timer_stop(0).&amp;#39;秒。&amp;#39;; ?&amp;gt;
-&lt;/code>&lt;/pre>&lt;h3 id="2什么是wordpress强化拓展">2.什么是WordPress强化拓展&lt;/h3>
-&lt;p>在本文的教程中，老白使用的是“强化拓展”，而非&lt;a href="https://www.xcbtmw.com/tag/wordpress%e6%8f%92%e4%bb%b6" title="查看所有文章关于 WordPress插件">WordPress插件&lt;/a>，他们二者区别如下：&lt;/p>
-&lt;ol>
-&lt;li>强化拓展（Enhancements）：强化拓展是一种广义的术语，用于描述对系统或应用程序功能进行增强、扩展或改进的方法。它可以包括各种形式的修改、添加、优化或增强，以提供更多功能、性能或用户体验的改善。在WordPress中，强化拓展可以指代各种方法，如代码片段、自定义功能、主题模板修改等，用于对WordPress进行定制和增强。&lt;/li>
-&lt;li>插件（Plugins）：插件是一种特定的软件组件，用于在现有系统或应用程序中添加额外的功能或特性。在WordPress中，插件通常是以独立的文件形式存在的，可以通过后台管理界面直接安装和启用。插件提供了一种简单的方式来扩展WordPress的功能，而无需直接修改核心代码。它们可以实现各种功能，如社交媒体分享、SEO优化、表单创建、安全增强等。&lt;/li>
-&lt;/ol>
-&lt;p>强化拓展是一个更宽泛的概念，可以包括各种形式的增强和定制，而&lt;strong>插件则是一种特定的软件组件&lt;/strong>，通过添加额外的功能来扩展现有系统。&lt;strong>插件是实现强化拓展的一种常见方式&lt;/strong>。&lt;/p>
-&lt;h3 id="3batcachemem强化拓展">3.batcache+mem强化拓展&lt;/h3>
-&lt;p>此处借用果酱大佬的原话介绍batcache和memcached的关系&lt;/p>
-&lt;blockquote>
-&lt;p>WordPress 启用 Memcached 这样的内存缓存之后，每次访问 WordPress 页面，都要从内存中获取多个缓存对象。&lt;/p>
-&lt;p>而 Batcache 主要就是解决这个问题，它是基于 Memcached 的 WordPress 缓存插件，它的工作原理是：把当前整个页面作为一个对象缓存到内存中，这样再次访问 WordPress 页面的时候，直接获从内存中获取这个对象即可，速度极快。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/46e10abc6d3ec0c29cfa214478a3183f.webp" alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展">&lt;/p>
-&lt;p>从果酱大佬的描述中我们可以发现：batcache+memcached是一种非常不错的&lt;a href="https://www.xcbtmw.com/tag/wordpress_optimization" title="查看所有文章关于 WordPress优化">WordPress优化&lt;/a>手段，接下来老白跟大家分享下如何无插件开启&lt;/p>
-&lt;h3 id="31-php安装memcached拓展">3.1 PHP安装memcached拓展&lt;/h3>
-&lt;p>以&lt;a href="https://www.xcbtmw.com/tag/bt_panel" title="查看所有文章关于 宝塔面板">宝塔面板&lt;/a>为例，打开软件商店，PHP安装拓展，勾选即可（老白推荐安装opcache+memcached）&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/61a0b46e011a24ec5c32544723d87838.webp" alt="纯代码免插件优化WordPress6.3实现0sql-强化拓展">&lt;/p>
-&lt;h3 id="32-batcachemem强化拓展下载">3.2 batcache+mem强化拓展下载&lt;/h3>
-&lt;p>下载文件（batcache和memcached均来自于官方插件，大家也可以自行下载）&lt;/p>
-&lt;p>batcache+mem下载：&lt;a href="https://qtrj.lanzoul.com/i6nSD18cy6eb">https://qtrj.lanzoul.com/i6nSD18cy6eb&lt;/a>&lt;/p>
-&lt;p>然后放到WordPress的/wp-content目录下，比如老白博客的：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-php" data-lang="php">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">/&lt;/span>www&lt;span style="color:#666">.&lt;/span>xcbtmw&lt;span style="color:#666">.&lt;/span>com&lt;span style="color:#666">/&lt;/span>wp&lt;span style="color:#666">-&lt;/span>content
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="33-激活使用batcachemem">3.3 激活使用batcache+mem&lt;/h3>
-&lt;p>把上述文件放到对应目录后，还需要在WordPress根目录的wp-config.php进行下面的设置，不然会报错&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6">6&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>//设置缓存头，这里testxcbtmw可以随意设置-https://www.xcbtmw.com/29717.html
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>define&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;WP_CACHE_KEY_SALT&amp;#39;&lt;/span>, &lt;span style="color:#4070a0">&amp;#39;testxcbtmw&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>//激活memcached
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>define&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;ENABLE_CACHE&amp;#39;&lt;/span>, &lt;span style="color:#007020">true&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>//激活batcache
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>define&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;WP_CACHE&amp;#39;&lt;/span>, &lt;span style="color:#007020">true&lt;/span>&lt;span style="color:#666">)&lt;/span>;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="34-batcache缓存设置">3.4 batcache缓存设置&lt;/h3>
-&lt;p>编辑batcache的advanced-cache.php文件进行设置&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-17">17&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$max_age&lt;/span> &lt;span style="color:#666">=&lt;/span> 300; // 缓存过期时间&lt;span style="color:#666">(&lt;/span>0表示禁用batcache&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$remote&lt;/span> &lt;span style="color:#666">=&lt;/span> 0; // 禁止向远程数据中心发送缓冲区&lt;span style="color:#666">(&lt;/span>从不发送req/sec&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$times&lt;/span> &lt;span style="color:#666">=&lt;/span> 2; // 一个页面被访问了多少次之后进行缓存&lt;span style="color:#666">(&lt;/span>两个或两个以上&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$seconds&lt;/span> &lt;span style="color:#666">=&lt;/span> 0; // …在这么多秒内&lt;span style="color:#666">(&lt;/span>0表示忽略它，立即使用batcache&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$group&lt;/span> &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#4070a0">&amp;#39;batcache&amp;#39;&lt;/span>; // memcached组的名称。您可以通过更改此选项来模拟缓存刷新。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$unique&lt;/span> &lt;span style="color:#666">=&lt;/span> array&lt;span style="color:#666">()&lt;/span>; // 如果您有条件地提供不同的内容，请将变量值放在这里。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$vary&lt;/span> &lt;span style="color:#666">=&lt;/span> array&lt;span style="color:#666">()&lt;/span>; // 函数数组，用于create_function。返回值被添加到上面的&lt;span style="color:#bb60d5">$unique&lt;/span>中。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$headers&lt;/span> &lt;span style="color:#666">=&lt;/span> array&lt;span style="color:#666">()&lt;/span>; // 在这里添加头作为name&lt;span style="color:#666">=&lt;/span>&amp;gt;值或name&lt;span style="color:#666">=&lt;/span>&amp;gt;数组&lt;span style="color:#666">(&lt;/span>值&lt;span style="color:#666">)&lt;/span>。这些将与缓存中的每个响应一起发送。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$cache_redirects&lt;/span> &lt;span style="color:#666">=&lt;/span> false; // 设置true启用重定向缓存。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$redirect_status&lt;/span> &lt;span style="color:#666">=&lt;/span> false; // 这将在重定向期间设置为响应代码。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$redirect_location&lt;/span> &lt;span style="color:#666">=&lt;/span> false; // 这被设置为重定向位置。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$use_stale&lt;/span> &lt;span style="color:#666">=&lt;/span> true; // 更新缓存时是否可以返回过期的缓存响应?
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$uncached_headers&lt;/span> &lt;span style="color:#666">=&lt;/span> array&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;transfer-encoding&amp;#39;&lt;/span>&lt;span style="color:#666">)&lt;/span>; // 这些头将永远不会缓存。应用函数。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$debug&lt;/span> &lt;span style="color:#666">=&lt;/span> true; // 设置false以隐藏batcache信息 &amp;lt;!-- comment --&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$cache_control&lt;/span> &lt;span style="color:#666">=&lt;/span> true; // 将false设置为禁用Last-Modified和Cache-Control头
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$cancel&lt;/span> &lt;span style="color:#666">=&lt;/span> false; // 更改此选项以取消输出缓冲区。使用batcache_cancel &lt;span style="color:#666">()&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>var &lt;span style="color:#bb60d5">$noskip_cookies&lt;/span> &lt;span style="color:#666">=&lt;/span> array&lt;span style="color:#666">(&lt;/span> &lt;span style="color:#4070a0">&amp;#39;wordpress_test_cookie&amp;#39;&lt;/span> &lt;span style="color:#666">)&lt;/span>; // cookie的名称——如果它们存在并且缓存通常会被绕过，那么不要绕过它。
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>这里大家不作修改也行，老白已经设置好了，保持默认也可&lt;/p>
-&lt;h3 id="35-batcache缓存清除">3.5 batcache缓存清除&lt;/h3>
-&lt;p>关于缓存文件的生成，batcache&lt;strong>不生成物理文件来存储缓存&lt;/strong>的页面。相反，它使用内存缓存（例如Memcached或APCu）来存储页面的副本。这种方式比将页面保存为静态HTML文件更为高效，因为读取内存缓存比读取磁盘上的文件要快得多。&lt;/p>
-&lt;p>内存缓存只是临时存储数据的一种方式，并不持久化保存数据。&lt;/p>
-&lt;p>因此，在重启服务器或清除缓存时，存储在内存缓存中的页面副本将会被清空，并重新生成，&lt;strong>强硬的刷新缓存方案就是重启下memcached&lt;/strong>&lt;/p></description></item></channel></rss>
+&lt;a href="https://www.remove.bg">https://www.remove.bg&lt;/a> 免费下载，抠图效果很好。&lt;/p></description></item></channel></rss>
