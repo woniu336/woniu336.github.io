@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 23 Jan 2024 14:05:40 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;blockquote>
-&lt;p>&amp;ldquo;&lt;code>路飞工具箱&lt;/code>，如一枚闪亮的&lt;code>多面宝石&lt;/code>，集聚了无尽的&lt;code>服务器魔法&lt;/code>、&lt;code>Docker魔力&lt;/code>、&lt;code>VPS技巧&lt;/code>和&lt;code>建站艺术&lt;/code>。它犹如一座技术仙境，凭借其神奇力量，为您敞开通往数字世界的大门。&lt;/p>
-&lt;/blockquote>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 25 Jan 2024 21:39:26 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;h3 id="一键重装系统">一键重装系统&lt;/h3>
+&lt;p>&lt;a href="https://blog.leshans.eu.org/p/133/">https://blog.leshans.eu.org/p/133/&lt;/a>&lt;/p>
+&lt;h3 id="安装宝塔面板77原版">安装宝塔面板7.7原版&lt;/h3>
+&lt;p>&lt;a href="https://blog.leshans.eu.org/p/bt/">https://blog.leshans.eu.org/p/bt/&lt;/a>&lt;/p>
+&lt;h3 id="证书申请">证书申请&lt;/h3>
+&lt;p>&lt;a href="https://blog.leshans.eu.org/p/ssl/">https://blog.leshans.eu.org/p/ssl/&lt;/a>&lt;/p>
+&lt;h3 id="rclone工具">rclone工具&lt;/h3>
+&lt;p>&lt;a href="https://blog.leshans.eu.org/p/rclone/">https://blog.leshans.eu.org/p/rclone/&lt;/a>&lt;/p>
+&lt;h3 id="工具箱脚本">工具箱脚本&lt;/h3>
 &lt;p>安装依赖&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>apt update -y  &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> apt install -y curl
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>apt update -y
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
@@ -15,12 +21,336 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install -y curl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./tool.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>这个令人陶醉的工具箱，仿佛一个智慧的大师，将您引领至技术的巅峰。不论您是服务器新手，还是Docker的高级术士，或者是渴望创建壮丽网站的梦想家，路飞工具箱都是您的绝佳伙伴。&lt;/p>
-&lt;p>在这里，您将发现技术的奥秘，掌握服务器的操控，轻松驾驭Docker容器，雄心壮志地构建自己的虚拟专用服务器，并用创意点缀您的网站，让它独具魅力。&lt;/p>
-&lt;p>路飞工具箱，不仅是一把技术的钥匙，更是一座智慧的宝库，为您的数字之旅铺展出绚丽的道路。走进这个令人惊叹的世界，让您的技术之旅变得轻松愉快，充满乐趣与成就。&amp;rdquo;&lt;/p></description></item><item><title>域名有效期监控的最佳方案</title><link>https://blog.taoshuge.eu.org/post/132/</link><pubDate>Tue, 23 Jan 2024 14:05:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/132/</guid><description>&lt;h3 id="不喜欢开场白还是直接上干货">不喜欢开场白，还是直接上干货&amp;hellip;&lt;/h3>
+&lt;/div>&lt;h3 id="推荐脚本">推荐脚本&lt;/h3>
+&lt;p>来自科技lion&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>宝塔面板计划任务列表的迁移或导出</title><link>https://blog.taoshuge.eu.org/post/136/</link><pubDate>Thu, 25 Jan 2024 21:39:26 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/136/</guid><description>&lt;h4 id="步骤一备份文件然后迁移到新服务器对应目录下">步骤一：备份文件，然后迁移到新服务器对应目录下。&lt;/h4>
+&lt;p>备份cron下的所有文件&lt;/p>
+&lt;pre tabindex="0">&lt;code>/www/server/cron
+&lt;/code>&lt;/pre>&lt;h4 id="步骤二数据库迁移">步骤二：数据库迁移&lt;/h4>
+&lt;p>下载&lt;code>default.db&lt;/code>文件，使用&lt;code>SQLiteStudio&lt;/code>工具打开数据库。删除老站的crontab表，把新站的表复制进去。然后保存。&lt;/p>
+&lt;pre tabindex="0">&lt;code>/www/server/panel/data/default.db
+&lt;/code>&lt;/pre>&lt;p>把新的default.db上传到新站&lt;code>/www/server/panel/data/&lt;/code>目录下。即可看到新的计划任务内容&lt;/p>
+&lt;p>&lt;code>SQLiteStudio&lt;/code>下载地址：&lt;a href="https://lzui.lanpw.com/iCoiL1mas1gj">https://lzui.lanpw.com/iCoiL1mas1gj&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/12acab52576e8aa7295ba2e23e781f29.webp" alt="">&lt;/p></description></item><item><title>计划任务备份</title><link>https://blog.taoshuge.eu.org/post/qige/</link><pubDate>Thu, 25 Jan 2024 20:31:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/qige/</guid><description>&lt;h3 id="海洋cms-自用采集">海洋CMS-自用采集###&lt;/h3>
+&lt;pre tabindex="0">&lt;code>#!/bin/bash
+########################################################
+# 程序名称: 海洋CMS自动采集脚本
+# 版本信息：seacmsbot/ v2.0
+# 发布链接: https://www.seacms.net/
+# 使用方法：直接复制代码到宝塔计划任务shell脚本内容里添加每小时任务使用
+# 更新时间：2019.9.26
+##########################################################
+#①请修改下面的网站域名及管理目录
+web_site=&amp;#34;http://xxx.xxx.eu.org/xxx/admin_reslib2.php&amp;#34;
+#②请修改下面项内容为&amp;#34;admin_reslib2.php&amp;#34;里设置的访问密码(默认为系统设置的cookie密码)
+web_pwd=&amp;#34;xxx&amp;#34;
+#③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。
+#每日采集链接获取方法:选择&amp;#34;后台-采集-资源库列表&amp;#34;,复制资源站右边的&amp;#34;采集每天&amp;#34;的链接地址,去掉?前面的内容。
+web_api=(
+&amp;#39;?ac=day&amp;amp;rid=2&amp;amp;url=https://ikunzyapi.com/api.php/seaxml/vod/at/xml&amp;#39;
+&amp;#39;?ac=day&amp;amp;rid=3&amp;amp;url=https://taopianapi.com/cjapi/sea/vod/xml/m3u8.html&amp;#39;
+&amp;#39;?ac=day&amp;amp;rid=6&amp;amp;url=https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/at/xmlsea/&amp;#39;
+&amp;#39;?ac=day&amp;amp;rid=7&amp;amp;url=http://cj.ffzyapi.com/api.php/seacms/vod/from/ffm3u8/at/xml/&amp;#39;
+&amp;#39;?ac=day&amp;amp;rid=8&amp;amp;url=https://api.1080zyku.com/inc/ldg_api.php&amp;#39;
+&amp;#39;?ac=day&amp;amp;rid=9&amp;amp;url=https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/at/xmlsea/&amp;#39;
+&amp;#39;?ac=day&amp;amp;rid=10&amp;amp;url=https://api.tiankongapi.com/api.php/provide/vod/from/tkm3u8/at/xmlsea&amp;#39;
+)
+#模拟用户浏览器ua,请勿随意修改，以免被目标防火墙拦截!
+web_ua=&amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/76.0.3809.100 Safari/537.36 seacmsbot/1.2;&amp;#34;
+#采集单页
+function get_content() {
+echo &amp;#34;正在采集第$page页...&amp;#34;
+#echo &amp;#34; get_content: ---&amp;gt;url:---&amp;gt;$1&amp;#34;
+cResult=$(curl --connect-timeout 10 -m 20 -k -s -L -A &amp;#34;$web_ua&amp;#34; &amp;#34;$1&amp;#34; )
+echo $cResult | grep -q &amp;#34;采集&amp;#34;
+#echo -e &amp;#34;$1\n$cResult&amp;#34;
+if [ &amp;#34;$?&amp;#34; = &amp;#34;0&amp;#34; ]; then
+next_content &amp;#34;$cResult&amp;#34;
+else
+echo -e &amp;#34;采集失败,请检查设置!\n失败链接--&amp;gt;$1\n返回信息--&amp;gt;$cResult\n采集结束，共0页&amp;#34;
+fi
+}
+#采集下页
+function next_content() {
+#统计数据
+Result=$(echo &amp;#34;$1&amp;#34; | tr &amp;#34;
+&amp;#34; &amp;#34;\n&amp;#34;)
+a=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;采集成功&amp;#34;)
+b=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;更新数据&amp;#34;)
+c=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;无需更新&amp;#34;)
+d=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;跳过&amp;#34;)
+echo &amp;#34;采集成功--&amp;gt;已更$c部,新增$a部,更新$b部,跳过$d部&amp;#34;
+let add+=$a
+let update+=$b
+let none+=$c
+let jmp+=$d
+#检测并采集下页
+next_url=${1##*location.href=\&amp;#39;}
+next_url=${next_url%%\&amp;#39;*}
+#echo $next_url
+if [ &amp;#34;${next_url:0:1}&amp;#34; = &amp;#34;?&amp;#34; ]
+then
+let page++
+get_content &amp;#34;$web_site$next_url&amp;#34;
+else
+echo &amp;#34;采集结束，共$page页&amp;#34;
+fi
+}
+#脚本入口
+echo &amp;#34;海洋CMS自动采集脚本开始执行 版本：v1.2&amp;#34;
+starttime=$(date +%s)
+update=0 #更新
+add=0 #新增
+none=0 #无变化
+jmp=0 # 跳过
+for url in ${web_api[@]};
+do
+if [[ ! -z $url ]]
+then
+web_param=&amp;#34;$web_site$url&amp;amp;password=$web_pwd&amp;#34;
+page=1
+echo &amp;#34;开始采集：$url&amp;#34;
+get_content $web_param
+fi
+done
+endtime=$(date +%s)
+echo &amp;#34;============================&amp;#34;
+echo &amp;#34;入库--&amp;gt;$add部&amp;#34;
+echo &amp;#34;更新--&amp;gt;$update部&amp;#34;
+echo &amp;#34;跳过--&amp;gt;$jmp部(未绑定分类或链接错误)&amp;#34;
+echo &amp;#34;今日--&amp;gt;$[none+add+update]部&amp;#34;
+echo &amp;#34;============================&amp;#34;
+echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
+&lt;/code>&lt;/pre>&lt;h3 id="其他备份">其他备份&lt;/h3>
+&lt;pre tabindex="0">&lt;code>#!/bin/bash
+########################################################
+# 程序名称: 海洋CMS自动采集脚本
+# 版本信息：seacmsbot/ v2.0
+# 发布链接: https://www.seacms.net/
+# 使用方法：直接复制代码到宝塔计划任务shell脚本内容里添加每小时任务使用
+# 更新时间：2019.9.26
+##########################################################
+#①请修改下面的网站域名及管理目录
+web_site=&amp;#34;http://xxx/xxx/admin_reslib2.php&amp;#34;
+#②请修改下面项内容为&amp;#34;admin_reslib2.php&amp;#34;里设置的访问密码(默认为系统设置的cookie密码)
+web_pwd=&amp;#34;xxx&amp;#34;
+#③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。
+#每日采集链接获取方法:选择&amp;#34;后台-采集-资源库列表&amp;#34;,复制资源站右边的&amp;#34;采集每天&amp;#34;的链接地址,去掉?前面的内容。
+web_api=(
+&amp;#39;?ac=day&amp;amp;rid=5&amp;amp;url=https://xxx/xxx.php/provide/vod/at/xml&amp;#39;
+)
+#模拟用户浏览器ua,请勿随意修改，以免被目标防火墙拦截!
+web_ua=&amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+Chrome/76.0.3809.100 Safari/537.36 seacmsbot/1.2;&amp;#34;
+#采集单页
+function get_content() {
+echo &amp;#34;正在采集第$page页...&amp;#34;
+#echo &amp;#34; get_content: ---&amp;gt;url:---&amp;gt;$1&amp;#34;
+cResult=$(curl --connect-timeout 10 -m 20 -k -s -L -A &amp;#34;$web_ua&amp;#34; &amp;#34;$1&amp;#34; )
+echo $cResult | grep -q &amp;#34;采集&amp;#34;
+#echo -e &amp;#34;$1\n$cResult&amp;#34;
+if [ &amp;#34;$?&amp;#34; = &amp;#34;0&amp;#34; ]; then
+next_content &amp;#34;$cResult&amp;#34;
+else
+echo -e &amp;#34;采集失败,请检查设置!\n失败链接--&amp;gt;$1\n返回信息--&amp;gt;$cResult\n采集结束，共0页&amp;#34;
+fi
+}
+#采集下页
+function next_content() {
+#统计数据
+Result=$(echo &amp;#34;$1&amp;#34; | tr &amp;#34;
+&amp;#34; &amp;#34;\n&amp;#34;)
+a=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;采集成功&amp;#34;)
+b=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;更新数据&amp;#34;)
+c=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;无需更新&amp;#34;)
+d=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;跳过&amp;#34;)
+echo &amp;#34;采集成功--&amp;gt;已更$c部,新增$a部,更新$b部,跳过$d部&amp;#34;
+let add+=$a
+let update+=$b
+let none+=$c
+let jmp+=$d
+#检测并采集下页
+next_url=${1##*location.href=\&amp;#39;}
+next_url=${next_url%%\&amp;#39;*}
+#echo $next_url
+if [ &amp;#34;${next_url:0:1}&amp;#34; = &amp;#34;?&amp;#34; ]
+then
+let page++
+get_content &amp;#34;$web_site$next_url&amp;#34;
+else
+echo &amp;#34;采集结束，共$page页&amp;#34;
+fi
+}
+#脚本入口
+echo &amp;#34;海洋CMS自动采集脚本开始执行 版本：v1.2&amp;#34;
+starttime=$(date +%s)
+update=0 #更新
+add=0 #新增
+none=0 #无变化
+jmp=0 # 跳过
+for url in ${web_api[@]};
+do
+if [[ ! -z $url ]]
+then
+web_param=&amp;#34;$web_site$url&amp;amp;password=$web_pwd&amp;#34;
+page=1
+echo &amp;#34;开始采集：$url&amp;#34;
+get_content $web_param
+fi
+done
+endtime=$(date +%s)
+echo &amp;#34;============================&amp;#34;
+echo &amp;#34;入库--&amp;gt;$add部&amp;#34;
+echo &amp;#34;更新--&amp;gt;$update部&amp;#34;
+echo &amp;#34;跳过--&amp;gt;$jmp部(未绑定分类或链接错误)&amp;#34;
+echo &amp;#34;今日--&amp;gt;$[none+add+update]部&amp;#34;
+echo &amp;#34;============================&amp;#34;
+echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
+&lt;/code>&lt;/pre></description></item><item><title>acme自制脚本快速申请免费证书</title><link>https://blog.taoshuge.eu.org/post/ssl/</link><pubDate>Thu, 25 Jan 2024 15:59:24 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/ssl/</guid><description>&lt;h3 id="脚本">脚本&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x ssl.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./ssl.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>步骤：选择你的操作系统 &amp;ndash; 输入邮箱 &amp;ndash; 选择证书 &amp;ndash; 输入域名 &amp;ndash; 输入网站路径&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>注意：如果你的网站启动目录指向的是二级目录，请改回根目录，否者申请出问题&lt;/p>
+&lt;/blockquote>
+&lt;p>证书申请成功后目录：/root/.acme.sh/你的域名/&lt;/p>
+&lt;p>打开目录：&lt;/p>
+&lt;p>xxxx.key为密钥&lt;/p>
+&lt;p>fullchain.cer为证书&lt;/p></description></item><item><title>linux vps重装系统，dd</title><link>https://blog.taoshuge.eu.org/post/133/</link><pubDate>Wed, 24 Jan 2024 18:36:17 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/133/</guid><description>&lt;h3 id="项目">项目&lt;/h3>
+&lt;p>&lt;a href="https://github.com/leitbogioro/Tools">https://github.com/leitbogioro/Tools&lt;/a>&lt;/p>
+&lt;p>Debian系列(Debian / Ubuntu / Kali):&lt;/p>
+&lt;pre tabindex="0">&lt;code>apt update -y
+&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install wget -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="下载">下载：&lt;/h2>
+&lt;pre tabindex="0">&lt;code>wget --no-check-certificate -qO InstallNET.sh &amp;#39;https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/InstallNET.sh&amp;#39; &amp;amp;&amp;amp; chmod a+x InstallNET.sh
+&lt;/code>&lt;/pre>&lt;h3 id="默认用户名和密码">默认用户名和密码&lt;/h3>
+&lt;p>用户名：root&lt;/p>
+&lt;p>密码：&lt;code>LeitboGi0ro&lt;/code>&lt;/p>
+&lt;h3 id="debian-12">Debian 12&lt;/h3>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian
+&lt;/code>&lt;/pre>&lt;h3 id="ubuntu-2204">ubuntu 22.04&lt;/h3>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -ubuntu
+&lt;/code>&lt;/pre>&lt;h3 id="启用bbr">启用BBR&lt;/h3>
+&lt;blockquote>
+&lt;p>通过向 /etc/sysctl.d/99-sysctl.conf 添加参数和值来为当前内核启用 BBR&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/enable_bbr.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x enable_bbr.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./enable_bbr.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="检查-bbr-是否启动">检查 BBR 是否启动&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>lsmod | grep bbr
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="更新系统">更新系统&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt update -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install -y curl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="推荐脚本">推荐脚本&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="docker安装">docker安装&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -fsSL https://get.docker.com | sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="地区自选重装debian-11推荐大陆以外的服务器">地区自选，重装Debian 11（推荐大陆以外的服务器）&lt;/h3>
+&lt;h4 id="日本">日本：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.riken.jp/Linux/debian/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="香港">香港：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.hk.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="新加坡">新加坡：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.sg.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="韩国">韩国：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.kaist.ac.kr/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="台湾">台湾：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.tw.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="美国">美国：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;https://mirrors.ocf.berkeley.edu/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="加拿大">加拿大：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.ca.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="英国">英国：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.uk.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="德国">德国：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.de.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="法国">法国：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.fr.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="荷兰">荷兰：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.nl.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="瑞士">瑞士：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.ch.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="俄罗斯">俄罗斯：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.ru.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre>&lt;h4 id="澳大利亚">澳大利亚：&lt;/h4>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.au.debian.org/debian/&amp;#34;
+&lt;/code>&lt;/pre></description></item><item><title>域名有效期监控的最佳方案</title><link>https://blog.taoshuge.eu.org/post/132/</link><pubDate>Tue, 23 Jan 2024 14:05:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/132/</guid><description>&lt;h3 id="不喜欢开场白还是直接上干货">不喜欢开场白，还是直接上干货&amp;hellip;&lt;/h3>
 &lt;blockquote>
 &lt;p>使用方法:&lt;/p>
 &lt;ol>
@@ -220,7 +550,7 @@ done
 &lt;/blockquote>
 &lt;p>&lt;a href="https://walixz.com/go/racknerd">RackNerd&lt;/a>是美国一家基础架构即服务IaaS云服务供应商，由云计算行业资深人士成立。这家公司主要提供虚拟主机、&lt;a href="https://walixz.com/cheap-vps.html" title="便宜VPS">便宜VPS&lt;/a>服务器和独立服务器等产品，以及经营代托管业务。由于价格实惠性价比高，所以RackNerd可以作为个人建站极好的选择。&lt;/p>
 &lt;p>在这篇文章中，瓦力箱子整理下RackNerd优惠码和最新的促销活动分享，有需要可以购买。&lt;/p>
-&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/f9b91566c3bdb66d72b949de05bc7788.webp" alt="RackNerd优惠码">&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/f9b91566c3bdb66d72b949de05bc7788.webp" alt="RackNerd优惠码">&lt;/p>
 &lt;h2 id="1-racknerd-vps最新优惠">1. RackNerd VPS最新优惠&lt;/h2>
 &lt;p>2024年1月更新：过完圣诞节，2024年新年马上就要来临。RackNerd为大家准备了4款便宜VPS套餐，来庆祝元旦的到来，最低配置只需要11美元/年。&lt;/p>
 &lt;table>
@@ -348,12 +678,12 @@ done
 &lt;p>并在 profile 文件的末尾添加以下环境变量&lt;/p>
 &lt;pre tabindex="0">&lt;code>export JAVA_HOME=/usr/lib/jvm/jdk17
 export PATH=$JAVA_HOME/bin:$PATH
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/9b201ba416eafce85648312f23174f18.webp" alt="">&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/9b201ba416eafce85648312f23174f18.webp" alt="">&lt;/p>
 &lt;p>返回终端，输入以下命令，刷新配置文件&lt;/p>
 &lt;pre tabindex="0">&lt;code>source /etc/profile
 &lt;/code>&lt;/pre>&lt;p>再输入以下命令，如果出现 java 版本即代表环境配置成功 。&lt;/p>
 &lt;pre tabindex="0">&lt;code>java -version
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/9750070fe7df93ec71020759bdd974c8.webp" alt="">&lt;/p></description></item><item><title>paypal转账手续费</title><link>https://blog.taoshuge.eu.org/post/127/</link><pubDate>Thu, 18 Jan 2024 14:01:13 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/127/</guid><description>&lt;p>收款：4.4%+0.3USD&lt;/p>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/9750070fe7df93ec71020759bdd974c8.webp" alt="">&lt;/p></description></item><item><title>paypal转账手续费</title><link>https://blog.taoshuge.eu.org/post/127/</link><pubDate>Thu, 18 Jan 2024 14:01:13 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/127/</guid><description>&lt;p>收款：4.4%+0.3USD&lt;/p>
 &lt;p>比如我转30给你，你实际收到的是：30 -（30*4.4%+0.3）=28.38&lt;/p>
 &lt;p>中国paypal转账到香港paypal，损耗5.5%&lt;/p>
 &lt;p>包括：2%交易总额+3.5%交易汇率=5.5%&lt;/p>
@@ -377,10 +707,10 @@ export PATH=$JAVA_HOME/bin:$PATH
 &lt;/div>&lt;h5 id="第三其他">第三：其他&lt;/h5>
 &lt;p>跳过源站IP、区域或国家阻止&lt;/p>
 &lt;h3 id="cf的waf的防火墙规则">CF的WAF的防火墙规则！&lt;/h3>
-&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/b443160daf498dfe9cacfc1a70d9724d.webp" alt="">&lt;/p>
-&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/6722fbdd4feb910ff8d8a41efec0a1d9.webp" alt="">&lt;/p>
-&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/4439083cfcccf86591fa458165383ec7.webp" alt="">&lt;/p>
-&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/d109af2b05d1ea0a25ffaad7298cad07.webp" alt="">&lt;/p></description></item><item><title>自建CDN-GoEdge CDN - 制作自己专属的CDN</title><link>https://blog.taoshuge.eu.org/post/125/</link><pubDate>Wed, 17 Jan 2024 00:36:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/125/</guid><description>&lt;h2 id="系统需求">系统需求&lt;/h2>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/b443160daf498dfe9cacfc1a70d9724d.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/6722fbdd4feb910ff8d8a41efec0a1d9.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/4439083cfcccf86591fa458165383ec7.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/d109af2b05d1ea0a25ffaad7298cad07.webp" alt="">&lt;/p></description></item><item><title>自建CDN-GoEdge CDN - 制作自己专属的CDN</title><link>https://blog.taoshuge.eu.org/post/125/</link><pubDate>Wed, 17 Jan 2024 00:36:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/125/</guid><description>&lt;h2 id="系统需求">系统需求&lt;/h2>
 &lt;p>最小需求：&lt;/p>
 &lt;ul>
 &lt;li>操作系统：Linux
@@ -595,7 +925,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;p>若提示启用成功，后台快捷菜单处没有显示快捷菜单，那么手动添加一下快捷菜单即可&lt;/p>
 &lt;pre tabindex="0">&lt;code>萌芽采集资源,mycj/union
 &lt;/code>&lt;/pre>&lt;p>复制上方快捷菜单代码，添加到快捷菜单里面并保存即可&lt;/p>
-&lt;p>&lt;img src="https://r2.jimugou.com/2024/01/30c1ac6daef2b01604cedb562b962657.webp" alt="">&lt;/p></description></item><item><title>苹果cms通用清理php后门自动脚本</title><link>https://blog.taoshuge.eu.org/post/123/</link><pubDate>Fri, 12 Jan 2024 12:17:18 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/123/</guid><description>&lt;h3 id="一键清理挂马脚本">一键清理挂马脚本：&lt;/h3>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/30c1ac6daef2b01604cedb562b962657.webp" alt="">&lt;/p></description></item><item><title>苹果cms通用清理php后门自动脚本</title><link>https://blog.taoshuge.eu.org/post/123/</link><pubDate>Fri, 12 Jan 2024 12:17:18 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/123/</guid><description>&lt;h3 id="一键清理挂马脚本">一键清理挂马脚本：&lt;/h3>
 &lt;pre tabindex="0">&lt;code>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/xiu.sh &amp;amp;&amp;amp; chmod +x xiu.sh &amp;amp;&amp;amp; ./xiu.sh
 &lt;/code>&lt;/pre>&lt;p>1：脚本会把网站配置文件备份到&lt;code>/home/back&lt;/code>目录&lt;/p>
 &lt;p>2：/template 以及 /upload目录内的所有 .php 文件删除&lt;/p>
@@ -971,224 +1301,4 @@ web_api=(
 &lt;h3 id="26-最终防御5秒盾">2.6 最终防御5秒盾&lt;/h3>
 &lt;p>目前本站遇到的攻击无需开启五秒盾。&lt;/p>
 &lt;p>如果你的攻击比较大，而且依靠上面规则无法抵挡的话，就开启这个吧。开启后所有请求都会进行人机验证，影响较大。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/190e53d2717d62f9ec3712b234ae7cb0.webp" alt="">&lt;/p></description></item><item><title>全网最新的Python爬虫教程+实战项目案例，超适合小白练手的实战项目！</title><link>https://blog.taoshuge.eu.org/post/117/</link><pubDate>Fri, 22 Dec 2023 23:49:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/117/</guid><description>&lt;p>Python项目源码、教程、工具合集，由于经常私信受限，或者回复大家不及时，耽误大家时间，所以up主把内部链接放这里了，需要的点击自行拿走。&lt;/p>
-&lt;p>（需要各类安装包和秒杀源码的宝子可以添加文章下方哦）&lt;/p>
-&lt;p>（链接直接复制到百度/夸克网盘打开就可以获取了）&lt;/p>
-&lt;p>1.音乐源码&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1QwEFWLGxp-PSn1E_ajaHjg?pwd=386d &lt;/p>
-&lt;p>提取码：386d &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>2.小说&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/17_r-A95tt-FF2kvcr46-fA?pwd=g1x7 &lt;/p>
-&lt;p>提取码：g1x7 &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>3.WiFi密码获取&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1EG44DeW20YYclrcIkfiSzQ?pwd=T94p &lt;/p>
-&lt;p>提取码：T94p &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>4.Python大麦抢票&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/19xq7wdPb327GISXUgrmSNw?pwd=32jb &lt;/p>
-&lt;p>提取码：32jb &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p> &lt;/p>
-&lt;p>5.Python百度文库&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1b-IpYM9H8LYQs55T23LDhg?pwd=649w &lt;/p>
-&lt;p>提取码：649w &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>6.鲜花&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1KPextm2UPF4rEQLzh6dtfA?pwd=7tcL &lt;/p>
-&lt;p>提取码：7tcL &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>7.爱心代码&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1HhpFZVWV7im1HBQxJ6SB1w?pwd=7ow1 &lt;/p>
-&lt;p>提取码：7ow1 &lt;/p>
-&lt;p>8.VIP视频&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/16t82q9llmOwtzYqa6OFN1A?pwd=1Ta4 &lt;/p>
-&lt;p>提取码：1Ta4 &lt;/p>
-&lt;p>9.短信源码&lt;/p>
-&lt;p>复制整段内容，打开最新版「夸克APP」即可获取。&lt;/p>
-&lt;p>链接：https://pan.quark.cn/s/b3282faf09c3&lt;/p>
-&lt;p>10.爬取b站视频&lt;/p>
-&lt;p>&lt;a href="https://pan.baidu.com/s/1uLvILTSIkDYYIOkcQLSlpw?pwd=2hpd">https://pan.baidu.com/s/1uLvILTSIkDYYIOkcQLSlpw?pwd=2hpd&lt;/a> &lt;/p>
-&lt;p>提取码：2hpd &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>11.微博爬虫&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1F3Stg49dy-LX1i-rUYlGYw?pwd=y138 &lt;/p>
-&lt;p>提取码：y138 &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>12.视频素材下载&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1W_jjbTMWsEpLFDT35GrCMQ?pwd=MyC9 &lt;/p>
-&lt;p>提取码：MyC9 &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>13.MySQL安装包&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1BobuIRyqkWW_cDImFcbf5w?pwd=g356 &lt;/p>
-&lt;p>提取码：g356 &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>14.anaconda安装包&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1TLOnDZmVV5crxi4Fqy8W4A?pwd=a61m &lt;/p>
-&lt;p>提取码：a61m &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>15.Vmware安装包&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1ag2EaRz68fjXTFlXh2EC5A?pwd=fnc9 &lt;/p>
-&lt;p>提取码：fnc9 &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>16.vscode安装包&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1eJvCGArOmzsV0zjGjekG4w?pwd=Btp2 &lt;/p>
-&lt;p>提取码：Btp2 &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>17.MATLAB安装包&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1vj_gYYIBTJgcnunwGiPb8A?pwd=53MF &lt;/p>
-&lt;p>提取码：53MF &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>18.navicat安装包&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1uUtKM-s5GgDGAeLq3eJoAg?pwd=qzxq &lt;/p>
-&lt;p>提取码：qzxq &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>19.unity安装包&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1tSQM1YGoK5MY4A_IdwFqQQ?pwd=6B7u &lt;/p>
-&lt;p>提取码：6B7u &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>20.clion安装包&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1DpETVEqRFonrW4sgWABjJQ?pwd=4Ds1 &lt;/p>
-&lt;p>提取码：4Ds1 &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」&lt;/p>
-&lt;p>21.eclipse安装包&lt;/p>
-&lt;p>链接：https://pan.baidu.com/s/1JHsEYIHkzd44KaUO_iRJNg?pwd=H4g6 &lt;/p>
-&lt;p>提取码：H4g6 &lt;/p>
-&lt;p>复制这段内容打开「百度网盘APP 即可获取」 作者：山寨静香 &lt;a href="https://www.bilibili.com/read/cv27611437/">https://www.bilibili.com/read/cv27611437/&lt;/a> 出处：bilibili&lt;/p></description></item><item><title>微力同步</title><link>https://blog.taoshuge.eu.org/post/116/</link><pubDate>Thu, 21 Dec 2023 22:56:32 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/116/</guid><description>&lt;p>微力同步是一款可让您在多个设备上同步文件的应用程序，在您自己的机器组成的私有云上，在其中一台机器上创建，修改或删除文件会自动复制同步到其他设备。微力同步不会将您的数据上传到公有云端，而是在您自己的机器组成的私有云上互相同步交换数据。&lt;/p>
-&lt;p>微力同步可在台式机，笔记本电脑，智能手机，平板电脑和网络连接的外围设备之间提供安全的点对点数据同步交换。 没有中心节点存储数据文件，所有数据的传输通过AES加密传送，确保数据的安全性，所有数据都存在自己管理的机器硬盘上，安全性有了更高的保障。&lt;/p>
-&lt;h2 id="linux-自动化安装脚本">Linux 自动化安装脚本&lt;/h2>
-&lt;p>该自动安装器目前适配Centos/Debian/Ubuntu 3大主流系统，其它的使用systemd的系统应该也可以使用，暂未测试&lt;/p>
-&lt;p>快速安装&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#(如果需要指定索引存放位置请在最后面添加-d 路径 如 -d /data/verysync)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl http://www.verysync.com/shell/verysync-linux-installer/go-installer.sh &amp;gt; go-installer.sh
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod +x go-installer.sh
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./go-installer.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>安装完成后就可以用浏览器打开 &lt;a href="http://xn--ip-0p3ck01akcu41v:8886/">http://你的IP地址:8886&lt;/a> 管理微力内容了&lt;/p>
-&lt;p>安装器参数说明&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-10">10&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>./go-installer.sh &lt;span style="color:#666">[&lt;/span>-h&lt;span style="color:#666">]&lt;/span> &lt;span style="color:#666">[&lt;/span>-c&lt;span style="color:#666">]&lt;/span> &lt;span style="color:#666">[&lt;/span>--remove&lt;span style="color:#666">]&lt;/span> &lt;span style="color:#666">[&lt;/span>-p proxy&lt;span style="color:#666">]&lt;/span> &lt;span style="color:#666">[&lt;/span>-f&lt;span style="color:#666">]&lt;/span> &lt;span style="color:#666">[&lt;/span>--version vx.y.z&lt;span style="color:#666">]&lt;/span> &lt;span style="color:#666">[&lt;/span>-l file&lt;span style="color:#666">]&lt;/span> &lt;span style="color:#666">[&lt;/span>-d index location&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -h, --help 显示帮助
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -p, --proxy 指定代理服务器 -p socks5://127.0.0.1:1080 or -p http://127.0.0.1:3128 etc
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -f, --force 强制安装
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --version 安装特定版本 例如 --version v0.15.11-rc2
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -l, --local 从本地下载好的文件安装 需要使用绝对路径如 -l /root/verysync-linux-amd64-v0.15.12-rc1.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> --remove 卸载微力同步
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -c, --check 检查更新
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -d --home 指定微力索引存放位置, 默认 ~/.config/verysync
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> -u --user 指定运行微力服务的用户 默认 root
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>阿里云如何完全卸载阿里云盾（安骑士）并屏蔽阿里云盾IP</title><link>https://blog.taoshuge.eu.org/post/115/</link><pubDate>Thu, 21 Dec 2023 20:44:39 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/115/</guid><description>&lt;h2 id="什么是阿里云盾">&lt;strong>什么是阿里云盾&lt;/strong>&lt;/h2>
-&lt;p>阿里云盾（AliYunDun），又名安骑士，是购买阿里云云产品后自带的监控云服务器/轻量应用服务器安全的产品，能够自动化实时入侵威胁检测、病毒查杀、漏洞智能修复、基线一键核查等功能，但是同时也会监控你的服务器是否有违规进程，然后就会收到阿里云警告邮件。&lt;/p>
-&lt;p>阿里云盾主要包括3个进程：AliYunDun、aliyun-service和AliYunDunUpdate。&lt;/p>
-&lt;h2 id="如何完全卸载阿里云盾">&lt;strong>如何完全卸载阿里云盾&lt;/strong>&lt;/h2>
-&lt;h3 id="卸载阿里云盾">&lt;strong>卸载阿里云盾&lt;/strong>&lt;/h3>
-&lt;p>远程连接到阿里云云服务器或者轻量应用服务器后，执行以下代码卸载阿里云盾：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6">6&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>wget http://update.aegis.aliyun.com/download/uninstall.sh
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod +x uninstall.sh
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./uninstall.sh
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget http://update.aegis.aliyun.com/download/quartz_uninstall.sh
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod +x quartz_uninstall.sh
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>./quartz_uninstall.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="删除阿里云盾文件残留">&lt;strong>删除阿里云盾文件残留&lt;/strong>&lt;/h3>
-&lt;p>卸载阿里云盾后，执行如下代码删除阿里云盾文件残留：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>pkill aliyun-service
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -fr /etc/init.d/agentwatch /usr/sbin/aliyun-service
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rf /usr/local/aegis*
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="屏蔽阿里云盾ip">&lt;strong>屏蔽阿里云盾IP&lt;/strong>&lt;/h3>
-&lt;p>最后就是屏蔽阿里云盾的IP：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-11">11&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.201.0/28 -j DROP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.201.16/29 -j DROP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.201.32/28 -j DROP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.225.192/29 -j DROP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.225.200/30 -j DROP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.225.184/29 -j DROP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.225.183/32 -j DROP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.225.206/32 -j DROP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.225.205/32 -j DROP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.225.195/32 -j DROP
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>iptables -I INPUT -s 140.205.225.204/32 -j DROP
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="检查阿里云盾是否卸载干净">&lt;strong>检查阿里云盾是否卸载干净&lt;/strong>&lt;/h2>
-&lt;p>最后检查下自己服务器上的阿里云盾是否卸载干净了，主要就是看进程里有没有阿里云盾的相关进程了（AliYunDun、aliyun-service和AliYunDunUpdate），可以通过&lt;code>ps -aux | grep -E 'aliyun|AliYunDun'&lt;/code>来检查，如果没有相关进程则说明阿里云盾已经卸载干净了。&lt;/p></description></item><item><title>实用网站合集</title><link>https://blog.taoshuge.eu.org/post/114/</link><pubDate>Tue, 19 Dec 2023 22:07:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/114/</guid><description>&lt;p>静态资源 CDN&lt;/p>
-&lt;p>全球都有节点&lt;/p>
-&lt;p>字节 cdn：https://cdn.bytedance.com 支持搜索。&lt;/p>
-&lt;p>七牛 cdn：https://www.staticfile.org 支持搜索。&lt;/p>
-&lt;p>知乎 unpkg 镜像：https://unpkg.zhimg.com 不全，不支持搜索。&lt;/p>
-&lt;p>360cdn：https://cdn.baomitu.com&lt;/p>
-&lt;p>仅中国大陆有节点&lt;/p>
-&lt;p>bootcdn：https://www.bootcdn.cn&lt;/p>
-&lt;p>75cdn：https://cdn.baomitu.com&lt;/p>
-&lt;p>中国大陆使用国外节点&lt;/p>
-&lt;p>jsDelivr：&lt;/p>
-&lt;p>&lt;a href="http://fastly.jsdelivr.net">http://fastly.jsdelivr.net&lt;/a>&lt;/p>
-&lt;p>&lt;a href="http://cdn.jsdelivr.net">http://cdn.jsdelivr.net&lt;/a>&lt;/p>
-&lt;p>&lt;a href="http://gcore.jsdelivr.net">http://gcore.jsdelivr.net&lt;/a>&lt;/p>
-&lt;p>CDNJS：http://www.cdnjs.com&lt;/p>
-&lt;p>unpkg：https://www.unpkg.com&lt;/p>
-&lt;p>Logo 生成网站&lt;/p>
-&lt;p>&lt;a href="https://www.designevo.com">https://www.designevo.com&lt;/a> 可以免费下载低画质的 logo，支持自定义。&lt;/p>
-&lt;p>&lt;a href="http://yeelogo.com">http://yeelogo.com&lt;/a> 纯免费&lt;/p>
-&lt;p>去除图片背景网站
-&lt;a href="https://www.remove.bg">https://www.remove.bg&lt;/a> 免费下载，抠图效果很好。&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/190e53d2717d62f9ec3712b234ae7cb0.webp" alt="">&lt;/p></description></item></channel></rss>
