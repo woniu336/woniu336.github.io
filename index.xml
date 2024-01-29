@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 25 Jan 2024 21:39:26 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;h3 id="一键重装系统">一键重装系统&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 29 Jan 2024 17:29:58 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;h3 id="一键重装系统">一键重装系统&lt;/h3>
 &lt;p>&lt;a href="https://blog.leshans.eu.org/p/133/">https://blog.leshans.eu.org/p/133/&lt;/a>&lt;/p>
 &lt;h3 id="安装宝塔面板77原版">安装宝塔面板7.7原版&lt;/h3>
 &lt;p>&lt;a href="https://blog.leshans.eu.org/p/bt/">https://blog.leshans.eu.org/p/bt/&lt;/a>&lt;/p>
@@ -42,11 +42,233 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>宝塔面板计划任务列表的迁移或导出</title><link>https://blog.taoshuge.eu.org/post/136/</link><pubDate>Thu, 25 Jan 2024 21:39:26 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/136/</guid><description>&lt;h4 id="步骤一备份文件然后迁移到新服务器对应目录下">步骤一：备份文件，然后迁移到新服务器对应目录下。&lt;/h4>
+&lt;/div></description></item><item><title>cloudflare R2作为图床的管理和同步</title><link>https://blog.taoshuge.eu.org/post/143/</link><pubDate>Mon, 29 Jan 2024 17:29:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/143/</guid><description>&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/cf5659f258b6ee549a2b27829abfe725.webp" alt="">&lt;/p>
+&lt;blockquote>
+&lt;p>因为我把r2当图床，但是大量图片没有经过压缩处理，浪费带宽资源，所以有了这篇记录，&lt;/p>
+&lt;p>大致意思就是把r2的图片同步到电脑上，使用压缩工具批量压缩处理之后，在同步到r2&lt;/p>
+&lt;p>为什么不使用linux去搞，因为繁琐问题多，不稳定&lt;/p>
+&lt;/blockquote>
+&lt;p>1：下载rclone: &lt;a href="https://lzui.lanzv.com/iE6SN1mn693a">https://lzui.lanzv.com/iE6SN1mn693a&lt;/a>&lt;/p>
+&lt;p>先创建存储桶，例如&lt;code>imgs&lt;/code>是我的存储桶名称&lt;/p>
+&lt;p>2：把&lt;code>rclone-v1.63.0-windows-amd64.zip&lt;/code>解压到D盘，进入目录，在&lt;code>rclone.conf&lt;/code>文件配置r2，&lt;/p>
+&lt;p>只需要配置 &lt;code>access_key_id，secret_access_key，endpoint&lt;/code>三个参数即可&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/4d6e01dc7b2e47247f2138945ddabc82.webp" alt="">&lt;/p>
+&lt;p>3：新建文件，写入代码，将后缀改为&lt;code>bat&lt;/code>（双击运行）&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /d D:&lt;span style="color:#4070a0;font-weight:bold">\r&lt;/span>clone-v1.63.0-windows-amd64
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone sync r2:imgs&lt;span style="color:#4070a0;font-weight:bold">\2&lt;/span>&lt;span style="color:#40a070">024&lt;/span> C:&lt;span style="color:#4070a0;font-weight:bold">\U&lt;/span>sers&lt;span style="color:#4070a0;font-weight:bold">\A&lt;/span>dministrator&lt;span style="color:#4070a0;font-weight:bold">\D&lt;/span>esktop&lt;span style="color:#4070a0;font-weight:bold">\i&lt;/span>mgs&lt;span style="color:#4070a0;font-weight:bold">\2&lt;/span>&lt;span style="color:#40a070">024&lt;/span> --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span> --drive-acknowledge-abuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这条代码的意思是：&lt;/p>
+&lt;p>把我的&lt;code>imgs存储桶&lt;/code>下的&lt;code>2024&lt;/code>文件夹同步到&lt;/p>
+&lt;p>C:\Users\Administrator\Desktop\imgs\2024 目录，根据你的情况去修改目录&lt;/p>
+&lt;blockquote>
+&lt;p>rclone sync: 同步的意思，也可以把sync改成&lt;code>copy&lt;/code>&lt;/p>
+&lt;p>r2:imgs &lt;code> imgs&lt;/code>是我的存储同名称，r2不要改&lt;/p>
+&lt;p>D:\rclone-v1.63.0-windows-amd64 是rclone所在目录&lt;/p>
+&lt;p>&amp;ndash;drive-acknowledge-abuse 是针对谷歌网盘，可去掉，因为谷歌容易把文件当敏感资源不给下载甚至报毒 谷歌的教程博客有&lt;/p>
+&lt;/blockquote>
+&lt;p>反过来同步就是：本地同步到r2&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /d D:&lt;span style="color:#4070a0;font-weight:bold">\r&lt;/span>clone-v1.63.0-windows-amd64
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone sync C:&lt;span style="color:#4070a0;font-weight:bold">\U&lt;/span>sers&lt;span style="color:#4070a0;font-weight:bold">\A&lt;/span>dministrator&lt;span style="color:#4070a0;font-weight:bold">\D&lt;/span>esktop&lt;span style="color:#4070a0;font-weight:bold">\i&lt;/span>mgs&lt;span style="color:#4070a0;font-weight:bold">\2&lt;/span>&lt;span style="color:#40a070">024&lt;/span> r2:imgs&lt;span style="color:#4070a0;font-weight:bold">\2&lt;/span>&lt;span style="color:#40a070">024&lt;/span> --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span> --drive-acknowledge-abuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>图片批量压缩工具：&lt;/p>
+&lt;p>项目：https://github.com/meowtec/Imagine&lt;/p>
+&lt;p>下载地址：&lt;a href="https://lzui.lanzv.com/i9Y6U1mn69wj">https://lzui.lanzv.com/i9Y6U1mn69wj&lt;/a>&lt;/p></description></item><item><title>宝塔面板卸载原Nginx编译Brotli压缩</title><link>https://blog.taoshuge.eu.org/post/142/</link><pubDate>Sun, 28 Jan 2024 16:10:11 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/142/</guid><description>&lt;h3 id="1brotli压缩优势">1.Brotli压缩优势&lt;/h3>
+&lt;p>说明：Brotli是Google推出的开源压缩算法，通过变种的LZ77算法、Huffman编码以及二阶文本建模等方式进行数据压缩，与其他压缩算法相比，它有着更高的压缩效率&lt;/p>
+&lt;p>&lt;strong>性能也比我们目前常见的Gzip高17-25%&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/50adb0799280c2234490cae2c0a1faec.webp" alt="Pasted image 20240128161106">&lt;/p>
+&lt;p>可以帮我们更高效的压缩网页中的各类文件大小及脚本，从而提高加载速度，提升网页浏览体验。&lt;/p>
+&lt;h3 id="2卸载原nginx">2.卸载原Nginx&lt;/h3>
+&lt;p>Brotli 其实支持动态加载，这里为了方便直接卸载旧版本重装。&lt;/p>
+&lt;p>卸载完成以后点击安装，选择编译安装，打开添加自定义模块窗口如下图。&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/8190440222026d24666e91233ac7e873.webp" alt="Pasted image 20240128161146">&lt;/p>
+&lt;p>模块名称填写：&lt;code>ngx_brotli&lt;/code>&lt;/p>
+&lt;p>模块简介填写：&lt;code>ngx_brotli&lt;/code>&lt;/p>
+&lt;p>模块参数填写：&lt;code>--add-module=/www/server/nginx/src/ngx_brotli&lt;/code>&lt;/p>
+&lt;p>前置脚本粘贴如下内容：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 文件内各版本号为文章发布时最新，请按需要检查新版本并替换版本号&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -O ngx_brotli.zip https://github.com/google/ngx_brotli/archive/v1.0.0rc.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>unzip ngx_brotli.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mv ngx_brotli-1.0.0rc ngx_brotli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> ngx_brotli/deps
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -rf brotli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -O brotli.zip https://github.com/google/brotli/archive/v1.0.9.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>unzip brotli.zip
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mv brotli-1.0.9 brotli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /www/server/nginx/src
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>完成以后提交并打上勾，点击安装，等待完成即可。&lt;/p>
+&lt;h3 id="3brotli压缩-配置">3.Brotli压缩 配置&lt;/h3>
+&lt;p>打开 Nginx 管理器，左侧菜单选择配置修改，在&lt;code>52&lt;/code>行附近找到&lt;code>gzip&lt;/code>部分，在其前面插入&lt;code>brotli&lt;/code>的配置信息：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> brotli on;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> brotli_comp_level 6;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> brotli_min_length 10;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> brotli_window 1m;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> brotli_types *;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> brotli_static always;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>各个参数的具体作用可以在&lt;a href="https://github.com/google/ngx_brotli">https://github.com/google/ngx_brotli&lt;/a>找到，这里提供通用版本。&lt;/p>
+&lt;p>保存以后如下图：&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/56bf99b76dca6b2c62675b17899506c6.webp" alt="Pasted image 20240128161301">&lt;/p>
+&lt;h3 id="4brotli效果检验">4.brotli效果检验&lt;/h3>
+&lt;p>接下来使用支持&lt;code>brotli&lt;/code>的浏览器访问即可看到效果。&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/e53196a97c401b6697703219f20dbafb.webp" alt="Pasted image 20240128161315">&lt;/p></description></item><item><title>宝塔海外版aapanel安装教程</title><link>https://blog.taoshuge.eu.org/post/141/</link><pubDate>Sun, 28 Jan 2024 15:17:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/141/</guid><description>&lt;blockquote>
+&lt;p>首先安装官网最新版，再降级为6.8.27版本，降级的目的是方便安装汉化包&lt;/p>
+&lt;/blockquote>
+&lt;p>Ubuntu/Deepin&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> sudo bash install.sh aapanel
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Debian&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> bash install.sh aapanel
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>降级为aapanel6.8.27版本&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O /root/update6_en.sh https://download.bt.cn/install/update6_en.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> sed -i &lt;span style="color:#4070a0">&amp;#39;s/LinuxPanel_EN-${version}.zip/LinuxPanel_EN-6.8.27.zip/g&amp;#39;&lt;/span> /root/update6_en.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> bash /root/update6_en.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> rm -rf /root/update6_en.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>中文语言包&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O aapanel_chinese.zip https://github.com/gacjie/aapanel_chinese/releases/download/6.8.27/aapanel_simplified_chinese_6827.zip &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> unzip -o aapanel_chinese.zip -d /www/server/ &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> /etc/init.d/bt restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Linux系统Swap一键脚本 添加/删除</title><link>https://blog.taoshuge.eu.org/post/swap/</link><pubDate>Sun, 28 Jan 2024 01:36:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/swap/</guid><description>&lt;blockquote>
+&lt;p>在Linux系统中，swap是为了&lt;code>减少内存压力&lt;/code>而设立的一种&lt;code>临时存储空间&lt;/code>，当系统内存不足时，会将一部分内存交换到swap分区中。但是，当系统运行多个程序或进程时，&lt;code>swap会频繁的写入和读取数据&lt;/code>，对硬盘进行频繁的访问，从而&lt;code>导致系统变慢&lt;/code>。&lt;/p>
+&lt;/blockquote>
+&lt;p>如果你的系统内存足够并且感觉swap对系统性能没有多大帮助，可以考虑将swap关闭。&lt;/p>
+&lt;blockquote>
+&lt;p>建议禁止使用swap，除非你内存吃紧，或者调整vm.swappiness参数为10&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="一键添加删除swap脚本">一键添加删除swap脚本&lt;/h2>
+&lt;p>1G或者2G内存，可以设置swap为1G，即1024Mb&lt;/p>
+&lt;pre tabindex="0">&lt;code>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/swap.sh &amp;amp;&amp;amp; chmod +x swap.sh &amp;amp;&amp;amp; ./swap.sh
+&lt;/code>&lt;/pre>&lt;p>临时调整vm.swappiness参数为10&lt;/p>
+&lt;pre tabindex="0">&lt;code>sudo sysctl vm.swappiness=10
+&lt;/code>&lt;/pre>&lt;p>永久调整 vm.swappiness参数为1（优先使用物理内存，迫不得已使用swap）&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/vm.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x vm.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./vm.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="使用free命令查看swap的使用情况">使用free命令查看swap的使用情况&lt;/h3>
+&lt;pre tabindex="0">&lt;code>sudo free -m
+&lt;/code>&lt;/pre>&lt;h3 id="查询当前系统中启用了哪些交换分区">查询当前系统中启用了哪些交换分区&lt;/h3>
+&lt;pre tabindex="0">&lt;code>sudo swapon -s
+&lt;/code>&lt;/pre>&lt;h3 id="禁用命令">禁用命令&lt;/h3>
+&lt;pre tabindex="0">&lt;code>sudo swapoff -a
+&lt;/code>&lt;/pre>&lt;h3 id="启用命令">启用命令&lt;/h3>
+&lt;pre tabindex="0">&lt;code>sudo swapon -a
+&lt;/code>&lt;/pre>&lt;h3 id="永久关闭swap分区">永久关闭swap分区&lt;/h3>
+&lt;pre tabindex="0">&lt;code>sed -ri &amp;#39;s/.*swap.*/#&amp;amp;/&amp;#39; /etc/fstab
+&lt;/code>&lt;/pre></description></item><item><title>简洁，没有广告，能下载资源的看片追剧APP</title><link>https://blog.taoshuge.eu.org/post/app/</link><pubDate>Fri, 26 Jan 2024 03:24:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/app/</guid><description>&lt;blockquote>
+&lt;p>可能是最简洁干净的，能下载影视资源的APP了，能下载资源的APP才是好的看片追剧APP~~&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;a href="https://gh.ddlc.top/https://github.com/jimugou/app/releases/download/v1.6.3/fanqie-v1.6.3.apk">https://gh.ddlc.top/https://github.com/jimugou/app/releases/download/v1.6.3/fanqie-v1.6.3.apk&lt;/a>&lt;/p></description></item><item><title>Lsky 图床 兰空图床</title><link>https://blog.taoshuge.eu.org/post/137/</link><pubDate>Fri, 26 Jan 2024 00:20:10 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/137/</guid><description>&lt;h3 id="项目地址">项目地址&lt;/h3>
+&lt;p>&lt;a href="https://github.com/lsky-org/lsky-pro">https://github.com/lsky-org/lsky-pro&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>推荐安装1.6.4版本，没有php和mysql的要求&lt;/p>
+&lt;/blockquote>
+&lt;p>下载地址：https://github.com/lsky-org/lsky-pro/archive/refs/tags/v1.6.4.zip&lt;/p>
+&lt;p>网盘：&lt;a href="https://lzui.lanpw.com/iUrlR1mb4djg">https://lzui.lanpw.com/iUrlR1mb4djg&lt;/a>&lt;/p>
+&lt;p>Lsky Pro 安装全程可视化页面，只需要下载程序解压到 web 站点目录，访问首页会自动跳转到安装页面，根据提示操作即可，具体步骤：&lt;/p>
+&lt;p>下载兰空，上传至 web 运行环境，解压。&lt;/p>
+&lt;p>设置运行目录为 public。&lt;/p>
+&lt;p>配置 Rewrite 规则：&lt;/p>
+&lt;p>Nginx：&lt;/p>
+&lt;pre tabindex="0">&lt;code>location / {
+if (!-e $request_filename) {
+rewrite ^(.*)$ /index.php?s=$1 last; break;
+}
+}
+&lt;/code>&lt;/pre>&lt;p>Apache: Apache直接使用 .htaccess 即可。
+访问首页，未安装自动跳转至安装页面，根据页面提示安装即可。&lt;/p>
+&lt;p>安装完成以后请设置runtime目录 0755 权限，如果你使用本地存储，public 目录也需要设置为 0755 权限。&lt;/p>
+&lt;ol>
+&lt;li>备份原系统&lt;/li>
+&lt;li>下载新版本安装包，解压。将旧版本系统中的根目录 &lt;code>.env&lt;/code> 文件复制到新版本的根目录
+&lt;ul>
+&lt;li>如果你的文件是储存在本地，你还需要将 &lt;code>public&lt;/code> 目录中的文件移动的新版本的 &lt;code>public&lt;/code> 目录下&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>修改 .env 文件中的数据库配置，然后在 &lt;code>application&lt;/code> 目录下新建 &lt;code>install.lock&lt;/code> 文件&lt;/li>
+&lt;li>将新版本 &lt;code>application/sql/update.sql&lt;/code> 导入到数据库，或直接复制文件内容执行&lt;/li>
+&lt;li>替换旧版本 (删除旧版本，粘贴新版本)&lt;/li>
+&lt;/ol>
+&lt;p>如果在更新时出现 &lt;code>更新失败, 请稍后重试&lt;/code> 的提示, 大概率是因为超时被中断, 如果出现这样的情况, 请手动通过 &lt;code>https://github.com/wisp-x/lsky-pro/releases&lt;/code> 下载 zip 格式的完整包, 并重命名为 &lt;code>upgrade.zip&lt;/code> 移动至系统 &lt;code>runtime&lt;/code> 目录中, 然后在执行更新, 这时候兰空图床会跳过下载安装包的步骤, 直接通过解压 &lt;code>upgrade.zip&lt;/code> 的方式进行安装.&lt;/p>
+&lt;p>宝塔php7.3版本默认没有开启 &lt;code>ZipArchive&lt;/code> ，更新时会出现错误，切换其他版本即可。&lt;/p></description></item><item><title>宝塔面板计划任务列表的迁移或导出</title><link>https://blog.taoshuge.eu.org/post/136/</link><pubDate>Thu, 25 Jan 2024 21:39:26 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/136/</guid><description>&lt;h4 id="步骤一备份文件然后迁移到新服务器对应目录下">步骤一：备份文件，然后迁移到新服务器对应目录下。&lt;/h4>
 &lt;p>备份cron下的所有文件&lt;/p>
 &lt;pre tabindex="0">&lt;code>/www/server/cron
 &lt;/code>&lt;/pre>&lt;h4 id="步骤二数据库迁移">步骤二：数据库迁移&lt;/h4>
-&lt;p>下载&lt;code>default.db&lt;/code>文件，使用&lt;code>SQLiteStudio&lt;/code>工具打开数据库。删除老站的crontab表，把新站的表复制进去。然后保存。&lt;/p>
+&lt;p>下载&lt;code>default.db&lt;/code>文件，使用&lt;code>SQLiteStudio&lt;/code>工具打开数据库。删除新站的crontab表，把老站的表复制进去。然后保存。&lt;/p>
 &lt;pre tabindex="0">&lt;code>/www/server/panel/data/default.db
 &lt;/code>&lt;/pre>&lt;p>把新的default.db上传到新站&lt;code>/www/server/panel/data/&lt;/code>目录下。即可看到新的计划任务内容&lt;/p>
 &lt;p>&lt;code>SQLiteStudio&lt;/code>下载地址：&lt;a href="https://lzui.lanpw.com/iCoiL1mas1gj">https://lzui.lanpw.com/iCoiL1mas1gj&lt;/a>&lt;/p>
@@ -263,15 +485,26 @@ echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
 &lt;p>密码：&lt;code>LeitboGi0ro&lt;/code>&lt;/p>
 &lt;h3 id="debian-12">Debian 12&lt;/h3>
 &lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian
-&lt;/code>&lt;/pre>&lt;h3 id="ubuntu-2204">ubuntu 22.04&lt;/h3>
+&lt;/code>&lt;/pre>&lt;h3 id="debian-11">Debian 11&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash InstallNET.sh -debian &lt;span style="color:#40a070">11&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="ubuntu-2204">ubuntu 22.04&lt;/h3>
 &lt;pre tabindex="0">&lt;code>bash InstallNET.sh -ubuntu
+&lt;/code>&lt;/pre>&lt;h3 id="ubuntu-2004">ubuntu 20.04&lt;/h3>
+&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -ubuntu 20.04
 &lt;/code>&lt;/pre>&lt;h3 id="启用bbr">启用BBR&lt;/h3>
 &lt;blockquote>
 &lt;p>通过向 /etc/sysctl.d/99-sysctl.conf 添加参数和值来为当前内核启用 BBR&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/enable_bbr.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x enable_bbr.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./enable_bbr.sh
@@ -280,7 +513,7 @@ echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
 &lt;/div>&lt;h3 id="检查-bbr-是否启动">检查 BBR 是否启动&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>lsmod | grep bbr
@@ -289,7 +522,7 @@ echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
 &lt;/div>&lt;h3 id="更新系统">更新系统&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt update -y
@@ -297,7 +530,7 @@ echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
 &lt;/div>
 &lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install -y curl
@@ -306,7 +539,7 @@ echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
 &lt;/div>&lt;h3 id="推荐脚本">推荐脚本&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
@@ -315,7 +548,7 @@ echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
 &lt;/div>&lt;h3 id="docker安装">docker安装&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -fsSL https://get.docker.com | sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin
@@ -731,32 +964,35 @@ export PATH=$JAVA_HOME/bin:$PATH
 &lt;h2 id="准备工作">准备工作&lt;/h2>
 &lt;p>在安装GoEdge之前，需要你做以下准备工作：&lt;/p>
 &lt;ul>
-&lt;li>
-&lt;p>安装一个或者使用现有的 MySQL 5.7.8/MySQL 8.0/MySQL 8.1/MySQL 8.2/TiDB 3.0 以上版本；如果你会一些Linux基本命令，但是不知道怎么安装MySQL，可以参考这里 &lt;a href="https://goedge.cn/docs/Appendix/MySQL/Install.md">安装MySQL&lt;/a>；另外请注意：&lt;/p>
+&lt;li>安装一个或者使用现有的 MySQL 5.7.8/MySQL 8.0/MySQL 8.1/MySQL 8.2/TiDB 3.0 以上版本；如果你会一些Linux基本命令，但是不知道怎么安装MySQL，可以参考这里 &lt;a href="https://goedge.cn/docs/Appendix/MySQL/Install.md">安装MySQL&lt;/a>；另外请注意：
 &lt;ul>
 &lt;li>安装使用的MySQL用户密码不能为空&lt;/li>
 &lt;li>当前只支持通过端口连接MySQL，不能使用Sock文件连接&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>
-&lt;p>手动安装时，Linux服务器需要确认有 &lt;code>unzip&lt;/code> 命令，用来解压压缩包，可以使用：&lt;/p>
+&lt;li>手动安装时，Linux服务器需要确认有 &lt;code>unzip&lt;/code> 命令，用来解压压缩包，可以使用：&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>推荐系统： ubuntu 22.04 或者 20.04, debian安装有些问题&lt;/p>
+&lt;/blockquote>
+&lt;p>先安装依赖：ubuntu系统可以跳过安装依赖&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>unzip
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>apt install wget -y
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>命令来确认这个命令是否可用，如果提示&lt;code>command not found&lt;/code>，可以参考 &lt;a href="https://goedge.cn/docs/Appendix/Unzip.md">安装unzip&lt;/a> 一文来安装。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="安装mysql">安装MySQL&lt;/h2>
-&lt;p>本文讲述如何在Linux系统中如何安装MySQL。&lt;/p>
-&lt;p>在Linux下可以尝试使用以下命令自动执行上述的安装步骤（前提是系统已经安装了 &lt;code>wget&lt;/code> 命令）：&lt;/p>
+&lt;/div>&lt;pre tabindex="0">&lt;code>sudo apt install unzip
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>sudo apt-get install xz-utils
+&lt;/code>&lt;/pre>&lt;pre tabindex="0">&lt;code>sudo apt-get update
+sudo apt-get install libnuma1
+&lt;/code>&lt;/pre>&lt;p>在Linux下可以尝试使用以下命令自动执行上述的安装步骤（前提是系统已经安装了 &lt;code>wget&lt;/code> 命令）：&lt;/p>
+&lt;h2 id="一安装mysql">一、安装MySQL&lt;/h2>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo sh -c &lt;span style="color:#4070a0">&amp;#34;&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>wget https://goedge.cn/install-mysql.sh -O -&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span>
@@ -775,11 +1011,11 @@ dir: /usr/local/mysql
 &lt;li>&lt;code>password&lt;/code> - 密码&lt;/li>
 &lt;li>&lt;code>dir&lt;/code> - 安装位置&lt;/li>
 &lt;/ul>
-&lt;h2 id="安装程序">安装程序&lt;/h2>
+&lt;h2 id="二安装程序">二、安装程序&lt;/h2>
 &lt;p>可以使用&lt;code>install.sh&lt;/code>快速安装GoEdge管理平台，目前仅限于Linux系统；在你的系统上运行以下命令：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo sh -c &lt;span style="color:#4070a0">&amp;#34;&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>wget https://goedge.cn/install.sh -O -&lt;span style="color:#007020;font-weight:bold">)&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span>
@@ -795,7 +1031,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;p>&lt;code>edge-admin&lt;/code> 通常是在EdgeAdmin安装目录下的 &lt;code>bin/&lt;/code> 目录下，在执行命令的时候请使用完整的路径或者使用相对路径，如：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>/&lt;span style="color:#bb60d5">$EdgeAdmin&lt;/span>安装目录/bin/edge-admin -v
@@ -804,7 +1040,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;/div>&lt;p>或者：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /&lt;span style="color:#bb60d5">$EdgeAdmin&lt;/span>安装目录bin/edge-admin -v
@@ -816,7 +1052,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;h3 id="打印帮助信息">打印帮助信息&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>edge-admin -h
@@ -825,7 +1061,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;/div>&lt;h3 id="打印版本信息">打印版本信息&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>edge-admin -v
@@ -835,7 +1071,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;p>启动服务并在后台运行：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>edge-admin start
@@ -844,7 +1080,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;/div>&lt;p>如果要在前端启动服务，并阻塞当前进程，可以使用：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>edge-admin
@@ -853,7 +1089,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;/div>&lt;h3 id="停止服务">停止服务&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-15-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-15-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>edge-admin stop
@@ -862,7 +1098,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;/div>&lt;h3 id="重启服务">重启服务&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-16-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-16-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>edge-admin restart
@@ -871,7 +1107,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;/div>&lt;h3 id="查看服务状态">查看服务状态&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>edge-admin status
@@ -880,7 +1116,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;/div>&lt;h3 id="安装systemd系统服务">安装systemd系统服务&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-15-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-15-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>edge-admin service
@@ -889,7 +1125,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;/div>&lt;h3 id="使用守护进程启动服务">使用守护进程启动服务&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-16-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-16-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>edge-admin daemon
@@ -899,7 +1135,7 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;p>需要重装之前，你需要重置配置：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-20-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-20-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>edge-admin reset
@@ -925,380 +1161,4 @@ please open the url http://SERVER_IP:7788 on your browser
 &lt;p>若提示启用成功，后台快捷菜单处没有显示快捷菜单，那么手动添加一下快捷菜单即可&lt;/p>
 &lt;pre tabindex="0">&lt;code>萌芽采集资源,mycj/union
 &lt;/code>&lt;/pre>&lt;p>复制上方快捷菜单代码，添加到快捷菜单里面并保存即可&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/30c1ac6daef2b01604cedb562b962657.webp" alt="">&lt;/p></description></item><item><title>苹果cms通用清理php后门自动脚本</title><link>https://blog.taoshuge.eu.org/post/123/</link><pubDate>Fri, 12 Jan 2024 12:17:18 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/123/</guid><description>&lt;h3 id="一键清理挂马脚本">一键清理挂马脚本：&lt;/h3>
-&lt;pre tabindex="0">&lt;code>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/xiu.sh &amp;amp;&amp;amp; chmod +x xiu.sh &amp;amp;&amp;amp; ./xiu.sh
-&lt;/code>&lt;/pre>&lt;p>1：脚本会把网站配置文件备份到&lt;code>/home/back&lt;/code>目录&lt;/p>
-&lt;p>2：/template 以及 /upload目录内的所有 .php 文件删除&lt;/p>
-&lt;p>3：检查并处理 template 和 upload 文件夹内的文件&lt;/p>
-&lt;p>4：删除 template 和 upload 文件夹内包含 &amp;lt;?php 或 {php 代码段的文件&lt;/p>
-&lt;p>5：将删除的文件备份到&lt;code>/home/back&lt;/code>目录&lt;/p>
-&lt;p>这样的好处是，在你查看&lt;code>/home/back&lt;/code>，你会看到哪些文件是添加了&amp;lt;?php 或 {php 代码的，&lt;/p>
-&lt;p>除了配置文件本身存在一个&amp;lt;?php内是一个return array返回数组,如果还有其他&amp;lt;?php块就是后门&lt;/p>
-&lt;p>剩下的html文件请仔细检查&lt;/p>
-&lt;h3 id="注意为了安全起见-每次发现被挂马后应该用以下方法来处理">注意：为了安全起见 每次发现被挂马后应该用以下方法来处理！！！&lt;/h3>
-&lt;p>黑客入侵后可能在数据库挂js，可能在网站目录任何角落留下php后门，用以下方法可以快速清理干净php后门，不用一个一个文件去分析。&lt;/p>
-&lt;p>1，备份原网站配置文件 ，并检查里边是否有后门代码，正常情况下&amp;lt;?php内是一个return array返回数组，如果还有其他&amp;lt;?php块就是后门。&lt;br>
-\application\database.php&lt;br>
-\application\route.php&lt;br>
-\application\extra\maccms.php&lt;br>
-\application\extra\bind.php&lt;br>
-\application\extra\timming.php&lt;br>
-\application\extra\vodplayer.php&lt;br>
-\application\extra\voddowner.php&lt;br>
-\application\extra\vodserver.php&lt;/p>
-&lt;p>2，检查以下目录搜索 *.php ，删除所有;并检查模板文件内是否有&amp;lt;?php或{php代码段删除。&lt;br>
-\template\&lt;br>
-\upload\&lt;/p>
-&lt;p>3，删除原有目录及所有文件，并下载最新程序包，覆盖&lt;br>
-\addons\&lt;br>
-\application\&lt;br>
-\extend\&lt;br>
-\static\&lt;br>
-\runtime\&lt;br>
-\thinkphp\&lt;br>
-\vendor\&lt;br>
-\说明文档\&lt;br>
-\admin.php 自定义后台入口文件&lt;br>
-\api.php 自定义api入口文件&lt;br>
-\index.php&lt;br>
-\install.php&lt;/p>
-&lt;p>4，把刚才备份的配置文件覆盖到application下即可&lt;/p>
-&lt;p>5，修改后台入口文件名；登录后台检查管理员账号并修改密码，删除多余被黑客创建的账号；&lt;/p></description></item><item><title>海洋cms自动采集之宝塔面板定时任务</title><link>https://blog.taoshuge.eu.org/post/122/</link><pubDate>Sun, 07 Jan 2024 15:43:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/122/</guid><description>&lt;p>&lt;strong>第一步：获取脚本代码&lt;/strong>&lt;br>
-下面是自动采集脚本代码&lt;/p>
-&lt;pre tabindex="0">&lt;code>#!/bin/bash
-########################################################
-# 程序名称: 海洋CMS自动采集脚本
-# 版本信息：seacmsbot/ v2.0
-# 发布链接: https://www.seacms.net/
-# 使用方法：直接复制代码到宝塔计划任务shell脚本内容里添加每小时任务使用
-# 更新时间：2019.9.26
-##########################################################
-#①请修改下面的网站域名及管理目录
-web_site=&amp;#34;http://你的域名/管理目录/admin_reslib2.php&amp;#34;
-#②请修改下面项内容为&amp;#34;admin_reslib2.php&amp;#34;里设置的访问密码(默认为系统设置的cookie密码)
-web_pwd=&amp;#34;111111111111111111&amp;#34;
-#③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。
-#每日采集链接获取方法:选择&amp;#34;后台-采集-资源库列表&amp;#34;,复制资源站右边的&amp;#34;采集每天&amp;#34;的链接地址,去掉?前面的内容。
-web_api=(
-&amp;#39;?ac=day&amp;amp;rid=2&amp;amp;url=https://ikunzyapi.com/api.php/seaxml/vod/at/xml&amp;#39;
-&amp;#39;?ac=day&amp;amp;rid=3&amp;amp;url=https://taopianapi.com/cjapi/sea/vod/xml/m3u8.html&amp;#39;
-)
-#模拟用户浏览器ua,请勿随意修改，以免被目标防火墙拦截!
-web_ua=&amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
-Chrome/76.0.3809.100 Safari/537.36 seacmsbot/1.2;&amp;#34;
-#采集单页
-function get_content() {
-echo &amp;#34;正在采集第$page页...&amp;#34;
-#echo &amp;#34; get_content: ---&amp;gt;url:---&amp;gt;$1&amp;#34;
-cResult=$(curl --connect-timeout 10 -m 20 -k -s -L -A &amp;#34;$web_ua&amp;#34; &amp;#34;$1&amp;#34; )
-echo $cResult | grep -q &amp;#34;采集&amp;#34;
-#echo -e &amp;#34;$1\n$cResult&amp;#34;
-if [ &amp;#34;$?&amp;#34; = &amp;#34;0&amp;#34; ]; then
-next_content &amp;#34;$cResult&amp;#34;
-else
-echo -e &amp;#34;采集失败,请检查设置!\n失败链接--&amp;gt;$1\n返回信息--&amp;gt;$cResult\n采集结束，共0页&amp;#34;
-fi
-}
-#采集下页
-function next_content() {
-#统计数据
-Result=$(echo &amp;#34;$1&amp;#34; | tr &amp;#34;
-&amp;#34; &amp;#34;\n&amp;#34;)
-a=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;采集成功&amp;#34;)
-b=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;更新数据&amp;#34;)
-c=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;无需更新&amp;#34;)
-d=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;跳过&amp;#34;)
-echo &amp;#34;采集成功--&amp;gt;已更$c部,新增$a部,更新$b部,跳过$d部&amp;#34;
-let add+=$a
-let update+=$b
-let none+=$c
-let jmp+=$d
-#检测并采集下页
-next_url=${1##*location.href=\&amp;#39;}
-next_url=${next_url%%\&amp;#39;*}
-#echo $next_url
-if [ &amp;#34;${next_url:0:1}&amp;#34; = &amp;#34;?&amp;#34; ]
-then
-let page++
-get_content &amp;#34;$web_site$next_url&amp;#34;
-else
-echo &amp;#34;采集结束，共$page页&amp;#34;
-fi
-}
-#脚本入口
-echo &amp;#34;海洋CMS自动采集脚本开始执行 版本：v1.2&amp;#34;
-starttime=$(date +%s)
-update=0 #更新
-add=0 #新增
-none=0 #无变化
-jmp=0 # 跳过
-for url in ${web_api[@]};
-do
-if [[ ! -z $url ]]
-then
-web_param=&amp;#34;$web_site$url&amp;amp;password=$web_pwd&amp;#34;
-page=1
-echo &amp;#34;开始采集：$url&amp;#34;
-get_content $web_param
-fi
-done
-endtime=$(date +%s)
-echo &amp;#34;============================&amp;#34;
-echo &amp;#34;入库--&amp;gt;$add部&amp;#34;
-echo &amp;#34;更新--&amp;gt;$update部&amp;#34;
-echo &amp;#34;跳过--&amp;gt;$jmp部(未绑定分类或链接错误)&amp;#34;
-echo &amp;#34;今日--&amp;gt;$[none+add+update]部&amp;#34;
-echo &amp;#34;============================&amp;#34;
-echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
-&lt;/code>&lt;/pre>&lt;p>&lt;strong>第二步：修改脚本&lt;/strong>&lt;br>
-需要修改脚本里面的3项内容：&lt;/p>
-&lt;pre tabindex="0">&lt;code>#①请修改下面的网站域名及管理目录
-web_site=&amp;#34;http://网站域名/管理目录/admin_reslib2.php&amp;#34;
-这个是需要修改成你的“网站域名”和“海洋cms后台的管理目录”。域名大家都能理解，后台的管理目录这个对于新手来说需要多讲两句，首先你要能登录你的后台才可以知道你的后台目录。举例说明：假如我的后台登录地址是 mytheme.cn/xxxx/那么这里的“xxxx”就是后台的管理目录，得到了管理目录我们直接填写到代码里即可。
-#②请修改下面项内容为&amp;#34;admin_reslib2.php&amp;#34;里设置的访问密码(默认为系统设置的cookie密码)
-web_pwd=&amp;#34;8888e82e85bd4540f0defa3fb7a8e888&amp;#34;
-这个修改需要到海洋cms系统后台得到我们的cookie密码进行替换才可以，具体步骤：系统-网站设置-cookie密码。得到自己网站的cookie密码后替换即可。
-#③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。
-#每日采集链接获取方法:选择&amp;#34;后台-采集-资源库列表&amp;#34;,复制资源站右边的&amp;#34;采集每天&amp;#34;的链接地址,去掉?前面的内容。
-web_api=(
-&amp;#39;?ac=day&amp;amp;rid=1&amp;amp;url=https://api.iokzy.com/inc/ldg_seackm3u8s.php&amp;#39;
-&amp;#39;?ac=day&amp;amp;rid=2&amp;amp;url=http://www.zdziyuan.com/inc/s_ldgm3u8_sea.php&amp;#39;
-)
-这个是代码里需要修改的最后一项，里面是代码里默认提供的2个采集链接地址，我们需要获取自己的采集链接API地址添加到里面。
-&lt;/code>&lt;/pre></description></item><item><title>2023年最新可采集CMS视频资源站网址合集</title><link>https://blog.taoshuge.eu.org/post/121/</link><pubDate>Sun, 07 Jan 2024 15:24:01 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/121/</guid><description>&lt;ol>
-&lt;li>飞速资源 &lt;a href="https://help.feisuzyapi.com/">https://help.feisuzyapi.com/&lt;/a>&lt;/li>
-&lt;li>闪电资源 &lt;a href="http://shan04.com/">http://shan04.com/&lt;/a>&lt;/li>
-&lt;li>樱花资源 &lt;a href="https://yhzy.cc/">https://yhzy.cc/&lt;/a>&lt;/li>
-&lt;li>百度资源 &lt;a href="http://bdzy.com/">http://bdzy.com/&lt;/a>&lt;/li>
-&lt;li>无尽资源 &lt;a href="https://www.wujinzy.com/">https://www.wujinzy.com/&lt;/a>&lt;/li>
-&lt;li>酷点资网 &lt;a href="https://www.kudian20.com/">https://www.kudian20.com/&lt;/a>&lt;/li>
-&lt;li>红牛资源 &lt;a href="https://www.hongniuziyuan.com/">https://www.hongniuziyuan.com/&lt;/a>&lt;/li>
-&lt;li>云解析资源 &lt;a href="https://www.yparse.com/help">https://www.yparse.com/help&lt;/a>&lt;/li>
-&lt;li>天空资源 &lt;a href="http://help.tiankongapi.com/">http://help.tiankongapi.com/&lt;/a>&lt;/li>
-&lt;li>天堂官方资源 &lt;a href="http://vipmv.cc/help/">http://vipmv.cc/help/&lt;/a>&lt;/li>
-&lt;li>1080zyk优质资源 &lt;a href="https://1080zyk2.com/">https://1080zyk2.com/&lt;/a>&lt;/li>
-&lt;li>卧龙影视资源 &lt;a href="http://wolongzyw.com/">http://wolongzyw.com/&lt;/a>&lt;/li>
-&lt;li>全网影视资源 &lt;a href="http://hao123.daicuo.cc/">http://hao123.daicuo.cc/&lt;/a>&lt;/li>
-&lt;li>fox资源 &lt;a href="https://help.foxzyapi.com/">https://help.foxzyapi.com/&lt;/a>&lt;/li>
-&lt;li>金鹰资源 &lt;a href="https://jinyingzy.net/">https://jinyingzy.net/&lt;/a>&lt;/li>
-&lt;li>新浪资源 &lt;a href="https://xinlangzy.com/">https://xinlangzy.com/&lt;/a>&lt;/li>
-&lt;li>光速影视资源 &lt;a href="https://guangsuzy.com/">https://guangsuzy.com/&lt;/a>&lt;/li>
-&lt;li>奥斯卡资源 &lt;a href="https://aosikazy.com/static/help/index.html">https://aosikazy.com/static/help/index.html&lt;/a>&lt;/li>
-&lt;li>快车资源 &lt;a href="https://www.kuaichezy.com/">https://www.kuaichezy.com/&lt;/a>&lt;/li>
-&lt;li>淘片资源 (需VPN) &lt;a href="https://www.taopianzy.com/">https://www.taopianzy.com/&lt;/a>&lt;/li>
-&lt;li>量子资源 &lt;a href="http://lzizy.net/">http://lzizy.net/&lt;/a>&lt;/li>
-&lt;li>诺讯资源 &lt;a href="https://caiji.nxflv.com/">https://caiji.nxflv.com/&lt;/a>&lt;/li>
-&lt;li>tom资源 &lt;a href="https://www.tomziyuan.com/">https://www.tomziyuan.com/&lt;/a>&lt;/li>
-&lt;li>三零资源 &lt;a href="http://www.000zy.com/">http://www.000zy.com/&lt;/a>&lt;/li>
-&lt;li>麒麟资源(需要授权) &lt;a href="https://www.qilinzyz.com/">https://www.qilinzyz.com/&lt;/a>&lt;/li>
-&lt;li>鱼乐资源 &lt;a href="https://www.ylzy1.com/">https://www.ylzy1.com/&lt;/a>&lt;/li>
-&lt;li>ikun资源 &lt;a href="https://www.ikunzy.com/">https://www.ikunzy.com/&lt;/a>&lt;/li>
-&lt;li>阳光资源 &lt;a href="https://www.xxzy.org/">https://www.xxzy.org/&lt;/a>&lt;/li>
-&lt;li>U酷资源 &lt;a href="https://ukuzy.com/">https://ukuzy.com/&lt;/a>&lt;/li>
-&lt;li>非凡资源 &lt;a href="http://ffzy.tv/">http://ffzy.tv/&lt;/a>&lt;/li>
-&lt;li>伊人资源 &lt;a href="https://yrzyz9.com/">https://yrzyz9.com/&lt;/a>&lt;/li>
-&lt;li>天猫资源 &lt;a href="https://tianmaozy.com/">https://tianmaozy.com/&lt;/a>&lt;/li>
-&lt;li>快车资源 &lt;a href="https://www.kuaichezy.com/">https://www.kuaichezy.com/&lt;/a>&lt;/li>
-&lt;li>海外看资源(需VPN) &lt;a href="https://haiwaikan.com/">https://haiwaikan.com/&lt;/a>&lt;/li>
-&lt;/ol></description></item><item><title>利用谷歌邮箱别名获取无限Gmail邮箱</title><link>https://blog.taoshuge.eu.org/post/120/</link><pubDate>Sun, 07 Jan 2024 13:10:06 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/120/</guid><description>&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>我们注册有些国外的服务时，是不能用国内邮箱注册的，这时一个Gmail邮箱就显得很有必要。而有时候我们会需要注册多个账号，当然你可以用多个Gmail邮箱来注册。但多个Gmail邮箱又不好管理，而且现在Gmail邮箱也不是那么好注册了，这时你就会需要下面我要介绍的内容了，利用Gmail邮箱的别名功能来实现同一邮箱获取无限多个Gmail邮箱号。&lt;/p>
-&lt;p>在这之前你需要有一个谷歌账号（Gmail邮箱）。没有的话去到这里注册：&lt;a href="http://mail.google.com/">http://mail.google.com&lt;/a>（目前注册可能需要特殊方法，请自行搜索解决）。&lt;/p>
-&lt;h2 id="gmail邮箱别名设置">Gmail邮箱别名设置&lt;/h2>
-&lt;p>这里我们假设你的Gmail邮箱为：&lt;code>abcdef@gmail.com&lt;/code> ，那就可以通过以下办法得到无限的谷歌邮箱别名。&lt;/p>
-&lt;h3 id="1用户名之间加英文半角">1.用户名之间加 &lt;code>.&lt;/code> （英文半角）&lt;/h3>
-&lt;blockquote>
-&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>abc.def@gmail.com&lt;/code>&lt;/p>
-&lt;p>因为Gmail的用户名是不区分 &lt;code>.&lt;/code> 符号的，所以下面其实都是同一个用户名&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>abcde.f&lt;/li>
-&lt;li>a.bcdef&lt;/li>
-&lt;li>ab.cdef&lt;/li>
-&lt;li>a.b.cdef&lt;/li>
-&lt;li>abc.d.ef&lt;/li>
-&lt;/ul>
-&lt;h3 id="2用户名后面加任意字符">2.用户名后面加 &lt;code>+任意字符&lt;/code>&lt;/h3>
-&lt;blockquote>
-&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>abcdef+dev@gmail.com&lt;/code>&lt;/p>
-&lt;p>&lt;code>+&lt;/code> 号后面可以是任意字符，例如：&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>+dev&lt;/li>
-&lt;li>+my&lt;/li>
-&lt;li>+sub&lt;/li>
-&lt;li>……&lt;/li>
-&lt;/ul>
-&lt;p>**PS：**使用“+”号法，在许多网站注册时候，并不识别邮箱地址中的“+”，会提示你邮箱错误。&lt;/p>
-&lt;h3 id="3改变用户名中任意字符的大小写">3.改变用户名中任意字符的大小写&lt;/h3>
-&lt;blockquote>
-&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>aBCdef@gmail.com&lt;/code>&lt;/p>
-&lt;p>可以是用户名里的某个或多个字符，&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;a href="mailto:Abcdef@gmail.com">Abcdef@gmail.com&lt;/a>&lt;/li>
-&lt;li>&lt;a href="mailto:AbcDeF@gmail.com">AbcDeF@gmail.com&lt;/a>&lt;/li>
-&lt;li>&lt;a href="mailto:abcdEf@gmail.com">abcdEf@gmail.com&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h3 id="4-把后缀变为googlemailcom">4. 把后缀变为 &lt;code>googlemail.com&lt;/code>&lt;/h3>
-&lt;blockquote>
-&lt;p>因为之前Gmail在某些国家的商标没有谈好，不能使用Gmail商标，只好用googlemail，这个很好理解。（貌似现在全球的商标都已经谈妥了）&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;strong>例如：&lt;/strong> &lt;code>abcdef@googlemail.com&lt;/code>&lt;/p>
-&lt;h3 id="５以上４种方法的结合">５.以上４种方法的结合&lt;/h3>
-&lt;blockquote>
-&lt;p>可以结合上面的4种方法来实现理论上的无限别名。例如：&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>&lt;a href="mailto:aBcdef+dev@googlemail.com">aBcdef+dev@googlemail.com&lt;/a>&lt;/li>
-&lt;li>&lt;a href="mailto:AbcDEf+sub@googlemail.com">AbcDEf+sub@googlemail.com&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="总结">总结&lt;/h2>
-&lt;p>了解了上面的Gmail别名设置的方法后，当你要注册一些服务的时候，只要在填写Gmail邮箱的时候填写通过上述的方法得到的别名邮箱就可以了。无需到Gmail设置，所有的别名邮箱的邮件都会发送到你原来的邮箱 &lt;code>abcdef@gmail.com&lt;/code> 中。&lt;/p></description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.taoshuge.eu.org/post/119/</link><pubDate>Sat, 23 Dec 2023 20:14:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/119/</guid><description>&lt;h3 id="为什么要设置cloudflare的页面规则-page-rules进行全站缓存">为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？&lt;/h3>
-&lt;p>当你接入Cloudflare的CDN，并点亮小云朵之后。你的网站就已经通过Cloudflare的CDN节点进行中转了。默认情况下，Cloudflare 会对你网站中的图片、JS、CSS文件等静态文件进行缓存。&lt;/p>
-&lt;p>当访客访问你网站页面的时候，所有的静态文件都是由Cloudflare的节点直接给到访客的，但是HTML文件是默认不缓存的。也就意味着访客访问你的某一页面的时候。仍然会&lt;strong>回源你的&lt;/strong>&lt;a href="https://cloud.tencent.com/act/pro/promotion-cvm?from_column=20065&amp;amp;from=20065">&lt;strong>服务器&lt;/strong>&lt;/a>。&lt;/p>
-&lt;p>所以，本篇文章就是教你如何使用Cloudflare的页面规则（Page Rules）把整个HTML页面给缓存。 使访客访问被缓存的页面的时候，直接交由Cloudflare进行服务，甚至你的源服务器不会收到任何GET请求。&lt;/p>
-&lt;p>&lt;strong>这样做的好处是，可以大大减少源服务器的负载开支，使得你的站点能够承载更多的访客及流量。&lt;/strong>&lt;/p>
-&lt;p>&lt;em>下面两张演示图片就是使用了Cloudflare页面规则之后，节省的源站服务器的请求及流量。&lt;/em>&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/ef3ec775cc2e7f873aebe2446daff8bc.webp" alt="">&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/a6e19dd394d7a2881a752be9cc7e9721.webp" alt="">&lt;/p>
-&lt;h3 id="如何通过浏览器判断某个页面是否被cloudflare的cdn进行缓存">如何通过浏览器判断某个页面是否被Cloudflare的CDN进行缓存？&lt;/h3>
-&lt;p>在学会如何判断之前，我们要先熟悉一个CDN中常见的术语：&lt;strong>“HIT”&lt;/strong>，中文叫做**“命中”**。我们先看下面这样演示的图片：&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/a051176bbae607346c8c0d0016292e11.webp" alt="">&lt;/p>
-&lt;p>可见，图中对过往24小时之内的所有请求有一个统计，统计分为：&lt;strong>命中&lt;/strong>、&lt;strong>未命中&lt;/strong>、&lt;strong>动态&lt;/strong>、&lt;strong>绕过&lt;/strong>……等等状态。&lt;/p>
-&lt;ul>
-&lt;li>【命中】&lt;em>状态就表示已经整网页完全被Cloudflare的CDN提供了服务；&lt;/em>&lt;/li>
-&lt;li>【绕过】&lt;em>状态则表示直接绕过Cloudflare的CDN由源站进行服务；&lt;/em>&lt;/li>
-&lt;li>【动态】&lt;em>状态则表示部分资源被Cloudflare的CDN缓存并服务，但混合了一些源站的请求；&lt;/em>&lt;/li>
-&lt;li>【未命中】&lt;em>因为命中与否是一个概率问题。Cloudflare 也并不能保证在缓存规则中的所有资源都完整的命中。&lt;/em>&lt;/li>
-&lt;/ul>
-&lt;p>**注：如果你开启了小云朵，但并未配置页面规则。**那么你的绝大多数状态都是【&lt;strong>动态&lt;/strong>】，因为访客访问页面中的静态资源交由Cloudflare进行提供，还是有一些请求是通过源站来服务的。&lt;/p>
-&lt;p>接下来，我们以Chrome为示范。教大家判断一个网页在开启Cloudflare CDN之后的缓存状态到底是**【命中】&lt;strong>亦或是&lt;/strong>【动态】**&lt;/p>
-&lt;blockquote>
-&lt;p>打开接入Cloudflare的网站页面，这里以陌涛小站首页示范。 “F12” 进入“&lt;a href="https://cloud.tencent.com/product/cclid?from_column=20065&amp;amp;from=20065">开发者工具&lt;/a>”，点击“Network”选项卡。 “Control + F5” 刷新该页面（苹果系统请使用 Command + R），并在“Name”栏中选择“网址”。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/d47c2de2c5124340260ab60a3245817a.webp" alt="">&lt;/p>
-&lt;p>&lt;strong>从上图中可以看到 cf-cache-status 的值为 “HIT”，则说明该页面已经完全缓存。&lt;/strong>&lt;/p>
-&lt;h3 id="其他状态解释如下">其他状态解释如下：&lt;/h3>
-&lt;p>&lt;strong>cf-cache-status:DYNAMIC （动态）&lt;/strong> 如果是“DYNAMIC”则说明，该站可能只开启了小云朵，并没有配置整站完全缓存。 &lt;strong>cf-cache-status:BYPASS （绕过）&lt;/strong> 如果是“BYPASS”则说明，该站针对这个页面设置了绕过，不允许缓存。&lt;/p>
-&lt;h3 id="cloudflare的缓存机制">Cloudflare的缓存机制&lt;/h3>
-&lt;p>假设你的站点有 &lt;a href="https://www.renao.org/1.html">www.renao.org/1.html&lt;/a> 和 &lt;a href="https://www.renao.org/2.html">www.renao.org/2.html&lt;/a> 两个页面。&lt;/p>
-&lt;p>&lt;strong>当访客A 访问1.html这个页面的时候，首先会经由Cloudflare，这个时候你的页面规则就起作用了。&lt;/strong> Cloudflare会发现，吼吼，这个站有个1.html 我给它缓存下来，并且转发给A。&lt;/p>
-&lt;p>&lt;strong>当访客B 在Edge Cache过期时间之前，重复访问1.html的时候。&lt;/strong> Cloudflare会思考一下。哈哈哈，这个1.html我有。不用麻烦源站了。我直接给到B就可以了。&lt;/p>
-&lt;p>这就是所谓的命中率，如果这个页面被完全命中，那么B访问1.html虽然得到了网页，但是是由Cloudflare直接提供的。你的源站甚至连客户的IP都统计不到。&lt;/p>
-&lt;p>但是，2.html 这个页面在你的规则建立开始时从未有任何访客访问过。那么Cloudflare也不知道这个页面的存在，也不会缓存。除非等到真的有人访问过，Cloudflare才会发现，并对其进行缓存。&lt;/p>
-&lt;p>&lt;strong>好了，冗长的理论知识讲完了，我们来进行实战。&lt;/strong> &lt;strong>这里以Wordpress源站举例，来详细讲解如何设置页面规则才能够进行全站缓存。&lt;/strong>&lt;/p>
-&lt;h3 id="一cloudflare-页面规则-免费版3条规则配置">一、Cloudflare 页面规则 免费版3条规则配置&lt;/h3>
-&lt;p>由于Cloudflare&lt;strong>免费版只提供了三条免费的规则&lt;/strong>，所以我们的想法有很多，但是真正实现起来肯定要有所取舍。下面提供了三种陌涛小站测试过的方法。根据你网站的具体情况选择即可。&lt;/p>
-&lt;p>&lt;em>在所有的规则配置中，“*”代表通配符，另外，规则注意上下排序。默认从第一条规则顺延到第二条规则，然后才是第三条规则。具体请参照以下【三种方法】的详细配置说明。&lt;/em>&lt;/p>
-&lt;h4 id="方法一常规无人值守方法网上流传配置方法">方法一、常规无人值守方法（网上流传配置方法）&lt;/h4>
-&lt;ul>
-&lt;li>&lt;em>.imotao.xyz/wp-login&lt;/em>&lt;/li>
-&lt;li>&lt;em>.imotao.xyz/wp-admin&lt;/em>&lt;/li>
-&lt;li>&lt;em>.imotao.xyz/&lt;/em>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/f2cf9aedd914b1efccaa125464e1184a.webp" alt="">&lt;/p>
-&lt;p>&lt;strong>第一条和第二条：&lt;/strong> 研究Wordpress后台目录，我们发现：wp-login 和 wp-admin 两个页面或目录分别是Wordpress后台的登陆页面和后台管理目录。为了让Cloudflare不缓存这些内容。我们在第一条和第二条中。建立的规则是&lt;strong>Bypass&lt;/strong>，也就是绕过。&lt;/p>
-&lt;p>&lt;strong>第三条：&lt;/strong> 此条规则很简单，也很容易理解。就是告诉Cloudflare 进行全局缓存。无论是图片、html、js、css、等等统统给我缓存。当然，按照上面提到的排序规则。Cloudflare会过滤掉以上我们不想要缓存的第一条、第二条。&lt;/p>
-&lt;h3 id="方法二常规无人值守方法">方法二、常规无人值守方法&lt;/h3>
-&lt;ul>
-&lt;li>*.imotao.xyz/&lt;em>preview=true&lt;/em>&lt;/li>
-&lt;li>&lt;em>.imotao.xyz/&lt;/em>.php*&lt;/li>
-&lt;li>&lt;em>.imotao.xyz/&lt;/em>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/e6e716c806f051b67082655879d4eded.webp" alt="">&lt;/p>
-&lt;p>&lt;strong>第一条：&lt;/strong> 由于Wordpress 提供了预览页面，我们研究Wordpress 的预览页面URL可以发现一个特征，预览页面的URL都含有**“preview=ture”&lt;strong>这个字段，所以通过第一条规则，可以限制Cloudflare 缓存我们的&lt;/strong>预览页面**。如果没有此条规则，Cloudflare会缓存我们预览的页面。但实际缓存了&lt;strong>预览页面&lt;/strong>对网站本身的影响并不大。&lt;/p>
-&lt;p>&lt;strong>第二条：&lt;/strong> 这条规则可以说是十分重要了。如果不设置此条规则，那么我们的&lt;strong>后台页面&lt;/strong>、甚至包括&lt;strong>登陆页面&lt;/strong>也都会被Cloudflare给缓存进去。曾经有小伙伴的wp-login页面（Wordpress默认登陆页面）连带着登陆账号密码统统被缓存了。访客直接可以通过缓存的账号密码进入Wordpress的后台，你说恐怖不恐怖？ &lt;strong>此条规则是我们为了防止Cloudflare缓存我们的动态页面（登陆页、后台页）。这条简单粗暴的直接将所有带有“.php”的页面请求全部Bypass 也就是不缓存。&lt;/strong>&lt;/p>
-&lt;p>&lt;strong>第三条：&lt;/strong> 同【方法一】的第三条&lt;/p>
-&lt;h3 id="方法三常规无人值守并为针对搜索功能的cc攻击单独开启5秒盾">方法三、常规无人值守（并为针对“搜索功能的CC攻击”单独开启5秒盾）&lt;/h3>
-&lt;ul>
-&lt;li>&lt;em>.imotao.xyz/?s=&lt;/em>&lt;/li>
-&lt;li>&lt;em>.imotao.xyz/&lt;/em>.php*&lt;/li>
-&lt;li>&lt;em>.imotao.xyz/&lt;/em>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/849d93d720510f97438d02b8c6973fe3.webp" alt="">&lt;/p>
-&lt;p>&lt;strong>第一条：&lt;/strong> 将所有在Wordpress站内搜索的用户开启5秒盾。一般针对Wordpress的CC攻击都是通过随机UA、随机搜索内容来创建数千、数万的URL。并通过大量的代理IP来模拟真实用户访问。毕竟搜索在Wordpress这个系统中是需要调用&lt;a href="https://cloud.tencent.com/solution/database?from_column=20065&amp;amp;from=20065">数据库&lt;/a>，很消耗服务器资源的。 如果攻击者不清楚你的Page Rules 的配置规则，通过站内搜索对你的站点进行CC攻击的时候，此规则就能够很好的帮助你缓解攻击。除非他技术高超可以穿&lt;strong>5秒盾&lt;/strong>。&lt;/p>
-&lt;p>&lt;strong>第二条：&lt;/strong> 同【方法二】的第二条&lt;/p>
-&lt;p>&lt;strong>第三条：&lt;/strong> 同【方法二】的第三条&lt;/p>
-&lt;p>&lt;strong>使用此种方法，将会舍弃上面方法二提到的【文章预览】功能不缓存，影响并不大。&lt;/strong>&lt;/p>
-&lt;h4 id="特别注意">特别注意&lt;/h4>
-&lt;p>如果你留意到了上面提到的缓存机制的时候，一定要注意一件事情。就是若作为管理着的你登陆在Cloudflare的后台。有些主题在登陆状态下浏览文章是有“登陆条”的。所以尴尬的事情会发生。就是Cloudflare会无差别的把你的登陆条给缓存上去。真正的访客登陆到页面的时候，能看到你的用户名、留言数、等等关键信息。 所以，你需要&lt;strong>在Wordpress的设置中关掉显示登陆条的功能&lt;/strong>。&lt;/p>
-&lt;h3 id="二cloudflare-pro-页面规则-20或30条规则配置">二、Cloudflare Pro 页面规则 20或30条规则配置&lt;/h3>
-&lt;p>如果你有&lt;strong>Cloudflare Pro的付费版本&lt;/strong>，那么恭喜你可以配置&lt;strong>20条&lt;/strong>页面规则。&lt;/p>
-&lt;p>这里贴出一个配置的示范。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/2bb554c9fd849698bdae26d159c51c65.webp" alt="">&lt;/p>
-&lt;p>&lt;strong>这里的第6条，设置之后，所有的动态页面（php）的请求全部301重定向到了陌涛小站的首页。也就意味着我自己也不能登陆后台进行编辑了。当我需要写文章的时候，将此条规则临时关闭,并清楚本地浏览器缓存就可以了。&lt;/strong>&lt;/p>
-&lt;h2 id="三其他cloudflare-常见功能">三、其他Cloudflare 常见功能&lt;/h2>
-&lt;p>**清除缓存：**当我们的页面已经被完全缓存之后，更新页面需要单独删除此链接的缓存，以便Cloudflare重新从源站抓取。&lt;/p>
-&lt;p>**I’m In Attack：**开启5秒盾模式&lt;/p>
-&lt;p>**调试模式：**开启之后默认绕过所有缓存，以便我们进行调试。&lt;/p></description></item><item><title>新版 CloudFlare CDN 防攻击设置</title><link>https://blog.taoshuge.eu.org/post/118/</link><pubDate>Sat, 23 Dec 2023 14:45:21 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/118/</guid><description>&lt;p>前段时间网站一直被攻击，然后博主扛不住了搬去了 CloudFlare 。初期因为设置问题，攻击还是透过了CloudFlare 打到了源站。后面经过多次的设置后已经可以完全阻止攻击请求了。下面给大家分享下我的设置，如果你的网站被攻击了，可以根据自己的实际情况微调修改下。&lt;/p>
-&lt;h2 id="1设置前说明">1.设置前说明&lt;/h2>
-&lt;p>网站程序为WordPress，不同程序可能需要微调下策略。&lt;/p>
-&lt;p>CloudFlare免费版默认设置是针对整个域名的，如果你有其他二级域名站点，需要注意下这个策略对你其他站点有没有影响。&lt;/p>
-&lt;p>在你使用CloudFlare前确保你的源站IP没有暴露，否则对方可以直接指定hosts到你的源站IP，CloudFlare就形同虚设。&lt;/p>
-&lt;p>如果源站IP已经暴露，先把数据备份出来。开一台新服务器创建站点。&lt;/p>
-&lt;p>关于CloudFlare接入的基础操作这里就不讲了，比如SSL设置之类。&lt;/p>
-&lt;p>下面的规则自己实际使用后一定不要暴露出来，否则攻击者会针对性的进行攻击。建议自己进行规则微调。&lt;/p>
-&lt;h2 id="2策略详情">2.策略详情&lt;/h2>
-&lt;p>策略设置有优先级，排名靠前的优先级大于后方策略。所以说针对搜索引擎蜘蛛的策略，一定放在第一个！&lt;/p>
-&lt;h3 id="21-waf设置">2.1 waf设置&lt;/h3>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/3dba1fc4f195038aef6c62f81de194a5.webp" alt="">&lt;/p>
-&lt;p>WAF策略总览&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/d5a8a08c755bbb71c08db7d7da82cca1.webp" alt="Pasted image 20231223195734">&lt;/p>
-&lt;h4 id="211搜索引擎蜘蛛策略">2.1.1搜索引擎蜘蛛策略&lt;/h4>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/64d67ae80d5db08b92a66bfe9e704d74.webp" alt="Pasted image 20231223195823">&lt;/p>
-&lt;p>表达式：(cf.client.bot)&lt;/p>
-&lt;p>主要作用：CloudFlare 对于常见搜索引擎蜘蛛IP有自己的一份数据库，符合此要求的请求将会直接访问网站数据。不会经过 CloudFlare 的 WAF 策略等。避免正常蜘蛛访问被拦截。&lt;/p>
-&lt;h4 id="212登录页策略">2.1.2登录页策略&lt;/h4>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/983e7100f57fc0161d0dce271ae8a0b3.webp" alt="Pasted image 20231223195859">&lt;/p>
-&lt;p>网站我们正常运行必然有访客进行注册登录，针对我们的登录页以及常见被扫描的地址，我们可以单独设置一下人机验证。&lt;/p>
-&lt;p>主要作用：本站是WordPress程序，所以设置了xmlrpc.php和wp-login.php地址。其他程序根据自己实际情况设置。优先级低于蜘蛛，放到第二也是为了防止有些访客挂着代理被后续的策略阻止。&lt;/p>
-&lt;h4 id="213威胁分数策略">2.1.3威胁分数策略&lt;/h4>
-&lt;p>此策略是防攻击的主力策略，这一项可以阻挡90%的攻击。&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/796fe0d9b6d6e8272990da11d76d706c.webp" alt="">&lt;/p>
-&lt;p>主要作用：威胁分数大于等于2，可以阻挡90%的恶意IP。CloudFlare 默认推荐分数5实测基本给攻击全漏了进来，设置3同样有漏IP。所以根据2023年9月目前的网络来说这里建议设置为2！&lt;/p>
-&lt;p>rss是因为站点有很多人通过RSS进行订阅，所以针对此类请求我们不要对他进行人机验证。&lt;/p>
-&lt;p>这里针对RSS策略比较简单，如果攻击者知道了你的策略可能会针对性攻击，我们实际使用时可以适当变通一下。&lt;/p>
-&lt;h4 id="214细化攻击策略">2.1.4细化攻击策略&lt;/h4>
-&lt;p>上一个策略是简单的通过威胁分数判断，现在这个策略则是针对漏进来的攻击IP进行针对性的过滤。&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/af351b2c645362a9f7e1e35c3ae78519.webp" alt="">&lt;/p>
-&lt;p>主要作用：首先过滤国家不等于china，因为来自国内的攻击IP极少。我们的访客绝大多数也来自china所以直接略过国家。&lt;/p>
-&lt;p>/feed是我们的RSS订阅地址，我们同样略过此地址。&lt;/p>
-&lt;p>IP源地址是我们的源站IP，针对源站IP来的请求数据我们同样略过。&lt;/p>
-&lt;p>URL不包含.html是因为本次攻击地址都不是.html地址，所以略过了。我网闸对于.html地址也有缓存。大家自己设置时候这一个可以删掉。&lt;/p>
-&lt;p>UA字段WellKnownBot，这个是当时翻策略拦截日志发现的一个UA，好像是个正常请求。所以给他过滤了。&lt;/p>
-&lt;p>威胁分数大于3，这里是保证整个策略不至于过于严格，只针对威胁分数大于 3 的 IP 生效。&lt;/p>
-&lt;h4 id="215地区策略">2.1.5地区策略&lt;/h4>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/a368e1e69eb1e394d4ff91e062487370.webp" alt="">&lt;/p>
-&lt;p>这里一般不需要设置，我是看攻击IP有大量来自印尼的IP，网站基本也没印尼的访客，所以来自印尼的IP全部进行CAPTCHA交互式人机验证。&lt;/p>
-&lt;h3 id="22-ddos策略">2.2 DDOS策略&lt;/h3>
-&lt;p>CloudFlare针对DDOS有自己的分析策略可供我们使用。&lt;/p>
-&lt;p>这里CloudFlare的DDOS实际是包含我们常说的CC攻击的，七层和四层区别。&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/623ca365716f31312d53777313bab8df.webp" alt="">&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/80cc3f724ed4f14b427b64102a542778.webp" alt="">&lt;/p>
-&lt;p>CloudFlare会分析请求是否是DDOS，对于符合的请求我们可以选择进行验证。另外规则集敏感度也可以进行调整。&lt;/p>
-&lt;p>这里如果你正在被攻击，可以将敏感度设置为高。实测误比较少，如果网站长期套CloudFlare，我们可以设置为中。&lt;/p>
-&lt;h3 id="23-其他waf设置">2.3 其他WAF设置&lt;/h3>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/cd5768beb7f4737dfe4fef8bb06b9fa7.webp" alt="">&lt;/p>
-&lt;h3 id="24-缓存设置">2.4 缓存设置&lt;/h3>
-&lt;p>缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。&lt;/p>
-&lt;p>缓存设置是在多个位置进行的。下面大家看截图就好。&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/49e69d9ac882e0c7062d903b66e9971f.webp" alt="">&lt;/p>
-&lt;p>创建一个静态文件的缓存规则。&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/42d62b8007da050d26a6969fe2415723.webp" alt="">&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/6aece4369ee5b5085ef270633796d8a3.webp" alt="">&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/dc0a76d8ef331938a885e9d9571cf938.webp" alt="">&lt;/p>
-&lt;p>上面的是基础缓存，对于页面的缓存我们使用下面的规则。&lt;/p>
-&lt;h4 id="241-页面规则">2.4.1 页面规则&lt;/h4>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/65ed589edffc9425952eaf6acbe5d9ea.webp" alt="">&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/9bd2660918d3519f86c1ab64e4b260e3.webp" alt="">&lt;/p>
-&lt;p>下面这个是我针对RSS地址的缓存设置。实际可以不设置这个规则。&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/d5f30dc0e4d52516161c82b7a48c369f.webp" alt="">&lt;/p>
-&lt;p>[&lt;img src="https://r2.leshans.eu.org/2023/12/aaa6398af125b8d113969a8a664861c0.webp" alt="">&lt;/p>
-&lt;h3 id="25-其他杂项">2.5 其他杂项&lt;/h3>
-&lt;p>一些设置比较散乱，这里给大家列出来。&lt;/p>
-&lt;p>Tor洋葱路由关闭，否则攻击可能穿进源服务器。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/aaa6398af125b8d113969a8a664861c0.webp" alt="">&lt;/p>
-&lt;h3 id="26-最终防御5秒盾">2.6 最终防御5秒盾&lt;/h3>
-&lt;p>目前本站遇到的攻击无需开启五秒盾。&lt;/p>
-&lt;p>如果你的攻击比较大，而且依靠上面规则无法抵挡的话，就开启这个吧。开启后所有请求都会进行人机验证，影响较大。&lt;/p>
-&lt;p>&lt;img src="https://r2.leshans.eu.org/2023/12/190e53d2717d62f9ec3712b234ae7cb0.webp" alt="">&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/30c1ac6daef2b01604cedb562b962657.webp" alt="">&lt;/p></description></item></channel></rss>
