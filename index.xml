@@ -1,48 +1,252 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 30 Jan 2024 21:28:59 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;h3 id="一键重装系统">一键重装系统&lt;/h3>
-&lt;p>&lt;a href="https://blog.leshans.eu.org/p/133/">https://blog.leshans.eu.org/p/133/&lt;/a>&lt;/p>
-&lt;h3 id="安装宝塔面板77原版">安装宝塔面板7.7原版&lt;/h3>
-&lt;p>&lt;a href="https://blog.leshans.eu.org/p/bt/">https://blog.leshans.eu.org/p/bt/&lt;/a>&lt;/p>
-&lt;h3 id="证书申请">证书申请&lt;/h3>
-&lt;p>&lt;a href="https://blog.leshans.eu.org/p/ssl/">https://blog.leshans.eu.org/p/ssl/&lt;/a>&lt;/p>
-&lt;h3 id="rclone工具">rclone工具&lt;/h3>
-&lt;p>&lt;a href="https://blog.leshans.eu.org/p/rclone/">https://blog.leshans.eu.org/p/rclone/&lt;/a>&lt;/p>
-&lt;h3 id="工具箱脚本">工具箱脚本&lt;/h3>
-&lt;p>安装依赖&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 30 Jan 2024 22:51:33 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>项目&lt;/th>
+&lt;th>链接&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>建站选择&lt;/td>
+&lt;td>推荐ubuntu20.04，在复杂环境中，Ubuntu具备完善体制&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>一键重装系统&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/tool/#4%E4%B8%80%E9%94%AEdd">https://blog.leshans.eu.org/p/tool/#4一键dd&lt;/a> 或 &lt;a href="https://blog.leshans.eu.org/p/133/">https://blog.leshans.eu.org/p/133/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>安装宝塔面板7.7原版&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/bt/">https://blog.leshans.eu.org/p/bt/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>宝塔面板计划任务迁移&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/136/">https://blog.leshans.eu.org/p/136/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>宝塔海外版aapanel安装教程&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/141/">https://blog.leshans.eu.org/p/141/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>推荐脚本&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/tool/#5%E6%8E%A8%E8%8D%90%E8%84%9A%E6%9C%AC">https://blog.leshans.eu.org/p/tool/#5推荐脚本&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MySQL 5.7内存优化&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/tool/#1mysql-57%E5%86%85%E5%AD%98%E4%BC%98%E5%8C%96">https://blog.leshans.eu.org/p/tool/#1mysql-57内存优化&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>开启BBR&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/tool/#2bbr">https://blog.leshans.eu.org/p/tool/#2bbr&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>swap的调整&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/tool/#3swap%E7%9A%84%E8%B0%83%E6%95%B4">https://blog.leshans.eu.org/p/tool/#3swap的调整&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>证书申请&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/ssl/">https://blog.leshans.eu.org/p/ssl/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>rclone工具&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/rclone/">https://blog.leshans.eu.org/p/rclone/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>兰空图床&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/137/">https://blog.leshans.eu.org/p/137/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>监控域名有效期&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/132/">https://blog.leshans.eu.org/p/132/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cloudflare R2作为图床的管理和同步&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/143/">https://blog.leshans.eu.org/p/143/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Cloudflare防火墙的设置&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/126/">https://blog.leshans.eu.org/p/126/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>制作自己专属的CDN&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/125/">https://blog.leshans.eu.org/p/125/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>网站建设优化</title><link>https://blog.taoshuge.eu.org/post/tool/</link><pubDate>Tue, 30 Jan 2024 22:51:33 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/tool/</guid><description>&lt;h3 id="1mysql-57内存优化">1.MySQL 5.7内存优化:&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>apt update -y
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema_max_table_instances&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">table_definition_cache&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema&lt;/span>&lt;span style="color:#666">=&lt;/span>off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_chunk_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;/div>&lt;h3 id="2bbr">2.bbr:&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install -y curl
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;net.core.default_qdisc=fq&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/sysctl.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;net.ipv4.tcp_congestion_control=bbr&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/sysctl.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sysctl -p
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lsmod | grep bbr
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;/div>&lt;h3 id="3swap的调整">3.swap的调整：&lt;/h3>
+&lt;p>临时调整vm.swappiness参数为5&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./tool.sh
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo sysctl vm.swappiness&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">5&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="推荐脚本">推荐脚本&lt;/h3>
-&lt;p>来自科技lion&lt;/p>
+&lt;/div>&lt;p>永久调整 vm.swappiness参数为1（优先使用物理内存，迫不得已使用swap）&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/vm.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x vm.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./vm.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>禁用：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo swapoff -a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="4一键dd">4.一键DD：&lt;/h3>
+&lt;p>推荐萌咖脚本&lt;/p>
+&lt;pre tabindex="0">&lt;code>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/vpsnew.sh &amp;amp;&amp;amp; chmod +x vpsnew.sh &amp;amp;&amp;amp; ./vpsnew.sh
+&lt;/code>&lt;/pre>&lt;h3 id="5推荐脚本">5.推荐脚本&lt;/h3>
+&lt;p>先安装依赖：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt update -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install -y curl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>自用：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./tool.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>来自科技lion：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>证书acme与rclone的操作记录</title><link>https://blog.taoshuge.eu.org/post/145/</link><pubDate>Tue, 30 Jan 2024 21:28:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/145/</guid><description>&lt;blockquote>
+&lt;/div></description></item><item><title>建站环境的选择和调优-网站篇</title><link>https://blog.taoshuge.eu.org/post/146/</link><pubDate>Tue, 30 Jan 2024 22:11:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/146/</guid><description>&lt;blockquote>
+&lt;p>建站选择ubuntu20.04，不推荐debian，因为在生产环境中会涉及方方面面，ubuntu在复杂环境中是具备完善体制的，debian通常是高手使用，因为出问题了，他们知道怎么解决，普通用户推荐ubuntu，说人话就是，ubuntu不容易出错！&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>建站面板推荐宝塔，nginx1.20.2、mysql5.7、php7.4的最佳组合，nginx1.20之后的版本对ssl有优化，根据自己的情况&lt;/p>
+&lt;/blockquote>
+&lt;p>系统重装：推荐萌咖脚本&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/vpsnew.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x vpsnew.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./vpsnew.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>mysql5.7内存大小优化：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema_max_table_instances&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">table_definition_cache&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema&lt;/span>&lt;span style="color:#666">=&lt;/span>off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_chunk_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>bbr:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;net.core.default_qdisc=fq&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/sysctl.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;net.ipv4.tcp_congestion_control=bbr&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/sysctl.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sysctl -p
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lsmod | grep bbr
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>swap的调整：内存大的话请关闭，swap和内存不是一个级别的，如果swap都能替内存干活了，要内存干啥！这东西只是内存不足时应急用的！会拖累性能，很多教程没提到这一点。&lt;/p>
+&lt;p>临时调整vm.swappiness参数为5&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo sysctl vm.swappiness&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">5&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>永久调整 vm.swappiness参数为1（优先使用物理内存，迫不得已使用swap）&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/vm.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x vm.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./vm.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>禁用：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo swapoff -a
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>服务器的安全：&lt;/p>
+&lt;p>禁ping、改ssh端口、或者可以上雷池waf社区版，CF，。。。&lt;/p></description></item><item><title>证书acme与rclone的操作记录</title><link>https://blog.taoshuge.eu.org/post/145/</link><pubDate>Tue, 30 Jan 2024 21:28:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/145/</guid><description>&lt;blockquote>
 &lt;p>基于ubuntu20.04&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="证书">证书&lt;/h3>
@@ -980,31 +1184,4 @@ export PATH=$JAVA_HOME/bin:$PATH
 &lt;pre tabindex="0">&lt;code>source /etc/profile
 &lt;/code>&lt;/pre>&lt;p>再输入以下命令，如果出现 java 版本即代表环境配置成功 。&lt;/p>
 &lt;pre tabindex="0">&lt;code>java -version
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/9750070fe7df93ec71020759bdd974c8.webp" alt="">&lt;/p></description></item><item><title>paypal转账手续费</title><link>https://blog.taoshuge.eu.org/post/127/</link><pubDate>Thu, 18 Jan 2024 14:01:13 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/127/</guid><description>&lt;p>收款：4.4%+0.3USD&lt;/p>
-&lt;p>比如我转30给你，你实际收到的是：30 -（30*4.4%+0.3）=28.38&lt;/p>
-&lt;p>中国paypal转账到香港paypal，损耗5.5%&lt;/p>
-&lt;p>包括：2%交易总额+3.5%交易汇率=5.5%&lt;/p>
-&lt;p>假设中国paypal转50美金到香港paypal,如果香港paypal要到账50美金，则需要：&lt;/p>
-&lt;p>50*（1+5.5%）=52.75&lt;/p>
-&lt;p>汇率换算地址：&lt;a href="https://wise.com/zh-cn/currency-converter/usd-to-cny-rate?amount=1">https://wise.com/zh-cn/currency-converter/usd-to-cny-rate?amount=1&lt;/a>&lt;/p>
-&lt;p>中国大陆手续费：【&lt;a href="https://www.paypal.com/c2/webapps/mpp/merchant-fees">点击进入&lt;/a>】 香港地区手续费：【&lt;a href="https://www.paypal.com/hk/webapps/mpp/merchant-fees#additional-percentage">点击进入&lt;/a>】&lt;/p></description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/post/126/</link><pubDate>Wed, 17 Jan 2024 12:53:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/126/</guid><description>&lt;h3 id="添加防火墙规则表达式-复制代码即可">添加防火墙规则表达式 复制代码即可&lt;/h3>
-&lt;h5 id="第一恶意流量阻止">第一：恶意流量阻止&lt;/h5>
-&lt;p>操作：托管质询&lt;/p>
-&lt;pre tabindex="0">&lt;code>(cf.threat_score ge 5 and not cf.client.bot) or (not http.request.version in {&amp;#34;HTTP/1.2&amp;#34; &amp;#34;HTTP/2&amp;#34; &amp;#34;HTTP/3&amp;#34; &amp;#34;SPDY/3.1&amp;#34;}) or (not http.user_agent contains &amp;#34;Mozilla/&amp;#34;)
-&lt;/code>&lt;/pre>&lt;h5 id="第二放行爬虫seo">第二：放行爬虫（seo）&lt;/h5>
-&lt;p>操作：跳过&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">(&lt;/span>cf.client.bot&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;duckduckgo&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;facebookexternalhit&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;Feedfetcher-Google&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;LinkedInBot&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;Mediapartners-Google&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;msnbot&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;Slackbot&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;TwitterBot&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;ia_archive&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> or &lt;span style="color:#666">(&lt;/span>http.user_agent contains &lt;span style="color:#4070a0">&amp;#34;yahoo&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h5 id="第三其他">第三：其他&lt;/h5>
-&lt;p>跳过源站IP、区域或国家阻止&lt;/p>
-&lt;h3 id="cf的waf的防火墙规则">CF的WAF的防火墙规则！&lt;/h3>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/b443160daf498dfe9cacfc1a70d9724d.webp" alt="">&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/6722fbdd4feb910ff8d8a41efec0a1d9.webp" alt="">&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/4439083cfcccf86591fa458165383ec7.webp" alt="">&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/d109af2b05d1ea0a25ffaad7298cad07.webp" alt="">&lt;/p></description></item></channel></rss>
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/9750070fe7df93ec71020759bdd974c8.webp" alt="">&lt;/p></description></item></channel></rss>
