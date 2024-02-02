@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 30 Jan 2024 22:51:33 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 02 Feb 2024 00:43:37 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -25,6 +25,10 @@
 &lt;tr>
 &lt;td>宝塔海外版aapanel安装教程&lt;/td>
 &lt;td>&lt;a href="https://blog.leshans.eu.org/p/141/">https://blog.leshans.eu.org/p/141/&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>docker应用&lt;/td>
+&lt;td>&lt;a href="https://blog.leshans.eu.org/p/11/">https://blog.leshans.eu.org/p/11/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>推荐脚本&lt;/td>
@@ -71,7 +75,63 @@
 &lt;td>&lt;a href="https://blog.leshans.eu.org/p/125/">https://blog.leshans.eu.org/p/125/&lt;/a>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>网站建设优化</title><link>https://blog.taoshuge.eu.org/post/tool/</link><pubDate>Tue, 30 Jan 2024 22:51:33 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/tool/</guid><description>&lt;h3 id="1mysql-57内存优化">1.MySQL 5.7内存优化:&lt;/h3>
+&lt;/table></description></item><item><title>简单一招提升nginx服务器性能</title><link>https://blog.taoshuge.eu.org/post/148/</link><pubDate>Fri, 02 Feb 2024 00:43:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/148/</guid><description>&lt;blockquote>
+&lt;p>当你服务器安装了nginx（推荐1.20版本以上）默认开启了gzip动态压缩，&lt;/p>
+&lt;/blockquote>
+&lt;p>一句话总结就是如何开启&lt;code>静态压缩&lt;/code>！！！&lt;/p>
+&lt;h2 id="为什么要开启静态压缩">为什么要开启静态压缩？&lt;/h2>
+&lt;p>先看一下gzip配置图：&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/b43fb2cde7fb05f6b8ffbef048b3476b.webp" alt="">&lt;/p>
+&lt;p>默认是没有 &lt;code>gzip_static on; &lt;/code>&lt;/p>
+&lt;p>&lt;code>gzip_static on;&lt;/code> 就是开启静态压缩的意思，&lt;/p>
+&lt;h2 id="压缩模式">压缩模式&lt;/h2>
+&lt;blockquote>
+&lt;p>一般来说， &lt;code>Nginx&lt;/code>的 &lt;code>gzip&lt;/code>分为两种模式：&lt;/p>
+&lt;ol>
+&lt;li>动态压缩&lt;/li>
+&lt;li>静态压缩&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;h3 id="动态压缩">动态压缩&lt;/h3>
+&lt;p>动态压缩是指 &lt;code>Nginx&lt;/code>服务器在发送前端产物时，消耗自身的资源进行实时压缩，这样即便产物中不存在 &lt;code>.gz&lt;/code>结尾的文件，浏览器端也能拿到 &lt;code>gzip&lt;/code>格式的前端产物。&lt;/p>
+&lt;h3 id="静态压缩">静态压缩&lt;/h3>
+&lt;p>静态压缩会直接将产物中预先压缩过的 &lt;code>.gz&lt;/code>文件发送给浏览器，而不再实时压缩文件，如果找不到 &lt;code>.gz&lt;/code>文件，将会使用对应的原始文件。&lt;/p>
+&lt;blockquote>
+&lt;p>一句话总结就是：动态压缩消耗服务器资源，而静态压缩提前将压缩文件发送给浏览器&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="教程开始">教程开始&lt;/h2>
+&lt;p>一：有个前提条件，要保证 &lt;code>Nginx&lt;/code>存在 &lt;code>ngx_http_gzip_static_module&lt;/code>模块，这个模块默认是开启的。&lt;/p>
+&lt;p>可以使用下面指令查看是否已经激活该模块：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nginx -V 2&amp;gt;&amp;amp;1| grep -o http_gzip_static_module
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输出结果：&lt;/p>
+&lt;pre tabindex="0">&lt;code>http_gzip_static_module
+&lt;/code>&lt;/pre>&lt;p>说明已经开启。&lt;/p>
+&lt;p>二：然后打开你的网站目录，找到需要压缩的js和css文件，开启静态压缩，需要提前将文件压缩好，这里我提供一键压缩命令：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/gzip.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x gzip.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./gzip.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输入你要压缩的目录，然后在nginx配置文件里的 &lt;code>gzip on;&lt;/code> 下面一行添加&lt;/p>
+&lt;pre tabindex="0">&lt;code>gzip_static on;
+&lt;/code>&lt;/pre>&lt;p>重载和重启nginx生效，&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/039d680b4b56bd32bed12854dfdde6ef.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/b43fb2cde7fb05f6b8ffbef048b3476b.webp" alt="">&lt;/p>
+&lt;h2 id="检查是否生效">检查是否生效&lt;/h2>
+&lt;p>Etag是没有&lt;code>w/&lt;/code>符号的就是静态压缩&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/553091e27b866fab6c160e3121d6ab6b.webp" alt="">&lt;/p>
+&lt;h3 id="动态压缩有w符号">动态压缩：有w/符号&lt;/h3>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/6e815fa8e21efb7be915e3d397b9beae.webp" alt="">&lt;/p></description></item><item><title>网站建设优化</title><link>https://blog.taoshuge.eu.org/post/tool/</link><pubDate>Tue, 30 Jan 2024 22:51:33 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/tool/</guid><description>&lt;h3 id="1mysql-57内存优化">1.MySQL 5.7内存优化:&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
@@ -1157,31 +1217,4 @@ done
 &lt;td>&lt;strong>&lt;a href="https://my.racknerd.com/aff.php?aff=1338&amp;amp;pid=796">查看详情&lt;/a>&lt;/strong>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>宝塔 Linux Java 环境安装教程</title><link>https://blog.taoshuge.eu.org/post/128/</link><pubDate>Sat, 20 Jan 2024 15:41:01 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/128/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
-&lt;p>本教程将帮助你如何在linux系统下的宝塔面板上，快速的安装和配置Java环境 。&lt;/p>
-&lt;h2 id="1-打开终端">#1 打开终端&lt;/h2>
-&lt;p>打开宝塔的终端并输入以下命令&lt;/p>
-&lt;p>PS：一行一个，不要多次输入 。&lt;/p>
-&lt;p>第一步，创建 java 路径 。&lt;/p>
-&lt;pre tabindex="0">&lt;code>mkdir -p /usr/lib/jvm
-&lt;/code>&lt;/pre>&lt;p>第二步，移动到，上一步创建的文件夹 。&lt;/p>
-&lt;pre tabindex="0">&lt;code>cd /usr/lib/jvm
-&lt;/code>&lt;/pre>&lt;p>第三步，在此文件夹下下载 java sdk ，耐心等待，国内服务器可能需要 2-10 分钟 。&lt;/p>
-&lt;p>PS: 该版本的 sdk 版本为 17&lt;/p>
-&lt;pre tabindex="0">&lt;code>wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz
-&lt;/code>&lt;/pre>&lt;p>第四步，解压上一步下载的 sdk 。&lt;/p>
-&lt;pre tabindex="0">&lt;code>tar -zxvf jdk-17_linux-x64_bin.tar.gz
-&lt;/code>&lt;/pre>&lt;p>第五步，重命名解压后的文件夹 为 jdk17 注意版本号&lt;/p>
-&lt;pre tabindex="0">&lt;code>mv jdk-17.0.10 jdk17
-&lt;/code>&lt;/pre>&lt;p>至此，java 17安装完成，现在开始配置 Java sdk的环境变量 。&lt;/p>
-&lt;h2 id="2-配置环境变量">#2 配置环境变量&lt;/h2>
-&lt;p>打开宝塔文件根目录的以下路径 ==/etc/profile==&lt;/p>
-&lt;p>并在 profile 文件的末尾添加以下环境变量&lt;/p>
-&lt;pre tabindex="0">&lt;code>export JAVA_HOME=/usr/lib/jvm/jdk17
-export PATH=$JAVA_HOME/bin:$PATH
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/9b201ba416eafce85648312f23174f18.webp" alt="">&lt;/p>
-&lt;p>返回终端，输入以下命令，刷新配置文件&lt;/p>
-&lt;pre tabindex="0">&lt;code>source /etc/profile
-&lt;/code>&lt;/pre>&lt;p>再输入以下命令，如果出现 java 版本即代表环境配置成功 。&lt;/p>
-&lt;pre tabindex="0">&lt;code>java -version
-&lt;/code>&lt;/pre>&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/9750070fe7df93ec71020759bdd974c8.webp" alt="">&lt;/p></description></item></channel></rss>
+&lt;/table></description></item></channel></rss>
