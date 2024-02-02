@@ -76,7 +76,7 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>简单一招提升nginx服务器性能</title><link>https://blog.taoshuge.eu.org/post/148/</link><pubDate>Fri, 02 Feb 2024 00:43:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/148/</guid><description>&lt;blockquote>
-&lt;p>当你服务器安装了nginx（推荐1.20版本以上）默认开启了gzip动态压缩，&lt;/p>
+&lt;p>当你服务器安装了nginx（推荐1.20版本以上）默认开启了gzip动态压缩，但没有开启静态压缩&lt;/p>
 &lt;/blockquote>
 &lt;p>一句话总结就是如何开启&lt;code>静态压缩&lt;/code>！！！&lt;/p>
 &lt;h2 id="为什么要开启静态压缩">为什么要开启静态压缩？&lt;/h2>
