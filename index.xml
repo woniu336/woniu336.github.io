@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 04 Feb 2024 19:20:24 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 08 Feb 2024 01:58:01 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,265 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>宝塔面板7.7.0一键安装-优化-美化</title><link>https://blog.taoshuge.eu.org/post/152/</link><pubDate>Sun, 04 Feb 2024 19:20:24 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/152/</guid><description>&lt;blockquote>
+&lt;/table></description></item><item><title>网站被镜像如何解决？</title><link>https://blog.taoshuge.eu.org/post/154/</link><pubDate>Thu, 08 Feb 2024 01:58:01 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/154/</guid><description>&lt;p>网站被镜像如何解决？&lt;/p>
+&lt;p>在应对镜像网站问题时，有一种非常有效的策略，可以帮助您恢复控制。直接在网页头部添加以下代码：(替换为你的域名)&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>&amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rthost = window.location.host;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> if (rthost != &amp;#34;www.yourwebsite.com&amp;#34;) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> top.location.href = &amp;#34;https://www.yourwebsite.com&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果您的脚本被屏蔽，您可以考虑添加以下备用代码：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6">6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7">7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8">8&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>&amp;lt;script&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy2021 = false;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/script&amp;gt;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;img src=&amp;#34;&amp;#34; onerror=&amp;#39;setTimeout(function(){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> if (typeof(proxy2021) == &amp;#34;undefined&amp;#34;){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> window.location.host = &amp;#34;www.yourwebsite.com&amp;#34;;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}, 500);&amp;#39;&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这两段代码将使镜像网站自动重定向到您的正版网站，从而有效打击镜像网站的不当行为。&lt;/p>
+&lt;p>这亲测有效的方法可以帮助您更好地保护您的网站和内容免受镜像网站的侵害。&lt;/p></description></item><item><title>网站被谷歌蜘蛛凶猛的爬取-导致流量暴增解决办法</title><link>https://blog.taoshuge.eu.org/post/153/</link><pubDate>Thu, 08 Feb 2024 01:09:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/153/</guid><description>&lt;p>昨晚打开宝塔面板后台查看，上行与下行几乎到了7000KB的速度，不到半小时，就10G流量了，开始以为是被黑了？重载系统，恢复数据后还是一样。&lt;/p>
+&lt;p>下载一个网站监控报表插件一看，好家伙，是谷歌蜘蛛和一些不明ip在搞我其中一个网站！！！最狠的就是谷歌蜘蛛了，疯狂在爬！&lt;/p>
+&lt;p>直接屏蔽：谷歌蜘蛛&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>66.249.79.0/24
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>66.249.68.0/24
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>屏蔽AhrefsBot蜘蛛：&lt;/p>
+&lt;pre tabindex="0">&lt;code>51.222.253.0/24
+&lt;/code>&lt;/pre>&lt;p>不明的IP：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>39.173.116.0/24
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>85.208.96.0/24
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>185.191.171.0/24
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>居然还有华为蜘蛛！！！是否屏蔽思考中。。。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>114.119.130.102
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>114.119.135.32
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>114.119.0.0/16
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>robots.txt&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-19">19&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-20">20&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-21">21&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-22">22&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-23">23&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-24">24&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-25">25&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-26">26&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-27">27&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-28">28&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-29">29&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-30">30&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-31">31&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-32">32&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-33">33&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-34">34&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-35">35&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-36">36&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-37">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-37">37&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-38">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-38">38&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-39">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-39">39&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-40">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-40">40&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-41">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-41">41&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-42">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-42">42&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-43">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-43">43&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-44">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-44">44&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-45">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-45">45&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-46">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-46">46&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-47">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-47">47&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-48">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-48">48&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-49">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-49">49&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-50">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-50">50&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-51">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-51">51&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-52">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-52">52&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-53">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-53">53&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-54">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-54">54&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-55">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-55">55&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-56">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-56">56&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-57">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-57">57&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-58">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-58">58&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-59">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-59">59&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-60">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-60">60&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-61">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-61">61&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-62">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-62">62&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-63">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-63">63&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-64">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-64">64&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-65">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-65">65&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-66">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-66">66&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-67">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-67">67&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>User-agent: *
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: Googlebot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: MJ12bot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: YisouSpider
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SA
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-BA
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SI
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SWA
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-CT
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-BM
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SEOAB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user-agent: AhrefsBot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: DotBot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: Uptimebot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: MegaIndex.ru
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: ZoominfoBot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: Mail.Ru
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: BLEXBot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: ExtLinksBot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: aiHitBot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: Researchscan
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: DnyzBot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: spbot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: YandexBot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SA
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-BA
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SI
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SWA
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-CT
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-BM
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SEOAB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>宝塔面板7.7.0一键安装-优化-美化</title><link>https://blog.taoshuge.eu.org/post/152/</link><pubDate>Sun, 04 Feb 2024 19:20:24 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/152/</guid><description>&lt;blockquote>
 &lt;p>仅适用于ubuntu与 debian&lt;/p>
 &lt;/blockquote>
 &lt;p>安装依赖：&lt;/p>
@@ -1279,254 +1537,4 @@ echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
 &lt;p>证书申请成功后目录：/root/.acme.sh/你的域名/&lt;/p>
 &lt;p>打开目录：&lt;/p>
 &lt;p>xxxx.key为密钥&lt;/p>
-&lt;p>fullchain.cer为证书&lt;/p></description></item><item><title>linux vps重装系统，dd</title><link>https://blog.taoshuge.eu.org/post/133/</link><pubDate>Wed, 24 Jan 2024 18:36:17 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/133/</guid><description>&lt;h3 id="项目">项目&lt;/h3>
-&lt;p>&lt;a href="https://github.com/leitbogioro/Tools">https://github.com/leitbogioro/Tools&lt;/a>&lt;/p>
-&lt;p>Debian系列(Debian / Ubuntu / Kali):&lt;/p>
-&lt;pre tabindex="0">&lt;code>apt update -y
-&lt;/code>&lt;/pre>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install wget -y
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="下载">下载：&lt;/h2>
-&lt;pre tabindex="0">&lt;code>wget --no-check-certificate -qO InstallNET.sh &amp;#39;https://raw.githubusercontent.com/leitbogioro/Tools/master/Linux_reinstall/InstallNET.sh&amp;#39; &amp;amp;&amp;amp; chmod a+x InstallNET.sh
-&lt;/code>&lt;/pre>&lt;h3 id="默认用户名和密码">默认用户名和密码&lt;/h3>
-&lt;p>用户名：root&lt;/p>
-&lt;p>密码：&lt;code>LeitboGi0ro&lt;/code>&lt;/p>
-&lt;h3 id="debian-12">Debian 12&lt;/h3>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian
-&lt;/code>&lt;/pre>&lt;h3 id="debian-11">Debian 11&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>bash InstallNET.sh -debian &lt;span style="color:#40a070">11&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="ubuntu-2204">ubuntu 22.04&lt;/h3>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -ubuntu
-&lt;/code>&lt;/pre>&lt;h3 id="ubuntu-2004">ubuntu 20.04&lt;/h3>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -ubuntu 20.04
-&lt;/code>&lt;/pre>&lt;h3 id="启用bbr">启用BBR&lt;/h3>
-&lt;blockquote>
-&lt;p>通过向 /etc/sysctl.d/99-sysctl.conf 添加参数和值来为当前内核启用 BBR&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/enable_bbr.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x enable_bbr.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./enable_bbr.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="检查-bbr-是否启动">检查 BBR 是否启动&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>lsmod | grep bbr
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="更新系统">更新系统&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt update -y
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install -y curl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="推荐脚本">推荐脚本&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="docker安装">docker安装&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -fsSL https://get.docker.com | sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="地区自选重装debian-11推荐大陆以外的服务器">地区自选，重装Debian 11（推荐大陆以外的服务器）&lt;/h3>
-&lt;h4 id="日本">日本：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.riken.jp/Linux/debian/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="香港">香港：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.hk.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="新加坡">新加坡：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.sg.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="韩国">韩国：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.kaist.ac.kr/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="台湾">台湾：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.tw.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="美国">美国：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;https://mirrors.ocf.berkeley.edu/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="加拿大">加拿大：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.ca.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="英国">英国：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.uk.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="德国">德国：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.de.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="法国">法国：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.fr.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="荷兰">荷兰：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.nl.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="瑞士">瑞士：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.ch.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="俄罗斯">俄罗斯：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.ru.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre>&lt;h4 id="澳大利亚">澳大利亚：&lt;/h4>
-&lt;pre tabindex="0">&lt;code>bash InstallNET.sh -debian 11 -mirror &amp;#34;http://ftp.au.debian.org/debian/&amp;#34;
-&lt;/code>&lt;/pre></description></item><item><title>域名有效期监控的最佳方案</title><link>https://blog.taoshuge.eu.org/post/132/</link><pubDate>Tue, 23 Jan 2024 14:05:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/132/</guid><description>&lt;h3 id="不喜欢开场白还是直接上干货">不喜欢开场白，还是直接上干货&amp;hellip;&lt;/h3>
-&lt;blockquote>
-&lt;p>使用方法:&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>&lt;code>for d in baidu.com bing.com&lt;/code> 修改为你的域名，多个用空格隔开&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>登录&lt;a href="https://slack.com/get-started">https://slack.com/get-started&lt;/a> 获取&lt;code>Webhook URL&lt;/code> 教程在后面&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://hooks.slack.com/services/xxx/xxx/xxx">https://hooks.slack.com/services/xxx/xxx/xxx&lt;/a> 修改为你的&lt;code>Webhook URL&lt;/code>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/blockquote>
-&lt;ol start="4">
-&lt;li>测试要点：修改参数&lt;code>n=129600000&lt;/code>将改好的脚本放到宝塔面板计划任务测试，运行，就会收到消息，测试收到消息再改回来2592000(单位秒)，也就是30天到期提醒&lt;/li>
-&lt;/ol>
-&lt;p>5.微信接收消息技巧: 将你的邮件转发到QQ邮箱，打开微信，设置&amp;ndash;通用&amp;ndash;辅助功能&amp;ndash;QQ邮箱提醒
-slack默认15分钟发送一次新的消息&lt;/p>
-&lt;pre tabindex="0">&lt;code>#!/bin/bash
-#检测域名是否过期
-#博客：blog.leshans.eu.org
-#日期：20240123
-#版本：v0.1
-#当前日期时间戳，用于和域名的到期时间做比较
-currentTimestamp=`date +%s`
-#检测whois命令是否存在，不存在则安装whois包
-isInstallWhois()
-{
-which whois &amp;gt;/dev/null 2&amp;gt;/dev/null
-if [ $? -ne 0 ]
-then
-yum install -y whois || apt-get install whois -y
-fi
-}
-notify()
-{
-expiredate=`whois $1 |grep &amp;#39;Registry Expiry Date&amp;#39; |awk &amp;#39;{print $4}&amp;#39; |cut -d &amp;#39;T&amp;#39; -f 1`
-#上面的$1代表域名，遍历循环出来的。
-#如果e_d的值为空，则过滤关键词&amp;#39;Expiration Time&amp;#39;
-if [ -z &amp;#34;$expiredate&amp;#34; ]
-then
-expiredate=`whois $1|grep &amp;#39;Expiration Time&amp;#39; |awk &amp;#39;{print $3}&amp;#39;`
-fi
-#将域名过期的日期转化为时间戳
-expiredatestamp=`date -d $expiredate +%s`
-#计算半个月一共有多少秒
-# 15d 1296000 30d 2592000 35d 3024000 40d 3456000
-n=2592000
-timeBeforce=$[$expiredatestamp - $n] #过期时间30d以前的时间戳
-timeAfter=$[$expiredatestamp + $n] #过期时间30d以后的时间戳
-if [ $currentTimestamp -ge $timeBeforce ] &amp;amp;&amp;amp; [ $currentTimestamp -lt $expiredatestamp ]
-then
-curl -X POST \
--H &amp;#39;Content-type: application/json&amp;#39; \
---data &amp;#39;{&amp;#34;text&amp;#34;:&amp;#34;⚠️域名 &amp;#39;$1&amp;#39; 将在30天内过期. 域名 &amp;#39;$1&amp;#39; 到期日是 &amp;#39;$expiredate&amp;#39; @xuexiaobai&amp;#34;}&amp;#39; \
-https://hooks.slack.com/services/xxx/xxx/xxx
-fi
-if [ $currentTimestamp -ge $expiredatestamp ]
-then
-curl -X POST \
--H &amp;#39;Content-type: application/json&amp;#39; \
---data &amp;#39;{
-&amp;#34;text&amp;#34;:&amp;#34;⁉️域名 &amp;#39;$1&amp;#39; 已过期. 域名 &amp;#39;$1&amp;#39; 到期日是 &amp;#39;$expiredate&amp;#39; @xuexiaobai&amp;#34;}&amp;#39; \
-https://hooks.slack.com/services/xxx/xxx/xxx
-fi
-}
-#检测上次运行的whois查询进程是否存在
-#若存在，需要杀死进程，以免影响本次脚本执行
-if pgrep whois &amp;amp;&amp;gt;/dev/null
-then
-killall -9 whois
-fi
-isInstallWhois
-for d in baidu.com bing.com
-do
-notify $d
-done
-&lt;/code>&lt;/pre>&lt;h3 id="获取webhook-url教程">获取&lt;code>Webhook URL&lt;/code>教程&lt;/h3>
-&lt;ol>
-&lt;li>
-&lt;p>&lt;strong>创建 Slack 团队：&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>如果你还没有 Slack 团队，可以在 &lt;a href="https://slack.com/get-started">Slack 官方网站&lt;/a>上创建一个免费的团队账户。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>创建工作区：&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>一旦你的团队创建好，你可以创建一个工作区，用于组织你的团队成员和频道。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>创建频道：&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>频道是 Slack 中组织和分类消息的方式。你可以创建不同的频道，例如项目频道、团队频道等。&lt;/li>
-&lt;li>在 Slack 的左侧导航栏中，点击加号（+）按钮，然后选择 &amp;ldquo;创建频道&amp;rdquo;。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>添加团队成员：&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>在 Slack 中邀请团队成员加入工作区，以便他们能够参与到你的工作和讨论中。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>获取 Incoming Webhook URL：&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>如果你想使用脚本中的 Slack 通知功能，你需要创建一个 Incoming Webhook。&lt;/li>
-&lt;li>在 Slack 中，进入你想要接收通知的频道，点击频道名称，然后选择 &amp;ldquo;集成&amp;rdquo;。&lt;/li>
-&lt;li>在 &amp;ldquo;集成&amp;rdquo; 页面中，找到 &amp;ldquo;Incoming Webhooks&amp;rdquo; 并点击 &amp;ldquo;添加到此频道&amp;rdquo;。&lt;/li>
-&lt;li>配置 Incoming Webhook，并获取 Webhook URL。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>使用 Slack Webhook URL：&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>在脚本中，你需要将 Slack Webhook URL 替换为你的 Incoming Webhook URL。这个 URL 用于向 Slack 发送通知消息。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>运行脚本：&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>通过终端或脚本执行环境运行你的脚本，以开始监控域名有效期并发送通知到 Slack。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>查看通知：&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>前提是域名过期或接近过期，Slack 将会收到相应的通知消息。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol></description></item></channel></rss>
+&lt;p>fullchain.cer为证书&lt;/p></description></item></channel></rss>
