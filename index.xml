@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 08 Feb 2024 22:33:27 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 09 Feb 2024 01:21:29 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,28 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>定时任务目录</title><link>https://blog.taoshuge.eu.org/post/156/</link><pubDate>Thu, 08 Feb 2024 22:33:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/156/</guid><description>&lt;p>&lt;code>/var/spool/cron/crontabs/&lt;/code>&lt;/p>
+&lt;/table></description></item><item><title>BestTrace：一款非常好用的VPS回程路由测试脚本</title><link>https://blog.taoshuge.eu.org/post/157/</link><pubDate>Fri, 09 Feb 2024 01:21:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/157/</guid><description>&lt;h2 id="一besttrace使用方法">一、BestTrace使用方法&lt;/h2>
+&lt;p>连上VPS服务器后直接使用脚本：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -qO- git.io/autobesttrace | bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>脚本自动测试VPS到中国电信、移动、联通和教育网四网的回程路由。&lt;/p>
+&lt;h2 id="磁盘真实性能读写测试">磁盘真实性能读写测试&lt;/h2>
+&lt;p>一般数据在 大于20MB/s 为合格，大于40MB/s 为普通，大于80MB/s 为优秀。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dd &lt;span style="color:#bb60d5">bs&lt;/span>&lt;span style="color:#666">=&lt;/span>64k &lt;span style="color:#bb60d5">count&lt;/span>&lt;span style="color:#666">=&lt;/span>4k &lt;span style="color:#007020;font-weight:bold">if&lt;/span>&lt;span style="color:#666">=&lt;/span>/dev/zero &lt;span style="color:#bb60d5">of&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020">test&lt;/span> &lt;span style="color:#bb60d5">oflag&lt;/span>&lt;span style="color:#666">=&lt;/span>dsync
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>定时任务目录</title><link>https://blog.taoshuge.eu.org/post/156/</link><pubDate>Thu, 08 Feb 2024 22:33:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/156/</guid><description>&lt;p>&lt;code>/var/spool/cron/crontabs/&lt;/code>&lt;/p>
 &lt;p>在Ubuntu中，你可以使用&lt;code>cron&lt;/code>来设置定时任务。定时任务的配置文件通常位于&lt;code>/etc/crontab&lt;/code>，而用户特定的定时任务可以通过使用&lt;code>crontab&lt;/code>命令进行管理。用户的个人crontab文件通常位于&lt;code>/var/spool/cron/crontabs/&lt;/code>目录下，文件名是相应的用户名。例如，如果用户名是&lt;code>root&lt;/code>，那么相应的crontab文件路径可能是 &lt;code>/var/spool/cron/crontabs/root&lt;/code>&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -1484,15 +1505,4 @@ rewrite ^(.*)$ /index.php?s=$1 last; break;
 &lt;li>替换旧版本 (删除旧版本，粘贴新版本)&lt;/li>
 &lt;/ol>
 &lt;p>如果在更新时出现 &lt;code>更新失败, 请稍后重试&lt;/code> 的提示, 大概率是因为超时被中断, 如果出现这样的情况, 请手动通过 &lt;code>https://github.com/wisp-x/lsky-pro/releases&lt;/code> 下载 zip 格式的完整包, 并重命名为 &lt;code>upgrade.zip&lt;/code> 移动至系统 &lt;code>runtime&lt;/code> 目录中, 然后在执行更新, 这时候兰空图床会跳过下载安装包的步骤, 直接通过解压 &lt;code>upgrade.zip&lt;/code> 的方式进行安装.&lt;/p>
-&lt;p>宝塔php7.3版本默认没有开启 &lt;code>ZipArchive&lt;/code> ，更新时会出现错误，切换其他版本即可。&lt;/p></description></item><item><title>宝塔面板计划任务列表的迁移或导出</title><link>https://blog.taoshuge.eu.org/post/136/</link><pubDate>Thu, 25 Jan 2024 21:39:26 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/136/</guid><description>&lt;blockquote>
-&lt;p>注意：迁移成功后不代表就会自动运行了，还需要手动点编辑，再保存才会生效！！&lt;/p>
-&lt;/blockquote>
-&lt;h4 id="步骤一备份文件然后迁移到新服务器对应目录下">步骤一：备份文件，然后迁移到新服务器对应目录下。&lt;/h4>
-&lt;p>备份cron下的所有文件&lt;/p>
-&lt;pre tabindex="0">&lt;code>/www/server/cron
-&lt;/code>&lt;/pre>&lt;h4 id="步骤二数据库迁移">步骤二：数据库迁移&lt;/h4>
-&lt;p>下载&lt;code>default.db&lt;/code>文件，使用&lt;code>SQLiteStudio&lt;/code>工具打开数据库。删除新站的crontab表，把老站的表复制进去。然后保存。&lt;/p>
-&lt;pre tabindex="0">&lt;code>/www/server/panel/data/default.db
-&lt;/code>&lt;/pre>&lt;p>把新的default.db上传到新站&lt;code>/www/server/panel/data/&lt;/code>目录下。即可看到新的计划任务内容&lt;/p>
-&lt;p>&lt;code>SQLiteStudio&lt;/code>下载地址：&lt;a href="https://lzui.lanpw.com/iCoiL1mas1gj">https://lzui.lanpw.com/iCoiL1mas1gj&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/12acab52576e8aa7295ba2e23e781f29.webp" alt="">&lt;/p></description></item></channel></rss>
+&lt;p>宝塔php7.3版本默认没有开启 &lt;code>ZipArchive&lt;/code> ，更新时会出现错误，切换其他版本即可。&lt;/p></description></item></channel></rss>
