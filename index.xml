@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 08 Feb 2024 17:39:21 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 08 Feb 2024 22:33:27 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,17 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Linux buffer/cache 内存占用过高的原因以及解决办法</title><link>https://blog.taoshuge.eu.org/post/155/</link><pubDate>Thu, 08 Feb 2024 17:39:21 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/155/</guid><description>&lt;p>我们可以使用下面这个文件来人工触发缓存清除的操作，Linux 提供了三种清空方式：&lt;/p>
+&lt;/table></description></item><item><title>定时任务目录</title><link>https://blog.taoshuge.eu.org/post/156/</link><pubDate>Thu, 08 Feb 2024 22:33:27 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/156/</guid><description>&lt;p>&lt;code>/var/spool/cron/crontabs/&lt;/code>&lt;/p>
+&lt;p>在Ubuntu中，你可以使用&lt;code>cron&lt;/code>来设置定时任务。定时任务的配置文件通常位于&lt;code>/etc/crontab&lt;/code>，而用户特定的定时任务可以通过使用&lt;code>crontab&lt;/code>命令进行管理。用户的个人crontab文件通常位于&lt;code>/var/spool/cron/crontabs/&lt;/code>目录下，文件名是相应的用户名。例如，如果用户名是&lt;code>root&lt;/code>，那么相应的crontab文件路径可能是 &lt;code>/var/spool/cron/crontabs/root&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>crontab -e
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这将打开一个文本编辑器，允许你编辑用户的crontab条目。&lt;/p></description></item><item><title>Linux buffer/cache 内存占用过高的原因以及解决办法</title><link>https://blog.taoshuge.eu.org/post/155/</link><pubDate>Thu, 08 Feb 2024 17:39:21 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/155/</guid><description>&lt;p>我们可以使用下面这个文件来人工触发缓存清除的操作，Linux 提供了三种清空方式：&lt;/p>
 &lt;ol>
 &lt;li>&lt;code>echo 1 &amp;gt; /proc/sys/vm/drop_caches&lt;/code> # 仅清除页面缓存&lt;/li>
 &lt;li>&lt;code>echo 2 &amp;gt; /proc/sys/vm/drop_caches&lt;/code> # 清除目录项和inode&lt;/li>
@@ -1485,180 +1495,4 @@ rewrite ^(.*)$ /index.php?s=$1 last; break;
 &lt;pre tabindex="0">&lt;code>/www/server/panel/data/default.db
 &lt;/code>&lt;/pre>&lt;p>把新的default.db上传到新站&lt;code>/www/server/panel/data/&lt;/code>目录下。即可看到新的计划任务内容&lt;/p>
 &lt;p>&lt;code>SQLiteStudio&lt;/code>下载地址：&lt;a href="https://lzui.lanpw.com/iCoiL1mas1gj">https://lzui.lanpw.com/iCoiL1mas1gj&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/12acab52576e8aa7295ba2e23e781f29.webp" alt="">&lt;/p></description></item><item><title>计划任务备份</title><link>https://blog.taoshuge.eu.org/post/qige/</link><pubDate>Thu, 25 Jan 2024 20:31:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/qige/</guid><description>&lt;h3 id="海洋cms-自用采集">海洋CMS-自用采集###&lt;/h3>
-&lt;pre tabindex="0">&lt;code>#!/bin/bash
-########################################################
-# 程序名称: 海洋CMS自动采集脚本
-# 版本信息：seacmsbot/ v2.0
-# 发布链接: https://www.seacms.net/
-# 使用方法：直接复制代码到宝塔计划任务shell脚本内容里添加每小时任务使用
-# 更新时间：2019.9.26
-##########################################################
-#①请修改下面的网站域名及管理目录
-web_site=&amp;#34;http://xxx.xxx.eu.org/xxx/admin_reslib2.php&amp;#34;
-#②请修改下面项内容为&amp;#34;admin_reslib2.php&amp;#34;里设置的访问密码(默认为系统设置的cookie密码)
-web_pwd=&amp;#34;xxx&amp;#34;
-#③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。
-#每日采集链接获取方法:选择&amp;#34;后台-采集-资源库列表&amp;#34;,复制资源站右边的&amp;#34;采集每天&amp;#34;的链接地址,去掉?前面的内容。
-web_api=(
-&amp;#39;?ac=day&amp;amp;rid=2&amp;amp;url=https://ikunzyapi.com/api.php/seaxml/vod/at/xml&amp;#39;
-&amp;#39;?ac=day&amp;amp;rid=3&amp;amp;url=https://taopianapi.com/cjapi/sea/vod/xml/m3u8.html&amp;#39;
-&amp;#39;?ac=day&amp;amp;rid=6&amp;amp;url=https://api.xinlangapi.com/xinlangapi.php/provide/vod/from/xlm3u8/at/xmlsea/&amp;#39;
-&amp;#39;?ac=day&amp;amp;rid=7&amp;amp;url=http://cj.ffzyapi.com/api.php/seacms/vod/from/ffm3u8/at/xml/&amp;#39;
-&amp;#39;?ac=day&amp;amp;rid=8&amp;amp;url=https://api.1080zyku.com/inc/ldg_api.php&amp;#39;
-&amp;#39;?ac=day&amp;amp;rid=9&amp;amp;url=https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/at/xmlsea/&amp;#39;
-&amp;#39;?ac=day&amp;amp;rid=10&amp;amp;url=https://api.tiankongapi.com/api.php/provide/vod/from/tkm3u8/at/xmlsea&amp;#39;
-)
-#模拟用户浏览器ua,请勿随意修改，以免被目标防火墙拦截!
-web_ua=&amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
-Chrome/76.0.3809.100 Safari/537.36 seacmsbot/1.2;&amp;#34;
-#采集单页
-function get_content() {
-echo &amp;#34;正在采集第$page页...&amp;#34;
-#echo &amp;#34; get_content: ---&amp;gt;url:---&amp;gt;$1&amp;#34;
-cResult=$(curl --connect-timeout 10 -m 20 -k -s -L -A &amp;#34;$web_ua&amp;#34; &amp;#34;$1&amp;#34; )
-echo $cResult | grep -q &amp;#34;采集&amp;#34;
-#echo -e &amp;#34;$1\n$cResult&amp;#34;
-if [ &amp;#34;$?&amp;#34; = &amp;#34;0&amp;#34; ]; then
-next_content &amp;#34;$cResult&amp;#34;
-else
-echo -e &amp;#34;采集失败,请检查设置!\n失败链接--&amp;gt;$1\n返回信息--&amp;gt;$cResult\n采集结束，共0页&amp;#34;
-fi
-}
-#采集下页
-function next_content() {
-#统计数据
-Result=$(echo &amp;#34;$1&amp;#34; | tr &amp;#34;
-&amp;#34; &amp;#34;\n&amp;#34;)
-a=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;采集成功&amp;#34;)
-b=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;更新数据&amp;#34;)
-c=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;无需更新&amp;#34;)
-d=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;跳过&amp;#34;)
-echo &amp;#34;采集成功--&amp;gt;已更$c部,新增$a部,更新$b部,跳过$d部&amp;#34;
-let add+=$a
-let update+=$b
-let none+=$c
-let jmp+=$d
-#检测并采集下页
-next_url=${1##*location.href=\&amp;#39;}
-next_url=${next_url%%\&amp;#39;*}
-#echo $next_url
-if [ &amp;#34;${next_url:0:1}&amp;#34; = &amp;#34;?&amp;#34; ]
-then
-let page++
-get_content &amp;#34;$web_site$next_url&amp;#34;
-else
-echo &amp;#34;采集结束，共$page页&amp;#34;
-fi
-}
-#脚本入口
-echo &amp;#34;海洋CMS自动采集脚本开始执行 版本：v1.2&amp;#34;
-starttime=$(date +%s)
-update=0 #更新
-add=0 #新增
-none=0 #无变化
-jmp=0 # 跳过
-for url in ${web_api[@]};
-do
-if [[ ! -z $url ]]
-then
-web_param=&amp;#34;$web_site$url&amp;amp;password=$web_pwd&amp;#34;
-page=1
-echo &amp;#34;开始采集：$url&amp;#34;
-get_content $web_param
-fi
-done
-endtime=$(date +%s)
-echo &amp;#34;============================&amp;#34;
-echo &amp;#34;入库--&amp;gt;$add部&amp;#34;
-echo &amp;#34;更新--&amp;gt;$update部&amp;#34;
-echo &amp;#34;跳过--&amp;gt;$jmp部(未绑定分类或链接错误)&amp;#34;
-echo &amp;#34;今日--&amp;gt;$[none+add+update]部&amp;#34;
-echo &amp;#34;============================&amp;#34;
-echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
-&lt;/code>&lt;/pre>&lt;h3 id="其他备份">其他备份&lt;/h3>
-&lt;pre tabindex="0">&lt;code>#!/bin/bash
-########################################################
-# 程序名称: 海洋CMS自动采集脚本
-# 版本信息：seacmsbot/ v2.0
-# 发布链接: https://www.seacms.net/
-# 使用方法：直接复制代码到宝塔计划任务shell脚本内容里添加每小时任务使用
-# 更新时间：2019.9.26
-##########################################################
-#①请修改下面的网站域名及管理目录
-web_site=&amp;#34;http://xxx/xxx/admin_reslib2.php&amp;#34;
-#②请修改下面项内容为&amp;#34;admin_reslib2.php&amp;#34;里设置的访问密码(默认为系统设置的cookie密码)
-web_pwd=&amp;#34;xxx&amp;#34;
-#③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。
-#每日采集链接获取方法:选择&amp;#34;后台-采集-资源库列表&amp;#34;,复制资源站右边的&amp;#34;采集每天&amp;#34;的链接地址,去掉?前面的内容。
-web_api=(
-&amp;#39;?ac=day&amp;amp;rid=5&amp;amp;url=https://xxx/xxx.php/provide/vod/at/xml&amp;#39;
-)
-#模拟用户浏览器ua,请勿随意修改，以免被目标防火墙拦截!
-web_ua=&amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
-Chrome/76.0.3809.100 Safari/537.36 seacmsbot/1.2;&amp;#34;
-#采集单页
-function get_content() {
-echo &amp;#34;正在采集第$page页...&amp;#34;
-#echo &amp;#34; get_content: ---&amp;gt;url:---&amp;gt;$1&amp;#34;
-cResult=$(curl --connect-timeout 10 -m 20 -k -s -L -A &amp;#34;$web_ua&amp;#34; &amp;#34;$1&amp;#34; )
-echo $cResult | grep -q &amp;#34;采集&amp;#34;
-#echo -e &amp;#34;$1\n$cResult&amp;#34;
-if [ &amp;#34;$?&amp;#34; = &amp;#34;0&amp;#34; ]; then
-next_content &amp;#34;$cResult&amp;#34;
-else
-echo -e &amp;#34;采集失败,请检查设置!\n失败链接--&amp;gt;$1\n返回信息--&amp;gt;$cResult\n采集结束，共0页&amp;#34;
-fi
-}
-#采集下页
-function next_content() {
-#统计数据
-Result=$(echo &amp;#34;$1&amp;#34; | tr &amp;#34;
-&amp;#34; &amp;#34;\n&amp;#34;)
-a=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;采集成功&amp;#34;)
-b=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;更新数据&amp;#34;)
-c=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;无需更新&amp;#34;)
-d=$(echo &amp;#34;$Result&amp;#34; | grep -c &amp;#34;跳过&amp;#34;)
-echo &amp;#34;采集成功--&amp;gt;已更$c部,新增$a部,更新$b部,跳过$d部&amp;#34;
-let add+=$a
-let update+=$b
-let none+=$c
-let jmp+=$d
-#检测并采集下页
-next_url=${1##*location.href=\&amp;#39;}
-next_url=${next_url%%\&amp;#39;*}
-#echo $next_url
-if [ &amp;#34;${next_url:0:1}&amp;#34; = &amp;#34;?&amp;#34; ]
-then
-let page++
-get_content &amp;#34;$web_site$next_url&amp;#34;
-else
-echo &amp;#34;采集结束，共$page页&amp;#34;
-fi
-}
-#脚本入口
-echo &amp;#34;海洋CMS自动采集脚本开始执行 版本：v1.2&amp;#34;
-starttime=$(date +%s)
-update=0 #更新
-add=0 #新增
-none=0 #无变化
-jmp=0 # 跳过
-for url in ${web_api[@]};
-do
-if [[ ! -z $url ]]
-then
-web_param=&amp;#34;$web_site$url&amp;amp;password=$web_pwd&amp;#34;
-page=1
-echo &amp;#34;开始采集：$url&amp;#34;
-get_content $web_param
-fi
-done
-endtime=$(date +%s)
-echo &amp;#34;============================&amp;#34;
-echo &amp;#34;入库--&amp;gt;$add部&amp;#34;
-echo &amp;#34;更新--&amp;gt;$update部&amp;#34;
-echo &amp;#34;跳过--&amp;gt;$jmp部(未绑定分类或链接错误)&amp;#34;
-echo &amp;#34;今日--&amp;gt;$[none+add+update]部&amp;#34;
-echo &amp;#34;============================&amp;#34;
-echo &amp;#34;全部采集结束,耗时$[endtime - starttime]秒&amp;#34;
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/01/12acab52576e8aa7295ba2e23e781f29.webp" alt="">&lt;/p></description></item></channel></rss>
