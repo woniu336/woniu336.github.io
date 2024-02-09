@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 09 Feb 2024 01:21:29 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 09 Feb 2024 13:30:16 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,116 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>BestTrace：一款非常好用的VPS回程路由测试脚本</title><link>https://blog.taoshuge.eu.org/post/157/</link><pubDate>Fri, 09 Feb 2024 01:21:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/157/</guid><description>&lt;h2 id="一besttrace使用方法">一、BestTrace使用方法&lt;/h2>
+&lt;/table></description></item><item><title>debian11更换为cloud内核</title><link>https://blog.taoshuge.eu.org/post/158/</link><pubDate>Fri, 09 Feb 2024 13:30:16 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/158/</guid><description>&lt;h3 id="前言">前言：&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;code>Cloud&lt;/code>内核相比于普通内核，去掉一些不必要的功能依赖与参数：如声卡打印机等功能，并专门为云计算进行优化，&lt;code>减少了内核的体积与占用&lt;/code>。&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="教程以amd64架构debian系统为例">教程：(以amd64架构、debian系统为例）&lt;/h3>
+&lt;ol>
+&lt;li>更新package&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>apt update &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> apt dist-upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="2">
+&lt;li>确认当前的内核&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dpkg -l|grep linux-image
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>若显示“linux-image-******-amd64”则为普通内核&lt;/p>
+&lt;p>若显示” linux-image-******-cloud-amd64”则为为云优化的内核&lt;/p>
+&lt;ul>
+&lt;li>&amp;ldquo;ii&amp;rdquo; 意味着软件包已经被安装。&lt;/li>
+&lt;li>&amp;ldquo;ic&amp;rdquo; 意味着软件包被安装，但是由于配置问题，没有安装成功。&lt;/li>
+&lt;/ul>
+&lt;p>可以删除ic软件包&lt;/p>
+&lt;p>&lt;strong>一键安装：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;deb http://deb.debian.org/debian buster-backports main&amp;#34;&lt;/span> &amp;gt; /etc/apt/sources.list.d/buster-backports.list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt -t buster-backports install linux-image-cloud-amd64 -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>手动安装&lt;/strong>&lt;/p>
+&lt;p>查找可用内核&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt-cache search linux-image | grep cloud
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>安装Cloud内核&lt;/strong>&lt;/p>
+&lt;p>&lt;code>apt install linux-image-*****-cloud-amd64&lt;/code>&lt;/p>
+&lt;p>&lt;code>apt install linux-headers-*****-cloud-amd64&lt;/code>&lt;/p>
+&lt;p>&lt;code>apt install linux-image-cloud-amd64&lt;/code>&lt;/p>
+&lt;p>&lt;strong>删除老内核：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dpkg --get-selections | grep linux
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt autoremove --purge linux-image-5.10.0-20-amd64 linux-image-5.10.0-26-amd64 -y
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt autoremove
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt autoclean
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里的&lt;code>linux-image-5.10.0-20-amd64与linux-image-5.10.0-26-amd64&lt;/code> 可以通过前面的命令查看&lt;/p>
+&lt;p>&lt;strong>更新一下 grub：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo update-grub
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>重启：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>reboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>验证是否成功&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>uname -r
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>带有“cloud”字样，即成功&lt;/p>
+&lt;p> &lt;strong>卸载旧内核&lt;/strong>&lt;br>
+ 
+请注意，请在确定安装内核成功后执行&lt;/p>
+&lt;p>&lt;code>apt remove linux-image-******-amd64&lt;/code>&lt;/p>
+&lt;p>此处选做，目的释放硬盘空间&lt;/p></description></item><item><title>BestTrace：一款非常好用的VPS回程路由测试脚本</title><link>https://blog.taoshuge.eu.org/post/157/</link><pubDate>Fri, 09 Feb 2024 01:21:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/157/</guid><description>&lt;h2 id="一besttrace使用方法">一、BestTrace使用方法&lt;/h2>
 &lt;p>连上VPS服务器后直接使用脚本：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -1491,36 +1600,4 @@
 &lt;/code>&lt;/pre></description></item><item><title>简洁，没有广告，能下载资源的看片追剧APP</title><link>https://blog.taoshuge.eu.org/post/app/</link><pubDate>Fri, 26 Jan 2024 03:24:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/app/</guid><description>&lt;blockquote>
 &lt;p>可能是最简洁干净的，能下载影视资源的APP了，能下载资源的APP才是好的看片追剧APP~~&lt;/p>
 &lt;/blockquote>
-&lt;p>&lt;a href="https://gh.ddlc.top/https://github.com/jimugou/app/releases/download/v1.6.3/fanqie-v1.6.3.apk">https://gh.ddlc.top/https://github.com/jimugou/app/releases/download/v1.6.3/fanqie-v1.6.3.apk&lt;/a>&lt;/p></description></item><item><title>Lsky 图床 兰空图床</title><link>https://blog.taoshuge.eu.org/post/137/</link><pubDate>Fri, 26 Jan 2024 00:20:10 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/137/</guid><description>&lt;h3 id="项目地址">项目地址&lt;/h3>
-&lt;p>&lt;a href="https://github.com/lsky-org/lsky-pro">https://github.com/lsky-org/lsky-pro&lt;/a>&lt;/p>
-&lt;blockquote>
-&lt;p>推荐安装1.6.4版本，没有php和mysql的要求&lt;/p>
-&lt;/blockquote>
-&lt;p>下载地址：https://github.com/lsky-org/lsky-pro/archive/refs/tags/v1.6.4.zip&lt;/p>
-&lt;p>网盘：&lt;a href="https://lzui.lanpw.com/iUrlR1mb4djg">https://lzui.lanpw.com/iUrlR1mb4djg&lt;/a>&lt;/p>
-&lt;p>Lsky Pro 安装全程可视化页面，只需要下载程序解压到 web 站点目录，访问首页会自动跳转到安装页面，根据提示操作即可，具体步骤：&lt;/p>
-&lt;p>下载兰空，上传至 web 运行环境，解压。&lt;/p>
-&lt;p>设置运行目录为 public。&lt;/p>
-&lt;p>配置 Rewrite 规则：&lt;/p>
-&lt;p>Nginx：&lt;/p>
-&lt;pre tabindex="0">&lt;code>location / {
-if (!-e $request_filename) {
-rewrite ^(.*)$ /index.php?s=$1 last; break;
-}
-}
-&lt;/code>&lt;/pre>&lt;p>Apache: Apache直接使用 .htaccess 即可。
-访问首页，未安装自动跳转至安装页面，根据页面提示安装即可。&lt;/p>
-&lt;p>安装完成以后请设置runtime目录 0755 权限，如果你使用本地存储，public 目录也需要设置为 0755 权限。&lt;/p>
-&lt;ol>
-&lt;li>备份原系统&lt;/li>
-&lt;li>下载新版本安装包，解压。将旧版本系统中的根目录 &lt;code>.env&lt;/code> 文件复制到新版本的根目录
-&lt;ul>
-&lt;li>如果你的文件是储存在本地，你还需要将 &lt;code>public&lt;/code> 目录中的文件移动的新版本的 &lt;code>public&lt;/code> 目录下&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>修改 .env 文件中的数据库配置，然后在 &lt;code>application&lt;/code> 目录下新建 &lt;code>install.lock&lt;/code> 文件&lt;/li>
-&lt;li>将新版本 &lt;code>application/sql/update.sql&lt;/code> 导入到数据库，或直接复制文件内容执行&lt;/li>
-&lt;li>替换旧版本 (删除旧版本，粘贴新版本)&lt;/li>
-&lt;/ol>
-&lt;p>如果在更新时出现 &lt;code>更新失败, 请稍后重试&lt;/code> 的提示, 大概率是因为超时被中断, 如果出现这样的情况, 请手动通过 &lt;code>https://github.com/wisp-x/lsky-pro/releases&lt;/code> 下载 zip 格式的完整包, 并重命名为 &lt;code>upgrade.zip&lt;/code> 移动至系统 &lt;code>runtime&lt;/code> 目录中, 然后在执行更新, 这时候兰空图床会跳过下载安装包的步骤, 直接通过解压 &lt;code>upgrade.zip&lt;/code> 的方式进行安装.&lt;/p>
-&lt;p>宝塔php7.3版本默认没有开启 &lt;code>ZipArchive&lt;/code> ，更新时会出现错误，切换其他版本即可。&lt;/p></description></item></channel></rss>
+&lt;p>&lt;a href="https://gh.ddlc.top/https://github.com/jimugou/app/releases/download/v1.6.3/fanqie-v1.6.3.apk">https://gh.ddlc.top/https://github.com/jimugou/app/releases/download/v1.6.3/fanqie-v1.6.3.apk&lt;/a>&lt;/p></description></item></channel></rss>
