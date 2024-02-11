@@ -470,10 +470,63 @@ php-cgi-72.sock 改成你的php版本即可
 &lt;code>MISS&lt;/code>即这个页面还没被缓存，新发布或刚被删除的页面，首次访问将出现这个状态，如图所示：&lt;/p>
 &lt;/blockquote>
 &lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/b7cbd594296d92cc5303079f19e96eb0.webp" alt="">&lt;/p>
-&lt;h3 id="缓存目录">缓存目录&lt;/h3>
-&lt;blockquote>
-&lt;p>/tmp/wpcache&lt;/p>
-&lt;/blockquote></description></item><item><title>debian11更换为cloud内核</title><link>https://blog.taoshuge.eu.org/post/158/</link><pubDate>Fri, 09 Feb 2024 13:30:16 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/158/</guid><description>&lt;h3 id="前言">前言：&lt;/h3>
+&lt;h3 id="清理缓存">清理缓存&lt;/h3>
+&lt;p>将以下代码添加到面板定时任务即可（shell脚本）&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-19">19&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-20">20&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-21">21&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-22">22&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-23">23&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-24">24&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># Path to the nginx cache directory&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">NGINX_CACHE_PATH&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#4070a0">&amp;#34;/tmp/wpcache&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># Function to clear the nginx cache&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>clear_cache&lt;span style="color:#666">()&lt;/span> &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;Clearing nginx cache...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sudo rm -rf &lt;span style="color:#bb60d5">$NGINX_CACHE_PATH&lt;/span>/*
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;Nginx cache cleared.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># Function to reload nginx&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>reload_nginx&lt;span style="color:#666">()&lt;/span> &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;Reloading Nginx...&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sudo /etc/init.d/nginx reload
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;Nginx reloaded.&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># Clear the cache&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>clear_cache
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># Reload Nginx&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>reload_nginx
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>debian11更换为cloud内核</title><link>https://blog.taoshuge.eu.org/post/158/</link><pubDate>Fri, 09 Feb 2024 13:30:16 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/158/</guid><description>&lt;h3 id="前言">前言：&lt;/h3>
 &lt;blockquote>
 &lt;p>&lt;code>Cloud&lt;/code>内核相比于普通内核，去掉一些不必要的功能依赖与参数：如声卡打印机等功能，并专门为云计算进行优化，&lt;code>减少了内核的体积与占用&lt;/code>。&lt;/p>
 &lt;/blockquote>
