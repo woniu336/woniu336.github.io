@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 10 Feb 2024 07:35:39 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 12 Feb 2024 15:21:38 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,59 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>宝塔面板开启Nginx fastcgi_cache缓存为网站提速</title><link>https://blog.taoshuge.eu.org/post/159/</link><pubDate>Sat, 10 Feb 2024 07:35:39 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/159/</guid><description>&lt;h3 id="nginx-fastcgi_cache介绍">Nginx fastcgi_cache介绍&lt;/h3>
+&lt;/table></description></item><item><title>国内访问GitHub方法-修改hosts</title><link>https://blog.taoshuge.eu.org/post/160/</link><pubDate>Mon, 12 Feb 2024 15:21:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/160/</guid><description>&lt;h3 id="复制下面的内容">复制下面的内容&lt;/h3>
+&lt;pre tabindex="0">&lt;code>20.205.243.166 github.com
+185.199.108.133 raw.githubusercontent.com
+185.199.109.133 raw.githubusercontent.com
+185.199.110.133 raw.githubusercontent.com
+185.199.111.133 raw.githubusercontent.com
+&lt;/code>&lt;/pre>&lt;h3 id="修改-hosts-文件">修改 hosts 文件&lt;/h3>
+&lt;p>Windows 系统：C:\Windows\System32\drivers\etc\hosts&lt;/p>
+&lt;p>修改方法，把第一步的内容复制到文本末尾：&lt;/p>
+&lt;h3 id="激活生效刷新-dns">激活生效,刷新 DNS：&lt;/h3>
+&lt;p>Windows：在 CMD 窗口输入：ipconfig /flushdns&lt;/p>
+&lt;p>以下是一个自动化的批处理脚本，保存为bat文件它会执行你描述的操作：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-17">17&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">hosts_path&lt;/span>&lt;span style="color:#666">=&lt;/span>C:&lt;span style="color:#4070a0;font-weight:bold">\W&lt;/span>indows&lt;span style="color:#4070a0;font-weight:bold">\S&lt;/span>ystem32&lt;span style="color:#4070a0;font-weight:bold">\d&lt;/span>rivers&lt;span style="color:#4070a0;font-weight:bold">\e&lt;/span>tc&lt;span style="color:#4070a0;font-weight:bold">\h&lt;/span>osts
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 复制内容到hosts文件...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 20.205.243.166 github.com&amp;gt;&amp;gt;&lt;span style="color:#4070a0">&amp;#34;%hosts_path%&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 185.199.108.133 raw.githubusercontent.com&amp;gt;&amp;gt;&lt;span style="color:#4070a0">&amp;#34;%hosts_path%&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 185.199.109.133 raw.githubusercontent.com&amp;gt;&amp;gt;&lt;span style="color:#4070a0">&amp;#34;%hosts_path%&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 185.199.110.133 raw.githubusercontent.com&amp;gt;&amp;gt;&lt;span style="color:#4070a0">&amp;#34;%hosts_path%&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 185.199.111.133 raw.githubusercontent.com&amp;gt;&amp;gt;&lt;span style="color:#4070a0">&amp;#34;%hosts_path%&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 修改hosts文件完成。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 刷新 DNS...
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ipconfig /flushdns
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 所有操作已完成。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>宝塔面板开启Nginx fastcgi_cache缓存为网站提速</title><link>https://blog.taoshuge.eu.org/post/159/</link><pubDate>Sat, 10 Feb 2024 07:35:39 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/159/</guid><description>&lt;h3 id="nginx-fastcgi_cache介绍">Nginx fastcgi_cache介绍&lt;/h3>
 &lt;p>说到wordpress的缓存，大家想到的肯定是 &lt;strong>WP-Super-Cache&lt;/strong> 的静态html缓存，&lt;/p>
 &lt;p>以及 &lt;strong>memcached&lt;/strong> 或 &lt;strong>redis&lt;/strong> 动态缓存，插件的缓存效果肯定是有的，&lt;/p>
 &lt;p>但是容易出现各种问题，比如配置很复杂、配置全英文、插件之间的冲突等，&lt;/p>
@@ -1987,35 +2039,4 @@ php-cgi-72.sock 改成你的php版本即可
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O aapanel_chinese.zip https://github.com/gacjie/aapanel_chinese/releases/download/6.8.27/aapanel_simplified_chinese_6827.zip &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> unzip -o aapanel_chinese.zip -d /www/server/ &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> /etc/init.d/bt restart
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Linux系统Swap一键脚本 添加/删除</title><link>https://blog.taoshuge.eu.org/post/swap/</link><pubDate>Sun, 28 Jan 2024 01:36:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/swap/</guid><description>&lt;blockquote>
-&lt;p>在Linux系统中，swap是为了&lt;code>减少内存压力&lt;/code>而设立的一种&lt;code>临时存储空间&lt;/code>，当系统内存不足时，会将一部分内存交换到swap分区中。但是，当系统运行多个程序或进程时，&lt;code>swap会频繁的写入和读取数据&lt;/code>，对硬盘进行频繁的访问，从而&lt;code>导致系统变慢&lt;/code>。&lt;/p>
-&lt;/blockquote>
-&lt;p>如果你的系统内存足够并且感觉swap对系统性能没有多大帮助，可以考虑将swap关闭。&lt;/p>
-&lt;blockquote>
-&lt;p>建议禁止使用swap，除非你内存吃紧，或者调整vm.swappiness参数为10&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="一键添加删除swap脚本">一键添加删除swap脚本&lt;/h2>
-&lt;p>1G或者2G内存，可以设置swap为1G，即1024Mb&lt;/p>
-&lt;pre tabindex="0">&lt;code>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/swap.sh &amp;amp;&amp;amp; chmod +x swap.sh &amp;amp;&amp;amp; ./swap.sh
-&lt;/code>&lt;/pre>&lt;p>临时调整vm.swappiness参数为10&lt;/p>
-&lt;pre tabindex="0">&lt;code>sudo sysctl vm.swappiness=10
-&lt;/code>&lt;/pre>&lt;p>永久调整 vm.swappiness参数为1（优先使用物理内存，迫不得已使用swap）&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/vm.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x vm.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./vm.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="使用free命令查看swap的使用情况">使用free命令查看swap的使用情况&lt;/h3>
-&lt;pre tabindex="0">&lt;code>sudo free -m
-&lt;/code>&lt;/pre>&lt;h3 id="查询当前系统中启用了哪些交换分区">查询当前系统中启用了哪些交换分区&lt;/h3>
-&lt;pre tabindex="0">&lt;code>sudo swapon -s
-&lt;/code>&lt;/pre>&lt;h3 id="禁用命令">禁用命令&lt;/h3>
-&lt;pre tabindex="0">&lt;code>sudo swapoff -a
-&lt;/code>&lt;/pre>&lt;h3 id="启用命令">启用命令&lt;/h3>
-&lt;pre tabindex="0">&lt;code>sudo swapon -a
-&lt;/code>&lt;/pre>&lt;h3 id="永久关闭swap分区">永久关闭swap分区&lt;/h3>
-&lt;pre tabindex="0">&lt;code>sed -ri &amp;#39;s/.*swap.*/#&amp;amp;/&amp;#39; /etc/fstab
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
