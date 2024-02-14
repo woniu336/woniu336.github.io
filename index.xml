@@ -96,6 +96,8 @@
 &lt;/table></description></item><item><title>宝塔面板Nginx编译pagespeed实现webp化</title><link>https://blog.taoshuge.eu.org/post/161/</link><pubDate>Mon, 12 Feb 2024 23:20:04 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/161/</guid><description>&lt;blockquote>
 &lt;p>网站优化之宝塔面板Nginx编译pagespeed实现webp化，目的为通过重写网页来减少延迟和带宽，从而帮助提高Web速度。Ngx_pagespeed是一个开源的Nginx模块，由Google创建，主要的功能是针对前端页面而进行服务器端的优化，对前端设计人员来说，可以省去优化css、js以及图片的过程。&lt;/p>
 &lt;/blockquote>
+&lt;p>单核处理器不推荐使用此模块，推荐&lt;code>Nginx fastcgi_cache&lt;/code>&lt;/p>
+&lt;p>Nginx fastcgi_cache：https://blog.leshans.eu.org/p/159/&lt;/p>
 &lt;h3 id="ngx_pagespeed功能简介">Ngx_pagespeed功能简介&lt;/h3>
 &lt;ol>
 &lt;li>图像优化：剥离元数据、动态调整，重新压缩&lt;/li>
@@ -1028,9 +1030,11 @@ php-cgi-72.sock 改成你的php版本即可
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
 &lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#40a070">1&lt;/span> &amp;gt; /proc/sys/vm/drop_caches
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sync
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#40a070">1&lt;/span> &amp;gt; /proc/sys/vm/drop_caches
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#40a070">2&lt;/span> &amp;gt; /proc/sys/vm/drop_caches
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#40a070">3&lt;/span> &amp;gt; /proc/sys/vm/drop_caches
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
