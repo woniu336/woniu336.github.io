@@ -151,7 +151,7 @@
 &lt;p>点开响应体，即可看到超级密码&lt;/p>
 &lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/4cdcf79cb1b35ef0c478bc2c5b168731.avif" alt="">&lt;/p>
 &lt;p>超级密码界面&lt;/p>
-&lt;p>12.登录光猫的管理地址：192.168.1.1，账户: telecomadmin，超级密码：telecomadmin+8位数字，即可进行后续的高端操作了。&lt;/p></description></item><item><title>超简单！一键永久激活Windows/Office</title><link>https://blog.taoshuge.eu.org/post/164/</link><pubDate>Sat, 17 Feb 2024 15:43:04 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/164/</guid><description>&lt;p>（在PowerShell中输入命令启动脚本）&lt;/p>
+&lt;p>12.登录光猫的管理地址：192.168.1.1，账户: telecomadmin，超级密码：telecomadmin+8位数字，即可进行后续的高端操作了。&lt;/p></description></item><item><title>超简单！一键永久激活Windows/Office</title><link>https://blog.taoshuge.eu.org/post/164/</link><pubDate>Sat, 17 Feb 2024 15:43:04 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/164/</guid><description>&lt;p>使用管理员权限打开PowerShell,输入命令:&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
@@ -160,42 +160,12 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>irm https://massgrave.dev/get | iex
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>MAS脚本官网：https://massgrave.dev/&lt;/p>
+&lt;/div>&lt;p>中文版下载地址:&lt;/p>
+&lt;p>&lt;code>打开地址,右上角点击下载按钮&lt;/code>&lt;/p>
+&lt;pre tabindex="0">&lt;code>https://github.com/woniu336/open_shell/blob/main/MAS中文版.cmd
+&lt;/code>&lt;/pre>&lt;p>MAS脚本官网：https://massgrave.dev/&lt;/p>
 &lt;p>MAS脚本Github：https://github.com/massgravel/Microsoft-Activation-Scripts&lt;/p>
-&lt;p>HEU KMS Activator：https://github.com/zbezj/HEU_KMS_Activator/releases&lt;/p>
-&lt;!DOCTYPE HTML>
-&lt;html>
-&lt;head>
-&lt;style type="text/css">
-.aspect-ratio {
-position: relative;
-width: 100%;
-height: 0;
-padding-bottom: 75%;
-}
-.aspect-ratio iframe {
-position: absolute;
-width: 100%;
-height: 100%;
-left: 0;
-top: 0;
-}
-&lt;/style>
-&lt;/head>
-&lt;body>
-&lt;div class="aspect-ratio">
-&lt;iframe
-src="https://player.bilibili.com/player.html?bvid=BV1XM411X7wT&amp;page=1&amp;high_quality=1&amp;danmaku=0"
-scrolling="no"
-border="0"
-frameborder="no"
-framespacing="0"
-allowfullscreen="true"
->
-&lt;/iframe>
-&lt;/div>
-&lt;/body>
-&lt;/html></description></item><item><title>xubuntu 桌面版20.04 开启SSH服务</title><link>https://blog.taoshuge.eu.org/post/163/</link><pubDate>Sat, 17 Feb 2024 04:29:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/163/</guid><description>&lt;blockquote>
+&lt;p>HEU KMS Activator：https://github.com/zbezj/HEU_KMS_Activator/releases&lt;/p></description></item><item><title>xubuntu 桌面版20.04 开启SSH服务</title><link>https://blog.taoshuge.eu.org/post/163/</link><pubDate>Sat, 17 Feb 2024 04:29:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/163/</guid><description>&lt;blockquote>
 &lt;p>注意: 用户名不是&lt;code>root&lt;/code>,是你的登录名&lt;/p>
 &lt;/blockquote>
 &lt;p>更新软件下载源&lt;/p>
