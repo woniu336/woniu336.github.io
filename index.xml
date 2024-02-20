@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 20 Feb 2024 23:51:38 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 21 Feb 2024 05:41:42 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,125 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>AdGuard Home - DNS缓存加速</title><link>https://blog.taoshuge.eu.org/post/169/</link><pubDate>Tue, 20 Feb 2024 23:51:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/169/</guid><description>&lt;h3 id="adguard-home设置">AdGuard Home设置&lt;/h3>
+&lt;/table></description></item><item><title>Hyper-v创建虚拟交换机失败与网络共享重启失效解决办法</title><link>https://blog.taoshuge.eu.org/post/170/</link><pubDate>Wed, 21 Feb 2024 05:41:42 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/170/</guid><description>&lt;blockquote>
+&lt;p>物理网卡属性里去掉勾选 &lt;code>Hyper-v Extensible Virtual Switch&lt;/code> 或者叫 &lt;code>Hyper-v 可扩展的虚拟交换机&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="创建虚拟交换机失败解决办法">创建虚拟交换机失败解决办法&lt;/h3>
+&lt;p>创建之前先关闭&lt;code>Hyper-v Extensible Virtual Switch&lt;/code>&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/9a5b0a848f2875f21b16c4a806a87299.webp" alt="">&lt;/p>
+&lt;p>其他方法:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>步骤&lt;/th>
+&lt;th>操作&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>在“启用或关闭Windows功能”中卸载Hyper-V&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>重启计算机&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>以管理员方式在“运行”中运行命令&lt;code>netsh winsock reset&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>重启计算机&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>重启后查看“网络适配器”中是否有其他非物理网卡，若有则删除&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>确认物理网卡属性中没有勾选或存在“Hyper-v Extensible Virtual Switch”&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>7&lt;/td>
+&lt;td>在“启用或关闭Windows功能”中重新启用Hyper-V&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>8&lt;/td>
+&lt;td>重启计算机&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>9&lt;/td>
+&lt;td>确认要绑定“虚拟交换机”的物理网卡属性中没有勾选“Hyper-v Extensible Virtual Switch”&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>请注意，这些步骤仅供参考，具体操作可能因系统版本和配置而有所不同。在执行任何更改之前，请确保备份重要数据并谨慎操作。&lt;/p>
+&lt;h3 id="网络共享重启失效解决办法">网络共享重启失效解决办法&lt;/h3>
+&lt;h4 id="一键脚本-方法1推荐">一键脚本: (方法1)推荐&lt;/h4>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-19">19&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>REM 设置输出编码为UTF-8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chcp &lt;span style="color:#40a070">65001&lt;/span> &amp;gt; nul
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>REM 导入注册表键值
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>reg add &lt;span style="color:#4070a0">&amp;#34;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\SharedAccess&amp;#34;&lt;/span> /v &lt;span style="color:#4070a0">&amp;#34;EnableRebootPersistConnection&amp;#34;&lt;/span> /t REG_DWORD /d &lt;span style="color:#40a070">1&lt;/span> /f
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 注册表键值已创建并设置为1。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>REM 设置输出编码为UTF-8
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chcp &lt;span style="color:#40a070">65001&lt;/span> &amp;gt; nul
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>REM 使用 sc 命令更改服务启动类型为自动
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sc config SharedAccess &lt;span style="color:#bb60d5">start&lt;/span>&lt;span style="color:#666">=&lt;/span> auto
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 服务 &lt;span style="color:#4070a0">&amp;#34;Internet Connection Sharing (ICS)&amp;#34;&lt;/span> 的启动类型已更改为自动。
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将上述代码保存为扩展名为&lt;code>.bat&lt;/code>文件，例如&lt;code>enable_reboot.bat&lt;/code>。然后，双击运行该批处理文件&lt;/p>
+&lt;h4 id="手动修复-方法2">手动修复 (方法2)&lt;/h4>
+&lt;ol>
+&lt;li>修改注册表&lt;/li>
+&lt;/ol>
+&lt;p>快捷键 win+r 输入 regedit 确认打开 注册表编辑器&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/28bfef24348e3de28ac85acad463f779.webp" alt="image-1683871305927">&lt;/p>
+&lt;p>输入注册表路径&lt;/p>
+&lt;p>&lt;code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SharedAccess&lt;/code>&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/960d2d380ff750b6fc0099dceb032c9e.webp" alt="image-1683871363608">&lt;/p>
+&lt;p>新建项 “DWORD(32位)值(D) 名称 &lt;code>EnableRebootPersistConnection&lt;/code> 并修改值为1&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/f1864d3898c6c7a89b6932a5c748a161.webp" alt="image-1683871433057">&lt;/p>
+&lt;h4 id="修改服务internet-connection-sharing-ics-启动类型为自动">修改服务Internet Connection Sharing (ICS) 启动类型为自动&lt;/h4>
+&lt;h4 id="打开服务面板">打开服务面板&lt;/h4>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/eb960ac2bc20e3523647e7519793e0cf.webp" alt="image-1683871479766">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/d4c977a9c485f00fe0c66deb5593fb86.webp" alt="image-1683871576352">&lt;/p>
+&lt;h3 id="重新设置共享链接">重新设置共享链接&lt;/h3>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/89065f856e5ed9dcd6247971e64baa94.webp" alt="image-1683871613904">&lt;/p>
+&lt;p>这次重启后不会失效了&lt;/p></description></item><item><title>AdGuard Home - DNS缓存加速</title><link>https://blog.taoshuge.eu.org/post/169/</link><pubDate>Tue, 20 Feb 2024 23:51:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/169/</guid><description>&lt;h3 id="adguard-home设置">AdGuard Home设置&lt;/h3>
 &lt;blockquote>
 &lt;p>AdGuard Home作为DNS分流,拦截广告效果并不如浏览器插件,但是作为DNS服务器使用是非常优秀的, 拦截广告的方法很多,不是一定要用他,不要本末倒置&lt;/p>
 &lt;/blockquote>
@@ -123,27 +241,33 @@
 &lt;h3 id="dns黑名单">DNS黑名单&lt;/h3>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/4c5f0dab72f701a3a31a6944ccd52ff5.webp" alt="">&lt;/p>
 &lt;p>两个足以,添加方法:&lt;/p>
-&lt;p>&lt;strong>点击添加黑名单&amp;ndash;从列表中选择&lt;/strong>&lt;/p></description></item><item><title>Winserver2022安装hyper-v</title><link>https://blog.taoshuge.eu.org/post/168/</link><pubDate>Tue, 20 Feb 2024 04:11:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/168/</guid><description>&lt;h1 id="20221129windows-server安装hyper-vhttpswwwcnblogscommokoup16975449html">&lt;a href="https://www.cnblogs.com/mokou/p/16975449.html">【2022.11.29】windows server安装hyper-v&lt;/a> &lt;/h1>
-&lt;p>在已经安装好的winserver2022上打好驱动，这个如果缺的话，可以在网上寻找就好了&lt;/p>
+&lt;p>&lt;strong>点击添加黑名单&amp;ndash;从列表中选择&lt;/strong>&lt;/p></description></item><item><title>winserver2022安装hyper-v</title><link>https://blog.taoshuge.eu.org/post/168/</link><pubDate>Tue, 20 Feb 2024 04:11:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/168/</guid><description>&lt;p>在已经安装好的winserver2022上打好驱动，这个如果缺的话，可以在网上寻找就好了&lt;/p>
 &lt;p>有个重要的核显驱动在因特尔官网&lt;/p>
 &lt;p>&lt;a href="https://www.intel.cn/content/www/cn/zh/download/19344/intel-graphics-windows-dch-drivers.html?wapkw=gfx">英特尔® 显卡 – Windows* DCH 驱动程序 (intel.cn)&lt;/a>&lt;/p>
-&lt;h3 id="激活win">激活WIN&lt;/h3>
+&lt;h3 id="激活命令">激活命令&lt;/h3>
+&lt;p>打开PowerShell(管理员),输入以下代码:&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>slmgr /upk
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>slmgr /ipk VDYBN-27WPP-V4HQT-9VMD4-VMK7H
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>slmgr /skms kms.03k.org
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>slmgr /ato
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>irm https://massgrave.dev/get | iex
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>或者使用激活脚本:&lt;/p>
 &lt;p>&lt;a href="https://www.123pan.com/s/cjqrVv-6rL9d.html">https://www.123pan.com/s/cjqrVv-6rL9d.html&lt;/a>&lt;/p>
+&lt;h3 id="开启hyper-v">开启hyper-v&lt;/h3>
+&lt;p>一键开启:&lt;/p>
+&lt;p>打开PowerShell(管理员),输入以下代码:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>手动开启:&lt;/p>
 &lt;p>启用windows功能&lt;/p>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/c4b1708514957b8958834b8d57347015.webp" alt="image-20221129220627106">&lt;/p>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/ae37b510dd20fa5f0117e8e33d56f6a2.webp" alt="image-20221129220708301">&lt;/p>
@@ -2124,70 +2248,6 @@ php-cgi-72.sock 改成你的php版本即可
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 重启面板&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;重启面板&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>/etc/init.d/bt restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>宝塔面板-美化主题</title><link>https://blog.taoshuge.eu.org/post/151/</link><pubDate>Sun, 04 Feb 2024 19:13:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/151/</guid><description>&lt;p>宝塔面板都是自己看的，一般不太需要使用模板。
-但时间久了，就想换换风格，找了好多基本都是改背景图片那种。
-也找到几个满意的无奈只支持旧版本，要么就是收费的。
-考虑到服务器安全，方便审计代码，只修改了css、js文件，打包时只打包了改过的文件。
-技术精力有限，有些细节问题未处理，后续慢慢更新吧。
-目前linux、windows、aapanel的常用版本全都制作了，以方便用户使用。&lt;/p>
-&lt;blockquote>
-&lt;p>最后还需要手动清理浏览器缓存&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/814dc43e7c6cdf4e7057651e0d1a5947.webp" alt="">&lt;/p>
-&lt;p>宝塔linux面板7.9.10主题&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O btpanel_theme.zip https://raw.githubusercontent.com/woniu336/open_shell/main/bt/BTPanel_theme_linux_7910.zip &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> unzip -o btpanel_theme.zip -d /www/server/ &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> /etc/init.d/bt restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>宝塔linux面板7.9.9主题&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O btpanel_theme.zip https://raw.githubusercontent.com/woniu336/open_shell/main/bt/BTPanel_theme_linux_799.zip &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> unzip -o btpanel_theme.zip -d /www/server/ &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> /etc/init.d/bt restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>宝塔linux面板7.9.8主题&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O btpanel_theme.zip https://raw.githubusercontent.com/woniu336/open_shell/main/bt/BTPanel_theme_linux_798.zip &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> unzip -o btpanel_theme.zip -d /www/server/ &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> /etc/init.d/bt restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>宝塔linux面板7.7.0主题&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O btpanel_theme.zip https://raw.githubusercontent.com/woniu336/open_shell/main/bt/BTPanel_theme_linux_770.zip &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> unzip -o btpanel_theme.zip -d /www/server/ &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> /etc/init.d/bt restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>宝塔linux面板7.6.0主题&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O btpanel_theme.zip https://raw.githubusercontent.com/woniu336/open_shell/main/bt/BTPanel_theme_linux_760.zip &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> unzip -o btpanel_theme.zip -d /www/server/ &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> /etc/init.d/bt restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>宝塔海外aapanel6.8.27版主题&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O btpanel_theme.zip https://raw.githubusercontent.com/woniu336/open_shell/main/bt/BTPanel_theme_aapanel_6827.zip &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> unzip -o btpanel_theme.zip -d /www/server/ &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> /etc/init.d/bt restart
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item></channel></rss>
