@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 18 Feb 2024 19:56:41 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 20 Feb 2024 23:51:38 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,124 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Office 365正版免费激活！2024最新激活方法！</title><link>https://blog.taoshuge.eu.org/post/166/</link><pubDate>Sun, 18 Feb 2024 19:56:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/166/</guid><description>&lt;p>工具地址:&lt;/p>
+&lt;/table></description></item><item><title>AdGuard Home - DNS缓存加速</title><link>https://blog.taoshuge.eu.org/post/169/</link><pubDate>Tue, 20 Feb 2024 23:51:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/169/</guid><description>&lt;h3 id="adguard-home设置">AdGuard Home设置&lt;/h3>
+&lt;blockquote>
+&lt;p>AdGuard Home作为DNS分流,拦截广告效果并不如浏览器插件,但是作为DNS服务器使用是非常优秀的, 拦截广告的方法很多,不是一定要用他,不要本末倒置&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/2025326830aaea9a9148a4c53f6038d9.webp" alt="">&lt;/p>
+&lt;h3 id="重要设置">重要设置:&lt;/h3>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/310bec32651c467fd0a78a7eddaf5789.webp" alt="">&lt;/p>
+&lt;p>前面两个DNS使用你运营商的,解析才会快,查询地址:&lt;/p>
+&lt;p>&lt;a href="https://www.xdtool.com/dnsdx">https://www.xdtool.com/dnsdx&lt;/a>&lt;/p>
+&lt;p>你是电信就查电信,其他类似&lt;/p>
+&lt;p>后面三个使用: 百度,阿里,腾讯,就行了,不是越多越好.&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>180.76.76.76
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>223.5.5.5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>119.29.29.29
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>选择: &lt;strong>并行请求&lt;/strong>&lt;/p>
+&lt;p>Bootstrap DNS 服务器也使用运营商的&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/c7df89f161ab3684e437ea2e1a02aafd.webp" alt="">&lt;/p>
+&lt;p>其他默认就好,日志选择7天就行&lt;/p>
+&lt;h3 id="dns黑名单">DNS黑名单&lt;/h3>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/4c5f0dab72f701a3a31a6944ccd52ff5.webp" alt="">&lt;/p>
+&lt;p>两个足以,添加方法:&lt;/p>
+&lt;p>&lt;strong>点击添加黑名单&amp;ndash;从列表中选择&lt;/strong>&lt;/p></description></item><item><title>Winserver2022安装hyper-v</title><link>https://blog.taoshuge.eu.org/post/168/</link><pubDate>Tue, 20 Feb 2024 04:11:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/168/</guid><description>&lt;h1 id="20221129windows-server安装hyper-vhttpswwwcnblogscommokoup16975449html">&lt;a href="https://www.cnblogs.com/mokou/p/16975449.html">【2022.11.29】windows server安装hyper-v&lt;/a> &lt;/h1>
+&lt;p>在已经安装好的winserver2022上打好驱动，这个如果缺的话，可以在网上寻找就好了&lt;/p>
+&lt;p>有个重要的核显驱动在因特尔官网&lt;/p>
+&lt;p>&lt;a href="https://www.intel.cn/content/www/cn/zh/download/19344/intel-graphics-windows-dch-drivers.html?wapkw=gfx">英特尔® 显卡 – Windows* DCH 驱动程序 (intel.cn)&lt;/a>&lt;/p>
+&lt;h3 id="激活win">激活WIN&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>slmgr /upk
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>slmgr /ipk VDYBN-27WPP-V4HQT-9VMD4-VMK7H
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>slmgr /skms kms.03k.org
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>slmgr /ato
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者使用激活脚本:&lt;/p>
+&lt;p>&lt;a href="https://www.123pan.com/s/cjqrVv-6rL9d.html">https://www.123pan.com/s/cjqrVv-6rL9d.html&lt;/a>&lt;/p>
+&lt;p>启用windows功能&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/c4b1708514957b8958834b8d57347015.webp" alt="image-20221129220627106">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/ae37b510dd20fa5f0117e8e33d56f6a2.webp" alt="image-20221129220708301">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/598f88fd0354186f9672420b65970227.webp" alt="image-20221129220730293">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/c2b2438d8fd2e14cc50ec0e89d1949a4.webp" alt="image-20221129220755338">&lt;/p>
+&lt;p>开启hyper-v&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/f9a84db3ff0e831e0a41b15ecd8ce3f4.webp" alt="image-20221129220828917">&lt;/p>
+&lt;p>SMB&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/b4bfb2d33c5512e942afe7d2f7ece2c9.webp" alt="image-20221129221004329">&lt;/p>
+&lt;p>剩下暂时都不管，后期还可以改&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/e0c819814796d0e7d6f5b1d5f0c97907.webp" alt="image-20221129221315469">&lt;/p>
+&lt;p>安装相关内容后重启&lt;/p>
+&lt;h3 id="修改用户名组策略">修改用户名组策略&lt;/h3>
+&lt;h4 id="修改计算机名">修改计算机名&lt;/h4>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/042d3fff2ad4481bec8701d59b398816.webp" alt="image-20221130101551203">&lt;/p>
+&lt;h4 id="修改组策略">修改组策略&lt;/h4>
+&lt;pre tabindex="0">&lt;code class="language-undefined" data-lang="undefined">gpedit.msc
+&lt;/code>&lt;/pre>&lt;p>修改如下&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/5070e1632b731253dd586c54b2272785.webp" alt="image-20221130101932927">&lt;/p>
+&lt;p>重命名管理员，然后重启&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/dc5963d87a3b59a6fc16d6415e633237.webp" alt="image-20221130102049939">&lt;/p>
+&lt;h3 id="下载dda">下载DDA&lt;/h3>
+&lt;p>&lt;a href="https://www.123pan.com/s/cjqrVv-yrL9d.html">https://www.123pan.com/s/cjqrVv-yrL9d.html&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/chanket/DDA">chanket/DDA: 实现Hyper-V离散设备分配功能的图形界面工具。A GUI Tool For Hyper-V&amp;rsquo;s Discrete Device Assignment(DDA). (github.com)&lt;/a>&lt;/p>
+&lt;h3 id="下载starwind-v2v-converter">下载starwind v2v converter&lt;/h3>
+&lt;p>可以将img直接转化为虚拟磁盘启动&lt;/p>
+&lt;p>&lt;a href="https://www.starwindsoftware.com/tmplink/starwindconverter.exe">https://www.starwindsoftware.com/tmplink/starwindconverter.exe&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.123pan.com/s/cjqrVv-jrL9d.html">https://www.123pan.com/s/cjqrVv-jrL9d.html&lt;/a>&lt;/p>
+&lt;h3 id="创建交换机">创建交换机&lt;/h3>
+&lt;p>我要做一个主路由模式的网络结构&lt;/p>
+&lt;p>打开hyperv管理&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/32bfffe0aec213f13c9f81cfca904ad8.webp" alt="image-20221130104504949">&lt;/p>
+&lt;p>当前没连接网线的是WAN口，之后要在这个口进行PPPoE拨号&lt;/p>
+&lt;p>在设置里面找到当前连接的网口&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/d95a2b9c2d9a32f807ffeb7d9687a03a.webp" alt="image-20221130105057969">&lt;/p>
+&lt;p>现在连网线的是LAN口，之后要连接硬路由的口，这里同样选外部&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/94db23a8fb67203311b01373bca3555c.webp" alt="image-20221130105633335">&lt;/p>
+&lt;h3 id="下载openwrt并转化">下载openwrt并转化&lt;/h3>
+&lt;p>&lt;a href="https://github.com/klever1988/nanopi-openwrt/releases">Releases · klever1988/nanopi-openwrt · GitHub&lt;/a>&lt;/p>
+&lt;p>选择X86版本&lt;/p>
+&lt;h3 id="新建虚拟机">新建虚拟机&lt;/h3>
+&lt;p>打开hyperv管理器&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/ecc6ca56bb06efa60d0f22f36236b207.webp" alt="image-20221129222654079">&lt;/p>
+&lt;p>新建，然后在代数选择第一代，第二代启动不了ovo&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/4c9ff2242909557d461910da29151ec0.webp" alt="image-20221129222725362">&lt;/p>
+&lt;p>内存1G就行&lt;/p>
+&lt;p>存储最大选择2G差不多了&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/aa0ab58df548d7d7c2e23019f0405a53.webp" alt="image-20221129222827127">&lt;/p></description></item><item><title>一条命令在 Windows 10 上安装 Hyper-V虚拟机</title><link>https://blog.taoshuge.eu.org/post/167/</link><pubDate>Sun, 18 Feb 2024 23:03:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/167/</guid><description>&lt;h2 id="使用-powershell-启用-hyper-v">使用 PowerShell 启用 Hyper-V&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>以管理员身份打开 &lt;code>PowerShell&lt;/code> 控制台。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>运行以下命令：&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>PowerShell复制&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果无法找到此命令，请确保你以管理员身份运行 PowerShell。&lt;/p>
+&lt;p>安装完成后，请重启。&lt;/p></description></item><item><title>Office 365正版免费激活！2024最新激活方法！</title><link>https://blog.taoshuge.eu.org/post/166/</link><pubDate>Sun, 18 Feb 2024 19:56:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/166/</guid><description>&lt;p>工具地址:&lt;/p>
 &lt;p>&lt;a href="https://otp.landian.vip/zh-cn/download.html">https://otp.landian.vip/zh-cn/download.html&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>提示: &lt;code>右键图片&lt;/code>-在新标签页打开图片即可&lt;code>放大观看&lt;/code>&lt;/p>
@@ -174,6 +291,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>中文版下载地址:&lt;/p>
+&lt;p>&lt;a href="https://www.123pan.com/s/cjqrVv-6rL9d.html">https://www.123pan.com/s/cjqrVv-6rL9d.html&lt;/a>&lt;/p>
 &lt;p>&lt;code>打开地址,右上角点击下载按钮&lt;/code>&lt;/p>
 &lt;pre tabindex="0">&lt;code>https://github.com/woniu336/open_shell/blob/main/MAS中文版.cmd
 &lt;/code>&lt;/pre>&lt;p>MAS脚本官网：https://massgrave.dev/&lt;/p>
@@ -2070,356 +2188,6 @@ php-cgi-72.sock 改成你的php版本即可
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -O btpanel_theme.zip https://raw.githubusercontent.com/woniu336/open_shell/main/bt/BTPanel_theme_aapanel_6827.zip &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> unzip -o btpanel_theme.zip -d /www/server/ &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> /etc/init.d/bt restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>宝塔Linux面板优化教程</title><link>https://blog.taoshuge.eu.org/post/150/</link><pubDate>Sun, 04 Feb 2024 18:19:39 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/150/</guid><description>&lt;h3 id="教程说明">教程说明&lt;/h3>
-&lt;p>本教程可以对宝塔部分文件功能进行优化处理，如果出错可以使用修复更新面板的命令恢复文件。&lt;/p>
-&lt;h3 id="去除网站默认文件">去除网站默认文件&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sudo sed -i &amp;#34;\|htaccess = self.sitePath+&amp;#39;/\.htaccess&amp;#39;|, \|public.ExecShell(&amp;#39;chown -R www:www &amp;#39; + htaccess)|d&amp;#34; /www/server/panel/class/panelSite.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sudo sed -i &amp;#34;\|index = self.sitePath+&amp;#39;/index.html&amp;#39;|, \|public.ExecShell(&amp;#39;chown -R www:www &amp;#39; + index)|d&amp;#34; /www/server/panel/class/panelSite.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sudo sed -i &amp;#34;\|doc404 = self.sitePath+&amp;#39;/404.html&amp;#39;|, \|public.ExecShell(&amp;#39;chown -R www:www &amp;#39; + doc404)|d&amp;#34; /www/server/panel/class/panelSite.py
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="关闭未绑定域名提示">关闭未绑定域名提示&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;s/root \/www\/server\/nginx\/html/return 400/&amp;#34; /www/server/panel/class/panelSite.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;s/root \/www\/server\/nginx\/html/return 400/&amp;#34; /www/server/panel/vhost/nginx/0.default.conf
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="关闭安全入口提示">关闭安全入口提示&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;s/return render_template(&amp;#39;autherr.html&amp;#39;)/return abort(404)/&amp;#34; /www/server/panel/BTPanel/__init__.py
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="去除消息推送">去除消息推送&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>目前还不清楚具体功能猜测广告，删掉也不影响。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;/p = threading.Thread(target=check_panel_msg)/, /p.start()/d&amp;#34; /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#39;/\&amp;#34;check_panel_msg\&amp;#34;:/d&amp;#39; /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="去除文件校验">去除文件校验&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>这个功能会每隔10分钟执行一次，用途是获取新面板文件替换本地旧面板文件
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;/p = threading.Thread(target=check_files_panel)/, /p.start()/d&amp;#34; /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#39;/\&amp;#34;check_files_panel\&amp;#34;:/d&amp;#39; /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">&lt;/span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>删除接口文件防止其他加密文件调用（可能会改为内置）
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">rm -f /www/server/panel/script/check_files.py
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="去除云端验证">去除云端验证&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;/p = threading.Thread(target=update_software_list)/, /p.start()/d&amp;#34; /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#39;/\&amp;#34;update_software_list\&amp;#34;:/d&amp;#39; /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#39;/self.get_cloud_list_status/d&amp;#39; /www/server/panel/class/panelPlugin.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#39;/PluginLoader.daemon_task()/d&amp;#39; /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">&lt;/span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>sed -i &lt;span style="color:#4070a0">&amp;#39;/PluginLoader.daemon_panel()/d&amp;#39;&lt;/span> /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="关闭活动推荐与在线客服">关闭活动推荐与在线客服&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">echo &amp;#34;True&amp;#34; &amp;gt; /www/server/panel/data/not_recommend.pl
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">echo &amp;#34;True&amp;#34; &amp;gt; /www/server/panel/data/not_workorder.pl
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="关闭首页软件推荐与广告">关闭首页软件推荐与广告&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#39;/def get_pay_type(self,get):/a \ \ \ \ \ \ \ \ return [];&amp;#39; /www/server/panel/class/ajax.py
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="关闭拉黑检测与提示">关闭拉黑检测与提示&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>每隔10分钟执行一次，用于检测是不是破解版，该命令直接删除链接，使返回为空，输出False
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>该接口返回False 与True均不影响面板，返回True后续代码还会对返回的其他字段数据做处理。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>直接返回False类似于无法访问宝塔的接口，因此不会执行后面的一大堆代码。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>锁面板我记得是接口直接返回文本，然后代码输出文本提示锁面板。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#39;/self._check_url/d&amp;#39; /www/server/panel/class/panelPlugin.py
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="关闭面板日志与绑定域名上报">关闭面板日志与绑定域名上报&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;/^logs_analysis()/d&amp;#34; /www/server/panel/script/site_task.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;s/run_thread(cloud_check_domain,(domain,))/return/&amp;#34; /www/server/panel/class/public.py
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="关闭面板强制更新">关闭面板强制更新&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>宝塔接口返回force &lt;span style="color:#666">=&lt;/span> 1的时候会强制更新你的面板 7.7.0版本的用户推荐处理一下
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;/#是否执行升级程序/a \ \ \ \ \ \ \ \ \ \ \ \ updateInfo[\&amp;#39;force\&amp;#39;] = False;&amp;#34; /www/server/panel/class/ajax.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">rm -f /www/server/panel/data/autoUpdate.pl
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="关闭自动更新软件列表">关闭自动更新软件列表&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>宝塔调用get_plugin_bin公共函数判断本地列表文件是否过期，这里设置为0时强制输出本地文件
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>点击更新软件列表会绕过过期判断，因此并不会影响到手动更新。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;/plugin_timeout = 86400/d&amp;#34; /www/server/panel/class/public.py
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#34;/list_body = None/a \ \ \ \ \plugin_timeout = 0;&amp;#34; /www/server/panel/class/public.py
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="去除计算验证不推荐安装会导致一键迁移不成功">去除计算验证（不推荐安装，会导致一键迁移不成功）&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">sed -i &amp;#39;/{% block scripts %} {% endblock %}/a &amp;lt;script src=&amp;#34;/static/bt.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#39; /www/server/panel/BTPanel/templates/default/layout.html
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">&lt;/span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>7.7.0面板以及一下版本执行这个
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">wget http://f.cccyun.cc/bt/bt.js -O /www/server/panel/BTPanel/static/bt.js
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">&lt;/span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>7.8.0面板以及以上版本执行这个
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">wget http://f.cccyun.cc/bt/bt_new.js -O /www/server/panel/BTPanel/static/bt.js
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="最后重启面板-以及清理浏览器缓存即可生效">最后重启面板 以及清理浏览器缓存即可生效&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">#&lt;/span>重启面板命令
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">/etc/init.d/bt restart
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="如需要恢复使用以下命令或面板内修复面板">如需要恢复使用以下命令，或面板内修复面板&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell-session" data-lang="shell-session">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">curl https://download.bt.cn/install/update_panel.sh|bash
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>简单一招提升nginx服务器性能</title><link>https://blog.taoshuge.eu.org/post/148/</link><pubDate>Fri, 02 Feb 2024 00:43:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/148/</guid><description>&lt;blockquote>
-&lt;p>当你服务器安装了nginx（推荐1.20版本以上）默认开启了gzip动态压缩，但没有开启静态压缩&lt;/p>
-&lt;/blockquote>
-&lt;p>一句话总结就是如何开启&lt;code>静态压缩&lt;/code>！！！&lt;/p>
-&lt;h2 id="为什么要开启静态压缩">为什么要开启静态压缩？&lt;/h2>
-&lt;p>先看一下gzip配置图：&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/b43fb2cde7fb05f6b8ffbef048b3476b.webp" alt="">&lt;/p>
-&lt;p>默认是没有 &lt;code>gzip_static on; &lt;/code>&lt;/p>
-&lt;p>&lt;code>gzip_static on;&lt;/code> 就是开启静态压缩的意思，&lt;/p>
-&lt;h2 id="压缩模式">压缩模式&lt;/h2>
-&lt;blockquote>
-&lt;p>一般来说， &lt;code>Nginx&lt;/code>的 &lt;code>gzip&lt;/code>分为两种模式：&lt;/p>
-&lt;ol>
-&lt;li>动态压缩&lt;/li>
-&lt;li>静态压缩&lt;/li>
-&lt;/ol>
-&lt;/blockquote>
-&lt;h3 id="动态压缩">动态压缩&lt;/h3>
-&lt;p>动态压缩是指 &lt;code>Nginx&lt;/code>服务器在发送前端产物时，消耗自身的资源进行实时压缩，这样即便产物中不存在 &lt;code>.gz&lt;/code>结尾的文件，浏览器端也能拿到 &lt;code>gzip&lt;/code>格式的前端产物。&lt;/p>
-&lt;h3 id="静态压缩">静态压缩&lt;/h3>
-&lt;p>静态压缩会直接将产物中预先压缩过的 &lt;code>.gz&lt;/code>文件发送给浏览器，而不再实时压缩文件，如果找不到 &lt;code>.gz&lt;/code>文件，将会使用对应的原始文件。&lt;/p>
-&lt;blockquote>
-&lt;p>一句话总结就是：动态压缩消耗服务器资源，而静态压缩提前将压缩文件发送给浏览器&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="教程开始">教程开始&lt;/h2>
-&lt;p>一：有个前提条件，要保证 &lt;code>Nginx&lt;/code>存在 &lt;code>ngx_http_gzip_static_module&lt;/code>模块，这个模块默认是开启的。&lt;/p>
-&lt;p>可以使用下面指令查看是否已经激活该模块：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nginx -V 2&amp;gt;&amp;amp;1| grep -o http_gzip_static_module
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>输出结果：&lt;/p>
-&lt;pre tabindex="0">&lt;code>http_gzip_static_module
-&lt;/code>&lt;/pre>&lt;p>说明已经开启。&lt;/p>
-&lt;p>二：然后打开你的网站目录，找到需要压缩的js和css文件，开启静态压缩，需要提前将文件压缩好，这里我提供一键压缩命令：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/gzip.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x gzip.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./gzip.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>输入你要压缩的目录，然后在nginx配置文件里的 &lt;code>gzip on;&lt;/code> 下面一行添加&lt;/p>
-&lt;pre tabindex="0">&lt;code>gzip_static on;
-&lt;/code>&lt;/pre>&lt;p>重载和重启nginx生效，&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/039d680b4b56bd32bed12854dfdde6ef.webp" alt="">&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/b43fb2cde7fb05f6b8ffbef048b3476b.webp" alt="">&lt;/p>
-&lt;h2 id="检查是否生效">检查是否生效&lt;/h2>
-&lt;p>Etag是没有&lt;code>w/&lt;/code>符号的就是静态压缩&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/553091e27b866fab6c160e3121d6ab6b.webp" alt="">&lt;/p>
-&lt;h3 id="动态压缩有w符号">动态压缩：有w/符号&lt;/h3>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/6e815fa8e21efb7be915e3d397b9beae.webp" alt="">&lt;/p></description></item><item><title>网站建设优化</title><link>https://blog.taoshuge.eu.org/post/tool/</link><pubDate>Tue, 30 Jan 2024 22:51:33 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/tool/</guid><description>&lt;h3 id="1mysql-57内存优化">1.MySQL 5.7内存优化:&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema_max_table_instances&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">table_definition_cache&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">400&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">performance_schema&lt;/span>&lt;span style="color:#666">=&lt;/span>off
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_chunk_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">innodb_buffer_pool_size&lt;/span>&lt;span style="color:#666">=&lt;/span>64M
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="2bbr">2.bbr:&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;net.core.default_qdisc=fq&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/sysctl.conf
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;net.ipv4.tcp_congestion_control=bbr&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/sysctl.conf
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sysctl -p
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>lsmod | grep bbr
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="3swap的调整">3.swap的调整：&lt;/h3>
-&lt;p>临时调整vm.swappiness参数为5&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo sysctl vm.swappiness&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">5&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>永久调整 vm.swappiness参数为1（优先使用物理内存，迫不得已使用swap）&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/vm.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x vm.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./vm.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>禁用：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo swapoff -a
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="4一键dd">4.一键DD：&lt;/h3>
-&lt;p>推荐萌咖脚本&lt;/p>
-&lt;pre tabindex="0">&lt;code>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/vpsnew.sh &amp;amp;&amp;amp; chmod +x vpsnew.sh &amp;amp;&amp;amp; ./vpsnew.sh
-&lt;/code>&lt;/pre>&lt;h3 id="5推荐脚本">5.推荐脚本&lt;/h3>
-&lt;p>先安装依赖：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt update -y
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install -y curl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>自用：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x tool.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./tool.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>来自科技lion：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x kejilion.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./kejilion.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item></channel></rss>
