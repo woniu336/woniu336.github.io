@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 22 Feb 2024 22:34:37 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 23 Feb 2024 00:08:59 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,31 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>refind，可能是颜值最高的多系统、硬盘引导神器,efi</title><link>https://blog.taoshuge.eu.org/post/173/</link><pubDate>Thu, 22 Feb 2024 22:34:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/173/</guid><description>&lt;h3 id="工具">工具&lt;/h3>
+&lt;/table></description></item><item><title>宝塔面板软件商店列表无法打开解决办法</title><link>https://blog.taoshuge.eu.org/post/174/</link><pubDate>Fri, 23 Feb 2024 00:08:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/174/</guid><description>&lt;p>大陆和香港服务器&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#优先选择这条命令执行&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;/bt.cn/d&amp;#34;&lt;/span> /etc/hosts
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;103.179.243.14  www.bt.cn download.bt.cn api.bt.cn dg1.bt.cn dg2.bt.cn&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/hosts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>海外服务器:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;/bt.cn/d&amp;#34;&lt;/span> /etc/hosts
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;128.1.164.196 www.bt.cn download.bt.cn api.bt.cn dg1.bt.cn dg2.bt.cn&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/hosts
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>refind，可能是颜值最高的多系统、硬盘引导神器,efi</title><link>https://blog.taoshuge.eu.org/post/173/</link><pubDate>Thu, 22 Feb 2024 22:34:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/173/</guid><description>&lt;h3 id="工具">工具&lt;/h3>
 &lt;p>视频教程:&lt;/p>
 &lt;blockquote>
 &lt;p>我提供的文件是配置好的,可以直接使用,免去你花时间配置和美化主题的时间&lt;/p>
@@ -1884,69 +1908,4 @@ php-cgi-72.sock 改成你的php版本即可
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>crontab -e
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>这将打开一个文本编辑器，允许你编辑用户的crontab条目。&lt;/p></description></item><item><title>Linux buffer/cache 内存占用过高的原因以及解决办法</title><link>https://blog.taoshuge.eu.org/post/155/</link><pubDate>Thu, 08 Feb 2024 17:39:21 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/155/</guid><description>&lt;p>我们可以使用下面这个文件来人工触发缓存清除的操作，Linux 提供了三种清空方式：&lt;/p>
-&lt;ol>
-&lt;li>&lt;code>echo 1 &amp;gt; /proc/sys/vm/drop_caches&lt;/code> # 仅清除页面缓存&lt;/li>
-&lt;li>&lt;code>echo 2 &amp;gt; /proc/sys/vm/drop_caches&lt;/code> # 清除目录项和inode&lt;/li>
-&lt;li>&lt;code>echo 3 &amp;gt; /proc/sys/vm/drop_caches&lt;/code> # 清除页面缓存、目录项以及inode&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>sync
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#40a070">1&lt;/span> &amp;gt; /proc/sys/vm/drop_caches
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#40a070">2&lt;/span> &amp;gt; /proc/sys/vm/drop_caches
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#40a070">3&lt;/span> &amp;gt; /proc/sys/vm/drop_caches
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;em>&lt;strong>但是这种放时只能在执行的当时起作用，过一段时间之后又会发现内存被占满，怎么办呢？&lt;/strong>&lt;/em>&lt;/p>
-&lt;p>一键脚本调整：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/adjust.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x adjust.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./adjust.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>查看当前 &lt;code>vm.vfs_cache_pressure&lt;/code> 的值：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sysctl vm.vfs_cache_pressure
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>重新加载 sysctl 配置文件以使更改生效&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo sysctl -p
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>在&lt;code>Linux 2.6&lt;/code>之后Linux将他们统一合并到了&lt;code>Page cache&lt;/code>作为文件层的缓存。而&lt;code>buffer&lt;/code>则被用作&lt;code>block&lt;/code>层的缓存。&lt;br>
-&lt;code>block&lt;/code>层的缓存是什么意思呢，你可以认为一个&lt;code>buffer&lt;/code>是一个&lt;code>physical disk block&lt;/code>在内存的代表，用来将内存中的&lt;code>pages&lt;/code>映射为&lt;code>disk blocks&lt;/code>，这部分被使用的内存被叫做&lt;code>buffer&lt;/code>。&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;code>buffer&lt;/code>里面的&lt;code>pages&lt;/code>，指的是&lt;code>Page cache&lt;/code>中的&lt;code>pages&lt;/code>，所以，&lt;code>buffer&lt;/code>也可以被认为&lt;code>Page cache&lt;/code>的一部分。&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;strong>或者简单来说，&lt;code>buffer&lt;/code>负责裸设备相关的缓存，&lt;code>cache&lt;/code>负责文件系统的缓存。&lt;/strong>&lt;/p>
-&lt;h3 id="buffer的具体职责">Buffer 的具体职责&lt;/h3>
-&lt;p>在当前的系统实现里，&lt;code>buffer&lt;/code>主要是设计用来在系统对块设备进行读写时作为缓存来使用。这意味着对块的操作会使用&lt;code>buffer&lt;/code>进行缓存，比如我们在格式化文件系统的时候。&lt;/p>
-&lt;p>但是一般情况下两个缓存系统是一起配合使用的，比如当我们对一个文件进行写操作的时候，&lt;code>cache&lt;/code>的内容会被改变，而&lt;code>buffer&lt;/code>则用来将&lt;code>cache&lt;/code>的&lt;code>page&lt;/code>标记为不同的缓冲区，并记录是哪一个缓冲区被修改了。&lt;/p>
-&lt;p>这样，内核在后续执行脏数据的回写（&lt;code>writeback&lt;/code>）时，就不用将整个&lt;code>page&lt;/code>写回，而只需要写回修改的部分即可。&lt;/p>
-&lt;h3 id="cache-的具体职责">Cache 的具体职责&lt;/h3>
-&lt;p>&lt;code>cache&lt;/code>主要用来作为文件系统上的文件数据的缓存来用，当进程对文件有&lt;code>read/write&lt;/code>操作的时候。包括将文件映射到内存的系统调用&lt;code>mmap&lt;/code>，就会用到&lt;code>cache&lt;/code>。&lt;/p>
-&lt;p>因为&lt;code>cache&lt;/code>被作为文件类型的缓存来用，所以事实上也负责了大部分的块设备文件的缓存工作。&lt;/p>
-&lt;h2 id="怎么回收-buffcache">怎么回收 buff/cache？&lt;/h2>
-&lt;p>Linux内核会在内存将要耗尽的时候，自动触发内存回收的工作，以便释放出内存给急需内存的进程使用。&lt;/p>
-&lt;p>&lt;em>&lt;strong>但是这种回收的工作也并不是没有成本。&lt;/strong>&lt;/em>&lt;/p>
-&lt;p>理解&lt;code>cache&lt;/code>是干什么的就知道，&lt;code>cache&lt;/code>中存在着一部分&lt;code>write&lt;/code>操作的数据。所以必须保证&lt;code>cache&lt;/code>中的数据跟对应文件中的数据一致，才能对&lt;code>cache&lt;/code>进行释放。&lt;/p>
-&lt;p>于是伴随着&lt;code>cache&lt;/code>清除的行为的，一般都是系统&lt;code>IO&lt;/code>飙高。这是因为内核要将&lt;code>cache&lt;/code>中缓存的&lt;code>write&lt;/code>数据进行回写。&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;p>这将打开一个文本编辑器，允许你编辑用户的crontab条目。&lt;/p></description></item></channel></rss>
