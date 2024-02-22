@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 21 Feb 2024 05:41:42 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 22 Feb 2024 22:34:37 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,257 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Hyper-v创建虚拟交换机失败与网络共享重启失效解决办法</title><link>https://blog.taoshuge.eu.org/post/170/</link><pubDate>Wed, 21 Feb 2024 05:41:42 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/170/</guid><description>&lt;blockquote>
+&lt;/table></description></item><item><title>refind，可能是颜值最高的多系统、硬盘引导神器,efi</title><link>https://blog.taoshuge.eu.org/post/173/</link><pubDate>Thu, 22 Feb 2024 22:34:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/173/</guid><description>&lt;h3 id="工具">工具&lt;/h3>
+&lt;p>视频教程:&lt;/p>
+&lt;blockquote>
+&lt;p>我提供的文件是配置好的,可以直接使用,免去你花时间配置和美化主题的时间&lt;/p>
+&lt;/blockquote>
+&lt;!DOCTYPE HTML>
+&lt;html>
+&lt;head>
+&lt;style type="text/css">
+.aspect-ratio {
+position: relative;
+width: 100%;
+height: 0;
+padding-bottom: 75%;
+}
+.aspect-ratio iframe {
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+&lt;/style>
+&lt;/head>
+&lt;body>
+&lt;div class="aspect-ratio">
+&lt;iframe
+src="https://player.bilibili.com/player.html?bvid=BV1714y1c78z&amp;page=1&amp;high_quality=1&amp;danmaku=0"
+scrolling="no"
+border="0"
+frameborder="no"
+framespacing="0"
+allowfullscreen="true"
+>
+&lt;/iframe>
+&lt;/div>
+&lt;/body>
+&lt;/html>
+&lt;p>准备好: DiskGenius, refind文件&lt;/p>
+&lt;p>&lt;a href="https://www.123pan.com/s/cjqrVv-fUL9d.html">https://www.123pan.com/s/cjqrVv-fUL9d.html&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.123pan.com/s/cjqrVv-aUL9d.html">https://www.123pan.com/s/cjqrVv-aUL9d.html&lt;/a>&lt;/p>
+&lt;p>打开DiskGenius,打开efi分区,将refind文件夹复制到efi分区&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/dafea496b460a356ea6fc9b670158492.webp" alt="">&lt;/p>
+&lt;p>左上角-工具-设置UEFi启动项&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/7b4d5a507ae326401a6cde6fd5144967.webp" alt="">&lt;/p></description></item><item><title>Ubuntu 20.04 搭建 Samba 服务</title><link>https://blog.taoshuge.eu.org/post/172/</link><pubDate>Thu, 22 Feb 2024 21:05:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/172/</guid><description>&lt;h3 id="安装-samba-服务">安装 Samba 服务&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install samba
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>查看版本,确保正确安装&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>samba --version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="配置需要共享的目录">配置需要共享的目录&lt;/h3>
+&lt;p>例如: &lt;code>/mnt/500GB&lt;/code> 为挂载目录&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-11">11&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 新建目录，用于共享&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkdir /mnt/500GB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 更改权限信息&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chown nobody:nogroup /mnt/500GB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 给所有用户添加读写权限&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#40a070">777&lt;/span> /mnt/500GB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#对目录的Others权限添加w(写)权限&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod o+w /mnt/500GB
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="配置挂载">配置挂载:&lt;/h3>
+&lt;p>安装vim:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install vim
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>编辑: smb.conf&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo vim /etc/samba/smb.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>注意: &lt;code>qige&lt;/code>为你的ubuntu用户名,在 Linux 中必须存在,请改为自己的&lt;/p>
+&lt;p>在smb.conf末尾添加下面的代码&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-12">12&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>share&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">comment&lt;/span> &lt;span style="color:#666">=&lt;/span> share folder
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">browseable&lt;/span> &lt;span style="color:#666">=&lt;/span> yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">path&lt;/span> &lt;span style="color:#666">=&lt;/span> /mnt/500GB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> create &lt;span style="color:#bb60d5">mask&lt;/span> &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#40a070">0777&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> directory &lt;span style="color:#bb60d5">mask&lt;/span> &lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">0777&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> valid &lt;span style="color:#bb60d5">users&lt;/span> &lt;span style="color:#666">=&lt;/span> qige
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> force &lt;span style="color:#bb60d5">user&lt;/span> &lt;span style="color:#666">=&lt;/span> qige
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> force &lt;span style="color:#bb60d5">group&lt;/span> &lt;span style="color:#666">=&lt;/span> qige
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">public&lt;/span> &lt;span style="color:#666">=&lt;/span> yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">available&lt;/span> &lt;span style="color:#666">=&lt;/span> yes
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">writable&lt;/span> &lt;span style="color:#666">=&lt;/span> yes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="添加-samba-用户">添加 Samba 用户&lt;/h3>
+&lt;p>添加 Samba 用户，用于在访问共享目录时使用。这里添加的用户是之前配置的用户名。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo smbpasswd -a qige
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>重启 Samba 服务&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service smbd restart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其他&lt;/p>
+&lt;pre tabindex="0">&lt;code>#或者
+sudo /etc/init.d/smbd restart
+sudo service nmbd restart
+#或者以下方法
+sudo restart smbd
+sudo restart nmbd
+&lt;/code>&lt;/pre>&lt;h3 id="使用方法">使用方法:&lt;/h3>
+&lt;p>windows: 在&lt;code>运行框&lt;/code>输入: 也就是的ubuntu IP地址&lt;/p>
+&lt;p>例如:&lt;/p>
+&lt;pre tabindex="0">&lt;code>\\192.168.1.xx
+&lt;/code>&lt;/pre>&lt;p>即可成功smb&lt;/p>
+&lt;h3 id="其他问题">其他问题&lt;/h3>
+&lt;p>问题描述&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>磁盘被写保护&lt;span style="">，&lt;/span>请去掉写保护或使用另一张磁盘&lt;span style="">。&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解决方案&lt;/p>
+&lt;p>回到windows, 请您通过以下操作清除磁盘的只读属性。&lt;/p>
+&lt;ol>
+&lt;li>在&lt;strong>开始&lt;/strong>菜单的&lt;strong>运行&lt;/strong>中输入&lt;code>diskpart&lt;/code>命令。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>diskpart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol>
+&lt;li>
+&lt;p>执行以下命令，查看磁盘清单。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>list disk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>执行以下命令，选择磁盘。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>select disk &lt;span style="color:#40a070">1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>说明&lt;/strong>&lt;/p>
+&lt;p>&lt;code>1&lt;/code>指的是磁盘编号，请您根据实际环境填写。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>执行以下命令，清除只读属性。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>att disk clear readonly
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/li>
+&lt;/ol></description></item><item><title>远程协助连接这台计算机灰色无法勾选?</title><link>https://blog.taoshuge.eu.org/post/171/</link><pubDate>Wed, 21 Feb 2024 19:00:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/171/</guid><description>&lt;h3 id="更改注册表设置">更改注册表设置&lt;/h3>
+&lt;p>在注册表编辑器中更改一些设置，也能解决允许远程协助连接这台计算机灰色无法勾选这一问题，以下是具体的操作步骤。&lt;/p>
+&lt;p>&lt;strong>步骤1.&lt;/strong> 按**“Windows + R”&lt;strong>打开运行框，输入&lt;/strong>“regedit”&lt;strong>，然后单击&lt;/strong>“确定”**。&lt;/p>
+&lt;p>&lt;strong>步骤2.&lt;/strong> 导航到：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>计算机&lt;span style="color:#4070a0;font-weight:bold">\H&lt;/span>KEY_LOCAL_MACHINE&lt;span style="color:#4070a0;font-weight:bold">\S&lt;/span>OFTWARE&lt;span style="color:#4070a0;font-weight:bold">\P&lt;/span>olicies&lt;span style="color:#4070a0;font-weight:bold">\M&lt;/span>icrosoft&lt;span style="color:#4070a0;font-weight:bold">\W&lt;/span>indows NT&lt;span style="color:#4070a0;font-weight:bold">\T&lt;/span>erminal Services
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/f15959979ce6455d2da71f081c820577.webp" alt="">&lt;/p>
+&lt;p>&lt;strong>步骤3.&lt;/strong> 在右侧窗格，右键单击并选择**“新建”&lt;strong>，然后单击第三个&lt;/strong>“DWORD (32位)值”**，并命名为 &lt;strong>“fDenyTSConnections”&lt;/strong>。&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/fce506a3aac3f03fff4dee4990bd536e.webp" alt="">&lt;/p>
+&lt;p>&lt;strong>步骤4.&lt;/strong> 双击打开 &lt;strong>“fDenyTSConnections”&lt;/strong>，将**“数值数据”&lt;strong>更改为&lt;/strong>“0”&lt;strong>，然后单击&lt;/strong>“确定”**。&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/099081f7ca8382316f67b7a926766443.webp" alt="">&lt;/p>
+&lt;p>&lt;strong>说明：&lt;/strong> “0”表示“允许用户通过终端服务/远程桌面远程连接”；“1”表示“禁止使用终端服务/远程桌面进行远程连接”。&lt;/p></description></item><item><title>Hyper-v创建虚拟交换机失败与网络共享重启失效解决办法</title><link>https://blog.taoshuge.eu.org/post/170/</link><pubDate>Wed, 21 Feb 2024 05:41:42 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/170/</guid><description>&lt;blockquote>
 &lt;p>物理网卡属性里去掉勾选 &lt;code>Hyper-v Extensible Virtual Switch&lt;/code> 或者叫 &lt;code>Hyper-v 可扩展的虚拟交换机&lt;/code>&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="创建虚拟交换机失败解决办法">创建虚拟交换机失败解决办法&lt;/h3>
@@ -1699,555 +1949,4 @@ php-cgi-72.sock 改成你的php版本即可
 &lt;p>Linux内核会在内存将要耗尽的时候，自动触发内存回收的工作，以便释放出内存给急需内存的进程使用。&lt;/p>
 &lt;p>&lt;em>&lt;strong>但是这种回收的工作也并不是没有成本。&lt;/strong>&lt;/em>&lt;/p>
 &lt;p>理解&lt;code>cache&lt;/code>是干什么的就知道，&lt;code>cache&lt;/code>中存在着一部分&lt;code>write&lt;/code>操作的数据。所以必须保证&lt;code>cache&lt;/code>中的数据跟对应文件中的数据一致，才能对&lt;code>cache&lt;/code>进行释放。&lt;/p>
-&lt;p>于是伴随着&lt;code>cache&lt;/code>清除的行为的，一般都是系统&lt;code>IO&lt;/code>飙高。这是因为内核要将&lt;code>cache&lt;/code>中缓存的&lt;code>write&lt;/code>数据进行回写。&lt;/p></description></item><item><title>网站被镜像如何解决？</title><link>https://blog.taoshuge.eu.org/post/154/</link><pubDate>Thu, 08 Feb 2024 01:58:01 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/154/</guid><description>&lt;p>网站被镜像如何解决？&lt;/p>
-&lt;p>在应对镜像网站问题时，有一种非常有效的策略，可以帮助您恢复控制。直接在网页头部添加以下代码：(替换为你的域名)&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6">6&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>&amp;lt;script type=&amp;#34;text/javascript&amp;#34;&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rthost = window.location.host;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> if (rthost != &amp;#34;www.yourwebsite.com&amp;#34;) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> top.location.href = &amp;#34;https://www.yourwebsite.com&amp;#34;;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/script&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>如果您的脚本被屏蔽，您可以考虑添加以下备用代码：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6">6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7">7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8">8&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>&amp;lt;script&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> proxy2021 = false;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;/script&amp;gt;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&amp;lt;img src=&amp;#34;&amp;#34; onerror=&amp;#39;setTimeout(function(){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> if (typeof(proxy2021) == &amp;#34;undefined&amp;#34;){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> window.location.host = &amp;#34;www.yourwebsite.com&amp;#34;;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}, 500);&amp;#39;&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>这两段代码将使镜像网站自动重定向到您的正版网站，从而有效打击镜像网站的不当行为。&lt;/p>
-&lt;p>这亲测有效的方法可以帮助您更好地保护您的网站和内容免受镜像网站的侵害。&lt;/p></description></item><item><title>反爬虫蜘蛛攻略：Apache/Nginx/PHP禁止某些User Agent抓取网站</title><link>https://blog.taoshuge.eu.org/post/153/</link><pubDate>Thu, 08 Feb 2024 01:09:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/153/</guid><description>&lt;p>昨晚打开宝塔面板后台查看，上行与下行几乎到了7000KB的速度，不到半小时，就10G流量了，开始以为是被黑了？重载系统，恢复数据后还是一样。&lt;/p>
-&lt;p>下载一个网站监控报表插件一看，好家伙，是谷歌蜘蛛和一些不明ip在搞我其中一个网站！！！最狠的就是谷歌蜘蛛了，疯狂在爬！&lt;/p>
-&lt;h3 id="方法一cloudflare-cdn-防火墙阻止">方法一：cloudflare cdn 防火墙阻止&lt;/h3>
-&lt;p>表达式：&lt;/p>
-&lt;p>(http.user_agent contains &amp;ldquo;Googlebot&amp;rdquo;) or (http.user_agent contains &amp;ldquo;SemrushBot&amp;rdquo;) or (http.user_agent contains &amp;ldquo;AhrefsBot&amp;rdquo;) or (http.user_agent contains &amp;ldquo;DotBot&amp;rdquo;)&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/d636b703c6b703dd95cbf3140ccb61f9.webp" alt="">&lt;/p>
-&lt;h3 id="方法二禁止指定ua用户代理">方法二：禁止指定UA（用户代理）&lt;/h3>
-&lt;p>宝塔面板下使用方法如下：&lt;/p>
-&lt;p>1、找到文件目录 &lt;code>/www/server/nginx/conf&lt;/code> 文件夹下面，新建一个文件&lt;code>agent_deny.conf&lt;/code>&lt;/p>
-&lt;p>代码如下：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-12">12&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#禁止Scrapy等工具的抓取&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> &lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$http_user_agent&lt;/span> ~* &lt;span style="color:#666">(&lt;/span>Scrapy|Curl|HttpClient&lt;span style="color:#666">))&lt;/span> &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">return&lt;/span> 403;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#禁止指定UA及UA为空的访问&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> &lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$http_user_agent&lt;/span> ~* &lt;span style="color:#4070a0">&amp;#34;FeedDemon|Indy Library|Alexa Toolbar|AskTbFXTV|AhrefsBot|DotBot|CrawlDaddy|CoolpadWebkit|Java|Feedly|UniversalFeedParser|ApacheBench|Microsoft URL Control|Swiftbot|ZmEu|oBot|jaunty|Python-urllib|lightDeckReports Bot|YYSpider|DigExt|HttpClient|MJ12bot|heritrix|Bytespider|Ezooms|Googlebot|JikeSpider|SemrushBot|^&lt;/span>$&lt;span style="color:#4070a0">&amp;#34;&lt;/span> &lt;span style="color:#666">)&lt;/span> &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">return&lt;/span> 403;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#禁止非GET|HEAD|POST方式的抓取&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> &lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$request_method&lt;/span> !~ ^&lt;span style="color:#666">(&lt;/span>GET|HEAD|POST&lt;span style="color:#666">)&lt;/span>$&lt;span style="color:#666">)&lt;/span> &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">return&lt;/span> 403;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>2、找到网站设置里面的第7行左右 写入代码：&lt;code>include agent_deny.conf;&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/a3993c684090031dc1e9298a25f4c422.webp" alt="">&lt;/p>
-&lt;p>如果你网站使用火车头采集发布，使用以上代码会返回403错误，发布不了的。如果想使用火车头采集发布，请使用下面的代码：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-12">12&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#禁止Scrapy等工具的抓取&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> &lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$http_user_agent&lt;/span> ~* &lt;span style="color:#666">(&lt;/span>Scrapy|Curl|HttpClient&lt;span style="color:#666">))&lt;/span> &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">return&lt;/span> 403;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#禁止指定UA访问。UA为空的可以访问，比如火车头可以正常发布。&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> &lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$http_user_agent&lt;/span> ~ &lt;span style="color:#4070a0">&amp;#34;FeedDemon|Indy Library|Alexa Toolbar|AskTbFXTV|AhrefsBot|CrawlDaddy|CoolpadWebkit|Java|Feedly|UniversalFeedParser|ApacheBench|Microsoft URL Control|Swiftbot|ZmEu|YandexBot|jaunty|Python-urllib|lightDeckReports Bot|YYSpider|DigExt|HttpClient|MJ12bot|heritrix|Bytespider|Ezooms|Googlebot|JikeSpider|SemrushBot&amp;#34;&lt;/span> &lt;span style="color:#666">)&lt;/span> &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">return&lt;/span> 403;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#禁止非GET|HEAD|POST方式的抓取&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> &lt;span style="color:#666">(&lt;/span>&lt;span style="color:#bb60d5">$request_method&lt;/span> !~ ^&lt;span style="color:#666">(&lt;/span>GET|HEAD|POST&lt;span style="color:#666">)&lt;/span>$&lt;span style="color:#666">)&lt;/span> &lt;span style="color:#666">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">return&lt;/span> 403;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="三测试效果">三、测试效果&lt;/h3>
-&lt;p>如果是vps，那非常简单，使用curl -A 模拟抓取即可，比如： 模拟谷歌蜘蛛抓取：替换为你的域名&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -I -A &lt;span style="color:#4070a0">&amp;#39;Googlebot&amp;#39;&lt;/span> xxx.com
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -I -A &lt;span style="color:#4070a0">&amp;#39;Baiduspider&amp;#39;&lt;/span> xxx.com
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>谷歌蜘蛛和UA为空的返回是403禁止访问标识，而百度蜘蛛则成功返回200，说明生效！&lt;/p>
-&lt;h3 id="四垃圾蜘蛛ip段">四、垃圾蜘蛛IP段&lt;/h3>
-&lt;p>直接屏蔽：谷歌蜘蛛&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>66.249.79.0/24
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>66.249.68.0/24
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>屏蔽AhrefsBot蜘蛛：&lt;/p>
-&lt;pre tabindex="0">&lt;code>51.222.253.0/24
-&lt;/code>&lt;/pre>&lt;p>不明的IP：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>39.173.116.0/24
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>85.208.96.0/24
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>185.191.171.0/24
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>居然还有华为蜘蛛！！！是否屏蔽思考中。。。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>114.119.130.102
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>114.119.135.32
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>114.119.0.0/16
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>robots.txt 屏蔽垃圾蜘蛛&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-24">24&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-25">25&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-26">26&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-27">27&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-28">28&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-29">29&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-30">30&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-31">31&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-32">32&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-33">33&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-34">34&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-35">35&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-36">36&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-37">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-37">37&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-38">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-38">38&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-39">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-39">39&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-40">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-40">40&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-41">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-41">41&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-42">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-42">42&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-43">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-43">43&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-44">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-44">44&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-45">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-45">45&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-46">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-46">46&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-47">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-47">47&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-48">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-48">48&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-49">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-49">49&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-50">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-50">50&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-51">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-51">51&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-52">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-52">52&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-53">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-53">53&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-54">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-54">54&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-55">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-55">55&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-56">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-56">56&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-57">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-57">57&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-58">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-58">58&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-59">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-59">59&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-60">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-60">60&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-61">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-61">61&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-62">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-62">62&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-63">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-63">63&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-64">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-64">64&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>User-agent: Googlebot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: MJ12bot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SA
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-BA
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SI
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SWA
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-CT
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-BM
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SEOAB
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>user-agent: AhrefsBot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: DotBot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: Uptimebot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: MegaIndex.ru
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: ZoominfoBot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: Mail.Ru
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: BLEXBot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: ExtLinksBot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: aiHitBot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: Researchscan
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: DnyzBot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: spbot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: YandexBot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SA
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-BA
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SI
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SWA
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-CT
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-BM
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: SemrushBot-SEOAB
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow: /
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>User-agent: *
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Disallow:
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>宝塔面板7.7.0一键安装-优化-美化</title><link>https://blog.taoshuge.eu.org/post/152/</link><pubDate>Sun, 04 Feb 2024 19:20:24 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/152/</guid><description>&lt;blockquote>
-&lt;p>仅适用于ubuntu与 debian&lt;/p>
-&lt;/blockquote>
-&lt;p>安装依赖：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt update -y
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>apt install -y curl
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>一键脚本：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/baota.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x baota.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./baota.sh
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>完整代码：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-24">24&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-25">25&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-26">26&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-27">27&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-28">28&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-29">29&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-30">30&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-31">31&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-32">32&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-33">33&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-34">34&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-35">35&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-36">36&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-37">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-37">37&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-38">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-38">38&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-39">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-39">39&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-40">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-40">40&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-41">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-41">41&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-42">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-42">42&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-43">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-43">43&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-44">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-44">44&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-45">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-45">45&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-46">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-46">46&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-47">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-47">47&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-48">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-48">48&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-49">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-49">49&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-50">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-50">50&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-51">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-51">51&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-52">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-52">52&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-53">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-53">53&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-54">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-54">54&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-55">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-55">55&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-56">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-56">56&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-57">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-57">57&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-58">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-58">58&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-59">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-59">59&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-60">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-60">60&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-61">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-61">61&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-62">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-62">62&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-63">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-63">63&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-64">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-64">64&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-65">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-65">65&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-66">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-66">66&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-67">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-67">67&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-68">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-68">68&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-69">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-69">69&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-70">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-70">70&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-71">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-71">71&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-72">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-72">72&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-73">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-73">73&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-74">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-74">74&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-75">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-75">75&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-76">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-76">76&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-77">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-77">77&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-78">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-78">78&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-79">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-79">79&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-80">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-80">80&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-81">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-81">81&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-82">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-82">82&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-83">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-83">83&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-84">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-84">84&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-85">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-85">85&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-86">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-86">86&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">#!/bin/bash
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 安装宝塔面板 7.7&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;安装宝塔面板 7.7&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -sSO https://raw.githubusercontent.com/woniu336/btpanel-v7.7.0/main/install/install_panel.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> bash install_panel.sh
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 一键破解&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;一键破解&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -sSO https://raw.githubusercontent.com/woniu336/open_shell/main/one_key_happy.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> bash one_key_happy.sh
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 美化主题&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;美化主题&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget -O btpanel_theme.zip https://raw.githubusercontent.com/woniu336/open_shell/main/bt/BTPanel_theme_linux_770.zip &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> unzip -o btpanel_theme.zip -d /www/server/ &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> /etc/init.d/bt restart
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 去除网站默认文件&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;去除网站默认文件&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo sed -i &lt;span style="color:#4070a0">&amp;#34;\|htaccess = self.sitePath+&amp;#39;/\.htaccess&amp;#39;|, \|public.ExecShell(&amp;#39;chown -R www:www &amp;#39; + htaccess)|d&amp;#34;&lt;/span> /www/server/panel/class/panelSite.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo sed -i &lt;span style="color:#4070a0">&amp;#34;\|index = self.sitePath+&amp;#39;/index.html&amp;#39;|, \|public.ExecShell(&amp;#39;chown -R www:www &amp;#39; + index)|d&amp;#34;&lt;/span> /www/server/panel/class/panelSite.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo sed -i &lt;span style="color:#4070a0">&amp;#34;\|doc404 = self.sitePath+&amp;#39;/404.html&amp;#39;|, \|public.ExecShell(&amp;#39;chown -R www:www &amp;#39; + doc404)|d&amp;#34;&lt;/span> /www/server/panel/class/panelSite.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 关闭未绑定域名提示&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;关闭未绑定域名提示&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;s/root \/www\/server\/nginx\/html/return 400/&amp;#34;&lt;/span> /www/server/panel/class/panelSite.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;s/root \/www\/server\/nginx\/html/return 400/&amp;#34;&lt;/span> /www/server/panel/vhost/nginx/0.default.conf
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 关闭安全入口提示&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;关闭安全入口提示&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;s/return render_template(&amp;#39;autherr.html&amp;#39;)/return abort(404)/&amp;#34;&lt;/span> /www/server/panel/BTPanel/__init__.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 去除消息推送&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;去除消息推送&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;/p = threading.Thread(target=check_panel_msg)/, /p.start()/d&amp;#34;&lt;/span> /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;/\&amp;#34;check_panel_msg\&amp;#34;:/d&amp;#39;&lt;/span> /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 去除文件校验&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;去除文件校验&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;/p = threading.Thread(target=check_files_panel)/, /p.start()/d&amp;#34;&lt;/span> /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;/\&amp;#34;check_files_panel\&amp;#34;:/d&amp;#39;&lt;/span> /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -f /www/server/panel/script/check_files.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 去除云端验证&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;去除云端验证&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;/p = threading.Thread(target=update_software_list)/, /p.start()/d&amp;#34;&lt;/span> /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;/\&amp;#34;update_software_list\&amp;#34;:/d&amp;#39;&lt;/span> /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;/self.get_cloud_list_status/d&amp;#39;&lt;/span> /www/server/panel/class/panelPlugin.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;/PluginLoader.daemon_task()/d&amp;#39;&lt;/span> /www/server/panel/task.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 关闭活动推荐与在线客服&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;关闭活动推荐与在线客服&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;True&amp;#34;&lt;/span> &amp;gt; /www/server/panel/data/not_recommend.pl
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;True&amp;#34;&lt;/span> &amp;gt; /www/server/panel/data/not_workorder.pl
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 关闭首页软件推荐与广告&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;关闭首页软件推荐与广告&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;/def get_pay_type(self,get):/a \ \ \ \ \ \ \ \ return [];&amp;#39;&lt;/span> /www/server/panel/class/ajax.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 关闭拉黑检测与提示&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;关闭拉黑检测与提示&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#39;/self._check_url/d&amp;#39;&lt;/span> /www/server/panel/class/panelPlugin.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 关闭面板日志与绑定域名上报&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;关闭面板日志与绑定域名上报&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;/^logs_analysis()/d&amp;#34;&lt;/span> /www/server/panel/script/site_task.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;s/run_thread(cloud_check_domain,(domain,))/return/&amp;#34;&lt;/span> /www/server/panel/class/public.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 关闭面板强制更新&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;关闭面板强制更新&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;/#是否执行升级程序/a \ \ \ \ \ \ \ \ \ \ \ \ updateInfo[\&amp;#39;force\&amp;#39;] = False;&amp;#34;&lt;/span> /www/server/panel/class/ajax.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -f /www/server/panel/data/autoUpdate.pl
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 关闭自动更新软件列表&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;关闭自动更新软件列表&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;/plugin_timeout = 86400/d&amp;#34;&lt;/span> /www/server/panel/class/public.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sed -i &lt;span style="color:#4070a0">&amp;#34;/list_body = None/a \ \ \ \ \plugin_timeout = 0;&amp;#34;&lt;/span> /www/server/panel/class/public.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 去后门&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;去后门&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo &lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;&amp;#34;&lt;/span> &amp;gt; /www/server/panel/script/site_task.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chattr +i /www/server/panel/script/site_task.py
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo rm -rf /www/server/panel/logs/request/*
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chattr +i -R /www/server/panel/logs/request
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 重启面板&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;重启面板&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>/etc/init.d/bt restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;p>于是伴随着&lt;code>cache&lt;/code>清除的行为的，一般都是系统&lt;code>IO&lt;/code>飙高。这是因为内核要将&lt;code>cache&lt;/code>中缓存的&lt;code>write&lt;/code>数据进行回写。&lt;/p></description></item></channel></rss>
