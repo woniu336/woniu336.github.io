@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 23 Feb 2024 00:51:11 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 23 Feb 2024 01:28:56 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,57 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>关于安装宝塔后 samba访问失败 网络管理</title><link>https://blog.taoshuge.eu.org/post/175/</link><pubDate>Fri, 23 Feb 2024 00:51:11 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/175/</guid><description>&lt;p>原因 ：由于安装了宝塔服务，添加了防火墙，对原有的&lt;code>samba&lt;/code>服务产生了影响。&lt;/p>
+&lt;/table></description></item><item><title>一款追求轻量化的开源可视化路由跟踪工具-NextTrace</title><link>https://blog.taoshuge.eu.org/post/176/</link><pubDate>Fri, 23 Feb 2024 01:28:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/176/</guid><description>&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/b89d1e07c5381409f955711a9a3e4bca.webp" alt="">&lt;/p>
+&lt;p>&lt;strong>一键安装脚本(linux)&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>curl nxtrace.org/nt | bash
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>一切准备就绪！使用命令 (例如ip地址是&lt;code>1.1.1.1&lt;/code>)&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nexttrace 1.1.1.1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>更多进阶命令玩法可以用 &lt;code>nexttrace -h&lt;/code> 查看哦&lt;/p>
+&lt;p>关于软件卸载，因为nexttrace是绿色版单文件，卸载只需输入命令&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rm /usr/local/bin/nexttrace
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>windows使用方法:&lt;/strong>&lt;/p>
+&lt;p>&lt;a href="https://github.com/nxtrace/NTrace-core/releases/download/v1.2.8/nexttrace_windows_amd64.exe">https://github.com/nxtrace/NTrace-core/releases/download/v1.2.8/nexttrace_windows_amd64.exe&lt;/a>&lt;/p>
+&lt;p>下载后将&lt;code>nexttrace_windows_amd64.exe&lt;/code>重命名 &lt;code>nexttrace.exe&lt;/code>&lt;/p>
+&lt;p>然后cmd, 改成你要追踪的&lt;code>ip&lt;/code> 注意:打开cmd的位置要在&lt;code>nexttrace.exe&lt;/code>所在目录&lt;/p>
+&lt;pre tabindex="0">&lt;code>nexttrace 你的ip
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>方法二&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> /p &lt;span style="color:#bb60d5">ip&lt;/span>&lt;span style="color:#666">=&lt;/span>请输入要跟踪的 IP 地址:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>D:&lt;span style="color:#4070a0;font-weight:bold">\n&lt;/span>exttrace.exe %ip%
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>保存为&lt;code>nexttrace.bat&lt;/code>文件双击运行&lt;/p>
+&lt;p>注意: D:\nexttrace.exe 是nexttrace.exe所在的目录,这里是D盘&lt;/p></description></item><item><title>关于安装宝塔后 samba访问失败 网络管理</title><link>https://blog.taoshuge.eu.org/post/175/</link><pubDate>Fri, 23 Feb 2024 00:51:11 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/175/</guid><description>&lt;p>原因 ：由于安装了宝塔服务，添加了防火墙，对原有的&lt;code>samba&lt;/code>服务产生了影响。&lt;/p>
 &lt;h3 id="查看某网络软件需要的端口">查看某网络软件需要的端口:&lt;/h3>
 &lt;blockquote>
 &lt;p>宝塔面板后台放行: 445和139端口&lt;/p>
@@ -1947,25 +1997,4 @@ php-cgi-72.sock 改成你的php版本即可
  
 请注意，请在确定安装内核成功后执行&lt;/p>
 &lt;p>&lt;code>apt remove linux-image-******-amd64&lt;/code>&lt;/p>
-&lt;p>此处选做，目的释放硬盘空间&lt;/p></description></item><item><title>BestTrace：一款非常好用的VPS回程路由测试脚本</title><link>https://blog.taoshuge.eu.org/post/157/</link><pubDate>Fri, 09 Feb 2024 01:21:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/157/</guid><description>&lt;h2 id="一besttrace使用方法">一、BestTrace使用方法&lt;/h2>
-&lt;p>连上VPS服务器后直接使用脚本：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget -qO- git.io/autobesttrace | bash
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>脚本自动测试VPS到中国电信、移动、联通和教育网四网的回程路由。&lt;/p>
-&lt;h2 id="磁盘真实性能读写测试">磁盘真实性能读写测试&lt;/h2>
-&lt;p>一般数据在 大于20MB/s 为合格，大于40MB/s 为普通，大于80MB/s 为优秀。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>dd &lt;span style="color:#bb60d5">bs&lt;/span>&lt;span style="color:#666">=&lt;/span>64k &lt;span style="color:#bb60d5">count&lt;/span>&lt;span style="color:#666">=&lt;/span>4k &lt;span style="color:#007020;font-weight:bold">if&lt;/span>&lt;span style="color:#666">=&lt;/span>/dev/zero &lt;span style="color:#bb60d5">of&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020">test&lt;/span> &lt;span style="color:#bb60d5">oflag&lt;/span>&lt;span style="color:#666">=&lt;/span>dsync
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+&lt;p>此处选做，目的释放硬盘空间&lt;/p></description></item></channel></rss>
