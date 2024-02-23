@@ -93,7 +93,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>docker项目dockge和nginx-proxy-manager-zh</title><link>https://blog.taoshuge.eu.org/post/177/</link><pubDate>Fri, 23 Feb 2024 20:46:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/177/</guid><description>&lt;h3 id="dockge">Dockge&lt;/h3>
+&lt;/table></description></item><item><title>docker项目dockge和nginx-proxy-manager-zh中文版</title><link>https://blog.taoshuge.eu.org/post/177/</link><pubDate>Fri, 23 Feb 2024 20:46:37 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/177/</guid><description>&lt;h3 id="dockge">Dockge&lt;/h3>
 &lt;p>项目地址: &lt;a href="https://github.com/louislam/dockge">https://github.com/louislam/dockge&lt;/a>&lt;/p>
 &lt;table>
 &lt;thead>
@@ -219,7 +219,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>docker compose pull &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> docker compose up -d
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;h3 id="nginx-proxy-manager">nginx-proxy-manager&lt;/h3>
+&lt;/div>&lt;h3 id="nginx-proxy-manager中文版">nginx-proxy-manager中文版&lt;/h3>
 &lt;p>项目地址: &lt;a href="https://github.com/xiaoxinpro/nginx-proxy-manager-zh">https://github.com/xiaoxinpro/nginx-proxy-manager-zh&lt;/a>&lt;/p>
 &lt;p>基于nginx-proxy-manager翻译的中文版本&lt;/p>
 &lt;table>
