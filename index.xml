@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 24 Feb 2024 00:25:20 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 24 Feb 2024 19:53:43 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -93,7 +93,120 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Winserver2022调优</title><link>https://blog.taoshuge.eu.org/post/178/</link><pubDate>Sat, 24 Feb 2024 00:25:20 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/178/</guid><description>&lt;h3 id="激活命令">激活命令&lt;/h3>
+&lt;/table></description></item><item><title>ubuntu20+window双系统启动引导项的修复</title><link>https://blog.taoshuge.eu.org/post/180/</link><pubDate>Sat, 24 Feb 2024 19:53:43 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/180/</guid><description>&lt;h3 id="修复ubuntu引导项">修复ubuntu引导项&lt;/h3>
+&lt;p>由于上面一个修复window引导项动作覆盖了整个启动目录，导致我的电脑ubuntu引导项丢失了，所以我现在又开始修复ubuntu启动引导项。方法类似，不过ubuntu修复启动引导项时候，需要我们安装boot-repair软件&lt;/p>
+&lt;ul>
+&lt;li>制作Ubuntu启动U盘，UtroISO即可；&lt;/li>
+&lt;li>将U盘插入电脑，开机，进入BIOS，选择U盘启动；&lt;/li>
+&lt;li>出现Ubuntu安装界面，选择第一项（Try ubuntu without install）；&lt;/li>
+&lt;li>进入ubuntu，打开终端，获取root权限；&lt;/li>
+&lt;/ul>
+&lt;p>执行以下命令：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo add-apt-repository ppa:yannubuntu/boot-repair
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get update
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>apt-get install boot-repair
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>boot-repair安装完成之后，输入boot-repair命令，进入软件&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>boot-repair
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>最后: &lt;code>reboot&lt;/code>&lt;/p>
+&lt;p>选择推荐修复&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/7f996bfa943ef4479d83373d2b24f5bb.webp" alt="">&lt;/p>
+&lt;p>进入修复等一小会，修复就完成了&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/b93cd62e5e1d6b97c1f8d33c51bbfd77.webp" alt="">&lt;/p>
+&lt;p>大家可以看到修复提示log&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/2258bea35284967556e541e460d9217a.webp" alt="">&lt;/p>
+&lt;p>reboot机器，这个时候大家就可以看到电脑启动的引导项都恢复了。&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/40ba43bb60e236e3b4fc41215eb1e18c.webp" alt="">&lt;/p></description></item><item><title>一键更改电源计划的方法</title><link>https://blog.taoshuge.eu.org/post/179/</link><pubDate>Sat, 24 Feb 2024 15:31:15 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/179/</guid><description>&lt;p>先win+R 输入cmd打开命令行，输入powercfg -list 显示已有的电源策略以及对应的编码&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>powercfg -list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后新建一个文本文档，命名为 （比如）Power.bat&lt;/p>
+&lt;p>修改为自己的GUID,例如&lt;/p>
+&lt;p>&lt;code>381b4222-f694-41f0-9685-ff5bb260df2e&lt;/code> 是我的平衡模式GUID&lt;/p>
+&lt;p>&lt;code>a1841308-3541-4fab-bc81-f71556f20b4a&lt;/code> 是节能GUID&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-19">19&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-20">20&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-21">21&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-22">22&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-23">23&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-24">24&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-25">25&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-26">26&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-27">27&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-28">28&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rem 执行 powercfg -getactivescheme 命令，并将结果保存到临时文件
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>powercfg /getactivescheme &amp;gt; tmp.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rem 使用 findstr 命令检查临时文件中是否包含“节能”字符
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>findstr /C:&lt;span style="color:#4070a0">&amp;#34;节能&amp;#34;&lt;/span> tmp.txt &amp;gt;nul
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rem 检查 findstr 命令的退出代码
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> %errorlevel% &lt;span style="color:#666">==&lt;/span> &lt;span style="color:#40a070">0&lt;/span> &lt;span style="color:#666">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rem 如果包含，则切换到平衡模式
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> POWERCFG /SETACTIVE 381b4222-f694-41f0-9685-ff5bb260df2e
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> 已切换到平衡模式
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rem 使用绿色显示提示
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> color 0A
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span> &lt;span style="color:#007020;font-weight:bold">else&lt;/span> &lt;span style="color:#666">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rem 否则切换到节能模式
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> POWERCFG /SETACTIVE a1841308-3541-4fab-bc81-f71556f20b4a
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> 已切换到节能模式
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rem 使用黄色显示提示
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> color 0E
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rem 删除临时文件
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>del tmp.txt
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rem 暂停脚本以便在窗口上显示提示
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Winserver2022调优</title><link>https://blog.taoshuge.eu.org/post/178/</link><pubDate>Sat, 24 Feb 2024 00:25:20 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/178/</guid><description>&lt;h3 id="激活命令">激活命令&lt;/h3>
 &lt;p>打开PowerShell(管理员),输入以下代码:&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -1455,354 +1568,6 @@ sudo restart nmbd
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>lsb_release -a
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>宝塔面板Nginx编译pagespeed实现webp化</title><link>https://blog.taoshuge.eu.org/post/161/</link><pubDate>Mon, 12 Feb 2024 23:20:04 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/161/</guid><description>&lt;blockquote>
-&lt;p>网站优化之宝塔面板Nginx编译pagespeed实现webp化，目的为通过重写网页来减少延迟和带宽，从而帮助提高Web速度。Ngx_pagespeed是一个开源的Nginx模块，由Google创建，主要的功能是针对前端页面而进行服务器端的优化，对前端设计人员来说，可以省去优化css、js以及图片的过程。&lt;/p>
-&lt;/blockquote>
-&lt;p>单核处理器不推荐使用此模块，推荐&lt;code>Nginx fastcgi_cache&lt;/code>&lt;/p>
-&lt;p>Nginx fastcgi_cache：https://blog.leshans.eu.org/p/159/&lt;/p>
-&lt;h3 id="ngx_pagespeed功能简介">Ngx_pagespeed功能简介&lt;/h3>
-&lt;ol>
-&lt;li>图像优化：剥离元数据、动态调整，重新压缩&lt;/li>
-&lt;li>CSS和JavaScript压缩、合并、级联、内联&lt;/li>
-&lt;li>推迟图像和JavaScript加载&lt;/li>
-&lt;li>对HTML重写、压缩空格、去除注释等&lt;/li>
-&lt;li>提升缓存周期&lt;/li>
-&lt;/ol>
-&lt;p>缺点：可能因为服务器端的优化而使系统增加负载，但从&lt;code>减少客户请求数&lt;/code>的角度去看，牺牲部分服务器性能还是&lt;code>值得的&lt;/code>。&lt;/p>
-&lt;p>pagespeed官网文档：https://www.modpagespeed.com/doc/configuration&lt;/p>
-&lt;p>项目：https://github.com/apache/incubator-pagespeed-ngx/&lt;/p>
-&lt;h3 id="1宝塔面板编译ngx_pagespeed">1.宝塔面板编译Ngx_pagespeed&lt;/h3>
-&lt;h4 id="1首先卸载原有nginx然后点击编译安装点击添加自定义模块">1）首先卸载原有Nginx，然后点击“编译安装”，点击添加自定义模块&lt;/h4>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/d6b86dbd89f432251d46eb99eee3d1cd.webp" alt="Pasted image 20240213002542">&lt;/p>
-&lt;h4 id="2添加自定义模块具体填写具体看图">2）添加自定义模块具体填写，具体看图：&lt;/h4>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/98074899246754b40a6ec96979640a4a.webp" alt="Pasted image 20240213002557">&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6">6&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>模块名称：pagespeed
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>模块描述：pagespeed
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>模块参数: --add-module&lt;span style="color:#666">=&lt;/span>/www/server/ngx_pagespeed
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>前置脚本：#具体ngx_pagespeed前置脚本代码如下：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-14">14&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /www/server
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget https://github.com/apache/incubator-pagespeed-ngx/archive/v1.13.35.2-stable.zip
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>unzip v1.13.35.2-stable.zip
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm v1.13.35.2-stable.zip
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">NPS_DIR&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>find . -name &lt;span style="color:#4070a0">&amp;#34;*pagespeed-ngx-1.13.35.2-stable&amp;#34;&lt;/span> -type d&lt;span style="color:#007020;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mv &lt;span style="color:#bb60d5">$NPS_DIR&lt;/span> ngx_pagespeed
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> ngx_pagespeed
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">NPS_RELEASE_NUMBER&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#70a0d0">${&lt;/span>&lt;span style="color:#bb60d5">1&lt;/span>.13.35.2-stable/stable/&lt;span style="color:#70a0d0">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">PSPL_URL&lt;/span>&lt;span style="color:#666">=&lt;/span>https://dl.google.com/dl/page-speed/psol/&lt;span style="color:#70a0d0">${&lt;/span>&lt;span style="color:#bb60d5">NPS_RELEASE_NUMBER&lt;/span>&lt;span style="color:#70a0d0">}&lt;/span>x64.tar.gz
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span> -e scripts/format_binary_url.sh &lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">PSPL_URL&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>scripts/format_binary_url.sh PSOL_BINARY_URL&lt;span style="color:#007020;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget &lt;span style="color:#70a0d0">${&lt;/span>&lt;span style="color:#bb60d5">PSPL_URL&lt;/span>&lt;span style="color:#70a0d0">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>tar -xzvf &lt;span style="color:#007020;font-weight:bold">$(&lt;/span>basename &lt;span style="color:#70a0d0">${&lt;/span>&lt;span style="color:#bb60d5">PSPL_URL&lt;/span>&lt;span style="color:#70a0d0">}&lt;/span>&lt;span style="color:#007020;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm &lt;span style="color:#007020;font-weight:bold">$(&lt;/span>basename &lt;span style="color:#70a0d0">${&lt;/span>&lt;span style="color:#bb60d5">PSPL_URL&lt;/span>&lt;span style="color:#70a0d0">}&lt;/span>&lt;span style="color:#007020;font-weight:bold">)&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="3全部放置好后勾选提交">3）全部放置好后，勾选，提交&lt;/h4>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/54497a5654395939c6f4b525c1ce1898.webp" alt="Pasted image 20240213002749">&lt;/p>
-&lt;h4 id="4安装好的效果如图">4）安装好的效果如图：&lt;/h4>
-&lt;p>编译安装速度有点慢，需要等待，安装好可以在ssh执行命令：&lt;code>nginx -V&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/3e451ff4c55a4f79e2f80de0146f2e1e.webp" alt="Pasted image 20240213002802">&lt;/p>
-&lt;p>看到红框的位置有pagespeed，说明已经顺利编译安装好了~&lt;/p>
-&lt;h3 id="2网站nginx_pagespeed优化配置">2.网站Nginx_pagespeed优化配置&lt;/h3>
-&lt;h4 id="1nginx配置">1）Nginx配置&lt;/h4>
-&lt;p>安装好之后，打开Nginx配置，加入以下代码（注意位置）&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/6c60ad7519ec2d711c0a91bcfaf3f1b8.webp" alt="Pasted image 20240213002843">&lt;/p>
-&lt;p>下方中缓存文件位置请提前创建好：&lt;code>/tmp/ngx_pagespeed_cache&lt;/code>（这里也可以&lt;strong>放到内存&lt;/strong>里面，如果你的磁盘IO很慢的话建议采用此方式，毕竟内存的读写速度非常快）&lt;/p>
-&lt;p>代码如下：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-24">24&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-25">25&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-26">26&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-27">27&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-28">28&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-29">29&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-30">30&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-31">31&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-32">32&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-33">33&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-34">34&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-35">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-35">35&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-36">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-36">36&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-37">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-37">37&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-38">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-38">38&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-39">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-39">39&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-40">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-40">40&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-41">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-41">41&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-42">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-42">42&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-43">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-43">43&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-44">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-44">44&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-45">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-45">45&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-46">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-46">46&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-47">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-47">47&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-48">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-48">48&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-49">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-49">49&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-50">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-50">50&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-51">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-51">51&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-52">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-52">52&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-53">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-53">53&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-54">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-54">54&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-55">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-55">55&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-56">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-56">56&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-57">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-57">57&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-58">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-58">58&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-59">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-59">59&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-60">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-60">60&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-61">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-61">61&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-62">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-62">62&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-63">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-63">63&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-64">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-64">64&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-65">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-65">65&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-66">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-66">66&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-67">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-67">67&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-68">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-68">68&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-69">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-69">69&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-70">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-70">70&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-71">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-71">71&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-72">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-72">72&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-73">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-73">73&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 启用ngx_pagespeed 开始&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed on;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#路径请提前创建好，可以放在内存也可以放在临时文件夹中&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed CreateSharedMemoryMetadataCache /tmp/ngx_pagespeed_cache 51200;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed DefaultSharedMemoryCacheKB 51200;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed FileCachePath /tmp/ngx_pagespeed_cache;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed FileCacheSizeKb 2048000;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed FileCacheCleanIntervalMs 43200000;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed FileCacheInodeLimit 500000;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 过滤器级别（自定义模式）&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed RewriteLevel PassThrough;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 一个标识而已（若在浏览器开发者响应标头看到此标识，则说明 PageSpeed 生效）&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed XHeaderValue &lt;span style="color:#4070a0">&amp;#34;Powered By xcbtmw.com&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># HTML页面链接转小写（SEO 优化，推荐）&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed LowercaseHtmlNames on;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#PageSpeed能够根据响应头中指定的任何内容安全策略调整其优化&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed HonorCsp on;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">###########缓存 ##########&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#相当于同时使用了extend_cache_images, extend_cache_scripts和 extend_cache_css&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters extend_cache;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters extend_cache_pdfs;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters local_storage_cache;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#开启使用Redis（和memcached只能先其一）&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#pagespeed RedisServer &amp;#34;127.0.0.1:6379&amp;#34;;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># memcached优化,如果没有memcached优化请删去&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed MemcachedThreads 1;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed MemcachedServers &lt;span style="color:#4070a0">&amp;#34;127.0.0.1:11211&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">######## 过滤规则 ########&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 过滤不需要启用的目录或文件&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed Disallow &lt;span style="color:#4070a0">&amp;#34;*/wp-admin/*&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed Disallow &lt;span style="color:#4070a0">&amp;#34;*/wp-login.php*&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed Disallow &lt;span style="color:#4070a0">&amp;#34;*/vps-pingfen/&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 启用压缩空白过滤器&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters collapse_whitespace;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 预解析DNS查询&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pagespeed EnableFilters insert_dns_prefetch;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">########JS和CSS########&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 删除带默认属性的标签&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pagespeed EnableFilters elide_attributes;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 更换被导入文件的@import，精简CSS文件&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pagespeed EnableFilters flatten_css_imports;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pagespeed CssFlattenMaxBytes 5120;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 启用JavaScript缩小机制&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pagespeed EnableFilters rewrite_javascript;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">####### 图片########&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 延时加载图片&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pagespeed EnableFilters lazyload_images;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 不加载显示区域以外的图片，下方这个是延迟加载图片，如果没有就注释掉&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed LazyloadImagesAfterOnload off;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed LazyloadImagesBlankUrl &lt;span style="color:#4070a0">&amp;#34;https://www.xcbtmw.com/1.gif&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 启用图片优化机制&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters recompress_images;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 将JPEG图片转化为webp格式&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pagespeed EnableFilters convert_jpeg_to_webp;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 将动画Gif图片转化为动画webp格式&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pagespeed EnableFilters convert_to_webp_animated;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters inline_preview_images;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters resize_mobile_images;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters responsive_images,resize_images;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters insert_image_dimensions;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters resize_rendered_image_dimensions;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters strip_image_meta_data;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters convert_jpeg_to_webp,convert_to_webp_lossless,convert_to_webp_animated;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters sprite_images;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters convert_png_to_jpeg,convert_jpeg_to_webp;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#让JS里引用的图片也加入优化&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed InPlaceResourceOptimization on;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pagespeed EnableFilters in_place_optimize_for_browser;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 启用ngx_pagespeed 结束&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="2网站配置">2）网站配置&lt;/h4>
-&lt;p>打开对应网站的配置文件，在如图位置输入以下代码:&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/b1c7a1ae629562f4576ff364d4515785.webp" alt="Pasted image 20240213003504">&lt;/p>
-&lt;p>网站配置代码如下：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-11">11&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 启用ngx_pagespeed 开始 &lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>location ~ &lt;span style="color:#4070a0">&amp;#34;.pagespeed.([a-z].)?[a-z]{2}.[^.]{10}.[^.]+&amp;#34;&lt;/span> &lt;span style="color:#666">{&lt;/span> add_header &lt;span style="color:#4070a0">&amp;#34;&amp;#34;&lt;/span> &lt;span style="color:#4070a0">&amp;#34;&amp;#34;&lt;/span>; &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>location ~ &lt;span style="color:#4070a0">&amp;#34;^/pagespeed_static/&amp;#34;&lt;/span> &lt;span style="color:#666">{&lt;/span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>location ~ &lt;span style="color:#4070a0">&amp;#34;^/ngx_pagespeed_beacon&lt;/span>$&lt;span style="color:#4070a0">&amp;#34;&lt;/span> &lt;span style="color:#666">{&lt;/span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>location /ngx_pagespeed_statistics &lt;span style="color:#666">{&lt;/span> allow 127.0.0.1; deny all; &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>location /ngx_pagespeed_global_statistics &lt;span style="color:#666">{&lt;/span> allow 127.0.0.1; deny all; &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>location /ngx_pagespeed_message &lt;span style="color:#666">{&lt;/span> allow 127.0.0.1; deny all; &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>location /pagespeed_console &lt;span style="color:#666">{&lt;/span> allow 127.0.0.1; deny all; &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>location ~ ^/pagespeed_admin &lt;span style="color:#666">{&lt;/span> allow 127.0.0.1; deny all; &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>location ~ ^/pagespeed_global_admin &lt;span style="color:#666">{&lt;/span> allow 127.0.0.1; deny all; &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 启用ngx_pagespeed 结束&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="3注意事项">3）注意事项&lt;/h4>
-&lt;ul>
-&lt;li>memcached和redis没有的就注释掉&lt;/li>
-&lt;li>仔细阅读注释&lt;/li>
-&lt;/ul>
-&lt;h3 id="4ngx_pagespeed加速效果">4.Ngx_pagespeed加速效果&lt;/h3>
-&lt;p>开启后就可以看到图片被转成了webp格式，另外CSS和JS文件地址也会被重写&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/75dda13c3a8e74b57d6ada7ad43bbd6a.webp" alt="Pasted image 20240213003620">&lt;/p>
-&lt;p>然后在咱们设置的缓存文件位置处也可以看到文件&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/e5af4ba418bd25bbe3fe9d8a1677acbb.webp" alt="Pasted image 20240213003713">&lt;/p>
-&lt;h3 id="5清除ngx_pagespeed缓存">5.清除Ngx_pagespeed缓存&lt;/h3>
-&lt;p>手动删除或者命令行&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#手动删除，该目录为你在nginx设置的缓存目录&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rm -fr /tmp/ngx_pagespeed_cache/*
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#或者由pagespeed清空缓存 5秒后开始&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo touch /tmp/ngx_pagespeed_cache/cache.flush
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>国内访问GitHub方法-修改hosts</title><link>https://blog.taoshuge.eu.org/post/160/</link><pubDate>Mon, 12 Feb 2024 15:21:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/post/160/</guid><description>&lt;h3 id="复制下面的内容">复制下面的内容&lt;/h3>
-&lt;pre tabindex="0">&lt;code>20.205.243.166 github.com
-185.199.108.133 raw.githubusercontent.com
-185.199.109.133 raw.githubusercontent.com
-185.199.110.133 raw.githubusercontent.com
-185.199.111.133 raw.githubusercontent.com
-&lt;/code>&lt;/pre>&lt;h3 id="修改-hosts-文件">修改 hosts 文件&lt;/h3>
-&lt;p>Windows 系统：C:\Windows\System32\drivers\etc\hosts&lt;/p>
-&lt;p>修改方法，把第一步的内容复制到文本末尾：&lt;/p>
-&lt;h3 id="激活生效刷新-dns">激活生效,刷新 DNS：&lt;/h3>
-&lt;p>Windows：在 CMD 窗口输入：ipconfig /flushdns&lt;/p>
-&lt;p>以下是一个自动化的批处理脚本，保存为bat文件它会执行你描述的操作：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-17">17&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">hosts_path&lt;/span>&lt;span style="color:#666">=&lt;/span>C:&lt;span style="color:#4070a0;font-weight:bold">\W&lt;/span>indows&lt;span style="color:#4070a0;font-weight:bold">\S&lt;/span>ystem32&lt;span style="color:#4070a0;font-weight:bold">\d&lt;/span>rivers&lt;span style="color:#4070a0;font-weight:bold">\e&lt;/span>tc&lt;span style="color:#4070a0;font-weight:bold">\h&lt;/span>osts
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 复制内容到hosts文件...
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 20.205.243.166 github.com&amp;gt;&amp;gt;&lt;span style="color:#4070a0">&amp;#34;%hosts_path%&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 185.199.108.133 raw.githubusercontent.com&amp;gt;&amp;gt;&lt;span style="color:#4070a0">&amp;#34;%hosts_path%&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 185.199.109.133 raw.githubusercontent.com&amp;gt;&amp;gt;&lt;span style="color:#4070a0">&amp;#34;%hosts_path%&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 185.199.110.133 raw.githubusercontent.com&amp;gt;&amp;gt;&lt;span style="color:#4070a0">&amp;#34;%hosts_path%&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 185.199.111.133 raw.githubusercontent.com&amp;gt;&amp;gt;&lt;span style="color:#4070a0">&amp;#34;%hosts_path%&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 修改hosts文件完成。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 刷新 DNS...
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>ipconfig /flushdns
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 所有操作已完成。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item></channel></rss>
