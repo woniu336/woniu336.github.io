@@ -175,7 +175,8 @@
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service ssh restart
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;blockquote>
+&lt;/div>&lt;p>下次登录服务器使用用户名: &lt;code>laoge&lt;/code> 登录 切换root: &lt;code>sudo -i&lt;/code> 然后输入密码&lt;/p>
+&lt;blockquote>
 &lt;p>注意：这些修改不影响已经连接的SSH。 只对以后的的连接产生影响。&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="其他">其他&lt;/h3>
