@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>http://localhost:1313/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Sun, 25 Feb 2024 16:52:24 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>http://localhost:1313/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>http://localhost:1313/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Mon, 26 Feb 2024 23:54:47 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>http://localhost:1313/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -114,7 +114,21 @@
 &lt;p>&lt;strong>持续更新&lt;/strong>：个人知识库是一个不断演进的系统，需要持续更新和维护。随着个人的学习和经验积累，新的信息不断涌现，旧的信息可能需要修订或删除，因此定期审查和更新个人知识库是至关重要的。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>ubuntu创建账户与禁止root用户通过SSH远程登陆</title><link>http://localhost:1313/post/182/</link><pubDate>Sun, 25 Feb 2024 16:52:24 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/182/</guid><description>&lt;h3 id="1-登录root用户">1. 登录root用户&lt;/h3>
+&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>解决ubuntu虚拟机vmware tools无法共享剪贴板问题</title><link>http://localhost:1313/post/183/</link><pubDate>Mon, 26 Feb 2024 23:54:47 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/183/</guid><description>&lt;p>使用如下方法成功解决问题，一路回车默认即可。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install open-vm-tools
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install open-vm-tools-desktop
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>vmware tools&lt;/code>的开源版本 &lt;strong>open-vm-tools&lt;/strong> 由两个组件构成，&lt;/p>
+&lt;p>一个是&lt;code>open-vm-tools&lt;/code>，这个装上之后虚拟机就有了显示驱动，屏幕可以自适应大小；&lt;/p>
+&lt;p>另一个&lt;code>open-vm-tools-desktop&lt;/code>，用于共享剪贴板和文件拖拽功能。&lt;/p>
+&lt;p>最后重启虚拟机搞定&lt;/p></description></item><item><title>ubuntu创建账户与禁止root用户通过SSH远程登陆</title><link>http://localhost:1313/post/182/</link><pubDate>Sun, 25 Feb 2024 16:52:24 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/182/</guid><description>&lt;h3 id="1-登录root用户">1. 登录root用户&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
@@ -1544,62 +1558,4 @@ sudo restart nmbd
 &lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/40df4baf2f60c11f308b057a9a3ba4c1.png" alt="">&lt;/p>
 &lt;p>kms主机写入:&lt;/p>
 &lt;p>&lt;code>kms.loli.beer&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/dc154b5be5ad1b7fbe2700d40a1c3023.png" alt="">&lt;/p></description></item><item><title>中兴F4600T光猫超级密码获取方法</title><link>http://localhost:1313/post/165/</link><pubDate>Sun, 18 Feb 2024 14:45:31 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/165/</guid><description>&lt;h3 id="中兴f4600t光猫超级密码获取方法ios">中兴F4600T光猫超级密码获取方法（IOS）&lt;/h3>
-&lt;blockquote>
-&lt;p>1.工具和软件准备：&lt;code>iPhone或者iPad&lt;/code>、&lt;code>Stream抓包软件&lt;/code>，&lt;code>小翼管家&lt;/code>。如下图：&lt;/p>
-&lt;/blockquote>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/9f24b42b13a100a4460c1b5929db5cf4.avif" alt="">&lt;/p>
-&lt;p>软件准备&lt;/p>
-&lt;p>2.登录小翼管家，查看光猫是否绑定。&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/7cfb3abbace24e208d4bc101fb810123.avif" alt="">&lt;/p>
-&lt;p>小翼管家主页面&lt;/p>
-&lt;p>3.点击《家庭网络》，就可以看到光猫的控制界面了。&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/8f759b7dc680e3d61bcb829eaeaf14ab.avif" alt="">&lt;/p>
-&lt;p>光猫管理界面&lt;/p>
-&lt;p>4.点击《网关管理》，可以看到指示灯、休眠模式等这个界面。这个页面不要关闭，打开Stream软件。&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/2ed6da51367bbcbf09a5dcb830097c9e.avif" alt="">&lt;/p>
-&lt;p>5.打开Stream软件后，点击《设置抓包模式》&amp;mdash;《白名单模式》&amp;mdash;《白名单设置》&amp;mdash;《189cube.com》&amp;ndash;《立即生效》，请看图。&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/6eee66f746fdf34ddb32617171d71ec6.avif" alt="">&lt;/p>
-&lt;p>设置抓包模式&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/b80664cc7aac868db905042941858e92.avif" alt="">&lt;/p>
-&lt;p>白名单设置&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/b4e1115e2bbcaccc28d0f18be5279547.avif" alt="">&lt;/p>
-&lt;p>添加189cube.com&lt;/p>
-&lt;p>6.回到Stream抓包主页面，点击开始抓包。&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/2dd6d465d173a095f7cfe2cafb8231bb.avif" alt="">&lt;/p>
-&lt;p>开始抓包&lt;/p>
-&lt;p>7.返回到小翼管家APP，点击《指示灯》，反复开关几次。&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/8a3b09a53cce0b461064b40ac310420b.avif" alt="">&lt;/p>
-&lt;p>反复开关几次指示灯&lt;/p>
-&lt;p>8.返回Stream抓包界面，点击《停止抓包》&amp;mdash;《抓包历史》。&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/7c7bad4197cf06dba9383f3991b1dc3f.avif" alt="">&lt;/p>
-&lt;p>停止抓包&amp;mdash;查看抓包历史&lt;/p>
-&lt;p>9.可以看到有个19秒的抓包，点击打开，有两个请求，随意点开一个。&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/507a9cbcf8d340398028b0b0a256cbf6.avif" alt="">&lt;/p>
-&lt;p>抓包历史，随意点开一个&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/77a66920180f164d4b696a37a4fbdc5e.avif" alt="">&lt;/p>
-&lt;p>点开后的界面&lt;/p>
-&lt;p>10.点击右上角的《分享》&amp;mdash;《编辑重放请求》&amp;mdash;《下滑到最下端》&amp;mdash;《请求体&amp;mdash;JASON》&amp;ndash;《原始数据》&amp;mdash;删除所有的字段，替换为：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">{&lt;/span> &lt;span style="color:#4070a0">&amp;#34;Params&amp;#34;&lt;/span>: &lt;span style="color:#666">[]&lt;/span>, &lt;span style="color:#4070a0">&amp;#34;MethodName&amp;#34;&lt;/span>: &lt;span style="color:#4070a0">&amp;#34;GetTAPasswd&amp;#34;&lt;/span>, &lt;span style="color:#4070a0">&amp;#34;RPCMethod&amp;#34;&lt;/span>: &lt;span style="color:#4070a0">&amp;#34;CallMethod&amp;#34;&lt;/span>, &lt;span style="color:#4070a0">&amp;#34;ObjectPath&amp;#34;&lt;/span>: &lt;span style="color:#4070a0">&amp;#34;/com/ctc/igd1/Telecom/System&amp;#34;&lt;/span>, &lt;span style="color:#4070a0">&amp;#34;InterfaceName&amp;#34;&lt;/span>: &lt;span style="color:#4070a0">&amp;#34;com.ctc.igd1.SysCmd&amp;#34;&lt;/span>, &lt;span style="color:#4070a0">&amp;#34;ServiceName&amp;#34;&lt;/span>: &lt;span style="color:#4070a0">&amp;#34;com.ctc.igd1&amp;#34;&lt;/span> &lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/b693c9fb24fabad5041f065a6c8eeef9.avif" alt="">&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/c27c9aa48a2a05f7f4742adcbe4f9cec.avif" alt="">&lt;/p>
-&lt;p>查看JSON请求体&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/cd396ff1dc98c451ebd2f71c303f4c4b.avif" alt="">&lt;/p>
-&lt;p>点击原始数据&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/bf775944a8c9de025df5a1bfde39eeb9.avif" alt="">&lt;/p>
-&lt;p>替换为本教程里的代码&lt;/p>
-&lt;p>11.替换完以后，点击《存储》—右上角的类似《播放》按钮&amp;mdash;《响应体&amp;mdash;点击Respond Body》即可看到一个telecomadmin+8位数字，它就是超级密码。&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/d874147f3cea8969206523b1138ecdc8.avif" alt="">&lt;/p>
-&lt;p>点击右上角的播放按钮&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/3c964a1d19760f1deb4f255a056aa0c5.avif" alt="">&lt;/p>
-&lt;p>点开响应体，即可看到超级密码&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/4cdcf79cb1b35ef0c478bc2c5b168731.avif" alt="">&lt;/p>
-&lt;p>超级密码界面&lt;/p>
-&lt;p>12.登录光猫的管理地址：192.168.1.1，账户: telecomadmin，超级密码：telecomadmin+8位数字，即可进行后续的高端操作了。&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/dc154b5be5ad1b7fbe2700d40a1c3023.png" alt="">&lt;/p></description></item></channel></rss>
