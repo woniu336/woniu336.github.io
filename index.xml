@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>http://localhost:1313/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Mon, 26 Feb 2024 23:54:47 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>http://localhost:1313/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>http://localhost:1313/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Tue, 27 Feb 2024 00:18:59 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>http://localhost:1313/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -114,7 +114,37 @@
 &lt;p>&lt;strong>持续更新&lt;/strong>：个人知识库是一个不断演进的系统，需要持续更新和维护。随着个人的学习和经验积累，新的信息不断涌现，旧的信息可能需要修订或删除，因此定期审查和更新个人知识库是至关重要的。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>解决ubuntu虚拟机vmware tools无法共享剪贴板问题</title><link>http://localhost:1313/post/183/</link><pubDate>Mon, 26 Feb 2024 23:54:47 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/183/</guid><description>&lt;p>使用如下方法成功解决问题，一路回车默认即可。&lt;/p>
+&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>vmware虚拟机: 您的主机不满足在启用hyper-v 解决方法</title><link>http://localhost:1313/post/184/</link><pubDate>Tue, 27 Feb 2024 00:18:59 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/184/</guid><description>&lt;h3 id="问题描述">问题描述&lt;/h3>
+&lt;blockquote>
+&lt;p>由于之前安装了windows10自带的hyper-v虚拟机,在安装vm虚拟机启动镜像时遇到下图bug&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/d3812273fe8ce205ef337a7ab55b810d.webp" alt="">&lt;/p>
+&lt;h2 id="解决办法">解决办法&lt;/h2>
+&lt;h3 id="1-关闭hyper-v">1. 关闭hyper-v&lt;/h3>
+&lt;p>在控制面板→卸载程序，&lt;/p>
+&lt;p>去掉前面的勾 Hyper-V&lt;/p>
+&lt;p>最后三个选项的勾也去掉&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/fd24988e42fcae80e6928bce02df6154.webp" alt="">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/3d2dadc7277c9f8a731177f77e76eb71.webp" alt="">&lt;/p>
+&lt;h3 id="2-禁用hyper-v服务">2. 禁用Hyper-v服务&lt;/h3>
+&lt;p>到windows服务中关闭hyper-v的相关服务，以及HV主机服务 改成禁用&lt;/p>
+&lt;p>右键我的电脑，管理，&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/bef22e7bdb6bcf06e73ccc8c6059e2af.webp" alt="">&lt;/p>
+&lt;h3 id="3关闭基于虚拟化的安全性">3.关闭基于虚拟化的安全性&lt;/h3>
+&lt;p>下载工具&lt;a href="https://www.microsoft.com/en-us/download/details.aspx?id=53337">https://www.microsoft.com/en-us/download/details.aspx?id=53337&lt;/a>。&lt;/p>
+&lt;p>解压zip包，使用管理员打开&lt;code>PowerShell&lt;/code>，&lt;code>cmd&lt;/code>也行(管理员)
+切换到下载工具的目录，执行：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>.&lt;span style="color:#4070a0;font-weight:bold">\D&lt;/span>G_Readiness_Tool_v3.6.ps1 -Disable -AutoReboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>执行成功之后电脑将自动重启，按照启动提示(按F3)即可关闭继续虚拟化的安全性，VMware即可使用。&lt;/p>
+&lt;p>按win+r 输入 &lt;code>msinfo32&lt;/code>&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/084d693b56cf76dc9e0eba1699d59b48.webp" alt="">&lt;/p></description></item><item><title>解决ubuntu虚拟机vmware tools无法共享剪贴板问题</title><link>http://localhost:1313/post/183/</link><pubDate>Mon, 26 Feb 2024 23:54:47 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/183/</guid><description>&lt;p>使用如下方法成功解决问题，一路回车默认即可。&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
@@ -1545,17 +1575,4 @@ sudo restart nmbd
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>如果无法找到此命令，请确保你以管理员身份运行 PowerShell。&lt;/p>
-&lt;p>安装完成后，请重启。&lt;/p></description></item><item><title>Office 365正版免费激活！2024最新激活方法！</title><link>http://localhost:1313/post/166/</link><pubDate>Sun, 18 Feb 2024 19:56:41 +0800</pubDate><author>me@example.com (路飞)</author><guid>http://localhost:1313/post/166/</guid><description>&lt;p>工具地址:&lt;/p>
-&lt;p>&lt;a href="https://otp.landian.vip/zh-cn/download.html">https://otp.landian.vip/zh-cn/download.html&lt;/a>&lt;/p>
-&lt;blockquote>
-&lt;p>提示: &lt;code>右键图片&lt;/code>-在新标签页打开图片即可&lt;code>放大观看&lt;/code>&lt;/p>
-&lt;/blockquote>
-&lt;p>1.部署&lt;/p>
-&lt;p>第3步, 选择: &lt;code>Microsoft 365企业应用版&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/95557e6261d57e30f98342c5bfd884fd.png" alt="">&lt;/p>
-&lt;p>2.激活&lt;/p>
-&lt;p>选择 &lt;code>Office Mondo 2016 - 批量许可证&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/40df4baf2f60c11f308b057a9a3ba4c1.png" alt="">&lt;/p>
-&lt;p>kms主机写入:&lt;/p>
-&lt;p>&lt;code>kms.loli.beer&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://imgs.leshans.eu.org/2024/02/dc154b5be5ad1b7fbe2700d40a1c3023.png" alt="">&lt;/p></description></item></channel></rss>
+&lt;p>安装完成后，请重启。&lt;/p></description></item></channel></rss>
