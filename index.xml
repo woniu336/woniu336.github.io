@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Fri, 01 Mar 2024 21:18:40 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Sat, 02 Mar 2024 21:24:11 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -114,7 +114,82 @@
 &lt;p>&lt;strong>持续更新&lt;/strong>：个人知识库是一个不断演进的系统，需要持续更新和维护。随着个人的学习和经验积累，新的信息不断涌现，旧的信息可能需要修订或删除，因此定期审查和更新个人知识库是至关重要的。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>git 配置多端多个账号（码云、github、gitlab）</title><link>https://blog.taoshuge.eu.org/post/187/</link><pubDate>Fri, 01 Mar 2024 21:18:40 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/187/</guid><description>&lt;p>首先确认已安装Git，可以通过 git –version 命令可以查看当前安装的版本。&lt;/p>
+&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>rclone 参数详解</title><link>https://blog.taoshuge.eu.org/post/188/</link><pubDate>Sat, 02 Mar 2024 21:24:11 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/188/</guid><description>&lt;h3 id="参数">参数&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone copy E:&lt;span style="color:#4070a0;font-weight:bold">\迅&lt;/span>雷下载 od:电影 --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>如果用于谷歌网盘，添加参数： &lt;code>--drive-acknowledge-abuse&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>这是一个命令行命令，用于使用rclone工具将本地文件夹中的内容复制到远程存储中。以下是各个选项的解释：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>rclone&lt;/code>: 这是命令行工具rclone的名称，用于在不同云存储之间进行文件同步和传输。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>copy&lt;/code>: 这是rclone的一个操作命令，用于复制文件和目录。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>E:\迅雷下载&lt;/code>: 这是本地文件夹的路径，即要复制的源文件夹路径。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>od:电影&lt;/code>: 这是远程存储的名称和目标路径。在这里，&lt;code>od&lt;/code>是远程存储的名称，&lt;code>电影&lt;/code>是目标路径。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--ignore-existing&lt;/code>: 这个选项告诉rclone在复制文件时忽略已经存在于目标路径中的文件。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-u&lt;/code>: 这个选项表示只复制更新过的文件，即源文件夹中修改过的文件或者新文件。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-v&lt;/code>: 这个选项表示以详细模式进行操作，会输出更多的信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-P&lt;/code>: 这个选项表示在复制过程中显示进度和统计信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--transfers=20&lt;/code>: 这个选项指定了同时进行的传输数，这里是20个并发传输。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--ignore-errors&lt;/code>: 这个选项告诉rclone在发生错误时继续进行，而不是停止操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--buffer-size=128M&lt;/code>: 这个选项设置了传输缓冲区的大小，这里是128MB。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--check-first&lt;/code>: 这个选项表示在开始复制之前检查目标路径，确保不会覆盖目标路径中的任何现有文件。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>--checkers=10&lt;/code>: 这个选项设置了并发检查器的数量，用于检查源和目标文件之间的差异。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>通过这个命令，你可以将本地文件夹中的内容复制到远程存储中，并且可以控制复制过程的各种参数。&lt;/p>
+&lt;h3 id="bat脚本">bat脚本&lt;/h3>
+&lt;p>以windows为例：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /d D:&lt;span style="color:#4070a0;font-weight:bold">\r&lt;/span>clone-v1.63.0-windows-amd64
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone copy E:&lt;span style="color:#4070a0;font-weight:bold">\迅&lt;/span>雷下载 od:电影 --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>将rclone 下载到D盘，文件夹名： rclone-v1.63.0-windows-amd64&lt;/p>
+&lt;/blockquote>
+&lt;p>rclone下载地址： &lt;a href="https://rclone.org/downloads/">https://rclone.org/downloads/&lt;/a>&lt;/p>
+&lt;!-- raw HTML omitted --></description></item><item><title>git 配置多端多个账号（码云、github、gitlab）</title><link>https://blog.taoshuge.eu.org/post/187/</link><pubDate>Fri, 01 Mar 2024 21:18:40 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/187/</guid><description>&lt;p>首先确认已安装Git，可以通过 git –version 命令可以查看当前安装的版本。&lt;/p>
 &lt;blockquote>
 &lt;p>为同一个电脑，配置多个 git 账号，其整体流程如下：&lt;br>
 清空默认的全局 user.name 和 user.email&lt;br>
@@ -1920,122 +1995,4 @@ sudo restart nmbd
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/fce506a3aac3f03fff4dee4990bd536e.webp" alt="">&lt;/p>
 &lt;p>&lt;strong>步骤4.&lt;/strong> 双击打开 &lt;strong>“fDenyTSConnections”&lt;/strong>，将**“数值数据”&lt;strong>更改为&lt;/strong>“0”&lt;strong>，然后单击&lt;/strong>“确定”**。&lt;/p>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/099081f7ca8382316f67b7a926766443.webp" alt="">&lt;/p>
-&lt;p>&lt;strong>说明：&lt;/strong> “0”表示“允许用户通过终端服务/远程桌面远程连接”；“1”表示“禁止使用终端服务/远程桌面进行远程连接”。&lt;/p></description></item><item><title>Hyper-v创建虚拟交换机失败与网络共享重启失效解决办法</title><link>https://blog.taoshuge.eu.org/post/170/</link><pubDate>Wed, 21 Feb 2024 05:41:42 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/170/</guid><description>&lt;blockquote>
-&lt;p>物理网卡属性里去掉勾选 &lt;code>Hyper-v Extensible Virtual Switch&lt;/code> 或者叫 &lt;code>Hyper-v 可扩展的虚拟交换机&lt;/code>&lt;/p>
-&lt;/blockquote>
-&lt;h3 id="创建虚拟交换机失败解决办法">创建虚拟交换机失败解决办法&lt;/h3>
-&lt;p>创建之前先关闭&lt;code>Hyper-v Extensible Virtual Switch&lt;/code>&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/9a5b0a848f2875f21b16c4a806a87299.webp" alt="">&lt;/p>
-&lt;p>其他方法:&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>步骤&lt;/th>
-&lt;th>操作&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>1&lt;/td>
-&lt;td>在“启用或关闭Windows功能”中卸载Hyper-V&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2&lt;/td>
-&lt;td>重启计算机&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>3&lt;/td>
-&lt;td>以管理员方式在“运行”中运行命令&lt;code>netsh winsock reset&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>4&lt;/td>
-&lt;td>重启计算机&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>5&lt;/td>
-&lt;td>重启后查看“网络适配器”中是否有其他非物理网卡，若有则删除&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>6&lt;/td>
-&lt;td>确认物理网卡属性中没有勾选或存在“Hyper-v Extensible Virtual Switch”&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>7&lt;/td>
-&lt;td>在“启用或关闭Windows功能”中重新启用Hyper-V&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>8&lt;/td>
-&lt;td>重启计算机&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>9&lt;/td>
-&lt;td>确认要绑定“虚拟交换机”的物理网卡属性中没有勾选“Hyper-v Extensible Virtual Switch”&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>请注意，这些步骤仅供参考，具体操作可能因系统版本和配置而有所不同。在执行任何更改之前，请确保备份重要数据并谨慎操作。&lt;/p>
-&lt;h3 id="网络共享重启失效解决办法">网络共享重启失效解决办法&lt;/h3>
-&lt;h4 id="一键脚本-方法1推荐">一键脚本: (方法1)推荐&lt;/h4>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-19">19&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>REM 设置输出编码为UTF-8
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chcp &lt;span style="color:#40a070">65001&lt;/span> &amp;gt; nul
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>REM 导入注册表键值
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>reg add &lt;span style="color:#4070a0">&amp;#34;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\SharedAccess&amp;#34;&lt;/span> /v &lt;span style="color:#4070a0">&amp;#34;EnableRebootPersistConnection&amp;#34;&lt;/span> /t REG_DWORD /d &lt;span style="color:#40a070">1&lt;/span> /f
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 注册表键值已创建并设置为1。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>REM 设置输出编码为UTF-8
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chcp &lt;span style="color:#40a070">65001&lt;/span> &amp;gt; nul
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>REM 使用 sc 命令更改服务启动类型为自动
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sc config SharedAccess &lt;span style="color:#bb60d5">start&lt;/span>&lt;span style="color:#666">=&lt;/span> auto
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 服务 &lt;span style="color:#4070a0">&amp;#34;Internet Connection Sharing (ICS)&amp;#34;&lt;/span> 的启动类型已更改为自动。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>将上述代码保存为扩展名为&lt;code>.bat&lt;/code>文件，例如&lt;code>enable_reboot.bat&lt;/code>。然后，双击运行该批处理文件&lt;/p>
-&lt;h4 id="手动修复-方法2">手动修复 (方法2)&lt;/h4>
-&lt;ol>
-&lt;li>修改注册表&lt;/li>
-&lt;/ol>
-&lt;p>快捷键 win+r 输入 regedit 确认打开 注册表编辑器&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/28bfef24348e3de28ac85acad463f779.webp" alt="image-1683871305927">&lt;/p>
-&lt;p>输入注册表路径&lt;/p>
-&lt;p>&lt;code>计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SharedAccess&lt;/code>&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/960d2d380ff750b6fc0099dceb032c9e.webp" alt="image-1683871363608">&lt;/p>
-&lt;p>新建项 “DWORD(32位)值(D) 名称 &lt;code>EnableRebootPersistConnection&lt;/code> 并修改值为1&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/f1864d3898c6c7a89b6932a5c748a161.webp" alt="image-1683871433057">&lt;/p>
-&lt;h4 id="修改服务internet-connection-sharing-ics-启动类型为自动">修改服务Internet Connection Sharing (ICS) 启动类型为自动&lt;/h4>
-&lt;h4 id="打开服务面板">打开服务面板&lt;/h4>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/eb960ac2bc20e3523647e7519793e0cf.webp" alt="image-1683871479766">&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/d4c977a9c485f00fe0c66deb5593fb86.webp" alt="image-1683871576352">&lt;/p>
-&lt;h3 id="重新设置共享链接">重新设置共享链接&lt;/h3>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/89065f856e5ed9dcd6247971e64baa94.webp" alt="image-1683871613904">&lt;/p>
-&lt;p>这次重启后不会失效了&lt;/p></description></item></channel></rss>
+&lt;p>&lt;strong>说明：&lt;/strong> “0”表示“允许用户通过终端服务/远程桌面远程连接”；“1”表示“禁止使用终端服务/远程桌面进行远程连接”。&lt;/p></description></item></channel></rss>
