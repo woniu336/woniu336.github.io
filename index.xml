@@ -114,17 +114,68 @@
 &lt;p>&lt;strong>持续更新&lt;/strong>：个人知识库是一个不断演进的系统，需要持续更新和维护。随着个人的学习和经验积累，新的信息不断涌现，旧的信息可能需要修订或删除，因此定期审查和更新个人知识库是至关重要的。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>rclone 参数详解</title><link>https://blog.taoshuge.eu.org/post/188/</link><pubDate>Sat, 02 Mar 2024 21:24:11 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/188/</guid><description>&lt;h3 id="参数">参数&lt;/h3>
+&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>rclone基于windows一键脚本工具</title><link>https://blog.taoshuge.eu.org/post/188/</link><pubDate>Sat, 02 Mar 2024 21:24:11 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/188/</guid><description>&lt;h3 id="bat脚本">bat脚本&lt;/h3>
+&lt;p>rclone下载地址： &lt;a href="https://rclone.org/downloads/">https://rclone.org/downloads/&lt;/a>&lt;/p>
+&lt;p>以windows为例：&lt;/p>
+&lt;blockquote>
+&lt;p>前提：在rclone安装目录需要有&lt;code>rclone.conf&lt;/code>配置文件存在,而且配置好了网盘&lt;/p>
+&lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-14">14&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone copy E:&lt;span style="color:#4070a0;font-weight:bold">\迅&lt;/span>雷下载 od:电影 --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> /p &lt;span style="color:#bb60d5">source&lt;/span>&lt;span style="color:#666">=&lt;/span>请输入源路径：
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> /p &lt;span style="color:#bb60d5">destination&lt;/span>&lt;span style="color:#666">=&lt;/span>请输入目标路径：
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> /p &lt;span style="color:#bb60d5">proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>是否需要代理？&lt;span style="color:#666">(&lt;/span>yes/no&lt;span style="color:#666">)&lt;/span>：
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> /i &lt;span style="color:#4070a0">&amp;#34;%proxy%&amp;#34;&lt;/span>&lt;span style="color:#666">==&lt;/span>&lt;span style="color:#4070a0">&amp;#34;yes&amp;#34;&lt;/span> &lt;span style="color:#666">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">http_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span> &lt;span style="color:#007020;font-weight:bold">else&lt;/span> &lt;span style="color:#666">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">http_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /d D:&lt;span style="color:#4070a0;font-weight:bold">\r&lt;/span>clone-v1.63.0-windows-amd64
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone copy &lt;span style="color:#4070a0">&amp;#34;%source%&amp;#34;&lt;/span> &lt;span style="color:#4070a0">&amp;#34;%destination%&amp;#34;&lt;/span> --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span> --drive-acknowledge-abuse
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>rclone.conf配置文件：&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/88e05105d93c2d216b5bdd03830293f6.webp" alt="">&lt;/p>
+&lt;ul>
+&lt;li>目标标路径可以自动创建(如果没有) ，代理端口7890，如果你的不是7890端口请修改&lt;/li>
+&lt;li>编码：&lt;code>ANSI&lt;/code> 避免windows下运行乱码&lt;/li>
+&lt;li>将rclone 下载到D盘，文件夹名： rclone-v1.63.0-windows-amd64&lt;/li>
+&lt;li>这里的代理是针对比如&lt;code>谷歌网盘&lt;/code>需要魔法访问的情况&lt;/li>
+&lt;li>并且代理设置只会在该次运行过程中生效&lt;/li>
+&lt;li>每次运行这个批处理文件时，用户都需要重新选择是否需要代理&lt;/li>
+&lt;/ul>
+&lt;h3 id="参数解释">参数解释&lt;/h3>
+&lt;p>例如将&lt;code>E:\迅雷下载&lt;/code>的文件复制到&lt;code>onedrive&lt;/code>下的电影目录&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone copy E:&lt;span style="color:#4070a0;font-weight:bold">\迅&lt;/span>雷下载 onedrive:电影 --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;blockquote>
-&lt;p>如果用于谷歌网盘，添加参数： &lt;code>--drive-acknowledge-abuse&lt;/code>&lt;/p>
+&lt;p>如果用于谷歌网盘，末尾添加参数： &lt;code>--drive-acknowledge-abuse&lt;/code>&lt;/p>
 &lt;/blockquote>
 &lt;p>这是一个命令行命令，用于使用rclone工具将本地文件夹中的内容复制到远程存储中。以下是各个选项的解释：&lt;/p>
 &lt;ul>
@@ -138,7 +189,7 @@
 &lt;p>&lt;code>E:\迅雷下载&lt;/code>: 这是本地文件夹的路径，即要复制的源文件夹路径。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;code>od:电影&lt;/code>: 这是远程存储的名称和目标路径。在这里，&lt;code>od&lt;/code>是远程存储的名称，&lt;code>电影&lt;/code>是目标路径。&lt;/p>
+&lt;p>&lt;code>onedrive:电影&lt;/code>: 这是远程存储的名称和目标路径。在这里，&lt;code>onedrive&lt;/code>是远程存储的名称，&lt;code>电影&lt;/code>是目标路径。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;code>--ignore-existing&lt;/code>: 这个选项告诉rclone在复制文件时忽略已经存在于目标路径中的文件。&lt;/p>
@@ -169,26 +220,6 @@
 &lt;/li>
 &lt;/ul>
 &lt;p>通过这个命令，你可以将本地文件夹中的内容复制到远程存储中，并且可以控制复制过程的各种参数。&lt;/p>
-&lt;h3 id="bat脚本">bat脚本&lt;/h3>
-&lt;p>以windows为例：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /d D:&lt;span style="color:#4070a0;font-weight:bold">\r&lt;/span>clone-v1.63.0-windows-amd64
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone copy E:&lt;span style="color:#4070a0;font-weight:bold">\迅&lt;/span>雷下载 od:电影 --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>将rclone 下载到D盘，文件夹名： rclone-v1.63.0-windows-amd64&lt;/p>
-&lt;/blockquote>
-&lt;p>rclone下载地址： &lt;a href="https://rclone.org/downloads/">https://rclone.org/downloads/&lt;/a>&lt;/p>
 &lt;!-- raw HTML omitted --></description></item><item><title>git 配置多端多个账号（码云、github、gitlab）</title><link>https://blog.taoshuge.eu.org/post/187/</link><pubDate>Fri, 01 Mar 2024 21:18:40 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/187/</guid><description>&lt;p>首先确认已安装Git，可以通过 git –version 命令可以查看当前安装的版本。&lt;/p>
 &lt;blockquote>
 &lt;p>为同一个电脑，配置多个 git 账号，其整体流程如下：&lt;br>
