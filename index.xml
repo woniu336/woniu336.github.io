@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Sat, 02 Mar 2024 21:24:11 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Mon, 04 Mar 2024 04:30:28 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -114,7 +114,359 @@
 &lt;p>&lt;strong>持续更新&lt;/strong>：个人知识库是一个不断演进的系统，需要持续更新和维护。随着个人的学习和经验积累，新的信息不断涌现，旧的信息可能需要修订或删除，因此定期审查和更新个人知识库是至关重要的。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>rclone基于windows一键脚本工具</title><link>https://blog.taoshuge.eu.org/post/188/</link><pubDate>Sat, 02 Mar 2024 21:24:11 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/188/</guid><description>&lt;h3 id="bat脚本">bat脚本&lt;/h3>
+&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>使用 winget 搜索和安装应用程序</title><link>https://blog.taoshuge.eu.org/post/191/</link><pubDate>Mon, 04 Mar 2024 04:30:28 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/191/</guid><description>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>winget 源&lt;/th>
+&lt;th>内容&lt;/th>
+&lt;th>地址&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>微软官方&lt;/td>
+&lt;td>应用商店中的程序 + 开源软件包&lt;/td>
+&lt;td>&lt;code>https://cdn.winget.microsoft.com/cache&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>中科大开&lt;/td>
+&lt;td>开源软件包&lt;/td>
+&lt;td>&lt;code>https://mirrors.ustc.edu.cn/winget-source&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>好像就中科大的提供 winget 国内镜像，有点少啊。&lt;/p>
+&lt;h2 id="使用-winget-搜索和安装应用程序">使用 winget 搜索和安装应用程序&lt;/h2>
+&lt;p>对于不熟悉基于文本界面的用户来说，刚开始使用 winget 时可能有点令人望而却步，但实际上它非常简单易用。winget 的基本用法只涉及搜索和安装应用程序。请按照以下步骤操作：&lt;/p>
+&lt;p>1在 Windows 11 中鼠标右击「开始」菜单 – 选择打开「终端管理员」。&lt;/p>
+&lt;p>2要搜索应用程序，请执行：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget search &amp;lt;AppName&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>例如，输入&lt;code>winget search Chrome&lt;/code>来尝试查找 Google Chrome。&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/883aa4bf07087fcdd0b9b66b98499577.webp" alt="使用 winget 搜索应用程序">&lt;/p>
+&lt;p>使用 winget 搜索应用程序&lt;/p>
+&lt;p>3如果首次使用&lt;code>winget&lt;/code>命令，需要同意服务条款，请按&lt;code>Y&lt;/code>然后按回车键。查询结果中可以看到包括不同版本的 Chrome，以及一些名称相似的应用程序。&lt;/p>
+&lt;p>4为了获取和安装正确的应用程序，最准确的方法是使用第二列中列出的包 &lt;strong>ID&lt;/strong>。例如，要安装 Google Chrome 的稳定版，可以使用如下命令：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget install Google.Chrome
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/98f0d7a0dc67761ab20a034f5883c02b.webp" alt="使用 winget 安装应用程序">&lt;/p>
+&lt;p>使用 winget 安装应用程序&lt;/p>
+&lt;ul>
+&lt;li>如果要安装的程序需要通过 Microsoft Store 获取（源在列表的最后一列），还需要同意服务条款，请按&lt;code>Y&lt;/code>然后按回车键。&lt;/li>
+&lt;li>也可以在安装命令中添加&lt;code>--accept-package-agreements&lt;/code>参数，以自动接受任何协议。&lt;/li>
+&lt;/ul>
+&lt;p>5安装完成后，可以重复这个过程来安装其他任何需要的应用程序。&lt;/p>
+&lt;p>在 Windows 11 中使用基于文本的命令行界面安装应用程序非常简单，而且有许多应用程序都可以通过&lt;code>winget&lt;/code>命令实现静默安装，而且速度非常快。正如我们之前提到的，您也可以使用 Windows Package Manager 安装来自 Microsoft Store 的应用程序。&lt;/p>
+&lt;h2 id="使用-winget-更新应用程序">使用 winget 更新应用程序&lt;/h2>
+&lt;p>Windows Package Manager 的另一个功能是通过集中的界面保持应用程序的更新。如果有一个或多个应用程序可在 winget 仓库中获取（即使不是通过该仓库安装），也可以使用它一次性轻松更新这些应用：&lt;/p>
+&lt;p>1在 Windows 11 中鼠标右击「开始」菜单 – 选择打开「终端管理员」。&lt;/p>
+&lt;p>2执行以下命令查看可用的软件更新包列表：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget update
+##或者
+winget upgrade
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/c51ca1596b0f71857c110ff29c216cb0.webp" alt="使用 winget 更新应用程序">&lt;/p>
+&lt;p>使用 winget 更新应用程序&lt;/p>
+&lt;p>3要更新特定的软件包，请运行：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget update &amp;lt;ID&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/fb15cf4fde0a9d6f2d6d514a86dfa967.webp" alt="使用 winget 更新应用程序">&lt;/p>
+&lt;p>使用 winget 更新应用程序&lt;/p>
+&lt;p>请将&lt;code>&amp;lt;ID&amp;gt;&lt;/code>替换为想要更新的包 &lt;strong>ID&lt;/strong>。&lt;/p>
+&lt;p>4如果要更新所有软件包，可以运行：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget update --all
+&lt;/code>&lt;/pre>&lt;p>5也可以添加&lt;code>--include-unknown&lt;/code>参数来安装计算机上未知版本软件包的最新版本。&lt;/p>
+&lt;p>6软件包将逐个进行更新。同样地，一些安装程序在更新时可能需要人工干预，但可以使用&lt;code>--disable-interactivity&lt;/code>参数来跳过。&lt;/p>
+&lt;p>您可以随时再次运行此操作，以确保应用程序保持最新。&lt;/p>
+&lt;h2 id="使用-winget-卸载应用程序">使用 winget 卸载应用程序&lt;/h2>
+&lt;p>当然，我们也可以使用 winget 包管理器来卸载应用程序：&lt;/p>
+&lt;p>1在 Windows 11 中鼠标右击「开始」菜单 – 选择打开「终端管理员」。&lt;/p>
+&lt;p>2运行以下命令查看计算机上安装的所有软件包：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget list
+&lt;/code>&lt;/pre>&lt;p>3找到想要卸载的应用程序包 &lt;strong>ID&lt;/strong>，再运行以下命令：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget uninstall &amp;lt;id&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/79d55d0df75cbc790a8d74e56cfb4edd.webp" alt="使用 winget 卸载应用程序">&lt;/p>
+&lt;p>使用 winget 卸载应用程序&lt;/p>
+&lt;p>将&lt;code>&amp;lt;id&amp;gt;&lt;/code>替换为要移除的包 &lt;strong>ID&lt;/strong>。&lt;/p>
+&lt;p>4按照屏幕上的指示进行操作，或者使用&lt;code>--disable-interactivity&lt;/code>参数以静默方式移除应用程序。&lt;/p>
+&lt;h2 id="使用-winget-导出和导入软件包列表">使用 winget 导出和导入软件包列表&lt;/h2>
+&lt;p>winget 工具的另一个强大功能是能够将 Windows 中已安装的所有软件包导出为一个 JSON 文件。在设置新电脑时，就可以导入该文件，以便一次性安装列表中的所有应用程序。&lt;/p>
+&lt;h3 id="导出软件包列表">导出软件包列表&lt;/h3>
+&lt;p>要导出 Windows 中已安装的软件包列表，只需运行：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget export -o &amp;lt;output&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>将&lt;code>&amp;lt;output&amp;gt;&lt;/code>替换为要存储包列表文件的路径。某些应用可能需要同意源协议。&lt;/p>
+&lt;ul>
+&lt;li>可以使用&lt;code>--source&lt;/code>参数仅筛选来自选定源（如 &lt;strong>winget&lt;/strong> 或 &lt;strong>msstore&lt;/strong>）的软件包。&lt;/li>
+&lt;li>可以使用&lt;code>--version&lt;/code>参数导出特定版本的应用程序，而不是安装最新版本。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/174e92284a056a1e7e641523aa8d5a70.webp" alt="使用 winget 导出软件包列表">&lt;/p>
+&lt;p>使用 winget 导出软件包列表&lt;/p>
+&lt;p>还可以将该文件移动到 U 盘或 OneDrive 这样的云服务中，以便稍后在其他设备上导入。在此过程中，可能会出现许多错误，因为许多应用程序是预装在 Windows 中的，或者可能不是通过 &lt;strong>winget&lt;/strong> 或 &lt;strong>msstore&lt;/strong> 源安装的。&lt;/p>
+&lt;p>此操作只会导出软件包列表，不包括实际的安装程序。在导入时，新电脑需要连接到 Internet，以便下载和安装这些软件包。&lt;/p>
+&lt;h3 id="导入软件包列表">导入软件包列表&lt;/h3>
+&lt;p>要导入软件包列表，可以使用以下命令：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget import -i &amp;lt;import-file&amp;gt;
+&lt;/code>&lt;/pre>&lt;p>其中&lt;code>&amp;lt;import-file&amp;gt;&lt;/code>是要导入的文件路径，还可以添加&lt;code>--accept-package-agreements&lt;/code>参数以接受所有需要同意的源的协议。&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/688a88540a9e979d253227849a8829cb.webp" alt="使用 winget 导入软件包列表">&lt;/p>
+&lt;p>使用 winget 导入软件包列表&lt;/p>
+&lt;ul>
+&lt;li>Windows Package Manager 将尝试逐个安装软件包列表中的所有应用程序。&lt;/li>
+&lt;li>由于其中一些是随 Windows 11 一起提供的应用程序包，因此可能已经安装了某些应用程序。&lt;/li>
+&lt;li>对于新的应用程序和更新，可能需要与每个安装程序进行交互，或者在导入时使用&lt;code>--disable-interactivity&lt;/code>参数来跳过所有安装程序的交互过程。&lt;/li>
+&lt;/ul>
+&lt;h2 id="winget-163482-版本更新">Winget 1.6.3482 版本更新&lt;/h2>
+&lt;p>Winget 1.6.3482 版本适用于 Windows 10（1809+）和 Windows 11。在此次更新中，禁用了实验性功能并更新了商店证书，以提高系统安全性。需要注意的是，当前商店证书将于 2024 年 3 月初到期。&lt;/p>
+&lt;p>在新版本中，&lt;code>winget configure&lt;/code>命令是一个稳定的功能。可以帮助你在 Windows 系统上自动处理设置和配置，从而创建理想的开发环境。通过应用 WinGet 配置文件，能够更轻松地安装和管理软件包、应用程序、编程语言、框架、工具或项目所需的设置。&lt;/p>
+&lt;p>此次稳定版本还引入了对软件包依赖性的全面支持。现在，通过使用&lt;code>winget download&lt;/code>命令，可以将软件包安装程序下载到本地，实现更加灵活的管理。&lt;/p>
+&lt;p>变更摘要：&lt;/p>
+&lt;ul>
+&lt;li>在安装包枚举时，现在包括了框架包。&lt;/li>
+&lt;li>引入了安装程序之间的强弱比较功能。&lt;/li>
+&lt;li>商店证书已经更新。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>本文应该让您对如何使用 winget 包管理器有了一个基本了解。您可以进一步深入，通过添加自定义源获取应用程序，例如公司内部的应用程序存储库，并验证应用程序的清单文件。但本文介绍的核心功能已经非常实用。&lt;/p></description></item><item><title>Windows Terminal美化</title><link>https://blog.taoshuge.eu.org/post/190/</link><pubDate>Mon, 04 Mar 2024 01:09:39 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/190/</guid><description>&lt;h3 id="一-oh-my-posh--安装">一、 oh my posh 安装&lt;/h3>
+&lt;h4 id="安装方式1">安装方式1：&lt;/h4>
+&lt;p>打开 &lt;code>PowerShell&lt;/code> 提示符并运行以下命令：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression &lt;span style="color:#666">((&lt;/span>New-Object System.Net.WebClient&lt;span style="color:#666">)&lt;/span>.DownloadString&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#39;https://ohmyposh.dev/install.ps1&amp;#39;&lt;/span>&lt;span style="color:#666">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>可能会失败，请看安装方式2&lt;/p>
+&lt;/blockquote>
+&lt;p>如果下载慢，使用代理：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">http_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:7890
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>手动加入环境变量（可不加）：&lt;/p>
+&lt;p>注意我的用户名是：&lt;code>Administrator&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">$env&lt;/span>:Path +&lt;span style="color:#666">=&lt;/span> &lt;span style="color:#4070a0">&amp;#34;;C:\Users\Administrator\AppData\Local\Programs\oh-my-posh\bin&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="安装方式2">安装方式2：&lt;/h4>
+&lt;p>打开 &lt;code>PowerShell&lt;/code> 提示符并运行以下命令：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>winget install JanDeDobbeleer.OhMyPosh -s winget
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>但是首先&lt;strong>为 winget 更换国内源&lt;/strong>，为了提高响应速度，以下是操作步骤：&lt;/p>
+&lt;p>1以管理员身份打开「命令提示符」。&lt;/p>
+&lt;p>2执行以下命令，删除由 Microsoft 维护的官方源：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget source remove winget
+&lt;/code>&lt;/pre>&lt;p>3执行以下命令添加 winget 国内源：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget source add [源名称] [源地址]
+&lt;/code>&lt;/pre>&lt;p>例如，若要添加中科大开源软件镜像源，可执行以下命令：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget source add winget https://mirrors.ustc.edu.cn/winget-source
+&lt;/code>&lt;/pre>&lt;p>建议就使用&lt;code>winget&lt;/code>作为名称，以便在需要时轻松重置回官方源。&lt;/p>
+&lt;p>4换源完成后，可以通过以下命令进行验证和查看：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget source list
+&lt;/code>&lt;/pre>&lt;p>5如果要恢复使用 Microsoft 官方源，可以使用以下命令进行重置：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget source reset winget
+&lt;/code>&lt;/pre>&lt;p>源删除：&lt;/p>
+&lt;pre tabindex="0">&lt;code>winget source remove msstore
+&lt;/code>&lt;/pre>&lt;p>6安装oh my posh：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>winget install JanDeDobbeleer.OhMyPosh -s winget
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="二创建配置文件">二、创建配置文件&lt;/h3>
+&lt;blockquote>
+&lt;p>配置文件路径：
+C:\Users\Administrator\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>notepad &lt;span style="color:#bb60d5">$PROFILE&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>若提示错误：请继续以下代码&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>New-Item -Path &lt;span style="color:#bb60d5">$PROFILE&lt;/span> -Type File -Force
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后添加以下代码到Microsoft.PowerShell_profile.ps1&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>oh-my-posh init pwsh --config &lt;span style="color:#bb60d5">$env&lt;/span>:POSH_THEMES_PATH&lt;span style="color:#4070a0;font-weight:bold">\m&lt;/span>ontys.omp.json | Invoke-Expression
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>重新加载以使更改生效:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>. &lt;span style="color:#bb60d5">$PROFILE&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="解决无法加载文件">解决“无法加载文件&lt;/h3>
+&lt;p>解决“无法加载文件 ***\WindowsPowerShell\profile.ps1，因为在此系统上禁止运行脚本”&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-15-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-15-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>set-executionpolicy remotesigned
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="自定义主题">自定义主题&lt;/h3>
+&lt;blockquote>
+&lt;p>主题目录：C:\Users\Administrator\AppData\Local\Programs\oh-my-posh\themes&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-16-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-16-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>notepad &lt;span style="color:#bb60d5">$PROFILE&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>改成：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>oh-my-posh init pwsh --config &lt;span style="color:#bb60d5">$env&lt;/span>:POSH_THEMES_PATH&lt;span style="color:#4070a0;font-weight:bold">\m&lt;/span>ontys.omp.json | Invoke-Expression
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cls
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>只需要修改&lt;code>montys.omp.json&lt;/code>，是主题配置文件&lt;/p>
+&lt;/blockquote>
+&lt;p>主题预览：&lt;/p>
+&lt;p>&lt;a href="https://ohmyposh.dev/docs/themes">https://ohmyposh.dev/docs/themes&lt;/a>&lt;/p>
+&lt;h3 id="三美化">三、美化&lt;/h3>
+&lt;p>1：字体下载&lt;/p>
+&lt;p>&lt;a href="https://github.com/ryanoasis/nerd-fonts/releases">https://github.com/ryanoasis/nerd-fonts/releases&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://www.123pan.com/s/cjqrVv-J159d.html">https://www.123pan.com/s/cjqrVv-J159d.html&lt;/a>&lt;/p>
+&lt;p>下载：JetBrainsMono.tar.xz 字体 （这款字体能&lt;code>解决乱码&lt;/code>）&lt;/p>
+&lt;p>解压JetBrainsMono.tar.xz，全选-右键安装即可&lt;/p>
+&lt;p>打开powershell, 按 &lt;code>CTRL + SHIFT + ,&lt;/code> 打开&lt;code>settings.json&lt;/code>文件，&lt;/p>
+&lt;p>将&lt;code>defaults&lt;/code>字段改成如下：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-10">10&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>           &lt;span style="color:#4070a0">&amp;#34;defaults&amp;#34;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>        &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;useAcrylic&amp;#34;&lt;/span>: true,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;acrylicOpacity&amp;#34;&lt;/span>: 0.7,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;backgroundImage&amp;#34;&lt;/span>: &lt;span style="color:#4070a0">&amp;#34;D:/bg/789.jpg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;backgroundImageOpacity&amp;#34;&lt;/span>: 0.4,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;fontFace&amp;#34;&lt;/span>: &lt;span style="color:#4070a0">&amp;#34;JetBrainsMono Nerd Font Mono&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;fontSize&amp;#34;&lt;/span>: &lt;span style="color:#40a070">12&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>        &lt;span style="color:#666">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-16">16&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>        &lt;span style="color:#4070a0">&amp;#34;defaults&amp;#34;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>        &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;backgroundImage&amp;#34;&lt;/span>: &lt;span style="color:#4070a0">&amp;#34;D:/bg/789.jpg&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;backgroundImageOpacity&amp;#34;&lt;/span>: 0.4,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;font&amp;#34;&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>           
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#666">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>                &lt;span style="color:#4070a0">&amp;#34;face&amp;#34;&lt;/span>: &lt;span style="color:#4070a0">&amp;#34;JetBrainsMono Nerd Font Mono&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>                &lt;span style="color:#4070a0">&amp;#34;size&amp;#34;&lt;/span>: 12.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#666">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>           
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;opacity&amp;#34;&lt;/span>: 100,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>            &lt;span style="color:#4070a0">&amp;#34;useAcrylic&amp;#34;&lt;/span>: &lt;span style="color:#007020">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>        &lt;span style="color:#666">}&lt;/span>,
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>acrylicOpacity&lt;/code>: 表示亚克力效果的不透明度 值范围在 0（完全透明）到 1（完全不透明）之间&lt;/p>
+&lt;p>&lt;code>backgroundImageOpacity&lt;/code>: 表示背景图片的不透明度。值范围在 0（完全透明）到 1（完全不透明）之间&lt;/p>
+&lt;p>&lt;code>backgroundImage&lt;/code>: 表示背景图片的路径&lt;/p>
+&lt;p>&lt;code>JetBrainsMono Nerd Font Mono&lt;/code> 字体&lt;/p>
+&lt;h3 id="乱码问题">乱码问题&lt;/h3>
+&lt;p>打开 控制面板—&amp;gt;时钟和区域—&amp;gt;区域-&amp;gt;管理—&amp;gt;更改系统区域设置&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/0f8597b292d3c9bcf1479edc6e4ac9ca.webp" alt="">&lt;/p>
+&lt;p>勾选：使用 Unicode UTF-8 提供全球语音支持&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/3cd45ee42e2e0a27986c60d09b10b344.webp" alt="">&lt;/p>
+&lt;p>点击确定，这个时候电脑提示需要重启，重启后再打开 powershell 就可以正常显示中文啦。&lt;/p></description></item><item><title>Windows10更换全局字体，快速替换Win10默认字体步骤分享</title><link>https://blog.taoshuge.eu.org/post/189/</link><pubDate>Sun, 03 Mar 2024 14:49:09 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/189/</guid><description>&lt;h3 id="第一步为win10下载新字体">第一步：为Win10下载新字体&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a href="https://ziyouziti.com/">&lt;strong>自由字体网&lt;/strong>&lt;/a>，一家专业字体网站，搜罗了全网不少可以免费商用的字体，字体样式也比较齐全，且无需注册登录，即可下载。遗憾的是，度盘链接常挂，默认下载使用的是城通网盘。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://www.fonts.net.cn/">&lt;strong>字体天下&lt;/strong>&lt;/a>，和自由字体一样无需注册登录即可下载，且不再使用网盘寄存数据下载速度更快，包含收费字体和免费字体，种类更多更全。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://www.zitijia.com/t/%E5%85%8D%E8%B4%B9%E5%95%86%E7%94%A8">&lt;strong>字体家&lt;/strong>&lt;/a>，无需注册登录即可下载，下载源为百度云盘和城通云盘，下载速度上可能对非VIP用户不是太友好。在免费字体种类，数量上一般，可视作前两者的补充。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="第二步为windows10更换全局字体">第二步：为Windows10更换全局字体&lt;/h3>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/2f6889f6d672d627e52b247e5d987691.webp" alt="">&lt;/p>
+&lt;p>Win10修改系统默认字体需要利用到一个软件：&lt;a href="https://github.com/Tatsu-syo/noMeiryoUI/blob/master/README_CN.md">noMeiryoUI&lt;/a>&lt;/p>
+&lt;p>软件下载：https://www.123pan.com/s/cjqrVv-fk59d.html&lt;/p>
+&lt;p>其他教程： &lt;a href="http://www.dians.net/thread-1202.htm">http://www.dians.net/thread-1202.htm&lt;/a>&lt;/p></description></item><item><title>rclone基于windows一键脚本工具</title><link>https://blog.taoshuge.eu.org/post/188/</link><pubDate>Sat, 02 Mar 2024 21:24:11 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/188/</guid><description>&lt;h3 id="bat脚本">bat脚本&lt;/h3>
 &lt;p>rclone下载地址： &lt;a href="https://rclone.org/downloads/">https://rclone.org/downloads/&lt;/a>&lt;/p>
 &lt;p>以windows为例：&lt;/p>
 &lt;blockquote>
@@ -1776,254 +2128,4 @@ tcp6 0 0 :::139 :::* LISTEN 2857/smbd&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;128.1.164.196 www.bt.cn download.bt.cn api.bt.cn dg1.bt.cn dg2.bt.cn&amp;#34;&lt;/span> &amp;gt;&amp;gt; /etc/hosts
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>refind，可能是颜值最高的多系统、硬盘引导神器,efi</title><link>https://blog.taoshuge.eu.org/post/173/</link><pubDate>Thu, 22 Feb 2024 22:34:37 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/173/</guid><description>&lt;h3 id="工具">工具&lt;/h3>
-&lt;p>视频教程:&lt;/p>
-&lt;blockquote>
-&lt;p>我提供的文件是配置好的,可以直接使用,免去你花时间配置和美化主题的时间&lt;/p>
-&lt;/blockquote>
-&lt;!DOCTYPE HTML>
-&lt;html>
-&lt;head>
-&lt;style type="text/css">
-.aspect-ratio {
-position: relative;
-width: 100%;
-height: 0;
-padding-bottom: 75%;
-}
-.aspect-ratio iframe {
-position: absolute;
-width: 100%;
-height: 100%;
-left: 0;
-top: 0;
-}
-&lt;/style>
-&lt;/head>
-&lt;body>
-&lt;div class="aspect-ratio">
-&lt;iframe
-src="https://player.bilibili.com/player.html?bvid=BV1714y1c78z&amp;page=1&amp;high_quality=1&amp;danmaku=0"
-scrolling="no"
-border="0"
-frameborder="no"
-framespacing="0"
-allowfullscreen="true"
->
-&lt;/iframe>
-&lt;/div>
-&lt;/body>
-&lt;/html>
-&lt;p>准备好: DiskGenius, refind文件&lt;/p>
-&lt;p>&lt;a href="https://www.123pan.com/s/cjqrVv-fUL9d.html">https://www.123pan.com/s/cjqrVv-fUL9d.html&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.123pan.com/s/cjqrVv-aUL9d.html">https://www.123pan.com/s/cjqrVv-aUL9d.html&lt;/a>&lt;/p>
-&lt;p>打开DiskGenius,打开efi分区,将refind文件夹复制到efi分区&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/dafea496b460a356ea6fc9b670158492.webp" alt="">&lt;/p>
-&lt;p>左上角-工具-设置UEFi启动项&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/7b4d5a507ae326401a6cde6fd5144967.webp" alt="">&lt;/p></description></item><item><title>Ubuntu 20.04 搭建 Samba 服务</title><link>https://blog.taoshuge.eu.org/post/172/</link><pubDate>Thu, 22 Feb 2024 21:05:09 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/172/</guid><description>&lt;h3 id="安装-samba-服务">安装 Samba 服务&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install samba
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>查看版本,确保正确安装&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>samba --version
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="配置需要共享的目录">配置需要共享的目录&lt;/h3>
-&lt;p>例如: &lt;code>/mnt/500GB&lt;/code> 为挂载目录&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-11">11&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 新建目录，用于共享&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mkdir /mnt/500GB
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 更改权限信息&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chown nobody:nogroup /mnt/500GB
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 给所有用户添加读写权限&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod &lt;span style="color:#40a070">777&lt;/span> /mnt/500GB
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">#对目录的Others权限添加w(写)权限&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo chmod o+w /mnt/500GB
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="配置挂载">配置挂载:&lt;/h3>
-&lt;p>安装vim:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install vim
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>编辑: smb.conf&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo vim /etc/samba/smb.conf
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>注意: &lt;code>qige&lt;/code>为你的ubuntu用户名,在 Linux 中必须存在,请改为自己的&lt;/p>
-&lt;p>在smb.conf末尾添加下面的代码&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-12">12&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">[&lt;/span>share&lt;span style="color:#666">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">comment&lt;/span> &lt;span style="color:#666">=&lt;/span> share folder
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">browseable&lt;/span> &lt;span style="color:#666">=&lt;/span> yes
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">path&lt;/span> &lt;span style="color:#666">=&lt;/span> /mnt/500GB
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> create &lt;span style="color:#bb60d5">mask&lt;/span> &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#40a070">0777&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> directory &lt;span style="color:#bb60d5">mask&lt;/span> &lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">0777&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> valid &lt;span style="color:#bb60d5">users&lt;/span> &lt;span style="color:#666">=&lt;/span> qige
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> force &lt;span style="color:#bb60d5">user&lt;/span> &lt;span style="color:#666">=&lt;/span> qige
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> force &lt;span style="color:#bb60d5">group&lt;/span> &lt;span style="color:#666">=&lt;/span> qige
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">public&lt;/span> &lt;span style="color:#666">=&lt;/span> yes
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">available&lt;/span> &lt;span style="color:#666">=&lt;/span> yes
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#bb60d5">writable&lt;/span> &lt;span style="color:#666">=&lt;/span> yes
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="添加-samba-用户">添加 Samba 用户&lt;/h3>
-&lt;p>添加 Samba 用户，用于在访问共享目录时使用。这里添加的用户是之前配置的用户名。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo smbpasswd -a qige
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>重启 Samba 服务&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo service smbd restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>其他&lt;/p>
-&lt;pre tabindex="0">&lt;code>#或者
-sudo /etc/init.d/smbd restart
-sudo service nmbd restart
-#或者以下方法
-sudo restart smbd
-sudo restart nmbd
-&lt;/code>&lt;/pre>&lt;h3 id="使用方法">使用方法:&lt;/h3>
-&lt;p>windows: 在&lt;code>运行框&lt;/code>输入: 也就是的ubuntu IP地址&lt;/p>
-&lt;p>例如:&lt;/p>
-&lt;pre tabindex="0">&lt;code>\\192.168.1.xx
-&lt;/code>&lt;/pre>&lt;p>即可成功smb&lt;/p>
-&lt;h3 id="其他问题">其他问题&lt;/h3>
-&lt;p>问题描述&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>磁盘被写保护&lt;span style="">，&lt;/span>请去掉写保护或使用另一张磁盘&lt;span style="">。&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>解决方案&lt;/p>
-&lt;p>回到windows, 请您通过以下操作清除磁盘的只读属性。&lt;/p>
-&lt;ol>
-&lt;li>在&lt;strong>开始&lt;/strong>菜单的&lt;strong>运行&lt;/strong>中输入&lt;code>diskpart&lt;/code>命令。&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>diskpart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;ol>
-&lt;li>
-&lt;p>执行以下命令，查看磁盘清单。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>list disk
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;li>
-&lt;p>执行以下命令，选择磁盘。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>select disk &lt;span style="color:#40a070">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>说明&lt;/strong>&lt;/p>
-&lt;p>&lt;code>1&lt;/code>指的是磁盘编号，请您根据实际环境填写。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>执行以下命令，清除只读属性。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="display:flex;">&lt;span>att disk clear readonly
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;/li>
-&lt;/ol></description></item><item><title>远程协助连接这台计算机灰色无法勾选?</title><link>https://blog.taoshuge.eu.org/post/171/</link><pubDate>Wed, 21 Feb 2024 19:00:37 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/171/</guid><description>&lt;h3 id="更改注册表设置">更改注册表设置&lt;/h3>
-&lt;p>在注册表编辑器中更改一些设置，也能解决允许远程协助连接这台计算机灰色无法勾选这一问题，以下是具体的操作步骤。&lt;/p>
-&lt;p>&lt;strong>步骤1.&lt;/strong> 按**“Windows + R”&lt;strong>打开运行框，输入&lt;/strong>“regedit”&lt;strong>，然后单击&lt;/strong>“确定”**。&lt;/p>
-&lt;p>&lt;strong>步骤2.&lt;/strong> 导航到：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>计算机&lt;span style="color:#4070a0;font-weight:bold">\H&lt;/span>KEY_LOCAL_MACHINE&lt;span style="color:#4070a0;font-weight:bold">\S&lt;/span>OFTWARE&lt;span style="color:#4070a0;font-weight:bold">\P&lt;/span>olicies&lt;span style="color:#4070a0;font-weight:bold">\M&lt;/span>icrosoft&lt;span style="color:#4070a0;font-weight:bold">\W&lt;/span>indows NT&lt;span style="color:#4070a0;font-weight:bold">\T&lt;/span>erminal Services
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/f15959979ce6455d2da71f081c820577.webp" alt="">&lt;/p>
-&lt;p>&lt;strong>步骤3.&lt;/strong> 在右侧窗格，右键单击并选择**“新建”&lt;strong>，然后单击第三个&lt;/strong>“DWORD (32位)值”**，并命名为 &lt;strong>“fDenyTSConnections”&lt;/strong>。&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/fce506a3aac3f03fff4dee4990bd536e.webp" alt="">&lt;/p>
-&lt;p>&lt;strong>步骤4.&lt;/strong> 双击打开 &lt;strong>“fDenyTSConnections”&lt;/strong>，将**“数值数据”&lt;strong>更改为&lt;/strong>“0”&lt;strong>，然后单击&lt;/strong>“确定”**。&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/099081f7ca8382316f67b7a926766443.webp" alt="">&lt;/p>
-&lt;p>&lt;strong>说明：&lt;/strong> “0”表示“允许用户通过终端服务/远程桌面远程连接”；“1”表示“禁止使用终端服务/远程桌面进行远程连接”。&lt;/p></description></item></channel></rss>
+&lt;/div></description></item></channel></rss>
