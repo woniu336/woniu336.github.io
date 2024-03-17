@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Mon, 18 Mar 2024 00:56:21 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Mon, 18 Mar 2024 01:14:07 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -114,7 +114,33 @@
 &lt;p>&lt;strong>持续更新&lt;/strong>：个人知识库是一个不断演进的系统，需要持续更新和维护。随着个人的学习和经验积累，新的信息不断涌现，旧的信息可能需要修订或删除，因此定期审查和更新个人知识库是至关重要的。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>一条命令完全卸载hyper-v虚拟机</title><link>https://blog.taoshuge.eu.org/post/195/</link><pubDate>Mon, 18 Mar 2024 00:56:21 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/195/</guid><description>&lt;p>如果不需要Hyper-V，使用下面的命令卸载Hyper-V角色以及管理工具&lt;/p>
+&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>windows 完全禁用传递优化服务 Delivery Optimization</title><link>https://blog.taoshuge.eu.org/post/197/</link><pubDate>Mon, 18 Mar 2024 01:14:07 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/197/</guid><description>&lt;h3 id="禁用delivery-optimization">禁用&lt;code>Delivery Optimization&lt;/code>&lt;/h3>
+&lt;p>&lt;code>Delivery Optimization&lt;/code>是关于windows系统更新的一项服务，它会自动在E盘或某个盘生成文件夹&lt;strong>Delivery Optimization&lt;/strong>，里面是一些缓存，强迫症可能很不爽。&lt;/p>
+&lt;p>在服务中关闭，win+r输入&lt;strong>services.msc&lt;/strong>，打开服务管理界面，找到对应服务&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/9007414188afadafcb049e9cad39040b.png" alt="">&lt;/p>
+&lt;p>如果你直接右键，修改属性，启动类型为：禁用，通常是拒绝访问&lt;/p>
+&lt;p>3.修改注册表&lt;/p>
+&lt;p>&lt;strong>计算机\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc&lt;/strong> 下start值改为4，win11值为4是禁用，刷新一下，变成禁用即可。&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/f22626c01870144f4f2b74a5e8a536dc.png" alt="Pasted image 20240318011658">&lt;/p>
+&lt;p>并且把恢复选项下的所有重启改为无操作&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/b8ecaae9461ed6df717c3b8c223b8502.png" alt="Pasted image 20240318011712">&lt;/p>
+&lt;p>修改注册表&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/b6fc0fbb5dd4d90ecc2bad2f6760ffe8.png" alt="Pasted image 20240318011728">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/d1d3c107a29901a439a62d2277751671.png" alt="Pasted image 20240318011735">&lt;/p></description></item><item><title>解决“Windows Terminal软件报0xd000003a“问题</title><link>https://blog.taoshuge.eu.org/post/196/</link><pubDate>Mon, 18 Mar 2024 01:01:00 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/196/</guid><description>&lt;h3 id="修改condrv的start值">修改condrv的Start值&lt;/h3>
+&lt;p>按win+R，输入: regedit 回车&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>计算机&lt;span style="color:#4070a0;font-weight:bold">\H&lt;/span>KEY_LOCAL_MACHINE&lt;span style="color:#4070a0;font-weight:bold">\S&lt;/span>YSTEM&lt;span style="color:#4070a0;font-weight:bold">\C&lt;/span>urrentControlSet&lt;span style="color:#4070a0;font-weight:bold">\S&lt;/span>ervices&lt;span style="color:#4070a0;font-weight:bold">\c&lt;/span>ondrv
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/bcfe29fd051fd5432e63a94e24e1a733.png" alt="">&lt;/p>
+&lt;p>右侧找到 &lt;strong>Start&lt;/strong> 字段，右击 &lt;strong>Start&lt;/strong> 修改&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/e6e515a522478f0298a3d9db81dd93fb.png" alt="">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/235badcd0d064f65dc2c7de152071ee1.png" alt="">&lt;/p>
+&lt;p>改完重启电脑&lt;/p></description></item><item><title>一条命令完全卸载hyper-v虚拟机</title><link>https://blog.taoshuge.eu.org/post/195/</link><pubDate>Mon, 18 Mar 2024 00:56:21 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/195/</guid><description>&lt;p>如果不需要Hyper-V，使用下面的命令卸载Hyper-V角色以及管理工具&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
@@ -1717,202 +1743,4 @@ PermitRootLogin yes #默认允许root登录
 &lt;p>大家可以看到修复提示log&lt;/p>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/2258bea35284967556e541e460d9217a.webp" alt="">&lt;/p>
 &lt;p>reboot机器，这个时候大家就可以看到电脑启动的引导项都恢复了。&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/40ba43bb60e236e3b4fc41215eb1e18c.webp" alt="">&lt;/p></description></item><item><title>一键更改电源计划的方法</title><link>https://blog.taoshuge.eu.org/post/179/</link><pubDate>Sat, 24 Feb 2024 15:31:15 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/179/</guid><description>&lt;p>先win+R 输入cmd打开命令行，输入powercfg -list 显示已有的电源策略以及对应的编码&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>powercfg -list
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>然后新建一个文本文档，命名为 （比如）Power.bat&lt;/p>
-&lt;p>修改为自己的GUID,例如&lt;/p>
-&lt;p>&lt;code>381b4222-f694-41f0-9685-ff5bb260df2e&lt;/code> 是我的平衡模式GUID&lt;/p>
-&lt;p>&lt;code>a1841308-3541-4fab-bc81-f71556f20b4a&lt;/code> 是节能GUID&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-24">24&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-25">25&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-26">26&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-27">27&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-28">28&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rem 执行 powercfg -getactivescheme 命令，并将结果保存到临时文件
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>powercfg /getactivescheme &amp;gt; tmp.txt
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rem 使用 findstr 命令检查临时文件中是否包含“节能”字符
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>findstr /C:&lt;span style="color:#4070a0">&amp;#34;节能&amp;#34;&lt;/span> tmp.txt &amp;gt;nul
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rem 检查 findstr 命令的退出代码
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> %errorlevel% &lt;span style="color:#666">==&lt;/span> &lt;span style="color:#40a070">0&lt;/span> &lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rem 如果包含，则切换到平衡模式
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> POWERCFG /SETACTIVE 381b4222-f694-41f0-9685-ff5bb260df2e
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> 已切换到平衡模式
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rem 使用绿色显示提示
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> color 0A
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span> &lt;span style="color:#007020;font-weight:bold">else&lt;/span> &lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rem 否则切换到节能模式
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> POWERCFG /SETACTIVE a1841308-3541-4fab-bc81-f71556f20b4a
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> 已切换到节能模式
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rem 使用黄色显示提示
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> color 0E
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rem 删除临时文件
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>del tmp.txt
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rem 暂停脚本以便在窗口上显示提示
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div></description></item><item><title>Winserver2022调优</title><link>https://blog.taoshuge.eu.org/post/178/</link><pubDate>Sat, 24 Feb 2024 00:25:20 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/178/</guid><description>&lt;h3 id="激活命令">激活命令&lt;/h3>
-&lt;p>打开PowerShell(管理员),输入以下代码:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>irm https://massgrave.dev/get | iex
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>选择第三个,再选1&lt;/p>
-&lt;h3 id="开启hyper-v">开启hyper-v&lt;/h3>
-&lt;p>打开PowerShell(管理员),输入以下代码:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>安装完成会重启&lt;/p>
-&lt;h3 id="1开启远程桌面">1.开启远程桌面&lt;/h3>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/3ebfc87e56db7ba4f9765020dae6ba72.webp" alt="">&lt;/p>
-&lt;h3 id="2修改主机名称">2.修改主机名称&lt;/h3>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/876dd1be786ae5084755ce35310100d4.webp" alt="">&lt;/p>
-&lt;h3 id="3密码策略">3.密码策略&lt;/h3>
-&lt;p>右上角-工具-本地安全策略&lt;/p>
-&lt;p>安全设置-账户策略-密码策略&lt;/p>
-&lt;p>禁用密码复杂性要求以及最长使用期限为0(不过期)&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/8c874a6242dbe3ff4ac5541a90a5e393.webp" alt="">&lt;/p>
-&lt;h3 id="4关闭登录系统按ctrlaltdel">4.关闭登录系统按CTRL+ALT+DEL&lt;/h3>
-&lt;p>本地策略-安全选项&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/ac98f3ef2d9f0502da67caafdb530997.webp" alt="">&lt;/p>
-&lt;h3 id="4组策略中打开-启用不安全来宾登陆-选项">4.组策略中打开 启用不安全来宾登陆 选项&lt;/h3>
-&lt;p>目的是局域网文件共享: &lt;a href="https://blog.csdn.net/u010499872/article/details/115704644">https://blog.csdn.net/u010499872/article/details/115704644&lt;/a>&lt;/p>
-&lt;p>开始运行，或者快捷键 Win+R 打开运行，输入 gpedit.msc 打开组策略。&lt;/p>
-&lt;p>然后分别选择 &lt;strong>计算机配置 → 管理模板 → 网络 →Lanman工作站&lt;/strong>，在右边找到 &lt;strong>启用不安全的来宾登陆&lt;/strong>，双击打开，然后&lt;strong>选择启用&lt;/strong>，点确定即可。&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/feb98406d360b2237fb10393c56516b5.webp" alt="">&lt;/p>
-&lt;h3 id="5重命名管理员名称">5.重命名管理员名称&lt;/h3>
-&lt;p>安全设置-本地策略-安全选项&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/b5b9b4ce8d72e6ffc066f500a7e8d268.webp" alt="">&lt;/p>
-&lt;h3 id="6修改管理员密码">6.修改管理员密码:&lt;/h3>
-&lt;p>cmd输入: net user admin 123&lt;/p>
-&lt;pre tabindex="0">&lt;code>net user 管理员名称 密码
-&lt;/code>&lt;/pre>&lt;h3 id="7一键远程登录脚本">7.一键远程登录脚本&lt;/h3>
-&lt;p>将以下代码保存为bat文件,双击运行即可&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-14">14&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-15">15&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-16">16&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-17">17&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-18">18&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-19">19&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-20">20&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-21">21&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-22">22&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-23">23&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-24">24&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-25">25&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-26">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-26">26&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-27">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-27">27&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-28">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-28">28&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-29">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-29">29&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-30">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-30">30&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-31">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-31">31&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-32">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-32">32&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-33">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-33">33&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-34">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-34">34&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">ip_file&lt;/span>&lt;span style="color:#666">=&lt;/span>last_ip.txt
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>:menu
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cls
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> 请选择选项：
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#666">[&lt;/span>1&lt;span style="color:#666">]&lt;/span> 使用上次登录的 IP 地址
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#666">[&lt;/span>2&lt;span style="color:#666">]&lt;/span> 输入新的 IP 地址
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> /p &lt;span style="color:#bb60d5">option&lt;/span>&lt;span style="color:#666">=&lt;/span>请输入选项数字:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> &lt;span style="color:#4070a0">&amp;#34;%option%&amp;#34;&lt;/span>&lt;span style="color:#666">==&lt;/span>&lt;span style="color:#4070a0">&amp;#34;1&amp;#34;&lt;/span> &lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020;font-weight:bold">if&lt;/span> exist %ip_file% &lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">set&lt;/span> /p &lt;span style="color:#bb60d5">remote_ip&lt;/span>&lt;span style="color:#666">=&lt;/span>&amp;lt;%ip_file%
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> goto connect
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">)&lt;/span> &lt;span style="color:#007020;font-weight:bold">else&lt;/span> &lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> 没有找到上次登录的 IP 地址。请手动输入新的 IP 地址。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pause
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> goto input_ip
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span> &lt;span style="color:#007020;font-weight:bold">else&lt;/span> &lt;span style="color:#007020;font-weight:bold">if&lt;/span> &lt;span style="color:#4070a0">&amp;#34;%option%&amp;#34;&lt;/span>&lt;span style="color:#666">==&lt;/span>&lt;span style="color:#4070a0">&amp;#34;2&amp;#34;&lt;/span> &lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> goto input_ip
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span> &lt;span style="color:#007020;font-weight:bold">else&lt;/span> &lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> 无效的选项，请重新输入。
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> pause
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> goto menu
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>:input_ip
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> /p &lt;span style="color:#bb60d5">remote_ip&lt;/span>&lt;span style="color:#666">=&lt;/span>请输入远程计算机的IP地址:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">echo&lt;/span> %remote_ip% &amp;gt; %ip_file%
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>goto connect
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>:connect
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>start mstsc.exe /v:%remote_ip%
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="8壁纸">8.壁纸&lt;/h3>
-&lt;p>&lt;a href="https://bz.zzzmh.cn/index#anime">https://bz.zzzmh.cn/index#anime&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://konachan.net/post">https://konachan.net/post&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/40ba43bb60e236e3b4fc41215eb1e18c.webp" alt="">&lt;/p></description></item></channel></rss>
