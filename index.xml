@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Tue, 19 Mar 2024 00:21:36 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Tue, 19 Mar 2024 01:06:08 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -114,7 +114,83 @@
 &lt;p>&lt;strong>持续更新&lt;/strong>：个人知识库是一个不断演进的系统，需要持续更新和维护。随着个人的学习和经验积累，新的信息不断涌现，旧的信息可能需要修订或删除，因此定期审查和更新个人知识库是至关重要的。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>虚拟机ubuntu安装vmware tools</title><link>https://blog.taoshuge.eu.org/post/200/</link><pubDate>Tue, 19 Mar 2024 00:21:36 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/200/</guid><description>&lt;h3 id="1-挂载vmware-tools光驱">1. 挂载vmware tools光驱&lt;/h3>
+&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>vmware 挂载共享文件夹 虚拟机系列</title><link>https://blog.taoshuge.eu.org/post/201/</link><pubDate>Tue, 19 Mar 2024 01:06:08 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/201/</guid><description>&lt;ul>
+&lt;li>共享文件夹设置&lt;/li>
+&lt;/ul>
+&lt;h3 id="1虚拟机设置">&lt;strong>1.虚拟机设置&lt;/strong>&lt;/h3>
+&lt;p>虚拟机菜单栏 -&amp;gt; 虚拟机 -&amp;gt; 设置 -&amp;gt; 选项 -&amp;gt; 共享文件夹 -&amp;gt; 总是启用 -&amp;gt; 添加（我将添加的共享目录命名为share_file） -&amp;gt;确定&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/0b9052a51f36603bc29a0cdedf2bdd98." alt="">&lt;/p>
+&lt;p>&lt;strong>2.VMware Tools安装&lt;/strong>&lt;/p>
+&lt;p>（1）虚拟机菜单栏 -&amp;gt; 虚拟机 -&amp;gt; 安装&lt;a href="https://so.csdn.net/so/search?q=VMware&amp;amp;spm=1001.2101.3001.7020">VMware&lt;/a> Tools&lt;/p>
+&lt;p>（2）等一会虚拟机会自己打开VMware Tools文件夹&lt;/p>
+&lt;p>（3）在该目录下，右键打开命令行，将压缩文件拷贝到桌面上，再到桌面上将其解压缩，安装完成后删除即可。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cobol" data-lang="cobol">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">cp /me&lt;/span>&lt;span style="color:#bb60d5">dia&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">suzhch&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">VMwareTools-10&lt;/span>.&lt;span style="color:#40a070">1&lt;/span>.&lt;span style="color:#40a070">6&lt;/span>&lt;span style="color:#666">-&lt;/span>&lt;span style="color:#40a070">5214329&lt;/span>.&lt;span style="color:#bb60d5">tar&lt;/span>.&lt;span style="color:#bb60d5">gz&lt;/span> &lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">home&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">hadoop&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">Desktop&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="">&lt;/span>&lt;span style="color:#60a0b0;font-style:italic">cd /ho&lt;/span>&lt;span style="color:#bb60d5">me&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">hadoop&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">Desktop&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="">&lt;/span>&lt;span style="color:#60a0b0;font-style:italic">tar -x&lt;/span>&lt;span style="color:#bb60d5">zvf&lt;/span> &lt;span style="color:#bb60d5">VMwareTools-10&lt;/span>.&lt;span style="color:#40a070">1&lt;/span>.&lt;span style="color:#40a070">6&lt;/span>&lt;span style="color:#666">-&lt;/span>&lt;span style="color:#40a070">5214329&lt;/span>.&lt;span style="color:#bb60d5">tar&lt;/span>.&lt;span style="color:#bb60d5">gz&lt;/span>&lt;span style="">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>（4）成功之后以管理员root身份执行解压缩之后文件目录里的vmware-install.pl文件即可进行安装&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-html" data-lang="html">&lt;span style="display:flex;">&lt;span>sudo vmware-tools-distrib/vmware-install.pl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>（5）然后按照提示输入指令即可。 (yes or no)&lt;/p>
+&lt;h3 id="共享文件在-mnthgfs文件夹下">共享文件在 /mnt/hgfs/文件夹下&lt;/h3>
+&lt;p>&lt;strong>注意：&lt;/strong>&lt;/p>
+&lt;p>上面的步骤走完之后会出现 在/mnt/hgfs目录下是空 的问题&lt;/p>
+&lt;p>解决办法：&lt;/p>
+&lt;p>1.vmware-hgfsclient 命令查看当前有哪些共享的目录&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-undefined" data-lang="undefined">vmware-hgfsclient
+&lt;/code>&lt;/pre>&lt;p>会显示你设置的共享文件名，我上面设置的是share_file ,所以我这里显示的是share_file.懒得贴我的示意图了。&lt;/p>
+&lt;p>2.安装&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span style="display:flex;">&lt;span>sudo apt-&lt;span style="color:#007020;font-weight:bold">get&lt;/span> install &lt;span style="color:#007020;font-weight:bold">open&lt;/span>-vm-dkms
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>3.挂载共享文件&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cobol" data-lang="cobol">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">mount &lt;/span> &lt;span style="color:#666">-&lt;/span>&lt;span style="color:#bb60d5">t&lt;/span> &lt;span style="color:#bb60d5">vmhgfs&lt;/span> .&lt;span style="color:#bb60d5">host&lt;/span>:&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">share_file&lt;/span> &lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">mnt&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">hgfs&lt;/span>&lt;span style="">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果显示 &lt;br>
+如果显示&lt;br>
+Error: cannot mount filesystem: No such device&lt;br>
+ubuntu则先执行  sudo apt-get install open-vm-dkms&lt;/p>
+&lt;p>然后再执行3.挂载共享文件&lt;/p>
+&lt;p>如果还是不行，就重启下Linux，然后再看/mnt/hgfs/文件夹下是否有share_file共享文件。&lt;/p>
+&lt;p>网上也有一种说法是使用如下命令&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cobol" data-lang="cobol">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic">vmhgfs&lt;/span>&lt;span style="color:#666">-&lt;/span>&lt;span style="color:#bb60d5">fuse&lt;/span> .&lt;span style="color:#bb60d5">host&lt;/span>:&lt;span style="color:#666">/&lt;/span> &lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">mnt&lt;/span>&lt;span style="color:#666">/&lt;/span>&lt;span style="color:#bb60d5">hgfs&lt;/span>&lt;span style="">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>虚拟机ubuntu安装vmware tools</title><link>https://blog.taoshuge.eu.org/post/200/</link><pubDate>Tue, 19 Mar 2024 00:21:36 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/200/</guid><description>&lt;h3 id="1-挂载vmware-tools光驱">1. 挂载vmware tools光驱&lt;/h3>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/3fffa2ec1fceb0093a85bed4dc705a1e.png" alt="Pasted image 20240319002205">&lt;/p>
 &lt;p>会自动挂载，然后进入挂载目录：&lt;/p>
 &lt;p>打开左侧边栏的VMwareTools：&lt;/p>
@@ -1433,18 +1509,4 @@ C:\Users\Administrator\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.
 &lt;/div>
 &lt;/div>&lt;p>执行成功之后电脑将自动重启，按照启动提示 (&lt;code>按F3&lt;/code>) 即可关闭继续虚拟化的安全性，VMware即可使用。&lt;/p>
 &lt;p>按win+r 输入 &lt;code>msinfo32&lt;/code>&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/084d693b56cf76dc9e0eba1699d59b48.webp" alt="">&lt;/p></description></item><item><title>解决ubuntu虚拟机vmware tools无法共享剪贴板问题</title><link>https://blog.taoshuge.eu.org/post/183/</link><pubDate>Mon, 26 Feb 2024 23:54:47 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/183/</guid><description>&lt;p>使用如下方法成功解决问题，一路回车默认即可。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install open-vm-tools
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo apt install open-vm-tools-desktop
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;code>vmware tools&lt;/code>的开源版本 &lt;strong>open-vm-tools&lt;/strong> 由两个组件构成，&lt;/p>
-&lt;p>一个是&lt;code>open-vm-tools&lt;/code>，这个装上之后虚拟机就有了显示驱动，屏幕可以自适应大小；&lt;/p>
-&lt;p>另一个&lt;code>open-vm-tools-desktop&lt;/code>，用于共享剪贴板和文件拖拽功能。&lt;/p>
-&lt;p>最后重启虚拟机搞定&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/02/084d693b56cf76dc9e0eba1699d59b48.webp" alt="">&lt;/p></description></item></channel></rss>
