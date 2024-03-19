@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Tue, 19 Mar 2024 17:30:14 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Wed, 20 Mar 2024 01:18:49 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -114,18 +114,212 @@
 &lt;p>&lt;strong>持续更新&lt;/strong>：个人知识库是一个不断演进的系统，需要持续更新和维护。随着个人的学习和经验积累，新的信息不断涌现，旧的信息可能需要修订或删除，因此定期审查和更新个人知识库是至关重要的。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>在 Ubuntu 服务器 22.04 上设置静态 IP 地址</title><link>https://blog.taoshuge.eu.org/post/203/</link><pubDate>Tue, 19 Mar 2024 17:30:14 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/203/</guid><description>&lt;blockquote>
-&lt;p>在这篇文章中，我们将介绍如何在 Ubuntu 服务器 22.04 上设置静态 IP 地址。&lt;/p>
+&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>vagrant管理虚拟机记录</title><link>https://blog.taoshuge.eu.org/post/204/</link><pubDate>Wed, 20 Mar 2024 01:18:49 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/204/</guid><description>&lt;h3 id="环境变量">环境变量&lt;/h3>
+&lt;p>&lt;code>VAGRANT_HOME&lt;/code> #.vagrant.d默认目录&lt;/p>
+&lt;p>&lt;code>VAGRANT_DEFAULT_PROVIDER&lt;/code> #使用哪种虚拟机&lt;/p>
+&lt;p>（ &lt;strong>hyperv&lt;/strong>、&lt;strong>virtualbox&lt;/strong>、&lt;strong>vmware_desktop&lt;/strong>）&lt;/p>
+&lt;h3 id="vagrantfile-配置">Vagrantfile 配置&lt;/h3>
+&lt;p>初始化 Vagrantfile&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant init bento/ubuntu-22.04 &lt;span style="color:#60a0b0;font-style:italic">#bento/ubuntu-22.04是box镜像名称&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>配置参考：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-19">19&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-20">20&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-21">21&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-22">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-22">22&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-23">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-23">23&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-24">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-24">24&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-25">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-25">25&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>Vagrant.configure&lt;span style="color:#666">(&lt;/span>&lt;span style="color:#4070a0">&amp;#34;2&amp;#34;&lt;/span>&lt;span style="color:#666">)&lt;/span> &lt;span style="color:#007020;font-weight:bold">do&lt;/span> |config|
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> config.vm.box &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#4070a0">&amp;#34;bento/ubuntu-22.04&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#60a0b0;font-style:italic"># 规格配置&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> config.vm.provider :virtualbox &lt;span style="color:#007020;font-weight:bold">do&lt;/span> |vbox|
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> vbox.name &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#4070a0">&amp;#34;ubuntu-22.04&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> vbox.cpus &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#40a070">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> vbox.memory &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#40a070">1024&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> vbox.customize &lt;span style="color:#666">[&lt;/span>&lt;span style="color:#4070a0">&amp;#39;modifyvm&amp;#39;&lt;/span>, :id, &lt;span style="color:#4070a0">&amp;#39;--graphicscontroller&amp;#39;&lt;/span>, &lt;span style="color:#4070a0">&amp;#39;vmsvga&amp;#39;&lt;/span>&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> end
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#60a0b0;font-style:italic"># 修改hostname，更新/etc/hosts&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> config.vm.hostname &lt;span style="color:#666">=&lt;/span> &lt;span style="color:#4070a0">&amp;#34;ubuntu-1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#60a0b0;font-style:italic"># 设置系统盘容量&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> config.vm.disk :disk, size: &lt;span style="color:#4070a0">&amp;#34;40GB&amp;#34;&lt;/span>, primary: &lt;span style="color:#007020">true&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#60a0b0;font-style:italic"># 新建一个硬盘&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> config.vm.disk :disk, size: &lt;span style="color:#4070a0">&amp;#34;20GB&amp;#34;&lt;/span>, name: &lt;span style="color:#4070a0">&amp;#34;extra_disk&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#60a0b0;font-style:italic"># 私有网络&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> config.vm.network &lt;span style="color:#4070a0">&amp;#34;private_network&amp;#34;&lt;/span>, ip: &lt;span style="color:#4070a0">&amp;#34;192.168.56.20&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#60a0b0;font-style:italic"># 公有网络&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> config.vm.network &lt;span style="color:#4070a0">&amp;#34;public_network&amp;#34;&lt;/span>, ip: &lt;span style="color:#4070a0">&amp;#34;192.168.1.25&amp;#34;&lt;/span>, bridge: &lt;span style="color:#4070a0">&amp;#34;Realtek(R) PCI(e) Ethernet Controller&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>end
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="查看桥接网络接口">查看桥接网络接口&lt;/h3>
+&lt;p>桥接网络 （即公有网络）&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>VBoxManage list bridgedifs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/0e897889d2048e466a477128cc15a4cc.png" alt="">&lt;/p>
+&lt;blockquote>
+&lt;p>bridge后面就是物理接口名称：bridge: &amp;ldquo;&lt;code>Realtek(R) PCI(e) Ethernet Controller&lt;/code>&amp;rdquo;&lt;/p>
+&lt;p>注意：bridge的名称中不能包含中文，Vagrant无法识别，需要修改网络的名称。&lt;/p>
 &lt;/blockquote>
-&lt;p>强烈建议在 Linux 服务器上使用静态 IP，因为它会在重启后保持不变。静态 IP 对邮件服务器、Web 服务器和文件服务器等服务器起着重要作用。&lt;/p>
-&lt;p>&lt;strong>准备条件&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>最小安装的 Ubuntu 服务器 22.04&lt;/li>
-&lt;li>具有 &lt;code>sudo&lt;/code> 管理员权限的普通用户&lt;/li>
-&lt;/ul>
-&lt;p>在 Ubuntu 服务器 22.04 中，网络由 netplan 程序控制，因此我们将使用 netplan 在 Ubuntu 服务器上配置静态 IP 地址。&lt;/p>
-&lt;p>注意：我们不能使用 &lt;a href="https://www.linuxtechi.com/configure-ip-with-nmcli-command-linux/">nmcli 程序&lt;/a>，因为它不是 Ubuntu 服务器上默认安装的一部分。&lt;/p>
-&lt;h3 id="1首先查看接口名称">1、首先查看接口名称&lt;/h3>
+&lt;h3 id="命令">命令&lt;/h3>
+&lt;blockquote>
+&lt;p>可以先将box下载到本地电脑上&lt;/p>
+&lt;/blockquote>
+&lt;p>box地址：&lt;a href="https://app.vagrantup.com/bento/boxes/ubuntu-22.04">ubuntu-22.04&lt;/a>&lt;/p>
+&lt;p>添加box：vagrant box add 名称 路径&lt;/p>
+&lt;pre tabindex="0">&lt;code>vagrant box add bento/ubuntu-22.04 C:\Users\Administrator\Downloads\bentoubuntu22.04.box
+&lt;/code>&lt;/pre>&lt;p>创建虚拟机：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant up --provider virtualbox &lt;span style="color:#60a0b0;font-style:italic">#指定virtualbox作为后端&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>重启：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant reload --provision &lt;span style="color:#60a0b0;font-style:italic">#--provision修改配置后&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>查看box:&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant box list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>连接虚拟机&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant ssh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>常用命令&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant reload &lt;span style="color:#60a0b0;font-style:italic">#重新配置虚拟机&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant halt &lt;span style="color:#60a0b0;font-style:italic">#关闭虚拟机 &lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant destroy &lt;span style="color:#60a0b0;font-style:italic">#删除虚拟机 &lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant &lt;span style="color:#007020">suspend&lt;/span> &lt;span style="color:#60a0b0;font-style:italic">#休眠 &lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant resume &lt;span style="color:#60a0b0;font-style:italic">#唤醒&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vagrant box remove &lt;span style="color:#60a0b0;font-style:italic">#移除box&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>查看IP：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ip addr show ens33 &lt;span style="color:#60a0b0;font-style:italic">#ens33是接口名称，使用 ip addr 查看&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>查看默认路由：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-15-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-15-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ip route show
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其他：&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-16-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-16-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo apt install openvswitch-switch -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>在 Ubuntu 服务器 22.04 上设置静态 IP 地址</title><link>https://blog.taoshuge.eu.org/post/203/</link><pubDate>Wed, 20 Mar 2024 00:46:33 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/203/</guid><description>&lt;h3 id="1首先查看接口名称">1、首先查看接口名称&lt;/h3>
 &lt;p>登录到你的 Ubuntu 服务器 22.04，查找 netplan 配置文件。它位于 &lt;code>/etc/netplan&lt;/code> 目录下。&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -140,7 +334,9 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>运行以下 &lt;code>cat&lt;/code> 命令以查看 &lt;code>00-installer-config.yaml&lt;/code> 的内容。&lt;/p>
-&lt;p>注意：配置文件的名称可能因你的设置而异。由于它是一个 yaml 文件，因此请确保在编辑时保持缩进和语法。&lt;/p>
+&lt;blockquote>
+&lt;p>注意：配置文件的名称不一定跟我的一样，也可能有多个yaml文件，前面带&lt;code>-rw-r--r--&lt;/code>就是我们需要修改的&lt;/p>
+&lt;/blockquote>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
@@ -151,11 +347,20 @@
 &lt;/div>
 &lt;/div>&lt;p>输出：&lt;/p>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/f492afa4c220988310d626d967e23255.png" alt="Default-Content-netplan-ubuntu-server">&lt;/p>
-&lt;p>根据上面的输出，它说我们有 &lt;code>ens33&lt;/code> 接口，它正在从 DHCP 服务器获取 IP。查看接口名称的另一种方法是通过 &lt;code>ip&lt;/code> 命令。&lt;/p>
+&lt;p>根据上面的输出，可以看到 &lt;code>ens33&lt;/code> 就是接口名称，它正在从 DHCP 服务器获取 IP。&lt;/p>
 &lt;p>其他命令：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ip addr
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>或者&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ifconfig
@@ -165,7 +370,7 @@
 &lt;p>或者使用nmcli 查看，需要执行安装sudo apt install network-manager&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>nmcli device show ens33
@@ -175,61 +380,82 @@
 &lt;p>现在，要配置静态 IP 代替 DHCP，使用 &lt;code>vi&lt;/code> 或 &lt;code>nano&lt;/code> 编辑器编辑 netplan 配置文件并添加以下内容。&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-14">14&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-13">13&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> $ sudo vi 00-installer-config.yaml
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#60a0b0;font-style:italic"># This is the network config written by &amp;#39;subiquity&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> network:
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> network:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> renderer: networkd
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ethernets:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ens33:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ens33: &lt;span style="color:#60a0b0;font-style:italic">## network card name&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> dhcp4: &lt;span style="color:#007020">false&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> addresses:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - 192.168.1.24/24
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> nameservers:
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> addresses: &lt;span style="color:#666">[&lt;/span>4.2.2.2, 8.8.8.8&lt;span style="color:#666">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - 192.168.1.25/24 &lt;span style="color:#60a0b0;font-style:italic">## set static IP&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> routes:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - to: default
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> via: 192.168.1.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> via: 192.168.1.1 &lt;span style="color:#60a0b0;font-style:italic">## gateway&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> nameservers:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> addresses: &lt;span style="color:#666">[&lt;/span>223.5.5.5,8.8.8.8,192.168.1.1&lt;span style="color:#666">]&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> version: &lt;span style="color:#40a070">2&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>保存并关闭文件。&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/0718940d52a69c8cc0c5f1aa98b06316.png" alt="Updated-Netplan-Config-File-Content-Ubuntu-Server">&lt;/p>
-&lt;p>在上面的文件中，我们使用了以下内容，&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>ens33&lt;/code> 为接口名称&lt;/li>
-&lt;li>用于设置静态 IP 的地址&lt;/li>
-&lt;li>&lt;code>nameservers&lt;/code> 用于指定 DNS 服务器的 IP&lt;/li>
-&lt;li>用于指定默认网关的路由&lt;/li>
-&lt;/ul>
-&lt;p>注意：根据你的环境更改 IP 详细信息和接口名称。&lt;/p>
-&lt;p>要是上述修改生效，请使用以下 &lt;code>netplan&lt;/code> 命令应用这些更改：&lt;/p>
+&lt;/div>&lt;p>注意：根据你的环境更改 IP 详细信息和接口名称。&lt;/p>
+&lt;h3 id="3重启网络服务">3、重启网络服务&lt;/h3>
+&lt;p>配置完前面的参数之后，就可以重启网络服务生效。&lt;/p>
+&lt;p>执行命令1&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo netplan apply
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl start systemd-networkd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>执行命令2&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl status systemd-networkd
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>执行命令3&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo netplan apply
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>三条命令执行结果应均无报错，如有报错请检查配置参数是否有问题。&lt;/p>
+&lt;p>确保其中的 nameserver 行包含了您的 DNS 服务器的正确 IP 地址。&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>cat /etc/resolv.conf
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>运行以下 IP 命令查看接口上的 IP 地址：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ip addr show ens33
@@ -238,14 +464,14 @@
 &lt;/div>&lt;p>要查看默认路由，请运行：&lt;/p>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ip route show
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>上述命令的输出。&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/70767bce5c5307ca458519d9c5762ce5.png" alt="ip-addr-route-command-output-ubuntu-server">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/70767bce5c5307ca458519d9c5762ce5.png" alt="">&lt;/p>
 &lt;p>完美，以上命令的输出确认静态 IP 和路由配置成功。&lt;/p></description></item><item><title>VMware Workstation 虚拟机桥接模式</title><link>https://blog.taoshuge.eu.org/post/202/</link><pubDate>Tue, 19 Mar 2024 01:57:37 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/202/</guid><description>&lt;h3 id="查看桥接模式下的物理网卡是否对应正确">查看桥接模式下的物理网卡是否对应正确&lt;/h3>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/5d093b02a44f5ae29779ec9f3b9afe2a.png" alt="">&lt;/p>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/c954746c359d237a62e5afc92e5e18cc.png" alt="">&lt;/p></description></item><item><title>vmware 挂载共享文件夹 虚拟机系列</title><link>https://blog.taoshuge.eu.org/post/201/</link><pubDate>Tue, 19 Mar 2024 01:06:08 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/201/</guid><description>&lt;ul>
@@ -1206,410 +1432,4 @@ C:\Users\Administrator\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.
 &lt;li>传送门：&lt;a href="https://juejin.cn/post/6999630383130083358">https://juejin.cn/post/6999630383130083358&lt;/a>&lt;/li>
 &lt;li>传送门：&lt;a href="https://www.jianshu.com/p/76656fb121d4">https://www.jianshu.com/p/76656fb121d4&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>本文转自 &lt;a href="https://www.cnblogs.com/DL-CODER/p/17302223.html">https://www.cnblogs.com/DL-CODER/p/17302223.html&lt;/a>，如有侵权，请联系删除。&lt;/p></description></item><item><title>vscode:git常用命令</title><link>https://blog.taoshuge.eu.org/post/186/</link><pubDate>Wed, 28 Feb 2024 02:16:19 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/186/</guid><description>&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/b27317e6c75b1244ea4148d92d3e6759.webp" alt="Pasted image 20240301115624">&lt;/p>
-&lt;h3 id="常见命令">常见命令&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6">6&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git init
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git add .
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git commit -m &lt;span style="color:#4070a0">&amp;#34;初始化&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git remote add origin https://github.com/githubusername/demo.git
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git pull origin master
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git push -u origin master &lt;span style="color:#60a0b0;font-style:italic">#首次推送加-u参数&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="创建和切换分支">创建和切换分支&lt;/h3>
-&lt;p>1、创建新分支&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-undefined" data-lang="undefined">git branch 新分支名称
-&lt;/code>&lt;/pre>&lt;p>2、切换分支&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-undefined" data-lang="undefined">git checkout 分支名称
-&lt;/code>&lt;/pre>&lt;p> 3、创建分支的同时，切换到该分支上&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-css" data-lang="css">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#062873;font-weight:bold">git&lt;/span> &lt;span style="color:#062873;font-weight:bold">checkout&lt;/span> &lt;span style="color:#062873;font-weight:bold">-b&lt;/span> &lt;span style="">新分支名称&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="合并分支">合并分支&lt;/h3>
-&lt;blockquote>
-&lt;p>假如把dev分支合并到main&lt;/p>
-&lt;/blockquote>
-&lt;p>首先切换到main分支上&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git checkout main
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>如果是多人开发的话，需要把远程main分支上的代码pull下来&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-5-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-5-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git pull origin main
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>然后把dev分支的代码合并到main上&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-6-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-6-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git merge dev
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>警告提示： &lt;code>Please enter a commit message to explain why this merge is necessary&lt;/code>&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;strong>遇到警告&lt;/strong> 直接按键盘左上角&amp;quot;&lt;code>Esc&lt;/code>&amp;quot; 然后输入&lt;code>:wq&lt;/code> 按回车键,或者按 &lt;code>ctrl+x&lt;/code> 再输入&lt;code>y&lt;/code>回车即可&lt;/p>
-&lt;/blockquote>
-&lt;p>最后一步，Push推送到远程仓库&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-7-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-7-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push origin main
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="删除本地分支">删除本地分支&lt;/h3>
-&lt;p>列出所有的本地分支&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-8-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-8-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git branch
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>在删除一个本地分支之前，请确保切换到另一个你&lt;code>不想删除&lt;/code>的分支&lt;/p>
-&lt;/blockquote>
-&lt;p>切换分支&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-9-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-9-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git checkout 分支名
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>删除本地分支:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-10-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-10-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git branch -D 分支名
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>大写字母D（这是&lt;code>-- delete --force&lt;/code> 的别名），强制删除本地分支，而不考虑其合并状态&lt;/p>
-&lt;h3 id="删除远程分支">删除远程分支&lt;/h3>
-&lt;p>获取所有远程分支的列表：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-11-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-11-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git branch -r
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>找到您想要删除的远程分支，然后运行以下命令以删除它：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-12-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-12-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push origin -d 分支名
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="pull代码到本地分支">pull代码到本地分支&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-13-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-13-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git pull --rebase origin 分支名
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="push分支到远程仓库">push分支到远程仓库&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-14-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-14-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push origin 分支名
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>假设本地创建了一个名为dev的分支，远程仓库还没有这个分支，推送的命令是： &lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-15-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-15-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-csharp" data-lang="csharp">&lt;span style="display:flex;">&lt;span>git push --&lt;span style="color:#007020;font-weight:bold">set&lt;/span>-upstream origin dev
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="删除暂存区">删除暂存区&lt;/h3>
-&lt;blockquote>
-&lt;p>删除暂存区和版本库的文件，但保留了工作区的文件&lt;/p>
-&lt;/blockquote>
-&lt;p>例如：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-16-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-16-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git rm -r --cached D:/code/vosk-model-small-cn-0.22
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="查看状态">查看状态&lt;/h3>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-17-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-17-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git status
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="同步更新源仓库">同步更新源仓库&lt;/h3>
-&lt;blockquote>
-&lt;p>a开发者fork了b开发者的项目后，如果b开发人员更新代码后，a开发者如何获得更新？&lt;/p>
-&lt;/blockquote>
-&lt;p>1.给fork配置远程库,先查看远程状态&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-18-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-18-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote -v
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>2.同步上游仓库, &lt;code>upstream&lt;/code>后的地址是你即将同步的上游仓库git地址&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-19-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-19-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote add upstream https://github.com/xxx/xxxx.git
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>再次查看状态确认是否配置成功。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-20-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-20-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote -v
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>3.开始同步fork&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-21-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-21-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git fetch upstream
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>4.切换到本地主分支&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-22-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-22-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git checkout master
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>把 &lt;code>upstream/master&lt;/code> 分支合并到本地 master 上，这样就完成了同步，并且不会丢掉本地修改的内容。&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-23-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-23-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git merge upstream/master
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>如果想更新到 GitHub 的 fork 上，直接push就好了&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-24-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-24-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git push origin master
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="储藏与清理">储藏与清理&lt;/h3>
-&lt;p>储藏会处理工作目录的脏的状态 - 即，修改的跟踪文件与暂存改动 - 然后将未完成的修改保存到一个栈上，而你可以在任何时候重新应用这些改动。&lt;/p>
-&lt;p>首先查看状态&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-25-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-25-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-25-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-25-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">git status
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">git status -s
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>新的储藏推送到栈上&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-26-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-26-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">git stash
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>查看储藏的东西，可以使用 &lt;code>git stash list&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-27-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-27-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash list
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-28-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-28-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-28-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-28-2">2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-28-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-28-3">3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-28-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-28-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#c65d09;font-weight:bold">$&lt;/span> git stash list
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">stash@{0}: WIP on master: 049d078 added the index file
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">stash@{1}: WIP on master: c264051 Revert &amp;#34;added file_size&amp;#34;
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">stash@{2}: WIP on master: 21d80a5 added number to log
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>应用存储的更改&lt;/strong>: 最近的储藏&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-29-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-29-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">git stash apply
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>应用存储的更改&lt;/strong>: 索引号为 0的存储&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-30-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-30-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash apply stash@&lt;span style="color:#666">{&lt;/span>0&lt;span style="color:#666">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>&lt;strong>移除储藏&lt;/strong>&lt;/p>
-&lt;p>列出存储:&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-31-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-31-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">git stash list
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>移除某个存储:例如&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-32-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-32-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-console" data-lang="console">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#888">git stash drop stash@{0}
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>运行 &lt;code>git stash pop&lt;/code> 来应用储藏然后立即从栈上扔掉它&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-33-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-33-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git stash pop
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="git报错的解决方法">git报错的解决方法&lt;/h3>
-&lt;h4 id="ssh-key有问题-">ssh key有问题 ：&lt;/h4>
-&lt;p>&lt;code>Please make sure you have the correct access rights and the repository exists&lt;/code>&lt;/p>
-&lt;p>解决办法：
-1、设置用户名和邮箱&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-34-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-34-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-34-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-34-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git config --global user.name &lt;span style="color:#4070a0">&amp;#34;yourname&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git config --global user.email &lt;span style="color:#4070a0">&amp;#34;your@email.com&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>2、删除.ssh文件夹下的known_hosts(手动删除即可，不需要git）&lt;/p>
-&lt;p>3、生成 SSH Key 一路回车即可&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-35-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-35-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ssh-keygen -t rsa -C &lt;span style="color:#4070a0">&amp;#34;your@email.com&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>用户主目录 /.ssh 下有两个文件，id_rsa 是私钥，id_rsa.pub 是公钥, 记事本打开公钥 id_rsa.pub, 然后复制公钥内容&lt;/p>
-&lt;p>4、添加 SSH keys&lt;/p>
-&lt;p>添加地址: &lt;a href="https://github.com/settings/ssh/new">https://github.com/settings/ssh/new&lt;/a>&lt;/p>
-&lt;p>新建一个 SSH keys，标题自己起，Key 的内容就是id_rsa.pub 公钥内容，然后添加。&lt;/p>
-&lt;p>5、在git中输入命令：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-36-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-36-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>ssh -T git@github.com
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>输入命令：yes&lt;/p>
-&lt;h4 id="没有添加远程仓库">没有添加远程仓库&lt;/h4>
-&lt;p>&lt;code>fatal: ‘origin’ does not appear to be a git repository&lt;/code>&lt;/p>
-&lt;p>解决办法：&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-37-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-37-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote add origin git@github.com:xxse/xx.git
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>如果remote时出现&lt;code>fatal: remote origin already exists.&lt;/code>&lt;/p>
-&lt;p>解决方法是删除原有的&lt;code>origin&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-38-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-38-1">1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-38-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-38-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git remote -v
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git remote rm origin
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h4 id="-rejected-master---master-fetch-first">[! [rejected] master -&amp;gt; master (fetch first)&lt;/h4>
-&lt;blockquote>
-&lt;p>github允许你本地仓库有的东西，远程仓库里没有，但&lt;strong>不允许远程仓库有的东西，你本地仓库没有&lt;/strong>。&lt;/p>
-&lt;/blockquote>
-&lt;p>所以在提交之前需要先拷贝远程仓库，命令如下&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-git" data-lang="git">git pull --rebase origin master
-&lt;/code>&lt;/pre></description></item></channel></rss>
+&lt;p>本文转自 &lt;a href="https://www.cnblogs.com/DL-CODER/p/17302223.html">https://www.cnblogs.com/DL-CODER/p/17302223.html&lt;/a>，如有侵权，请联系删除。&lt;/p></description></item></channel></rss>
