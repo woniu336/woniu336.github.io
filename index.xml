@@ -145,7 +145,7 @@
 &lt;li>&lt;code>$ cat 00-installer-config.yaml&lt;/code>&lt;/li>
 &lt;/ol>
 &lt;p>输出：&lt;/p>
-&lt;p>&lt;img src="https://img.linux.net.cn/data/attachment/album/202210/27/091315b0qqrl88jqqrih4j.png" alt="Default-Content-netplan-ubuntu-server">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/f492afa4c220988310d626d967e23255.png" alt="Default-Content-netplan-ubuntu-server">&lt;/p>
 &lt;p>根据上面的输出，它说我们有 &lt;code>ens33&lt;/code> 接口，它正在从 DHCP 服务器获取 IP。查看接口名称的另一种方法是通过 &lt;code>ip&lt;/code> 命令。&lt;/p>
 &lt;p>其他命令：&lt;/p>
 &lt;pre tabindex="0">&lt;code class="language-undefined" data-lang="undefined">ifconfig
@@ -194,7 +194,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>保存并关闭文件。&lt;/p>
-&lt;p>&lt;img src="https://img.linux.net.cn/data/attachment/album/202210/27/091315agwwzr7raj0czbod.png" alt="Updated-Netplan-Config-File-Content-Ubuntu-Server">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/0718940d52a69c8cc0c5f1aa98b06316.png" alt="Updated-Netplan-Config-File-Content-Ubuntu-Server">&lt;/p>
 &lt;p>在上面的文件中，我们使用了以下内容，&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>ens33&lt;/code> 为接口名称&lt;/li>
@@ -231,7 +231,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>上述命令的输出。&lt;/p>
-&lt;p>&lt;img src="https://img.linux.net.cn/data/attachment/album/202210/27/091315xav8yqdndquhqyx5.png" alt="ip-addr-route-command-output-ubuntu-server">&lt;/p>
+&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/70767bce5c5307ca458519d9c5762ce5.png" alt="ip-addr-route-command-output-ubuntu-server">&lt;/p>
 &lt;p>完美，以上命令的输出确认静态 IP 和路由配置成功。&lt;/p></description></item><item><title>VMware Workstation 虚拟机桥接模式</title><link>https://blog.taoshuge.eu.org/post/202/</link><pubDate>Tue, 19 Mar 2024 01:57:37 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/202/</guid><description>&lt;h3 id="查看桥接模式下的物理网卡是否对应正确">查看桥接模式下的物理网卡是否对应正确&lt;/h3>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/5d093b02a44f5ae29779ec9f3b9afe2a.png" alt="">&lt;/p>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/c954746c359d237a62e5afc92e5e18cc.png" alt="">&lt;/p></description></item><item><title>vmware 挂载共享文件夹 虚拟机系列</title><link>https://blog.taoshuge.eu.org/post/201/</link><pubDate>Tue, 19 Mar 2024 01:06:08 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/201/</guid><description>&lt;ul>
