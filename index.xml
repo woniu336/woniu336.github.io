@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Wed, 20 Mar 2024 17:00:34 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Wed, 20 Mar 2024 21:30:56 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -114,7 +114,85 @@
 &lt;p>&lt;strong>持续更新&lt;/strong>：个人知识库是一个不断演进的系统，需要持续更新和维护。随着个人的学习和经验积累，新的信息不断涌现，旧的信息可能需要修订或删除，因此定期审查和更新个人知识库是至关重要的。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>安装 Docker 环境</title><link>https://blog.taoshuge.eu.org/post/205/</link><pubDate>Wed, 20 Mar 2024 17:00:34 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/205/</guid><description>&lt;h3 id="安装-docker非大陆服务器">安装 Docker（非大陆服务器）&lt;/h3>
+&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>frps一键安装脚本</title><link>https://blog.taoshuge.eu.org/post/206/</link><pubDate>Wed, 20 Mar 2024 21:30:56 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/206/</guid><description>&lt;h3 id="frps脚本">frps脚本&lt;/h3>
+&lt;p>文档来自 &lt;a href="https://github.com/stilleshan/frps">https://github.com/stilleshan/frps&lt;/a>&lt;/p>
+&lt;blockquote>
+&lt;p>先执行脚本,在自行修改 frps.toml 文件&lt;/p>
+&lt;/blockquote>
+&lt;p>安装&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://raw.githubusercontent.com/stilleshan/frps/master/frps_linux_install.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x frps_linux_install.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./frps_linux_install.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>以下为国内镜像&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://github.ioiox.com/stilleshan/frps/raw/branch/master/frps_linux_install.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x frps_linux_install.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./frps_linux_install.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>使用&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vi /usr/local/frp/frps.toml
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 修改 frps.toml 配置&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl restart frps
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 重启 frps 服务即可生效&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>卸载&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-2">2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>wget https://raw.githubusercontent.com/stilleshan/frps/master/frps_linux_uninstall.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x frps_linux_uninstall.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./frps_linux_uninstall.sh
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 以下为国内镜像&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>wget https://github.ioiox.com/stilleshan/frps/raw/branch/master/frps_linux_uninstall.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> chmod +x frps_linux_uninstall.sh &lt;span style="color:#666">&amp;amp;&amp;amp;&lt;/span> ./frps_linux_uninstall.sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="frps相关命令">frps相关命令&lt;/h3>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-10">10&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>sudo systemctl start frps
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 启动服务 &lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl &lt;span style="color:#007020">enable&lt;/span> frps
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 开机自启&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl status frps
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 状态查询&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl restart frps
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 重启服务&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo systemctl stop frps
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 停止服务&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>安装 Docker 环境</title><link>https://blog.taoshuge.eu.org/post/205/</link><pubDate>Wed, 20 Mar 2024 17:00:34 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/205/</guid><description>&lt;h3 id="安装-docker非大陆服务器">安装 Docker（非大陆服务器）&lt;/h3>
 &lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
@@ -1296,110 +1374,4 @@ C:\Users\Administrator\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/2f6889f6d672d627e52b247e5d987691.webp" alt="">&lt;/p>
 &lt;p>Win10修改系统默认字体需要利用到一个软件：&lt;a href="https://github.com/Tatsu-syo/noMeiryoUI/blob/master/README_CN.md">noMeiryoUI&lt;/a>&lt;/p>
 &lt;p>软件下载：https://www.123pan.com/s/cjqrVv-fk59d.html&lt;/p>
-&lt;p>其他教程： &lt;a href="http://www.dians.net/thread-1202.htm">http://www.dians.net/thread-1202.htm&lt;/a>&lt;/p></description></item><item><title>rclone基于windows一键脚本工具</title><link>https://blog.taoshuge.eu.org/post/188/</link><pubDate>Sat, 02 Mar 2024 21:24:11 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/188/</guid><description>&lt;h3 id="bat脚本">bat脚本&lt;/h3>
-&lt;p>rclone下载地址： &lt;a href="https://rclone.org/downloads/">https://rclone.org/downloads/&lt;/a>&lt;/p>
-&lt;p>以windows为例：&lt;/p>
-&lt;blockquote>
-&lt;p>前提：在rclone安装目录需要有&lt;code>rclone.conf&lt;/code>配置文件存在,而且配置好了网盘&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1"> 1&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-2"> 2&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-3"> 3&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-4"> 4&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-5"> 5&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-6"> 6&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-7"> 7&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-8"> 8&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-9"> 9&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-10">10&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-11">11&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-12">12&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-13">13&lt;/a>
-&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-14">14&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>@echo off
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> /p &lt;span style="color:#bb60d5">source&lt;/span>&lt;span style="color:#666">=&lt;/span>请输入源路径：
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> /p &lt;span style="color:#bb60d5">destination&lt;/span>&lt;span style="color:#666">=&lt;/span>请输入目标路径：
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">set&lt;/span> /p &lt;span style="color:#bb60d5">proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>是否需要代理？&lt;span style="color:#666">(&lt;/span>yes/no&lt;span style="color:#666">)&lt;/span>：
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">if&lt;/span> /i &lt;span style="color:#4070a0">&amp;#34;%proxy%&amp;#34;&lt;/span>&lt;span style="color:#666">==&lt;/span>&lt;span style="color:#4070a0">&amp;#34;yes&amp;#34;&lt;/span> &lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">http_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:7890
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>socks5://127.0.0.1:7890
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span> &lt;span style="color:#007020;font-weight:bold">else&lt;/span> &lt;span style="color:#666">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">http_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">set&lt;/span> &lt;span style="color:#bb60d5">https_proxy&lt;/span>&lt;span style="color:#666">=&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#666">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">cd&lt;/span> /d D:&lt;span style="color:#4070a0;font-weight:bold">\r&lt;/span>clone-v1.63.0-windows-amd64
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>rclone copy &lt;span style="color:#4070a0">&amp;#34;%source%&amp;#34;&lt;/span> &lt;span style="color:#4070a0">&amp;#34;%destination%&amp;#34;&lt;/span> --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span> --drive-acknowledge-abuse
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>pause
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>rclone.conf配置文件：&lt;/p>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/88e05105d93c2d216b5bdd03830293f6.webp" alt="">&lt;/p>
-&lt;ul>
-&lt;li>目标标路径可以自动创建(如果没有) ，代理端口7890，如果你的不是7890端口请修改&lt;/li>
-&lt;li>编码：&lt;code>ANSI&lt;/code> 避免windows下运行乱码&lt;/li>
-&lt;li>将rclone 下载到D盘，文件夹名： rclone-v1.63.0-windows-amd64&lt;/li>
-&lt;li>这里的代理是针对比如&lt;code>谷歌网盘&lt;/code>需要魔法访问的情况&lt;/li>
-&lt;li>并且代理设置只会在该次运行过程中生效&lt;/li>
-&lt;li>每次运行这个批处理文件时，用户都需要重新选择是否需要代理&lt;/li>
-&lt;/ul>
-&lt;h3 id="参数解释">参数解释&lt;/h3>
-&lt;p>例如将&lt;code>E:\迅雷下载&lt;/code>的文件复制到&lt;code>onedrive&lt;/code>下的电影目录&lt;/p>
-&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>rclone copy E:&lt;span style="color:#4070a0;font-weight:bold">\迅&lt;/span>雷下载 onedrive:电影 --ignore-existing -u -v -P --transfers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">20&lt;/span> --ignore-errors --buffer-size&lt;span style="color:#666">=&lt;/span>128M --check-first --checkers&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#40a070">10&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>如果用于谷歌网盘，末尾添加参数： &lt;code>--drive-acknowledge-abuse&lt;/code>&lt;/p>
-&lt;/blockquote>
-&lt;p>这是一个命令行命令，用于使用rclone工具将本地文件夹中的内容复制到远程存储中。以下是各个选项的解释：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;code>rclone&lt;/code>: 这是命令行工具rclone的名称，用于在不同云存储之间进行文件同步和传输。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>copy&lt;/code>: 这是rclone的一个操作命令，用于复制文件和目录。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>E:\迅雷下载&lt;/code>: 这是本地文件夹的路径，即要复制的源文件夹路径。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>onedrive:电影&lt;/code>: 这是远程存储的名称和目标路径。在这里，&lt;code>onedrive&lt;/code>是远程存储的名称，&lt;code>电影&lt;/code>是目标路径。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>--ignore-existing&lt;/code>: 这个选项告诉rclone在复制文件时忽略已经存在于目标路径中的文件。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>-u&lt;/code>: 这个选项表示只复制更新过的文件，即源文件夹中修改过的文件或者新文件。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>-v&lt;/code>: 这个选项表示以详细模式进行操作，会输出更多的信息。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>-P&lt;/code>: 这个选项表示在复制过程中显示进度和统计信息。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>--transfers=20&lt;/code>: 这个选项指定了同时进行的传输数，这里是20个并发传输。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>--ignore-errors&lt;/code>: 这个选项告诉rclone在发生错误时继续进行，而不是停止操作。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>--buffer-size=128M&lt;/code>: 这个选项设置了传输缓冲区的大小，这里是128MB。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>--check-first&lt;/code>: 这个选项表示在开始复制之前检查目标路径，确保不会覆盖目标路径中的任何现有文件。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;code>--checkers=10&lt;/code>: 这个选项设置了并发检查器的数量，用于检查源和目标文件之间的差异。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>通过这个命令，你可以将本地文件夹中的内容复制到远程存储中，并且可以控制复制过程的各种参数。&lt;/p>
-&lt;!-- raw HTML omitted --></description></item></channel></rss>
+&lt;p>其他教程： &lt;a href="http://www.dians.net/thread-1202.htm">http://www.dians.net/thread-1202.htm&lt;/a>&lt;/p></description></item></channel></rss>
