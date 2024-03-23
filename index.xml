@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Wed, 20 Mar 2024 21:30:56 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>路飞博客</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><managingEditor>me@example.com (路飞)</managingEditor><webMaster>me@example.com (路飞)</webMaster><lastBuildDate>Fri, 22 Mar 2024 22:29:10 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/post/087/</link><pubDate>Sun, 17 Sep 2023 23:30:46 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/087/</guid><description>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>项目&lt;/th>
@@ -114,7 +114,98 @@
 &lt;p>&lt;strong>持续更新&lt;/strong>：个人知识库是一个不断演进的系统，需要持续更新和维护。随着个人的学习和经验积累，新的信息不断涌现，旧的信息可能需要修订或删除，因此定期审查和更新个人知识库是至关重要的。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>frps一键安装脚本</title><link>https://blog.taoshuge.eu.org/post/206/</link><pubDate>Wed, 20 Mar 2024 21:30:56 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/206/</guid><description>&lt;h3 id="frps脚本">frps脚本&lt;/h3>
+&lt;p>个人知识库的价值在于它可以帮助个人更好地利用自己的经验和知识，提高工作效率，拓展思维边界，更好地适应和应对变化多端的环境。通过建立和维护个人知识库，个体可以在信息海洋中游刃有余，成为自己学习和成长的主人。&lt;/p></description></item><item><title>Git回退到指定版本</title><link>https://blog.taoshuge.eu.org/post/207/</link><pubDate>Fri, 22 Mar 2024 22:29:10 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/207/</guid><description>&lt;h2 id="git回退到上个版本">git回退到上个版本&lt;/h2>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-0-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git reset --hard HEAD^
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>回退到前3次提交之前，以此类推，回退到n次提交之前&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-1-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git reset --hard HEAD~3
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="回退到指定版本">回退到指定版本&lt;/h2>
+&lt;p>查看 &lt;code>commit&lt;/code> 哈希值&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-2-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> git reflog
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>红色框框的就是哈希值&lt;/p>
+&lt;p>&lt;img src="https://imgs.leshans.eu.org/docs/1711195589.png" alt="">&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;p>例如我要回退到commit信息为: &lt;code>版本005&lt;/code> 的时候,对应哈希值: adacc9e&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-3-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-3-1">1&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>git reset --hard adacc9e
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="更多版本">更多版本&lt;/h2>
+&lt;p>要回退到更久之前的版本,使用脚本:&lt;/p>
+&lt;p>按 &lt;code>q&lt;/code> 退出 再按序号选择版本&lt;/p>
+&lt;div class="highlight">&lt;div style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-1">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-1"> 1&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-2">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-2"> 2&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-3">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-3"> 3&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-4">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-4"> 4&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-5">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-5"> 5&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-6">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-6"> 6&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-7">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-7"> 7&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-8">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-8"> 8&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-9">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-9"> 9&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-10">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-10">10&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-11">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-11">11&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-12">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-12">12&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-13">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-13">13&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-14">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-14">14&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-15">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-15">15&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-16">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-16">16&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-17">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-17">17&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-18">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-18">18&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-19">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-19">19&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-20">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-20">20&lt;/a>
+&lt;/span>&lt;span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f" id="hl-4-21">&lt;a style="outline:none;text-decoration:none;color:inherit" href="#hl-4-21">21&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 显示git的reflog&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git reflog
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 提取reflog输出的序号和对应的提交哈希值，并将其存储在数组中&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>mapfile -t commit_array &amp;lt; &amp;lt;&lt;span style="color:#666">(&lt;/span>git reflog | grep -E &lt;span style="color:#4070a0">&amp;#39;^[a-f0-9]+&amp;#39;&lt;/span> | cat -n&lt;span style="color:#666">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 显示序号和对应的提交哈希值供用户选择&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">for&lt;/span> &lt;span style="color:#666">((&lt;/span>&lt;span style="color:#bb60d5">i&lt;/span>&lt;span style="color:#666">=&lt;/span>0; i&amp;lt;&lt;span style="color:#70a0d0">${#&lt;/span>&lt;span style="color:#bb60d5">commit_array&lt;/span>[@]&lt;span style="color:#70a0d0">}&lt;/span>; i++&lt;span style="color:#666">))&lt;/span>; &lt;span style="color:#007020;font-weight:bold">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;&lt;/span>&lt;span style="color:#70a0d0">${&lt;/span>&lt;span style="color:#bb60d5">commit_array&lt;/span>[i]&lt;span style="color:#70a0d0">}&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020;font-weight:bold">done&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 提示用户输入要恢复的版本号前面对应的数字&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#007020">read&lt;/span> -p &lt;span style="color:#4070a0">&amp;#34;请输入要恢复的版本号前面对应的数字: &amp;#34;&lt;/span> version_number
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 提取用户选择的提交哈希值&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#bb60d5">selected_commit_hash&lt;/span>&lt;span style="color:#666">=&lt;/span>&lt;span style="color:#007020;font-weight:bold">$(&lt;/span>&lt;span style="color:#007020">echo&lt;/span> &lt;span style="color:#4070a0">&amp;#34;&lt;/span>&lt;span style="color:#70a0d0">${&lt;/span>&lt;span style="color:#bb60d5">commit_array&lt;/span>[version_number-1]&lt;span style="color:#70a0d0">}&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span> | awk &lt;span style="color:#4070a0">&amp;#39;{print $2}&amp;#39;&lt;/span>&lt;span style="color:#007020;font-weight:bold">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#60a0b0;font-style:italic"># 使用git reset --hard命令将本地代码回退到指定版本&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>git reset --hard &lt;span style="color:#4070a0">&amp;#34;&lt;/span>&lt;span style="color:#bb60d5">$selected_commit_hash&lt;/span>&lt;span style="color:#4070a0">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;!-- raw HTML omitted --></description></item><item><title>frps一键安装脚本</title><link>https://blog.taoshuge.eu.org/post/206/</link><pubDate>Wed, 20 Mar 2024 21:30:56 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/206/</guid><description>&lt;h3 id="frps脚本">frps脚本&lt;/h3>
 &lt;p>文档来自 &lt;a href="https://github.com/stilleshan/frps">https://github.com/stilleshan/frps&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>先执行脚本,在自行修改 frps.toml 文件&lt;/p>
@@ -1358,20 +1449,4 @@ C:\Users\Administrator\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/0f8597b292d3c9bcf1479edc6e4ac9ca.webp" alt="">&lt;/p>
 &lt;p>勾选：使用 Unicode UTF-8 提供全球语音支持&lt;/p>
 &lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/3cd45ee42e2e0a27986c60d09b10b344.webp" alt="">&lt;/p>
-&lt;p>点击确定，这个时候电脑提示需要重启，重启后再打开 powershell 就可以正常显示中文啦。&lt;/p></description></item><item><title>Windows10更换全局字体，快速替换Win10默认字体步骤分享</title><link>https://blog.taoshuge.eu.org/post/189/</link><pubDate>Sun, 03 Mar 2024 14:49:09 +0800</pubDate><author>me@example.com (路飞)</author><guid>https://blog.taoshuge.eu.org/post/189/</guid><description>&lt;h3 id="第一步为win10下载新字体">第一步：为Win10下载新字体&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;a href="https://ziyouziti.com/">&lt;strong>自由字体网&lt;/strong>&lt;/a>，一家专业字体网站，搜罗了全网不少可以免费商用的字体，字体样式也比较齐全，且无需注册登录，即可下载。遗憾的是，度盘链接常挂，默认下载使用的是城通网盘。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://www.fonts.net.cn/">&lt;strong>字体天下&lt;/strong>&lt;/a>，和自由字体一样无需注册登录即可下载，且不再使用网盘寄存数据下载速度更快，包含收费字体和免费字体，种类更多更全。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://www.zitijia.com/t/%E5%85%8D%E8%B4%B9%E5%95%86%E7%94%A8">&lt;strong>字体家&lt;/strong>&lt;/a>，无需注册登录即可下载，下载源为百度云盘和城通云盘，下载速度上可能对非VIP用户不是太友好。在免费字体种类，数量上一般，可视作前两者的补充。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="第二步为windows10更换全局字体">第二步：为Windows10更换全局字体&lt;/h3>
-&lt;p>&lt;img src="http://imgs.leshans.eu.org/2024/03/2f6889f6d672d627e52b247e5d987691.webp" alt="">&lt;/p>
-&lt;p>Win10修改系统默认字体需要利用到一个软件：&lt;a href="https://github.com/Tatsu-syo/noMeiryoUI/blob/master/README_CN.md">noMeiryoUI&lt;/a>&lt;/p>
-&lt;p>软件下载：https://www.123pan.com/s/cjqrVv-fk59d.html&lt;/p>
-&lt;p>其他教程： &lt;a href="http://www.dians.net/thread-1202.htm">http://www.dians.net/thread-1202.htm&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>点击确定，这个时候电脑提示需要重启，重启后再打开 powershell 就可以正常显示中文啦。&lt;/p></description></item></channel></rss>
