@@ -308,105 +308,6 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/posts/562a2571.html" target="_self">
-          永不过期的SSL/TLS证书解决方案
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/posts/562a2571.html" target="_self">
-        <div>
-          前提:   cloudflare API 密钥 宝塔面板 安装了nginx  如果你不使用宝塔面板,可以参照脚本修改 生成证书脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl_pro.sh &amp;&amp; chmod +x ssl_pro.sh &amp;&amp; ./ssl_pro.
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-05-03 22:02" pubdate>
-              2024-05-03
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/posts/16004f5a.html" target="_self">
-          ubuntu开启zram彻底解决高I/O引起的卡顿，复制文件无比流畅
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/posts/16004f5a.html" target="_self">
-        <div>
-          环境: Ubuntu 22.04.3 LTS  ZRAM 的原理是：  将一块内存区域作为虚拟的块设备, 压缩页面交换数据, 存储在内存中, 释放物理内存空间 可用的物理内存就能随之变多  开启&#x2F;加载 zRAM 模块sudo modprobe zram num_devices=1 lsmod  | grep zram  安装zram-configsudo apt install zra
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-05-03 12:58" pubdate>
-              2024-05-03
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/posts/4b86a385.html" target="_self">
-          248
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/posts/4b86a385.html" target="_self">
-        <div>
-          我给一个超级卡顿的平板电脑安装了最新的Ubuntu24.04系统，准备把他当成一个低耗电的家庭服务器，上期讲了如何重装系统，本期就讲让一下装完系统必须要干的十件事。把他废物利用，变成一个既省电又好用全能的家庭服务器。 视频教程：第一期：https://www.bilibili.com/video/BV1NM4m1f7Q6/第二期：https://www.bilibili.com/video/BV1
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-05-03 10:08" pubdate>
-              2024-05-03
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
         <a href="/posts/f9256692.html" target="_self">
           Cloudflare防火墙其他WAF设置
         </a>
@@ -641,6 +542,105 @@
             <i class="iconfont icon-date"></i>
             <time datetime="2024-04-14 12:23" pubdate>
               2024-04-14
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/posts/8e30f9e8.html" target="_self">
+          docker安装脚本与区别
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/posts/8e30f9e8.html" target="_self">
+        <div>
+          脚本一curl -fsSL https://get.docker.com | sh &amp;&amp; ln -s /usr/libexec/docker/cli-plugins/docker-compose /usr/local/bin systemctl start docker  systemctl enable docker   这个命令会先安装 Docker 引擎。 然后它会创建一个符
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-13 09:14" pubdate>
+              2024-04-13
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/posts/5b25d373.html" target="_self">
+          两台服务器利用rclone同步文件解决方案
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/posts/5b25d373.html" target="_self">
+        <div>
+          安装rclone服务器A同步文件到服务器B 首先在服务器A安装rclone,使用以下命令安装 sudo -v ; curl https://rclone.org/install.sh | sudo bash  生成密钥对在服务器A生成密钥对，并合并密钥，复制以下命令 ssh-keygen -q -t rsa -b 4096 -C &quot;rclone key&quot; -N &quot;&q
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-11 13:00" pubdate>
+              2024-04-11
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/posts/a9b4e219.html" target="_self">
+          Ubuntu 22.04 安装 Clash
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/posts/a9b4e219.html" target="_self">
+        <div>
+          在个人的开发平台上到处都需要网络代理环境，Clash是款用Go语言开发的软件，可以直接下载预编译的版本进行  1、下载# 切换超级管理员 sudo -i  # 创建文件夹 cd &amp;&amp; mkdir clash cd clash  下载文件 wget https://raw.githubusercontent.com/woniu336/linuxmint/main/clash-lin
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-10 18:49" pubdate>
+              2024-04-10
             </time>
           </div>
         
