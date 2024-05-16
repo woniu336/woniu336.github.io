@@ -26,7 +26,7 @@
 <meta property="og:description" content="Dockge项目地址: https:&#x2F;&#x2F;github.com&#x2F;louislam&#x2F;dockge    特色    快速搭建docker compose环境   可以管理compose.yaml文件，包括创建、编辑、启动、停止、重启和删除   能够更新Docker映像   提供交互式编辑器，方便编辑compose.yaml文件   提供交互式网络终端功能   支持管理来自不同Docker主机的多个堆栈">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-23T04:46:37.000Z">
-<meta property="article:modified_time" content="2024-05-16T09:21:43.447Z">
+<meta property="article:modified_time" content="2024-05-16T13:15:24.087Z">
 <meta property="article:author" content="羊驼">
 <meta property="article:tag" content="docker">
 <meta property="article:tag" content="npm">
@@ -307,7 +307,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          657 字
+          658 字
         
       </span>
     
@@ -356,6 +356,21 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+</div>
+
+
+  </aside>
+
 
     </div>
 
@@ -462,7 +477,7 @@ docker compose pull &amp;&amp; docker compose up -d</code></pre></div>
 <div class="code-wrapper"><pre><code class="hljs bash">version: <span class="hljs-string">&#x27;3&#x27;</span>
 services:
   app:
-    image: <span class="hljs-string">&#x27;chishin/nginx-proxy-manager-zh:release&#x27;</span>
+    category_bar: <span class="hljs-literal">true</span> <span class="hljs-string">&#x27;chishin/nginx-proxy-manager-zh:release&#x27;</span>
     restart: always
     ports:
       - <span class="hljs-string">&#x27;80:80&#x27;</span>

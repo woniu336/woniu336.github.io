@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://r2.leshans.eu.org/2023/08/a071cb19d51b8e08e2f9944b04cd73e6.webp">
 <meta property="og:image" content="https://r2.leshans.eu.org/2023/08/43e48fd11b5fcae50b7c4b3f31b8ab3b.webp">
 <meta property="article:published_time" content="2023-08-08T06:30:23.000Z">
-<meta property="article:modified_time" content="2024-05-16T09:21:43.575Z">
+<meta property="article:modified_time" content="2024-05-16T13:15:24.218Z">
 <meta property="article:author" content="羊驼">
 <meta property="article:tag" content="Umami">
 <meta property="article:tag" content="统计">
@@ -403,7 +403,7 @@ docker-compose --version</code></pre></div>
 version: <span class="hljs-string">&#x27;3&#x27;</span>  
 services:  
   umami:  
-    image: docker.umami.dev/umami-software/umami:postgresql-latest  
+    category_bar: <span class="hljs-literal">true</span> docker.umami.dev/umami-software/umami:postgresql-latest  
     ports:  
       - <span class="hljs-string">&quot;3000:3000&quot;</span>  
     environment:  
@@ -414,7 +414,7 @@ services:
       - db  
     restart: always  
   db:  
-    image: postgres:15-alpine  
+    category_bar: <span class="hljs-literal">true</span> postgres:15-alpine  
     environment:  
       POSTGRES_DB: umami  
       POSTGRES_USER: umami  
