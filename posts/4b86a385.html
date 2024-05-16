@@ -1,0 +1,886 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluidlogo.png">
+  <link rel="icon" href="/img/fluidlogo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="羊驼">
+  <meta name="keywords" content="羊驼blog,Docker,服务器,宝塔,VPS,建站,网站,博客,搬瓦工,好玩儿的docker项目,AI技术">
+  
+    <meta name="description" content="我给一个超级卡顿的平板电脑安装了最新的Ubuntu24.04系统，准备把他当成一个低耗电的家庭服务器，上期讲了如何重装系统，本期就讲让一下装完系统必须要干的十件事。把他废物利用，变成一个既省电又好用全能的家庭服务器。 视频教程：第一期：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1NM4m1f7Q6&#x2F;第二期：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="248">
+<meta property="og:url" content="https://blog.taoshuge.eu.org/posts/4b86a385.html">
+<meta property="og:site_name" content="羊驼blog">
+<meta property="og:description" content="我给一个超级卡顿的平板电脑安装了最新的Ubuntu24.04系统，准备把他当成一个低耗电的家庭服务器，上期讲了如何重装系统，本期就讲让一下装完系统必须要干的十件事。把他废物利用，变成一个既省电又好用全能的家庭服务器。 视频教程：第一期：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1NM4m1f7Q6&#x2F;第二期：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blog.taoshuge.eu.org/doc/images/240502/1.png">
+<meta property="og:image" content="https://blog.taoshuge.eu.org/doc/images/240502/2.png">
+<meta property="og:image" content="https://blog.taoshuge.eu.org/doc/images/240502/3.png">
+<meta property="og:image" content="https://blog.taoshuge.eu.org/doc/images/240502/4.png">
+<meta property="og:image" content="https://blog.taoshuge.eu.org/doc/images/240502/5.png">
+<meta property="og:image" content="https://blog.taoshuge.eu.org/doc/images/240502/6.png">
+<meta property="og:image" content="https://blog.taoshuge.eu.org/doc/images/240502/7.png">
+<meta property="article:published_time" content="2024-05-03T02:08:17.000Z">
+<meta property="article:modified_time" content="2024-05-16T06:32:57.155Z">
+<meta property="article:author" content="羊驼">
+<meta property="article:tag" content="羊驼blog,Docker,服务器,宝塔,VPS,建站,网站,博客,搬瓦工,好玩儿的docker项目,AI技术">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://blog.taoshuge.eu.org/doc/images/240502/1.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>248 - 羊驼blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3977619_1ld6udsib24.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3975692_y7d7h1cnbh8.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.taoshuge.eu.org","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":50},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>羊驼blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>工具箱</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/woniu336" target="_self">
+                <i class="iconfont icon-github-fill"></i>
+                <span>Github</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://space.bilibili.com/295463778" target="_self">
+                <i class="iconfont icon-bilibili"></i>
+                <span>bilibili</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-briefcase"></i>
+                <span>其他</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://chatgpt.com/" target="_self">
+                    
+                    <span>ChatGpt</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://coral.cohere.com/" target="_self">
+                    
+                    <span>Command R+</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://hexo.fluid-dev.com/docs/icon/" target="_self">
+                    
+                    <span>图标用法</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner_img.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.1)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">248</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-05-03 10:08" pubdate>
+          2024年5月3日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          12 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">248</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>我给一个超级卡顿的平板电脑安装了最新的Ubuntu24.04系统，准备把他当成一个低耗电的家庭服务器，上期讲了如何重装系统，本期就讲让一下装完系统必须要干的十件事。把他废物利用，变成一个既省电又好用全能的家庭服务器。</p>
+<p>视频教程：<br>第一期：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1NM4m1f7Q6/">https://www.bilibili.com/video/BV1NM4m1f7Q6/</a><br><br><br>第二期：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Gb421a7BW/">https://www.bilibili.com/video/BV1Gb421a7BW/</a></p>
+<p><a name="bVyLL"></a></p>
+<h2 id="安装vim"><a href="#安装vim" class="headerlink" title="安装vim"></a>安装vim</h2><p>ubuntu自带的文本编辑器是vi，很难用，我需要安装一个他的升级版vim。<br />打开命令行输入以下命令 </p>
+<div class="code-wrapper"><pre><code class="hljs shell">sudo apt update
+sudo apt install vim</code></pre></div>
+<p><a name="K4wqx"></a></p>
+<h2 id="绑定静态IP"><a href="#绑定静态IP" class="headerlink" title="绑定静态IP"></a>绑定静态IP</h2><p>我需要给家庭服务器设置一个局域网的固定IP，如果IP地址总是变来变去，远程连接会很不方便。每家路由器都不一样，这里可能要自己做下功课。我以小米路由器举例，打开路由器设置—&gt;局域网设置–&gt;DHCP静态IP设置，将我家庭服务器分配一个固定IP，比如我分配的是192.168.31.207。这样IP地址就不会变来变去了。 <strong>配置完成后记得重启路由器。</strong><br /><img src="/doc/images/240502/1.png" srcset="/img/loading.gif" lazyload></p>
+<p><a name="sNcpq"></a></p>
+<h2 id="安装RustDesk"><a href="#安装RustDesk" class="headerlink" title="安装RustDesk"></a>安装RustDesk</h2><p>作为一个服务器，我只需要让他安静地躺着柜子里，鼠标键盘显示器这些都不会再用了。所以我们下一项工作就是配置远程连接，从而拔掉鼠标键盘。<br />再添加一个桌面的远程访问，这里我选择开源免费的远程控制软件 RustDesk<br /><a target="_blank" rel="noopener" href="https://github.com/rustdesk/rustdesk/releases">https://github.com/rustdesk/rustdesk/releases</a></p>
+<p><img src="/doc/images/240502/2.png" srcset="/img/loading.gif" lazyload><br />将安装包放在桌面，右键打开命令行<br /><br><img src="/doc/images/240502/3.png" srcset="/img/loading.gif" lazyload><br />执行以下两个命令</p>
+<div class="code-wrapper"><pre><code class="hljs shell">sudo apt update
+sudo apt install ./rustdesk-1.2.3-2-x86_64.deb</code></pre></div>
+<p>安装好rustdesk，我们需要进行一些设置，Ubuntu默认的显示器程序是wayland，在息屏状态下远程软件无法唤醒屏幕。为了能唤醒屏幕我们需要改成xorg。</p>
+<div class="code-wrapper"><pre><code class="hljs shell">sudo vi /etc/gdm3/custom.conf</code></pre></div>
+<p>修改这一行<br /><em>#WaylandEnable&#x3D;false</em><br />将前面的注释去掉，然后点击ESC，然后输入 <strong>:wq!</strong>  保存文件 保存文件，然后输入命令重启桌面。</p>
+<div class="code-wrapper"><pre><code class="hljs shell">sudo systemctl restart gdm3</code></pre></div>
+<p>打开桌面上的Rustdesk 设置两个地方<br />设置-&gt;安全-&gt;允许IP直接访问，这样在家里就可以不使用中继服务器，而是IP直连，提高速度<br /><img src="/doc/images/240502/4.png" srcset="/img/loading.gif" lazyload><br />设置-&gt;安全-&gt;密码 使用固定密码，这样主控方就可以使用固定密码控制<br /><img src="/doc/images/240502/5.png" srcset="/img/loading.gif" lazyload><br><a name="GcwQp"></a></p>
+<h2 id="安装SSH-server"><a href="#安装SSH-server" class="headerlink" title="安装SSH-server"></a>安装SSH-server</h2><p>除了桌面的远程控制能力，我们还需要添加ssh的远程访问功能。 <br />我们执行</p>
+<div class="code-wrapper"><pre><code class="hljs shell">sudo apt openssh-server</code></pre></div>
+<p>安装SSH server,这样服务器就可以通过ssh的方式链接。<br><a name="kK1l5"></a></p>
+<h2 id="安装Linux原生微信"><a href="#安装Linux原生微信" class="headerlink" title="安装Linux原生微信"></a>安装Linux原生微信</h2><p>目前Linux微信只专供几个国产Linux操作系统，还没有Ubuntu版，这里我选择的是开发麒麟(openkylin)操作系统提供的安装包。</p>
+<div class="code-wrapper"><pre><code class="hljs shell">wget https://software.openkylin.top/openkylin/yangtze/pool/all/wechat-beta_1.0.0.238_amd64.deb
+sudo apt install ./wechat-beta_1.0.0.238_amd64.deb</code></pre></div>
+<p><a name="nuDjt"></a></p>
+<h2 id="SMB文件共享"><a href="#SMB文件共享" class="headerlink" title="SMB文件共享"></a>SMB文件共享</h2><p>我们可以在Ubuntu服务器上开启SMB文件共享，这样可以很方便的在手机电脑上查看家庭服务器下载的电影，电视剧，爬爬虾有一整个视频介绍如何使用SMB文件共享，构建家庭影音服务，感兴趣的观众朋友可以找来看下。<br />执行命令</p>
+<div class="code-wrapper"><pre><code class="hljs shell">sudo apt install samba
+sudo vi /etc/samba/smb.conf</code></pre></div>
+<p>最下面粘贴这些内容</p>
+<div class="code-wrapper"><pre><code class="hljs abnf">[ubuntu_smb]
+<span class="hljs-attribute">path</span> <span class="hljs-operator">=</span> /home/tech-shrimp
+<span class="hljs-attribute">available</span> <span class="hljs-operator">=</span> yes 
+<span class="hljs-attribute">browseable</span> <span class="hljs-operator">=</span> yes 
+<span class="hljs-attribute">public</span> <span class="hljs-operator">=</span> yes 
+<span class="hljs-attribute">writable</span> <span class="hljs-operator">=</span> yes 
+create mask <span class="hljs-operator">=</span> <span class="hljs-number">0755</span>
+<span class="hljs-attribute">security</span> <span class="hljs-operator">=</span> share
+force user <span class="hljs-operator">=</span> tech-shrimp
+force group <span class="hljs-operator">=</span>tech-shrimp</code></pre></div>
+<p>点击ESC，然后输入  <strong>:wq!</strong>  保存文件<br />重启smb服务</p>
+<div class="code-wrapper"><pre><code class="hljs ebnf"><span class="hljs-attribute">sudo service smbd restart</span></code></pre></div>
+<p><a name="ICIsP"></a></p>
+<h2 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h2><p>Docker是一种应用程序的容器化部署方案，简单来说可以将整个应用程序，配置，甚至依赖以及库函数等一起打包，然后放到一个隔离环境中运行。我有个建议就是如果软件提供了Docker的安装方式，那就尽量用docker装吧。用上docker，只要别人那里能跑的程序，到你机器上一定也能跑。完全不用担心依赖兼容性，系统差异等棘手问题<br />安装docker本体，需要执行以下命令。</p>
+<div class="code-wrapper"><pre><code class="hljs shell">sudo apt-get install ca-certificates curl
+curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository &quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable&quot;
+sudo apt-get install docker-ce docker-ce-cli containerd.io</code></pre></div>
+<p><a name="G3yi3"></a></p>
+<h2 id="安装HomeAssistant"><a href="#安装HomeAssistant" class="headerlink" title="安装HomeAssistant"></a>安装HomeAssistant</h2><p>Home Assistant 是一个智能家居的终极解决方案，可以聚合各个厂商的设备，进行定制化管理。可以自己写代码扩展应用，也可以接入各类AI大语言模型等等。爬爬虾有多期视频介绍过Homeassistant， 感兴趣的观众可以找来看看。</p>
+<div class="code-wrapper"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">创建配置文件文件夹</span>
+mkdir -p /home/tech-shrimp/homeassistant
+
+sudo docker run -d \
+  --name homeassistant \
+  --privileged \
+  --restart=unless-stopped \
+  -e TZ=Asia/Shanghai \
+  -v /home/tech-shrimp/homeassistant:/config \
+  -v /run/dbus:/run/dbus:ro \
+  --network=host \
+  ghcr.io/home-assistant/home-assistant:stable</code></pre></div>
+<p><a name="Sbo6V"></a></p>
+<h2 id="安装小雅Alist"><a href="#安装小雅Alist" class="headerlink" title="安装小雅Alist"></a>安装小雅Alist</h2><p>小雅Alist是一个阿里云盘的资源聚合库。安装好它以后，可以瞬间多出几百T的影音资源。<br />首先获取两个token:<br />获取短Token <a target="_blank" rel="noopener" href="https://alist.nn.ci/zh/guide/drivers/aliyundrive.html">https://alist.nn.ci/zh/guide/drivers/aliyundrive.html</a>  <img src="/doc/images/240502/6.png" srcset="/img/loading.gif" lazyload></p>
+<p>获取长Token:<br /><a target="_blank" rel="noopener" href="https://alist.nn.ci/tool/aliyundrive/request.html">https://alist.nn.ci/tool/aliyundrive/request.html</a><br /><img src="/doc/images/240502/7.png" srcset="/img/loading.gif" lazyload></p>
+<p>获取File ID, 打开<br /><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/rP9gP3h9asE">https://www.aliyundrive.com/s/rP9gP3h9asE</a> <br />转存 <a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/rP9gP3h9asE">https://www.aliyundrive.com/s/rP9gP3h9asE</a> 到自己网盘，然后浏览器打开转存后的目录，浏览器的url <a target="_blank" rel="noopener" href="https://www.aliyundrive.com/drive/file/resource/xxxxxxxxxxxxxxxxxxxxxxxxxx">https://www.aliyundrive.com/drive/file/resource/xxxxxxxxxxxxxxxxxxxxxxxxxx</a> 红色这一串就是File ID</p>
+<p>执行一键脚本</p>
+<div class="code-wrapper"><pre><code class="hljs shell">sudo bash -c &quot;$(curl http://docker.xiaoya.pro/update_new.sh)&quot; -s host</code></pre></div>
+
+<p>访问地址<br />http:&#x2F;&#x2F;你的服务器IP:5678<br><a name="xv0O4"></a></p>
+<h2 id="钉钉机器人"><a href="#钉钉机器人" class="headerlink" title="钉钉机器人"></a>钉钉机器人</h2><p>可以使用docker部署一个钉钉聊天机器人，钉钉有个好处是不需要公网IP就能使用，还能接入智能家居，这里有详细教程，篇幅有限我就不细讲了。<br /><a target="_blank" rel="noopener" href="https://gitee.com/tech-shrimp/me/blob/master/doc/240217.md">https://gitee.com/tech-shrimp/me/blob/master/doc/240217.md</a><br /><a target="_blank" rel="noopener" href="https://gitee.com/tech-shrimp/me/blob/master/doc/240218.md">https://gitee.com/tech-shrimp/me/blob/master/doc/240218.md</a></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>248</div>
+      <div>https://blog.taoshuge.eu.org/posts/4b86a385.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>羊驼</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年5月3日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年5月16日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/16004f5a.html" title="ubuntu开启zram彻底解决高I/O引起的卡顿，复制文件无比流畅">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">ubuntu开启zram彻底解决高I/O引起的卡顿，复制文件无比流畅</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/f9256692.html" title="Cloudflare防火墙其他WAF设置">
+                        <span class="hidden-mobile">Cloudflare防火墙其他WAF设置</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"envId":"https://twikoo.talimus.eu.org/","region":"ap-shanghai","path":"/"},
+          {
+            el: '#twikoo',
+            path: '/',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
+          }
+        )
+        twikoo.init(options)
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

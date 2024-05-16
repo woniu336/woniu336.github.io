@@ -1,0 +1,969 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluidlogo.png">
+  <link rel="icon" href="/img/fluidlogo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="羊驼">
+  <meta name="keywords" content="羊驼blog,Docker,服务器,宝塔,VPS,建站,网站,博客,搬瓦工,好玩儿的docker项目,AI技术">
+  
+    <meta name="description" content="不管是在腾讯云,阿里云,还是海外vps上部署hugo博客,本教程均适用,详细记录,以备不时之需. 1. 场景ubuntu 20.04，使用root账号，创建普通账号，并赋予root权限。 查看系统发行版本，命令如下： lsb_release -a   2. 服务器端接下来就是网上介绍比较少的服务端配置 1 .ssh 进自己的服务器ssh root@XXX.XXX.XX.XX 2 .建立 git 用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="迁移 hugo 博客到服务器上">
+<meta property="og:url" content="https://blog.taoshuge.eu.org/posts/623e9381.html">
+<meta property="og:site_name" content="羊驼blog">
+<meta property="og:description" content="不管是在腾讯云,阿里云,还是海外vps上部署hugo博客,本教程均适用,详细记录,以备不时之需. 1. 场景ubuntu 20.04，使用root账号，创建普通账号，并赋予root权限。 查看系统发行版本，命令如下： lsb_release -a   2. 服务器端接下来就是网上介绍比较少的服务端配置 1 .ssh 进自己的服务器ssh root@XXX.XXX.XX.XX 2 .建立 git 用">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-11T22:00:50.000Z">
+<meta property="article:modified_time" content="2024-05-15T12:23:36.804Z">
+<meta property="article:author" content="羊驼">
+<meta property="article:tag" content="hugo">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>迁移 hugo 博客到服务器上 - 羊驼blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3977619_1ld6udsib24.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_3975692_y7d7h1cnbh8.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"blog.taoshuge.eu.org","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":50},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>羊驼blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>工具箱</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/woniu336" target="_self">
+                <i class="iconfont icon-github-fill"></i>
+                <span>Github</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://space.bilibili.com/295463778" target="_self">
+                <i class="iconfont icon-bilibili"></i>
+                <span>bilibili</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="iconfont icon-briefcase"></i>
+                <span>其他</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://chatgpt.com/" target="_self">
+                    
+                    <span>ChatGpt</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://coral.cohere.com/" target="_self">
+                    
+                    <span>Command R+</span>
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="https://hexo.fluid-dev.com/docs/icon/" target="_self">
+                    
+                    <span>图标用法</span>
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/banner_img.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.1)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">迁移 hugo 博客到服务器上</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-08-12 06:00" pubdate>
+          2023年8月12日 早上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          11 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">迁移 hugo 博客到服务器上</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>不管是在腾讯云,阿里云,还是海外vps上部署hugo博客,本教程均适用,详细记录,以备不时之需.</p>
+<h2 id="1-场景"><a href="#1-场景" class="headerlink" title="1. 场景"></a>1. 场景</h2><p><code>ubuntu 20.04</code>，使用<code>root</code>账号，创建普通账号，并赋予<code>root</code>权限。</p>
+<p>查看系统发行版本，命令如下：</p>
+<div class="code-wrapper"><pre><code class="hljs text">lsb_release -a</code></pre></div>
+
+
+<h2 id="2-服务器端"><a href="#2-服务器端" class="headerlink" title="2. 服务器端"></a>2. 服务器端</h2><p>接下来就是网上介绍比较少的服务端配置</p>
+<h5 id="1-ssh-进自己的服务器"><a href="#1-ssh-进自己的服务器" class="headerlink" title="1 .ssh 进自己的服务器"></a>1 .ssh 进自己的服务器</h5><div class="code-wrapper"><pre><code class="hljs shell">ssh root@XXX.XXX.XX.XX</code></pre></div>
+<h5 id="2-建立-git-用户"><a href="#2-建立-git-用户" class="headerlink" title="2 .建立 git 用户"></a>2 .建立 git 用户</h5><div class="code-wrapper"><pre><code class="hljs shell">adduser git</code></pre></div>
+
+<p>默认会在<code>/home</code>路径下创建一个与用户名相同的用户目录。</p>
+<h5 id="3-安装-git"><a href="#3-安装-git" class="headerlink" title="3. 安装 git"></a>3. 安装 git</h5><div class="code-wrapper"><pre><code class="hljs shell">sudo apt install git</code></pre></div>
+
+
+<h5 id="4-给新用户添加管理权限"><a href="#4-给新用户添加管理权限" class="headerlink" title="4. 给新用户添加管理权限"></a>4. 给新用户添加管理权限</h5><p>如果希望新创建的用户具有管理权限，将用户添加到<code>sudo</code>组即可！</p>
+<p>将新用户添加到 <code>sudo</code> 组，命令如下：</p>
+<div class="code-wrapper"><pre><code class="hljs text">adduser git sudo</code></pre></div>
+
+<h5 id="5-账号切换"><a href="#5-账号切换" class="headerlink" title="5. 账号切换"></a>5. 账号切换</h5><p>由<code>root</code>账号切换到普通账号：</p>
+<div class="code-wrapper"><pre><code class="hljs text">sudo su git</code></pre></div>
+
+<p>由普通账号切换到<code>root</code>账号：或者<code>exit</code></p>
+<div class="code-wrapper"><pre><code class="hljs text">sudo su root</code></pre></div>
+
+<p>注意：切换到<code>root</code>账号时，需要输入当前账号的<code>密码</code>。</p>
+<h5 id="6-在服务端新建-git-仓库"><a href="#6-在服务端新建-git-仓库" class="headerlink" title="6. 在服务端新建 git 仓库"></a>6. 在服务端新建 git 仓库</h5><p>注意这里建的不是 Github仓库，是自己的服务器上的 <code>git 仓库</code></p>
+<ul>
+<li>在<code>git</code>目录下建立一个仓库 <code>hugo.git</code></li>
+<li>同时建立一个文件夹<code>hugo</code>用来存放仓库文件</li>
+</ul>
+<div class="code-wrapper"><pre><code class="hljs shell">su git
+cd /home
+mkdir git
+cd git
+git init --bare hugo.git
+sudo chown -R git:git hugo.git
+mkdir hugo</code></pre></div>
+
+
+<h5 id="7-配置钩子"><a href="#7-配置钩子" class="headerlink" title="7. 配置钩子"></a>7. 配置钩子</h5><div class="code-wrapper"><pre><code class="hljs shell">vim /home/git/hugo.git/hooks/post-receive</code></pre></div>
+
+<p>写入以下文本</p>
+<div class="code-wrapper"><pre><code class="hljs bash">git --work-tree=/home/git/hugo --git-dir=/home/git/hugo.git checkout -f</code></pre></div>
+
+<p>配置权限</p>
+<div class="code-wrapper"><pre><code class="hljs shell">sudo chmod +x /home/git/hugo.git/hooks/post-receive</code></pre></div>
+
+<h5 id="8-配置SSH公钥"><a href="#8-配置SSH公钥" class="headerlink" title="8. 配置SSH公钥"></a>8. 配置SSH公钥</h5><p>先在本地生成</p>
+<div class="code-wrapper"><pre><code class="hljs shell">ssh-keygen -t RSA -C &quot;usr邮箱&quot;
+cat .ssh/id_rsa.pub</code></pre></div>
+
+<p>然后把 cat 内容复制到服务端的 <code>.ssh/authorized_keys</code> 文件内</p>
+<div class="code-wrapper"><pre><code class="hljs shell">cd ~
+mkdir .ssh
+touch .ssh/authorized_keys
+chmod 600 .ssh/authorized_keys</code></pre></div>
+
+<div class="code-wrapper"><pre><code class="hljs shell">vim .ssh/authorized_keys</code></pre></div>
+
+<p>到此为止完成了服务端全部配置，以上任何一步操作如果提示缺少了什么就<code>sudo apt install</code>一下</p>
+<h2 id="3-部署本地到服务端"><a href="#3-部署本地到服务端" class="headerlink" title="3. 部署本地到服务端"></a>3. 部署本地到服务端</h2><p>在本地运行</p>
+<div class="code-wrapper"><pre><code class="hljs shell">hugo</code></pre></div>
+
+<p>命令后，网站根目录内生成一个 <code>public</code> 文件夹，里面是静态网页文件，把这个 <code>public</code>文件夹整个 push 到我们刚刚在服务器端配置的 <code>hugo.git</code> 仓库里面</p>
+<p>远程 git 仓库地址格式,  例如<code>ip</code>是 <code>8.8.8.8</code>举例</p>
+<div class="code-wrapper"><pre><code class="hljs elixir">git<span class="hljs-variable">@8</span>.<span class="hljs-number">8.8</span>.<span class="hljs-number">8</span><span class="hljs-symbol">:/home/git/hugo</span>.git
+</code></pre></div>
+
+<p>注意: 默认ssh是22 如果不是,请往下看</p>
+<div class="code-wrapper"><pre><code class="hljs shell">cd public
+git init
+git add .
+git commit -m &#x27;First Commit&#x27;
+git remote add origin git@8.8.8.8:/home/git/hugo.git
+git push -u origin master</code></pre></div>
+
+<p>如果一切顺利，那么 hugo 站点已经成功部署在云服务器上，配置好<code>Nginx</code>, 访问域名即可显示</p>
+<h3 id="如果SSH是其他端口"><a href="#如果SSH是其他端口" class="headerlink" title="如果SSH是其他端口"></a>如果SSH是其他端口</h3><p>比如SSH:33 ip:8.8.8.8</p>
+<div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> public
+git init
+git add .
+git commit -m <span class="hljs-string">&#x27;First Commit&#x27;</span>
+git remote add origin ssh://git@8.8.8.8:33/home/git/hugo.git
+git push -u origin master</code></pre></div>
+
+
+<p>或者 </p>
+<div class="code-wrapper"><pre><code class="hljs bash">git push -u ssh://git@8.8.8.8:33/home/git/hugo.git master</code></pre></div>
+
+<h3 id="验证本地仓库关联到远程服务器的-Git-仓库"><a href="#验证本地仓库关联到远程服务器的-Git-仓库" class="headerlink" title="验证本地仓库关联到远程服务器的 Git 仓库"></a>验证本地仓库关联到远程服务器的 Git 仓库</h3><ol>
+<li><p>打开终端或命令行，进入到您本地的 Git 仓库目录。</p>
+</li>
+<li><p>运行以下命令，查看当前配置的远程仓库信息：</p>
+</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs bash">git remote -v</code></pre></div>
+
+<p>显示本地仓库的远程关联信息。如果您已经成功关联了远程仓库，您会看到类似于以下的输出：</p>
+<div class="code-wrapper"><pre><code class="hljs bash">origin  ssh://git@8.8.8.8:33/home/git/hugo.git (fetch)
+origin  ssh://git@8.8.8.8:33/home/git/hugo.git (push)</code></pre></div>
+
+<p>在这个输出中，<code>origin</code> 是远程仓库的名称，后面的 URL 显示了远程仓库的地址。如果您在这里看到您想要关联的服务器地址和端口，说明关联已经成功。</p>
+<ol start="3">
+<li>您还可以尝试进行一次 <code>git fetch</code> 操作，以从远程仓库获取最新的更新：</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs bash">git fetch origin</code></pre></div>
+
+
+<p>如果操作成功，说明您的本地仓库可以与远程仓库通信。</p>
+<ol start="4">
+<li>最后，您可以尝试进行一次 <code>git push</code> 操作，将本地的更改推送到远程仓库：</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs bash">git push origin master</code></pre></div>
+
+<ol start="5">
+<li>测试 SSH 连接 (注意:ssh是33)</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs bash">ssh -p 33 git@8.8.8.8</code></pre></div>
+
+<p>这是是一个用于测试 SSH 连接的命令，它会尝试使用 SSH 协议通过指定的端口连接到指定的 IP 地址。如果成功连接，您将会看到类似于以下的输出</p>
+<div class="code-wrapper"><pre><code class="hljs delphi">Welcome <span class="hljs-keyword">to</span> Ubuntu <span class="hljs-number">20.04</span>.<span class="hljs-number">6</span> LTS (GNU/Linux <span class="hljs-number">5.4</span>.<span class="hljs-number">0</span>-<span class="hljs-number">155</span>-<span class="hljs-keyword">generic</span> x86_64)
+...
+</code></pre></div>
+
+
+<h2 id="4-自动推送脚本"><a href="#4-自动推送脚本" class="headerlink" title="4. 自动推送脚本"></a>4. 自动推送脚本</h2><p>每次都需要生成静态文件再推到服务端仓库，很麻烦，所以写一个脚本</p>
+<p>网站根目录 <code>Mysite</code> 下新建一个 <code>vps.sh</code> 脚本文件</p>
+<div class="code-wrapper"><pre><code class="hljs shell">cd Mysite
+touch vps.sh</code></pre></div>
+
+<p>向其中添加内容：记得修改为你的 <code>ip</code></p>
+<div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span>
+hugo -D --gc
+<span class="hljs-built_in">cd</span> public
+git init
+git add .
+git commit -m <span class="hljs-string">&#x27;Update My Site to vps&#x27;</span>
+git push origin master</code></pre></div>
+
+<p>双击打开运行<code>vps.sh</code>即可自动推送文件到仓库,以后写完博客或修改博客后都需要运行一下<code>vps.sh</code>,才能部署到云端</p>
+<p>注意,第一次运行<code>vps.sh</code>可能会出现如图这种情况,直接输入yes回车即可,如果仓库里没发现上传的文件可以再运行一次<code>vps.sh</code></p>
+<h3 id="5-拉取远程更改并合并"><a href="#5-拉取远程更改并合并" class="headerlink" title="5. 拉取远程更改并合并"></a>5. 拉取远程更改并合并</h3><ol>
+<li>在运行 <code>git push</code> 之前，先运行以下命令来拉取远程仓库的更改并尝试合并它们到你的本地分支：</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs bash">git pull origin master</code></pre></div>
+<p>如果出现冲突，需要解决冲突后再次提交</p>
+<ol start="2">
+<li><strong>强制推送：</strong> 如果你确定你的本地更改是正确的，而且你不需要保留远程仓库的更改，可以使用强制推送。但要注意，强制推送会覆盖远程分支的历史，可能会导致数据丢失。</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs bash">git push -f origin master</code></pre></div>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/hugo/" class="print-no-link">#hugo</a>
+      
+        <a href="/tags/%E5%8D%9A%E5%AE%A2/" class="print-no-link">#博客</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>迁移 hugo 博客到服务器上</div>
+      <div>https://blog.taoshuge.eu.org/posts/623e9381.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>羊驼</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年8月12日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年5月15日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/posts/a2998cf2.html" title="强大的LDNMP一键建站脚本工具">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">强大的LDNMP一键建站脚本工具</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/d5e3cb91.html" title="Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘">
+                        <span class="hidden-mobile">Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="twikoo"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/twikoo/1.6.8/twikoo.all.min.js', function() {
+        var options = Object.assign(
+          {"envId":"https://twikoo.talimus.eu.org/","region":"ap-shanghai","path":"/"},
+          {
+            el: '#twikoo',
+            path: '/',
+            onCommentLoaded: function() {
+              Fluid.utils.listenDOMLoaded(function() {
+                var imgSelector = '#twikoo .tk-content img:not(.tk-owo-emotion)';
+                Fluid.plugins.imageCaption(imgSelector);
+                Fluid.plugins.fancyBox(imgSelector);
+              });
+            }
+          }
+        )
+        twikoo.init(options)
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
