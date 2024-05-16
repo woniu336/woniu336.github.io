@@ -18,26 +18,24 @@
   <meta name="author" content="羊驼">
   <meta name="keywords" content="羊驼blog,Docker,服务器,宝塔,VPS,建站,网站,博客,搬瓦工,好玩儿的docker项目,AI技术">
   
-    <meta name="description" content="感谢 @WM 的推荐，来自 X 的用户 @StarIight✨ 分享了一个 Featured&#x2F;Bug：只需要在安装 Windows 11 时，使用用户名 &#x6e;&#x6f;&#64;&#x74;&#104;&#97;&#x6e;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#109; 登录，即可跳过联网账户，轻松创建本地账。@Appinn">
+    <meta name="description" content="有时候我需要使用navicat工具来访问远程数据库，会遇到访问不了的情况，所以记录下方法。            添加用户 首先打开ssh终端，进入数据库，提示输入数据库密码  mysql -u root -p   例如：添加一个名为pp的用户，密码是pp123  GRANT ALL PRIVILEGES ON *.* TO &#x27;pp&#x27;@&#x27;%&amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户">
-<meta property="og:url" content="https://blog.taoshuge.eu.org/posts/17d883d4.html">
+<meta property="og:title" content="给远程数据库添加一个可以外部访问的用户">
+<meta property="og:url" content="https://blog.taoshuge.eu.org/posts/73c005d4.html">
 <meta property="og:site_name" content="羊驼blog">
-<meta property="og:description" content="感谢 @WM 的推荐，来自 X 的用户 @StarIight✨ 分享了一个 Featured&#x2F;Bug：只需要在安装 Windows 11 时，使用用户名 &#x6e;&#x6f;&#64;&#x74;&#104;&#97;&#x6e;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#109; 登录，即可跳过联网账户，轻松创建本地账。@Appinn">
+<meta property="og:description" content="有时候我需要使用navicat工具来访问远程数据库，会遇到访问不了的情况，所以记录下方法。            添加用户 首先打开ssh终端，进入数据库，提示输入数据库密码  mysql -u root -p   例如：添加一个名为pp的用户，密码是pp123  GRANT ALL PRIVILEGES ON *.* TO &#x27;pp&#x27;@&#x27;%&amp;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://r2.leshans.eu.org/2023/08/d9e3cb6fa7ef31f63892d6960cddaac6.webp">
-<meta property="article:published_time" content="2023-08-04T19:04:51.000Z">
-<meta property="article:modified_time" content="2024-05-16T09:21:43.577Z">
+<meta property="article:published_time" content="2024-04-12T05:02:45.000Z">
+<meta property="article:modified_time" content="2024-05-16T14:32:25.633Z">
 <meta property="article:author" content="羊驼">
-<meta property="article:tag" content="windows11">
+<meta property="article:tag" content="羊驼blog,Docker,服务器,宝塔,VPS,建站,网站,博客,搬瓦工,好玩儿的docker项目,AI技术">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://r2.leshans.eu.org/2023/08/d9e3cb6fa7ef31f63892d6960cddaac6.webp">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户 - 羊驼blog</title>
+  <title>给远程数据库添加一个可以外部访问的用户 - 羊驼blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -284,7 +282,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户</span>
+            <span id="subtitle">给远程数据库添加一个可以外部访问的用户</span>
           
         </div>
 
@@ -295,8 +293,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-08-05 03:04" pubdate>
-          2023年8月5日 凌晨
+        <time datetime="2024-04-12 13:02" pubdate>
+          2024年4月12日 下午
         </time>
       </span>
     
@@ -307,7 +305,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          277 字
+          227 字
         
       </span>
     
@@ -318,7 +316,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -356,6 +354,21 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
+  <aside class="sidebar category-bar" style="margin-right: -1rem">
+    
+
+
+
+
+
+<div class="category-list">
+  
+  
+</div>
+
+
+  </aside>
+
 
     </div>
 
@@ -363,22 +376,49 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户</h1>
+            <h1 id="seo-header">给远程数据库添加一个可以外部访问的用户</h1>
             
             
               <div class="markdown-body">
                 
-                <p>感谢 @WM 的推荐，来自 X 的用户 @StarIight✨ 分享了一个 Featured&#x2F;Bug：只需要在安装 Windows 11 时，使用用户名 <a href="mailto:&#x6e;&#x6f;&#64;&#x74;&#104;&#97;&#x6e;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#109;">&#x6e;&#x6f;&#64;&#x74;&#104;&#97;&#x6e;&#x6b;&#121;&#111;&#117;&#x2e;&#x63;&#111;&#109;</a> 登录，即可跳过联网账户，轻松创建本地账。@Appinn</p>
-<p><img src="https://r2.leshans.eu.org/2023/08/d9e3cb6fa7ef31f63892d6960cddaac6.webp" srcset="/img/loading.gif" lazyload></p>
-<p>这就…当青小蛙看到这个的时候，只能卧槽了…</p>
-<p>就在前几天，青小蛙还在论坛分享了这个：《不联网，无网络安装 Windows 11》</p>
-<p>在 Windows 11 的最新版本 22H2 中，微软干掉了“我没有 Internet 连接”按钮，没登陆不让你装系统。</p>
-<p>有些电脑网卡没有驱动就直接卡在这里了。 此时你可以按下 Shift+F10 打开命令提示符，输入 <code>oobe\BypassNRO.cmd</code> 即可重启进入带有跳过按钮的 OOBE。</p>
-<hr>
-<h2 id="110-x6f-64-116-x68-97-x6e-107-x79-111-117-x2e-99-x6f-109"><a href="#110-x6f-64-116-x68-97-x6e-107-x79-111-117-x2e-99-x6f-109" class="headerlink" title="&#110;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#x79;&#111;&#117;&#x2e;&#99;&#x6f;&#109;"></a><a href="mailto:&#110;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#x79;&#111;&#117;&#x2e;&#99;&#x6f;&#109;">&#110;&#x6f;&#64;&#116;&#x68;&#97;&#x6e;&#107;&#x79;&#111;&#117;&#x2e;&#99;&#x6f;&#109;</a></h2><p>而这个莫名其妙又有些好笑的账户，基本上就是替代上面的命令行，只需要登录时输入，密码随意，就能跟着向导创建本地账户了。</p>
-<p>简直…太好用。</p>
-<p>微软你说你是不是深井冰。</p>
+                <div class="note note-success">
+            <p>有时候我需要使用navicat工具来访问远程数据库，会遇到访问不了的情况，所以记录下方法。</p>
+          </div>
+<h3 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h3><ol>
+<li>首先打开ssh终端，进入数据库，提示输入数据库密码</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs css">mysql -u root -<span class="hljs-selector-tag">p</span></code></pre></div>
 
+<ol start="2">
+<li>例如：添加一个名为<code>pp</code>的用户，密码是<code>pp123</code></li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs pgsql"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;pp&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;pp123&#x27;</span> <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">OPTION</span>;</code></pre></div>
+
+<ol start="3">
+<li>确保对权限所做的任何更改立即生效</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs abnf">FLUSH PRIVILEGES<span class="hljs-comment">;</span></code></pre></div>
+
+<ol start="4">
+<li>退出</li>
+</ol>
+<div class="code-wrapper"><pre><code class="hljs mathematica">按 <span class="hljs-variable">Ctrl</span> <span class="hljs-operator">+</span> <span class="hljs-built_in">D</span></code></pre></div>
+
+<div class="note note-info">
+            <p>以上表示允许用户从任何主机访问数据库，但如果加以限制，只允许本地ip为8.8.8.8的用户访问数据库呢？</p>
+          </div>
+<p>只需要修改第二步：</p>
+<div class="code-wrapper"><pre><code class="hljs pgsql"><span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">ALL</span> <span class="hljs-keyword">PRIVILEGES</span> <span class="hljs-keyword">ON</span> *.* <span class="hljs-keyword">TO</span> <span class="hljs-string">&#x27;pp&#x27;</span>@<span class="hljs-string">&#x27;8.8.8.8&#x27;</span> IDENTIFIED <span class="hljs-keyword">BY</span> <span class="hljs-string">&#x27;pp123&#x27;</span> <span class="hljs-keyword">WITH</span> <span class="hljs-keyword">GRANT</span> <span class="hljs-keyword">OPTION</span>;</code></pre></div>
+
+
+<h3 id="查看用户"><a href="#查看用户" class="headerlink" title="查看用户"></a>查看用户</h3><p>还是先进入数据库</p>
+<div class="code-wrapper"><pre><code class="hljs css">mysql -u root -<span class="hljs-selector-tag">p</span></code></pre></div>
+
+<p>查看用户</p>
+<div class="code-wrapper"><pre><code class="hljs n1ql"><span class="hljs-keyword">SELECT</span> <span class="hljs-keyword">User</span>, Host, <span class="hljs-keyword">Password</span> <span class="hljs-keyword">FROM</span> mysql.<span class="hljs-keyword">user</span>;</code></pre></div>
+
+<h3 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h3><p>例如：删除用户名为“pp”的用户帐户</p>
+<div class="code-wrapper"><pre><code class="hljs n1ql"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;pp&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span>;</code></pre></div>
                 
               </div>
             
@@ -386,34 +426,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E7%B3%BB%E7%BB%9F/" class="category-chain-item">系统</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/windows11/" class="print-no-link">#windows11</a>
-      
-    </div>
   
 </div>
 
@@ -423,8 +435,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户</div>
-      <div>https://blog.taoshuge.eu.org/posts/17d883d4.html</div>
+      <div>给远程数据库添加一个可以外部访问的用户</div>
+      <div>https://blog.taoshuge.eu.org/posts/73c005d4.html</div>
     </div>
     <div class="license-meta">
       
@@ -436,7 +448,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年8月5日</div>
+          <div>2024年4月12日</div>
         </div>
       
       
@@ -473,9 +485,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/8d458906.html" title="Telegram 必备机器人，支持ChatGPT，永久免费，一键汉化，海量群组搜索，只有你还不知道？">
+                      <a href="/posts/8e30f9e8.html" title="docker安装脚本与区别">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Telegram 必备机器人，支持ChatGPT，永久免费，一键汉化，海量群组搜索，只有你还不知道？</span>
+                        <span class="hidden-mobile">docker安装脚本与区别</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -483,8 +495,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/8c1cdb33.html" title="目前最简单、最安全、最稳定的专属节点搭建方法">
-                        <span class="hidden-mobile">目前最简单、最安全、最稳定的专属节点搭建方法</span>
+                      <a href="/posts/5b25d373.html" title="两台服务器利用rclone同步文件解决方案">
+                        <span class="hidden-mobile">两台服务器利用rclone同步文件解决方案</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
