@@ -26,7 +26,7 @@
 <meta property="og:description" content="本文意图解决使用 GitHub 访问(https) 或者 git clone（https or ssh）慢的问题。在此分享我的方法，我所了解的 GitHub 加速最佳方案。  前提是，你的木弟子应该还行，木弟子越好，GitHub 体验越好  很多文章没有讲全面，只讲了 http proxy，而没有讲 ssh proxy。事实上大部分程序员使用 GitHub 都会使用 SSH keys（普通用户可能">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-09-02T18:09:30.000Z">
-<meta property="article:modified_time" content="2024-05-16T09:21:43.574Z">
+<meta property="article:modified_time" content="2024-05-17T21:12:10.536Z">
 <meta property="article:author" content="羊驼">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="github">
@@ -286,7 +286,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          373 字
+          663 字
         
       </span>
     
@@ -297,7 +297,7 @@
         
         
         
-          4 分钟
+          6 分钟
         
       </span>
     
@@ -354,33 +354,27 @@
 <p>很多文章没有讲全面，只讲了 <code>http proxy</code>，而没有讲 <code>ssh proxy</code>。事实上大部分程序员使用 GitHub 都会使用 SSH keys（普通用户可能就不会了），在本机生成 <code>rsa</code> 公私钥(其他的类型还有 dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk)，然后把公钥内容拷贝、设置进 GitHub。</p>
 <p>所以程序员 clone 一个仓库一般是 ssh clone 而不是 https clone</p>
 <p>1</p>
-<p><code>$ git clone git@github.com:xxx/yyy.git</code></p>
+<p><code>git clone git@github.com:xxx/yyy.git</code></p>
 <p>如果你不配置 ssh 代理或者没有透明代理之类的网络环境（其实还有一些代理工具，不过更加小众），直接硬拖到本地大概率是很慢的。如果使用 http 代理，如果木弟子质量好，其实也还行</p>
 <p>1</p>
-<p><code>$ git clone https://github.com/xxx/yyy.git</code></p>
+<p><code>git clone https://github.com/xxx/yyy.git</code></p>
 <p>但这样不如 ssh clone 稳定。下面我们来设置 <code>http proxy</code> 和 <code>ssh proxy</code>。</p>
 <h2 id="设置-Http-Proxy"><a href="#设置-Http-Proxy" class="headerlink" title="设置 Http Proxy"></a>设置 Http Proxy</h2><div class="code-wrapper"><pre><code class="hljs bash">git config --global http.proxy socks5://127.0.0.1:7890 
 git config --global https.proxy socks5://127.0.0.1:7890</code></pre></div>
 
 
 <p>好了，说回来。但这样配置的话会使本机所有的 git 服务都走了代理，假如你在良心云上（国内主机）部署了自己的 gitea，服务地址 <code>https://gitea.example.com</code>，那么可以只配置 GitHub 的 http proxy，即</p>
-<div class="code-wrapper"><pre><code class="hljs bash">git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
-````
+<div class="code-wrapper"><pre><code class="hljs bash">git config --global http.https://github.com.proxy socks5://127.0.0.1:7890</code></pre></div>
 
-这样做实际上是修改了 `~/.gitconfig` 文件，添加了如下内容
-</code></pre></div>
-<p>[http “<a target="_blank" rel="noopener" href="https://github.com"]">https://github.com&quot;]</a><br>        proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:7890</p>
-<div class="code-wrapper"><pre><code class="hljs bash">
-<span class="hljs-comment">## 设置 SSH Proxy (推荐)</span>
+<p>这样做实际上是修改了 <code>~/.gitconfig</code> 文件，添加了如下内容</p>
+<div class="code-wrapper"><pre><code class="hljs csharp">[<span class="hljs-meta">http <span class="hljs-string">&quot;https://github.com&quot;</span></span>]
+        proxy = socks5:<span class="hljs-comment">//127.0.0.1:7890</span></code></pre></div>
 
-&gt; 设置ssh代理,可加速 git <span class="hljs-built_in">clone</span> SSH协议下载
-
-<span class="hljs-comment">### Linux &amp; macOS</span>
-
-配置文件在用户家目录下的 .ssh/config 其中 `nc` 程序位于 `/usr/bin/nc`
-
-```bash
-<span class="hljs-built_in">cat</span> ~/.ssh/config
+<h2 id="设置-SSH-Proxy-推荐"><a href="#设置-SSH-Proxy-推荐" class="headerlink" title="设置 SSH Proxy (推荐)"></a>设置 SSH Proxy (推荐)</h2><blockquote>
+<p>设置ssh代理,可加速 git clone SSH协议下载</p>
+</blockquote>
+<h3 id="Linux-macOS"><a href="#Linux-macOS" class="headerlink" title="Linux &amp; macOS"></a>Linux &amp; macOS</h3><p>配置文件在用户家目录下的 .ssh&#x2F;config 其中 <code>nc</code> 程序位于 <code>/usr/bin/nc</code></p>
+<div class="code-wrapper"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> ~/.ssh/config
 
 Host github.com
  Hostname ssh.github.com
@@ -479,7 +473,7 @@ Host github.com
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年5月16日</div>
+          <div>2024年5月18日</div>
         </div>
       
       
