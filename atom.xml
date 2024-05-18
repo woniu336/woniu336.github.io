@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>羊驼blog</title>
+  <icon>https://blog.taoshuge.eu.org/icon.png</icon>
+  
+  <link href="https://blog.taoshuge.eu.org/atom.xml" rel="self"/>
+  
+  <link href="https://blog.taoshuge.eu.org/"/>
+  <updated>2024-05-17T23:16:37.656Z</updated>
+  <id>https://blog.taoshuge.eu.org/</id>
+  
+  <author>
+    <name>羊驼</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>切换npm为国内镜像源，加速依赖包下载</title>
+    <link href="https://blog.taoshuge.eu.org/posts/776b4935.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/776b4935.html</id>
+    <published>2024-05-16T15:27:54.000Z</published>
+    <updated>2024-05-17T23:16:37.656Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;国内npm镜像源&quot;&gt;&lt;a href=&quot;#国内npm镜像源&quot; class=&quot;headerlink&quot; title=&quot;国内npm镜像源&quot;&gt;&lt;/a&gt;国内npm镜像源&lt;/h3&gt;&lt;div class=&quot;note note-success&quot;&gt;
+           </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一个策略，让ChatGPT翻译能力提升100%</title>
+    <link href="https://blog.taoshuge.eu.org/posts/259aa252.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/259aa252.html</id>
+    <published>2024-05-14T09:46:37.000Z</published>
+    <updated>2024-05-16T14:39:54.972Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Prompt&quot;&gt;&lt;a href=&quot;#Prompt&quot; class=&quot;headerlink&quot; title=&quot;Prompt&quot;&gt;&lt;/a&gt;Prompt&lt;/h3&gt;&lt;div class=&quot;code-wrapper&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs</summary>
+        
+      
+    
+    
+    
+    <category term="chatgpt" scheme="https://blog.taoshuge.eu.org/categories/chatgpt/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SSH 免密登录，设置好仍然需要密码登录解决方法</title>
+    <link href="https://blog.taoshuge.eu.org/posts/8194b7a3.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/8194b7a3.html</id>
+    <published>2024-05-13T06:56:25.000Z</published>
+    <updated>2024-05-16T13:15:24.220Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;说明： ssh秘钥登录设置好了，但是登录的时候依然需要提供密码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;查看系统安全日志，定位问题&quot;&gt;&lt;a href=&quot;#查看系统安全日志，定位问题&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>非常实用简单的利用chatgpt写脚本技巧</title>
+    <link href="https://blog.taoshuge.eu.org/posts/bc206c7.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/bc206c7.html</id>
+    <published>2024-05-10T12:19:05.000Z</published>
+    <updated>2024-05-16T14:39:24.726Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;方法经验&quot;&gt;&lt;a href=&quot;#方法经验&quot; class=&quot;headerlink&quot; title=&quot;方法经验&quot;&gt;&lt;/a&gt;方法经验&lt;/h3&gt;&lt;p&gt;一个优秀的提示词(prompt) + 一个简洁的脚本框架 +</summary>
+        
+      
+    
+    
+    
+    <category term="chatgpt" scheme="https://blog.taoshuge.eu.org/categories/chatgpt/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网页翻译终极方案-DeepLX</title>
+    <link href="https://blog.taoshuge.eu.org/posts/195f569d.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/195f569d.html</id>
+    <published>2024-05-07T11:16:19.000Z</published>
+    <updated>2024-05-16T13:15:23.971Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;公益URL:&lt;br&gt;&lt;a href=&quot;https://deepl.wangwangit.com/&quot;&gt;https://deepl.wangwangit.com/&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;code-wrapper&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>pip 安装插件加速技巧: 修改为国内源</title>
+    <link href="https://blog.taoshuge.eu.org/posts/a1824b40.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/a1824b40.html</id>
+    <published>2024-05-07T01:00:13.000Z</published>
+    <updated>2024-05-16T13:15:23.984Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;在国内，用 pip 安装 python 依赖包的时候，总是会遇到 Timeout 或者下载太慢的问题。&lt;br&gt;这是因为 pip 源在国外，解决方法就是把 pip 源改成国内的，就可以实现 pip install</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu安装特定版本的python技巧</title>
+    <link href="https://blog.taoshuge.eu.org/posts/8a9eb91c.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/8a9eb91c.html</id>
+    <published>2024-05-05T15:14:19.000Z</published>
+    <updated>2024-05-16T13:15:23.986Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;起因:</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title> Llama3 – 8B/70B 大模型！相关的工具和模型下载</title>
+    <link href="https://blog.taoshuge.eu.org/posts/af406e21.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/af406e21.html</id>
+    <published>2024-05-05T06:18:40.000Z</published>
+    <updated>2024-05-16T13:15:23.989Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;因为平时会去了解AI相关的东西,写脚本也会用到,所以,记录一下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://imgs.leshans.eu.org/docs/1714954487.png&quot;&gt;&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>永不过期的SSL/TLS证书解决方案</title>
+    <link href="https://blog.taoshuge.eu.org/posts/562a2571.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/562a2571.html</id>
+    <published>2024-05-03T14:02:25.000Z</published>
+    <updated>2024-05-16T13:15:23.989Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前提: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;cloudflare API</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu开启zram彻底解决高I/O引起的卡顿，复制文件无比流畅</title>
+    <link href="https://blog.taoshuge.eu.org/posts/16004f5a.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/16004f5a.html</id>
+    <published>2024-05-03T04:58:52.000Z</published>
+    <updated>2024-05-16T13:15:23.989Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;环境: Ubuntu 22.04.3 LTS&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ZRAM</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Cloudflare防火墙其他WAF设置</title>
+    <link href="https://blog.taoshuge.eu.org/posts/f9256692.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/f9256692.html</id>
+    <published>2024-04-30T03:46:45.000Z</published>
+    <updated>2024-05-16T13:15:23.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;其他WAF设置&quot;&gt;&lt;a href=&quot;#其他WAF设置&quot; class=&quot;headerlink&quot; title=&quot;其他WAF设置&quot;&gt;&lt;/a&gt;其他WAF设置&lt;/h3&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Cloudflare" scheme="https://blog.taoshuge.eu.org/tags/Cloudflare/"/>
+    
+    <category term="防火墙" scheme="https://blog.taoshuge.eu.org/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cloudflare高级防御规则 看看我的网站如何用防御的</title>
+    <link href="https://blog.taoshuge.eu.org/posts/d06d821a.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/d06d821a.html</id>
+    <published>2024-04-30T01:12:57.000Z</published>
+    <updated>2024-05-16T13:15:23.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;网站已趋于稳定，并且经过nginx调优。我想先分享一下Cloudflare的WAF规则，因为这是最有效的防御之一，可以抵御大量恶意攻击流量，我已经验证了数月。&lt;/p&gt;
+&lt;p&gt;对于海外独立站电商网站，Cloudflare的CDN服务是首选，它强大无比，毫无疑问。对于中小型需求</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Fail2Ban对接cloudflare防火墙技巧</title>
+    <link href="https://blog.taoshuge.eu.org/posts/a81b4be4.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/a81b4be4.html</id>
+    <published>2024-04-27T10:12:04.000Z</published>
+    <updated>2024-05-16T13:15:23.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;我的大部分教程或者叫笔记,除了给自己看,考虑到其他朋友也会看到,本着简洁明白的原则,我基本上会制作一些快捷脚本,方便大家使用,本次脚本,我针对使用宝塔面板的朋友,当然,使用什么看个人情况,你可以更改我的脚本,已达到适合你的方式&lt;/p&gt;
+&lt;/bloc</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Cloudflare" scheme="https://blog.taoshuge.eu.org/tags/Cloudflare/"/>
+    
+    <category term="fail2Ban" scheme="https://blog.taoshuge.eu.org/tags/fail2Ban/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一键安装宝塔面板破解版</title>
+    <link href="https://blog.taoshuge.eu.org/posts/cddd6ecc.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/cddd6ecc.html</id>
+    <published>2024-04-20T07:35:14.000Z</published>
+    <updated>2024-05-16T13:15:23.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;一键脚本&quot;&gt;&lt;a href=&quot;#一键脚本&quot; class=&quot;headerlink&quot; title=&quot;一键脚本&quot;&gt;&lt;/a&gt;一键脚本&lt;/h3&gt;&lt;div class=&quot;code-wrapper&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;curl -sSO</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>完美的acme证书申请脚本-基于宝塔面板与cloudflare API</title>
+    <link href="https://blog.taoshuge.eu.org/posts/3e8a77eb.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/3e8a77eb.html</id>
+    <published>2024-04-16T14:44:54.000Z</published>
+    <updated>2024-05-16T13:15:23.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;br&gt;
+
+
+&lt;p&gt;此脚本仅适用于 &lt;strong&gt;宝塔面板&lt;/strong&gt; 与 &lt;strong&gt;cloudflare DNS&lt;/strong&gt; 验证</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>acme实用技巧：稳妥的自动更新证书之宝塔面板</title>
+    <link href="https://blog.taoshuge.eu.org/posts/ca40c71c.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/ca40c71c.html</id>
+    <published>2024-04-16T05:00:13.000Z</published>
+    <updated>2024-05-16T13:15:23.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;br&gt;
+
+&lt;h2 id=&quot;1-安装-acme-sh&quot;&gt;&lt;a href=&quot;#1-安装-acme-sh&quot; class=&quot;headerlink&quot; title=&quot;1. 安装 acme.sh&quot;&gt;&lt;/a&gt;1. 安装 acme.sh&lt;/h2&gt;&lt;p&gt;安装很简单, 一个命令:&lt;/p&gt;
+&lt;div</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>docker-compose 与 docker compose 区别</title>
+    <link href="https://blog.taoshuge.eu.org/posts/a3db1cf5.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/a3db1cf5.html</id>
+    <published>2024-04-14T04:23:50.000Z</published>
+    <updated>2024-05-16T13:15:23.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Docker Compose 有两种使用方式,分别是 &lt;code&gt;docker-compose&lt;/code&gt; 和 &lt;code&gt;docker compose&lt;/code&gt;。这两种方式之间存在一些差异:&lt;/p&gt;
+&lt;h2 id=&quot;docker-compose&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>docker安装脚本与区别</title>
+    <link href="https://blog.taoshuge.eu.org/posts/8e30f9e8.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/8e30f9e8.html</id>
+    <published>2024-04-13T01:14:23.000Z</published>
+    <updated>2024-05-16T13:15:23.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;脚本一&quot;&gt;&lt;a href=&quot;#脚本一&quot; class=&quot;headerlink&quot; title=&quot;脚本一&quot;&gt;&lt;/a&gt;脚本一&lt;/h2&gt;&lt;div class=&quot;code-wrapper&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;curl -fsSL</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>给远程数据库添加一个可以外部访问的用户</title>
+    <link href="https://blog.taoshuge.eu.org/posts/73c005d4.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/73c005d4.html</id>
+    <published>2024-04-12T05:02:45.000Z</published>
+    <updated>2024-05-16T14:40:10.975Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note note-success&quot;&gt;
+            &lt;p&gt;有时候我需要使用navicat工具来访问远程数据库，会遇到访问不了的情况，所以记录下方法。&lt;/p&gt;
+          &lt;/div&gt;
+&lt;h3 id=&quot;添加用户&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="数据库" scheme="https://blog.taoshuge.eu.org/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两台服务器利用rclone同步文件解决方案</title>
+    <link href="https://blog.taoshuge.eu.org/posts/5b25d373.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/5b25d373.html</id>
+    <published>2024-04-11T05:00:22.000Z</published>
+    <updated>2024-05-16T13:15:23.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;安装rclone&quot;&gt;&lt;a href=&quot;#安装rclone&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
