@@ -1,0 +1,37 @@
+User-agent: *
+Crawl-delay: 10
+Disallow: /wp-admin/
+Disallow: /go/
+Disallow: /wp-content/plugins/
+Disallow: /?s=*
+Disallow: /author/
+Disallow: /astra-advanced-hook/
+Disallow: /theme
+Disallow: /demo/*
+Disallow: /*/page/*
+Disallow: /*blackhole
+Disallow: /?blackhole
+Allow: /wp-admin/admin-ajax.php
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: YaK
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+Sitemap: https://blog.taoshuge.eu.org/sitemap.xml
