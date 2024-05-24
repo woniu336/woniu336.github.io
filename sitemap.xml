@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://blog.taoshuge.eu.org/posts/a96d110f.html</loc>
+    <loc>https://blog.taoshuge.eu.org/posts/1e00f5f6.html</loc>
     
     <lastmod>2024-05-16</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://blog.taoshuge.eu.org/posts/1e00f5f6.html</loc>
+    <loc>https://blog.taoshuge.eu.org/posts/a96d110f.html</loc>
     
     <lastmod>2024-05-16</lastmod>
     
@@ -2320,13 +2320,6 @@
   </url>
   
   <url>
-    <loc>https://blog.taoshuge.eu.org/tags/vps/</loc>
-    <lastmod>2024-05-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.taoshuge.eu.org/tags/%E4%B9%A6%E7%AD%BE/</loc>
     <lastmod>2024-05-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -2335,6 +2328,13 @@
   
   <url>
     <loc>https://blog.taoshuge.eu.org/tags/vpn/</loc>
+    <lastmod>2024-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.taoshuge.eu.org/tags/vps/</loc>
     <lastmod>2024-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3232,14 +3232,14 @@
   </url>
   
   <url>
-    <loc>https://blog.taoshuge.eu.org/categories/%E5%BB%BA%E7%AB%99/</loc>
+    <loc>https://blog.taoshuge.eu.org/categories/%E6%8F%92%E4%BB%B6/</loc>
     <lastmod>2024-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.taoshuge.eu.org/categories/%E6%8F%92%E4%BB%B6/</loc>
+    <loc>https://blog.taoshuge.eu.org/categories/%E5%BB%BA%E7%AB%99/</loc>
     <lastmod>2024-05-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
