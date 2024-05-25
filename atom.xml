@@ -6,7 +6,7 @@
   <link href="https://blog.taoshuge.eu.org/atom.xml" rel="self"/>
   
   <link href="https://blog.taoshuge.eu.org/"/>
-  <updated>2024-05-25T14:05:39.781Z</updated>
+  <updated>2024-05-25T14:14:17.540Z</updated>
   <id>https://blog.taoshuge.eu.org/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>264</title>
+    <title>Cloudflare Worker 部署bingai</title>
     <link href="https://blog.taoshuge.eu.org/posts/70068d2c.html"/>
     <id>https://blog.taoshuge.eu.org/posts/70068d2c.html</id>
     <published>2024-05-25T11:33:35.000Z</published>
-    <updated>2024-05-25T14:05:39.781Z</updated>
+    <updated>2024-05-25T14:14:17.540Z</updated>
     
     
       
