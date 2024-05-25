@@ -6,7 +6,7 @@
   <link href="https://blog.taoshuge.eu.org/atom.xml" rel="self"/>
   
   <link href="https://blog.taoshuge.eu.org/"/>
-  <updated>2024-05-24T18:59:56.470Z</updated>
+  <updated>2024-05-25T04:01:20.100Z</updated>
   <id>https://blog.taoshuge.eu.org/</id>
   
   <author>
@@ -17,14 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>coze-discord-proxy</title>
-    <link href="https://blog.taoshuge.eu.org/posts/6c79a3.html"/>
-    <id>https://blog.taoshuge.eu.org/posts/6c79a3.html</id>
-    <published>2024-05-16T17:13:57.000Z</published>
-    <updated>2024-05-24T18:59:56.470Z</updated>
+    <title>免费撸gtp-4o：整合各种 API 访问方式</title>
+    <link href="https://blog.taoshuge.eu.org/posts/ee62188f.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/ee62188f.html</id>
+    <published>2024-05-25T03:39:59.000Z</published>
+    <updated>2024-05-25T04:01:20.100Z</updated>
     
     
-    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;API地址： &lt;a href=&quot;https://chat.92dm.top/&quot;&gt;https://chat.92dm.top&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;密钥：</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>免费撸gpt-4o和各种大模型实用经验分享</title>
+    <link href="https://blog.taoshuge.eu.org/posts/99652819.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/99652819.html</id>
+    <published>2024-05-25T01:44:54.000Z</published>
+    <updated>2024-05-25T03:57:21.959Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;项目&quot;&gt;&lt;a href=&quot;#项目&quot; class=&quot;headerlink&quot; title=&quot;项目&quot;&gt;&lt;/a&gt;项目&lt;/h1&gt;&lt;p&gt;github: &lt;a</summary>
+        
+      
     
     
     
@@ -444,32 +472,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>给远程数据库添加一个可以外部访问的用户</title>
-    <link href="https://blog.taoshuge.eu.org/posts/73c005d4.html"/>
-    <id>https://blog.taoshuge.eu.org/posts/73c005d4.html</id>
-    <published>2024-04-12T05:02:45.000Z</published>
-    <updated>2024-05-16T14:40:10.975Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;div class=&quot;note note-success&quot;&gt;
-            &lt;p&gt;有时候我需要使用navicat工具来访问远程数据库，会遇到访问不了的情况，所以记录下方法。&lt;/p&gt;
-          &lt;/div&gt;
-&lt;h3 id=&quot;添加用户&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="数据库" scheme="https://blog.taoshuge.eu.org/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
