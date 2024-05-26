@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>把图片转成Word或者Excel</title>
+    <link href="/posts/71102d45.html"/>
+    <url>/posts/71102d45.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><h3 id="1-图片转成csv"><a href="#1-图片转成csv" class="headerlink" title="1. 图片转成csv"></a>1. 图片转成csv</h3><ol><li>打开<a href="https://kimi.moonshot.cn/">https://kimi.moonshot.cn/</a> 上传图片，告诉kimi把图片内容转成csv</li></ol><p><img src="https://imgs.leshans.eu.org/docs/1716711353.png"></p><h3 id="2-csv转成pdf"><a href="#2-csv转成pdf" class="headerlink" title="2.csv转成pdf"></a>2.csv转成pdf</h3><ol start="2"><li>打开<a href="https://tableconvert.com/zh-cn/csv-to-pdf">https://tableconvert.com/zh-cn/csv-to-pdf</a> 粘贴csv内容，下载pdf<br><img src="https://imgs.leshans.eu.org/docs/1716711553.png"></li></ol><h3 id="3-pdf转word"><a href="#3-pdf转word" class="headerlink" title="3.pdf转word"></a>3.pdf转word</h3><ol start="3"><li>打开<a href="https://pdf2docx.cn/pdf2word/">https://pdf2docx.cn/pdf2word/</a><br><img src="https://imgs.leshans.eu.org/docs/1716711763.png"></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Cloudflare Worker 部署bingai</title>
     <link href="/posts/70068d2c.html"/>
     <url>/posts/70068d2c.html</url>

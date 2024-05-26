@@ -6,7 +6,7 @@
   <link href="https://blog.taoshuge.eu.org/atom.xml" rel="self"/>
   
   <link href="https://blog.taoshuge.eu.org/"/>
-  <updated>2024-05-25T16:27:40.351Z</updated>
+  <updated>2024-05-26T08:22:49.533Z</updated>
   <id>https://blog.taoshuge.eu.org/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>把图片转成Word或者Excel</title>
+    <link href="https://blog.taoshuge.eu.org/posts/71102d45.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/71102d45.html</id>
+    <published>2024-05-26T08:12:19.000Z</published>
+    <updated>2024-05-26T08:22:49.533Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;工作流程&quot;&gt;&lt;a href=&quot;#工作流程&quot; class=&quot;headerlink&quot; title=&quot;工作流程&quot;&gt;&lt;/a&gt;工作流程&lt;/h2&gt;&lt;h3 id=&quot;1-图片转成csv&quot;&gt;&lt;a href=&quot;#1-图片转成csv&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Cloudflare Worker 部署bingai</title>
@@ -445,28 +466,6 @@
 
 &lt;h2 id=&quot;1-安装-acme-sh&quot;&gt;&lt;a href=&quot;#1-安装-acme-sh&quot; class=&quot;headerlink&quot; title=&quot;1. 安装 acme.sh&quot;&gt;&lt;/a&gt;1. 安装 acme.sh&lt;/h2&gt;&lt;p&gt;安装很简单, 一个命令:&lt;/p&gt;
 &lt;div</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>docker-compose 与 docker compose 区别</title>
-    <link href="https://blog.taoshuge.eu.org/posts/a3db1cf5.html"/>
-    <id>https://blog.taoshuge.eu.org/posts/a3db1cf5.html</id>
-    <published>2024-04-14T04:23:50.000Z</published>
-    <updated>2024-05-16T13:15:23.990Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Docker Compose 有两种使用方式,分别是 &lt;code&gt;docker-compose&lt;/code&gt; 和 &lt;code&gt;docker compose&lt;/code&gt;。这两种方式之间存在一些差异:&lt;/p&gt;
-&lt;h2 id=&quot;docker-compose&quot;&gt;&lt;a</summary>
         
       
     
