@@ -6,7 +6,7 @@
   <link href="https://blog.taoshuge.eu.org/atom.xml" rel="self"/>
   
   <link href="https://blog.taoshuge.eu.org/"/>
-  <updated>2024-05-26T08:22:49.533Z</updated>
+  <updated>2024-05-26T17:55:07.315Z</updated>
   <id>https://blog.taoshuge.eu.org/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大语言模型记录表</title>
+    <link href="https://blog.taoshuge.eu.org/posts/9e08ec00.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/9e08ec00.html</id>
+    <published>2024-05-26T17:49:26.000Z</published>
+    <updated>2024-05-26T17:55:07.315Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;项目&quot;&gt;&lt;a href=&quot;#项目&quot; class=&quot;headerlink&quot; title=&quot;项目&quot;&gt;&lt;/a&gt;项目&lt;/h1&gt;&lt;p&gt;Github: &lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>把图片转成Word或者Excel</title>
@@ -63,7 +84,7 @@
     <link href="https://blog.taoshuge.eu.org/posts/ee62188f.html"/>
     <id>https://blog.taoshuge.eu.org/posts/ee62188f.html</id>
     <published>2024-05-25T03:39:59.000Z</published>
-    <updated>2024-05-26T05:51:57.355Z</updated>
+    <updated>2024-05-26T17:46:00.711Z</updated>
     
     
       
@@ -85,7 +106,7 @@
     <link href="https://blog.taoshuge.eu.org/posts/99652819.html"/>
     <id>https://blog.taoshuge.eu.org/posts/99652819.html</id>
     <published>2024-05-25T01:44:54.000Z</published>
-    <updated>2024-05-26T05:50:40.353Z</updated>
+    <updated>2024-05-26T17:47:01.175Z</updated>
     
     
       
@@ -442,30 +463,6 @@
 
 
 &lt;p&gt;此脚本仅适用于 &lt;strong&gt;宝塔面板&lt;/strong&gt; 与 &lt;strong&gt;cloudflare DNS&lt;/strong&gt; 验证</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>acme实用技巧：稳妥的自动更新证书之宝塔面板</title>
-    <link href="https://blog.taoshuge.eu.org/posts/ca40c71c.html"/>
-    <id>https://blog.taoshuge.eu.org/posts/ca40c71c.html</id>
-    <published>2024-04-16T05:00:13.000Z</published>
-    <updated>2024-05-16T13:15:23.990Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;br&gt;
-
-&lt;h2 id=&quot;1-安装-acme-sh&quot;&gt;&lt;a href=&quot;#1-安装-acme-sh&quot; class=&quot;headerlink&quot; title=&quot;1. 安装 acme.sh&quot;&gt;&lt;/a&gt;1. 安装 acme.sh&lt;/h2&gt;&lt;p&gt;安装很简单, 一个命令:&lt;/p&gt;
-&lt;div</summary>
         
       
     
