@@ -6,7 +6,7 @@
   <link href="https://blog.taoshuge.eu.org/atom.xml" rel="self"/>
   
   <link href="https://blog.taoshuge.eu.org/"/>
-  <updated>2024-05-26T17:55:07.315Z</updated>
+  <updated>2024-05-26T22:39:55.875Z</updated>
   <id>https://blog.taoshuge.eu.org/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>one-api还原数据库记录</title>
+    <link href="https://blog.taoshuge.eu.org/posts/e90fdc96.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/e90fdc96.html</id>
+    <published>2024-05-26T19:09:07.000Z</published>
+    <updated>2024-05-26T22:39:55.875Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note note-success&quot;&gt;
+            &lt;p&gt;one-api数据库目录：&amp;#x2F;home&amp;#x2F;ubuntu&amp;#x2F;data&amp;#x2F;one-api&lt;/p&gt;
+          &lt;/div&gt;
+
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>大语言模型记录表</title>
     <link href="https://blog.taoshuge.eu.org/posts/9e08ec00.html"/>
     <id>https://blog.taoshuge.eu.org/posts/9e08ec00.html</id>
     <published>2024-05-26T17:49:26.000Z</published>
-    <updated>2024-05-26T17:55:07.315Z</updated>
+    <updated>2024-05-27T13:13:00.939Z</updated>
     
     
       
@@ -439,30 +464,6 @@
         
         
     <summary type="html">&lt;h3 id=&quot;一键脚本&quot;&gt;&lt;a href=&quot;#一键脚本&quot; class=&quot;headerlink&quot; title=&quot;一键脚本&quot;&gt;&lt;/a&gt;一键脚本&lt;/h3&gt;&lt;div class=&quot;code-wrapper&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;curl -sSO</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>完美的acme证书申请脚本-基于宝塔面板与cloudflare API</title>
-    <link href="https://blog.taoshuge.eu.org/posts/3e8a77eb.html"/>
-    <id>https://blog.taoshuge.eu.org/posts/3e8a77eb.html</id>
-    <published>2024-04-16T14:44:54.000Z</published>
-    <updated>2024-05-16T13:15:23.990Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;br&gt;
-
-
-&lt;p&gt;此脚本仅适用于 &lt;strong&gt;宝塔面板&lt;/strong&gt; 与 &lt;strong&gt;cloudflare DNS&lt;/strong&gt; 验证</summary>
         
       
     
