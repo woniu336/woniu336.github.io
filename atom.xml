@@ -6,7 +6,7 @@
   <link href="https://blog.taoshuge.eu.org/atom.xml" rel="self"/>
   
   <link href="https://blog.taoshuge.eu.org/"/>
-  <updated>2024-05-26T22:39:55.875Z</updated>
+  <updated>2024-05-28T15:01:04.366Z</updated>
   <id>https://blog.taoshuge.eu.org/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ChatGPT魔法，定制个性化提示词！</title>
+    <link href="https://blog.taoshuge.eu.org/posts/eb7f191.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/eb7f191.html</id>
+    <published>2024-05-28T12:31:16.000Z</published>
+    <updated>2024-05-28T15:01:04.366Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;扮演Prompt创作者的角色&quot;&gt;&lt;a href=&quot;#扮演Prompt创作者的角色&quot; class=&quot;headerlink&quot; title=&quot;扮演Prompt创作者的角色&quot;&gt;&lt;/a&gt;扮演Prompt创作者的角色&lt;/h3&gt;&lt;div</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Windows安装Docker报错：当前计算机配置不支持 WSL2解决办法）</title>
+    <link href="https://blog.taoshuge.eu.org/posts/20018612.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/20018612.html</id>
+    <published>2024-05-27T21:16:48.000Z</published>
+    <updated>2024-05-27T21:19:42.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;div class=&quot;note note-success&quot;&gt;
+            &lt;p&gt;这个问题跟我之前卸载了Hyper-V虚拟机有关系&lt;/p&gt;
+         </summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>one-api还原数据库记录</title>
@@ -141,6 +185,21 @@
     <summary type="html">&lt;h1 id=&quot;为爱发电&quot;&gt;&lt;a href=&quot;#为爱发电&quot; class=&quot;headerlink&quot; title=&quot;为爱发电&quot;&gt;&lt;/a&gt;为爱发电&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
         
       
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>coze-discord-proxy 项目</title>
+    <link href="https://blog.taoshuge.eu.org/posts/6c79a3.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/6c79a3.html</id>
+    <published>2024-05-16T17:13:57.000Z</published>
+    <updated>2024-05-28T11:52:14.374Z</updated>
+    
+    
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
     
     
     
@@ -399,76 +458,6 @@
     <category term="Cloudflare" scheme="https://blog.taoshuge.eu.org/tags/Cloudflare/"/>
     
     <category term="防火墙" scheme="https://blog.taoshuge.eu.org/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cloudflare高级防御规则 看看我的网站如何用防御的</title>
-    <link href="https://blog.taoshuge.eu.org/posts/d06d821a.html"/>
-    <id>https://blog.taoshuge.eu.org/posts/d06d821a.html</id>
-    <published>2024-04-30T01:12:57.000Z</published>
-    <updated>2024-05-16T13:15:23.990Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;网站已趋于稳定，并且经过nginx调优。我想先分享一下Cloudflare的WAF规则，因为这是最有效的防御之一，可以抵御大量恶意攻击流量，我已经验证了数月。&lt;/p&gt;
-&lt;p&gt;对于海外独立站电商网站，Cloudflare的CDN服务是首选，它强大无比，毫无疑问。对于中小型需求</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Fail2Ban对接cloudflare防火墙技巧</title>
-    <link href="https://blog.taoshuge.eu.org/posts/a81b4be4.html"/>
-    <id>https://blog.taoshuge.eu.org/posts/a81b4be4.html</id>
-    <published>2024-04-27T10:12:04.000Z</published>
-    <updated>2024-05-16T13:15:23.990Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;我的大部分教程或者叫笔记,除了给自己看,考虑到其他朋友也会看到,本着简洁明白的原则,我基本上会制作一些快捷脚本,方便大家使用,本次脚本,我针对使用宝塔面板的朋友,当然,使用什么看个人情况,你可以更改我的脚本,已达到适合你的方式&lt;/p&gt;
-&lt;/bloc</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Cloudflare" scheme="https://blog.taoshuge.eu.org/tags/Cloudflare/"/>
-    
-    <category term="fail2Ban" scheme="https://blog.taoshuge.eu.org/tags/fail2Ban/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一键安装宝塔面板破解版</title>
-    <link href="https://blog.taoshuge.eu.org/posts/cddd6ecc.html"/>
-    <id>https://blog.taoshuge.eu.org/posts/cddd6ecc.html</id>
-    <published>2024-04-20T07:35:14.000Z</published>
-    <updated>2024-05-19T23:58:03.302Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;一键脚本&quot;&gt;&lt;a href=&quot;#一键脚本&quot; class=&quot;headerlink&quot; title=&quot;一键脚本&quot;&gt;&lt;/a&gt;一键脚本&lt;/h3&gt;&lt;div class=&quot;code-wrapper&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;curl -sSO</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
