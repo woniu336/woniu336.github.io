@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.taoshuge.eu.org/posts/eb7f191.html</loc>
+    
+    <lastmod>2024-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.taoshuge.eu.org/posts/259aa252.html</loc>
     
     <lastmod>2024-05-28</lastmod>
@@ -12,15 +21,6 @@
   
   <url>
     <loc>https://blog.taoshuge.eu.org/posts/20018612.html</loc>
-    
-    <lastmod>2024-05-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.taoshuge.eu.org/posts/eb7f191.html</loc>
     
     <lastmod>2024-05-28</lastmod>
     
