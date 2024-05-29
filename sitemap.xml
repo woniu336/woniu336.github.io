@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.taoshuge.eu.org/posts/e90fdc96.html</loc>
+    
+    <lastmod>2024-05-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.taoshuge.eu.org/posts/9e08ec00.html</loc>
+    
+    <lastmod>2024-05-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.taoshuge.eu.org/posts/197748e2.html</loc>
     
     <lastmod>2024-05-29</lastmod>
@@ -50,24 +68,6 @@
     <loc>https://blog.taoshuge.eu.org/posts/6c79a3.html</loc>
     
     <lastmod>2024-05-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.taoshuge.eu.org/posts/9e08ec00.html</loc>
-    
-    <lastmod>2024-05-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.taoshuge.eu.org/posts/e90fdc96.html</loc>
-    
-    <lastmod>2024-05-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
