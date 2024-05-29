@@ -6,7 +6,7 @@
   <link href="https://blog.taoshuge.eu.org/atom.xml" rel="self"/>
   
   <link href="https://blog.taoshuge.eu.org/"/>
-  <updated>2024-05-28T19:22:29.504Z</updated>
+  <updated>2024-05-29T17:41:16.455Z</updated>
   <id>https://blog.taoshuge.eu.org/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决Navicat连接postgresql时出现‘datlastsysoid does not exist‘报错</title>
+    <link href="https://blog.taoshuge.eu.org/posts/197748e2.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/197748e2.html</id>
+    <published>2024-05-29T17:35:10.000Z</published>
+    <updated>2024-05-29T17:41:16.455Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;报错&quot;&gt;&lt;a href=&quot;#报错&quot; class=&quot;headerlink&quot; title=&quot;报错&quot;&gt;&lt;/a&gt;报错&lt;/h3&gt;&lt;p&gt;Navicat连接postgresql时出现‘datlastsysoid does not exist‘报错&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>搭建一个好玩的 RSS 订阅网站记录</title>
+    <link href="https://blog.taoshuge.eu.org/posts/b0b6e153.html"/>
+    <id>https://blog.taoshuge.eu.org/posts/b0b6e153.html</id>
+    <published>2024-05-29T16:10:55.000Z</published>
+    <updated>2024-05-29T17:34:56.715Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;全文相关链接&quot;&gt;&lt;a href=&quot;#全文相关链接&quot; class=&quot;headerlink&quot; title=&quot;全文相关链接&quot;&gt;&lt;/a&gt;全文相关链接&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>ChatGPT魔法，定制个性化提示词！</title>
@@ -409,55 +453,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu开启zram彻底解决高I/O引起的卡顿，复制文件无比流畅</title>
-    <link href="https://blog.taoshuge.eu.org/posts/16004f5a.html"/>
-    <id>https://blog.taoshuge.eu.org/posts/16004f5a.html</id>
-    <published>2024-05-03T04:58:52.000Z</published>
-    <updated>2024-05-16T13:15:23.989Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;环境: Ubuntu 22.04.3 LTS&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;ZRAM</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Cloudflare防火墙其他WAF设置</title>
-    <link href="https://blog.taoshuge.eu.org/posts/f9256692.html"/>
-    <id>https://blog.taoshuge.eu.org/posts/f9256692.html</id>
-    <published>2024-04-30T03:46:45.000Z</published>
-    <updated>2024-05-16T13:15:23.990Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;其他WAF设置&quot;&gt;&lt;a href=&quot;#其他WAF设置&quot; class=&quot;headerlink&quot; title=&quot;其他WAF设置&quot;&gt;&lt;/a&gt;其他WAF设置&lt;/h3&gt;&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Cloudflare" scheme="https://blog.taoshuge.eu.org/tags/Cloudflare/"/>
-    
-    <category term="防火墙" scheme="https://blog.taoshuge.eu.org/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
     
   </entry>
   
