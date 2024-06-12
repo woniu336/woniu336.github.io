@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows11 on Lufei's blog</title><link>https://blog.99bilibili.eu.org/tags/windows11/</link><description>Recent content in Windows11 on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 07 Aug 2023 04:36:16 +0000</lastBuildDate><atom:link href="https://blog.99bilibili.eu.org/tags/windows11/index.xml" rel="self" type="application/rss+xml"/><item><title>最新原装正版的 Windows 11 系统官方纯净版，免费安装并激活！</title><link>https://blog.99bilibili.eu.org/p/%E6%9C%80%E6%96%B0%E5%8E%9F%E8%A3%85%E6%AD%A3%E7%89%88%E7%9A%84-windows-11-%E7%B3%BB%E7%BB%9F%E5%AE%98%E6%96%B9%E7%BA%AF%E5%87%80%E7%89%88%E5%85%8D%E8%B4%B9%E5%AE%89%E8%A3%85%E5%B9%B6%E6%BF%80%E6%B4%BB/</link><pubDate>Mon, 07 Aug 2023 04:36:16 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/%E6%9C%80%E6%96%B0%E5%8E%9F%E8%A3%85%E6%AD%A3%E7%89%88%E7%9A%84-windows-11-%E7%B3%BB%E7%BB%9F%E5%AE%98%E6%96%B9%E7%BA%AF%E5%87%80%E7%89%88%E5%85%8D%E8%B4%B9%E5%AE%89%E8%A3%85%E5%B9%B6%E6%BF%80%E6%B4%BB/</guid><description>1.Windows 11 官方下载：【点击进入】
+2.Rufus 写盘工具：【官网链接】
+3.永久免费激活看视频演示
+4.KMS ：CMD以管理员身份依次输入以下命令
+slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX slmgr /skms kms.loli.best slmgr /ato</description></item><item><title>绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户</title><link>https://blog.99bilibili.eu.org/p/%E7%BB%9D%E5%A6%99%E5%9C%A8%E5%AE%89%E8%A3%85-windows-11-%E6%97%B6%E9%80%89%E6%8B%A9-no@thankyou.com-%E7%99%BB%E5%BD%95%E8%BD%BB%E6%9D%BE%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E8%B4%A6%E6%88%B7%E6%97%A0%E9%9C%80%E8%81%94%E7%BD%91%E8%B4%A6%E6%88%B7/</link><pubDate>Sat, 05 Aug 2023 03:04:51 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/%E7%BB%9D%E5%A6%99%E5%9C%A8%E5%AE%89%E8%A3%85-windows-11-%E6%97%B6%E9%80%89%E6%8B%A9-no@thankyou.com-%E7%99%BB%E5%BD%95%E8%BD%BB%E6%9D%BE%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E8%B4%A6%E6%88%B7%E6%97%A0%E9%9C%80%E8%81%94%E7%BD%91%E8%B4%A6%E6%88%B7/</guid><description>感谢 @WM 的推荐，来自 X 的用户 @StarIight✨ 分享了一个 Featured/Bug：只需要在安装 Windows 11 时，使用用户名 no@thankyou.com 登录，即可跳过联网账户，轻松创建本地账。@Appinn
+这就…当青小蛙看到这个的时候，只能卧槽了…
+就在前几天，青小蛙还在论坛分享了这个：《不联网，无网络安装 Windows 11》
+在 Windows 11 的最新版本 22H2 中，微软干掉了“我没有 Internet 连接”按钮，没登陆不让你装系统。
+有些电脑网卡没有驱动就直接卡在这里了。 此时你可以按下 Shift+F10 打开命令提示符，输入 oobe\BypassNRO.cmd 即可重启进入带有跳过按钮的 OOBE。
+no@thankyou.com 而这个莫名其妙又有些好笑的账户，基本上就是替代上面的命令行，只需要登录时输入，密码随意，就能跟着向导创建本地账户了。
+简直…太好用。
+微软你说你是不是深井冰。</description></item></channel></rss>

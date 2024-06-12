@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>宝塔 on Lufei's blog</title><link>https://blog.99bilibili.eu.org/tags/%E5%AE%9D%E5%A1%94/</link><description>Recent content in 宝塔 on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 28 Jan 2024 07:17:09 +0000</lastBuildDate><atom:link href="https://blog.99bilibili.eu.org/tags/%E5%AE%9D%E5%A1%94/index.xml" rel="self" type="application/rss+xml"/><item><title>宝塔海外版aapanel安装教程</title><link>https://blog.99bilibili.eu.org/p/141/</link><pubDate>Sun, 28 Jan 2024 07:17:09 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/141/</guid><description> 首先安装官网最新版，再降级为6.8.27版本，降级的目的是方便安装汉化包
+Ubuntu/Deepin
+wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;amp;&amp;amp; sudo bash install.sh aapanel Debian
+wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;amp;&amp;amp; bash install.sh aapanel 降级为aapanel6.8.27版本
+wget -O /root/update6_en.sh https://download.bt.cn/install/update6_en.sh &amp;amp;&amp;amp; sed -i &amp;#39;s/LinuxPanel_EN-${version}.zip/LinuxPanel_EN-6.8.27.zip/g&amp;#39; /root/update6_en.sh &amp;amp;&amp;amp; bash /root/update6_en.sh &amp;amp;&amp;amp; rm -rf /root/update6_en.sh 中文语言包
+wget -O aapanel_chinese.zip https://github.com/gacjie/aapanel_chinese/releases/download/6.8.27/aapanel_simplified_chinese_6827.zip &amp;amp;&amp;amp; unzip -o aapanel_chinese.zip -d /www/server/ &amp;amp;&amp;amp; /etc/init.d/bt restart</description></item><item><title>宝塔面板计划任务列表的迁移或导出</title><link>https://blog.99bilibili.eu.org/p/136/</link><pubDate>Thu, 25 Jan 2024 13:39:26 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/136/</guid><description>注意：迁移成功后不代表就会自动运行了，还需要手动点编辑，再保存才会生效！！
+步骤一：备份文件，然后迁移到新服务器对应目录下。 备份cron下的所有文件
+/www/server/cron 步骤二：数据库迁移 下载default.db文件，使用SQLiteStudio工具打开数据库。删除新站的crontab表，把老站的表复制进去。然后保存。
+/www/server/panel/data/default.db 把新的default.db上传到新站/www/server/panel/data/目录下。即可看到新的计划任务内容
+SQLiteStudio下载地址：https://lzui.lanpw.com/iCoiL1mas1gj</description></item><item><title>宝塔面板v7.7.0 Github纯净版 优化脚本 手动解锁插件</title><link>https://blog.99bilibili.eu.org/p/bt/</link><pubDate>Sat, 09 Dec 2023 19:06:24 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/bt/</guid><description>相关介绍 目前最实用的宝塔7.7.0系列，本地安装纯净版本，并去除了强制绑定帐号、自动创建垃圾文件、活动推荐、在线客服，去除面板日志与网站绑定域名、手动解锁所有付费插件等等。
+一、宝塔面板7.7原版 curl -sSO https://raw.githubusercontent.com/zhucaidan/btpanel-v7.7.0/main/install/install_panel.sh &amp;amp;&amp;amp; bash install_panel.sh 二、一键破解脚本 curl -sSO https://raw.githubusercontent.com/ztkink/bthappy/main/one_key_happy.sh &amp;amp;&amp;amp; bash one_key_happy.sh 三、彩虹优化补丁 （不建议安装） （不建议安装，可能在使用一键迁移的时候出错）
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/optimize.sh &amp;amp;&amp;amp; chmod +x optimize.sh &amp;amp;&amp;amp; ./optimize.sh 1.去除宝塔面板强制绑定账号；
+2.去除各种删除操作时的计算题与延时等待；
+3.去除创建网站自动创建的垃圾文件（index.html、404.html、.htaccess）
+4.关闭未绑定域名提示页面，防止有人访问未绑定域名直接看出来是用的宝塔面板；
+5.关闭活动推荐与在线客服；
+6.去除自动校验文件与上报信息定时任务；
+7.去除面板日志与网站绑定域名上报。
+四、去后门 sudo echo &amp;#34;&amp;#34; &amp;gt; /www/server/panel/script/site_task.py sudo chattr +i /www/server/panel/script/site_task.py sudo rm -rf /www/server/panel/logs/request/* sudo chattr +i -R /www/server/panel/logs/request 宝塔面板linux版修改底部版权 第一步：登录宝塔面板
+第二步：点击左边的文件菜单
+第三步：在www目录下查找layout.html文件
+第四步：编辑layout.html文件的第85行，用自定义的名字替换‘{{session[‘brand’]}}{{session[‘product’]}}’这个字符串。
+第五步：修改后，重启面板。
+手动破解 先登录面板，然后破解，去除登陆需要绑定账号：
+rm -f /www/server/panel/data/bind.pl 手动解锁宝塔所有付费插件为永不过期
+sed -i &amp;#39;s/&amp;#34;endtime&amp;#34;: -1/&amp;#34;endtime&amp;#34;: 999999999999/g&amp;#39; /www/server/panel/data/plugin.</description></item><item><title>宝塔面板7.7破解版安装教程</title><link>https://blog.99bilibili.eu.org/p/6/</link><pubDate>Tue, 25 Jul 2023 15:38:07 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/6/</guid><description>https://blog.leshans.eu.org/p/bt/
+完结撒花🤡
+fuck bt 🤡🤡🤡</description></item></channel></rss>

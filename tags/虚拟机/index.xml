@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>虚拟机 on Lufei's blog</title><link>https://blog.99bilibili.eu.org/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link><description>Recent content in 虚拟机 on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 19 Mar 2024 17:18:49 +0000</lastBuildDate><atom:link href="https://blog.99bilibili.eu.org/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/index.xml" rel="self" type="application/rss+xml"/><item><title>利用vagrant快速创建Linux虚拟机</title><link>https://blog.99bilibili.eu.org/p/204/</link><pubDate>Tue, 19 Mar 2024 17:18:49 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/204/</guid><description>安装方法： 1、安装vagrant 2、再安装virtualbox 具体不写了，太繁琐。 https://developer.hashicorp.com/vagrant/install?product_intent=vagrant https://www.virtualbox.org/wiki/Downloads
+你可能好奇，不是安装了virtualbox虚拟机吗，干嘛还去安装什么vagrant
+因为使用vagrant安装虚拟机实在是太方便了，那为什么要再安装virtualbox ，因为virtualbox只作为后端，可以不用打开。两者缺一不可
+设置环境变量（可选） VAGRANT_HOME .vagrant.d 默认目录 VAGRANT_DEFAULT_PROVIDER #使用哪种虚拟机 默认virtualbox 路径设置（可选） virtualbox的全局设定：Linux虚拟机安装位置 .vagrant.d 路径 ：环境变量里设置 默认~/.vagrant. Vagrantfile 配置文件路径 教程开始 1、初始化 Vagrantfile 配置 在当前目录下打开终端，输入以下命令初始化：
+vagrant init 会在当前目录生成一个Vagrantfile文件
+2、修改配置： 清空Vagrantfile里面的内容，把以下内容添加到 Vagrantfile 文件
+Vagrant.configure(&amp;#34;2&amp;#34;) do |config| config.vm.box = &amp;#34;generic/ubuntu2204&amp;#34; # 规格配置 config.vm.provider :virtualbox do |vbox| vbox.name = &amp;#34;ubuntu-1&amp;#34; vbox.cpus = 1 vbox.memory = 1024 vbox.customize [&amp;#39;modifyvm&amp;#39;, :id, &amp;#39;--graphicscontroller&amp;#39;, &amp;#39;vmsvga&amp;#39;] end # 修改hostname，更新/etc/hosts config.vm.hostname = &amp;#34;ubuntu-1&amp;#34; # 公有网络 设置静态ip config.</description></item><item><title>一条命令完全卸载hyper-v虚拟机</title><link>https://blog.99bilibili.eu.org/p/195/</link><pubDate>Sun, 17 Mar 2024 16:56:21 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/195/</guid><description>如果不需要Hyper-V，使用下面的命令卸载Hyper-V角色以及管理工具
+UnInstall-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart 完成上面的命令后，hyper-v就从电脑中卸除。可以开始安装vmware虚拟机软件或者其他第三方虚拟机软件。</description></item><item><title>如何在 VM 虚拟机上安装 macOS 14 索诺玛 最新系统?</title><link>https://blog.99bilibili.eu.org/p/2/</link><pubDate>Tue, 25 Jul 2023 13:05:44 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/2/</guid><description>如果你想在 Windows 电脑上体验苹果最新的 macOS 14 Sonoma 系统！ 那么跟着我步骤来进行安装吧~ 安装步骤： 1、首先下载并安装 VMWare 虚拟机软件**【官网下载】**
+下载**【VMWare Unlocker】**，以管理员身份运行 win-install 3.下载 macOS 14 索诺玛 （Sonoma）的 ISO 系统文件【点击下载】
+4.创建虚拟机，转到我的文档 -&amp;gt; 虚拟机 -&amp;gt; macOS 14 虚拟机文件，
+然后在 右键单击​​ 2 KB 的macOS 14 (.VMX) 文件，然后选择****使用记事本打开，并在底部输入以下内容：
+smc.version = &amp;#34;0&amp;#34; 全选代码
+复制
+5.正式开始安装
+启用以太网：
+搜索 ethernet0.virtualDev = &amp;ldquo;e1000e&amp;rdquo; 并将 e1000e替换 为 vmxnet3 并保存文件。</description></item></channel></rss>

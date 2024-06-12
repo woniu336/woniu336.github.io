@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>阿里云盘 on Lufei's blog</title><link>https://blog.99bilibili.eu.org/tags/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98/</link><description>Recent content in 阿里云盘 on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Sep 2023 10:49:40 +0000</lastBuildDate><atom:link href="https://blog.99bilibili.eu.org/tags/%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98/index.xml" rel="self" type="application/rss+xml"/><item><title>Openwrt安装alist和阿里云盘webdav</title><link>https://blog.99bilibili.eu.org/p/openwrt%E5%AE%89%E8%A3%85alist%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav/</link><pubDate>Thu, 14 Sep 2023 10:49:40 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/openwrt%E5%AE%89%E8%A3%85alist%E5%92%8C%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98webdav/</guid><description>以下插件只适用于斐讯 N1,其他没测试过
+一: 使用方法 下载插件,然后进入软路由: 系统&amp;ndash;文件上传&amp;ndash;安装
+例如: 斐讯 N1 盒子软路由
+二: 阿里云盘webdav插件 插件下载:
+https://github.com/woniu336/openwrt-ipk/tree/master/N1安装阿里云盘webdav
+项目地址 : https://github.com/messense/aliyundrive-webdav
+三:Alist插件 OpenWrt 查看CPU架构命令：
+cat /etc/os-release |grep ARCH 插件下载:
+https://github.com/woniu336/openwrt-ipk/tree/master/N1软路由安装alist
+项目地址 : https://github.com/sbwml/luci-app-alist
+AList文档：https://alist.nn.ci/zh/guide/
+四: Docker 安装阿里云盘webdav docker run -d --name=aliyundrive-webdav --restart=unless-stopped -p 8080:8080 \ -v /etc/aliyundrive-webdav/:/etc/aliyundrive-webdav/ \ -e REFRESH_TOKEN=&amp;#39;your refresh token&amp;#39; \ -e WEBDAV_AUTH_USER=admin \ -e WEBDAV_AUTH_PASSWORD=admin \ messense/aliyundrive-webdav 其中，REFRESH_TOKEN 环境变量为你的阿里云盘 refresh_token，WEBDAV_AUTH_USER 和 WEBDAV_AUTH_PASSWORD 为连接 WebDAV 服务的用户名和密码。</description></item><item><title>Openwrt安装阿里云盘 WebDAV</title><link>https://blog.99bilibili.eu.org/p/openwrt%E5%AE%89%E8%A3%85%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98-webdav/</link><pubDate>Thu, 14 Sep 2023 10:18:27 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/openwrt%E5%AE%89%E8%A3%85%E9%98%BF%E9%87%8C%E4%BA%91%E7%9B%98-webdav/</guid><description>阿里云盘 WebDAV 服务，主要使用场景为配合支持 WebDAV 协议的客户端 App 如 Infuse、nPlayer 等实现在电视上直接观看云盘视频内容， 支持客户端 App 直接从阿里云盘获取文件播放而不经过运行本应用的服务器中转, 支持上传文件，但受限于 WebDAV 协议不支持文件秒传。
+请注意：V2 版本基于阿里云盘开放平台接口实现，不再支持阿里云盘 Web 和 App 版本获取的 refresh token。 由于本项目作者不再使用梅林固件，V2 版本不再免费支持 Koolshare 梅林固件系统，如有需要请考虑付费支持。
+安装 可以从 GitHub Releases 页面下载预先构建的二进制包， 也可以使用 pip 从 PyPI 下载:
+pip install aliyundrive-webdav 如果系统支持 Snapcraft 比如 Ubuntu、Debian 等，也可以使用 snap 安装：
+sudo snap install aliyundrive-webdav OpenWrt 路由器 GitHub Releases 中有预编译的 ipk 文件， 目前提供了 aarch64/arm/mipsel/x86_64/i686 等架构的版本，可以下载后使用 opkg 安装，以 nanopi r4s 为例：
+wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.3.2/aliyundrive-webdav_2.3.2-1_aarch64_generic.ipk wget https://github.com/messense/aliyundrive-webdav/releases/download/v2.3.2/luci-app-aliyundrive-webdav_2.3.2_all.ipk wget https://github.</description></item></channel></rss>

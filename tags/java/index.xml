@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Lufei's blog</title><link>https://blog.99bilibili.eu.org/tags/java/</link><description>Recent content in Java on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 20 Jan 2024 07:41:01 +0000</lastBuildDate><atom:link href="https://blog.99bilibili.eu.org/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>宝塔 Linux Java 环境安装教程</title><link>https://blog.99bilibili.eu.org/p/128/</link><pubDate>Sat, 20 Jan 2024 07:41:01 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/128/</guid><description>前言 本教程将帮助你如何在linux系统下的宝塔面板上，快速的安装和配置Java环境 。
+#1 打开终端 打开宝塔的终端并输入以下命令
+PS：一行一个，不要多次输入 。
+第一步，创建 java 路径 。
+mkdir -p /usr/lib/jvm 第二步，移动到，上一步创建的文件夹 。
+cd /usr/lib/jvm 第三步，在此文件夹下下载 java sdk ，耐心等待，国内服务器可能需要 2-10 分钟 。
+PS: 该版本的 sdk 版本为 17
+wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz 第四步，解压上一步下载的 sdk 。
+tar -zxvf jdk-17_linux-x64_bin.tar.gz 第五步，重命名解压后的文件夹 为 jdk17 注意版本号
+mv jdk-17.0.10 jdk17 至此，java 17安装完成，现在开始配置 Java sdk的环境变量 。
+#2 配置环境变量 打开宝塔文件根目录的以下路径 ==/etc/profile==
+并在 profile 文件的末尾添加以下环境变量
+export JAVA_HOME=/usr/lib/jvm/jdk17 export PATH=$JAVA_HOME/bin:$PATH 返回终端，输入以下命令，刷新配置文件
+source /etc/profile 再输入以下命令，如果出现 java 版本即代表环境配置成功 。
+java -version</description></item></channel></rss>

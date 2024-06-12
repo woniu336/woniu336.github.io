@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Syncthing on Lufei's blog</title><link>https://blog.99bilibili.eu.org/tags/syncthing/</link><description>Recent content in Syncthing on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 12 Aug 2023 03:18:50 +0000</lastBuildDate><atom:link href="https://blog.99bilibili.eu.org/tags/syncthing/index.xml" rel="self" type="application/rss+xml"/><item><title>Syncthing开源免费跨平台的文件同步工具-利用Syncthing搭建免费同步网盘</title><link>https://blog.99bilibili.eu.org/p/syncthing%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7-%E5%88%A9%E7%94%A8syncthing%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%90%8C%E6%AD%A5%E7%BD%91%E7%9B%98/</link><pubDate>Sat, 12 Aug 2023 03:18:50 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/syncthing%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7-%E5%88%A9%E7%94%A8syncthing%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9%E5%90%8C%E6%AD%A5%E7%BD%91%E7%9B%98/</guid><description>实时同步网盘，其实可以选择也挺多的，OneDrive、Google Drive、Dropbox、Box.com、iCloud等都是支持自动同步备份的，只可惜这些网盘很多都是打不开的。国内的坚果云在同步这一块做得不错，但是免费的额度太少了，不能满足大量同步的需要。
+本篇文章要分享的开源免费跨平台的文件同步工具Syncthing，可以实现实时同步备份搭建个人同步网盘的功能，试用了一下发现Syncthing完全可以替代市面上这些同步网盘。Syncthing可以运行在Windows、Linux、MacOS等全平台上，而且提供了安卓手机APP，功能非常强大。
+GitHub 项目地址：https://github.com/syncthing/syncthing
+文档地址：https://docs.syncthing.net/intro/getting-started.html
+客户端下载：https://github.com/syncthing/syncthing/releases
+开始安装 推荐使用普通用户安装,请往下看
+本文只记录在ubuntu20.04上怎么搭建
+更新一下组件
+apt update -y &amp;amp;&amp;amp; apt install -y curl &amp;amp;&amp;amp; apt install -y socat &amp;amp;&amp;amp; apt install wget -y 然后:
+wget https://github.com/syncthing/syncthing/releases/download/v1.23.7/syncthing-linux-amd64-v1.23.7.tar.gz tar -zxvf syncthing-linux-amd64-v1.23.7.tar.gz cd syncthing-linux-amd64-v1.23.7 cp syncthing /usr/local/bin/ 接着:
+syncthing 使用CTRL + C停止运行,修改文件
+vim /root/.config/syncthing/config.xml 将127.0.0.1:8384改成 0.0.0.0:8384 即可,保存退出
+再输入syncthing运行它。然后在浏览器输入服务器IP:8384访问。
+保持后台运行 对于VPS主机运行syncthing如果关闭终端，syncthing也会停止运行，可以将syncthing放在后台，命令如下：
+nohup syncthing &amp;amp; 开机自动启动并保持运行 vim /usr/lib/systemd/system/syncthing@.service 加入以下内容
+[Unit] Description=Syncthing - Open Source Continuous File Synchronization for %I Documentation=man:syncthing(1) After=network.</description></item><item><title>好用免费开源同步工具Syncthing安装教程</title><link>https://blog.99bilibili.eu.org/p/%E5%A5%BD%E7%94%A8%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7syncthing%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link><pubDate>Fri, 11 Aug 2023 07:04:25 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/%E5%A5%BD%E7%94%A8%E5%85%8D%E8%B4%B9%E5%BC%80%E6%BA%90%E5%90%8C%E6%AD%A5%E5%B7%A5%E5%85%B7syncthing%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid><description>1.特点 Syncthing 是一个连续的文件同步程序。它可以在两台或更多的计算机之间同步文件。
+总结下面几个特点：
+中文友好（支持中文界面） 设置简单，易上手 支持 Linux、Windows、macOS（NAS 也可以方便部署） 同步效率不错 支持版本控制（可以恢复到指定的版本） Docker 部署方便 支持同步加密，保护数据安全（不过咕咕还不知道如果解密，后续可以阅读一下文档，有知道的小伙伴也欢迎留言区留言和大家分享一下） 支持一对多、多对一、一对一 使用的人比较多，发现问题可以比较容易搜索到解决方案。（毕竟 GitHub 上都有 4 万多的 star） 2. 项目展示 GitHub 项目地址：https://github.com/syncthing/syncthing
+文档地址：https://docs.syncthing.net/intro/getting-started.html
+客户端下载：https://github.com/syncthing/syncthing/releases
+本文用的 Docker 镜像：https://hub.docker.com/r/linuxserver/syncthing
+3. 搭建方式 apt update -y # 升级packages apt install wget curl sudo vim git # 推荐Debian 创建一下安装的目录：
+mkdir -p /home/data/docker_data/syncthing cd /home/data/docker_data/syncthing nano docker-compose.yml docker-compose.yml 填入以下内容：
+--- version: &amp;#34;2.1&amp;#34; services: syncthing: category_bar: true lscr.io/linuxserver/syncthing container_name: syncthing hostname: syncthing #optional environment: - PUID=1000 - PGID=1000 - TZ=Asia/Shanghai volumes: - /home/data/docker_data/syncthing/config:/config - /home/data/docker_data/syncthing/Documents:/Documents - /home/data/docker_data/syncthing/Media:/Media ports: - 8384:8384 - 22000:22000/tcp - 22000:22000/udp - 21027:21027/udp restart: unless-stopped 没问题的话，ctrl+x 退出，按 y 保存，enter 确认。</description></item></channel></rss>

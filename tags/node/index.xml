@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Node on Lufei's blog</title><link>https://blog.99bilibili.eu.org/tags/node/</link><description>Recent content in Node on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 12 Sep 2023 06:08:04 +0000</lastBuildDate><atom:link href="https://blog.99bilibili.eu.org/tags/node/index.xml" rel="self" type="application/rss+xml"/><item><title>使用nvm管理多版本node.js</title><link>https://blog.99bilibili.eu.org/p/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86%E5%A4%9A%E7%89%88%E6%9C%ACnode.js/</link><pubDate>Tue, 12 Sep 2023 06:08:04 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/%E4%BD%BF%E7%94%A8nvm%E7%AE%A1%E7%90%86%E5%A4%9A%E7%89%88%E6%9C%ACnode.js/</guid><description>使用nvm（Node Version Manager）安装Node.js是一个非常方便的方法，因为它允许你在同一台机器上管理多个Node.js版本。以下是使用nvm安装Node.js的基本步骤：
+Linux 安装nvm
+根据你的操作系统，安装命令可能会有所不同。以下是在Linux上安装nvm的命令：
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash 或者使用wget：
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash 确保 nvm 生效
+source ~/.bashrc 验证nvm安装
+安装完成后，你可以通过运行以下命令来验证nvm是否正确安装：
+command -v nvm 如果安装成功，这个命令应该会输出nvm。
+查看nvm版本
+nvm --version 安装Node.js 如果您想看看有哪些版本可以安装：
+nvm ls-remote 这个命令会列出所有可用的Node.js版本，包括最新的稳定版、LTS（长期支持）版本以及旧版本。列表通常会很长，包含了从Node.js 0.1到最新版本的每一个版本。
+如果你只想查看LTS版本，可以使用：
+nvm ls-remote --lts 使用nvm安装Node.js，你可以运行以下命令来安装特定版本的Node.js（例如，v18.16.0）：
+nvm install 18.16.0 使用特定版本的Node.js
+安装完成后，你可以使用以下命令来切换到你刚刚安装的版本：
+nvm use 18.16.0 验证Node.js安装
+最后，你可以通过运行以下命令来验证Node.js是否正确安装：
+node -v 这个命令应该会输出你刚刚安装的Node.js版本号。
+如果您想查看已安装的版本
+nvm ls 请注意，nvm的安装和使用可能会因为你的操作系统和shell的不同而有所差异。确保按照nvm的官方文档进行操作，以获得最准确的信息。
+windows windows下安装nvm
+项目: https://github.com/coreybutler/nvm-windows
+下载nvm https://github.com/coreybutler/nvm-windows/releases
+安装后,以管理员方式打开cmd确认安装正确:
+nvm version 查看可用的Node.js版本列表
+nvm list available 安装指定版本</description></item></channel></rss>

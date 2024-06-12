@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Rss on Lufei's blog</title><link>https://blog.99bilibili.eu.org/tags/rss/</link><description>Recent content in Rss on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 30 May 2024 00:10:55 +0000</lastBuildDate><atom:link href="https://blog.99bilibili.eu.org/tags/rss/index.xml" rel="self" type="application/rss+xml"/><item><title>搭建一个好玩的 RSS 订阅网站记录</title><link>https://blog.99bilibili.eu.org/p/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%8E%A9%E7%9A%84-rss-%E8%AE%A2%E9%98%85%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</link><pubDate>Thu, 30 May 2024 00:10:55 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%8E%A9%E7%9A%84-rss-%E8%AE%A2%E9%98%85%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</guid><description>全文相关链接 Github仓库创建链接 Railway官网 Supabase官网 f-droid上的co.appreactor.news应用下载链接 Railway账户使用量估算链接 全文相关代码 Dockerfile
+FROM docker.io/miniflux/miniflux:2.1.3 环境变量
+DATABASE_URL=user=postgres.xxxxs password=xxxxx host=aws-0-us-wxxx MEDIA_PROXY_MODE=all RUN_MIGRATIONS=1 BASE_URL=https://aws-0-us-west-1.pooler.supabase.com ADMIN_USERNAME=xxxx ADMIN_PASSWORD=xxxx CREATE_ADMIN=1 搭建 网上有不少关于这方面的教程，但是时间过于久远，难免会有bug的地方，本次记录一下我成功搭建的步骤和方法。
+💡 准备：我们需要有一个Github账户，并在之后注册Railway与Supabase
+Github和Subabase，Railway都可以免费注册，Railway注册后赠送5美金额度，一次性的，用完就没了。 但如果添加外币卡💳支付方式，可以享受Hobby计划，此计划每月有5美元使用金，超出额度后按使用量付费。但5美元的额度已经能开好几个项目了，完全不用担心诶🎉！
+创建仓库 创建一个存放miniflux的Dockerfile文件的仓库。
+点击这里在Github上创建仓库。
+https://github.com/new
+参数设置：
+Description可以不写。选择私有仓库😶。 Add a README file打上对勾，生成README.md文件 其他保持默认就好啦😶！ 点击Create repository创建仓库。 创建文件 在仓库的Add file按钮点击，在点击Create new file创建文件。
+文件名Dockerfile，内容：
+FROM docker.io/miniflux/miniflux:2.1.3 点击Commit changes保存修改。
+没错！只需要一行代码！这是因为Railway原生支持Dockerfile，我们只需要创建一个Dockerfile文件让Railway读取到项目信息进行编译就好。
+创建数据库 打开Supabase，可以使用Github账户直接登录。使用Supabase的原因是这家可以免费创建两个PostgreSQL数据库，正是我们要搭建的Miniflux需要用到的数据库，好巧呢😑(捧读)~~
+注意：地区选择West US 因为Railway的免费计划地区也是在West US
+这里创建的密码一定要记住，后面会用到 密码不能过于简单 点击Create new project后稍等几分钟，然后点击项目中左下角的齿轮图标打开设置。 点击Database项，忘记密码的朋友可以点击右侧的Reset database password重置密码。 我们的数据库连接在下方的Database Settings中，点击Golang，拷贝下来，下一步会用到。 环境变量 打开 https://railway.app
+连接你的Github,新建项目，连接刚才创建的仓库</description></item></channel></rss>

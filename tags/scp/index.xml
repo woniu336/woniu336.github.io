@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scp on Lufei's blog</title><link>https://blog.99bilibili.eu.org/tags/scp/</link><description>Recent content in Scp on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 27 Mar 2024 19:32:56 +0000</lastBuildDate><atom:link href="https://blog.99bilibili.eu.org/tags/scp/index.xml" rel="self" type="application/rss+xml"/><item><title>复制本地文件到远程服务器</title><link>https://blog.99bilibili.eu.org/p/212/</link><pubDate>Wed, 27 Mar 2024 19:32:56 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/212/</guid><description>假设你使用密钥的方式登录服务器，并且 ssh 端口是 2233，并且 不是 使用 root 登录，
+从桌面复制 sitemap123. xml 到服务器目录 /www/wwwroot/bt.cc 并且将文件 重命名：
+~/.ssh/id_rsa 是密钥路径
+ssh -p 2233 sp #登录服务器的命令，事先在~/.ssh/config文件中配置
+config:
+Host sp Hostname 服务器IP IdentityFile ~/.ssh/id_rsa User laoge 复制命令如下：
+#!/bin/bash # 执行 SCP 命令 scp -i ~/.ssh/id_rsa -P 2233 C:/Users/Administrator/Desktop/sitemap123.xml laoge@ip:~/sitemap123.xml # 执行 SSH 命令 ssh -p 2233 sp &amp;lt;&amp;lt; &amp;#39;EOF&amp;#39; # 在 SSH 会话中执行 sudo 命令，使用 -S 选项从标准输入读取密码 echo &amp;#34;服务器密码&amp;#34; | sudo -S mv ~/sitemap123.xml /www/wwwroot/bt.cc/ # 在 SSH 会话中执行另一个 sudo 命令，使用 -S 选项从标准输入读取密码 echo &amp;#34;服务器密码&amp;#34; | sudo -S mv /www/wwwroot/bt.</description></item></channel></rss>

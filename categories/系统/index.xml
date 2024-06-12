@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>系统 on Lufei's blog</title><link>https://blog.99bilibili.eu.org/categories/%E7%B3%BB%E7%BB%9F/</link><description>Recent content in 系统 on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 23 Feb 2024 16:25:20 +0000</lastBuildDate><atom:link href="https://blog.99bilibili.eu.org/categories/%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml"/><item><title>Winserver2022调优</title><link>https://blog.99bilibili.eu.org/p/178/</link><pubDate>Fri, 23 Feb 2024 16:25:20 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/178/</guid><description>激活命令 打开PowerShell(管理员),输入以下代码:
+irm https://massgrave.dev/get | iex 选择第三个,再选1
+开启hyper-v 打开PowerShell(管理员),输入以下代码:
+Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart 安装完成会重启
+1.开启远程桌面 2.修改主机名称 3.密码策略 右上角-工具-本地安全策略
+安全设置-账户策略-密码策略
+禁用密码复杂性要求以及最长使用期限为0(不过期)
+4.关闭登录系统按CTRL+ALT+DEL 本地策略-安全选项
+4.组策略中打开 启用不安全来宾登陆 选项 目的是局域网文件共享: https://blog.csdn.net/u010499872/article/details/115704644
+开始运行，或者快捷键 Win+R 打开运行，输入 gpedit.msc 打开组策略。
+然后分别选择 计算机配置 → 管理模板 → 网络 →Lanman工作站，在右边找到 启用不安全的来宾登陆，双击打开，然后选择启用，点确定即可。
+5.重命名管理员名称 安全设置-本地策略-安全选项
+6.修改管理员密码: cmd输入: net user admin 123
+net user 管理员名称 密码 7.一键远程登录脚本 将以下代码保存为bat文件,双击运行即可
+@echo off set ip_file=last_ip.txt :menu cls echo 请选择选项： echo [1] 使用上次登录的 IP 地址 echo [2] 输入新的 IP 地址 set /p option=请输入选项数字: if &amp;#34;%option%&amp;#34;==&amp;#34;1&amp;#34; ( if exist %ip_file% ( set /p remote_ip=&amp;lt;%ip_file% goto connect ) else ( echo 没有找到上次登录的 IP 地址。请手动输入新的 IP 地址。 pause goto input_ip ) ) else if &amp;#34;%option%&amp;#34;==&amp;#34;2&amp;#34; ( goto input_ip ) else ( echo 无效的选项，请重新输入。 pause goto menu ) :input_ip set /p remote_ip=请输入远程计算机的IP地址: echo %remote_ip% &amp;gt; %ip_file% goto connect :connect start mstsc.</description></item><item><title>一条命令激活 Windows 系统</title><link>https://blog.99bilibili.eu.org/p/%E4%B8%80%E6%9D%A1%E5%91%BD%E4%BB%A4%E6%BF%80%E6%B4%BB-windows-%E7%B3%BB%E7%BB%9F/</link><pubDate>Mon, 07 Aug 2023 17:15:48 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/%E4%B8%80%E6%9D%A1%E5%91%BD%E4%BB%A4%E6%BF%80%E6%B4%BB-windows-%E7%B3%BB%E7%BB%9F/</guid><description>Windows 激活方法 打开 命令提示符 (管理员)，复制以下命令到命令提示符并回车。
+slmgr /skms kms.v0v.bid &amp;amp;&amp;amp; slmgr /ato 激活成功。</description></item><item><title>最新原装正版的 Windows 11 系统官方纯净版，免费安装并激活！</title><link>https://blog.99bilibili.eu.org/p/%E6%9C%80%E6%96%B0%E5%8E%9F%E8%A3%85%E6%AD%A3%E7%89%88%E7%9A%84-windows-11-%E7%B3%BB%E7%BB%9F%E5%AE%98%E6%96%B9%E7%BA%AF%E5%87%80%E7%89%88%E5%85%8D%E8%B4%B9%E5%AE%89%E8%A3%85%E5%B9%B6%E6%BF%80%E6%B4%BB/</link><pubDate>Mon, 07 Aug 2023 04:36:16 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/%E6%9C%80%E6%96%B0%E5%8E%9F%E8%A3%85%E6%AD%A3%E7%89%88%E7%9A%84-windows-11-%E7%B3%BB%E7%BB%9F%E5%AE%98%E6%96%B9%E7%BA%AF%E5%87%80%E7%89%88%E5%85%8D%E8%B4%B9%E5%AE%89%E8%A3%85%E5%B9%B6%E6%BF%80%E6%B4%BB/</guid><description>1.Windows 11 官方下载：【点击进入】
+2.Rufus 写盘工具：【官网链接】
+3.永久免费激活看视频演示
+4.KMS ：CMD以管理员身份依次输入以下命令
+slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX slmgr /skms kms.loli.best slmgr /ato</description></item><item><title>绝妙！在安装 Windows 11 时选择 no@thankyou.com 登录，轻松创建本地账户，无需联网账户</title><link>https://blog.99bilibili.eu.org/p/%E7%BB%9D%E5%A6%99%E5%9C%A8%E5%AE%89%E8%A3%85-windows-11-%E6%97%B6%E9%80%89%E6%8B%A9-no@thankyou.com-%E7%99%BB%E5%BD%95%E8%BD%BB%E6%9D%BE%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E8%B4%A6%E6%88%B7%E6%97%A0%E9%9C%80%E8%81%94%E7%BD%91%E8%B4%A6%E6%88%B7/</link><pubDate>Sat, 05 Aug 2023 03:04:51 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/%E7%BB%9D%E5%A6%99%E5%9C%A8%E5%AE%89%E8%A3%85-windows-11-%E6%97%B6%E9%80%89%E6%8B%A9-no@thankyou.com-%E7%99%BB%E5%BD%95%E8%BD%BB%E6%9D%BE%E5%88%9B%E5%BB%BA%E6%9C%AC%E5%9C%B0%E8%B4%A6%E6%88%B7%E6%97%A0%E9%9C%80%E8%81%94%E7%BD%91%E8%B4%A6%E6%88%B7/</guid><description>感谢 @WM 的推荐，来自 X 的用户 @StarIight✨ 分享了一个 Featured/Bug：只需要在安装 Windows 11 时，使用用户名 no@thankyou.com 登录，即可跳过联网账户，轻松创建本地账。@Appinn
+这就…当青小蛙看到这个的时候，只能卧槽了…
+就在前几天，青小蛙还在论坛分享了这个：《不联网，无网络安装 Windows 11》
+在 Windows 11 的最新版本 22H2 中，微软干掉了“我没有 Internet 连接”按钮，没登陆不让你装系统。
+有些电脑网卡没有驱动就直接卡在这里了。 此时你可以按下 Shift+F10 打开命令提示符，输入 oobe\BypassNRO.cmd 即可重启进入带有跳过按钮的 OOBE。
+no@thankyou.com 而这个莫名其妙又有些好笑的账户，基本上就是替代上面的命令行，只需要登录时输入，密码随意，就能跟着向导创建本地账户了。
+简直…太好用。
+微软你说你是不是深井冰。</description></item><item><title>如何在 VM 虚拟机上安装 macOS 14 索诺玛 最新系统?</title><link>https://blog.99bilibili.eu.org/p/2/</link><pubDate>Tue, 25 Jul 2023 13:05:44 +0000</pubDate><guid>https://blog.99bilibili.eu.org/p/2/</guid><description>如果你想在 Windows 电脑上体验苹果最新的 macOS 14 Sonoma 系统！ 那么跟着我步骤来进行安装吧~ 安装步骤： 1、首先下载并安装 VMWare 虚拟机软件**【官网下载】**
+下载**【VMWare Unlocker】**，以管理员身份运行 win-install 3.下载 macOS 14 索诺玛 （Sonoma）的 ISO 系统文件【点击下载】
+4.创建虚拟机，转到我的文档 -&amp;gt; 虚拟机 -&amp;gt; macOS 14 虚拟机文件，
+然后在 右键单击​​ 2 KB 的macOS 14 (.VMX) 文件，然后选择****使用记事本打开，并在底部输入以下内容：
+smc.version = &amp;#34;0&amp;#34; 全选代码
+复制
+5.正式开始安装
+启用以太网：
+搜索 ethernet0.virtualDev = &amp;ldquo;e1000e&amp;rdquo; 并将 e1000e替换 为 vmxnet3 并保存文件。</description></item></channel></rss>
