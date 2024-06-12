@@ -6,7 +6,7 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 echo \ &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://mirrors.aliyun.com/docker-ce/linux/debian \ $(. /etc/os-release &amp;amp;&amp;amp; echo &amp;#34;$VERSION_CODENAME&amp;#34;) stable&amp;#34; | \ sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null 最后
 sudo apt-get update sudo apt-get -y install docker-ce 权限
 sudo chmod +x /usr/local/bin/docker-compose 查看版本,验证是否安装成功
-docker --version &amp;amp;&amp;amp; docker-compose --version 配置 dockerhub 镜像(海外服务器) 注意:这里是在另外一台海外的VPS上安装dockerhub镜像</description></item><item><title>hugo博客自定义字体</title><link>https://blog.taoshuge.eu.org/p/ziti/</link><pubDate>Sat, 08 Jun 2024 07:32:19 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/ziti/</guid><description>提示：适用stack主题，其他主题没测试过，用法应该大同小异
+docker --version &amp;amp;&amp;amp; docker-compose --version 安装 dockerhub 镜像(海外服务器) 注意:这里是在另外一台海外的VPS上安装dockerhub镜像</description></item><item><title>hugo博客自定义字体</title><link>https://blog.taoshuge.eu.org/p/ziti/</link><pubDate>Sat, 08 Jun 2024 07:32:19 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/ziti/</guid><description>提示：适用stack主题，其他主题没测试过，用法应该大同小异
 字体项目：https://github.com/KonghaYao/chinese-free-web-font-storage
 中文网字计划： https://chinese-font.netlify.app/cdn/
 hugo主题：https://github.com/CaiJimmy/hugo-theme-stack
