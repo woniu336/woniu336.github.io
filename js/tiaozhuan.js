@@ -41,6 +41,7 @@ if (target && target.nodeName === 'A' &&
 !target.href.includes('discord.com') &&
 !target.href.includes('coze.com') &&
 !target.href.includes('bilibili.com') &&
+!target.href.includes('talimus.eu.org') &&
 !target.href.includes('github.com') &&
 target.hostname !== window.location.hostname) {
 e.preventDefault();
