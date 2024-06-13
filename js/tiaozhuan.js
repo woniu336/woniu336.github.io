@@ -43,6 +43,7 @@ if (target && target.nodeName === 'A' &&
 !target.href.includes('bilibili.com') &&
 !target.href.includes('talimus.eu.org') &&
 !target.href.includes('github.com') &&
+!target.href.includes('chat.leshans.eu.org') &&
 target.hostname !== window.location.hostname) {
 e.preventDefault();
 let encodedUrl = btoa(target.href); // Base64 encode the URL
