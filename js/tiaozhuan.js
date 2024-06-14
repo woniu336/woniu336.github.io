@@ -44,6 +44,10 @@ if (target && target.nodeName === 'A' &&
 !target.href.includes('talimus.eu.org') &&
 !target.href.includes('github.com') &&
 !target.href.includes('chat.leshans.eu.org') &&
+!target.href.includes('remove.bg') &&
+!target.href.includes('perplexity.ai') &&
+!target.href.includes('pexels.com') &&
+!target.href.includes('squoosh.app') &&
 target.hostname !== window.location.hostname) {
 e.preventDefault();
 let encodedUrl = btoa(target.href); // Base64 encode the URL
