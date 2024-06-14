@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dockerhub镜像 on Lufei's blog</title><link>https://blog.taoshuge.eu.org/tags/dockerhub%E9%95%9C%E5%83%8F/</link><description>Recent content in Dockerhub镜像 on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 14 Jun 2024 09:06:00 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/dockerhub%E9%95%9C%E5%83%8F/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker仓库镜像代理工具</title><link>https://blog.taoshuge.eu.org/p/276/</link><pubDate>Fri, 14 Jun 2024 09:06:00 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/276/</guid><description>为什么需要这个工具？ 由于神秘原因，国内用户逐渐无法访问Docker Hub仓库。这对于开发者来说是个不小的难题。
+而我的解决方案是通过赛博菩萨中转请求，解决访问限制并加速访问。
+注意：不推荐使用该项目搭建公共服务。使用你自己的域名搭建公共服务有可能会遭受污染和反诈，推荐小规模自用即可。
+部署方式 访问CF-Workers-docker.io：Docker仓库镜像代理工具项目页面
+方式一(推荐): Pages 部署：Fork 项目后 打开CF,创建pages,连接GitHub 一键部署即可 方式二: Workers 部署：复制 _worker.js 代码，保存并部署即可 部署成功,设置自定义域名
+如何使用？ 例如您的Workers项目域名为：docker.xxk.top；
+方法一(不推荐) 在官方镜像路径前面加域名
+docker pull docker.xxk.top/stilleshan/frpc:latest 方法二: 一键设置镜像加速 (推荐) 请替换为您自己的Worker自定义域名
+sudo mkdir -p /etc/docker sudo tee /etc/docker/daemon.json &amp;lt;&amp;lt;-&amp;#39;EOF&amp;#39; { &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://docker.xxx.top&amp;#34;] } EOF sudo systemctl daemon-reload sudo systemctl restart docker 变量说明 不建议伪装到一些大型网站
+变量名 示例 必填 备注 URL302 https://blog.taoshuge.eu.org/p/276/ ❌ 主页302跳转 URL nginx ❌ 主页伪装(设为nginx) 第三方Docker官方镜像服务 修改 /etc/docker/daemon.json 即可
+daemon.json</description></item></channel></rss>
