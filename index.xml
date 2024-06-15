@@ -604,15 +604,14 @@ rclone copy E:\迅雷下载 onedrive:电影 --ignore-existing -u -v -P --transfe
 2、配置多个git的用户名和邮箱 a、单个配置
 git config --global user.name &amp;#34;yourusername&amp;#34; git config --global user.email &amp;#34;youremail@email.com&amp;#34; b、多个配置
 注意： 这里git config命令没有带—global，表示这是一个局部的设置，也就是这个用户是当前项目的，而不是全局的。
-git config user.name &amp;#34;1&amp;#34; git config user.</description></item><item><title>vscode:git常用命令</title><link>https://blog.taoshuge.eu.org/p/186/</link><pubDate>Tue, 27 Feb 2024 18:16:19 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/186/</guid><description>常见命令 git init git add . git commit -m &amp;#34;初始化&amp;#34; git remote add origin https://github.com/githubusername/demo.git git pull origin master git push -u origin master #首次推送加-u参数 创建和切换分支 1、创建新分支
+git config user.name &amp;#34;1&amp;#34; git config user.</description></item><item><title>vscode:git常用命令</title><link>https://blog.taoshuge.eu.org/p/186/</link><pubDate>Tue, 27 Feb 2024 18:16:19 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/186/</guid><description>常见命令 git init git add . git commit -m &amp;#34;初始化&amp;#34; git branch -M main git remote add origin https://github.com/githubusername/demo.git git pull origin main git push -u origin main #首次推送加-u参数 创建和切换分支 1、创建新分支
 git branch 新分支名称 2、切换分支
 git checkout 分支名称 3、创建分支的同时，切换到该分支上
 git checkout -b 新分支名称 合并分支 假如把dev分支合并到main
 首先切换到main分支上
 git checkout main 如果是多人开发的话，需要把远程main分支上的代码pull下来
 git pull origin main 然后把dev分支的代码合并到main上
-git merge dev 警告提示： Please enter a commit message to explain why this merge is necessary
-遇到警告 直接按键盘左上角&amp;quot;Esc&amp;quot; 然后输入:wq 按回车键,或者按 ctrl+x 再输入y回车即可</description></item><item><title>Github推送报错：Failed to connect to 127.0.0.1 port 7890</title><link>https://blog.taoshuge.eu.org/p/185/</link><pubDate>Tue, 27 Feb 2024 17:01:00 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/185/</guid><description>问题描述 在linuxmint桌面版系统下,使用vscode克隆仓库时遇到: Failed to connect to 127.0.0.1 port 7890
+git merge dev 警告提示： Please enter a commit message to explain why this merge is necessary</description></item><item><title>Github推送报错：Failed to connect to 127.0.0.1 port 7890</title><link>https://blog.taoshuge.eu.org/p/185/</link><pubDate>Tue, 27 Feb 2024 17:01:00 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/185/</guid><description>问题描述 在linuxmint桌面版系统下,使用vscode克隆仓库时遇到: Failed to connect to 127.0.0.1 port 7890
 解决办法: 取消 http, https 代理
 git config --global --unset http.proxy git config --global --unset https.proxy</description></item><item><title>vmware虚拟机: 您的主机不满足在启用hyper-v 解决方法</title><link>https://blog.taoshuge.eu.org/p/184/</link><pubDate>Mon, 26 Feb 2024 16:18:59 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/184/</guid><description>问题描述 由于之前安装了windows10自带的hyper-v虚拟机,在安装vm虚拟机启动镜像时遇到下图bug
 解决办法 1. 关闭hyper-v 在控制面板→卸载程序，
