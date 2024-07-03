@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>翻译 on Lufei's blog</title><link>https://blog.taoshuge.eu.org/tags/%E7%BF%BB%E8%AF%91/</link><description>Recent content in 翻译 on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 01 Jul 2024 00:47:57 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/%E7%BF%BB%E8%AF%91/index.xml" rel="self" type="application/rss+xml"/><item><title>划词翻译和OCR神器</title><link>https://blog.taoshuge.eu.org/p/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91%E5%92%8Cocr%E7%A5%9E%E5%99%A8/</link><pubDate>Mon, 01 Jul 2024 00:47:57 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91%E5%92%8Cocr%E7%A5%9E%E5%99%A8/</guid><description>我用过不少ocr和翻译的软件,厚着脸皮吹嘘多么强大,翻译问题不大,ocr的准确性差强人意! 最后找到一个目前我觉得还不错的. 因为可以自由选择ocr商家和翻译服务,对比下来,百度的ocr准确度还是可以的
+项目地址 : https://github.com/pot-app/pot-desktop
+官网: https://pot-app.com/
+OCR服务 使用百度OCR(高精度)
+申请教程: https://pot-app.com/docs/api/recognize/baidu.html
+免费额度: 个人认证 1,000 次/月 (个人完全足够)
+翻译服务 翻译推荐deeplx和openai (放心,能白嫖是不会花钱的)
+可以只开一个,或者两个都设置,对比看看效果
+deeplx : https://blog.taoshuge.eu.org/p/256/
+openai
+https://api.siliconflow.cn
+key: https://cloud.siliconflow.cn/account/ak
+模型(号称永久免费): THUDM/glm-4-9b-chat
+快捷键设置 这其实很重要,习惯的力量</description></item></channel></rss>
