@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Claude on Lufei's blog</title><link>https://blog.taoshuge.eu.org/tags/claude/</link><description>Recent content in Claude on Lufei's blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 18 Jul 2024 01:45:22 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/claude/index.xml" rel="self" type="application/rss+xml"/><item><title>国内如何注册Claude AI</title><link>https://blog.taoshuge.eu.org/p/289/</link><pubDate>Thu, 18 Jul 2024 01:45:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/289/</guid><description>之前一直在用OpenAI的ChatGPT，用起来还行，因此我并未关注其他的AI产品，
+最近在Timeline上高频度的看到有X友分享这个产品，今早忍不住注册体验了一下，产品整体体验很棒，
+想到早上注册的时候卡了一下，在此写个简单的教程分享给大家。
+注册Claude的前提
+-稳定的上网工具 如果你目前的工具不好用，我推荐一个风之谷，链接为https://cn1.fengzg.net，目前正在搞活动，填入邀请码fzg2024可享受85折，我已经用了快一年，还不错。
+-好用的短信接码平台 我使用的sms-active网站，支持支付宝购买，一条短信才十几个卢布，非常便宜。
+好了，开始进入正式的注册流程
+第一步、注册Claude账号，进入短信验证码页面
+我是用的是gmail登录的。
+第二步、进入Sms-Active网站，购买接收Claude的短信的手机号
+第三步、返回Claude，填入在Sms-Active购买的手机号，获取短信验证码
+第四步、返回Sms-Active，拿到获取的发送的验证码，并在Claude注册页面输入即可。
+至此，我们就完成了Claude的注册。</description></item></channel></rss>
