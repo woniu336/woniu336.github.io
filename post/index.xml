@@ -2031,7 +2031,7 @@ python怎么读取json文件？
 有些电脑网卡没有驱动就直接卡在这里了。 此时你可以按下 Shift+F10 打开命令提示符，输入 oobe\BypassNRO.cmd 即可重启进入带有跳过按钮的 OOBE。
 no@thankyou.com 而这个莫名其妙又有些好笑的账户，基本上就是替代上面的命令行，只需要登录时输入，密码随意，就能跟着向导创建本地账户了。
 简直…太好用。
-微软你说你是不是深井冰。</description></item><item><title>目前最简单、最安全、最稳定的专属节点搭建方法</title><link>https://blog.taoshuge.eu.org/p/%E7%9B%AE%E5%89%8D%E6%9C%80%E7%AE%80%E5%8D%95%E6%9C%80%E5%AE%89%E5%85%A8%E6%9C%80%E7%A8%B3%E5%AE%9A%E7%9A%84%E4%B8%93%E5%B1%9E%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/</link><pubDate>Fri, 04 Aug 2023 16:19:04 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E7%9B%AE%E5%89%8D%E6%9C%80%E7%AE%80%E5%8D%95%E6%9C%80%E5%AE%89%E5%85%A8%E6%9C%80%E7%A8%B3%E5%AE%9A%E7%9A%84%E4%B8%93%E5%B1%9E%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E6%96%B9%E6%B3%95/</guid><description>安装X-UI bash &amp;lt;(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/956bf85bbac978d56c0e319c5fac2d6db7df9564/install.sh) 0.3.4.4 选择1.8.3版本
+微软你说你是不是深井冰。</description></item><item><title>目前最简单、最安全、最稳定的专属节点搭建方法</title><link>https://blog.taoshuge.eu.org/p/30/</link><pubDate>Fri, 04 Aug 2023 16:19:04 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/30/</guid><description>安装X-UI bash &amp;lt;(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/956bf85bbac978d56c0e319c5fac2d6db7df9564/install.sh) 0.3.4.4 选择1.8.13版本
 各平台客户端 Windows（v2rayN）：https://github.com/2dust/v2rayN/releases/tag/6.23
 Android（v2rayNG）：https://github.com/2dust/v2rayNG/releases/tag/1.8.5
 IOS（shadowrocket）：https://apps.apple.com/app/shadowrocket/id932747118
