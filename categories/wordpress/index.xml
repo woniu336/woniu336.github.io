@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wordpress on 荒芜</title><link>https://blog.taoshuge.eu.org/categories/wordpress/</link><description>Recent content in Wordpress on 荒芜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Dec 2023 14:47:53 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/categories/wordpress/index.xml" rel="self" type="application/rss+xml"/><item><title>纯代码免插件优化WordPress6.3实现0sql-强化拓展</title><link>https://blog.taoshuge.eu.org/p/113/</link><pubDate>Sun, 17 Dec 2023 14:47:53 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/113/</guid><description>在WordPress各种优化插件、各种手段层出不穷的时代，各方大佬均在推荐各类插件，比如super cache、cache master和litespeed cache等。不过对于老白博客个人而言，就想图个清净，不喜欢插件太多，设置一大堆，复杂！所以呢，今天就掏出一个“无代码版”优化WordPress（强化拓展），再结合最新版本的WordPress6.3，轻松实现首页0sql，网站毫秒级加载。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wordpress on 荒芜</title><link>https://blog.taoshuge.eu.org/categories/wordpress/</link><description>Recent content in Wordpress on 荒芜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 30 Jul 2024 14:43:41 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/categories/wordpress/index.xml" rel="self" type="application/rss+xml"/><item><title>wordpress搭建经验</title><link>https://blog.taoshuge.eu.org/p/290/</link><pubDate>Tue, 30 Jul 2024 14:43:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/290/</guid><description>服务器选择 插件 LiteSpeed ##缓存
+UpdraftPlus ##备份还原
+Better Search Replace ##在WordPress数据库上运行搜索/替换
+强制https 规则
+RewriteEngine On RewriteCond %{HTTPS} !=on RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L] 显示访客真实IP 显示真实游客 IP，而不是 CloudFlare IP
+ALL, 103.21.244.0/22T, 103.22.200.0/22T, 103.31.4.0/22T, 104.16.0.0/13T, 104.24.0.0/14T, 108.162.192.0/18T, 131.0.72.0/22T, 141.101.64.0/18T, 162.158.0.0/15T, 172.64.0.0/13T, 173.245.48.0/20T, 188.114.96.0/20T, 190.93.240.0/20T, 197.234.240.0/22T, 198.41.128.0/17T 反向代理 反向代理：重写规则
+REWRITERULE ^(.*)$ HTTP://portainer/$1 [P] portainer：外部应用程序名称
+安装certbot 安装证书：Ubuntu 20.04 和 22.04
+sudo apt-get update sudo apt-get install certbot -y 卸载
+sudo apt-get remove certbot OpenLiteSpeed设置 建立文件 例如：</description></item><item><title>纯代码免插件优化WordPress6.3实现0sql-强化拓展</title><link>https://blog.taoshuge.eu.org/p/113/</link><pubDate>Sun, 17 Dec 2023 14:47:53 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/113/</guid><description>在WordPress各种优化插件、各种手段层出不穷的时代，各方大佬均在推荐各类插件，比如super cache、cache master和litespeed cache等。不过对于老白博客个人而言，就想图个清净，不喜欢插件太多，设置一大堆，复杂！所以呢，今天就掏出一个“无代码版”优化WordPress（强化拓展），再结合最新版本的WordPress6.3，轻松实现首页0sql，网站毫秒级加载。
 1.batcache效果演示 演示网站：https://test.xcbtmw.com/
 网站底部就能看到（未使用前首页查询次数为63）：
 附带一个显示查询次数和时间的代码
