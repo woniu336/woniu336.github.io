@@ -1,20 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 荒芜</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 荒芜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 01 Aug 2024 02:19:59 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 荒芜</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 荒芜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 01 Aug 2024 22:57:07 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
-curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 其他教程 项目 链接 ## 推荐脚本 https://woniu336.github.io/p/tool/#5推荐脚本 ## 宝塔面板7.7原版 https://blog.taoshuge.eu.org/p/229/ ## 一键重装系统 https://woniu336.github.io/p/tool/#4一键dd 或 https://woniu336.github.io/p/133/ ## 安装宝塔面板7.7原版 https://woniu336.github.io/p/bt/ 宝塔面板计划任务迁移 https://woniu336.github.io/p/136/ 宝塔海外版aapanel安装教程 https://woniu336.github.io/p/141/ docker应用 https://woniu336.github.io/p/11/ MySQL 5.7内存优化 https://woniu336.github.io/p/tool/#1mysql-57内存优化 开启BBR https://woniu336.github.io/p/tool/#2bbr swap的调整 https://woniu336.github.io/p/tool/#3swap的调整 证书申请 https://woniu336.github.io/p/ssl/ rclone工具 https://woniu336.github.io/p/rclone/ 兰空图床 https://woniu336.github.io/p/137/ 监控域名有效期 https://woniu336.</description></item><item><title>windows系统安装FFmpeg</title><link>https://blog.taoshuge.eu.org/p/291/</link><pubDate>Thu, 01 Aug 2024 02:19:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/291/</guid><description>安装 https://www.gyan.dev/ffmpeg/builds/
+curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 其他教程 项目 链接 ## 推荐脚本 https://woniu336.github.io/p/tool/#5推荐脚本 ## 宝塔面板7.7原版 https://blog.taoshuge.eu.org/p/229/ ## 一键重装系统 https://woniu336.github.io/p/tool/#4一键dd 或 https://woniu336.github.io/p/133/ ## 安装宝塔面板7.7原版 https://woniu336.github.io/p/bt/ 宝塔面板计划任务迁移 https://woniu336.github.io/p/136/ 宝塔海外版aapanel安装教程 https://woniu336.github.io/p/141/ docker应用 https://woniu336.github.io/p/11/ MySQL 5.7内存优化 https://woniu336.github.io/p/tool/#1mysql-57内存优化 开启BBR https://woniu336.github.io/p/tool/#2bbr swap的调整 https://woniu336.github.io/p/tool/#3swap的调整 证书申请 https://woniu336.github.io/p/ssl/ rclone工具 https://woniu336.github.io/p/rclone/ 兰空图床 https://woniu336.github.io/p/137/ 监控域名有效期 https://woniu336.</description></item><item><title>cyberpanel重写规则</title><link>https://blog.taoshuge.eu.org/p/293/</link><pubDate>Thu, 01 Aug 2024 22:57:07 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/293/</guid><description>cyberpanel防盗链设置 主页——网站——网站列表，选择对应网站，点击管理——重写规则
+RewriteEngine On RewriteCond %{HTTP_REFERER} !^https://(cdn.)?xxx.org [NC] RewriteRule .(jpg|jpeg|png|gif|webp|js|css)$ - [NC,F] 这条规则的意思是：
+阻止所有不是来自 xxx.org 主域名或其 CDN 子域名的请求访问网站的图片、JavaScript 和 CSS 文件，以防止资源被其他网站盗用。
+域名跳转到新域名 如果不保留原始的URL路径，把$1去掉即可
+RewriteEngine on RewriteCond %{HTTP_HOST} ^example.com [NC,OR] RewriteCond %{HTTP_HOST} ^www.example.com [NC] RewriteRule ^(.*)$ http://example.net/$1 [L,R=301,NC] [OR]表示这个条件和下一条件是逻辑“或”的关系
+这段代码将所有访问example.com或www.example.com的请求永久重定向到http://example.net，并保留原始的URL路径。
+强制https 规则 cyberpanel默认是[R,L] 实际是302状态，改成[R=301,L] 才是301状态，
+RewriteEngine On RewriteCond %{HTTPS} !=on RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=301,L] 301重定向分析 https://www.redirhub.com/zh/tool/redirect-checker
+https://uutool.cn/url-redirect/
+反向代理 还是在cyberpanel面板修改规则，但是portainer这部分需要在OpenLiteSpeed 面板设置
+REWRITERULE ^(.*)$ HTTP://portainer/$1 [P] portainer：外部应用程序名称 在openlitespeed 里设置
+导航到服务器 &amp;ndash; 外部应用程序 &amp;ndash; 添加 &amp;ndash;网络服务器</description></item><item><title>cyberpanel面板和openlitespeed设置</title><link>https://blog.taoshuge.eu.org/p/292/</link><pubDate>Thu, 01 Aug 2024 13:40:48 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/292/</guid><description>安装cyberpanel openlitespeed设置 管理界面账号密码
+sudo /usr/local/lsws/admin/misc/admpass.sh 查看密码 (如果之前更改过密码则无效)
+cd /usr/local/lsws cat adminpasswd IP使用自签证书
+防止IP泄露SSL证书，导致别人可以通过这种方式反查到你的源站
+1：生成自签名证书
+mkdir -p /opt/signcert &amp;amp;&amp;amp; cd /opt/signcert openssl req -x509 -newkey rsa:4096 -keyout OpenLiteSpeed-key.pem -out OpenLiteSpeed-cert.pem -nodes -days 365 # 一路回车 2：替换证书
+cat /opt/signcert/OpenLiteSpeed-cert.pem &amp;gt; /usr/local/lsws/admin/conf/webadmin.crt cat /opt/signcert/OpenLiteSpeed-key.pem &amp;gt; /usr/local/lsws/admin/conf/webadmin.key systemctl restart lsws 3：导航到openlitespeed面板，设置监听器SSL证书路径
+/opt/signcert/OpenLiteSpeed-key.pem /opt/signcert/OpenLiteSpeed-cert.pem 屏蔽Censys 导航到服务器&amp;ndash;安全&amp;ndash;访问控制&amp;ndash;拒绝列表
+162.142.125.0/24, 167.94.138.0/24, 167.94.145.0/24, 167.94.146.0/24, 167.248.133.0/24, 199.45.154.0/24, 199.45.155.0/24, 2602:80d:1000:b0cc:e::/80, 2620:96:e000:b0cc:e::/80 用户代理的屏蔽
+Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/) 禁用xmlrpc.php 导航到虚拟主机&amp;ndash;资源集&amp;ndash;类型Static 编辑&amp;ndash;重写规则，填入如下内容
+RewriteRule ^(xmlrpc\.php|wp-trackback\.php) - [F,L] 其他优化：https://www.</description></item><item><title>windows系统安装FFmpeg</title><link>https://blog.taoshuge.eu.org/p/291/</link><pubDate>Thu, 01 Aug 2024 02:19:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/291/</guid><description>安装 https://www.gyan.dev/ffmpeg/builds/
 或者 https://www.gyan.dev/ffmpeg/builds/packages/ffmpeg-6.1.1-full_build.7z
 环境变量 解压，复制bin路径到系统环境变量，例如：D:\ffmpeg-6.1.1-full_build\bin
 重启电脑生效，测试命令：
 ffmpeg -version</description></item><item><title>wordpress搭建经验</title><link>https://blog.taoshuge.eu.org/p/290/</link><pubDate>Tue, 30 Jul 2024 14:43:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/290/</guid><description>服务器选择 插件 LiteSpeed ##缓存
 UpdraftPlus ##备份还原
 Better Search Replace ##在WordPress数据库上运行搜索/替换
-强制https 规则
-RewriteEngine On RewriteCond %{HTTPS} !=on RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L] 显示访客真实IP 显示真实游客 IP，而不是 CloudFlare IP
-ALL, 103.21.244.0/22T, 103.22.200.0/22T, 103.31.4.0/22T, 104.16.0.0/13T, 104.24.0.0/14T, 108.162.192.0/18T, 131.0.72.0/22T, 141.101.64.0/18T, 162.158.0.0/15T, 172.64.0.0/13T, 173.245.48.0/20T, 188.114.96.0/20T, 190.93.240.0/20T, 197.234.240.0/22T, 198.41.128.0/17T 反向代理 反向代理：重写规则
-REWRITERULE ^(.*)$ HTTP://portainer/$1 [P] portainer：外部应用程序名称
-安装certbot 安装证书：Ubuntu 20.04 和 22.04
+显示访客真实IP 显示真实游客 IP，而不是 CloudFlare IP
+ALL, 103.21.244.0/22T, 103.22.200.0/22T, 103.31.4.0/22T, 104.16.0.0/13T, 104.24.0.0/14T, 108.162.192.0/18T, 131.0.72.0/22T, 141.101.64.0/18T, 162.158.0.0/15T, 172.64.0.0/13T, 173.245.48.0/20T, 188.114.96.0/20T, 190.93.240.0/20T, 197.234.240.0/22T, 198.41.128.0/17T 安装certbot 安装证书：Ubuntu 20.04 和 22.04
 sudo apt-get update sudo apt-get install certbot -y 卸载
-sudo apt-get remove certbot OpenLiteSpeed设置 建立文件 例如：</description></item><item><title>国内如何注册Claude AI</title><link>https://blog.taoshuge.eu.org/p/289/</link><pubDate>Thu, 18 Jul 2024 01:45:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/289/</guid><description>之前一直在用OpenAI的ChatGPT，用起来还行，因此我并未关注其他的AI产品，
+sudo apt-get remove certbot OpenLiteSpeed设置 建立文件 例如：
+mkdir -p /home/5k.92dm.top/public_html/.well-known/acme-challenge 虚拟主机&amp;ndash;资源集&amp;ndash;Static
+url: /.well-known/acme-challenge
+位置：/home/5k.92dm.top/public_html/.well-known/acme-challenge
+可访问：是
+申请证书 certbot certonly --non-interactive --agree-tos -m demo@gmail.com --webroot -w /home/catpdf.org/public_html/ -d catpdf.</description></item><item><title>国内如何注册Claude AI</title><link>https://blog.taoshuge.eu.org/p/289/</link><pubDate>Thu, 18 Jul 2024 01:45:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/289/</guid><description>之前一直在用OpenAI的ChatGPT，用起来还行，因此我并未关注其他的AI产品，
 最近在Timeline上高频度的看到有X友分享这个产品，今早忍不住注册体验了一下，产品整体体验很棒，
 想到早上注册的时候卡了一下，在此写个简单的教程分享给大家。
 注册Claude的前提
