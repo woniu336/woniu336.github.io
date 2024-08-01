@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>宝塔 on 荒芜</title><link>https://blog.taoshuge.eu.org/categories/%E5%AE%9D%E5%A1%94/</link><description>Recent content in 宝塔 on 荒芜</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 02 Aug 2024 05:50:24 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/categories/%E5%AE%9D%E5%A1%94/index.xml" rel="self" type="application/rss+xml"/><item><title>宝塔面板Nginx禁止直接通过IP地址访问网站</title><link>https://blog.taoshuge.eu.org/p/294/</link><pubDate>Fri, 02 Aug 2024 05:50:24 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/294/</guid><description>具体步骤如下：
+第一步： 改成如下图所示：取消设置默认站点
+第二步： 宝塔面板”文件”根目录搜索”0.default.conf”文件，注意勾选”包含子目录”，”0.default.conf”的文件路径如下。
+/www/server/panel/vhost/nginx/0.default.conf 这个文件是宝塔面板默认站点的nginx规则，我们把之前的内容删除，写入以下代码：
+server { listen 80 default; listen 443 default_server; server_name _; return 444; ssl_certificate /www/server/panel/ssl/certificate.pem; ssl_certificate_key /www/server/panel/ssl/privateKey.pem; ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4; ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; ssl_session_timeout 10m; ssl_prefer_server_ciphers on; } 搞定！
+理论上宝塔文件中存在的任意pem路径都可以</description></item></channel></rss>
