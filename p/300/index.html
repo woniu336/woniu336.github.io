@@ -1,0 +1,336 @@
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content='前言 系统：ubuntu22.04 软件：宝塔面板7.7.0 nginx版本：1.25.5 教程基于宝塔面板，是的又是托塔李天王，没办法，虽然总是吐槽，但真是方便顺手（习惯） Nginx 配置 ngx_cache_purge 模块 1：查看ngx_cache_purge模块 不罗嗦，直接打开ssh终端，连接你的服务器，输入： nginx -V 2>&amp;1 | grep -o ngx_cache_purge 显示：ngx_cache_purge没有问题 2：创建缓存文件夹 mkdir -p /tmp/nginx-cache/catpdf_org chmod -R 755 /tmp/nginx-cache/catpdf_org 然后，打开nginx配置，添加如下代码，在server前 注意每个站点的 缓存路径 和 keys_zone 要区分开 keys_zone后面的CATPDF.ORG参数很重要，每一个网站设置一个专用的，可以任意命名 # nginx fastcgi cache TART #站点 1 缓存配置 fastcgi_cache_path /tmp/nginx-cache/catpdf_org levels=1:2 keys_zone=CATPDF.ORG:100m inactive=1d max_size=5G; #如果要开启更多站点缓存，参照第一行设置，注意每个站点的 缓存路径 和 keys_zone 要区分开 #站点 2 缓存配置 #fastcgi_cache_path /tmp/nginx-cache/othersite_com levels=1:2 keys_zone=OTHERSITE.COM:100m inactive=1d max_size=5G; #多站点时共用以下配置 #fastcgi_temp_path /tmp/nginx-cache/temp; fastcgi_cache_key "$scheme$request_method$host$request_uri"; fastcgi_cache_use_stale error timeout invalid_header http_500; fastcgi_ignore_headers Cache-Control Expires Set-Cookie; # nginx fastcgi cache END 如果使用物理内存作为缓存空间的话，可以这样设置：'><title>提升网站速度：配置 Nginx FastCGI 缓存</title>
+<link rel=canonical href=https://blog.taoshuge.eu.org/p/300/><link rel=stylesheet href=/scss/style.min.9b797e718c050a5076d627d63a6f0a4309d678b56f680d16525bda176970af90.css><meta property='og:title' content="提升网站速度：配置 Nginx FastCGI 缓存"><meta property='og:description' content='前言 系统：ubuntu22.04 软件：宝塔面板7.7.0 nginx版本：1.25.5 教程基于宝塔面板，是的又是托塔李天王，没办法，虽然总是吐槽，但真是方便顺手（习惯） Nginx 配置 ngx_cache_purge 模块 1：查看ngx_cache_purge模块 不罗嗦，直接打开ssh终端，连接你的服务器，输入： nginx -V 2>&amp;1 | grep -o ngx_cache_purge 显示：ngx_cache_purge没有问题 2：创建缓存文件夹 mkdir -p /tmp/nginx-cache/catpdf_org chmod -R 755 /tmp/nginx-cache/catpdf_org 然后，打开nginx配置，添加如下代码，在server前 注意每个站点的 缓存路径 和 keys_zone 要区分开 keys_zone后面的CATPDF.ORG参数很重要，每一个网站设置一个专用的，可以任意命名 # nginx fastcgi cache TART #站点 1 缓存配置 fastcgi_cache_path /tmp/nginx-cache/catpdf_org levels=1:2 keys_zone=CATPDF.ORG:100m inactive=1d max_size=5G; #如果要开启更多站点缓存，参照第一行设置，注意每个站点的 缓存路径 和 keys_zone 要区分开 #站点 2 缓存配置 #fastcgi_cache_path /tmp/nginx-cache/othersite_com levels=1:2 keys_zone=OTHERSITE.COM:100m inactive=1d max_size=5G; #多站点时共用以下配置 #fastcgi_temp_path /tmp/nginx-cache/temp; fastcgi_cache_key "$scheme$request_method$host$request_uri"; fastcgi_cache_use_stale error timeout invalid_header http_500; fastcgi_ignore_headers Cache-Control Expires Set-Cookie; # nginx fastcgi cache END 如果使用物理内存作为缓存空间的话，可以这样设置：'><meta property='og:url' content='https://blog.taoshuge.eu.org/p/300/'><meta property='og:site_name' content='荒芜'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2024-08-10T01:19:49+08:00'><meta property='article:modified_time' content='2024-08-09T21:25:18+00:00'><meta name=twitter:title content="提升网站速度：配置 Nginx FastCGI 缓存"><meta name=twitter:description content='前言 系统：ubuntu22.04 软件：宝塔面板7.7.0 nginx版本：1.25.5 教程基于宝塔面板，是的又是托塔李天王，没办法，虽然总是吐槽，但真是方便顺手（习惯） Nginx 配置 ngx_cache_purge 模块 1：查看ngx_cache_purge模块 不罗嗦，直接打开ssh终端，连接你的服务器，输入： nginx -V 2>&amp;1 | grep -o ngx_cache_purge 显示：ngx_cache_purge没有问题 2：创建缓存文件夹 mkdir -p /tmp/nginx-cache/catpdf_org chmod -R 755 /tmp/nginx-cache/catpdf_org 然后，打开nginx配置，添加如下代码，在server前 注意每个站点的 缓存路径 和 keys_zone 要区分开 keys_zone后面的CATPDF.ORG参数很重要，每一个网站设置一个专用的，可以任意命名 # nginx fastcgi cache TART #站点 1 缓存配置 fastcgi_cache_path /tmp/nginx-cache/catpdf_org levels=1:2 keys_zone=CATPDF.ORG:100m inactive=1d max_size=5G; #如果要开启更多站点缓存，参照第一行设置，注意每个站点的 缓存路径 和 keys_zone 要区分开 #站点 2 缓存配置 #fastcgi_cache_path /tmp/nginx-cache/othersite_com levels=1:2 keys_zone=OTHERSITE.COM:100m inactive=1d max_size=5G; #多站点时共用以下配置 #fastcgi_temp_path /tmp/nginx-cache/temp; fastcgi_cache_key "$scheme$request_method$host$request_uri"; fastcgi_cache_use_stale error timeout invalid_header http_500; fastcgi_ignore_headers Cache-Control Expires Set-Cookie; # nginx fastcgi cache END 如果使用物理内存作为缓存空间的话，可以这样设置：'><link rel="shortcut icon" href=/favicon.ico><link rel=stylesheet href=https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css><link rel=stylesheet href=https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css><style>#scroll-to-top{display:none;position:fixed;bottom:20px;right:30px;z-index:99;font-size:18px;border:none;outline:none;background-color:#555;color:#fff;cursor:pointer;padding:15px;border-radius:4px}#scroll-to-top:hover{background-color:#333}</style><button onclick=topFunction() id=scroll-to-top title="Go to top">Top</button>
+<script>window.onscroll=function(){scrollFunction()};function scrollFunction(){document.body.scrollTop>20||document.documentElement.scrollTop>20?document.getElementById("scroll-to-top").style.display="block":document.getElementById("scroll-to-top").style.display="none"}function topFunction(){document.body.scrollTop=0,document.documentElement.scrollTop=0}</script><script src=/js/tiaozhuan.js></script><link rel=preconnect href=//sdk.51.la><script>window.FPConfig={delay:0,ignoreKeywords:[],maxRPS:3,hoverDelay:50}</script><script defer src=/js/flying-pages.min.js></script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><div id=article-toolbar style=position:sticky;top:5px;z-index:1000><a href=/ class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span></a></div><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#前言>前言</a></li><li><a href=#nginx-配置-ngx_cache_purge-模块>Nginx 配置 ngx_cache_purge 模块</a><ol><li><ol><li><a href=#1查看ngx_cache_purge模块>1：查看ngx_cache_purge模块</a></li><li><a href=#2创建缓存文件夹>2：创建缓存文件夹</a></li></ol></li><li><a href=#网站配置-ngx_cache_purge-模块>网站配置 ngx_cache_purge 模块</a></li></ol></li><li><a href=#wordpress缓存处理配置>WordPress缓存处理配置</a><ol><li><a href=#nginx-helper插件法>Nginx Helper插件法</a><ol><li><a href=#插件法注意事项>插件法注意事项</a></li></ol></li><li><a href=#nginx-helper纯代码版>Nginx-helper纯代码版</a></li><li><a href=#多站点设置>多站点设置</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/p/300/>提升网站速度：配置 Nginx FastCGI 缓存</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>2024-08-10</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>阅读时长: 5 分钟</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h4L18.5 9.5a2.828 2.828.0 10-4-4L4 16v4"/><path d="M13.5 6.5l4 4"/></svg>
+<time class=article-time--reading>字数: 952字</time></div></footer></div></header><section class=article-content><h2 id=前言>前言</h2><p>系统：ubuntu22.04</p><p>软件：宝塔面板7.7.0</p><p>nginx版本：1.25.5</p><blockquote><p>教程基于宝塔面板，是的又是托塔李天王，没办法，虽然总是吐槽，但真是方便顺手（习惯）</p></blockquote><h2 id=nginx-配置-ngx_cache_purge-模块>Nginx 配置 ngx_cache_purge 模块</h2><h4 id=1查看ngx_cache_purge模块>1：查看ngx_cache_purge模块</h4><p>不罗嗦，直接打开ssh终端，连接你的服务器，输入：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>nginx -V 2&gt;<span class=p>&amp;</span><span class=m>1</span> <span class=p>|</span> grep -o ngx_cache_purge
+</span></span></code></pre></div><p>显示：<code>ngx_cache_purge</code>没有问题</p><h4 id=2创建缓存文件夹>2：创建缓存文件夹</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>mkdir -p /tmp/nginx-cache/catpdf_org
+</span></span><span class=line><span class=cl>chmod -R <span class=m>755</span> /tmp/nginx-cache/catpdf_org
+</span></span></code></pre></div><p>然后，打开nginx配置，添加如下代码，在server前</p><div class="notice notice-tip"><div class=notice-title><svg xmlns="http://www.w3.org/2000/svg" class="icon notice-icon" viewBox="0 0 512 512" fill="#437052"><path d="M504 256A248 248 0 118 256a248 248 0 01496 0zM227 387l184-184c7-6 7-16 0-22l-22-23c-7-6-17-6-23 0L216 308l-70-70c-6-6-16-6-23 0l-22 23c-7 6-7 16 0 22l104 104c6 7 16 7 22 0z"/></svg></div><ul><li>注意每个站点的 缓存路径 和 keys_zone 要区分开</li><li>keys_zone后面的CATPDF.ORG参数很重要，每一个网站设置一个专用的，可以任意命名</li></ul></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>        <span class=c1># nginx fastcgi cache TART</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#站点 1 缓存配置</span>
+</span></span><span class=line><span class=cl>        fastcgi_cache_path /tmp/nginx-cache/catpdf_org <span class=nv>levels</span><span class=o>=</span>1:2 <span class=nv>keys_zone</span><span class=o>=</span>CATPDF.ORG:100m <span class=nv>inactive</span><span class=o>=</span>1d <span class=nv>max_size</span><span class=o>=</span>5G<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c1>#如果要开启更多站点缓存，参照第一行设置，注意每个站点的 缓存路径 和 keys_zone 要区分开</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#站点 2 缓存配置</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#fastcgi_cache_path /tmp/nginx-cache/othersite_com levels=1:2 keys_zone=OTHERSITE.COM:100m inactive=1d max_size=5G;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c1>#多站点时共用以下配置</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#fastcgi_temp_path /tmp/nginx-cache/temp;</span>
+</span></span><span class=line><span class=cl>        fastcgi_cache_key <span class=s2>&#34;</span><span class=nv>$scheme$request_method$host$request_uri</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_cache_use_stale error timeout invalid_header http_500<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_ignore_headers Cache-Control Expires Set-Cookie<span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=c1># nginx fastcgi cache END</span>
+</span></span></code></pre></div><p>如果使用物理内存作为缓存空间的话，可以这样设置：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>fastcgi_cache_path /dev/shm/nginx-cache/catpdf_org <span class=nv>levels</span><span class=o>=</span>1:2 keys <span class=nv>zone</span><span class=o>=</span>CATPDF.ORG:32m <span class=nv>inactive</span><span class=o>=</span>60m <span class=nv>max_size</span><span class=o>=</span>128m
+</span></span></code></pre></div><p>/dev/shm这个目录是linux下一个利用内存虚拟出来的一个目录，这个目录中的文件都是保存在内存中，而不是磁盘上。其大小是非固定的，即不是预先分配好的
+内存来存储的.</p><p>解读：</p><ul><li>设置缓存文件的存储路径为 /tmp/nginx-cache/catpdf_org</li><li>levels=1:2 设置缓存目录的层级结构为两级目录</li><li>keys_zone=CATPDF.ORG:100m 定义一个名为CATPDF.ORG、大小为100MB的共享内存区域来存储缓存键和元数据</li><li>inactive=1d 如果缓存项在1天内未被访问，将被删除</li><li>max_size=5G 设置缓存的最大总大小为5GB</li></ul><ol><li><p>fastcgi_cache_key $scheme$request_method$host$request_uri;</p><ul><li>定义缓存键的组成部分，包括协议、请求方法、主机名和请求URI</li></ul></li><li><p>fastcgi_cache_use_stale error timeout invalid_header http_500;</p><ul><li>在发生错误、超时、无效头或500错误时允许使用过期的缓存</li></ul></li><li><p>fastcgi_ignore_headers Cache-Control Expires Set-Cookie;</p><ul><li>指定Nginx忽略来自FastCGI服务器的Cache-Control、Expires和Set-Cookie响应头</li></ul></li></ol><p>注意事项：</p><ul><li>配置文件中包含了为其他站点添加缓存的注释示例</li><li>fastcgi_temp_path 被注释掉了，但可以用来指定FastCGI的临时文件存储路径</li><li>这种配置可以显著提高网站性能，特别是对于动态内容较多的站点</li><li>每个站点应该使用不同的缓存路径和keys_zone名称</li></ul><p>本例Nginx 完整配置备份</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>user  www www<span class=p>;</span>
+</span></span><span class=line><span class=cl>worker_processes auto<span class=p>;</span>
+</span></span><span class=line><span class=cl>error_log  /www/wwwlogs/nginx_error.log  crit<span class=p>;</span>
+</span></span><span class=line><span class=cl>pid        /www/server/nginx/logs/nginx.pid<span class=p>;</span>
+</span></span><span class=line><span class=cl>worker_rlimit_nofile 51200<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>stream <span class=o>{</span>
+</span></span><span class=line><span class=cl>    log_format tcp_format <span class=s1>&#39;$time_local|$remote_addr|$protocol|$status|$bytes_sent|$bytes_received|$session_time|$upstream_addr|$upstream_bytes_sent|$upstream_bytes_received|$upstream_connect_time&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>  
+</span></span><span class=line><span class=cl>    access_log /www/wwwlogs/tcp-access.log tcp_format<span class=p>;</span>
+</span></span><span class=line><span class=cl>    error_log /www/wwwlogs/tcp-error.log<span class=p>;</span>
+</span></span><span class=line><span class=cl>    include /www/server/panel/vhost/nginx/tcp/*.conf<span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>events
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>        use epoll<span class=p>;</span>
+</span></span><span class=line><span class=cl>        worker_connections 51200<span class=p>;</span>
+</span></span><span class=line><span class=cl>        multi_accept on<span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>http
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>        include       mime.types<span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#include luawaf.conf;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        include proxy.conf<span class=p>;</span>
+</span></span><span class=line><span class=cl>        lua_package_path <span class=s2>&#34;/www/server/nginx/lib/lua/?.lua;;&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        default_type  application/octet-stream<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        server_names_hash_bucket_size 512<span class=p>;</span>
+</span></span><span class=line><span class=cl>        client_header_buffer_size 32k<span class=p>;</span>
+</span></span><span class=line><span class=cl>        large_client_header_buffers <span class=m>4</span> 32k<span class=p>;</span>
+</span></span><span class=line><span class=cl>        client_max_body_size 50m<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        sendfile   on<span class=p>;</span>
+</span></span><span class=line><span class=cl>        tcp_nopush on<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        keepalive_timeout 60<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        tcp_nodelay on<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        fastcgi_connect_timeout 300<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_send_timeout 300<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_read_timeout 300<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_buffer_size 64k<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_buffers <span class=m>4</span> 64k<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_busy_buffers_size 128k<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_temp_file_write_size 256k<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_intercept_errors on<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        gzip on<span class=p>;</span>
+</span></span><span class=line><span class=cl>        gzip_min_length  1k<span class=p>;</span>
+</span></span><span class=line><span class=cl>        gzip_buffers     <span class=m>4</span> 16k<span class=p>;</span>
+</span></span><span class=line><span class=cl>        gzip_http_version 1.1<span class=p>;</span>
+</span></span><span class=line><span class=cl>        gzip_comp_level 2<span class=p>;</span>
+</span></span><span class=line><span class=cl>        gzip_types     text/plain application/javascript application/x-javascript text/javascript text/css application/xml application/json image/jpeg image/gif image/png font/ttf font/otf image/svg+xml application/xml+rss text/x-js<span class=p>;</span>
+</span></span><span class=line><span class=cl>        gzip_vary on<span class=p>;</span>
+</span></span><span class=line><span class=cl>        gzip_proxied   expired no-cache no-store private auth<span class=p>;</span>
+</span></span><span class=line><span class=cl>        gzip_disable   <span class=s2>&#34;MSIE [1-6]\.&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        brotli on<span class=p>;</span>
+</span></span><span class=line><span class=cl>        brotli_comp_level 6<span class=p>;</span>    
+</span></span><span class=line><span class=cl>        brotli_buffers <span class=m>16</span> 8k<span class=p>;</span>   
+</span></span><span class=line><span class=cl>        brotli_min_length 20<span class=p>;</span> 
+</span></span><span class=line><span class=cl>        brotli_types *<span class=p>;</span>
+</span></span><span class=line><span class=cl>        brotli_static always<span class=p>;</span>   
+</span></span><span class=line><span class=cl>        brotli_window 512k<span class=p>;</span>
+</span></span><span class=line><span class=cl>		
+</span></span><span class=line><span class=cl>        limit_conn_zone <span class=nv>$binary_remote_addr</span> <span class=nv>zone</span><span class=o>=</span>perip:10m<span class=p>;</span>
+</span></span><span class=line><span class=cl>        limit_conn_zone <span class=nv>$server_name</span> <span class=nv>zone</span><span class=o>=</span>perserver:10m<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        server_tokens off<span class=p>;</span>
+</span></span><span class=line><span class=cl>        access_log off<span class=p>;</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=c1># nginx fastcgi cache TART</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#站点 1 缓存配置</span>
+</span></span><span class=line><span class=cl>        fastcgi_cache_path /tmp/nginx-cache/catpdf_org <span class=nv>levels</span><span class=o>=</span>1:2 <span class=nv>keys_zone</span><span class=o>=</span>CATPDF.ORG:100m <span class=nv>inactive</span><span class=o>=</span>1d <span class=nv>max_size</span><span class=o>=</span>5G<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c1>#如果要开启更多站点缓存，参照第一行设置，注意每个站点的 缓存路径 和 keys_zone 要区分开</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#站点 2 缓存配置</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#fastcgi_cache_path /tmp/nginx-cache/othersite_com levels=1:2 keys_zone=OTHERSITE.COM:100m inactive=1d max_size=5G;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=c1>#多站点时共用以下配置</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#fastcgi_temp_path /tmp/nginx-cache/temp;</span>
+</span></span><span class=line><span class=cl>        fastcgi_cache_key <span class=s2>&#34;</span><span class=nv>$scheme$request_method$host$request_uri</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_cache_use_stale error timeout invalid_header http_500<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_ignore_headers Cache-Control Expires Set-Cookie<span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=c1># nginx fastcgi cache END</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        server
+</span></span><span class=line><span class=cl>            <span class=o>{</span>
+</span></span><span class=line><span class=cl>                listen 888<span class=p>;</span>
+</span></span><span class=line><span class=cl>                server_name phpmyadmin<span class=p>;</span>
+</span></span><span class=line><span class=cl>                index index.html index.htm index.php<span class=p>;</span>
+</span></span><span class=line><span class=cl>                root  /www/server/phpmyadmin<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                <span class=c1>#error_page   404   /404.html;</span>
+</span></span><span class=line><span class=cl>                include enable-php.conf<span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                location ~ .*<span class=se>\.</span><span class=o>(</span>gif<span class=p>|</span>jpg<span class=p>|</span>jpeg<span class=p>|</span>png<span class=p>|</span>bmp<span class=p>|</span>swf<span class=o>)</span>$
+</span></span><span class=line><span class=cl>                <span class=o>{</span>
+</span></span><span class=line><span class=cl>                    expires      30d<span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                location ~ .*<span class=se>\.</span><span class=o>(</span>js<span class=p>|</span>css<span class=o>)</span>?$
+</span></span><span class=line><span class=cl>                <span class=o>{</span>
+</span></span><span class=line><span class=cl>                    expires      12h<span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                location ~ /<span class=se>\.</span>
+</span></span><span class=line><span class=cl>                <span class=o>{</span>
+</span></span><span class=line><span class=cl>                    deny all<span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=o>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>                access_log  /www/wwwlogs/access.log<span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=o>}</span>
+</span></span><span class=line><span class=cl>        include /www/server/panel/vhost/nginx/*.conf<span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span></code></pre></div><h3 id=网站配置-ngx_cache_purge-模块>网站配置 ngx_cache_purge 模块</h3><p>这里的配置文件，是对应网站的配置文件，不是nginx软件模块的配置文件</p><p>点击网站&ndash;选择你的站点&ndash;配置文件，在原配置文件#SSL-END之后添加以下代码：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>    <span class=c1>#配置 Nginx fastcgi_cache START</span>
+</span></span><span class=line><span class=cl>    <span class=nb>set</span> <span class=nv>$skip_cache</span> 0<span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#post 访问不缓存</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span><span class=nv>$request_method</span> <span class=o>=</span> POST<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=nb>set</span> <span class=nv>$skip_cache</span> 1<span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>   
+</span></span><span class=line><span class=cl>    <span class=c1>#动态查询不缓存</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span><span class=nv>$query_string</span> !<span class=o>=</span> <span class=s2>&#34;&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=nb>set</span> <span class=nv>$skip_cache</span> 1<span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>   
+</span></span><span class=line><span class=cl>    <span class=c1>#后台等特定页面不缓存（其他需求请自行添加即可）</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span><span class=nv>$request_uri</span> ~* <span class=s2>&#34;purge=all|/wp-admin/|/xmlrpc.php|wp-.*.php|/feed/|index.php|sitemap(_index)?.xml&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=nb>set</span> <span class=nv>$skip_cache</span> 1<span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>   
+</span></span><span class=line><span class=cl>    <span class=c1>#对登录用户、评论过的用户不展示缓存</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span><span class=nv>$http_cookie</span> ~* <span class=s2>&#34;comment_author|wordpress_[a-f0-9]+|wp-postpass|wordpress_no_cache|wordpress_logged_in&#34;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=nb>set</span> <span class=nv>$skip_cache</span> 1<span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#这里请参考你网站之前的配置，特别是sock的路径，弄错了就502了！</span>
+</span></span><span class=line><span class=cl>    location ~ <span class=o>[</span>^/<span class=o>]</span><span class=se>\.</span>php<span class=o>(</span>/<span class=p>|</span>$<span class=o>)</span>
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>        try_files <span class=nv>$uri</span> <span class=o>=</span>404<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_pass unix:/tmp/php-cgi-81.sock<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_index index.php<span class=p>;</span>
+</span></span><span class=line><span class=cl>        include fastcgi.conf<span class=p>;</span>  
+</span></span><span class=line><span class=cl>        add_header Strict-Transport-Security <span class=s2>&#34;max-age=63072000; includeSubdomains; preload&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=c1>#新增的缓存规则</span>
+</span></span><span class=line><span class=cl>        fastcgi_cache_bypass <span class=nv>$skip_cache</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_no_cache <span class=nv>$skip_cache</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        add_header X-Cache <span class=s2>&#34;</span><span class=nv>$upstream_cache_status</span><span class=s2> From </span><span class=nv>$host</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_cache CATPDF.ORG<span class=p>;</span>
+</span></span><span class=line><span class=cl>        add_header Cache-Control  max-age<span class=o>=</span>0<span class=p>;</span>
+</span></span><span class=line><span class=cl>        add_header Nginx-Cache <span class=s2>&#34;</span><span class=nv>$upstream_cache_status</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        add_header Last-Modified <span class=nv>$date_gmt</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        add_header X-Frame-Options SAMEORIGIN<span class=p>;</span> <span class=c1># 只允许本站用 frame 来嵌套</span>
+</span></span><span class=line><span class=cl>        add_header X-Content-Type-Options nosniff<span class=p>;</span> <span class=c1># 禁止嗅探文件类型</span>
+</span></span><span class=line><span class=cl>        add_header X-XSS-Protection <span class=s2>&#34;1; mode=block&#34;</span><span class=p>;</span> <span class=c1># XSS 保护</span>
+</span></span><span class=line><span class=cl>        etag  on<span class=p>;</span>
+</span></span><span class=line><span class=cl>        fastcgi_cache_valid <span class=m>200</span> <span class=m>301</span> <span class=m>302</span> 1d<span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#缓存清理配置</span>
+</span></span><span class=line><span class=cl>    location ~ /purge<span class=o>(</span>/.*<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>      allow 127.0.0.1<span class=p>;</span>
+</span></span><span class=line><span class=cl>      allow <span class=s2>&#34;你的公网ip&#34;</span><span class=p>;</span> <span class=c1># 引号要保留</span>
+</span></span><span class=line><span class=cl>      deny all<span class=p>;</span>
+</span></span><span class=line><span class=cl>      fastcgi_cache_purge CATPDF.ORG <span class=s2>&#34;</span><span class=nv>$scheme$request_method$host$1</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=c1>#配置 Nginx fastcgi_cache EDN</span>
+</span></span></code></pre></div><p>WordPress 配置 Nginx fastcgi_cache 注意事项</p><ol><li>add_header Cache-Control如果是动态内容要实时更新的话，可以设置为0，否则可以设置时间大一些，默认单
+位是秒；
+2.sock的路径一定要填对，否则会出现502错误；例如：fastcgi_pass unix:/tmp/php-cgi-81.sock; 表示php为8.1版本</li></ol><p>3.代码里面的服务器公网IP换成你的服务器公网IP,须保留双引号；
+4.可选缓存配置：某些主题如果移动端访问报错，可以设置不缓存移动端，参考写法：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>    <span class=c1>#不缓存移动端访问</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span><span class=nv>$http_user_agent</span> ~* <span class=o>(</span>mobile<span class=p>|</span>nokia<span class=p>|</span>iphone<span class=p>|</span>ipad<span class=p>|</span>android<span class=p>|</span>samsung<span class=p>|</span>htc<span class=p>|</span>blackberry<span class=p>|</span>windowss<span class=o>(</span>ce<span class=p>|</span>phone<span class=o>)))</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=nb>set</span> <span class=nv>$skip_cache</span> 1<span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span></code></pre></div><p>如果评论过的用户加载的是缓存，那应该是WordPress没有记住Cookie,尝试把以下代码加入到functions.php
+中：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>//nginx-cache 缓存配置代码
+</span></span><span class=line><span class=cl>add_action<span class=o>(</span><span class=s1>&#39;set_comment_cookies&#39;</span>,<span class=s1>&#39;coffin_set_cookies&#39;</span>,10,3<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=k>function</span> coffin_set_cookies<span class=o>(</span> <span class=nv>$comment</span>, <span class=nv>$user</span>, <span class=nv>$cookies_consent</span><span class=o>){</span>
+</span></span><span class=line><span class=cl>   <span class=nv>$cookies_consent</span> <span class=o>=</span> true<span class=p>;</span>
+</span></span><span class=line><span class=cl>   wp_set_comment_cookies<span class=o>(</span><span class=nv>$comment</span>, <span class=nv>$user</span>, <span class=nv>$cookies_consent</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p>启用fastcgi_cache缓存时，发现在Nginx配置文件中添加了Cache-Control信息，但是总是不生效。HTTP头部信息会总会包含以下信息：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>Cache-Control: no-store,no-cache,must-revalidate,post-check<span class=o>=</span>0,pre-check<span class=o>=</span><span class=m>0</span> 和 Pragma: no-cache
+</span></span></code></pre></div><p>打开php配置，查找</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>session.cache_limiter <span class=o>=</span> nocache
+</span></span></code></pre></div><p>改成</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>session.cache_limiter <span class=o>=</span> none
+</span></span></code></pre></div><h2 id=wordpress缓存处理配置>WordPress缓存处理配置</h2><h3 id=nginx-helper插件法>Nginx Helper插件法</h3><p>进入WordPress 后台插件安装界面搜索 Nginx Helper 关键词在线安装即可</p><p>1）开启purge，选择nginx Fastcgin cahe，因为就我们用就是这个缓存。</p><p>2）选择 Delete local server cache files。当然第一个也可以用，但是一般推荐用Delete local server cache files，因为每个服务器的环境都不一样，缓存路径也会不尽相同就会导致插件无法找到缓存文件并删除！</p><h4 id=插件法注意事项>插件法注意事项</h4><p>由于插件作者定义的缓存路径是/var/run/nginx-cache, 解决办法是在插件中找到这一处路径，并替
+换成我们自己上边设置的路径/tmp/nginx-cache/catpdf_org</p><p>定义缓存路径的位置在/wp-content/plugins/nginx-helper/includes/class-nginx-helper.php,约88行位置。</p><p>如果怕更新插件忘了改，那么最好是在WordPress根目录下的wp-config.php中新增如下代码即可（不知道添
+加到第几行的话，可以添加到 define(&lsquo;WPLANG&rsquo;,&lsquo;zh_CN&rsquo;);的后面。添加后建议重载一下PHP,确保变量
+生效（主要针对开启了PHP缓存的网站），</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl> //根据实际情况定义缓存的存放路径
+</span></span><span class=line><span class=cl>define<span class=o>(</span><span class=s1>&#39;RT_WP_NGINX_HELPER_CACHE_PATH&#39;</span>,<span class=s1>&#39;/tmp/nginx-cache/catpdf_org&#39;</span><span class=o>)</span><span class=p>;</span>
+</span></span></code></pre></div><h3 id=nginx-helper纯代码版>Nginx-helper纯代码版</h3><p>为张戈大佬原创：https://zhang.ge/5112.html，搬运如下</p><p>将整段粘贴到 WordPress 主题函数模板文件 functions.php 当中即可。其他功能细项，在代码和原文中都有详细的注释了，自行参考修改</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>/**
+</span></span><span class=line><span class=cl>* WordPress Nginx FastCGI 缓存清理代码<span class=o>(</span>Nginx-Helper 纯代码版<span class=o>)</span> By 张戈博客
+</span></span><span class=line><span class=cl>* 文章地址：https://zhang.ge/5112.html
+</span></span><span class=line><span class=cl>* 转载请保留原文出处，谢谢合作！
+</span></span><span class=line><span class=cl>*/
+</span></span><span class=line><span class=cl>//初始化配置
+</span></span><span class=line><span class=cl><span class=nv>$logSwitch</span>  <span class=o>=</span> 0<span class=p>;</span>                  //配置日志开关，1 为开启，0 为关闭
+</span></span><span class=line><span class=cl><span class=nv>$logFile</span>    <span class=o>=</span> <span class=s1>&#39;/tmp/purge.log&#39;</span><span class=p>;</span>   //配置日志路径
+</span></span><span class=line><span class=cl><span class=nv>$cache_path</span> <span class=o>=</span> <span class=s1>&#39;/tmp/nginx-cache/catpdf_org&#39;</span><span class=p>;</span>     //配置缓存路径
+</span></span><span class=line><span class=cl>//清理所有缓存<span class=o>(</span>仅管理员<span class=o>)</span> 范例：http://www.domain.com/?purge<span class=o>=</span>all
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=o>(</span><span class=nv>$_GET</span><span class=o>[</span><span class=s1>&#39;purge&#39;</span><span class=o>]</span> <span class=o>==</span> <span class=s1>&#39;all&#39;</span> <span class=o>&amp;&amp;</span> is_user_logged_in<span class=o>())</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span><span class=o>(</span> current_user_can<span class=o>(</span> <span class=s1>&#39;manage_options&#39;</span> <span class=o>))</span> 
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>        delDirAndFile<span class=o>(</span><span class=nv>$cache_path</span>, 0<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>//缓存清理选项
+</span></span><span class=line><span class=cl>add_action<span class=o>(</span><span class=s1>&#39;publish_post&#39;</span>, <span class=s1>&#39;Clean_By_Publish&#39;</span>, 99<span class=o>)</span><span class=p>;</span>                   //文章发布、更新清理缓存
+</span></span><span class=line><span class=cl>add_action<span class=o>(</span><span class=s1>&#39;comment_post&#39;</span>, <span class=s1>&#39;Clean_By_Comments&#39;</span>,99<span class=o>)</span><span class=p>;</span>                   //评论提交清理缓存<span class=o>(</span>不需要可注释<span class=o>)</span>
+</span></span><span class=line><span class=cl>add_action<span class=o>(</span><span class=s1>&#39;comment_unapproved_to_approved&#39;</span>, <span class=s1>&#39;Clean_By_Approved&#39;</span>,99<span class=o>)</span><span class=p>;</span> //评论审核清理缓存<span class=o>(</span>不需要可注释<span class=o>)</span>
+</span></span><span class=line><span class=cl>//文章发布清理缓存函数
+</span></span><span class=line><span class=cl><span class=k>function</span> Clean_By_Publish<span class=o>(</span><span class=nv>$post_ID</span><span class=o>){</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$url</span> <span class=o>=</span> get_permalink<span class=o>(</span><span class=nv>$post_ID</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    cleanFastCGIcache<span class=o>(</span><span class=nv>$url</span><span class=o>)</span><span class=p>;</span>        //清理当前文章缓存
+</span></span><span class=line><span class=cl>    cleanFastCGIcache<span class=o>(</span>home_url<span class=o>()</span>.<span class=s1>&#39;/&#39;</span><span class=o>)</span><span class=p>;</span>  //清理首页缓存<span class=o>(</span>不需要可注释此行<span class=o>)</span>
+</span></span><span class=line><span class=cl>    //清理文章所在分类缓存<span class=o>(</span>不需要可注释以下 <span class=m>5</span> 行<span class=o>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span> <span class=nv>$categories</span> <span class=o>=</span> wp_get_post_categories<span class=o>(</span> <span class=nv>$post_ID</span> <span class=o>)</span> <span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        foreach <span class=o>(</span> <span class=nv>$categories</span> as <span class=nv>$category_id</span> <span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            cleanFastCGIcache<span class=o>(</span>get_category_link<span class=o>(</span> <span class=nv>$category_id</span> <span class=o>))</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>    //清理文章相关标签页面缓存<span class=o>(</span>不需要可注释以下 <span class=m>5</span> 行<span class=o>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span> <span class=nv>$tags</span> <span class=o>=</span> get_the_tags<span class=o>(</span> <span class=nv>$post_ID</span> <span class=o>)</span> <span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        foreach <span class=o>(</span> <span class=nv>$tags</span> as <span class=nv>$tag</span> <span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>	    cleanFastCGIcache<span class=o>(</span> get_tag_link<span class=o>(</span> <span class=nv>$tag</span>-&gt;term_id <span class=o>))</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>// 评论发布清理文章缓存
+</span></span><span class=line><span class=cl><span class=k>function</span> Clean_By_Comments<span class=o>(</span><span class=nv>$comment_id</span><span class=o>){</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$comment</span>  <span class=o>=</span> get_comment<span class=o>(</span><span class=nv>$comment_id</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$url</span>      <span class=o>=</span> get_permalink<span class=o>(</span><span class=nv>$comment</span>-&gt;comment_post_ID<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    cleanFastCGIcache<span class=o>(</span><span class=nv>$url</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>// 评论审核通过清理文章缓存
+</span></span><span class=line><span class=cl><span class=k>function</span> Clean_By_Approved<span class=o>(</span><span class=nv>$comment</span><span class=o>)</span>
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$url</span>      <span class=o>=</span> get_permalink<span class=o>(</span><span class=nv>$comment</span>-&gt;comment_post_ID<span class=o>)</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl>    cleanFastCGIcache<span class=o>(</span><span class=nv>$url</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>//日志记录
+</span></span><span class=line><span class=cl><span class=k>function</span> purgeLog<span class=o>(</span><span class=nv>$msg</span><span class=o>)</span>
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>    global <span class=nv>$logFile</span>, <span class=nv>$logSwitch</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span><span class=nv>$logSwitch</span> <span class=o>==</span> <span class=m>0</span> <span class=o>)</span> <span class=k>return</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    date_default_timezone_set<span class=o>(</span><span class=s1>&#39;Asia/Shanghai&#39;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    file_put_contents<span class=o>(</span><span class=nv>$logFile</span>, date<span class=o>(</span><span class=s1>&#39;[Y-m-d H:i:s]: &#39;</span><span class=o>)</span> . <span class=nv>$msg</span> . PHP_EOL, FILE_APPEND<span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=nv>$msg</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>// 缓存文件删除函数
+</span></span><span class=line><span class=cl><span class=k>function</span> cleanFastCGIcache<span class=o>(</span><span class=nv>$url</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$url_data</span>  <span class=o>=</span> parse_url<span class=o>(</span><span class=nv>$url</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    global <span class=nv>$cache_path</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span><span class=o>(</span>!<span class=nv>$url_data</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> purgeLog<span class=o>(</span><span class=nv>$url</span>.<span class=s1>&#39; is a bad url!&#39;</span> <span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$hash</span>        <span class=o>=</span> md5<span class=o>(</span><span class=nv>$url_data</span><span class=o>[</span><span class=s1>&#39;scheme&#39;</span><span class=o>]</span>.<span class=s1>&#39;GET&#39;</span>.<span class=nv>$url_data</span><span class=o>[</span><span class=s1>&#39;host&#39;</span><span class=o>]</span>.<span class=nv>$url_data</span><span class=o>[</span><span class=s1>&#39;path&#39;</span><span class=o>])</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$cache_path</span>  <span class=o>=</span> <span class=o>(</span>substr<span class=o>(</span><span class=nv>$cache_path</span>, -1<span class=o>)</span> <span class=o>==</span> <span class=s1>&#39;/&#39;</span><span class=o>)</span> ? <span class=nv>$cache_path</span> : <span class=nv>$cache_path</span>.<span class=s1>&#39;/&#39;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$cached_file</span> <span class=o>=</span> <span class=nv>$cache_path</span> . substr<span class=o>(</span><span class=nv>$hash</span>, -1<span class=o>)</span> . <span class=s1>&#39;/&#39;</span> . substr<span class=o>(</span><span class=nv>$hash</span>,-3,2<span class=o>)</span> . <span class=s1>&#39;/&#39;</span> . <span class=nv>$hash</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span>!file_exists<span class=o>(</span><span class=nv>$cached_file</span><span class=o>))</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> purgeLog<span class=o>(</span><span class=nv>$url</span> . <span class=s2>&#34; is currently not cached (checked for file: </span><span class=nv>$cached_file</span><span class=s2>)&#34;</span> <span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span> <span class=k>else</span> <span class=k>if</span> <span class=o>(</span>unlink<span class=o>(</span><span class=nv>$cached_file</span><span class=o>))</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> purgeLog<span class=o>(</span> <span class=nv>$url</span>.<span class=s2>&#34; *** CLeanUP *** (cache file: </span><span class=nv>$cached_file</span><span class=s2>)&#34;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span> <span class=k>else</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> purgeLog<span class=o>(</span><span class=s2>&#34;- - An error occurred deleting the cache file. Check the server logs for a PHP warning.&#34;</span> <span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span><span class=line><span class=cl>/**
+</span></span><span class=line><span class=cl> * 删除目录及目录下所有文件或删除指定文件
+</span></span><span class=line><span class=cl> * 代码出自 ThinkPHP：http://www.thinkphp.cn/code/1470.html
+</span></span><span class=line><span class=cl> * @param str <span class=nv>$path</span>   待删除目录路径
+</span></span><span class=line><span class=cl> * @param int <span class=nv>$delDir</span> 是否删除目录，1 或 <span class=nb>true</span> 删除目录，0 或 <span class=nb>false</span> 则只删除文件保留目录（包含子目录）
+</span></span><span class=line><span class=cl> * @return bool 返回删除状态
+</span></span><span class=line><span class=cl> */
+</span></span><span class=line><span class=cl><span class=k>function</span> delDirAndFile<span class=o>(</span><span class=nv>$path</span>, <span class=nv>$delDir</span> <span class=o>=</span> FALSE<span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=nv>$handle</span> <span class=o>=</span> opendir<span class=o>(</span><span class=nv>$path</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=o>(</span><span class=nv>$handle</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>while</span> <span class=o>(</span><span class=nb>false</span> !<span class=o>==</span> <span class=o>(</span> <span class=nv>$item</span> <span class=o>=</span> readdir<span class=o>(</span><span class=nv>$handle</span><span class=o>)</span> <span class=o>))</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=o>(</span><span class=nv>$item</span> !<span class=o>=</span> <span class=s2>&#34;.&#34;</span> <span class=o>&amp;&amp;</span> <span class=nv>$item</span> !<span class=o>=</span> <span class=s2>&#34;..&#34;</span><span class=o>)</span>
+</span></span><span class=line><span class=cl>                is_dir<span class=o>(</span><span class=s2>&#34;</span><span class=nv>$path</span><span class=s2>/</span><span class=nv>$item</span><span class=s2>&#34;</span><span class=o>)</span> ? delDirAndFile<span class=o>(</span><span class=s2>&#34;</span><span class=nv>$path</span><span class=s2>/</span><span class=nv>$item</span><span class=s2>&#34;</span>, <span class=nv>$delDir</span><span class=o>)</span> : unlink<span class=o>(</span><span class=s2>&#34;</span><span class=nv>$path</span><span class=s2>/</span><span class=nv>$item</span><span class=s2>&#34;</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        closedir<span class=o>(</span><span class=nv>$handle</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>(</span><span class=nv>$delDir</span><span class=o>)</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> rmdir<span class=o>(</span><span class=nv>$path</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span><span class=k>else</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>(</span>file_exists<span class=o>(</span><span class=nv>$path</span><span class=o>))</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> unlink<span class=o>(</span><span class=nv>$path</span><span class=o>)</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span> <span class=k>else</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> FALSE<span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><h3 id=多站点设置>多站点设置</h3><p>如果要开启更多站点缓存，按照上面的教程在对应网站添加即可，注意事项如下：</p><ul><li>**每个站点的缓存路径 （fastcgi_cache_path）和缓存密钥（ keys_zone ）设置为不一样的
+**</li><li>同一个顶级域名下面的子域名不需要加上面配置中的第一行，注释掉</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>fastcgi_cache_key <span class=s2>&#34;</span><span class=nv>$scheme$request_method$host$request_uri</span><span class=s2>&#34;</span><span class=p>;</span>
+</span></span></code></pre></div></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>知识共享许可证 CC BY-NC-SA 4.0</span></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>最后更新于 2024-08-09 21:25</span></section></footer></article><footer class=site-footer><section class=copyright>&copy;
+2023 -
+2024 荒芜<br>🕊️ 发表了295篇文章 ·
+总计40.88k字<br>本站已稳定运行
+<span id=runningdays class=running-days></span>
+<script>function updateRunningTime(){const t=new Date("2023-07-25".replace(/-/g,"/")),n=new Date,e=n-t,s=Math.floor(e/(1e3*60*60*24)),o=Math.floor(e%(1e3*60*60*24)/(1e3*60*60)),i=Math.floor(e%(1e3*60*60)/(1e3*60)),a=Math.floor(e%(1e3*60)/1e3),r=`${s} 天 ${o} 小时 ${i} 分 ${a} 秒 🚀`;document.getElementById("runningdays").innerHTML=r}setInterval(updateRunningTime,1e3),updateRunningTime()</script><br></section><section class=powerby>使用 <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> 构建<br>主题 <b><a href=https://github.com/woniu336/hugo-magic target=_blank rel=noopener data-version=3.26.0>hugo-magic</a></b> 由 <a href=https://blog.taoshuge.eu.org/ target=_blank rel=noopener><u>小洋葱</u></a> 魔改 由 Jimmy 设计</section><a target=_blank href=https://gohugo.io/ title="使用 Hugo 构建"><img src=/img/hugo.svg alt>
+</a><a target=_blank href=https://github.com/CaiJimmy/hugo-theme-stack title=主题开源项目><img src=/img/github.svg alt>
+</a><a target=_blank href=https://vercel.com/ title="部署于 Vercel"><img src=/img/vercel.svg alt>
+</a><a target=_blank href=https://umami.is/ title="由 Umami 提供数据分析"><img src=/img/umami.svg alt>
+</a><a target=_blank href=https://notbyai.fyi title="Written by Human, Not by AI"><img src=/img/notbyai.png alt="Written by Human, Not by AI" height=30></a></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js></script><script>pangu.spacingPage()</script><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=/js/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=/js/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=/css/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=/css/photoswipe.min.css crossorigin=anonymous></main></div><script src=/js/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="/css/local.google.fonts.css",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script><script src=https://npm.elemecdn.com/nprogress@0.2.0/nprogress.js crossorigin=anonymous></script><link rel=stylesheet href=https://npm.elemecdn.com/nprogress@0.2.0/nprogress.css crossorigin=anonymous><script>NProgress.start(),document.addEventListener("readystatechange",()=>{document.readyState==="interactive"&&NProgress.inc(.8),document.readyState==="complete"&&NProgress.done()})</script></body></html>
