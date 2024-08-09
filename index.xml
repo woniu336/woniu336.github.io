@@ -9,10 +9,8 @@ sudo ufw allow 443/udp 然后重新加载 UFW 以使新规则生效：
 sudo ufw reload 安装 ngx_brotli模块 cd /www/server git clone --recurse-submodules -j8 https://github.com/google/ngx_brotli 添加 ngx_brotli 编译参数
 echo &amp;#34;--add-module=/www/server/ngx_brotli&amp;#34; &amp;gt; /www/server/panel/install/nginx_configure.pl 到这一步其实可以编译nginx了，但是为了更好的性能释放，先升级OpenSSL后再编译
 升级OpenSSL 版本 宝塔中编译安装的 Nginx 使用的是 OpenSSL 1.1.1(版本老旧)，可以使用命令查看
-nginx -V 开始升级
-cd /www/server git clone https://github.com/openssl/openssl.git 修改宝塔面板的 Nginx 安装脚本
-cd /www/server/panel/install wget -O zzbnginx.sh https://raw.githubusercontent.com/woniu336/open_shell/main/zzbnginx.sh 编译安装 Nginx，如果以前已安装过 Nginx 则先卸载
-sh zzbnginx.sh install 1.26 等待编译完成</description></item><item><title>基于宝塔面板稳定快速安装ssl证书脚本</title><link>https://blog.taoshuge.eu.org/p/298/</link><pubDate>Tue, 06 Aug 2024 01:13:47 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/298/</guid><description>背景 我通过AI制作了不少关于签发ssl证书的脚本，目的是方便无脑安装，不需要懂代码。
+nginx -V 2&amp;gt;&amp;amp;1 | grep -oP &amp;#39;built with OpenSSL \K\d+\.\d+\.\d+&amp;#39; 开始升级
+cd /www/server &amp;amp;&amp;amp; \ mkdir openssl &amp;amp;&amp;amp; \ wget https://github.com/openssl/openssl/releases/download/openssl-3.3.1/openssl-3.3.1.tar.gz &amp;amp;&amp;amp; \ tar -xzf openssl-3.</description></item><item><title>基于宝塔面板稳定快速安装ssl证书脚本</title><link>https://blog.taoshuge.eu.org/p/298/</link><pubDate>Tue, 06 Aug 2024 01:13:47 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/298/</guid><description>背景 我通过AI制作了不少关于签发ssl证书的脚本，目的是方便无脑安装，不需要懂代码。
 但全都是基于acme.sh这个工具来设计的脚本，而且证书申请有点慢，有时还会申请失败。
 然后我发现了certbot, 安装证书可谓神速！
 certbot文档： https://eff-certbot.readthedocs.io/en/latest/using.html#managing-certificates
@@ -48,7 +46,8 @@ cd /home/2.2.2.2/public_html/ #回到ip目录 touch 404.html 写入内容：
 第一步： 改成如下图所示：取消设置默认站点
 第二步： 宝塔面板”文件”根目录搜索”0.default.conf”文件，注意勾选”包含子目录”，”0.default.conf”的文件路径如下。
 /www/server/panel/vhost/nginx/0.default.conf 这个文件是宝塔面板默认站点的nginx规则，我们把之前的内容删除，写入以下代码：
-server { listen 80 default; listen 443 default_server; server_name _; return 444; ssl_certificate /www/server/panel/ssl/certificate.pem; ssl_certificate_key /www/server/panel/ssl/privateKey.pem; ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4; ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; ssl_session_timeout 10m; ssl_prefer_server_ciphers on; } 搞定！
+server { listen 80 default; listen 443 default_server; ## 假如nginx开启了quic,去掉这行 server_name _; return 444; ssl_certificate /www/server/panel/ssl/certificate.pem; ssl_certificate_key /www/server/panel/ssl/privateKey.pem; ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4; ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; ssl_session_timeout 10m; ssl_prefer_server_ciphers on; } 假如nginx开启了quic，使用如下代码，不然重启nginx会报错：
+server { listen 80 default; listen 443 ssl; server_name _; return 444; ssl_certificate /www/server/panel/ssl/certificate.pem; ssl_certificate_key /www/server/panel/ssl/privateKey.pem; ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4; ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; ssl_session_timeout 10m; ssl_prefer_server_ciphers on; } 搞定！
 理论上宝塔文件中存在的任意pem路径都可以</description></item><item><title>cyberpanel重写规则</title><link>https://blog.taoshuge.eu.org/p/293/</link><pubDate>Thu, 01 Aug 2024 22:57:07 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/293/</guid><description>cyberpanel防盗链设置 主页——网站——网站列表，选择对应网站，点击管理——重写规则
 RewriteEngine On RewriteCond %{HTTP_REFERER} !^https://(cdn.)?xxx.org [NC] RewriteRule .(jpg|jpeg|png|gif|webp|js|css)$ - [NC,F] 这条规则的意思是：
 阻止所有不是来自 xxx.org 主域名或其 CDN 子域名的请求访问网站的图片、JavaScript 和 CSS 文件，以防止资源被其他网站盗用。
