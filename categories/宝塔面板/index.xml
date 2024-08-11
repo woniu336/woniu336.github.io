@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>宝塔面板 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/categories/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</link><description>Recent content in 宝塔面板 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 10 Aug 2024 01:19:49 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/categories/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/index.xml" rel="self" type="application/rss+xml"/><item><title>提升网站速度：配置 Nginx FastCGI 缓存</title><link>https://blog.taoshuge.eu.org/p/300/</link><pubDate>Sat, 10 Aug 2024 01:19:49 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/300/</guid><description>前言 系统：ubuntu22.04
+软件：宝塔面板7.7.0
+nginx版本：1.25.5
+教程基于宝塔面板，是的又是托塔李天王，没办法，虽然总是吐槽，但真是方便顺手（习惯）
+查看缓存模块 不罗嗦，直接打开ssh终端，连接你的服务器，输入：
+nginx -V 2&amp;gt;&amp;amp;1 | grep -o ngx_cache_purge 显示：ngx_cache_purge没有问题
+nginx配置 首先创建缓存文件
+mkdir -p /tmp/nginx-cache/catpdf_org chmod -R 755 /tmp/nginx-cache/catpdf_org 然后，打开nginx配置，添加如下代码，在server前
+注意每个站点的 缓存路径 和 keys_zone 要区分开 keys_zone后面的CATPDF.ORG参数很重要，每一个网站设置一个专用的，可以任意命名 # nginx fastcgi cache TART #站点 1 缓存配置 fastcgi_cache_path /tmp/nginx-cache/catpdf_org levels=1:2 keys_zone=CATPDF.ORG:100m inactive=1d max_size=5G; #如果要开启更多站点缓存，参照第一行设置，注意每个站点的 缓存路径 和 keys_zone 要区分开 #站点 2 缓存配置 #fastcgi_cache_path /tmp/nginx-cache/othersite_com levels=1:2 keys_zone=OTHERSITE.COM:100m inactive=1d max_size=5G; #多站点时共用以下配置 #fastcgi_temp_path /tmp/nginx-cache/temp; fastcgi_cache_key &amp;#34;$scheme$request_method$host$request_uri&amp;#34;; fastcgi_cache_use_stale error timeout invalid_header http_500; fastcgi_ignore_headers Cache-Control Expires Set-Cookie; # nginx fastcgi cache END 如果使用物理内存作为缓存空间的话，可以这样设置：</description></item><item><title>宝塔面板启用 QUIC 与 Brotli 的完整教程</title><link>https://blog.taoshuge.eu.org/p/299/</link><pubDate>Fri, 09 Aug 2024 16:14:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/299/</guid><description>环境 系统：Ubuntu 22.04.4 LTS x86_64
+宝塔版本：7.7.0 (可使用本博客提供的一键安装优化脚本)
+nginx版本：1.26.1
+开放UDP端口 注意：在你的服务器商家那里也要开放443 udp端口
+sudo ufw allow 443/udp 然后重新加载 UFW 以使新规则生效：
+sudo ufw reload 安装 ngx_brotli模块 cd /www/server git clone --recurse-submodules -j8 https://github.com/google/ngx_brotli 添加 ngx_brotli 编译参数
+echo &amp;#34;--add-module=/www/server/ngx_brotli&amp;#34; &amp;gt; /www/server/panel/install/nginx_configure.pl 到这一步其实可以编译nginx了，但是为了更好的性能释放，先升级OpenSSL后再编译
+升级OpenSSL 版本 宝塔中编译安装的 Nginx 使用的是 OpenSSL 1.1.1(版本老旧)，可以使用命令查看
+nginx -V 2&amp;gt;&amp;amp;1 | grep -oP &amp;#39;built with OpenSSL \K\d+\.\d+\.\d+&amp;#39; 开始升级
+cd /www/server &amp;amp;&amp;amp; \ mkdir openssl &amp;amp;&amp;amp; \ wget https://github.com/openssl/openssl/releases/download/openssl-3.3.1/openssl-3.3.1.tar.gz &amp;amp;&amp;amp; \ tar -xzf openssl-3.</description></item><item><title>基于宝塔面板稳定快速安装ssl证书脚本</title><link>https://blog.taoshuge.eu.org/p/298/</link><pubDate>Tue, 06 Aug 2024 01:13:47 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/298/</guid><description>背景 我通过AI制作了不少关于签发ssl证书的脚本，目的是方便无脑安装，不需要懂代码。
+但全都是基于acme.sh这个工具来设计的脚本，而且证书申请有点慢，有时还会申请失败。
+然后我发现了certbot, 安装证书可谓神速！
+certbot文档： https://eff-certbot.readthedocs.io/en/latest/using.html#managing-certificates
+由于我建站都是使用的宝塔面板（7.7.0原版），所以结合宝塔设计了此脚本，
+为什么我不用宝塔自带的方式安装证书，因为我就没安装成功过~
+脚本 环境：ubuntu22.04
+certbot： 基于Let&amp;rsquo;s Encrypt （默认ecc证书）
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh 其他 首次安装证书后，需要到宝塔面板，选择站点，找到ssl保存一下，目的是之后的自动续签。
+安装成功后，选择菜单4，测试续签是否正常，看到renewals succeeded说明正常了。
+修改续签定时任务 查看原本的certbot定时任务：
+cat /etc/cron.d/certbot 其实就是在后面添加了 --deploy-hook &amp;quot;/etc/init.d/nginx restart&amp;quot;参数，目的是重启nginx，使其生效。之后就可以高枕无忧的自动续签证书了
+证书路径 certbot生成的证书路径是：/etc/letsencrypt/live
+续签配置路径：/etc/letsencrypt/renewal
+脚本会把证书复制到站点证书目录
+certbot会在证书离到期日还剩30天内续签证书
+友情提示 如果一个域名在短时间内，多次申请，全部成功（大概6次吧，不记得了），会提示一周后在申请，我是为了测试脚本才遇到的bug。</description></item></channel></rss>
