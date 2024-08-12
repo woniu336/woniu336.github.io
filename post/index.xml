@@ -23,7 +23,7 @@ sudo ufw reload 安装 ngx_brotli模块 cd /www/server git clone --recurse-submo
 echo &amp;#34;--add-module=/www/server/ngx_brotli&amp;#34; &amp;gt; /www/server/panel/install/nginx_configure.pl 到这一步其实可以编译nginx了，但是为了更好的性能释放，先升级OpenSSL后再编译
 升级OpenSSL 版本 宝塔中编译安装的 Nginx 使用的是 OpenSSL 1.1.1(版本老旧)，可以使用命令查看
 nginx -V 2&amp;gt;&amp;amp;1 | grep -oP &amp;#39;built with OpenSSL \K\d+\.\d+\.\d+&amp;#39; 开始升级
-cd /www/server &amp;amp;&amp;amp; \ mkdir openssl &amp;amp;&amp;amp; \ wget https://github.com/openssl/openssl/releases/download/openssl-3.3.1/openssl-3.3.1.tar.gz &amp;amp;&amp;amp; \ tar -xzf openssl-3.</description></item><item><title>基于宝塔面板稳定快速安装ssl证书脚本</title><link>https://blog.taoshuge.eu.org/p/298/</link><pubDate>Tue, 06 Aug 2024 01:13:47 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/298/</guid><description>背景 我通过AI制作了不少关于签发ssl证书的脚本，目的是方便无脑安装，不需要懂代码。
+cd /www/server &amp;amp;&amp;amp; \ mkdir openssl &amp;amp;&amp;amp; \ wget https://github.com/openssl/openssl/releases/download/openssl-3.3.1/openssl-3.3.1.tar.gz &amp;amp;&amp;amp; \ tar -xzf openssl-3.</description></item><item><title>SSL证书签发脚本</title><link>https://blog.taoshuge.eu.org/p/298/</link><pubDate>Tue, 06 Aug 2024 01:13:47 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/298/</guid><description>背景 我通过AI制作了不少关于签发ssl证书的脚本，目的是方便无脑安装，不需要懂代码。
 但全都是基于acme.sh这个工具来设计的脚本，而且证书申请有点慢，有时还会申请失败。
 然后我发现了certbot, 安装证书可谓神速！
 certbot文档： https://eff-certbot.readthedocs.io/en/latest/using.html#managing-certificates
