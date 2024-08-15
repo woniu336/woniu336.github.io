@@ -7,7 +7,7 @@ https://www.cloudflare.com/ips-v4
 https://www.cloudflare.com/ips-v6
 https://www.cloudflare.com/zh-cn/ips/
 在/www/server/nginx/conf目录创建cfip.conf 写入以下内容：
-#IPv4 allow 127.0.0.1; allow 173.245.48.0/20; allow 103.21.244.0/22; allow 103.22.200.0/22; allow 103.31.4.0/22; allow 141.101.64.0/18; allow 108.162.192.0/18; allow 190.93.240.0/20; allow 188.114.96.0/20; allow 197.234.240.0/22; allow 198.41.128.0/17; allow 162.158.0.0/15; allow 104.16.0.0/13; allow 104.24.0.0/14; allow 172.64.0.0/13; allow 131.0.72.0/22; #IPv6 allow ::1; allow 2400:cb00::/32; allow 2606:4700::/32; allow 2803:f800::/32; allow 2405:b500::/32; allow 2405:8100::/32; allow 2a06:98c0::/29; allow 2c0f:f248::/32; 在站点配置：
+#IPv4 allow 127.0.0.1; allow 173.245.48.0/20; allow 103.21.244.0/22; allow 103.22.200.0/22; allow 103.31.4.0/22; allow 141.101.64.0/18; allow 108.162.192.0/18; allow 190.93.240.0/20; allow 188.114.96.0/20; allow 197.234.240.0/22; allow 198.41.128.0/17; allow 162.158.0.0/15; allow 104.16.0.0/13; allow 104.24.0.0/14; allow 172.64.0.0/13; allow 131.0.72.0/22; #IPv6 allow ::1; allow 2400:cb00::/32; allow 2606:4700::/32; allow 2803:f800::/32; allow 2405:b500::/32; allow 2405:8100::/32; allow 2a06:98c0::/29; allow 2c0f:f248::/32; 然后在站点的 Nginx 配置文件 Server 区块中加入以下内容
 include cfip.conf; deny all; 重启nginx。
 完结</description></item><item><title>屏蔽 Censys，防止源站 IP 泄露</title><link>https://blog.taoshuge.eu.org/p/302/</link><pubDate>Thu, 15 Aug 2024 20:08:35 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/302/</guid><description>Censys 搜索引擎很强大。Censys 每天都会扫描 IPv4 地址空间，以搜索所有联网设备并收集相关的信息，并返回一份有关资源（如设备、网站和证书）配置和部署信息的总体报告。
 在 IP 前加上 https 访问时，Nginx 会自动返回该网站的 https 证书，从而暴露相关域名信息。哪怕是套了 CDN 也还是会被扫到。Censys 还会扫描端口，例如 80、8000、8080、443、4433。
