@@ -21,15 +21,7 @@ sudo ufw deny from 162.142.125.0/24 sudo ufw deny from 167.94.138.0/24 sudo ufw 
 openssl x509 -in /etc/letsencrypt/live/your-domain.com/cert.pem -noout -ocsp_uri ssl_trusted_certificate配置路径：
 ssl_trusted_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem; acme.sh申请的证书 查询ocsp地址：
 openssl x509 -in ~/.acme.sh/your-domain.com/your-domain.cer -noout -ocsp_uri ssl_trusted_certificate配置路径：
-ssl_trusted_certificate ~/.acme.sh/your-domain.com/fullchain.cer;</description></item><item><title>提升网站速度：配置 Nginx FastCGI 缓存</title><link>https://blog.taoshuge.eu.org/p/300/</link><pubDate>Sat, 10 Aug 2024 01:19:49 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/300/</guid><description>前言 系统：ubuntu22.04
-软件：宝塔面板7.7.0
-nginx版本：1.25.5
-教程基于宝塔面板，是的又是托塔李天王，没办法，虽然总是吐槽，但真是方便顺手（习惯）
-查看缓存模块 不罗嗦，直接打开ssh终端，连接你的服务器，输入：
-nginx -V 2&amp;gt;&amp;amp;1 | grep -o ngx_cache_purge 显示：ngx_cache_purge没有问题
-nginx配置 首先创建缓存文件
-mkdir -p /tmp/nginx-cache/catpdf_org chmod -R 755 /tmp/nginx-cache/catpdf_org 然后，打开nginx配置，添加如下代码，在server前
-注意每个站点的 缓存路径 和 keys_zone 要区分开 keys_zone后面的CATPDF.ORG参数很重要，每一个网站设置一个专用的，可以任意命名 # nginx fastcgi cache TART #站点 1 缓存配置 fastcgi_cache_path /tmp/nginx-cache/catpdf_org levels=1:2 keys_zone=CATPDF.ORG:100m inactive=1d max_size=5G; #如果要开启更多站点缓存，参照第一行设置，注意每个站点的 缓存路径 和 keys_zone 要区分开 #站点 2 缓存配置 #fastcgi_cache_path /tmp/nginx-cache/othersite_com levels=1:2 keys_zone=OTHERSITE.COM:100m inactive=1d max_size=5G; #多站点时共用以下配置 #fastcgi_temp_path /tmp/nginx-cache/temp; fastcgi_cache_key &amp;#34;$scheme$request_method$host$request_uri&amp;#34;; fastcgi_cache_use_stale error timeout invalid_header http_500; fastcgi_ignore_headers Cache-Control Expires Set-Cookie; # nginx fastcgi cache END 如果使用物理内存作为缓存空间的话，可以这样设置：</description></item><item><title>宝塔面板启用 QUIC 与 Brotli 的完整教程</title><link>https://blog.taoshuge.eu.org/p/299/</link><pubDate>Fri, 09 Aug 2024 16:14:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/299/</guid><description>环境 系统：Ubuntu 22.04.4 LTS x86_64
+ssl_trusted_certificate ~/.acme.sh/your-domain.com/fullchain.cer;</description></item><item><title>提升网站速度：配置 Nginx FastCGI 缓存</title><link>https://blog.taoshuge.eu.org/p/300/</link><pubDate>Sat, 10 Aug 2024 01:19:49 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/300/</guid><description>本文介绍了如何在 Ubuntu 22.04 系统上使用宝塔面板配置 Nginx FastCGI 缓存，以提升网站速度。详细步骤包括：检查 ngx_cache_purge 模块、创建缓存文件夹、配置 Nginx 缓存路径和参数、设置缓存键和使用条件、以及配置网站缓存规则。同时，还提供了 WordPress 环境下的缓存配置方法和注意事项，如修改 php 配置、使用 Nginx Helper 插件或纯代码方式实现缓存清理。</description></item><item><title>宝塔面板启用 QUIC 与 Brotli 的完整教程</title><link>https://blog.taoshuge.eu.org/p/299/</link><pubDate>Fri, 09 Aug 2024 16:14:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/299/</guid><description>环境 系统：Ubuntu 22.04.4 LTS x86_64
 宝塔版本：7.7.0 (可使用本博客提供的一键安装优化脚本)
 nginx版本：1.26.1
 开放UDP端口 注意：在你的服务器商家那里也要开放443 udp端口
