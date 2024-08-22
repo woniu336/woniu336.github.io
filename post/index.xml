@@ -596,8 +596,7 @@ chmod +x dns_update.py python3 dns_update.py 测试脚本 比如你安装了宝�
 第一款：TTime
 https://ttime.timerecord.cn
 GitHub： https://github.com/InkTimeRecord/TTime
-第二款：quicker+翻译动作</description></item><item><title>rclone加密文件方法</title><link>https://blog.taoshuge.eu.org/p/218/</link><pubDate>Sun, 31 Mar 2024 14:32:37 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/218/</guid><description>
-选择：Encrypt/Decrypt a remote
+第二款：quicker+翻译动作</description></item><item><title>rclone加密文件方法</title><link>https://blog.taoshuge.eu.org/p/218/</link><pubDate>Sun, 31 Mar 2024 14:32:37 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/218/</guid><description> 选择：Encrypt/Decrypt a remote
 完成之后，挂载：
 rclone mount 路径 盘符： 例如：
 rclone mount jiami: W:</description></item><item><title>Linux安装 python3</title><link>https://blog.taoshuge.eu.org/p/217/</link><pubDate>Fri, 29 Mar 2024 13:25:32 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/217/</guid><description>安装 python3
@@ -701,8 +700,7 @@ Player 密钥其实就是获得商业许可而已，没有啥用处
 密钥 专业版密钥
 YG5H2-ANZ0H-M8ERY-TXZZZ-YKRV8 player版密钥
 ZY3E8-6GD1L-M8DXP-6WMXZ-ZZ8Y6 专业版下载：https://www.123pan.com/s/cjqrVv-PQq9d.html
-player下载：VMware Workstation 15.5.7 Player</description></item><item><title>virtualbox虚拟机共享文件夹挂载</title><link>https://blog.taoshuge.eu.org/p/198/</link><pubDate>Mon, 18 Mar 2024 05:25:33 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/198/</guid><description>
-创建挂载目录
+player下载：VMware Workstation 15.5.7 Player</description></item><item><title>virtualbox虚拟机共享文件夹挂载</title><link>https://blog.taoshuge.eu.org/p/198/</link><pubDate>Mon, 18 Mar 2024 05:25:33 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/198/</guid><description> 创建挂载目录
 cd /mnt/ sudo mkdir ./gd 挂载：gd是共享文件夹名称，/mnt/gd 是linux挂载目录
 sudo mount -t vboxsf -o uid=1000,gid=1000 gd /mnt/gd 卸载
 cd .. sudo umount /mnt/gd</description></item><item><title>windows 完全禁用传递优化服务 Delivery Optimization</title><link>https://blog.taoshuge.eu.org/p/197/</link><pubDate>Sun, 17 Mar 2024 17:14:07 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/197/</guid><description>禁用Delivery Optimization Delivery Optimization是关于windows系统更新的一项服务，它会自动在E盘或某个盘生成文件夹Delivery Optimization，里面是一些缓存，强迫症可能很不爽。
@@ -1320,34 +1318,25 @@ CloudFlare免费版默认设置是针对整个域名的，如果你有其他二�
 2.1.2登录页策略 网站我们正常运行必然有访客进行注册登录，针对我们的登录页以及常见被扫描的地址，我们可以单独设置一下人机验证。
 主要作用：本站是WordPress程序，所以设置了xmlrpc.php和wp-login.php地址。其他程序根据自己实际情况设置。优先级低于蜘蛛，放到第二也是为了防止有些访客挂着代理被后续的策略阻止。
 2.1.3威胁分数策略 此策略是防攻击的主力策略，这一项可以阻挡90%的攻击。
-[
-主要作用：威胁分数大于等于2，可以阻挡90%的恶意IP。CloudFlare 默认推荐分数5实测基本给攻击全漏了进来，设置3同样有漏IP。所以根据2023年9月目前的网络来说这里建议设置为2！
+[ 主要作用：威胁分数大于等于2，可以阻挡90%的恶意IP。CloudFlare 默认推荐分数5实测基本给攻击全漏了进来，设置3同样有漏IP。所以根据2023年9月目前的网络来说这里建议设置为2！
 rss是因为站点有很多人通过RSS进行订阅，所以针对此类请求我们不要对他进行人机验证。
 这里针对RSS策略比较简单，如果攻击者知道了你的策略可能会针对性攻击，我们实际使用时可以适当变通一下。
 2.1.4细化攻击策略 上一个策略是简单的通过威胁分数判断，现在这个策略则是针对漏进来的攻击IP进行针对性的过滤。
-[
-主要作用：首先过滤国家不等于china，因为来自国内的攻击IP极少。我们的访客绝大多数也来自china所以直接略过国家。
+[ 主要作用：首先过滤国家不等于china，因为来自国内的攻击IP极少。我们的访客绝大多数也来自china所以直接略过国家。
 /feed是我们的RSS订阅地址，我们同样略过此地址。
 IP源地址是我们的源站IP，针对源站IP来的请求数据我们同样略过。
 URL不包含.html是因为本次攻击地址都不是.html地址，所以略过了。我网闸对于.html地址也有缓存。大家自己设置时候这一个可以删掉。
 UA字段WellKnownBot，这个是当时翻策略拦截日志发现的一个UA，好像是个正常请求。所以给他过滤了。
 威胁分数大于3，这里是保证整个策略不至于过于严格，只针对威胁分数大于 3 的 IP 生效。
-2.1.5地区策略 [
-这里一般不需要设置，我是看攻击IP有大量来自印尼的IP，网站基本也没印尼的访客，所以来自印尼的IP全部进行CAPTCHA交互式人机验证。
+2.1.5地区策略 [ 这里一般不需要设置，我是看攻击IP有大量来自印尼的IP，网站基本也没印尼的访客，所以来自印尼的IP全部进行CAPTCHA交互式人机验证。
 2.2 DDOS策略 CloudFlare针对DDOS有自己的分析策略可供我们使用。
 这里CloudFlare的DDOS实际是包含我们常说的CC攻击的，七层和四层区别。
-[
-[
-CloudFlare会分析请求是否是DDOS，对于符合的请求我们可以选择进行验证。另外规则集敏感度也可以进行调整。
+[ [ CloudFlare会分析请求是否是DDOS，对于符合的请求我们可以选择进行验证。另外规则集敏感度也可以进行调整。
 这里如果你正在被攻击，可以将敏感度设置为高。实测误比较少，如果网站长期套CloudFlare，我们可以设置为中。
-2.3 其他WAF设置 [
-2.4 缓存设置 缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。
+2.3 其他WAF设置 [ 2.4 缓存设置 缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。
 缓存设置是在多个位置进行的。下面大家看截图就好。
-[
-创建一个静态文件的缓存规则。
-[
-[
-[</description></item><item><title>全网最新的Python爬虫教程+实战项目案例，超适合小白练手的实战项目！</title><link>https://blog.taoshuge.eu.org/p/%E5%85%A8%E7%BD%91%E6%9C%80%E6%96%B0%E7%9A%84python%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E8%B6%85%E9%80%82%E5%90%88%E5%B0%8F%E7%99%BD%E7%BB%83%E6%89%8B%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/</link><pubDate>Fri, 22 Dec 2023 15:49:02 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%85%A8%E7%BD%91%E6%9C%80%E6%96%B0%E7%9A%84python%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E8%B6%85%E9%80%82%E5%90%88%E5%B0%8F%E7%99%BD%E7%BB%83%E6%89%8B%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/</guid><description>Python项目源码、教程、工具合集，由于经常私信受限，或者回复大家不及时，耽误大家时间，所以up主把内部链接放这里了，需要的点击自行拿走。
+[ 创建一个静态文件的缓存规则。
+[ [ [ 上面的是基础缓存，对于页面的缓存我们使用下面的规则。</description></item><item><title>全网最新的Python爬虫教程+实战项目案例，超适合小白练手的实战项目！</title><link>https://blog.taoshuge.eu.org/p/%E5%85%A8%E7%BD%91%E6%9C%80%E6%96%B0%E7%9A%84python%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E8%B6%85%E9%80%82%E5%90%88%E5%B0%8F%E7%99%BD%E7%BB%83%E6%89%8B%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/</link><pubDate>Fri, 22 Dec 2023 15:49:02 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%85%A8%E7%BD%91%E6%9C%80%E6%96%B0%E7%9A%84python%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E8%B6%85%E9%80%82%E5%90%88%E5%B0%8F%E7%99%BD%E7%BB%83%E6%89%8B%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/</guid><description>Python项目源码、教程、工具合集，由于经常私信受限，或者回复大家不及时，耽误大家时间，所以up主把内部链接放这里了，需要的点击自行拿走。
 （需要各类安装包和秒杀源码的宝子可以添加文章下方哦）
 （链接直接复制到百度/夸克网盘打开就可以获取了）
 1.音乐源码
@@ -1594,8 +1583,7 @@ docker run -d -p 443:9000 --name portainer --restart always -v ~/local-certs:/ce
 一些信息的修改地址 1.站点图标 header.html 文件的第17行，替换掉https://cdn.amzayo.top/static/public/luban/luban_head.png
 2.页面左上角 logomenu.html 文件的第5行，替换掉https://cdn.amzayo.top/static/public/luban/test_head.e7b54515.png
 3.底部版权信息 footer.html 文件的第4到8行，依照demo底部的文字按需替换
-下载地址&amp;ndash;&amp;gt;点我下载 其他CSS样式 &amp;lt;style&amp;gt; /* 屏幕适配 */ @media only screen and (min-width: 1200px) { .ui.container { width: 80% !important; } } @media only screen and (max-width: 767px) { .ui.card&amp;gt;.content&amp;gt;.header:not(.ui), .ui.cards&amp;gt;.card&amp;gt;.content&amp;gt;.header:not(.ui) { margin-top: 0.4em !important; } } /* 整体图标 */ i.icon { color: #000; width: 1em !</description></item><item><title>雷池waf社区版反代上高防</title><link>https://blog.taoshuge.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</link><pubDate>Sat, 25 Nov 2023 11:33:31 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</guid><description>
-我们经常用NPM可视化面板反代服务到域名上，我发现一个更加强大的面板，雷池是个web防火墙面板，基于nginx，反向代理只是基础，重点是还能防御站点，拦截网络恶意攻击。你可以理解为反代加高防的存在，
+下载地址&amp;ndash;&amp;gt;点我下载 其他CSS样式 &amp;lt;style&amp;gt; /* 屏幕适配 */ @media only screen and (min-width: 1200px) { .ui.container { width: 80% !important; } } @media only screen and (max-width: 767px) { .ui.card&amp;gt;.content&amp;gt;.header:not(.ui), .ui.cards&amp;gt;.card&amp;gt;.content&amp;gt;.header:not(.ui) { margin-top: 0.4em !important; } } /* 整体图标 */ i.icon { color: #000; width: 1em !</description></item><item><title>雷池waf社区版反代上高防</title><link>https://blog.taoshuge.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</link><pubDate>Sat, 25 Nov 2023 11:33:31 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</guid><description> 我们经常用NPM可视化面板反代服务到域名上，我发现一个更加强大的面板，雷池是个web防火墙面板，基于nginx，反向代理只是基础，重点是还能防御站点，拦截网络恶意攻击。你可以理解为反代加高防的存在，
 使用方法
 Debian/Ubuntu安装下载工具
 apt update -y &amp;amp;&amp;amp; apt install -y curl CentOS安装下载工具
