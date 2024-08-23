@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>浩瀚笔记</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E8%B7%AF%E9%A3%9E%E5%B7%A5%E5%85%B7%E7%AE%B1/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/9213b07eca806538511d5432d1dda144ad348218.jpg" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
-curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 其他教程 项目 链接 推荐脚本 https://woniu336.github.io/p/tool/#5推荐脚本 宝塔面板7.7原版 https://blog.taoshuge.eu.org/p/229/ 一键重装系统 https://woniu336.github.io/p/tool/#4一键dd 或 https://woniu336.github.io/p/133/ 安装宝塔面板7.7原版 https://woniu336.github.io/p/bt/ 宝塔面板计划任务迁移 https://woniu336.github.io/p/136/ 宝塔海外版aapanel安装教程 https://woniu336.github.io/p/141/ docker应用 https://woniu336.github.io/p/11/ MySQL 5.7内存优化 https://woniu336.github.io/p/tool/#1mysql-57内存优化 开启BBR https://woniu336.github.io/p/tool/#2bbr swap的调整 https://woniu336.github.io/p/tool/#3swap的调整 证书申请 https://woniu336.github.io/p/ssl/ rclone工具 https://woniu336.github.io/p/rclone/ 兰空图床 https://woniu336.github.io/p/137/ 监控域名有效期 https://woniu336.github.io/p/132/ Cloudflare R2作为图床的管理和同步 https://woniu336.</description></item><item><title>将hugo博客搬迁到服务器</title><link>https://blog.taoshuge.eu.org/p/306/</link><pubDate>Sun, 18 Aug 2024 02:15:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/306/</guid><description>本文介绍了将Hugo博客迁移到Ubuntu 22.04服务器的详细步骤。首先，创建并配置具有root权限的git用户，初始化Git仓库并设置钩子。接着，生成SSH密钥，配置服务器以接受公钥并测试SSH连接。然后，本地初始化仓库，添加远程仓库并推送代码。提供了一键推送脚本以简化更新过程。最后，通过宝塔面板使用nginx部署静态站点，并使用计划任务同步更新。</description></item><item><title>剪贴板神器Ditto</title><link>https://blog.taoshuge.eu.org/p/305/</link><pubDate>Sat, 17 Aug 2024 00:15:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/305/</guid><description>官网：https://ditto-cp.sourceforge.io/</description></item><item><title>markdown工具推荐</title><link>https://blog.taoshuge.eu.org/p/304/</link><pubDate>Fri, 16 Aug 2024 15:11:20 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/304/</guid><description>markdownmonster 官网：https://markdownmonster.west-wind.com/download</description></item><item><title>Nginx配置仅允许cloudflare回源IP访问</title><link>https://blog.taoshuge.eu.org/p/303/</link><pubDate>Fri, 16 Aug 2024 01:07:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/303/</guid><description>☺☠〠
+curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 其他教程 项目 链接 推荐脚本 https://woniu336.github.io/p/tool/#5推荐脚本 宝塔面板7.7原版 https://blog.taoshuge.eu.org/p/229/ 一键重装系统 https://woniu336.github.io/p/tool/#4一键dd 或 https://woniu336.github.io/p/133/ 安装宝塔面板7.7原版 https://woniu336.github.io/p/bt/ 宝塔面板计划任务迁移 https://woniu336.github.io/p/136/ 宝塔海外版aapanel安装教程 https://woniu336.github.io/p/141/ docker应用 https://woniu336.github.io/p/11/ MySQL 5.7内存优化 https://woniu336.github.io/p/tool/#1mysql-57内存优化 开启BBR https://woniu336.github.io/p/tool/#2bbr swap的调整 https://woniu336.github.io/p/tool/#3swap的调整 证书申请 https://woniu336.github.io/p/ssl/ rclone工具 https://woniu336.github.io/p/rclone/ 兰空图床 https://woniu336.github.io/p/137/ 监控域名有效期 https://woniu336.github.io/p/132/ Cloudflare R2作为图床的管理和同步 https://woniu336.</description></item><item><title>告别臃肿！个人博客图片优化的秘密武器——AVIF格式</title><link>https://blog.taoshuge.eu.org/p/307/</link><pubDate>Fri, 23 Aug 2024 02:36:43 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/307/</guid><description>准备软件 ShareX imagemagick imagemagick 下载第一个 Q16-HDRI-x64-dll.exe 安装 ShareX 动作设置 按下图 动作设置-动作-添加 进入动作添加页面
+动作参数 webp
+convert &amp;#34;$input&amp;#34; -quality 80 -define webp:method=6 -define webp:lossless=false -define webp:alpha-quality=85 -define webp:partition-limit=90 &amp;#34;$output&amp;#34; avif
+convert &amp;#34;$input&amp;#34; -quality 60 -define avif:compression-level=6 -define avif:effort=7 &amp;#34;$output&amp;#34; ShareX 截图任务 按下图顺序设置截图后的任务顺序 上传到cloudflare r2 教程地址：
+https://getsharex.com/docs/cloudflare-r2
+其他方法
+使用ffmpeg将图片转换为avif 仅在windows下测试通过
+如果你还没有安装FFmpeg，请先安装。你可以在FFmpeg的官方网站下载适用于你的操作系统的版本，也可以使用包管理器安装（例如，Homebrew for macOS，apt for Ubuntu等）。
+使用以下命令将图片转换为AVIF格式：
+ffmpeg -i input_image.png output_image.avif 这里input_image.png是你的原始图片文件名，output_image.avif是你想要输出的AVIF格式文件名。
+你可以通过添加一些参数来调整输出文件的质量和其他设置。例如：
+ffmpeg -i input_image.png -c:v libaom-av1 -crf 30 -b:v 0 output_image.avif -c:v libaom-av1：使用的是 libaom-av1 编码器，这是一个用于 AV1 格式的编码器。</description></item><item><title>将hugo博客搬迁到服务器</title><link>https://blog.taoshuge.eu.org/p/306/</link><pubDate>Sun, 18 Aug 2024 02:15:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/306/</guid><description>本文介绍了将Hugo博客迁移到Ubuntu 22.04服务器的详细步骤。首先，创建并配置具有root权限的git用户，初始化Git仓库并设置钩子。接着，生成SSH密钥，配置服务器以接受公钥并测试SSH连接。然后，本地初始化仓库，添加远程仓库并推送代码。提供了一键推送脚本以简化更新过程。最后，通过宝塔面板使用nginx部署静态站点，并使用计划任务同步更新。</description></item><item><title>剪贴板神器Ditto</title><link>https://blog.taoshuge.eu.org/p/305/</link><pubDate>Sat, 17 Aug 2024 00:15:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/305/</guid><description>官网：https://ditto-cp.sourceforge.io/</description></item><item><title>markdown工具推荐</title><link>https://blog.taoshuge.eu.org/p/304/</link><pubDate>Fri, 16 Aug 2024 15:11:20 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/304/</guid><description>markdownmonster 官网：https://markdownmonster.west-wind.com/download</description></item><item><title>Nginx配置仅允许cloudflare回源IP访问</title><link>https://blog.taoshuge.eu.org/p/303/</link><pubDate>Fri, 16 Aug 2024 01:07:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/303/</guid><description>☺☠〠
 让Nginx只接受cloudflare（以下简称cf）的回源请求，不允许其他客户端直接访问源服务器。
 首先获取最新的cf回源IP，并转换成nginx的配置文件格式。
 https://www.cloudflare.com/ips-v4
@@ -596,7 +607,8 @@ chmod +x dns_update.py python3 dns_update.py 测试脚本 比如你安装了宝�
 第一款：TTime
 https://ttime.timerecord.cn
 GitHub： https://github.com/InkTimeRecord/TTime
-第二款：quicker+翻译动作</description></item><item><title>rclone加密文件方法</title><link>https://blog.taoshuge.eu.org/p/218/</link><pubDate>Sun, 31 Mar 2024 14:32:37 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/218/</guid><description> 选择：Encrypt/Decrypt a remote
+第二款：quicker+翻译动作</description></item><item><title>rclone加密文件方法</title><link>https://blog.taoshuge.eu.org/p/218/</link><pubDate>Sun, 31 Mar 2024 14:32:37 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/218/</guid><description>
+选择：Encrypt/Decrypt a remote
 完成之后，挂载：
 rclone mount 路径 盘符： 例如：
 rclone mount jiami: W:</description></item><item><title>Linux安装 python3</title><link>https://blog.taoshuge.eu.org/p/217/</link><pubDate>Fri, 29 Mar 2024 13:25:32 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/217/</guid><description>安装 python3
@@ -700,7 +712,8 @@ Player 密钥其实就是获得商业许可而已，没有啥用处
 密钥 专业版密钥
 YG5H2-ANZ0H-M8ERY-TXZZZ-YKRV8 player版密钥
 ZY3E8-6GD1L-M8DXP-6WMXZ-ZZ8Y6 专业版下载：https://www.123pan.com/s/cjqrVv-PQq9d.html
-player下载：VMware Workstation 15.5.7 Player</description></item><item><title>virtualbox虚拟机共享文件夹挂载</title><link>https://blog.taoshuge.eu.org/p/198/</link><pubDate>Mon, 18 Mar 2024 05:25:33 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/198/</guid><description> 创建挂载目录
+player下载：VMware Workstation 15.5.7 Player</description></item><item><title>virtualbox虚拟机共享文件夹挂载</title><link>https://blog.taoshuge.eu.org/p/198/</link><pubDate>Mon, 18 Mar 2024 05:25:33 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/198/</guid><description>
+创建挂载目录
 cd /mnt/ sudo mkdir ./gd 挂载：gd是共享文件夹名称，/mnt/gd 是linux挂载目录
 sudo mount -t vboxsf -o uid=1000,gid=1000 gd /mnt/gd 卸载
 cd .. sudo umount /mnt/gd</description></item><item><title>windows 完全禁用传递优化服务 Delivery Optimization</title><link>https://blog.taoshuge.eu.org/p/197/</link><pubDate>Sun, 17 Mar 2024 17:14:07 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/197/</guid><description>禁用Delivery Optimization Delivery Optimization是关于windows系统更新的一项服务，它会自动在E盘或某个盘生成文件夹Delivery Optimization，里面是一些缓存，强迫症可能很不爽。
@@ -1318,25 +1331,34 @@ CloudFlare免费版默认设置是针对整个域名的，如果你有其他二�
 2.1.2登录页策略 网站我们正常运行必然有访客进行注册登录，针对我们的登录页以及常见被扫描的地址，我们可以单独设置一下人机验证。
 主要作用：本站是WordPress程序，所以设置了xmlrpc.php和wp-login.php地址。其他程序根据自己实际情况设置。优先级低于蜘蛛，放到第二也是为了防止有些访客挂着代理被后续的策略阻止。
 2.1.3威胁分数策略 此策略是防攻击的主力策略，这一项可以阻挡90%的攻击。
-[ 主要作用：威胁分数大于等于2，可以阻挡90%的恶意IP。CloudFlare 默认推荐分数5实测基本给攻击全漏了进来，设置3同样有漏IP。所以根据2023年9月目前的网络来说这里建议设置为2！
+[
+主要作用：威胁分数大于等于2，可以阻挡90%的恶意IP。CloudFlare 默认推荐分数5实测基本给攻击全漏了进来，设置3同样有漏IP。所以根据2023年9月目前的网络来说这里建议设置为2！
 rss是因为站点有很多人通过RSS进行订阅，所以针对此类请求我们不要对他进行人机验证。
 这里针对RSS策略比较简单，如果攻击者知道了你的策略可能会针对性攻击，我们实际使用时可以适当变通一下。
 2.1.4细化攻击策略 上一个策略是简单的通过威胁分数判断，现在这个策略则是针对漏进来的攻击IP进行针对性的过滤。
-[ 主要作用：首先过滤国家不等于china，因为来自国内的攻击IP极少。我们的访客绝大多数也来自china所以直接略过国家。
+[
+主要作用：首先过滤国家不等于china，因为来自国内的攻击IP极少。我们的访客绝大多数也来自china所以直接略过国家。
 /feed是我们的RSS订阅地址，我们同样略过此地址。
 IP源地址是我们的源站IP，针对源站IP来的请求数据我们同样略过。
 URL不包含.html是因为本次攻击地址都不是.html地址，所以略过了。我网闸对于.html地址也有缓存。大家自己设置时候这一个可以删掉。
 UA字段WellKnownBot，这个是当时翻策略拦截日志发现的一个UA，好像是个正常请求。所以给他过滤了。
 威胁分数大于3，这里是保证整个策略不至于过于严格，只针对威胁分数大于 3 的 IP 生效。
-2.1.5地区策略 [ 这里一般不需要设置，我是看攻击IP有大量来自印尼的IP，网站基本也没印尼的访客，所以来自印尼的IP全部进行CAPTCHA交互式人机验证。
+2.1.5地区策略 [
+这里一般不需要设置，我是看攻击IP有大量来自印尼的IP，网站基本也没印尼的访客，所以来自印尼的IP全部进行CAPTCHA交互式人机验证。
 2.2 DDOS策略 CloudFlare针对DDOS有自己的分析策略可供我们使用。
 这里CloudFlare的DDOS实际是包含我们常说的CC攻击的，七层和四层区别。
-[ [ CloudFlare会分析请求是否是DDOS，对于符合的请求我们可以选择进行验证。另外规则集敏感度也可以进行调整。
+[
+[
+CloudFlare会分析请求是否是DDOS，对于符合的请求我们可以选择进行验证。另外规则集敏感度也可以进行调整。
 这里如果你正在被攻击，可以将敏感度设置为高。实测误比较少，如果网站长期套CloudFlare，我们可以设置为中。
-2.3 其他WAF设置 [ 2.4 缓存设置 缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。
+2.3 其他WAF设置 [
+2.4 缓存设置 缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。
 缓存设置是在多个位置进行的。下面大家看截图就好。
-[ 创建一个静态文件的缓存规则。
-[ [ [ 上面的是基础缓存，对于页面的缓存我们使用下面的规则。</description></item><item><title>全网最新的Python爬虫教程+实战项目案例，超适合小白练手的实战项目！</title><link>https://blog.taoshuge.eu.org/p/%E5%85%A8%E7%BD%91%E6%9C%80%E6%96%B0%E7%9A%84python%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E8%B6%85%E9%80%82%E5%90%88%E5%B0%8F%E7%99%BD%E7%BB%83%E6%89%8B%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/</link><pubDate>Fri, 22 Dec 2023 15:49:02 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%85%A8%E7%BD%91%E6%9C%80%E6%96%B0%E7%9A%84python%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E8%B6%85%E9%80%82%E5%90%88%E5%B0%8F%E7%99%BD%E7%BB%83%E6%89%8B%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/</guid><description>Python项目源码、教程、工具合集，由于经常私信受限，或者回复大家不及时，耽误大家时间，所以up主把内部链接放这里了，需要的点击自行拿走。
+[
+创建一个静态文件的缓存规则。
+[
+[
+[</description></item><item><title>全网最新的Python爬虫教程+实战项目案例，超适合小白练手的实战项目！</title><link>https://blog.taoshuge.eu.org/p/%E5%85%A8%E7%BD%91%E6%9C%80%E6%96%B0%E7%9A%84python%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E8%B6%85%E9%80%82%E5%90%88%E5%B0%8F%E7%99%BD%E7%BB%83%E6%89%8B%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/</link><pubDate>Fri, 22 Dec 2023 15:49:02 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%85%A8%E7%BD%91%E6%9C%80%E6%96%B0%E7%9A%84python%E7%88%AC%E8%99%AB%E6%95%99%E7%A8%8B-%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%E6%A1%88%E4%BE%8B%E8%B6%85%E9%80%82%E5%90%88%E5%B0%8F%E7%99%BD%E7%BB%83%E6%89%8B%E7%9A%84%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE/</guid><description>Python项目源码、教程、工具合集，由于经常私信受限，或者回复大家不及时，耽误大家时间，所以up主把内部链接放这里了，需要的点击自行拿走。
 （需要各类安装包和秒杀源码的宝子可以添加文章下方哦）
 （链接直接复制到百度/夸克网盘打开就可以获取了）
 1.音乐源码
@@ -1583,7 +1605,8 @@ docker run -d -p 443:9000 --name portainer --restart always -v ~/local-certs:/ce
 一些信息的修改地址 1.站点图标 header.html 文件的第17行，替换掉https://cdn.amzayo.top/static/public/luban/luban_head.png
 2.页面左上角 logomenu.html 文件的第5行，替换掉https://cdn.amzayo.top/static/public/luban/test_head.e7b54515.png
 3.底部版权信息 footer.html 文件的第4到8行，依照demo底部的文字按需替换
-下载地址&amp;ndash;&amp;gt;点我下载 其他CSS样式 &amp;lt;style&amp;gt; /* 屏幕适配 */ @media only screen and (min-width: 1200px) { .ui.container { width: 80% !important; } } @media only screen and (max-width: 767px) { .ui.card&amp;gt;.content&amp;gt;.header:not(.ui), .ui.cards&amp;gt;.card&amp;gt;.content&amp;gt;.header:not(.ui) { margin-top: 0.4em !important; } } /* 整体图标 */ i.icon { color: #000; width: 1em !</description></item><item><title>雷池waf社区版反代上高防</title><link>https://blog.taoshuge.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</link><pubDate>Sat, 25 Nov 2023 11:33:31 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</guid><description> 我们经常用NPM可视化面板反代服务到域名上，我发现一个更加强大的面板，雷池是个web防火墙面板，基于nginx，反向代理只是基础，重点是还能防御站点，拦截网络恶意攻击。你可以理解为反代加高防的存在，
+下载地址&amp;ndash;&amp;gt;点我下载 其他CSS样式 &amp;lt;style&amp;gt; /* 屏幕适配 */ @media only screen and (min-width: 1200px) { .ui.container { width: 80% !important; } } @media only screen and (max-width: 767px) { .ui.card&amp;gt;.content&amp;gt;.header:not(.ui), .ui.cards&amp;gt;.card&amp;gt;.content&amp;gt;.header:not(.ui) { margin-top: 0.4em !important; } } /* 整体图标 */ i.icon { color: #000; width: 1em !</description></item><item><title>雷池waf社区版反代上高防</title><link>https://blog.taoshuge.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</link><pubDate>Sat, 25 Nov 2023 11:33:31 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E9%9B%B7%E6%B1%A0waf%E7%A4%BE%E5%8C%BA%E7%89%88%E5%8F%8D%E4%BB%A3%E4%B8%8A%E9%AB%98%E9%98%B2/</guid><description>
+我们经常用NPM可视化面板反代服务到域名上，我发现一个更加强大的面板，雷池是个web防火墙面板，基于nginx，反向代理只是基础，重点是还能防御站点，拦截网络恶意攻击。你可以理解为反代加高防的存在，
 使用方法
 Debian/Ubuntu安装下载工具
 apt update -y &amp;amp;&amp;amp; apt install -y curl CentOS安装下载工具

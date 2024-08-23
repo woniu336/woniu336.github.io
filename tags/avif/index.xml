@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AVIF on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/avif/</link><description>Recent content in AVIF on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 23 Aug 2024 02:36:43 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/avif/index.xml" rel="self" type="application/rss+xml"/><item><title>告别臃肿！个人博客图片优化的秘密武器——AVIF格式</title><link>https://blog.taoshuge.eu.org/p/307/</link><pubDate>Fri, 23 Aug 2024 02:36:43 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/307/</guid><description>准备软件 ShareX imagemagick imagemagick 下载第一个 Q16-HDRI-x64-dll.exe 安装 ShareX 动作设置 按下图 动作设置-动作-添加 进入动作添加页面
+动作参数 webp
+convert &amp;#34;$input&amp;#34; -quality 80 -define webp:method=6 -define webp:lossless=false -define webp:alpha-quality=85 -define webp:partition-limit=90 &amp;#34;$output&amp;#34; avif
+convert &amp;#34;$input&amp;#34; -quality 60 -define avif:compression-level=6 -define avif:effort=7 &amp;#34;$output&amp;#34; ShareX 截图任务 按下图顺序设置截图后的任务顺序 上传到cloudflare r2 教程地址：
+https://getsharex.com/docs/cloudflare-r2
+其他方法
+使用ffmpeg将图片转换为avif 仅在windows下测试通过
+如果你还没有安装FFmpeg，请先安装。你可以在FFmpeg的官方网站下载适用于你的操作系统的版本，也可以使用包管理器安装（例如，Homebrew for macOS，apt for Ubuntu等）。
+使用以下命令将图片转换为AVIF格式：
+ffmpeg -i input_image.png output_image.avif 这里input_image.png是你的原始图片文件名，output_image.avif是你想要输出的AVIF格式文件名。
+你可以通过添加一些参数来调整输出文件的质量和其他设置。例如：
+ffmpeg -i input_image.png -c:v libaom-av1 -crf 30 -b:v 0 output_image.avif -c:v libaom-av1：使用的是 libaom-av1 编码器，这是一个用于 AV1 格式的编码器。</description></item></channel></rss>
