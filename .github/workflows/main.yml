@@ -1,0 +1,8 @@
+- name: webfactory/ssh-agent
+  uses: webfactory/ssh-agent@v0.7.0
+  with:
+    ssh-private-key: ${{ secrets.HONGKONG_PRIVATE_KEY }}
+
+- name: Publish hexo to remote host
+  run: |
+    rsync -anv -e "ssh -o StrictHostKeyChecking=no" --delete --exclude={'.git/','.github/'} / ${{ secrets.HONGKONG_USERNAME }}@${{ secrets.HONGKONG_SERVER_IP }}:${{ secrets.HONGKONG_WWW_PATH }}
