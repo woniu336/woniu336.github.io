@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>图床 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/%E5%9B%BE%E5%BA%8A/</link><description>Recent content in 图床 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Dec 2023 13:07:15 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub图床加速</title><link>https://blog.taoshuge.eu.org/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</link><pubDate>Thu, 07 Dec 2023 13:07:15 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</guid><description>Github图床使用 网络上关于GitHub+Jsdelivr实现图床加速的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。
+方法1：Jsdelivr镜像站 https://jsd.cdn.zzko.cn （公益）
+方法2：通过Cloudflare Workers实现反代
+即使镜像站点跑路了，Cloudflare还在，速度慢点
+以上方法都要配合PicGo或者PicList使用，本人使用的是PicList
+配合图床工具: PicList
+PicList 是一款基于PicGo 深度二次开发,云储存/图床管理和文件上传客户端工具
+完美兼容PicGo
+官网: https://piclist.cn
+1.通过Cloudflare Workers实现反代 addEventListener( &amp;#34;fetch&amp;#34;,event =&amp;gt; { let url=new URL(event.request.url); url.hostname=&amp;#34;raw.githubusercontent.com&amp;#34;; //反代github域名 let request=new Request(url,event.request); event. respondWith( fetch(request) ) } ) 具体教程网上很多，需要你在Cloudflare有域名
+2.配合PicList 请替换为你自己的仓库名 以及分支，准备好token
+反代图
+下图为镜像站 仓库名: woniu336/blog-image 分支: main 存储路径: img/ 自定义域名1(镜像站) : https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main 自定义域名2(CF反代) : https://github.leshans.eu.org/woniu336/blog-image/main 自定义域名格式: https://cdn.jsdelivr.net/gh/用户名/仓库名@分支 图片测试:</description></item><item><title>定时将R2图床同步到腾讯云对象存储</title><link>https://blog.taoshuge.eu.org/p/%E5%AE%9A%E6%97%B6%E5%B0%86r2%E5%9B%BE%E5%BA%8A%E5%90%8C%E6%AD%A5%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</link><pubDate>Mon, 11 Sep 2023 08:58:58 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%AE%9A%E6%97%B6%E5%B0%86r2%E5%9B%BE%E5%BA%8A%E5%90%8C%E6%AD%A5%E5%88%B0%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</guid><description>请确保您的系统上已经安装了 rclone，并且命令的路径正确。
+要将定时任务添加到您的系统中，您可以按照以下步骤进行操作：
+打开终端或命令提示符，登录到您的系统。
+r2为cloudflare r2 , cos是腾讯云cos
+在linux中 crontab -e 在打开的定时任务配置文件中，添加以下内容：
+0 2 * * * rclone sync r2:blog cos:shenma-1253486782/blog --ignore-existing -u -v -P --transfers=20 --ignore-errors --buffer-size=128M --check-first --checkers=10 保存并关闭文件。
+系统将自动加载新的定时任务配置。
+现在，您的系统将在每天的凌晨2点执行指定的命令。请注意，这是基于系统的时区设置，如果您的系统时区设置为东八区，那么任务将在东八区的凌晨2点执行。
+查看任务
+crontab -l 调整时区:
+timedatectl set-timezone Asia/Shanghai &amp;amp;&amp;amp; hwclock --systohc 在 Windows 系统中 您可以使用任务计划程序（Task Scheduler）来创建定时任务。以下是在 Windows 上创建定时任务的具体步骤：
+打开“任务计划程序”。您可以通过按下 Win + R 键，在运行对话框中输入 taskschd.msc，然后按下 Enter 键来打开它。
+在任务计划程序窗口中，点击左侧的 &amp;ldquo;创建任务&amp;rdquo;。
+在 &amp;ldquo;常规&amp;rdquo; 选项卡中，输入任务的名称和描述。
+切换到 &amp;ldquo;触发器&amp;rdquo; 选项卡，点击 &amp;ldquo;新建&amp;rdquo; 来创建一个新的触发器。
+在触发器设置中，选择 &amp;ldquo;每天&amp;rdquo;，并设置执行任务的时间为 16:40。</description></item><item><title>腾讯Gtimg图床-苹果cms教程</title><link>https://blog.taoshuge.eu.org/p/%E8%85%BE%E8%AE%AFgtimg%E5%9B%BE%E5%BA%8A-%E8%8B%B9%E6%9E%9Ccms%E6%95%99%E7%A8%8B/</link><pubDate>Fri, 01 Sep 2023 14:54:09 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E8%85%BE%E8%AE%AFgtimg%E5%9B%BE%E5%BA%8A-%E8%8B%B9%E6%9E%9Ccms%E6%95%99%E7%A8%8B/</guid><description>安装插件需要先安装盒子，安装插件，更新插件点击这里，新萌必看，不看必出错
+苹果cms盒子云端安装对接后支持在线一键安装苹果cms模板 目前云端安装仅支持苹果cmsv10免费模板，因云端数据存储无法管理的问题苹果cms8 收费模板以及插件不支持云端安装。
+为什么要安装盒子？
+盒子是一个管理插件的工具，它支持安装，数据库自动创建，卸载功能，可大大降低插件开发时间同时可以有序管理插件，一键干净卸载插件，不会造成苹果cms混乱影响苹果cms升级等问题，让你的苹果cms可以随意增加任何想要的功能无需担心修改苹果cms源文件影响到苹果cms正常使用。
+盒子下载地址：https://gouya.lanzouf.com/iGgeI07zodmh
+QQ群：792135526（群里名额有限随时清理潜水用户）
+安装苹果cms盒子方法： 1.下载到的盒子客户端压缩包内拥有一个application文件夹，直接上传到网站根目录中。
+2.添加苹果cms盒子快捷菜单：苹果cms盒子,macBox/stylelist（参考下图）
+腾讯Gtimg图床插件优点： 免费，不限空间，安装插件后直接使用，支持封面同步，编辑视频图片上传。
+插件升级注意：
+该插件不提供升级包，如需升级卸载删除原先的插件重新安装新版本即可
+有人会担心图片失效了怎么办，其实很简单，吧图片全部清空重新采集一遍就行了，清空方法也简单，打开phpMyAdmin找到mac_vod表点击sql，输入sql语句：
+UPDATE mac_vod SET vod_pic =&amp;#39;&amp;#39;; 然后点击执行就可以清空所有图片，在然后重新采集一遍图片就好了。
+图床插件安装方法： 1.下载到的插件压缩包上传到addons目录中解压
+2.打开苹果cms盒子点击安装即可
+3.下载地址: https://gouya.lanzouy.com/igtxi0bnaqhi
+使用教程：
+最新更新需要腾讯图床需要提供token，例如下面部分
+userid=68552314;omaccesstoken=001fceb42ca1d843edf1066170a2a2bc5d9788a63587b8419549426a6b40c2052799417defb079f6a54b391efbb481e3f5da50123896b210607ba3f2e8fb6cf08cnv;omtoken=001fceb42ca1d843edf1066172a2bc5d9788a63587b82195461536a6b40c2052766417defb079f6a54b391efbb481e3f5da506d896db210607ba3f2e8fb6cf08cnv; token需要自己登录腾讯开放平台，然后登录一个账号刷新网页F12查看
+1.安装并启用插件
+2.参考下图切换至腾讯图床并且填写token
+注意：因腾讯对于图床调整全部增加了防盗链，因此使用腾讯图床需要接触防盗，下面提供两种方法
+1.（推荐方法）编辑模板在头部增加位置
+&amp;lt;meta name=&amp;#34;referrer&amp;#34; content=&amp;#34;never&amp;#34;/&amp;gt; 参考下图
+插件更新方法： 一般有插件开发者提供更新包替换，涉及到收费问题暂时不支持在线升级功能。
+4.0升级内容：
+1.移除模板相关代码
+2.移除SG11加密组件，无需在安装加密组件了，直接使用即可
+3.移除不使用的代码
+注：因苹果cms版本问题可能出现兼容，点击安装，启用，卸载没反应，如果遇到这种问题刷新一下即可。</description></item></channel></rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Picgo on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/picgo/</link><description>Recent content in Picgo on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 20 Aug 2023 05:05:54 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/picgo/index.xml" rel="self" type="application/rss+xml"/><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://blog.taoshuge.eu.org/p/picgo-%E7%99%BD%E5%AB%96cloudflare-r2%E5%AD%98%E5%82%A8%E5%81%9A%E5%9B%BE%E5%BA%8A/</link><pubDate>Sun, 20 Aug 2023 05:05:54 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/picgo-%E7%99%BD%E5%AB%96cloudflare-r2%E5%AD%98%E5%82%A8%E5%81%9A%E5%9B%BE%E5%BA%8A/</guid><description>前言 Cloudflare R2存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。Cloudflare R2存储流量不收费，收费的是存储空间和请求次数。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。
+免费 付费 - 费率 贮存 10 GB/月 每月 0.015 美元/GB A 类操作 每月 100 万个请求 4.50 美元/百万请求 B 类操作 每月 1000 万个请求 0.36 美元/百万请求 也就是说，可以免费存储10G的文件，每个月可以上传100万次，访问1000万次，假如用作图床，一般是用不到这个量级的。并且可以绑定自定义域名，套用页面规则以后可以设置浏览器缓存，这样可以减少一些请求次数并且可以防止被人刷请求次数导致一晚上过去，房子就不属于自己了。不自定义域名也是可以的，也就是说你甚至不需要拥有域名就可以拥有一个图床。
+存储也是比较便宜的，超出10G以后，1G文件基本上每个月只要1毛人民币。当然和B2那种5刀一个月1T是没法比的，用作图床的话还有种阿里云国际的OSS的40G年付包也是比较有性价比，这里扯远了。下面详细说一下怎么白嫖R2做图床。
+本文的图就放在R2上，只不过域名是自定义的。
+设置R2 开通R2 首先当然是拥有一个Cloudflare账号，并且点击右上角的语言设置中文。
+第一步当然是开通R2，侧边栏找到R2然后点击开通。这里可以绑定支持外币支付的卡，或者直接绑定paypal，中国区的paypal也是可以的。
+第二步是创建存储桶，可以自己选取位置，不建议无脑选亚太地区，亚太地区虽然近但是国际访问速度受限，我这里选择北美西部。
+第三步是创建完存储桶后，点进就到存储桶的设置，然后找到【R2.dev 子域】，将其开启，下图是我已经开启的状态。
+大家可以认为你的存储同并没有域名绑定，开启这个子域名以后，cf就分配了一个域名给你的存储桶，如果你绑定了自定义域名到存储桶的话，可以把这个开关给关了，可以少一些问题。如果你没有购买域名没法自定义域名，一直用cf给你的这个域名也是可以的。自定义域名的好处是不限速，而且可以享受cloudflare上面的一系列缓存和自定义限速等设置，防止被刷访问次数。
+然后，你就可以通过cf网站上传器上传图片到R2了，便可正常访问。
+开通API 回到R2的概述界面，点击右上角的 管理 R2 API 令牌，然后点击右上角的创建api令牌，如果要使用picgo进行图片的上传，请记得在权限选项把对象读和写打开，在ttl选项可以设置api令牌的有效期，这里可以选择永久。大概如下图所示。
+创建完成令牌以后请把 访问密钥 ID 和 机密访问密钥 收藏好，只会显示这一次，以后用的时候就找不到了，记下来以后还能用到。当然，如果没记住的话，以后再创建一个api令牌也是可以的。
+使用picgo进行上传操作 PICGO项目地址：https://github.com/Molunerfinn/PicGo
+安装好PicGo后，点击【插件设置】搜索【S3】，安装下图插件。
+安装完成后，点击左侧-侧边栏的图床设置，里面多了一个AMAZON S3这个选项，进去设置。
+应用密钥ID填写我们刚刚复制的访问密钥 ID
+应用密钥填写我们刚刚复制的机密访问密钥
+桶命就写我们存储桶的名字，这里是duangks
+文件路径自己设置，默认也是可以的
+地区可以不用填写，默认跳转就可以
+自定义节点需要填写一下，在R2中点击存储桶，到存储桶的管理界面，点击设置，里面的S3 api就是需要复制的。例如
+自定义域名需要注意一下，复制咱们开通的R2.dev 子域，然后在后面加上/你的桶名。
+例如，我开通的R2.dev 子域是 https://pu1-082231df54234f2b90d1bd5432310a4b.r2.dev</description></item></channel></rss>

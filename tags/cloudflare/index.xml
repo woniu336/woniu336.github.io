@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloudflare on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/cloudflare/</link><description>Recent content in Cloudflare on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 30 Apr 2024 11:46:45 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/cloudflare/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare防火墙其他WAF设置</title><link>https://blog.taoshuge.eu.org/p/247/</link><pubDate>Tue, 30 Apr 2024 11:46:45 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/247/</guid><description>其他WAF设置 缓存设置 缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。
+缓存设置是在多个位置进行的。下面大家看截图就好。
+创建静态文件的缓存规则 表达式:
+(http.request.full_uri contains &amp;#34;.gif&amp;#34;) or (http.request.full_uri contains &amp;#34;.js&amp;#34;) or (http.request.full_uri contains &amp;#34;.css&amp;#34;) or (http.request.full_uri contains &amp;#34;.woff2&amp;#34;) or (http.request.full_uri contains &amp;#34;.webp&amp;#34;) or (http.request.full_uri contains &amp;#34;.png&amp;#34;) or (http.request.full_uri contains &amp;#34;.jpg&amp;#34;) or (http.request.full_uri contains &amp;#34;.jpeg&amp;#34;) 缓存时间看个人情况
+开启Tiered Cache 页面规则 关闭洋葱路由 Scrape Shield</description></item><item><title>Fail2Ban对接cloudflare防火墙技巧</title><link>https://blog.taoshuge.eu.org/p/245/</link><pubDate>Sat, 27 Apr 2024 18:12:04 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/245/</guid><description>我的大部分教程或者叫笔记,除了给自己看,考虑到其他朋友也会看到,本着简洁明白的原则,我基本上会制作一些快捷脚本,方便大家使用,本次脚本,我针对使用宝塔面板的朋友,当然,使用什么看个人情况,你可以更改我的脚本,已达到适合你的方式
+fail2ban原理 Fail2ban通过监视日志文件，检测并阻止恶意登录尝试和攻击.
+当Fail2ban检测到系统日志中的恶意行为模式时，它会自动阻止攻击者的IP地址，以保护系统安全。
+安装fail2ban Debian/Ubuntu安装
+使用root用户
+apt update -y &amp;amp;&amp;amp; apt install -y fail2ban CentOS安装
+yum update -y yum install -y epel-release yum install -y fail2ban yum install -y nano 启动
+systemctl start fail2ban 开机自启
+systemctl enable fail2ban 查看状态
+systemctl status fail2ban 按键盘 q 退出
+获取Cloudflare令牌 到cf后台右上角我的个人资料，选择左侧API令牌，获取Global API Key
+获取地址: https://dash.cloudflare.com/login
+对接Cloudflare 以下脚本适用于宝塔面板建站的朋友
+一键脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/fail2ban.sh &amp;amp;&amp;amp; chmod +x fail2ban.sh &amp;amp;&amp;amp; ./fail2ban.sh 国内机器
+curl -sS -O https://gitee.</description></item><item><title>超简单利用 CloudFlare Api 宕机自动切换ip，并开启小云朵(cdn)</title><link>https://blog.taoshuge.eu.org/p/221/</link><pubDate>Mon, 01 Apr 2024 09:49:35 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/221/</guid><description>首先获取API密钥 登录cloudflare
+https://dash.cloudflare.com/profile/api-tokens
+获取：Global API Key
+获取域名区域ID 选择其中一个域名进入
+域名的右侧，找到区域ID，复制ID
+前提：要把域名提前解析好，
+准备好域名正在使用的IP（原始ip） 备用IP（切换后的ip）
+下载脚本 脚本地址：https://github.com/woniu336/open_shell/tree/main/dns_update
+脚本下载
+wget https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update.sh &amp;amp;&amp;amp; wget https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update.py &amp;amp;&amp;amp; chmod +x dns_update.sh dns_update.py 国内
+wget https://gitee.com/dayu777/open_shell/raw/main/dns_update/dns_update.sh &amp;amp;&amp;amp; wget https://gitee.com/dayu777/open_shell/raw/main/dns_update/dns_update.py &amp;amp;&amp;amp; chmod +x dns_update.sh dns_update.py 安装依赖 apt install python3-pip pip install requests sudo apt-get install jq 运行dns_update.sh 先运行dns_update.sh 提示输入API密钥，登录邮箱，区域ID，原始IP，备用ip，检测的端口号
+注意：原始ip就是正在使用的IP，检测到宕机后切换ip就是备用ip，要检测哪个端口号看你的需求，
+./dns_update.sh 完成后，会将信息录入dns_update.py脚本
+运行dns_update.py 终端输入：
+chmod +x dns_update.py python3 dns_update.py 测试脚本 比如你安装了宝塔面板，端口是5577，检测的端口号就是5577,然后停止面板，
+或者你安装了nginx，停止ngnix, 检测的端口号就是80,
+以上都会触发脚本自动更换ip
+会看到终端显示更新DNS记录，切换备用ip提示，也可以到cloudflare去看DNS解析情况
+如果要关掉小云朵cdn,修改：
+把 proxied=True 改成 proxied=False 后台运行 nohup python3 dns_update.</description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/p/126/</link><pubDate>Wed, 17 Jan 2024 04:53:36 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/126/</guid><description>添加防火墙规则表达式 复制代码即可 第一：恶意流量阻止 操作：托管质询
+(cf.threat_score ge 5 and not cf.client.bot) or (not http.request.version in {&amp;#34;HTTP/1.2&amp;#34; &amp;#34;HTTP/2&amp;#34; &amp;#34;HTTP/3&amp;#34; &amp;#34;SPDY/3.1&amp;#34;}) or (not http.user_agent contains &amp;#34;Mozilla/&amp;#34;) 第二：放行爬虫（seo） 操作：跳过
+(cf.client.bot) or (http.user_agent contains &amp;#34;duckduckgo&amp;#34;) or (http.user_agent contains &amp;#34;facebookexternalhit&amp;#34;) or (http.user_agent contains &amp;#34;Feedfetcher-Google&amp;#34;) or (http.user_agent contains &amp;#34;LinkedInBot&amp;#34;) or (http.user_agent contains &amp;#34;Mediapartners-Google&amp;#34;) or (http.user_agent contains &amp;#34;msnbot&amp;#34;) or (http.user_agent contains &amp;#34;Slackbot&amp;#34;) or (http.user_agent contains &amp;#34;TwitterBot&amp;#34;) or (http.user_agent contains &amp;#34;ia_archive&amp;#34;) or (http.user_agent contains &amp;#34;yahoo&amp;#34;) 第三：其他 跳过源站IP、区域或国家阻止
+CF的WAF的防火墙规则！</description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.taoshuge.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</link><pubDate>Sat, 23 Dec 2023 12:14:09 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</guid><description>为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？ 当你接入Cloudflare的CDN，并点亮小云朵之后。你的网站就已经通过Cloudflare的CDN节点进行中转了。默认情况下，Cloudflare 会对你网站中的图片、JS、CSS文件等静态文件进行缓存。
+当访客访问你网站页面的时候，所有的静态文件都是由Cloudflare的节点直接给到访客的，但是HTML文件是默认不缓存的。也就意味着访客访问你的某一页面的时候。仍然会回源你的服务器。
+所以，本篇文章就是教你如何使用Cloudflare的页面规则（Page Rules）把整个HTML页面给缓存。 使访客访问被缓存的页面的时候，直接交由Cloudflare进行服务，甚至你的源服务器不会收到任何GET请求。
+这样做的好处是，可以大大减少源服务器的负载开支，使得你的站点能够承载更多的访客及流量。
+下面两张演示图片就是使用了Cloudflare页面规则之后，节省的源站服务器的请求及流量。
+如何通过浏览器判断某个页面是否被Cloudflare的CDN进行缓存？ 在学会如何判断之前，我们要先熟悉一个CDN中常见的术语：“HIT”，中文叫做**“命中”**。我们先看下面这样演示的图片：
+可见，图中对过往24小时之内的所有请求有一个统计，统计分为：命中、未命中、动态、绕过……等等状态。
+【命中】状态就表示已经整网页完全被Cloudflare的CDN提供了服务； 【绕过】状态则表示直接绕过Cloudflare的CDN由源站进行服务； 【动态】状态则表示部分资源被Cloudflare的CDN缓存并服务，但混合了一些源站的请求； 【未命中】因为命中与否是一个概率问题。Cloudflare 也并不能保证在缓存规则中的所有资源都完整的命中。 **注：如果你开启了小云朵，但并未配置页面规则。**那么你的绝大多数状态都是【动态】，因为访客访问页面中的静态资源交由Cloudflare进行提供，还是有一些请求是通过源站来服务的。
+接下来，我们以Chrome为示范。教大家判断一个网页在开启Cloudflare CDN之后的缓存状态到底是**【命中】亦或是【动态】**
+打开接入Cloudflare的网站页面，这里以陌涛小站首页示范。 “F12” 进入“开发者工具”，点击“Network”选项卡。 “Control + F5” 刷新该页面（苹果系统请使用 Command + R），并在“Name”栏中选择“网址”。
+从上图中可以看到 cf-cache-status 的值为 “HIT”，则说明该页面已经完全缓存。
+其他状态解释如下： cf-cache-status:DYNAMIC （动态） 如果是“DYNAMIC”则说明，该站可能只开启了小云朵，并没有配置整站完全缓存。 cf-cache-status:BYPASS （绕过） 如果是“BYPASS”则说明，该站针对这个页面设置了绕过，不允许缓存。
+Cloudflare的缓存机制 假设你的站点有 www.renao.org/1.html 和 www.renao.org/2.html 两个页面。
+当访客A 访问1.html这个页面的时候，首先会经由Cloudflare，这个时候你的页面规则就起作用了。 Cloudflare会发现，吼吼，这个站有个1.html 我给它缓存下来，并且转发给A。
+当访客B 在Edge Cache过期时间之前，重复访问1.html的时候。 Cloudflare会思考一下。哈哈哈，这个1.html我有。不用麻烦源站了。我直接给到B就可以了。
+这就是所谓的命中率，如果这个页面被完全命中，那么B访问1.html虽然得到了网页，但是是由Cloudflare直接提供的。你的源站甚至连客户的IP都统计不到。
+但是，2.html 这个页面在你的规则建立开始时从未有任何访客访问过。那么Cloudflare也不知道这个页面的存在，也不会缓存。除非等到真的有人访问过，Cloudflare才会发现，并对其进行缓存。
+好了，冗长的理论知识讲完了，我们来进行实战。 这里以Wordpress源站举例，来详细讲解如何设置页面规则才能够进行全站缓存。
+一、Cloudflare 页面规则 免费版3条规则配置 由于Cloudflare免费版只提供了三条免费的规则，所以我们的想法有很多，但是真正实现起来肯定要有所取舍。下面提供了三种陌涛小站测试过的方法。根据你网站的具体情况选择即可。
+在所有的规则配置中，“*”代表通配符，另外，规则注意上下排序。默认从第一条规则顺延到第二条规则，然后才是第三条规则。具体请参照以下【三种方法】的详细配置说明。
+方法一、常规无人值守方法（网上流传配置方法） .imotao.xyz/wp-login .imotao.xyz/wp-admin .</description></item><item><title>新版 CloudFlare CDN 防攻击设置</title><link>https://blog.taoshuge.eu.org/p/%E6%96%B0%E7%89%88-cloudflare-cdn-%E9%98%B2%E6%94%BB%E5%87%BB%E8%AE%BE%E7%BD%AE/</link><pubDate>Sat, 23 Dec 2023 06:45:21 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E6%96%B0%E7%89%88-cloudflare-cdn-%E9%98%B2%E6%94%BB%E5%87%BB%E8%AE%BE%E7%BD%AE/</guid><description>前段时间网站一直被攻击，然后博主扛不住了搬去了 CloudFlare 。初期因为设置问题，攻击还是透过了CloudFlare 打到了源站。后面经过多次的设置后已经可以完全阻止攻击请求了。下面给大家分享下我的设置，如果你的网站被攻击了，可以根据自己的实际情况微调修改下。
+1.设置前说明 网站程序为WordPress，不同程序可能需要微调下策略。
+CloudFlare免费版默认设置是针对整个域名的，如果你有其他二级域名站点，需要注意下这个策略对你其他站点有没有影响。
+在你使用CloudFlare前确保你的源站IP没有暴露，否则对方可以直接指定hosts到你的源站IP，CloudFlare就形同虚设。
+如果源站IP已经暴露，先把数据备份出来。开一台新服务器创建站点。
+关于CloudFlare接入的基础操作这里就不讲了，比如SSL设置之类。
+下面的规则自己实际使用后一定不要暴露出来，否则攻击者会针对性的进行攻击。建议自己进行规则微调。
+2.策略详情 策略设置有优先级，排名靠前的优先级大于后方策略。所以说针对搜索引擎蜘蛛的策略，一定放在第一个！
+2.1 waf设置 WAF策略总览
+2.1.1搜索引擎蜘蛛策略 表达式：(cf.client.bot)
+主要作用：CloudFlare 对于常见搜索引擎蜘蛛IP有自己的一份数据库，符合此要求的请求将会直接访问网站数据。不会经过 CloudFlare 的 WAF 策略等。避免正常蜘蛛访问被拦截。
+2.1.2登录页策略 网站我们正常运行必然有访客进行注册登录，针对我们的登录页以及常见被扫描的地址，我们可以单独设置一下人机验证。
+主要作用：本站是WordPress程序，所以设置了xmlrpc.php和wp-login.php地址。其他程序根据自己实际情况设置。优先级低于蜘蛛，放到第二也是为了防止有些访客挂着代理被后续的策略阻止。
+2.1.3威胁分数策略 此策略是防攻击的主力策略，这一项可以阻挡90%的攻击。
+[
+主要作用：威胁分数大于等于2，可以阻挡90%的恶意IP。CloudFlare 默认推荐分数5实测基本给攻击全漏了进来，设置3同样有漏IP。所以根据2023年9月目前的网络来说这里建议设置为2！
+rss是因为站点有很多人通过RSS进行订阅，所以针对此类请求我们不要对他进行人机验证。
+这里针对RSS策略比较简单，如果攻击者知道了你的策略可能会针对性攻击，我们实际使用时可以适当变通一下。
+2.1.4细化攻击策略 上一个策略是简单的通过威胁分数判断，现在这个策略则是针对漏进来的攻击IP进行针对性的过滤。
+[
+主要作用：首先过滤国家不等于china，因为来自国内的攻击IP极少。我们的访客绝大多数也来自china所以直接略过国家。
+/feed是我们的RSS订阅地址，我们同样略过此地址。
+IP源地址是我们的源站IP，针对源站IP来的请求数据我们同样略过。
+URL不包含.html是因为本次攻击地址都不是.html地址，所以略过了。我网闸对于.html地址也有缓存。大家自己设置时候这一个可以删掉。
+UA字段WellKnownBot，这个是当时翻策略拦截日志发现的一个UA，好像是个正常请求。所以给他过滤了。
+威胁分数大于3，这里是保证整个策略不至于过于严格，只针对威胁分数大于 3 的 IP 生效。
+2.1.5地区策略 [
+这里一般不需要设置，我是看攻击IP有大量来自印尼的IP，网站基本也没印尼的访客，所以来自印尼的IP全部进行CAPTCHA交互式人机验证。
+2.2 DDOS策略 CloudFlare针对DDOS有自己的分析策略可供我们使用。
+这里CloudFlare的DDOS实际是包含我们常说的CC攻击的，七层和四层区别。
+[
+[
+CloudFlare会分析请求是否是DDOS，对于符合的请求我们可以选择进行验证。另外规则集敏感度也可以进行调整。
+这里如果你正在被攻击，可以将敏感度设置为高。实测误比较少，如果网站长期套CloudFlare，我们可以设置为中。
+2.3 其他WAF设置 [
+2.4 缓存设置 缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。
+缓存设置是在多个位置进行的。下面大家看截图就好。
+[
+创建一个静态文件的缓存规则。
+[
+[
+[</description></item><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://blog.taoshuge.eu.org/p/picgo-%E7%99%BD%E5%AB%96cloudflare-r2%E5%AD%98%E5%82%A8%E5%81%9A%E5%9B%BE%E5%BA%8A/</link><pubDate>Sun, 20 Aug 2023 05:05:54 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/picgo-%E7%99%BD%E5%AB%96cloudflare-r2%E5%AD%98%E5%82%A8%E5%81%9A%E5%9B%BE%E5%BA%8A/</guid><description>前言 Cloudflare R2存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。Cloudflare R2存储流量不收费，收费的是存储空间和请求次数。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。
+免费 付费 - 费率 贮存 10 GB/月 每月 0.015 美元/GB A 类操作 每月 100 万个请求 4.50 美元/百万请求 B 类操作 每月 1000 万个请求 0.36 美元/百万请求 也就是说，可以免费存储10G的文件，每个月可以上传100万次，访问1000万次，假如用作图床，一般是用不到这个量级的。并且可以绑定自定义域名，套用页面规则以后可以设置浏览器缓存，这样可以减少一些请求次数并且可以防止被人刷请求次数导致一晚上过去，房子就不属于自己了。不自定义域名也是可以的，也就是说你甚至不需要拥有域名就可以拥有一个图床。
+存储也是比较便宜的，超出10G以后，1G文件基本上每个月只要1毛人民币。当然和B2那种5刀一个月1T是没法比的，用作图床的话还有种阿里云国际的OSS的40G年付包也是比较有性价比，这里扯远了。下面详细说一下怎么白嫖R2做图床。
+本文的图就放在R2上，只不过域名是自定义的。
+设置R2 开通R2 首先当然是拥有一个Cloudflare账号，并且点击右上角的语言设置中文。
+第一步当然是开通R2，侧边栏找到R2然后点击开通。这里可以绑定支持外币支付的卡，或者直接绑定paypal，中国区的paypal也是可以的。
+第二步是创建存储桶，可以自己选取位置，不建议无脑选亚太地区，亚太地区虽然近但是国际访问速度受限，我这里选择北美西部。
+第三步是创建完存储桶后，点进就到存储桶的设置，然后找到【R2.dev 子域】，将其开启，下图是我已经开启的状态。
+大家可以认为你的存储同并没有域名绑定，开启这个子域名以后，cf就分配了一个域名给你的存储桶，如果你绑定了自定义域名到存储桶的话，可以把这个开关给关了，可以少一些问题。如果你没有购买域名没法自定义域名，一直用cf给你的这个域名也是可以的。自定义域名的好处是不限速，而且可以享受cloudflare上面的一系列缓存和自定义限速等设置，防止被刷访问次数。
+然后，你就可以通过cf网站上传器上传图片到R2了，便可正常访问。
+开通API 回到R2的概述界面，点击右上角的 管理 R2 API 令牌，然后点击右上角的创建api令牌，如果要使用picgo进行图片的上传，请记得在权限选项把对象读和写打开，在ttl选项可以设置api令牌的有效期，这里可以选择永久。大概如下图所示。
+创建完成令牌以后请把 访问密钥 ID 和 机密访问密钥 收藏好，只会显示这一次，以后用的时候就找不到了，记下来以后还能用到。当然，如果没记住的话，以后再创建一个api令牌也是可以的。
+使用picgo进行上传操作 PICGO项目地址：https://github.com/Molunerfinn/PicGo
+安装好PicGo后，点击【插件设置】搜索【S3】，安装下图插件。
+安装完成后，点击左侧-侧边栏的图床设置，里面多了一个AMAZON S3这个选项，进去设置。
+应用密钥ID填写我们刚刚复制的访问密钥 ID
+应用密钥填写我们刚刚复制的机密访问密钥
+桶命就写我们存储桶的名字，这里是duangks
+文件路径自己设置，默认也是可以的
+地区可以不用填写，默认跳转就可以
+自定义节点需要填写一下，在R2中点击存储桶，到存储桶的管理界面，点击设置，里面的S3 api就是需要复制的。例如
+自定义域名需要注意一下，复制咱们开通的R2.dev 子域，然后在后面加上/你的桶名。
+例如，我开通的R2.dev 子域是 https://pu1-082231df54234f2b90d1bd5432310a4b.r2.dev</description></item></channel></rss>

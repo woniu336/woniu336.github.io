@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>同步 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/%E5%90%8C%E6%AD%A5/</link><description>Recent content in 同步 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Mar 2024 18:00:04 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/%E5%90%8C%E6%AD%A5/index.xml" rel="self" type="application/rss+xml"/><item><title>rclone 过滤，包含和排除规则</title><link>https://blog.taoshuge.eu.org/p/208/</link><pubDate>Sat, 23 Mar 2024 18:00:04 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/208/</guid><description>文档：资料
+文件类型过滤 比如 --exclude &amp;quot;*.bak&amp;quot;，表示排除所有 .bak 结尾的文件，也可以写作 --filter &amp;quot;- *.bak&amp;quot;
+比如 --include &amp;quot;*.{png,jpg}&amp;quot;，包含所有 png 和 jpg 文件，排除其他文件，也可以写作 --filter &amp;quot;+ *.{png,jpg}&amp;quot;
+--delete-excluded 删除排除的文件。需配合过滤参数使用，否则无效。
+目录过滤 目录过滤需要在目录名称后面加上 /，否则会被当做文件进行匹配。以 / 开头只会匹配根目录（指定目录下），否则匹配所目录。这同样适用于文件。
+--exclude &amp;quot;.git/&amp;quot; 排除所有目录下的.git 目录。
+--exclude &amp;quot;/.git/&amp;quot; 只排除根目录下的.git 目录。
+--exclude &amp;quot;{Video,Software}/&amp;quot; 排除所有目录下的 Video 和 Software 目录。
+--exclude &amp;quot;/{Video,Software}/&amp;quot; 只排除根目录下的 Video 和 Software 目录。
+--include &amp;quot;/{Video,Software}/**&amp;quot; 仅包含根目录下的 Video 和 Software 目录的所有内容。
+大小过滤 默认大小单位为 kBytes ，但可以使用 k ，M 或 G 后缀。
+--min-size 过滤小于指定大小的文件。比如 --min-size 50 表示不会传输小于 50k 的文件。</description></item></channel></rss>

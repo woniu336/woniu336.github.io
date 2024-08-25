@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>网盘 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/%E7%BD%91%E7%9B%98/</link><description>Recent content in 网盘 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 09 Dec 2023 23:40:57 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/%E7%BD%91%E7%9B%98/index.xml" rel="self" type="application/rss+xml"/><item><title>小雅网盘</title><link>https://blog.taoshuge.eu.org/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/</link><pubDate>Sat, 09 Dec 2023 23:40:57 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/</guid><description>小雅网盘（基于alist） 网址：https://alist.xiaoya.pro/
+alist文档：https://alist.nn.ci/zh//
+小雅文档： https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f
+终端安装命令，端口 5678
+bash -c &amp;#34;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;#34; 或者 端口 6789
+bash -c &amp;#34;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;#34; -s host 阿里token获取地址：https://aliyuntoken.vercel.app/
+阿里opentoken地址：https://alist.nn.ci/tool/aliyundrive/request.html
+转存文件夹ID：网页版阿里云，进转存文件夹，地址栏内最后64开头的数字
+创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像
+定时清理缓存 可以不加-tg
+模式3：创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像
+bash -c &amp;#34;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;#34; -s 3 -tg 模式5：与模式3的区别是实时清理，只要产生了播放缓存一分钟内立即清理。签到和定时升级同模式3
+bash -c &amp;#34;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;#34; -s 5 -tg 套娃挂载： 输入命令，获取令牌
+docker exec -i xiaoya sqlite3 data/data.db &amp;lt;&amp;lt;EOF select value from x_setting_items where key = &amp;#34;token&amp;#34;; EOF 挂载 ：alist v3 输入令牌 输入链接 注意docker名称</description></item></channel></rss>

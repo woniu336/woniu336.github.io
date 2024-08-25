@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/github/</link><description>Recent content in Github on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Dec 2023 13:07:15 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>GitHub图床加速</title><link>https://blog.taoshuge.eu.org/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</link><pubDate>Thu, 07 Dec 2023 13:07:15 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</guid><description>Github图床使用 网络上关于GitHub+Jsdelivr实现图床加速的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。
+方法1：Jsdelivr镜像站 https://jsd.cdn.zzko.cn （公益）
+方法2：通过Cloudflare Workers实现反代
+即使镜像站点跑路了，Cloudflare还在，速度慢点
+以上方法都要配合PicGo或者PicList使用，本人使用的是PicList
+配合图床工具: PicList
+PicList 是一款基于PicGo 深度二次开发,云储存/图床管理和文件上传客户端工具
+完美兼容PicGo
+官网: https://piclist.cn
+1.通过Cloudflare Workers实现反代 addEventListener( &amp;#34;fetch&amp;#34;,event =&amp;gt; { let url=new URL(event.request.url); url.hostname=&amp;#34;raw.githubusercontent.com&amp;#34;; //反代github域名 let request=new Request(url,event.request); event. respondWith( fetch(request) ) } ) 具体教程网上很多，需要你在Cloudflare有域名
+2.配合PicList 请替换为你自己的仓库名 以及分支，准备好token
+反代图
+下图为镜像站 仓库名: woniu336/blog-image 分支: main 存储路径: img/ 自定义域名1(镜像站) : https://jsd.cdn.zzko.cn/gh/woniu336/blog-image@main 自定义域名2(CF反代) : https://github.leshans.eu.org/woniu336/blog-image/main 自定义域名格式: https://cdn.jsdelivr.net/gh/用户名/仓库名@分支 图片测试:</description></item><item><title>利用免费GitHub私人仓库：定时备份网站数据</title><link>https://blog.taoshuge.eu.org/p/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9github%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</link><pubDate>Tue, 05 Sep 2023 14:32:24 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%88%A9%E7%94%A8%E5%85%8D%E8%B4%B9github%E7%A7%81%E4%BA%BA%E4%BB%93%E5%BA%93%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE/</guid><description>随着GitHub被微软收购后，私人仓库已经变得免费，为我们提供了一个无限的创造空间。现在，我们可以尽情发挥其潜力，将其用于定时备份网站和服务器重要数据，确保数据安全与可靠性。
+教程 首先你肯定需要一个Github账号，没有的可以去注册一个，地址：https://github.com。有了账号就继续看。
+1、配置Git SSH密钥 由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以必须要让github仓库认证你SSH key，在操作之前，需要先在服务器上生成SSH key。
+设置github 用户名和邮箱
+git config --global user.name &amp;#34;name&amp;#34; git config --global user.email &amp;#34;xxxx@qq.com&amp;#34; 我们先去根目录下使用命令：
+cd ~ ssh-keygen -t rsa 这里会要你命名密钥名称(建议使用默认名称)，然后连续按几次Enter，这时候会在/root/.ssh文件夹生成2个ssh密钥，然后我们查看公钥id_rsa.pub。
+cat ~/.ssh/id_rsa.pub 查看后，再复制下公钥 打开Github官网，进入https://github.com/settings/ssh/new， Title随意，然后Key填入刚刚复制的公钥，最后点击Add SSH Key添加即可。 2、建立私人仓库 我们需要先访问https://github.com/new，新建一个仓库用来存放备份文件，名称自己随意，记得下面一定要勾选Private，也就是私人仓库。
+3、配置本地仓库 进入需要备份的文件夹，比如/www/wwwroot/lala，也就是把该文件夹设定为本地仓库，使用命令：
+#进入需要备份的文件夹 cd /www/wwwroot/lala #初始化你的github仓库 git init #关联到远程github仓库 git remote add origin git@github.com:Blichus/back_website.git 如果已经备份过了,拉取github仓库代码到服务器 (关联远程github仓库后)
+git pull origin master 4、初次备份 #进入备份的文件夹 cd /www/wwwroot/lala #把目录下所有文件更改状况提交到暂存区，包括增，删，改。 git add -A #提交更改的说明，说明随意了，这里为backsite git commit -m &amp;#34;backsite&amp;#34; #开始推送到Github git push -u origin master 推送的时候可能会警告提示:</description></item><item><title>GitHub加速终极教程</title><link>https://blog.taoshuge.eu.org/p/github%E5%8A%A0%E9%80%9F%E7%BB%88%E6%9E%81%E6%95%99%E7%A8%8B/</link><pubDate>Sun, 03 Sep 2023 02:09:30 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/github%E5%8A%A0%E9%80%9F%E7%BB%88%E6%9E%81%E6%95%99%E7%A8%8B/</guid><description>本文意图解决使用 GitHub 访问(https) 或者 git clone（https or ssh）慢的问题。在此分享我的方法，我所了解的 GitHub 加速最佳方案。
+前提是，你的木弟子应该还行，木弟子越好，GitHub 体验越好
+很多文章没有讲全面，只讲了 http proxy，而没有讲 ssh proxy。事实上大部分程序员使用 GitHub 都会使用 SSH keys（普通用户可能就不会了），在本机生成 rsa 公私钥(其他的类型还有 dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk)，然后把公钥内容拷贝、设置进 GitHub。
+所以程序员 clone 一个仓库一般是 ssh clone 而不是 https clone
+1
+git clone git@github.com:xxx/yyy.git
+如果你不配置 ssh 代理或者没有透明代理之类的网络环境（其实还有一些代理工具，不过更加小众），直接硬拖到本地大概率是很慢的。如果使用 http 代理，如果木弟子质量好，其实也还行
+1
+git clone https://github.com/xxx/yyy.git
+但这样不如 ssh clone 稳定。下面我们来设置 http proxy 和 ssh proxy。
+设置 Http Proxy git config --global http.proxy socks5://127.</description></item><item><title>推荐8个宝藏级的开源软件！来自Github的免费精品项目</title><link>https://blog.taoshuge.eu.org/p/%E6%8E%A8%E8%8D%908%E4%B8%AA%E5%AE%9D%E8%97%8F%E7%BA%A7%E7%9A%84%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E6%9D%A5%E8%87%AAgithub%E7%9A%84%E5%85%8D%E8%B4%B9%E7%B2%BE%E5%93%81%E9%A1%B9%E7%9B%AE/</link><pubDate>Sun, 27 Aug 2023 15:27:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E6%8E%A8%E8%8D%908%E4%B8%AA%E5%AE%9D%E8%97%8F%E7%BA%A7%E7%9A%84%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E6%9D%A5%E8%87%AAgithub%E7%9A%84%E5%85%8D%E8%B4%B9%E7%B2%BE%E5%93%81%E9%A1%B9%E7%9B%AE/</guid><description>1.Malware-Patch：阻止 Windows 流氓软体授权的工具。它轻巧、无需后台运行，可用于阻止指定软体的管理员授权。
+【开源项目】
+2.Rocket.Chat：一款可自由定制的企业级开源通信平台源码。用它来可以搭建一个功能丰富的通信平台，可自託管做为 Slack 的开源替代品。支持创建频道、团队和讨论等多种不同功能的群聊，消息支持图片、文件、视频和语音，拥有包括 Windows、Linux、macOS、Android 和 iOS 在内的多种客户端。 如果你需要搭建一个安全加密，且具有高度私密性的通信平台，那麽这款开源项目就非常适合你了。
+【开源项目】
+3.hackingtool：黑客工具全家桶。该项目收录了各种黑客工具，包括破解密码、SQL 注入、钓鱼攻击、XSS、DDos 等。堪称黑客军火库的开源项目啊
+【开源项目】
+4.sniffnet：可轻鬆监控网路流量的工具。这是一个简单、可靠、炫酷的网路监控应用，可以让你一目了然地了解设备的网路流量。
+【开源项目】
+5.changedetection ：简单好用的网站变更检测、监控和通知服务。基于 Flask+Selenium 构建的 Web 服务，可以在目标网站发生变化时发出通知，可用于监控商品降价、工作机会、版本发布、最新内容等，支持 Docker 的安装方式。
+【开源项目】
+6.calibre：一款完全免费开源且功能强大的电子书管理工具。它是集下载、格式转化、制作、管理于一体的电子书工具，比如可以将 txt 文本，转化成包含作者信息和书籍封面的 mobi 文件，制作完成后还可以直接发送到 Kindle 设备上。 支持多种电子书格式，包括EPUB、MOBI、PDF等等。Calibre的功能非常强大，可以帮助用户轻鬆地管理自己的电子书库，包括添加、删除、重命名和搜索等。此外，它还提供了阅读器功能，用户可以在软体内直接阅读电子书，而不需要另外下载阅读器。你还可以可通过插件/扩展实现更多的功能。
+【开源项目】
+7.Magisk：Android 获取 Root 许可权的工具。它可以快速、无痛地获得 Android 的超级用户许可权，支持 Android 5.0 以上的设备。
+【开源项目】
+8.uptime-kuma：一款极简的 uptime 监控工具。该项目可以用来监控服务正常运行时间，它界面美观、支持 Docker 一键部署，提供了中文界面、通知、多状态页面等实用功能。
+【开源项目】</description></item></channel></rss>

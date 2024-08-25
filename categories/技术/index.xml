@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>技术 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/categories/%E6%8A%80%E6%9C%AF/</link><description>Recent content in 技术 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 01 Apr 2024 09:49:35 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>超简单利用 CloudFlare Api 宕机自动切换ip，并开启小云朵(cdn)</title><link>https://blog.taoshuge.eu.org/p/221/</link><pubDate>Mon, 01 Apr 2024 09:49:35 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/221/</guid><description>首先获取API密钥 登录cloudflare
+https://dash.cloudflare.com/profile/api-tokens
+获取：Global API Key
+获取域名区域ID 选择其中一个域名进入
+域名的右侧，找到区域ID，复制ID
+前提：要把域名提前解析好，
+准备好域名正在使用的IP（原始ip） 备用IP（切换后的ip）
+下载脚本 脚本地址：https://github.com/woniu336/open_shell/tree/main/dns_update
+脚本下载
+wget https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update.sh &amp;amp;&amp;amp; wget https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update.py &amp;amp;&amp;amp; chmod +x dns_update.sh dns_update.py 国内
+wget https://gitee.com/dayu777/open_shell/raw/main/dns_update/dns_update.sh &amp;amp;&amp;amp; wget https://gitee.com/dayu777/open_shell/raw/main/dns_update/dns_update.py &amp;amp;&amp;amp; chmod +x dns_update.sh dns_update.py 安装依赖 apt install python3-pip pip install requests sudo apt-get install jq 运行dns_update.sh 先运行dns_update.sh 提示输入API密钥，登录邮箱，区域ID，原始IP，备用ip，检测的端口号
+注意：原始ip就是正在使用的IP，检测到宕机后切换ip就是备用ip，要检测哪个端口号看你的需求，
+./dns_update.sh 完成后，会将信息录入dns_update.py脚本
+运行dns_update.py 终端输入：
+chmod +x dns_update.py python3 dns_update.py 测试脚本 比如你安装了宝塔面板，端口是5577，检测的端口号就是5577,然后停止面板，
+或者你安装了nginx，停止ngnix, 检测的端口号就是80,
+以上都会触发脚本自动更换ip
+会看到终端显示更新DNS记录，切换备用ip提示，也可以到cloudflare去看DNS解析情况
+如果要关掉小云朵cdn,修改：
+把 proxied=True 改成 proxied=False 后台运行 nohup python3 dns_update.</description></item></channel></rss>

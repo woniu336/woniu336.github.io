@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wordpress on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/categories/wordpress/</link><description>Recent content in Wordpress on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 02 Aug 2024 06:00:48 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/categories/wordpress/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenLiteSpeed 访问ip跳转404</title><link>https://blog.taoshuge.eu.org/p/295/</link><pubDate>Fri, 02 Aug 2024 06:00:48 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/295/</guid><description>修改 OpenLiteSpeed 的配置 找到配置文件路径：例如我的ip是2.2.2.2
+cd /usr/local/lsws/conf/vhosts/2.2.2.2/ 编辑vhost.conf文件，
+nano vhost.conf 写入如下内容：
+# 虚拟主机配置 docRoot $VH_ROOT/public_html vhDomain $VH_NAME vhAliases www.$VH_NAME adminEmails $VH_ADMIN_EMAIL enableGzip 1 enableIpGeo 1 # 重写规则 rewrite { enable 1 rules &amp;lt;&amp;lt;&amp;lt;END_RULES # 检查是否是通过 IP 地址访问 RewriteCond %{HTTP_HOST} ^[0-9.]+$ # 如果是 IP 访问，重定向到 404 页面 RewriteRule ^ /404.html [L] END_RULES } # 错误页面配置 errordoc 404 { url /404.html } 新建404页面
+cd /home/2.2.2.2/public_html/ #回到ip目录 touch 404.html 写入内容：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh-CN&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description></item><item><title>cyberpanel重写规则</title><link>https://blog.taoshuge.eu.org/p/293/</link><pubDate>Thu, 01 Aug 2024 22:57:07 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/293/</guid><description>cyberpanel防盗链设置 主页——网站——网站列表，选择对应网站，点击管理——重写规则
+RewriteEngine On RewriteCond %{HTTP_REFERER} !^https://(cdn.)?xxx.org [NC] RewriteRule .(jpg|jpeg|png|gif|webp|js|css)$ - [NC,F] 这条规则的意思是：
+阻止所有不是来自 xxx.org 主域名或其 CDN 子域名的请求访问网站的图片、JavaScript 和 CSS 文件，以防止资源被其他网站盗用。
+域名跳转到新域名 如果不保留原始的URL路径，把$1去掉即可
+RewriteEngine on RewriteCond %{HTTP_HOST} ^example.com [NC,OR] RewriteCond %{HTTP_HOST} ^www.example.com [NC] RewriteRule ^(.*)$ http://example.net/$1 [L,R=301,NC] [OR]表示这个条件和下一条件是逻辑“或”的关系
+这段代码将所有访问example.com或www.example.com的请求永久重定向到http://example.net，并保留原始的URL路径。
+强制https 规则 cyberpanel默认是[R,L] 实际是302状态，改成[R=301,L] 才是301状态，
+RewriteEngine On RewriteCond %{HTTPS} !=on RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R=301,L] 301重定向分析 https://www.redirhub.com/zh/tool/redirect-checker
+https://uutool.cn/url-redirect/
+反向代理 还是在cyberpanel面板修改规则，但是portainer这部分需要在OpenLiteSpeed 面板设置
+REWRITERULE ^(.*)$ HTTP://portainer/$1 [P] portainer：外部应用程序名称 在openlitespeed 里设置
+导航到服务器 &amp;ndash; 外部应用程序 &amp;ndash; 添加 &amp;ndash;网络服务器</description></item><item><title>cyberpanel面板和openlitespeed设置</title><link>https://blog.taoshuge.eu.org/p/292/</link><pubDate>Thu, 01 Aug 2024 13:40:48 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/292/</guid><description>安装cyberpanel openlitespeed设置 管理界面账号密码
+sudo /usr/local/lsws/admin/misc/admpass.sh 查看密码 (如果之前更改过密码则无效)
+cd /usr/local/lsws cat adminpasswd IP使用自签证书
+防止IP泄露SSL证书，导致别人可以通过这种方式反查到你的源站
+1：生成自签名证书
+mkdir -p /opt/signcert &amp;amp;&amp;amp; cd /opt/signcert openssl req -x509 -newkey rsa:4096 -keyout OpenLiteSpeed-key.pem -out OpenLiteSpeed-cert.pem -nodes -days 365 # 一路回车 2：替换证书
+cat /opt/signcert/OpenLiteSpeed-cert.pem &amp;gt; /usr/local/lsws/admin/conf/webadmin.crt cat /opt/signcert/OpenLiteSpeed-key.pem &amp;gt; /usr/local/lsws/admin/conf/webadmin.key systemctl restart lsws 3：导航到openlitespeed面板，设置监听器SSL证书路径
+/opt/signcert/OpenLiteSpeed-key.pem /opt/signcert/OpenLiteSpeed-cert.pem 屏蔽Censys 导航到服务器&amp;ndash;安全&amp;ndash;访问控制&amp;ndash;拒绝列表
+162.142.125.0/24, 167.94.138.0/24, 167.94.145.0/24, 167.94.146.0/24, 167.248.133.0/24, 199.45.154.0/24, 199.45.155.0/24, 2602:80d:1000:b0cc:e::/80, 2620:96:e000:b0cc:e::/80 用户代理的屏蔽
+Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/) 禁用xmlrpc.php 导航到虚拟主机&amp;ndash;资源集&amp;ndash;类型Static 编辑&amp;ndash;重写规则，填入如下内容
+RewriteRule ^(xmlrpc\.php|wp-trackback\.php) - [F,L] 其他优化：https://www.</description></item><item><title>wordpress搭建经验</title><link>https://blog.taoshuge.eu.org/p/290/</link><pubDate>Tue, 30 Jul 2024 14:43:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/290/</guid><description>服务器选择 插件 LiteSpeed ##缓存
+UpdraftPlus ##备份还原
+Better Search Replace ##在WordPress数据库上运行搜索/替换
+显示访客真实IP 显示真实游客 IP，而不是 CloudFlare IP
+ALL, 103.21.244.0/22T, 103.22.200.0/22T, 103.31.4.0/22T, 104.16.0.0/13T, 104.24.0.0/14T, 108.162.192.0/18T, 131.0.72.0/22T, 141.101.64.0/18T, 162.158.0.0/15T, 172.64.0.0/13T, 173.245.48.0/20T, 188.114.96.0/20T, 190.93.240.0/20T, 197.234.240.0/22T, 198.41.128.0/17T 安装certbot 安装证书：Ubuntu 20.04 和 22.04
+sudo apt-get update sudo apt-get install certbot -y 卸载
+sudo apt-get remove certbot OpenLiteSpeed设置 建立文件 例如：
+mkdir -p /home/5k.92dm.top/public_html/.well-known/acme-challenge 虚拟主机&amp;ndash;资源集&amp;ndash;Static
+url: /.well-known/acme-challenge
+位置：/home/5k.92dm.top/public_html/.well-known/acme-challenge
+可访问：是
+申请证书 certbot certonly --non-interactive --agree-tos -m demo@gmail.com --webroot -w /home/catpdf.org/public_html/ -d catpdf.</description></item><item><title>纯代码免插件优化WordPress6.3实现0sql-强化拓展</title><link>https://blog.taoshuge.eu.org/p/113/</link><pubDate>Sun, 17 Dec 2023 14:47:53 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/113/</guid><description>在WordPress各种优化插件、各种手段层出不穷的时代，各方大佬均在推荐各类插件，比如super cache、cache master和litespeed cache等。不过对于老白博客个人而言，就想图个清净，不喜欢插件太多，设置一大堆，复杂！所以呢，今天就掏出一个“无代码版”优化WordPress（强化拓展），再结合最新版本的WordPress6.3，轻松实现首页0sql，网站毫秒级加载。
+1.batcache效果演示 演示网站：https://test.xcbtmw.com/
+网站底部就能看到（未使用前首页查询次数为63）：
+附带一个显示查询次数和时间的代码
+&amp;lt;?php echo get_num_queries().&amp;#39;次查询，耗时&amp;#39;.timer_stop(0).&amp;#39;秒。&amp;#39;; ?&amp;gt; 2.什么是WordPress强化拓展 在本文的教程中，老白使用的是“强化拓展”，而非WordPress插件，他们二者区别如下：
+强化拓展（Enhancements）：强化拓展是一种广义的术语，用于描述对系统或应用程序功能进行增强、扩展或改进的方法。它可以包括各种形式的修改、添加、优化或增强，以提供更多功能、性能或用户体验的改善。在WordPress中，强化拓展可以指代各种方法，如代码片段、自定义功能、主题模板修改等，用于对WordPress进行定制和增强。 插件（Plugins）：插件是一种特定的软件组件，用于在现有系统或应用程序中添加额外的功能或特性。在WordPress中，插件通常是以独立的文件形式存在的，可以通过后台管理界面直接安装和启用。插件提供了一种简单的方式来扩展WordPress的功能，而无需直接修改核心代码。它们可以实现各种功能，如社交媒体分享、SEO优化、表单创建、安全增强等。 强化拓展是一个更宽泛的概念，可以包括各种形式的增强和定制，而插件则是一种特定的软件组件，通过添加额外的功能来扩展现有系统。插件是实现强化拓展的一种常见方式。
+3.batcache+mem强化拓展 此处借用果酱大佬的原话介绍batcache和memcached的关系
+WordPress 启用 Memcached 这样的内存缓存之后，每次访问 WordPress 页面，都要从内存中获取多个缓存对象。
+而 Batcache 主要就是解决这个问题，它是基于 Memcached 的 WordPress 缓存插件，它的工作原理是：把当前整个页面作为一个对象缓存到内存中，这样再次访问 WordPress 页面的时候，直接获从内存中获取这个对象即可，速度极快。
+从果酱大佬的描述中我们可以发现：batcache+memcached是一种非常不错的WordPress优化手段，接下来老白跟大家分享下如何无插件开启
+3.1 PHP安装memcached拓展 以宝塔面板为例，打开软件商店，PHP安装拓展，勾选即可（老白推荐安装opcache+memcached）
+3.2 batcache+mem强化拓展下载 下载文件（batcache和memcached均来自于官方插件，大家也可以自行下载）
+batcache+mem下载：https://qtrj.lanzoul.com/i6nSD18cy6eb
+然后放到WordPress的/wp-content目录下，比如老白博客的：
+/www.xcbtmw.com/wp-content 3.3 激活使用batcache+mem 把上述文件放到对应目录后，还需要在WordPress根目录的wp-config.php进行下面的设置，不然会报错
+//设置缓存头，这里testxcbtmw可以随意设置-https://www.xcbtmw.com/29717.html define(&amp;#39;WP_CACHE_KEY_SALT&amp;#39;, &amp;#39;testxcbtmw&amp;#39;); //激活memcached define(&amp;#39;ENABLE_CACHE&amp;#39;, true); //激活batcache define(&amp;#39;WP_CACHE&amp;#39;, true); 3.4 batcache缓存设置 编辑batcache的advanced-cache.php文件进行设置
+var $max_age = 300; // 缓存过期时间(0表示禁用batcache) var $remote = 0; // 禁止向远程数据中心发送缓冲区(从不发送req/sec) var $times = 2; // 一个页面被访问了多少次之后进行缓存(两个或两个以上) var $seconds = 0; // …在这么多秒内(0表示忽略它，立即使用batcache) var $group = &amp;#39;batcache&amp;#39;; // memcached组的名称。您可以通过更改此选项来模拟缓存刷新。 var $unique = array(); // 如果您有条件地提供不同的内容，请将变量值放在这里。 var $vary = array(); // 函数数组，用于create_function。返回值被添加到上面的$unique中。 var $headers = array(); // 在这里添加头作为name=&amp;gt;值或name=&amp;gt;数组(值)。这些将与缓存中的每个响应一起发送。 var $cache_redirects = false; // 设置true启用重定向缓存。 var $redirect_status = false; // 这将在重定向期间设置为响应代码。 var $redirect_location = false; // 这被设置为重定向位置。 var $use_stale = true; // 更新缓存时是否可以返回过期的缓存响应?</description></item></channel></rss>

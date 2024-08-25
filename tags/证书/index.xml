@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>证书 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/%E8%AF%81%E4%B9%A6/</link><description>Recent content in 证书 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 10 Aug 2024 20:54:29 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/%E8%AF%81%E4%B9%A6/index.xml" rel="self" type="application/rss+xml"/><item><title>OCSP地址查询</title><link>https://blog.taoshuge.eu.org/p/301/</link><pubDate>Sat, 10 Aug 2024 20:54:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/301/</guid><description>certbot申请的证书 your-domain替换成你的域名
+查询ocsp地址：
+openssl x509 -in /etc/letsencrypt/live/your-domain.com/cert.pem -noout -ocsp_uri ssl_trusted_certificate配置路径：
+ssl_trusted_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem; acme.sh申请的证书 查询ocsp地址：
+openssl x509 -in ~/.acme.sh/your-domain.com/your-domain.cer -noout -ocsp_uri ssl_trusted_certificate配置路径：
+ssl_trusted_certificate ~/.acme.sh/your-domain.com/fullchain.cer;</description></item><item><title>acme自制脚本快速申请免费证书</title><link>https://blog.taoshuge.eu.org/p/ssl/</link><pubDate>Thu, 25 Jan 2024 07:59:24 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/ssl/</guid><description>脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl.sh &amp;amp;&amp;amp; chmod +x ssl.sh &amp;amp;&amp;amp; ./ssl.sh 步骤：选择你的操作系统 &amp;ndash; 输入邮箱 &amp;ndash; 选择证书 &amp;ndash; 输入域名 &amp;ndash; 输入网站路径
+注意：如果你的网站启动目录指向的是二级目录，请改回根目录，否者申请出问题
+证书申请成功后目录：/root/.acme.sh/你的域名/
+打开目录：
+xxxx.key为密钥
+fullchain.cer为证书</description></item><item><title>使用 acme.sh 申请 Google 的免费 SSL 证书</title><link>https://blog.taoshuge.eu.org/p/%E4%BD%BF%E7%94%A8-acme.sh-%E7%94%B3%E8%AF%B7-google-%E7%9A%84%E5%85%8D%E8%B4%B9-ssl-%E8%AF%81%E4%B9%A6/</link><pubDate>Mon, 28 Aug 2023 16:12:32 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E4%BD%BF%E7%94%A8-acme.sh-%E7%94%B3%E8%AF%B7-google-%E7%9A%84%E5%85%8D%E8%B4%B9-ssl-%E8%AF%81%E4%B9%A6/</guid><description>上个月 30 日，Google Cloud 在其博客发表文章 Automate Public Certificates Lifecycle Management via RFC 8555 (ACME) 发布了测试版的自动化公共 CA 管理程序。
+简而言之就是 Google 也开放了类似于 Let’s Encrypt 的免费证书申请。并且和 Google 各项服务使用相同的根证书。
+优劣分析 可以设置颁发证书的有效期；（最长 90 天） 支持多域名及通配符；（与 Let’s Encrypt 相同） 仅支持 DNS 验证和文件验证，不支持邮件验证；（与 Let’s Encrypt 相同） 支持 IP 地址，但是仅允许该 IP 地址块的所有者进行验证；（Let’s Encrypt 暂不支持） 不支持 IDN (International Domain Name, 国际化域名，使用 Punycode 进行编码，形如 xn–1.xn–2).（Let’s Encrypt 已经支持） 目前签发的证书，即使选择 ECC 类型，证书链的中级证书也是 RSA 的（Let’s Encrypt 已经支持全链 ECC） ocsp.pki.goog 有国内节点，访客体验还是很不错的。 目前有 DNSSEC CAA 问题，在 DNSPod 添加了 DNSSEC 的用户请暂缓申请 申请方法 申请 GOOGLE 域名 API 登录 google 账号后，进入下面链接</description></item></channel></rss>

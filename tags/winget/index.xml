@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Winget on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/winget/</link><description>Recent content in Winget on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 04 Mar 2024 17:31:22 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/winget/index.xml" rel="self" type="application/rss+xml"/><item><title>Winserver2022安装winget</title><link>https://blog.taoshuge.eu.org/p/192/</link><pubDate>Mon, 04 Mar 2024 17:31:22 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/192/</guid><description>winget介绍：Windows 程序包管理器：优雅的安装软件, 类似Linux系统apt、dpkg
+本教程只限于server系统,只在winserver2022测试通过，其他系统版本未知
+比如我想安装QQ，输入命令：winget search QQ 搜索，然后使用 winget install &amp;lt;ID&amp;gt;安装
+教程开始
+https://www.123pan.com/s/cjqrVv-xf59d.html
+将所有文件下载，解压 microsoft.ui.xaml.2.7.3.zip
+以管理员打开powershell
+cd microsoft.ui.xaml.2.7.3 进入解压目录
+执行命令：
+Add-AppxPackage -Path .\tools\AppX\x64\Release\Microsoft.UI.Xaml.2.7.appx 回到上层目录 cd ..
+执行以下命令：
+Add-AppxPackage -Path .\Microsoft.VCLibs.x64.14.00.Desktop.appx 继续
+Add-AppxPackage .\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle 最后：
+Add-AppxProvisionedPackage -Online -Package .\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle -LicensePath .\24146eb205d040e69ef2d92d7034d97f_License1.xml 最后一点：记得要给winget换源 查看往期文章</description></item><item><title>使用 winget 搜索和安装应用程序</title><link>https://blog.taoshuge.eu.org/p/191/</link><pubDate>Sun, 03 Mar 2024 20:30:28 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/191/</guid><description>winget 源 内容 地址 微软官方 应用商店中的程序 + 开源软件包 https://cdn.winget.microsoft.com/cache 中科大开 开源软件包 https://mirrors.ustc.edu.cn/winget-source 好像就中科大的提供 winget 国内镜像，有点少啊。
+使用 winget 搜索和安装应用程序 对于不熟悉基于文本界面的用户来说，刚开始使用 winget 时可能有点令人望而却步，但实际上它非常简单易用。winget 的基本用法只涉及搜索和安装应用程序。请按照以下步骤操作：
+1在 Windows 11 中鼠标右击「开始」菜单 – 选择打开「终端管理员」。
+2要搜索应用程序，请执行：
+winget search &amp;lt;AppName&amp;gt; 例如，输入winget search Chrome来尝试查找 Google Chrome。
+使用 winget 搜索应用程序
+3如果首次使用winget命令，需要同意服务条款，请按Y然后按回车键。查询结果中可以看到包括不同版本的 Chrome，以及一些名称相似的应用程序。
+4为了获取和安装正确的应用程序，最准确的方法是使用第二列中列出的包 ID。例如，要安装 Google Chrome 的稳定版，可以使用如下命令：
+winget install Google.Chrome 使用 winget 安装应用程序
+如果要安装的程序需要通过 Microsoft Store 获取（源在列表的最后一列），还需要同意服务条款，请按Y然后按回车键。 也可以在安装命令中添加--accept-package-agreements参数，以自动接受任何协议。 5安装完成后，可以重复这个过程来安装其他任何需要的应用程序。
+在 Windows 11 中使用基于文本的命令行界面安装应用程序非常简单，而且有许多应用程序都可以通过winget命令实现静默安装，而且速度非常快。正如我们之前提到的，您也可以使用 Windows Package Manager 安装来自 Microsoft Store 的应用程序。</description></item></channel></rss>

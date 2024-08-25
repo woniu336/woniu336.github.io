@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nginx on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/nginx/</link><description>Recent content in Nginx on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 12 Feb 2024 15:20:04 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/nginx/index.xml" rel="self" type="application/rss+xml"/><item><title>宝塔面板Nginx编译pagespeed实现webp化</title><link>https://blog.taoshuge.eu.org/p/161/</link><pubDate>Mon, 12 Feb 2024 15:20:04 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/161/</guid><description>网站优化之宝塔面板Nginx编译pagespeed实现webp化，目的为通过重写网页来减少延迟和带宽，从而帮助提高Web速度。Ngx_pagespeed是一个开源的Nginx模块，由Google创建，主要的功能是针对前端页面而进行服务器端的优化，对前端设计人员来说，可以省去优化css、js以及图片的过程。
+单核处理器不推荐使用此模块，推荐Nginx fastcgi_cache
+Nginx fastcgi_cache：https://blog.leshans.eu.org/p/159/
+Ngx_pagespeed功能简介 图像优化：剥离元数据、动态调整，重新压缩 CSS和JavaScript压缩、合并、级联、内联 推迟图像和JavaScript加载 对HTML重写、压缩空格、去除注释等 提升缓存周期 缺点：可能因为服务器端的优化而使系统增加负载，但从减少客户请求数的角度去看，牺牲部分服务器性能还是值得的。
+pagespeed官网文档：https://www.modpagespeed.com/doc/configuration
+项目：https://github.com/apache/incubator-pagespeed-ngx/
+1.宝塔面板编译Ngx_pagespeed 1）首先卸载原有Nginx，然后点击“编译安装”，点击添加自定义模块 2）添加自定义模块具体填写，具体看图： 模块名称：pagespeed 模块描述：pagespeed 模块参数: --add-module=/www/server/ngx_pagespeed 前置脚本：#具体ngx_pagespeed前置脚本代码如下：
+cd /www/server wget https://github.com/apache/incubator-pagespeed-ngx/archive/v1.13.35.2-stable.zip unzip v1.13.35.2-stable.zip rm v1.13.35.2-stable.zip NPS_DIR=$(find . -name &amp;#34;*pagespeed-ngx-1.13.35.2-stable&amp;#34; -type d) mv $NPS_DIR ngx_pagespeed cd ngx_pagespeed NPS_RELEASE_NUMBER=${1.13.35.2-stable/stable/} PSPL_URL=https://dl.google.com/dl/page-speed/psol/${NPS_RELEASE_NUMBER}x64.tar.gz [ -e scripts/format_binary_url.sh ] PSPL_URL=$(scripts/format_binary_url.sh PSOL_BINARY_URL) wget ${PSPL_URL} tar -xzvf $(basename ${PSPL_URL}) rm $(basename ${PSPL_URL}) 3）全部放置好后，勾选，提交 4）安装好的效果如图： 编译安装速度有点慢，需要等待，安装好可以在ssh执行命令：nginx -V
+看到红框的位置有pagespeed，说明已经顺利编译安装好了~
+2.网站Nginx_pagespeed优化配置 1）Nginx配置 安装好之后，打开Nginx配置，加入以下代码（注意位置）
+下方中缓存文件位置请提前创建好：/tmp/ngx_pagespeed_cache（这里也可以放到内存里面，如果你的磁盘IO很慢的话建议采用此方式，毕竟内存的读写速度非常快）
+代码如下：
+# 启用ngx_pagespeed 开始 pagespeed on; #路径请提前创建好，可以放在内存也可以放在临时文件夹中 pagespeed CreateSharedMemoryMetadataCache /tmp/ngx_pagespeed_cache 51200; pagespeed DefaultSharedMemoryCacheKB 51200; pagespeed FileCachePath /tmp/ngx_pagespeed_cache; pagespeed FileCacheSizeKb 2048000; pagespeed FileCacheCleanIntervalMs 43200000; pagespeed FileCacheInodeLimit 500000; # 过滤器级别（自定义模式） pagespeed RewriteLevel PassThrough; # 一个标识而已（若在浏览器开发者响应标头看到此标识，则说明 PageSpeed 生效） pagespeed XHeaderValue &amp;#34;Powered By xcbtmw.</description></item><item><title>简单一招提升nginx服务器性能</title><link>https://blog.taoshuge.eu.org/p/148/</link><pubDate>Thu, 01 Feb 2024 16:43:37 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/148/</guid><description> 当你服务器安装了nginx（推荐1.20版本以上）默认开启了gzip动态压缩，但没有开启静态压缩
+一句话总结就是如何开启静态压缩！！！
+为什么要开启静态压缩？ 先看一下gzip配置图：
+默认是没有 gzip_static on; gzip_static on; 就是开启静态压缩的意思，
+压缩模式 一般来说， Nginx的 gzip分为两种模式：
+动态压缩 静态压缩 动态压缩 动态压缩是指 Nginx服务器在发送前端产物时，消耗自身的资源进行实时压缩，这样即便产物中不存在 .gz结尾的文件，浏览器端也能拿到 gzip格式的前端产物。
+静态压缩 静态压缩会直接将产物中预先压缩过的 .gz文件发送给浏览器，而不再实时压缩文件，如果找不到 .gz文件，将会使用对应的原始文件。
+一句话总结就是：动态压缩消耗服务器资源，而静态压缩提前将压缩文件发送给浏览器
+教程开始 一：有个前提条件，要保证 Nginx存在 ngx_http_gzip_static_module模块，这个模块默认是开启的。
+可以使用下面指令查看是否已经激活该模块：
+nginx -V 2&amp;gt;&amp;amp;1| grep -o http_gzip_static_module 输出结果：
+http_gzip_static_module 说明已经开启。
+二：然后打开你的网站目录，找到需要压缩的js和css文件，开启静态压缩，需要提前将文件压缩好，这里我提供一键压缩命令：
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/gzip.sh &amp;amp;&amp;amp; chmod +x gzip.sh &amp;amp;&amp;amp; ./gzip.sh 输入你要压缩的目录，然后在nginx配置文件里的 gzip on; 下面一行添加
+gzip_static on; 重载和重启nginx生效，
+检查是否生效 Etag是没有w/符号的就是静态压缩
+动态压缩：有w/符号</description></item><item><title>使用Nginx反向代理，自建CDN加速节点</title><link>https://blog.taoshuge.eu.org/p/%E4%BD%BF%E7%94%A8nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%87%AA%E5%BB%BAcdn%E5%8A%A0%E9%80%9F%E8%8A%82%E7%82%B9/</link><pubDate>Thu, 24 Aug 2023 06:05:35 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E4%BD%BF%E7%94%A8nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%87%AA%E5%BB%BAcdn%E5%8A%A0%E9%80%9F%E8%8A%82%E7%82%B9/</guid><description>安装 1、安装Nginx 这里使用的是军哥的LNMP 单独安装Nginx
+wget http://soft.vpser.net/lnmp/lnmp2.0.tar.gz -O lnmp2.0.tar.gz &amp;amp;&amp;amp; tar zxf lnmp2.0.tar.gz &amp;amp;&amp;amp; cd lnmp2.0 &amp;amp;&amp;amp; ./install.sh nginx 2、CDN配置 假如我需要对www.moerats.com搭建CDN节点，数据放在192.168.1.100，需要先修改hosts指向，告知CDN节点去哪里去获取网站数据，也就是回源地址，做如下修改：
+vi /etc/hosts 192.168.1.100 www.moerats.com 然后创建nginx配置文件moerats.com.conf。
+#创建缓存目录 mkdir -p /usr/local/nginx/caches/www.moerats.com #设置缓存目录权限 chown -R www:www /usr/local/nginx/caches/www.moerats.com #创建moerats.com.conf vi /usr/local/nginx/conf/vhost/moerats.com.conf 在moerats.com.conf中添加下面的内容，缓存目录/缓存时间请根据实际情况调整。
+proxy_cache_path /usr/local/nginx/caches/www.moerats.com levels=1:2 keys_zone=xiaoz:50m inactive=30m max_size=50m; server { listen 80; server_name www.moerats.com; charset utf-8,gbk; location / { proxy_set_header Accept-Encoding &amp;#34;&amp;#34;; proxy_pass https://www.moerats.com; proxy_redirect off; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_cache xiaoz; proxy_cache_valid 200 304 30m; proxy_cache_valid 301 24h; proxy_cache_valid 500 502 503 504 0s; proxy_cache_valid any 1s; proxy_cache_min_uses 1; expires 12h; } } 参数说明：</description></item></channel></rss>

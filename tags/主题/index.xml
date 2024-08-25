@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>主题 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/%E4%B8%BB%E9%A2%98/</link><description>Recent content in 主题 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 16 Jun 2024 04:43:15 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/%E4%B8%BB%E9%A2%98/index.xml" rel="self" type="application/rss+xml"/><item><title>hugo-magic 主题自定义(三)</title><link>https://blog.taoshuge.eu.org/p/281/</link><pubDate>Sun, 16 Jun 2024 04:43:15 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/281/</guid><description>hugo.yaml 几乎所有自定义都在根目录hugo.yaml文件中去修改
+AI摘要 AI摘要脚本sm.py 在根目录下,不要移动到其他地方,需要安装python,然后运行
+python sm.py 输入slug: slug就是文章的slug字段,在标题的下方,可自定义,不能是中文,前面不要加数字0
+输入summary: 输入摘要,可以在浏览器安装kimi阅读助手插件
+下载python
+https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe 底部图标 页面底部的图标在footer_links.json文件中修改,</description></item><item><title>hugo博客写作流程(二)</title><link>https://blog.taoshuge.eu.org/p/280/</link><pubDate>Sat, 15 Jun 2024 23:09:57 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/280/</guid><description>写作工具 推荐两款软件,本人都使用过: typora和obsidian
+typora破解版:
+https://github.com/woniu336/typora-007
+新建文章 在博客目录找到shell/quickstart.sh双击打开即可
+发布到Github 前提:
+魔法上网 在Github新建一个仓库 找到shell/quickstart.sh双击打开,选择7.SSH 管理工具 按照1到4走一遍流程
+科普一下: hugo是静态博客,需要把public目录下的所有文件发布到github 你可能找不到public目录,工具箱选择第3项:生成静态文件即可 需要把public单独作为一个仓库发布到github,选择菜单8:推送 public 到Github 远程仓库格式,例如:git@github.com:woniu336/fff.git Github Actions 工作流 Github Actions 通俗解释: 按照剧本去执行任务,什么时候干什么事情
+打开git bash 在博客目录运行
+mkdir -p .github/workflows 在workflows目录新建main.yml文件,粘贴以下内容:
+name: Auto Deploy hugo on: push: branches: - main # 更新触发的分支 jobs: build-deploy: # runs-on: ubuntu-latest runs-on: ubuntu-20.04 steps: - name: Check out repository code uses: actions/checkout@v4 with: submodules: recursive # Fetch Hugo themes (true OR recursive) fetch-depth: 0 # Fetch all history for .</description></item><item><title>hugo-magic主题使用教程(一)</title><link>https://blog.taoshuge.eu.org/p/279/</link><pubDate>Sat, 15 Jun 2024 21:22:11 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/279/</guid><description>前提条件 以下教程以windows10为例 操作终端使用git bash 魔法上网的前提下 下载hugo https://github.com/gohugoio/hugo/releases/download/v0.127.0/hugo_extended_0.127.0_windows-amd64.zip 解压到任意目录,然后将目录添加到系统环境变量 如图 (windows) 打开cmd 输入 hugo version 验证是否设置正确 下载安装Git https://github.com/git-for-windows/git/releases/download/v2.45.2.windows.1/Git-2.45.2-64-bit.exe 新建博客 使用Git bash终端,打开方式: 桌面右键 找到 Git Bash Here 如果没有魔法上网,git submodule add这一步会拉取失败 在桌面右键打开Git bash运行以下命令
+hugo new site quickstart cd quickstart git init git submodule add https://github.com/woniu336/hugo-magic.git themes/hugo-magic 拷贝文件 拷贝hugo-magic主题核心文件到根目录 quickstart
+cp -rf themes/hugo-magic/exampleSite/* . rm hugo.toml mkdir -p data/summary mkdir -p assets/img cp themes/hugo-magic/data/footer_links.json data/ cp themes/hugo-magic/data/summary/summary.json data/summary/ cp -r themes/hugo-magic/archetypes . cp -r themes/hugo-magic/shell .</description></item></channel></rss>

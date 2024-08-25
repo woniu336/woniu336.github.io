@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Git on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/git/</link><description>Recent content in Git on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 22 Mar 2024 14:29:10 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Git回退到指定版本</title><link>https://blog.taoshuge.eu.org/p/207/</link><pubDate>Fri, 22 Mar 2024 14:29:10 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/207/</guid><description>git回退到上个版本 git reset --hard HEAD^ 回退到前3次提交之前，以此类推，回退到n次提交之前
+git reset --hard HEAD~3 回退到指定版本 查看 commit 哈希值
+git reflog 红色框框的就是哈希值
+例如我要回退到commit信息为: 版本005 的时候,对应哈希值: adacc9e
+git reset --hard adacc9e 更多版本 要回退到更久之前的版本,使用脚本:
+按 q 退出 再按序号选择版本
+#!/bin/bash # 显示git的reflog git reflog # 提取reflog输出的序号和对应的提交哈希值，并将其存储在数组中 mapfile -t commit_array &amp;lt; &amp;lt;(git reflog | grep -E &amp;#39;^[a-f0-9]+&amp;#39; | cat -n) # 显示序号和对应的提交哈希值供用户选择 for ((i=0; i&amp;lt;${#commit_array[@]}; i++)); do echo &amp;#34;${commit_array[i]}&amp;#34; done # 提示用户输入要恢复的版本号前面对应的数字 read -p &amp;#34;请输入要恢复的版本号前面对应的数字: &amp;#34; version_number # 提取用户选择的提交哈希值 selected_commit_hash=$(echo &amp;#34;${commit_array[version_number-1]}&amp;#34; | awk &amp;#39;{print $2}&amp;#39;) # 使用git reset --hard命令将本地代码回退到指定版本 git reset --hard &amp;#34;$selected_commit_hash&amp;#34;</description></item><item><title>vscode:git常用命令</title><link>https://blog.taoshuge.eu.org/p/186/</link><pubDate>Tue, 27 Feb 2024 18:16:19 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/186/</guid><description>常见命令 git init git add . git commit -m &amp;#34;初始化&amp;#34; git branch -M main git remote add origin https://github.com/githubusername/demo.git git pull origin main git push -u origin main #首次推送加-u参数 创建和切换分支 1、创建新分支
+git branch 新分支名称 2、切换分支
+git checkout 分支名称 3、创建分支的同时，切换到该分支上
+git checkout -b 新分支名称 合并分支 假如把dev分支合并到main
+首先切换到main分支上
+git checkout main 如果是多人开发的话，需要把远程main分支上的代码pull下来
+git pull origin main 然后把dev分支的代码合并到main上
+git merge dev 警告提示： Please enter a commit message to explain why this merge is necessary</description></item><item><title>使用代理设置 Git 克隆</title><link>https://blog.taoshuge.eu.org/p/%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-git-%E5%85%8B%E9%9A%86/</link><pubDate>Wed, 11 Oct 2023 06:11:05 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE-git-%E5%85%8B%E9%9A%86/</guid><description>git clone ssh 走代理 新建一个 C:\Users\你的用户名\.ssh\config 文件（没有扩展名，如果已存在此文件则不用新建），编辑此文件增加以下内容：
+Host github.com *.github.com User git ProxyCommand connect -S 127.0.0.1:7890 %h %p 其中 Host 右边为需要走代理的域名列表，127.0.0.1:7890 替换为自己的代理服务器地址。
+git clone http(s) 走代理 git config --global http.proxy &amp;#34;http://127.0.0.1:7890&amp;#34; git config --global https.proxy &amp;#34;http://127.0.0.1:7890&amp;#34; 其中 127.0.0.1:7890 替换为自己的代理服务器地址。</description></item><item><title>GitHub加速终极教程</title><link>https://blog.taoshuge.eu.org/p/github%E5%8A%A0%E9%80%9F%E7%BB%88%E6%9E%81%E6%95%99%E7%A8%8B/</link><pubDate>Sun, 03 Sep 2023 02:09:30 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/github%E5%8A%A0%E9%80%9F%E7%BB%88%E6%9E%81%E6%95%99%E7%A8%8B/</guid><description>本文意图解决使用 GitHub 访问(https) 或者 git clone（https or ssh）慢的问题。在此分享我的方法，我所了解的 GitHub 加速最佳方案。
+前提是，你的木弟子应该还行，木弟子越好，GitHub 体验越好
+很多文章没有讲全面，只讲了 http proxy，而没有讲 ssh proxy。事实上大部分程序员使用 GitHub 都会使用 SSH keys（普通用户可能就不会了），在本机生成 rsa 公私钥(其他的类型还有 dsa | ecdsa | ecdsa-sk | ed25519 | ed25519-sk)，然后把公钥内容拷贝、设置进 GitHub。
+所以程序员 clone 一个仓库一般是 ssh clone 而不是 https clone
+1
+git clone git@github.com:xxx/yyy.git
+如果你不配置 ssh 代理或者没有透明代理之类的网络环境（其实还有一些代理工具，不过更加小众），直接硬拖到本地大概率是很慢的。如果使用 http 代理，如果木弟子质量好，其实也还行
+1
+git clone https://github.com/xxx/yyy.git
+但这样不如 ssh clone 稳定。下面我们来设置 http proxy 和 ssh proxy。
+设置 Http Proxy git config --global http.proxy socks5://127.</description></item><item><title>Git配置、提交到多个远程仓库</title><link>https://blog.taoshuge.eu.org/p/git%E9%85%8D%E7%BD%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</link><pubDate>Tue, 22 Aug 2023 03:03:25 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/git%E9%85%8D%E7%BD%AE%E6%8F%90%E4%BA%A4%E5%88%B0%E5%A4%9A%E4%B8%AA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/</guid><description>优雅地配置并将代码推送至多个远程仓库，如 GitHub 和 Gitee，是一项重要的开发实践。通过巧妙配置 Git，你可以无缝管理多个代码托管平台。
+在gitee平台,你可以将github上的项目导入进来,只需要填上github仓库 URL即可.非常方便
+同时提交到github和gitee 方法一 通过命令行set-url --add 添加
+1.使用如下命令添加远程仓库 git remote set-url --add origin 例如：
+git remote set-url --add origin https://gitee.com/ganace/Ganace.git 2.查看远程仓库情况 git remote -v 可以看到gitee的仓库地址已经添加进去了
+origin https://github.com/Ganace/Ganace.github.io.git (fetch) origin https://github.com/Ganace/Ganace.github.io.git (push) origin https://gitee.com/ganace/Ganace.git (push) 方法二 打开/.git/config文件，在[remote “origin”]项中添加多个需要同时提交的git远程仓库url。
+例如：
+[remote &amp;#34;origin&amp;#34;] url = https://github.com/Ganace/Ganace.github.io.git url = https://gitee.com/ganace/Ganace.git fetch = +refs/heads/*:refs/remotes/origin/* 提交 使用git push -f 统一提交到所有仓库，并且强制统一版本。
+git push -f origin --all</description></item><item><title>Docker搭建Gogs一个轻量 Git 服务端</title><link>https://blog.taoshuge.eu.org/p/docker%E6%90%AD%E5%BB%BAgogs%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F-git-%E6%9C%8D%E5%8A%A1%E7%AB%AF/</link><pubDate>Wed, 16 Aug 2023 03:47:29 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/docker%E6%90%AD%E5%BB%BAgogs%E4%B8%80%E4%B8%AA%E8%BD%BB%E9%87%8F-git-%E6%9C%8D%E5%8A%A1%E7%AB%AF/</guid><description>为何选择 Gogs ？ 我选择了 Gogs 来讲解，主要是出于以下几个原因：
+Gogs 是一个轻量化的 Git 服务，对系统占用较小。 Gogs 的功能够用。 Gogs 的安装流程简便。 其中第一点最重要，因为 Gitlab 对系统配置的要求比较高，单是内存这一项就要求大于 4 GB，如果是 2 GB 内存则会直接无法运行，这个要求已经可以淘汰掉一些入门级服务器了。而 Gogs 在 NAS、树莓派、入门级服务器上都可以无压力运行，长期运行也不会影响其他服务。
+而且我们介绍的场景也不是多人开发协作，只是个人同步笔记用，不需要过多的开发相关功能，有最基本的 Git 服务和一个便于操作的网页就足够了。
+Gogs 的安装过程也比较简单，官方的 Docker 版本基本做到了开箱即用，连数据库都不需要额外配置，有个文件夹存放数据就可以。
+如何在图形界面中安装 Docker 版 Gogs 我通常建议通过图形化界面来管理 Docker，这样能够直观看到容器的运行状态，像启动、停止、修改配置这样的操作，都能以最简单的方式完成。
+所以先来讲讲在图像界面下如何安装 Docker 版本的 Gogs。
+了解 Docker 的关键配置 我们借助 Gogs 顺便了解一下通过 Docker 跑一个服务需要做什么配置。
+首先我们找到 Gogs 在 hub.docker.com 中的包：Gogs - Docker Hub 。
+根据它下方的文档提示可以得知，Gogs 的必要配置很少，我们根据它的官方配置可以得知，它需要这下面两行核心代码就可以完成部署。
+docker pull gogs/gogs docker run --name=gogs -p 10022:22 -p 10880:3000 -v /var/gogs:/data gogs/gogs 如何使用 Gogs 使用 Gogs 创建仓库和 Github 类似，注册账户，创建仓库……图形化界面总是容易让人理解。这里就不再赘述了。</description></item><item><title>手把手教你：Git分支创建与代码提交的细致流程</title><link>https://blog.taoshuge.eu.org/p/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0git%E5%88%86%E6%94%AF%E5%88%9B%E5%BB%BA%E4%B8%8E%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E7%9A%84%E7%BB%86%E8%87%B4%E6%B5%81%E7%A8%8B/</link><pubDate>Tue, 15 Aug 2023 16:46:03 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0git%E5%88%86%E6%94%AF%E5%88%9B%E5%BB%BA%E4%B8%8E%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E7%9A%84%E7%BB%86%E8%87%B4%E6%B5%81%E7%A8%8B/</guid><description>其实最基本的流程就是新建分支，在这个分支上改动代码，再提交上去，跟master分支合并。
+1. 新建分支 首先，在你新建分支之前，你应该在master分支，并且要保证你当前的是最新代码，要不然就是找死，最后提交代码就会出问题。
+git pull origin master 在master分支下，保证当前代码与线上同步 git branch &amp;lt;分支名&amp;gt; ，正儿八经的新建分支。 git checkout &amp;lt;分支名&amp;gt; ，切换 到新建的分支上，再进行下一步。 git push origin &amp;lt;分支名&amp;gt; ,把本地分支推到远端，让远端也有一个你的分支 新建分支并切换到该分支：git checkout -b &amp;lt;分支名&amp;gt;
+2. 提交代码 在新建的分支上写完代码之后，就可以提交代码了。此时应该在你新建的分支上
+git status ,查看自己写了哪些东西。 git add . git commit -m ‘本次提交的描述’ git push origin &amp;lt;分支名&amp;gt; ,push是从本地向远端推代码 执行完上一步，有可能报错，此时淡定，不认识英语的话在线翻译是干嘛的，大多数时候提示你，本地落后于远端，（意思就是远端比本地多了一些代码，为什么会出现这种情况呢，肯定是你跟别人共用一个分支，他提交了一段代码到远端，所以导致你的本地落后于远端）既然落后了，那就把他更新成最新的呗，
+git pull --rebase origin 远程分支名 执行完之后，你的代码就跟远端又一样了。并且你的修改仍然在，此时再提交你的代码
+git push origin &amp;lt;分支名&amp;gt; 3.rebase代码 提交完代码之后需要让测试人员进行测试，若测试没问题，就可以rebase代码，然后上线了。（==这一步是保证你要上线的代码是基于最新的master==）
+git pull —rebase origin &amp;lt;分支名&amp;gt; git pull —rebase origin master
+执行这两步的时候都有可能发生冲突，此时你要做的就是解决冲突，再继续提交。 解决完冲突之后，git add .</description></item><item><title>使用Git实现稳定的Obsidian同步方案</title><link>https://blog.taoshuge.eu.org/p/%E4%BD%BF%E7%94%A8git%E5%AE%9E%E7%8E%B0%E7%A8%B3%E5%AE%9A%E7%9A%84obsidian%E5%90%8C%E6%AD%A5%E6%96%B9%E6%A1%88/</link><pubDate>Tue, 15 Aug 2023 13:54:23 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E4%BD%BF%E7%94%A8git%E5%AE%9E%E7%8E%B0%E7%A8%B3%E5%AE%9A%E7%9A%84obsidian%E5%90%8C%E6%AD%A5%E6%96%B9%E6%A1%88/</guid><description>关于 Obsidian 同步这件事，似乎总能让人感到头疼。同步方案不是太少，而是太多。多到你难以辨别哪种方案是最合适自己的。而且有不少同步方法是未经验证的，一些想当然的方案其实并不适合 Obsidian。
+这篇文章我想先聊聊 PC 之间的 Obsidian 库同步。也就是不论系统，可以在 Windows、macOS、Linux 之间稳定完成同步的方法：Git 同步方案。
+准备工作 在开始之前，确保你已经安装了Git和Obsidian软件。接下来，我们将一步步进行配置。
+创建Git仓库 首先，选择一个Git平台作为仓库托管，这里我们以GitHub为例。如果你还没有GitHub账号，请先在GitHub官网注册一个账号。
+登录GitHub账号，点击右上角的“+”按钮，选择“New repository”。 填写仓库名称，选择公开或私有，其他设置保持默认，点击“Create repository”。 将仓库同步到本地 你可以使用命令行或图形化工具，这里我们介绍使用GitHub Desktop。
+下载并安装GitHub Desktop。 打开GitHub Desktop，登录你的GitHub账号。 点击“File”菜单，选择“Clone repository”。 选择你刚创建的仓库，选择本地存放位置，点击“Clone”按钮。 合并Obsidian库和Git仓库 打开Obsidian软件，找到你想同步的笔记库所在的文件夹。 将笔记库文件夹（包括隐藏的 .obsidian 文件夹）复制到刚刚克隆的Git仓库文件夹中。 使用GitHub Desktop提交和推送至远程仓库 安装Obsidian Git插件 在Obsidian中打开刚刚合并的仓库文件夹。 点击左侧导航栏的插件图标。 在插件搜索框中输入“Obsidian Git”并安装。 安装 Obsidian Git 插件进行后续的同步 接下来你需要进 Obsidian ，打开这个转移好的目录，并在这个库中，安装一个名为 Obsidian Git 的插件。
+安装完成后应该会自动出现一个 Git Control View 的侧边栏。如果没有，则按下 Ctrl + P，搜索 Obsidian Git: Open Source Control View ，就可以打开这个面板。
+有了这个插件，以后的同步操作你都可以在 Obsidian 内部进行了。</description></item><item><title>Git 和 GitHub 的关联</title><link>https://blog.taoshuge.eu.org/p/git-%E5%92%8C-github-%E7%9A%84%E5%85%B3%E8%81%94/</link><pubDate>Sat, 29 Jul 2023 07:01:04 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/git-%E5%92%8C-github-%E7%9A%84%E5%85%B3%E8%81%94/</guid><description>本地 Git 和 GitHub 的链接（通过 SSH Key 配置） 1. 注册 GitHub 账号，安装 git Github: https://github.com/
+Git 下载: https://git-scm.com/
+安装完git以后,全部的命令操作都在bash里执行
+2. 本地配置用户名和邮箱 你的 github 用户名和邮箱
+git config --global user.name &amp;#34;woniu336&amp;#34; git config --global user.email &amp;#34;310478073@qq.com&amp;#34; 3. 生成 SSH Key 一路回车即可
+ssh-keygen -t rsa -C &amp;#34;310478073@qq.com&amp;#34; 用户主目录 /.ssh 下有两个文件，id_rsa 是私钥，id_rsa.pub 是公钥, 记事本打开公钥 id_rsa.pub, 然后复制公钥内容
+4. 添加 SSH keys 回到浏览器中，进入 Github 设置中的 SSH and GPG keys，新建一个 SSH keys，标题自己起，Key 的内容就输入刚才复制的文件中的值，然后添加。
+添加地址: https://github.com/settings/ssh/new
+5. 验证关联 回到本地的 Git 窗口，输入如下代码，验证是否链接成功。</description></item></channel></rss>

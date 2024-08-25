@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Terminal on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/terminal/</link><description>Recent content in Terminal on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 03 Mar 2024 17:09:39 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/terminal/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows Terminal美化</title><link>https://blog.taoshuge.eu.org/p/190/</link><pubDate>Sun, 03 Mar 2024 17:09:39 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/190/</guid><description>一、 oh my posh 安装 安装方式1： 打开 PowerShell 提示符并运行以下命令：
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://ohmyposh.dev/install.ps1&amp;#39;)) 可能会失败，请看安装方式2
+如果下载慢，使用代理：
+set http_proxy=socks5://127.0.0.1:7890 set https_proxy=socks5://127.0.0.1:7890 手动加入环境变量（可不加）：
+注意我的用户名是：Administrator
+$env:Path += &amp;#34;;C:\Users\Administrator\AppData\Local\Programs\oh-my-posh\bin&amp;#34; 安装方式2： 打开 PowerShell 提示符并运行以下命令：
+winget install JanDeDobbeleer.OhMyPosh -s winget 但是首先为 winget 更换国内源，为了提高响应速度，以下是操作步骤：
+1以管理员身份打开「命令提示符」。
+2执行以下命令，删除由 Microsoft 维护的官方源：
+winget source remove winget 3执行以下命令添加 winget 国内源：
+winget source add [源名称] [源地址] 例如，若要添加中科大开源软件镜像源，可执行以下命令：
+winget source add winget https://mirrors.ustc.edu.cn/winget-source 建议就使用winget作为名称，以便在需要时轻松重置回官方源。
+4换源完成后，可以通过以下命令进行验证和查看：
+winget source list 5如果要恢复使用 Microsoft 官方源，可以使用以下命令进行重置：</description></item></channel></rss>
