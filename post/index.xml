@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 26 Aug 2024 04:54:29 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/9213b07eca806538511d5432d1dda144ad348218.jpg" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
-curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 其他教程 项目 链接 推荐脚本 https://woniu336.github.io/p/tool/#5推荐脚本 宝塔面板7.7原版 https://blog.taoshuge.eu.org/p/229/ 一键重装系统 https://woniu336.github.io/p/tool/#4一键dd 或 https://woniu336.github.io/p/133/ 安装宝塔面板7.7原版 https://woniu336.github.io/p/bt/ 宝塔面板计划任务迁移 https://woniu336.github.io/p/136/ 宝塔海外版aapanel安装教程 https://woniu336.github.io/p/141/ docker应用 https://woniu336.github.io/p/11/ MySQL 5.7内存优化 https://woniu336.github.io/p/tool/#1mysql-57内存优化 开启BBR https://woniu336.github.io/p/tool/#2bbr swap的调整 https://woniu336.github.io/p/tool/#3swap的调整 证书申请 https://woniu336.github.io/p/ssl/ rclone工具 https://woniu336.github.io/p/rclone/ 兰空图床 https://woniu336.github.io/p/137/ 监控域名有效期 https://woniu336.github.io/p/132/ Cloudflare R2作为图床的管理和同步 https://woniu336.</description></item><item><title>Github 使用 rsync 同步网站到个人服务器</title><link>https://blog.taoshuge.eu.org/p/311/</link><pubDate>Mon, 26 Aug 2024 04:54:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/311/</guid><description>安装 rsync 要使用 rsync 同步，第一步当然是要安装 rsync 了，键入以下命令来完成 rsync 的安装：
+curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 其他教程 项目 链接 推荐脚本 https://woniu336.github.io/p/tool/#5推荐脚本 宝塔面板7.7原版 https://blog.taoshuge.eu.org/p/229/ 一键重装系统 https://woniu336.github.io/p/tool/#4一键dd 或 https://woniu336.github.io/p/133/ 安装宝塔面板7.7原版 https://woniu336.github.io/p/bt/ 宝塔面板计划任务迁移 https://woniu336.github.io/p/136/ 宝塔海外版aapanel安装教程 https://woniu336.github.io/p/141/ docker应用 https://woniu336.github.io/p/11/ MySQL 5.7内存优化 https://woniu336.github.io/p/tool/#1mysql-57内存优化 开启BBR https://woniu336.github.io/p/tool/#2bbr swap的调整 https://woniu336.github.io/p/tool/#3swap的调整 证书申请 https://woniu336.github.io/p/ssl/ rclone工具 https://woniu336.github.io/p/rclone/ 兰空图床 https://woniu336.github.io/p/137/ 监控域名有效期 https://woniu336.github.io/p/132/ Cloudflare R2作为图床的管理和同步 https://woniu336.</description></item><item><title>将github仓库同步到个人服务器</title><link>https://blog.taoshuge.eu.org/p/311/</link><pubDate>Mon, 26 Aug 2024 04:54:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/311/</guid><description>我的博客是hugo搭建的，每次更新文章会手动推送到Github仓库，然后利用Actions 脚本推送到cf或者vercel
+之前我写过一篇把将 hugo 博客搬迁到服务器 步骤有些繁琐，
+本次方案快速高效（推荐）
+安装 rsync 登录远程服务器，键入以下命令来完成 rsync 的安装：
 sudo apt install rsync 安装成功会显示git的版本号
 rsync --version 显示
 rsync version 3.2.3 protocol version 31
 新建 rsync 用户 出于安全的原因考虑，我们一般不会使用root来运行同步功能，因此，需要创建一个 rsync 用户来执行同步。
-键入以下命令来完成同步用户的创建：
+登录远程服务器，键入以下命令：
 sudo adduser rsyncer 创建用户的途中会要求输入用户密码，这个密码请务必记住，切换到这个用户时需要，其它配置使用默认值直接回车就行。
-生成 SSH key 有很多方法生成 SSH key：
-在服务器运行 ssh-keygen 在git客户端生成，如 SourceTree 、Gitkranken 中都可以生成 生成一个 Key 对，其中一个扩展名是.pub，是公匙。假设分别命名为：id_rsa 和 id_rsa.pub
-把 SSH public Key 加入个人服务器 su rsyncer # 要输入密码 cd ~ mkdir www # 创建同步目录 mkdir .ssh chmod 700 .</description></item><item><title>安装 Node.js 和 npm</title><link>https://blog.taoshuge.eu.org/p/310/</link><pubDate>Sun, 25 Aug 2024 15:16:34 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/310/</guid><description>更新系统包
+本地生成 SSH key 在你的电脑上生成一个 Key 对，其中一个扩展名是.pub，是公钥。假设分别命名为：id_rsa 和 id_rsa.pub
+ssh-keygen -q -t rsa -b 4096 -C &amp;#34;阿弥托福&amp;#34; -N &amp;#34;&amp;#34; -f ~/.ssh/id_rsa 查看并复制公钥内容
+cat ~/.ssh/id_rsa.pub 把 SSH 公钥添加到远程服务器 登录你的服务器，逐个输入以下代码
+su rsyncer # 要输入密码 cd ~ mkdir -p www .</description></item><item><title>安装 Node.js 和 npm</title><link>https://blog.taoshuge.eu.org/p/310/</link><pubDate>Sun, 25 Aug 2024 15:16:34 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/310/</guid><description>更新系统包
 sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -y 安装 Node.js 和 npm
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - sudo apt-get install -y nodejs 检查 Node.js 是否安装：
 node --version 检查 npm 是否安装：
