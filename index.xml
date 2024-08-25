@@ -6,7 +6,11 @@ sudo apt install rsync 安装成功会显示git的版本号
 rsync --version 显示
 rsync version 3.2.3 protocol version 31
 新建 rsync 用户 出于安全的原因考虑，我们一般不会使用root来运行同步功能，因此，需要创建一个 rsync 用户来执行同步。
-键入以下命令来完成同步用户的创建：</description></item><item><title>安装 Node.js 和 npm</title><link>https://blog.taoshuge.eu.org/p/310/</link><pubDate>Sun, 25 Aug 2024 15:16:34 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/310/</guid><description>更新系统包
+键入以下命令来完成同步用户的创建：
+sudo adduser rsyncer 创建用户的途中会要求输入用户密码，这个密码请务必记住，切换到这个用户时需要，其它配置使用默认值直接回车就行。
+生成 SSH key 有很多方法生成 SSH key：
+在服务器运行 ssh-keygen 在git客户端生成，如 SourceTree 、Gitkranken 中都可以生成 生成一个 Key 对，其中一个扩展名是.pub，是公匙。假设分别命名为：id_rsa 和 id_rsa.pub
+把 SSH public Key 加入个人服务器 su rsyncer # 要输入密码 cd ~ mkdir www # 创建同步目录 mkdir .ssh chmod 700 .</description></item><item><title>安装 Node.js 和 npm</title><link>https://blog.taoshuge.eu.org/p/310/</link><pubDate>Sun, 25 Aug 2024 15:16:34 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/310/</guid><description>更新系统包
 sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -y 安装 Node.js 和 npm
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - sudo apt-get install -y nodejs 检查 Node.js 是否安装：
 node --version 检查 npm 是否安装：
