@@ -94,7 +94,9 @@ cat /etc/cron.d/certbot 其实就是在后面添加了 --deploy-hook &amp;quot;/
 续签配置路径：/etc/letsencrypt/renewal
 脚本会把证书复制到站点证书目录
 certbot会在证书离到期日还剩30天内续签证书
-友情提示 如果一个域名在短时间内，多次申请，全部成功（大概6次吧，不记得了），会提示一周后在申请，我是为了测试脚本才遇到的bug。</description></item><item><title>使用docker快速搭建发卡网-独角数卡</title><link>https://blog.taoshuge.eu.org/p/297/</link><pubDate>Mon, 05 Aug 2024 03:51:10 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/297/</guid><description>docker版本的发卡程序搭建
+友情提示 如果一个域名在短时间内，多次申请，全部成功（大概6次吧，不记得了），会提示一周后在申请，我是为了测试脚本才遇到的bug。
+其他 如果没有创建/etc/letsencrypt/live/aaaa.com目录,可以手动,例如：
+sudo mkdir -p /etc/letsencrypt/live/aaa.com sudo ln -sf /etc/letsencrypt/archive/aaa.com/privkey1.pem /etc/letsencrypt/live/aaa.com/privkey.pem sudo ln -sf /etc/letsencrypt/archive/aaa.com/fullchain1.pem /etc/letsencrypt/live/aaa.com/fullchain.pem sudo ln -sf /etc/letsencrypt/archive/aaa.com/cert1.pem /etc/letsencrypt/live/aaa.com/cert.pem sudo ln -sf /etc/letsencrypt/archive/aaa.com/chain1.pem /etc/letsencrypt/live/aaa.com/chain.pem</description></item><item><title>使用docker快速搭建发卡网-独角数卡</title><link>https://blog.taoshuge.eu.org/p/297/</link><pubDate>Mon, 05 Aug 2024 03:51:10 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/297/</guid><description>docker版本的发卡程序搭建
 项目1：https://github.com/assimon/dujiaoka
 项目2（基于项目1）：https://github.com/Apocalypsor/dujiaoka-docker
 一键安装脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dujiaoka-setup.sh &amp;amp;&amp;amp; chmod +x dujiaoka-setup.sh &amp;amp;&amp;amp; ./dujiaoka-setup.sh 安装成功后，打开ip:3080,填写信息，登录后台/admin 默认用户名和密码：admin

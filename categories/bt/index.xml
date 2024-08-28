@@ -14,4 +14,6 @@ cat /etc/cron.d/certbot 其实就是在后面添加了 --deploy-hook &amp;quot;/
 续签配置路径：/etc/letsencrypt/renewal
 脚本会把证书复制到站点证书目录
 certbot会在证书离到期日还剩30天内续签证书
-友情提示 如果一个域名在短时间内，多次申请，全部成功（大概6次吧，不记得了），会提示一周后在申请，我是为了测试脚本才遇到的bug。</description></item></channel></rss>
+友情提示 如果一个域名在短时间内，多次申请，全部成功（大概6次吧，不记得了），会提示一周后在申请，我是为了测试脚本才遇到的bug。
+其他 如果没有创建/etc/letsencrypt/live/aaaa.com目录,可以手动,例如：
+sudo mkdir -p /etc/letsencrypt/live/aaa.com sudo ln -sf /etc/letsencrypt/archive/aaa.com/privkey1.pem /etc/letsencrypt/live/aaa.com/privkey.pem sudo ln -sf /etc/letsencrypt/archive/aaa.com/fullchain1.pem /etc/letsencrypt/live/aaa.com/fullchain.pem sudo ln -sf /etc/letsencrypt/archive/aaa.com/cert1.pem /etc/letsencrypt/live/aaa.com/cert.pem sudo ln -sf /etc/letsencrypt/archive/aaa.com/chain1.pem /etc/letsencrypt/live/aaa.com/chain.pem</description></item></channel></rss>
