@@ -22,6 +22,7 @@ php: 7.4
 关于怎么配置Nginx FastCGI 缓存 本博客有教程
 适用苹果cms站点：https://github.com/woniu336/open_shell/blob/main/maccms.conf
 适用多数站点：https://github.com/woniu336/open_shell/blob/main/nginx.conf
+https://pastebin.com/TqmpxGfh
 Nginx完整配置 注意：
 这不是nginx的配置，而是站点的配置 每个站点创建不同的缓存目录，设置不同的key 创建缓存目录
 注意：最好是在/var/cache/目录下创建，否则重启服务器会导致nginx无法启动
