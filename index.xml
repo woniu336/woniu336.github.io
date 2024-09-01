@@ -12,7 +12,17 @@ sudo ufw allow 1:65535/tcp sudo ufw allow 1:65535/udp sudo ufw enable 使用以�
 配置文件路径：/root/hy
 Hysteria 2 一键搭建代码
 wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;amp;&amp;amp; bash hysteria.sh Hysteria 服务相关命令
-systemctl start hysteria-server.service # 启动 hysteria 服务 systemctl enable hysteria-server.service # 设置 hysteria 服务 开机自启动 systemctl restart hysteria-server.service # 重启 hysteria 服务 systemctl stop hysteria-server.service # 停止 hysteria 服务 systemctl status hysteria-server.</description></item><item><title>最简单监控方案：域名、证书SSL、服务器全搞定！发送钉钉告警消息</title><link>https://blog.talimus.eu.org/p/316/</link><pubDate>Sat, 31 Aug 2024 21:35:09 +0800</pubDate><guid>https://blog.talimus.eu.org/p/316/</guid><description>一键脚本（推荐） curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/document_modifier.sh &amp;amp;&amp;amp; chmod +x document_modifier.sh &amp;amp;&amp;amp; ./document_modifier.sh 你只需要准备好钉钉报警机器人webhook地址就行。
+systemctl start hysteria-server.service # 启动 hysteria 服务 systemctl enable hysteria-server.service # 设置 hysteria 服务 开机自启动 systemctl restart hysteria-server.service # 重启 hysteria 服务 systemctl stop hysteria-server.service # 停止 hysteria 服务 systemctl status hysteria-server.</description></item><item><title>去除YouTube弹窗，彻底无广告</title><link>https://blog.talimus.eu.org/p/317/</link><pubDate>Mon, 02 Sep 2024 03:49:30 +0800</pubDate><guid>https://blog.talimus.eu.org/p/317/</guid><description>项目 https://github.com/TheRealJoelmatic/RemoveAdblockThing
+安装去广告脚本 安装脚本：单击此处并按安装
+禁用广告拦截器 务必在YouTube页面上禁用其他广告拦截器，例如Adblock Plus（因为这些已经被YouTube列入黑名单了）。否则会导致各种播放问题！
+不用担心，安装好的脚本会删除 YouTube 上的广告。
+安装Tampermonkey油猴 如果尚未安装，则需要安装 Tampermonkey 浏览器扩展。支持各种浏览器：
+Tampermonkey for Chrome
+Tampermonkey for Firefox
+Tampermonkey for Edge
+Tampermonkey for Opera/OperaGX
+进入管理面板 打开 Tampermonkey 仪表板：单击浏览器中的 Tampermonkey 扩展程序图标，然后选择“控制面板”。
+创建新脚本 创建新脚本：在 Tampermonkey 仪表板中，单击“实用程序”选项卡并选择“创建新脚本”。</description></item><item><title>最简单监控方案：域名、证书SSL、服务器全搞定！发送钉钉告警消息</title><link>https://blog.talimus.eu.org/p/316/</link><pubDate>Sat, 31 Aug 2024 21:35:09 +0800</pubDate><guid>https://blog.talimus.eu.org/p/316/</guid><description>一键脚本（推荐） curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/document_modifier.sh &amp;amp;&amp;amp; chmod +x document_modifier.sh &amp;amp;&amp;amp; ./document_modifier.sh 你只需要准备好钉钉报警机器人webhook地址就行。
 文档：https://open.dingtalk.com/document/orgapp/custom-robot-access
 以下内容为手动安装，不懂的地方可以看看
 需求 有时候域名太多，时间一长，你会不记得快要续期了 服务器太多，需要监控，这应该是刚需 证书申请来申请去，自动续签鬼知道会不会出问题 痛点 监控还要安装各种东西，会出岔子，折腾够呛，难免费时费力，所以，我的方案就是使用脚本，快速高效。脚本公开透明，放心食用~
