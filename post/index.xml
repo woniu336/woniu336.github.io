@@ -2213,19 +2213,23 @@ python怎么读取json文件？
 有些电脑网卡没有驱动就直接卡在这里了。 此时你可以按下 Shift+F10 打开命令提示符，输入 oobe\BypassNRO.cmd 即可重启进入带有跳过按钮的 OOBE。
 no@thankyou.com 而这个莫名其妙又有些好笑的账户，基本上就是替代上面的命令行，只需要登录时输入，密码随意，就能跟着向导创建本地账户了。
 简直…太好用。
-微软你说你是不是深井冰。</description></item><item><title>目前最简单、最安全、最稳定的专属节点搭建方法</title><link>https://blog.talimus.eu.org/p/30/</link><pubDate>Fri, 04 Aug 2023 16:19:04 +0000</pubDate><guid>https://blog.talimus.eu.org/p/30/</guid><description>安装X-UI bash &amp;lt;(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/956bf85bbac978d56c0e319c5fac2d6db7df9564/install.sh) 0.3.4.4 选择1.8.13版本
-各平台客户端 Windows（v2rayN）：https://github.com/2dust/v2rayN/releases/tag/6.23
-Android（v2rayNG）：https://github.com/2dust/v2rayNG/releases/tag/1.8.5
-IOS（shadowrocket）：https://apps.apple.com/app/shadowrocket/id932747118
-搭建vision节点申请证书 #安装证书工具：
-curl https://get.acme.sh | sh; apt install socat -y || yum install socat -y; ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
-#三种方式任选其中一种，申请失败则更换方式
-#申请证书方式1：
-~/.acme.sh/acme.sh --issue -d 你的域名 --standalone -k ec-256 --force --insecure
-#申请证书方式2：
-~/.acme.sh/acme.sh --register-account -m &amp;quot;${RANDOM}@chacuo.net&amp;quot; --server buypass --force --insecure &amp;amp;&amp;amp; ~/.acme.sh/acme.sh --issue -d 你的域名 --standalone -k ec-256 --force --insecure --server buypass
-#申请证书方式3：
-~/.acme.sh/acme.sh --register-account -m &amp;quot;${RANDOM}@chacuo.net&amp;quot; --server zerossl --force --insecure &amp;amp;&amp;amp; ~/.</description></item><item><title>免费翻墙，批量vless节点，反代伪装网页，轻松跑满本地宽带</title><link>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</link><pubDate>Fri, 04 Aug 2023 04:36:36 +0000</pubDate><guid>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</guid><description>最新代码： https://github.com/3Kmfi6HP/EDtunnel/blob/main/_worker.js
+微软你说你是不是深井冰。</description></item><item><title>轻松搭建高效稳定的 Hysteria2 节点服务</title><link>https://blog.talimus.eu.org/p/30/</link><pubDate>Fri, 04 Aug 2023 16:19:04 +0000</pubDate><guid>https://blog.talimus.eu.org/p/30/</guid><description>系统 debian/ubuntu
+客户端 V2Ray桌面版：https://github.com/2dust/v2rayN/releases
+V2Ray安卓端：https://github.com/2dust/v2rayNG/releases
+NekoBox安卓端推荐：https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
+ClashMeta：https://github.com/MetaCubeX/ClashMetaForAndroid/releases
+方法1 为了确保 Hysteria 2 能够正常工作，您需要开放所有 TCP 和 UDP 端口：
+sudo ufw allow 1:65535/tcp sudo ufw allow 1:65535/udp sudo ufw enable 使用以下命令下载并运行 Hysteria 2 安装脚本：
+注意：伪装网址设置为：www.bing.com
+配置文件路径：/root/hy
+wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;amp;&amp;amp; bash hysteria.sh 设置 Hysteria 2 在服务器启动时自动运行：
+systemctl enable hysteria-server.service 查看 Hysteria 2 是否启动
+systemctl status hysteria-server.service 如果发现 Hysteria 2 没有启动，使用以下命令手动启动：
+systemctl start hysteria-server.service 复制订阅链接
+cat /root/hy/url.txt 配置v2ray 设置Core类型：sing_box
+方法2 项目：https://github.com/jonssonyan/h-ui
+文档：https://github.com/jonssonyan/h-ui/blob/main/README_ZH.md
+注意：密码不能有特殊字符</description></item><item><title>免费翻墙，批量vless节点，反代伪装网页，轻松跑满本地宽带</title><link>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</link><pubDate>Fri, 04 Aug 2023 04:36:36 +0000</pubDate><guid>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</guid><description>最新代码： https://github.com/3Kmfi6HP/EDtunnel/blob/main/_worker.js
 cloudflare ：https://www.cloudflare.com/
 域名优选官网 : http://www.nirsoft.net/utils/multiple_ping_tool.html
 ip&amp;amp;域名优选打包：点击下载&amp;raquo; 域名cdn查询：https://dnschecker.org

@@ -7,19 +7,7 @@
 三、fofa 筛选指定IP 利用fofa，去筛选CF家IP，然后筛选反代CF的IP（非CF的IP，是反代了CFIP的IP）。
 如筛选cloudflare的IP，端口是443、地区限定香港、AS号限定CF家的AS号：
 server==&amp;#34;cloudflare&amp;#34; &amp;amp;&amp;amp; port==&amp;#34;443&amp;#34; &amp;amp;&amp;amp; region==&amp;#34;HK&amp;#34; &amp;amp;&amp;amp; (asn==&amp;#34;13335&amp;#34; || asn==&amp;#34;209242&amp;#34; || asn==&amp;#34;396982&amp;#34; || asn==&amp;#34;132892&amp;#34; || asn==&amp;#34;202623&amp;#34;) 如筛选反代cloudflare的IP，端口443、地区限定香港、头部特征隐藏、排除CF的AS号：
-server==&amp;#34;cloudflare&amp;#34; &amp;amp;&amp;amp; port==&amp;#34;443&amp;#34; &amp;amp;&amp;amp; header=&amp;#34;Forbidden&amp;#34; &amp;amp;&amp;amp; region==&amp;#34;HK&amp;#34; &amp;amp;&amp;amp; asn!=&amp;#34;13335&amp;#34; &amp;amp;&amp;amp; asn!=&amp;#34;209242&amp;#34; &amp;amp;&amp;amp; asn!=&amp;#34;396982&amp;#34; &amp;amp;&amp;amp; asn!=&amp;#34;132892&amp;#34; &amp;amp;&amp;amp; asn!</description></item><item><title>目前最简单、最安全、最稳定的专属节点搭建方法</title><link>https://blog.talimus.eu.org/p/30/</link><pubDate>Fri, 04 Aug 2023 16:19:04 +0000</pubDate><guid>https://blog.talimus.eu.org/p/30/</guid><description>安装X-UI bash &amp;lt;(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/956bf85bbac978d56c0e319c5fac2d6db7df9564/install.sh) 0.3.4.4 选择1.8.13版本
-各平台客户端 Windows（v2rayN）：https://github.com/2dust/v2rayN/releases/tag/6.23
-Android（v2rayNG）：https://github.com/2dust/v2rayNG/releases/tag/1.8.5
-IOS（shadowrocket）：https://apps.apple.com/app/shadowrocket/id932747118
-搭建vision节点申请证书 #安装证书工具：
-curl https://get.acme.sh | sh; apt install socat -y || yum install socat -y; ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
-#三种方式任选其中一种，申请失败则更换方式
-#申请证书方式1：
-~/.acme.sh/acme.sh --issue -d 你的域名 --standalone -k ec-256 --force --insecure
-#申请证书方式2：
-~/.acme.sh/acme.sh --register-account -m &amp;quot;${RANDOM}@chacuo.net&amp;quot; --server buypass --force --insecure &amp;amp;&amp;amp; ~/.acme.sh/acme.sh --issue -d 你的域名 --standalone -k ec-256 --force --insecure --server buypass
-#申请证书方式3：
-~/.acme.sh/acme.sh --register-account -m &amp;quot;${RANDOM}@chacuo.net&amp;quot; --server zerossl --force --insecure &amp;amp;&amp;amp; ~/.</description></item><item><title>免费翻墙，批量vless节点，反代伪装网页，轻松跑满本地宽带</title><link>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</link><pubDate>Fri, 04 Aug 2023 04:36:36 +0000</pubDate><guid>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</guid><description>最新代码： https://github.com/3Kmfi6HP/EDtunnel/blob/main/_worker.js
+server==&amp;#34;cloudflare&amp;#34; &amp;amp;&amp;amp; port==&amp;#34;443&amp;#34; &amp;amp;&amp;amp; header=&amp;#34;Forbidden&amp;#34; &amp;amp;&amp;amp; region==&amp;#34;HK&amp;#34; &amp;amp;&amp;amp; asn!=&amp;#34;13335&amp;#34; &amp;amp;&amp;amp; asn!=&amp;#34;209242&amp;#34; &amp;amp;&amp;amp; asn!=&amp;#34;396982&amp;#34; &amp;amp;&amp;amp; asn!=&amp;#34;132892&amp;#34; &amp;amp;&amp;amp; asn!</description></item><item><title>免费翻墙，批量vless节点，反代伪装网页，轻松跑满本地宽带</title><link>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</link><pubDate>Fri, 04 Aug 2023 04:36:36 +0000</pubDate><guid>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</guid><description>最新代码： https://github.com/3Kmfi6HP/EDtunnel/blob/main/_worker.js
 cloudflare ：https://www.cloudflare.com/
 域名优选官网 : http://www.nirsoft.net/utils/multiple_ping_tool.html
 ip&amp;amp;域名优选打包：点击下载&amp;raquo; 域名cdn查询：https://dnschecker.org
