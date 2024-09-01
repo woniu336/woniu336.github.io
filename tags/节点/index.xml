@@ -7,11 +7,6 @@ ClashMeta：https://github.com/MetaCubeX/ClashMetaForAndroid/releases
 sudo ufw allow 1:65535/tcp sudo ufw allow 1:65535/udp sudo ufw enable 使用以下命令下载并运行 Hysteria 2 安装脚本：
 注意：伪装网址设置为：www.bing.com
 配置文件路径：/root/hy
-wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;amp;&amp;amp; bash hysteria.sh 设置 Hysteria 2 在服务器启动时自动运行：
-systemctl enable hysteria-server.service 查看 Hysteria 2 是否启动
-systemctl status hysteria-server.service 如果发现 Hysteria 2 没有启动，使用以下命令手动启动：
-systemctl start hysteria-server.service 复制订阅链接
-cat /root/hy/url.txt 配置v2ray 设置Core类型：sing_box
-方法2 项目：https://github.com/jonssonyan/h-ui
-文档：https://github.com/jonssonyan/h-ui/blob/main/README_ZH.md
-注意：密码不能有特殊字符</description></item></channel></rss>
+Hysteria 2 一键搭建代码
+wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;amp;&amp;amp; bash hysteria.sh Hysteria 服务相关命令
+systemctl start hysteria-server.service # 启动 hysteria 服务 systemctl enable hysteria-server.service # 设置 hysteria 服务 开机自启动 systemctl restart hysteria-server.service # 重启 hysteria 服务 systemctl stop hysteria-server.service # 停止 hysteria 服务 systemctl status hysteria-server.</description></item></channel></rss>

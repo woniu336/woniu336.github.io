@@ -10,14 +10,9 @@ ClashMeta：https://github.com/MetaCubeX/ClashMetaForAndroid/releases
 sudo ufw allow 1:65535/tcp sudo ufw allow 1:65535/udp sudo ufw enable 使用以下命令下载并运行 Hysteria 2 安装脚本：
 注意：伪装网址设置为：www.bing.com
 配置文件路径：/root/hy
-wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;amp;&amp;amp; bash hysteria.sh 设置 Hysteria 2 在服务器启动时自动运行：
-systemctl enable hysteria-server.service 查看 Hysteria 2 是否启动
-systemctl status hysteria-server.service 如果发现 Hysteria 2 没有启动，使用以下命令手动启动：
-systemctl start hysteria-server.service 复制订阅链接
-cat /root/hy/url.txt 配置v2ray 设置Core类型：sing_box
-方法2 项目：https://github.com/jonssonyan/h-ui
-文档：https://github.com/jonssonyan/h-ui/blob/main/README_ZH.md
-注意：密码不能有特殊字符</description></item><item><title>最简单监控方案：域名、证书SSL、服务器全搞定！发送钉钉告警消息</title><link>https://blog.talimus.eu.org/p/316/</link><pubDate>Sat, 31 Aug 2024 21:35:09 +0800</pubDate><guid>https://blog.talimus.eu.org/p/316/</guid><description>一键脚本（推荐） curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/document_modifier.sh &amp;amp;&amp;amp; chmod +x document_modifier.sh &amp;amp;&amp;amp; ./document_modifier.sh 你只需要准备好钉钉报警机器人webhook地址就行。
+Hysteria 2 一键搭建代码
+wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;amp;&amp;amp; bash hysteria.sh Hysteria 服务相关命令
+systemctl start hysteria-server.service # 启动 hysteria 服务 systemctl enable hysteria-server.service # 设置 hysteria 服务 开机自启动 systemctl restart hysteria-server.service # 重启 hysteria 服务 systemctl stop hysteria-server.service # 停止 hysteria 服务 systemctl status hysteria-server.</description></item><item><title>最简单监控方案：域名、证书SSL、服务器全搞定！发送钉钉告警消息</title><link>https://blog.talimus.eu.org/p/316/</link><pubDate>Sat, 31 Aug 2024 21:35:09 +0800</pubDate><guid>https://blog.talimus.eu.org/p/316/</guid><description>一键脚本（推荐） curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/document_modifier.sh &amp;amp;&amp;amp; chmod +x document_modifier.sh &amp;amp;&amp;amp; ./document_modifier.sh 你只需要准备好钉钉报警机器人webhook地址就行。
 文档：https://open.dingtalk.com/document/orgapp/custom-robot-access
 以下内容为手动安装，不懂的地方可以看看
 需求 有时候域名太多，时间一长，你会不记得快要续期了 服务器太多，需要监控，这应该是刚需 证书申请来申请去，自动续签鬼知道会不会出问题 痛点 监控还要安装各种东西，会出岔子，折腾够呛，难免费时费力，所以，我的方案就是使用脚本，快速高效。脚本公开透明，放心食用~
