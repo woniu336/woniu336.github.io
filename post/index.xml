@@ -1,19 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.talimus.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 02 Sep 2024 03:49:30 +0800</lastBuildDate><atom:link href="https://blog.talimus.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.talimus.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.talimus.eu.org/p/87/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/9213b07eca806538511d5432d1dda144ad348218.jpg" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.talimus.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 03 Sep 2024 01:15:22 +0800</lastBuildDate><atom:link href="https://blog.talimus.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.talimus.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.talimus.eu.org/p/87/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/9213b07eca806538511d5432d1dda144ad348218.jpg" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
-curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 其他教程 项目 链接 推荐脚本 https://woniu336.github.io/p/tool/#5推荐脚本 宝塔面板7.7原版 https://blog.taoshuge.eu.org/p/229/ 一键重装系统 https://woniu336.github.io/p/tool/#4一键dd 或 https://woniu336.github.io/p/133/ 安装宝塔面板7.7原版 https://woniu336.github.io/p/bt/ 宝塔面板计划任务迁移 https://woniu336.github.io/p/136/ 宝塔海外版aapanel安装教程 https://woniu336.github.io/p/141/ docker应用 https://woniu336.github.io/p/11/ MySQL 5.7内存优化 https://woniu336.github.io/p/tool/#1mysql-57内存优化 开启BBR https://woniu336.github.io/p/tool/#2bbr swap的调整 https://woniu336.github.io/p/tool/#3swap的调整 证书申请 https://woniu336.github.io/p/ssl/ rclone工具 https://woniu336.github.io/p/rclone/ 兰空图床 https://woniu336.github.io/p/137/ 监控域名有效期 https://woniu336.github.io/p/132/ Cloudflare R2作为图床的管理和同步 https://woniu336.</description></item><item><title>轻松搭建高效稳定的 Hysteria2 节点服务</title><link>https://blog.talimus.eu.org/p/30/</link><pubDate>Fri, 04 Aug 2023 16:19:04 +0000</pubDate><guid>https://blog.talimus.eu.org/p/30/</guid><description>系统 debian/ubuntu
-客户端 V2Ray桌面版：https://github.com/2dust/v2rayN/releases
-V2Ray安卓端：https://github.com/2dust/v2rayNG/releases
-NekoBox安卓端推荐：https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
-ClashMeta：https://github.com/MetaCubeX/ClashMetaForAndroid/releases
-FlClash：https://github.com/chen08209/FlClash/releases
-方法1 为了确保 Hysteria 2 能够正常工作，您需要开放所有 TCP 和 UDP 端口：
-sudo ufw allow 1:65535/tcp sudo ufw allow 1:65535/udp sudo ufw enable 使用以下命令下载并运行 Hysteria 2 安装脚本：
-注意：伪装网址设置为：www.bing.com
-配置文件路径：/root/hy
-Hysteria 2 一键搭建代码
-wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;amp;&amp;amp; bash hysteria.sh Hysteria 服务相关命令
-systemctl start hysteria-server.service # 启动 hysteria 服务 systemctl enable hysteria-server.service # 设置 hysteria 服务 开机自启动 systemctl restart hysteria-server.service # 重启 hysteria 服务 systemctl stop hysteria-server.</description></item><item><title>去除YouTube弹窗，彻底无广告</title><link>https://blog.talimus.eu.org/p/317/</link><pubDate>Mon, 02 Sep 2024 03:49:30 +0800</pubDate><guid>https://blog.talimus.eu.org/p/317/</guid><description>项目 https://github.com/TheRealJoelmatic/RemoveAdblockThing
+curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 其他教程 项目 链接 推荐脚本 https://woniu336.github.io/p/tool/#5推荐脚本 宝塔面板7.7原版 https://blog.taoshuge.eu.org/p/229/ 一键重装系统 https://woniu336.github.io/p/tool/#4一键dd 或 https://woniu336.github.io/p/133/ 安装宝塔面板7.7原版 https://woniu336.github.io/p/bt/ 宝塔面板计划任务迁移 https://woniu336.github.io/p/136/ 宝塔海外版aapanel安装教程 https://woniu336.github.io/p/141/ docker应用 https://woniu336.github.io/p/11/ MySQL 5.7内存优化 https://woniu336.github.io/p/tool/#1mysql-57内存优化 开启BBR https://woniu336.github.io/p/tool/#2bbr swap的调整 https://woniu336.github.io/p/tool/#3swap的调整 证书申请 https://woniu336.github.io/p/ssl/ rclone工具 https://woniu336.github.io/p/rclone/ 兰空图床 https://woniu336.github.io/p/137/ 监控域名有效期 https://woniu336.github.io/p/132/ Cloudflare R2作为图床的管理和同步 https://woniu336.</description></item><item><title>安装网站流量统计工具——Plausible</title><link>https://blog.talimus.eu.org/p/318/</link><pubDate>Tue, 03 Sep 2024 01:15:22 +0800</pubDate><guid>https://blog.talimus.eu.org/p/318/</guid><description>创建安装目录 mkdir -p /opt/docker_data/plausible/hosting cd /opt/docker_data/plausible/hosting 下载程序 最新版本安装后部署有bug，原因不明，所以，我选择了2.0版本
+wget https://github.com/plausible/community-edition/archive/refs/heads/v2.0.0.zip &amp;amp;&amp;amp; unzip v2.0.0.zip &amp;amp;&amp;amp; mv community-edition-2.0.0/* . &amp;amp;&amp;amp; rm -rf community-edition-2.0.0 v2.0.0.zip ==========================================================================
+此时目录下会有两个文件需要配置：
+docker-compose.yml：配置 Docker Compose，包括网络、数据库、SMTP 等； plausible-conf.env：配置 Plausible 服务，完整的配置文件可以参考 其中需要注意的是 BASE_URL 是你的域名地址（例如：http://yourdomain.com 或者 https://web.yourdomain.com，目前不支持子目录），
+而 plausible-conf.env 则需要一个随机的 64 位字符 SECRET_KEY_BASE 用来提高安全性，可以通过下面的命令生成：
+openssl rand -base64 64 | tr -d &amp;#39;\n&amp;#39; ; echo 编辑plausible-conf.env
+vim plausible-conf.env 在该目录下启动服务：
+docker compose up -d</description></item><item><title>去除YouTube弹窗，彻底无广告</title><link>https://blog.talimus.eu.org/p/317/</link><pubDate>Mon, 02 Sep 2024 03:49:30 +0800</pubDate><guid>https://blog.talimus.eu.org/p/317/</guid><description>项目 https://github.com/TheRealJoelmatic/RemoveAdblockThing
 安装去广告脚本 安装脚本：单击此处并按安装
 禁用广告拦截器 务必在YouTube页面上禁用其他广告拦截器，例如Adblock Plus（因为这些已经被YouTube列入黑名单了）。否则会导致各种播放问题！
 不用担心，安装好的脚本会删除 YouTube 上的广告。
@@ -2235,7 +2230,19 @@ python怎么读取json文件？
 有些电脑网卡没有驱动就直接卡在这里了。 此时你可以按下 Shift+F10 打开命令提示符，输入 oobe\BypassNRO.cmd 即可重启进入带有跳过按钮的 OOBE。
 no@thankyou.com 而这个莫名其妙又有些好笑的账户，基本上就是替代上面的命令行，只需要登录时输入，密码随意，就能跟着向导创建本地账户了。
 简直…太好用。
-微软你说你是不是深井冰。</description></item><item><title>免费翻墙，批量vless节点，反代伪装网页，轻松跑满本地宽带</title><link>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</link><pubDate>Fri, 04 Aug 2023 04:36:36 +0000</pubDate><guid>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</guid><description>最新代码： https://github.com/3Kmfi6HP/EDtunnel/blob/main/_worker.js
+微软你说你是不是深井冰。</description></item><item><title>轻松搭建高效稳定的 Hysteria2 节点服务</title><link>https://blog.talimus.eu.org/p/30/</link><pubDate>Fri, 04 Aug 2023 16:19:04 +0000</pubDate><guid>https://blog.talimus.eu.org/p/30/</guid><description>系统 debian/ubuntu
+客户端 V2Ray桌面版：https://github.com/2dust/v2rayN/releases
+V2Ray安卓端：https://github.com/2dust/v2rayNG/releases
+NekoBox安卓端推荐：https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
+ClashMeta：https://github.com/MetaCubeX/ClashMetaForAndroid/releases
+FlClash：https://github.com/chen08209/FlClash/releases
+方法1 为了确保 Hysteria 2 能够正常工作，您需要开放所有 TCP 和 UDP 端口：
+sudo ufw allow 1:65535/tcp sudo ufw allow 1:65535/udp sudo ufw enable 使用以下命令下载并运行 Hysteria 2 安装脚本：
+注意：伪装网址设置为：www.bing.com
+配置文件路径：/root/hy
+Hysteria 2 一键搭建代码
+wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;amp;&amp;amp; bash hysteria.sh Hysteria 服务相关命令
+systemctl start hysteria-server.service # 启动 hysteria 服务 systemctl enable hysteria-server.service # 设置 hysteria 服务 开机自启动 systemctl restart hysteria-server.service # 重启 hysteria 服务 systemctl stop hysteria-server.</description></item><item><title>免费翻墙，批量vless节点，反代伪装网页，轻松跑满本地宽带</title><link>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</link><pubDate>Fri, 04 Aug 2023 04:36:36 +0000</pubDate><guid>https://blog.talimus.eu.org/p/%E5%85%8D%E8%B4%B9%E7%BF%BB%E5%A2%99%E6%89%B9%E9%87%8Fvless%E8%8A%82%E7%82%B9%E5%8F%8D%E4%BB%A3%E4%BC%AA%E8%A3%85%E7%BD%91%E9%A1%B5%E8%BD%BB%E6%9D%BE%E8%B7%91%E6%BB%A1%E6%9C%AC%E5%9C%B0%E5%AE%BD%E5%B8%A6/</guid><description>最新代码： https://github.com/3Kmfi6HP/EDtunnel/blob/main/_worker.js
 cloudflare ：https://www.cloudflare.com/
 域名优选官网 : http://www.nirsoft.net/utils/multiple_ping_tool.html
 ip&amp;amp;域名优选打包：点击下载&amp;raquo; 域名cdn查询：https://dnschecker.org
