@@ -3,10 +3,11 @@
 V2Ray安卓端：https://github.com/2dust/v2rayNG/releases
 NekoBox安卓端推荐：https://github.com/MatsuriDayo/NekoBoxForAndroid/releases
 ClashMeta：https://github.com/MetaCubeX/ClashMetaForAndroid/releases
+FlClash：https://github.com/chen08209/FlClash/releases
 方法1 为了确保 Hysteria 2 能够正常工作，您需要开放所有 TCP 和 UDP 端口：
 sudo ufw allow 1:65535/tcp sudo ufw allow 1:65535/udp sudo ufw enable 使用以下命令下载并运行 Hysteria 2 安装脚本：
 注意：伪装网址设置为：www.bing.com
 配置文件路径：/root/hy
 Hysteria 2 一键搭建代码
 wget -N --no-check-certificate https://raw.githubusercontent.com/flame1ce/hysteria2-install/main/hysteria2-install-main/hy2/hysteria.sh &amp;amp;&amp;amp; bash hysteria.sh Hysteria 服务相关命令
-systemctl start hysteria-server.service # 启动 hysteria 服务 systemctl enable hysteria-server.service # 设置 hysteria 服务 开机自启动 systemctl restart hysteria-server.service # 重启 hysteria 服务 systemctl stop hysteria-server.service # 停止 hysteria 服务 systemctl status hysteria-server.</description></item></channel></rss>
+systemctl start hysteria-server.service # 启动 hysteria 服务 systemctl enable hysteria-server.service # 设置 hysteria 服务 开机自启动 systemctl restart hysteria-server.service # 重启 hysteria 服务 systemctl stop hysteria-server.</description></item></channel></rss>
