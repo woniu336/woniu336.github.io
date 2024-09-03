@@ -7,7 +7,7 @@ IndexNow
 最近，我发现了 indexnow-action 这个项目， 它可以自动地向兼容 IndexNow API 的站长后台提交 URL，包括 Bing, Yandex, Seznam.cz 以及 IndexNow。这是个适用于任何网站的解决方案，无论是静态的还是动态的，大多数网站都会生成网站地图或 RSS 提要来帮助搜索引擎爬虫发现网站。该解决方案依靠 GitHub Actions 来运行工作流，使其成为确保网站被搜索引擎索引的一种方便且有效的方式。
 步骤 实施上述解决方案的仅有三个简单的步骤：
 生成一个密钥文件并将其上传到 您 的网站根目录 在您的 GitHub 仓库中添加一个工作流 将相关的 Github Actions 机密添加到您的存储库 通过遵循这三个简单的步骤，您可以触发 URL 自动提交给与 IndexNow API 兼容的站长管理后台，并确保您的网站被这些搜索引擎所索引。
-开始 我们可以在 Bing Webmaster Tools 中生成一个独特的API密钥，当鼠标向下滚动时，你会看到下面的页面。点击下载或者生成一个新的。</description></item><item><title>安装网站流量统计工具——Plausible</title><link>https://blog.taoshuge.eu.org/p/318/</link><pubDate>Tue, 03 Sep 2024 01:15:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/318/</guid><description>测试环境 debian11 需要安装好docker 宝塔面板7.7.0 项目 项目：https://github.com/plausible/community-edition
+开始 我们可以在 Bing Webmaster Tools中生成一个独特的API密钥，当鼠标向下滚动时，你会看到下面的页面。点击下载或者生成一个新的。</description></item><item><title>安装网站流量统计工具——Plausible</title><link>https://blog.taoshuge.eu.org/p/318/</link><pubDate>Tue, 03 Sep 2024 01:15:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/318/</guid><description>测试环境 debian11 需要安装好docker 宝塔面板7.7.0 项目 项目：https://github.com/plausible/community-edition
 文档：https://plausible.io/docs/
 创建安装目录 mkdir -p /opt/docker_data/plausible/hosting cd /opt/docker_data/plausible/hosting 下载程序 v2.1.1版本部署失败，原因不明，故选择了旧版本2.0
 默认端口：8000
