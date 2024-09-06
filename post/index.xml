@@ -18,13 +18,15 @@ sudo apt update sudo apt install curl jq 一键脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/indexnow_menu_cn.sh &amp;amp;&amp;amp; chmod +x indexnow_menu_cn.sh &amp;amp;&amp;amp; ./indexnow_menu_cn.sh 定时任务 首先下载脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/indexnow-submit-script.sh &amp;amp;&amp;amp; chmod +x indexnow-submit-script.sh 测试是否可以推送：
 ./indexnow-submit-script.sh www.bing.com 12345 abc.com https://abc.com/sitemap.xml 设置任务：
-(crontab -l ; echo &amp;#34;20 5 * * * cd ~ &amp;amp;&amp;amp; ./indexnow-submit-script.sh www.bing.com 12345 abc.com https://abc.</description></item><item><title>使用 GitHub Actions 自动提交 URL 到 IndexNow</title><link>https://blog.taoshuge.eu.org/p/319/</link><pubDate>Tue, 03 Sep 2024 16:22:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/319/</guid><description>前言 如您所见，我最近推出了一个新的博客网站，使用一个新的子域。我的网站总是受益于 Cloudflare 的服务，得益于 IndexNow，Bing 搜索引擎可以在任何 URL 更新的 5 分钟内收录我的网站。
-IndexNow
-关于 IndexNow、Bing 和 Cloudflare 是如何合作的细节不在本文讨论范围中，但如果您也使用 Cloudflare 托管网站，有一个简单的技巧：只需登录 Cloudflare仪表板，打开 缓存 标签，导航到 配置 菜单，并启用 Crawler Hints，此时 IndexNow 应该和 Cloudflare 一起工作了。
-最近，我发现了 indexnow-action 这个项目， 它可以自动地向兼容 IndexNow API 的站长后台提交 URL，包括 Bing, Yandex, Seznam.cz 以及 IndexNow。这是个适用于任何网站的解决方案，无论是静态的还是动态的，大多数网站都会生成网站地图或 RSS 提要来帮助搜索引擎爬虫发现网站。该解决方案依靠 GitHub Actions 来运行工作流，使其成为确保网站被搜索引擎索引的一种方便且有效的方式。
-步骤 实施上述解决方案的仅有三个简单的步骤：
-生成一个密钥文件并将其上传到 您 的网站根目录 在您的 GitHub 仓库中添加一个工作流 将相关的 Github Actions 机密添加到您的存储库 通过遵循这三个简单的步骤，您可以触发 URL 自动提交给与 IndexNow API 兼容的站长管理后台，并确保您的网站被这些搜索引擎所索引。
-开始 我们可以在 Bing Webmaster Tools中生成一个独特的API密钥，当鼠标向下滚动时，你会看到下面的页面。点击下载或者生成一个新的。</description></item><item><title>安装网站流量统计工具——Plausible</title><link>https://blog.taoshuge.eu.org/p/318/</link><pubDate>Tue, 03 Sep 2024 01:15:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/318/</guid><description>测试环境 debian11 需要安装好docker 宝塔面板7.7.0 项目 项目：https://github.com/plausible/community-edition
+(crontab -l ; echo &amp;#34;20 5 * * * cd ~ &amp;amp;&amp;amp; ./indexnow-submit-script.sh www.bing.com 12345 abc.com https://abc.</description></item><item><title>使用 GitHub Actions 自动提交 URL 到 IndexNow</title><link>https://blog.taoshuge.eu.org/p/319/</link><pubDate>Tue, 03 Sep 2024 16:22:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/319/</guid><description>引言 在数字时代,网站的可发现性至关重要。本教程将指导您如何利用 GitHub Actions 自动将您的网站 URL 提交到 IndexNow,从而提高您网站在搜索引擎中的可见度。
+什么是 IndexNow? IndexNow 是一个开放协议,允许网站所有者即时通知搜索引擎关于最新的内容变更。这意味着您的新内容或更新可以更快地被搜索引擎发现和索引。
+为什么选择 GitHub Actions? GitHub Actions 提供了一个自动化的平台,可以根据特定事件(如推送新内容)或按计划执行任务。将其与 IndexNow 结合使用,我们可以创建一个强大的自动化工作流,确保您的网站内容始终保持最新索引状态。
+实施步骤 1. 生成 API 密钥 首先,我们需要从 Bing Webmaster Tools 获取一个唯一的 API 密钥:
+访问 Bing Webmaster Tools 滚动到页面底部,您会看到生成 API 密钥的选项 下载或生成新的密钥文件 2. 上传密钥文件 将下载的密钥文件(例如 007997b63dd14237bdb9facc726c9a05.txt)上传到您网站的根目录。
+例如,如果您使用 Hugo 静态网站生成器,可以将文件放在 /static 文件夹中:
+https://your-website.com/007997b63dd14237bdb9facc726c9a05.txt 3. 创建 GitHub Actions 工作流 在您的 GitHub 仓库根目录创建一个新的工作流文件:
+.github/workflows/IndexNow.yml 将以下内容添加到文件中(记得替换 sitemap-location 为您自己的网站地图 URL):
+name: &amp;#34;IndexNow&amp;#34; on: push: branches: - main schedule: # 每3天的 UTC 时间 04:00 运行一次 - cron: &amp;#39;0 4 */3 * *&amp;#39; jobs: check-and-submit: runs-on: ubuntu-latest steps: - name: submit-to-bing uses: bojieyang/indexnow-action@v2 with: sitemap-location: &amp;#34;https://your-website.</description></item><item><title>安装网站流量统计工具——Plausible</title><link>https://blog.taoshuge.eu.org/p/318/</link><pubDate>Tue, 03 Sep 2024 01:15:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/318/</guid><description>测试环境 debian11 需要安装好docker 宝塔面板7.7.0 项目 项目：https://github.com/plausible/community-edition
 文档：https://plausible.io/docs/
 创建安装目录 mkdir -p /opt/docker_data/plausible/hosting cd /opt/docker_data/plausible/hosting 下载程序 v2.1.1版本部署失败，原因不明，故选择了旧版本2.0
 默认端口：8000
