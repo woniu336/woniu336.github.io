@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 15 Sep 2024 23:26:05 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>你的私人影视宝库</title><link>https://blog.taoshuge.eu.org/p/323/</link><pubDate>Thu, 12 Sep 2024 01:09:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/323/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/562c11dfa9ec8a1357d5d2c2b103918fa1ecc0c1.jpg" alt="Featured image of post 你的私人影视宝库" />剧荒工厂 https://catpdf.org/</description></item><item><title>苹果cms对接美团图床</title><link>https://blog.taoshuge.eu.org/p/326/</link><pubDate>Sun, 15 Sep 2024 23:26:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/326/</guid><description>下载对接文件 Btjson.php 路径：/苹果cms根目录/application/common/extend/upload btjson.html 路径：/苹果cms根目录/application/admin/view/extend/upload https://github.com/woniu336/open_shell/blob/main/application/common/extend/upload/Btjson.php
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 17 Sep 2024 01:33:58 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>你的私人影视宝库</title><link>https://blog.taoshuge.eu.org/p/323/</link><pubDate>Thu, 12 Sep 2024 01:09:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/323/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/562c11dfa9ec8a1357d5d2c2b103918fa1ecc0c1.jpg" alt="Featured image of post 你的私人影视宝库" />剧荒工厂 https://catpdf.org/</description></item><item><title>完美的宝塔面板防御策略，基于fail2ban</title><link>https://blog.taoshuge.eu.org/p/327/</link><pubDate>Tue, 17 Sep 2024 01:33:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/327/</guid><description>之前分享过宝塔面板配合fail2ban，以及开启cloudflare的cdn双重防御的教程，并制作了便捷的脚本 这次不靠cloudflare的减速cdn，看看防御效果怎么样 系统环境 debian/ubuntu
+nginx
+宝塔面板
+注意要点 1.在宝塔面板开启站点日志 2.添加服务器白名单 以下设置钉钉的目的是有拦截的时候通知你，是可选的，可以不用通知看个人
+打开电脑（pc）打开桌面端钉钉，打开报警机器人，添加服务器ip，如图
+文档：https://open.dingtalk.com/document/orgapp/custom-robot-access
+3.设置钉钉webhook 文档：https://open.dingtalk.com/document/orgapp/custom-robot-access
+一键脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/fail2ban-s.sh &amp;amp;&amp;amp; chmod +x fail2ban-s.sh &amp;amp;&amp;amp; ./fail2ban-s.sh 无需过多解释，看图吧，
+怎么使用 选择菜单4开启网站保护， 菜单6查看拦截记录 要点：宝塔面板默认nginx日志路径是：/www/wwwlogs/access.log
+可以理解为所有站点都监控，如果要监控单个站点，那么选择菜单11，修改监控日志路径
+怎么查找网站日志路径，很简单，看图:
+打开站点配置文件，拉到最后，access_log后面的：/www/wwwlogs/1234.com.log就是日志路径
+怎么测试 测试更简单，两种方法，第一种选择菜单3，重点说第二种。
+方法二：
+复制你站点的404页面链接，如果连404是什么页面也不清楚那不用往下看了 打开 https://www.itdog.cn/http/ 输入链接点击快速测试，连续测试3次，你会发现这个链接一片红，就对了，已经被拦截 如图，那一百多个ip就是 itdog 自身的ip，把itdog拉小黑屋了
+如何解除封禁 选择菜单10，输入图片上方那一串ip地址，就是这么简单，当然先查看拦截记录，然后复制被拦截的ip
+后续 都包含在脚本中了，自行探索把~
+祝大家中秋节快乐，心想事成。</description></item><item><title>苹果cms对接美团图床</title><link>https://blog.taoshuge.eu.org/p/326/</link><pubDate>Sun, 15 Sep 2024 23:26:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/326/</guid><description>下载对接文件 Btjson.php 路径：/苹果cms根目录/application/common/extend/upload btjson.html 路径：/苹果cms根目录/application/admin/view/extend/upload https://github.com/woniu336/open_shell/blob/main/application/common/extend/upload/Btjson.php
 https://github.com/woniu336/open_shell/blob/main/application/admin/view/extend/upload/btjson.html
 获取token 注册 https://czz.meituan.com/ 发布视频，上传封面，注意在上传封面后，F12 查找封面 token 即可，不用真的去发布视频
 cms后台设置 对接地址必须是：https://pic-up.meituan.com
