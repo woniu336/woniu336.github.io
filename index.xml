@@ -1,4 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>浩瀚笔记</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>你的私人影视宝库</title><link>https://blog.taoshuge.eu.org/p/323/</link><pubDate>Thu, 12 Sep 2024 01:09:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/323/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/562c11dfa9ec8a1357d5d2c2b103918fa1ecc0c1.jpg" alt="Featured image of post 你的私人影视宝库" />剧荒工厂 https://catpdf.org/</description></item><item><title>完美的宝塔面板防御策略，基于fail2ban</title><link>https://blog.taoshuge.eu.org/p/327/</link><pubDate>Tue, 17 Sep 2024 01:33:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/327/</guid><description>之前分享过宝塔面板配合fail2ban，以及开启cloudflare的cdn双重防御的教程，并制作了便捷的脚本 这次不靠cloudflare的减速cdn，看看防御效果怎么样 系统环境 debian/ubuntu
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>浩瀚笔记</title><link>https://blog.taoshuge.eu.org/</link><description>Recent content on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://blog.taoshuge.eu.org/index.xml" rel="self" type="application/rss+xml"/><item><title>你的私人影视宝库</title><link>https://blog.taoshuge.eu.org/p/323/</link><pubDate>Thu, 12 Sep 2024 01:09:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/323/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/562c11dfa9ec8a1357d5d2c2b103918fa1ecc0c1.jpg" alt="Featured image of post 你的私人影视宝库" />剧荒工厂 https://catpdf.org/</description></item><item><title>守护你的 PHP 网站：一键式恶意文件检测与清除脚本</title><link>https://blog.taoshuge.eu.org/p/328/</link><pubDate>Fri, 20 Sep 2024 14:42:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/328/</guid><description>网站安全 网站安全是必须重点关注的，除非你说你是1ip站点，即使从你建站的那一刻，你总会幻想过日ip过万吧，万一呢，所以，安全的重要性就来了，流量大了，什么鸟都会从四面八方赶来~
+密钥登陆 服务器禁止密码登录，改成密钥登录，最后记得重启ssh生效
+sudo service ssh restart 检测脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/php-malware-scanner.sh &amp;amp;&amp;amp; chmod +x php-malware-scanner.sh 这个脚本的主要功能是：
+自动监控多个网站目录中的PHP文件，检测并删除包含高风险域名的代码，同时识别未授权的新增PHP文件并采取相应措施，通过钉钉实时通知管理员异常情况，从而提高网站安全性。
+安全措施：
+自动删除包含高风险域名的代码行
+检测并删除未经授权的新增PHP文件
+通过钉钉实时通知管理员异常情况
+修改脚本：
+添加钉钉通知 添加网站目录 添加恶意域名 运行脚本
+./php-malware-scanner.sh 脚本功能：
+检查是否有新网站添加
+遍历所有网站目录，扫描PHP文件
+更新PHP文件列表
+详细步骤：
+检查网站列表是否有变化
+如有新网站，更新网站列表并重新生成PHP文件列表
+扫描每个网站目录中的PHP文件
+检查文件中是否包含高风险域名
+发现高风险域名时，发送钉钉通知并删除包含该域名的行
+更新PHP文件列表，检查是否有新增的PHP文件
+如有新增文件（非新网站情况下），发送通知并删除这些文件
+定时任务 每10分钟检测一次
+(crontab -l ; echo &amp;#34;*/10 * * * * /root/php-malware-scanner.sh &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;#34;) | crontab -</description></item><item><title>完美的宝塔面板防御策略，基于fail2ban</title><link>https://blog.taoshuge.eu.org/p/327/</link><pubDate>Tue, 17 Sep 2024 01:33:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/327/</guid><description>之前分享过宝塔面板配合fail2ban，以及开启cloudflare的cdn双重防御的教程，并制作了便捷的脚本 这次不靠cloudflare的减速cdn，看看防御效果怎么样 系统环境 debian/ubuntu
 nginx
 宝塔面板
 注意要点 1.在宝塔面板开启站点日志 2.添加服务器白名单 以下设置钉钉的目的是有拦截的时候通知你，是可选的，可以不用通知看个人
