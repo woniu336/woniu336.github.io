@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Sep 2024 14:42:56 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>你的私人影视宝库</title><link>https://blog.taoshuge.eu.org/p/323/</link><pubDate>Thu, 12 Sep 2024 01:09:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/323/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/562c11dfa9ec8a1357d5d2c2b103918fa1ecc0c1.jpg" alt="Featured image of post 你的私人影视宝库" />剧荒工厂 https://catpdf.org/</description></item><item><title>守护你的 PHP 网站：一键式恶意文件检测与清除脚本</title><link>https://blog.taoshuge.eu.org/p/328/</link><pubDate>Fri, 20 Sep 2024 14:42:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/328/</guid><description>网站安全 网站安全是必须重点关注的，除非你说你是1ip站点，即使从你建站的那一刻，你总会幻想过日ip过万吧，万一呢，所以，安全的重要性就来了，流量大了，什么鸟都会从四面八方赶来~
-密钥登陆 服务器禁止密码登录，改成密钥登录，最后记得重启ssh生效
-sudo service ssh restart 检测脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/php-malware-scanner.sh &amp;amp;&amp;amp; chmod +x php-malware-scanner.sh 这个脚本的主要功能是：
+密钥登陆 服务器禁止密码登录，改成密钥登录，选择菜单9：root私钥登录模式
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 将密钥保存到本地（sshkey）然后再删除,因为公钥已写入：authorized_keys，大胆删除
+rm /root/.ssh/sshkey /root/.ssh/sshkey.pub 检测脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/php-malware-scanner.sh &amp;amp;&amp;amp; chmod +x php-malware-scanner.sh 这个脚本的主要功能是：
 自动监控多个网站目录中的PHP文件，检测并删除包含高风险域名的代码，同时识别未授权的新增PHP文件并采取相应措施，通过钉钉实时通知管理员异常情况，从而提高网站安全性。
 安全措施：
 自动删除包含高风险域名的代码行
