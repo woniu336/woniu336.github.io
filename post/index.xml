@@ -1,10 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Sep 2024 02:58:05 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/9213b07eca806538511d5432d1dda144ad348218.jpg" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Sep 2024 21:45:00 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/9213b07eca806538511d5432d1dda144ad348218.jpg" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 证书申请和续签：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh fail2ban防御
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/fail2ban-s.sh &amp;amp;&amp;amp; chmod +x fail2ban-s.sh &amp;amp;&amp;amp; ./fail2ban-s.sh 监控证书，域名、服务器
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/document_modifier.sh &amp;amp;&amp;amp; chmod +x document_modifier.sh &amp;amp;&amp;amp; ./document_modifier.sh 苹果 cms 系统站点最佳 Nginx 配置</description></item><item><title>为什么AVIF将成为下一代图片格式之王</title><link>https://blog.taoshuge.eu.org/p/329/</link><pubDate>Sun, 22 Sep 2024 02:58:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/329/</guid><description>AVIF的卓越优势 便捷脚本：https://github.com/woniu336/open_shell/blob/main/avif_manager.sh
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/document_modifier.sh &amp;amp;&amp;amp; chmod +x document_modifier.sh &amp;amp;&amp;amp; ./document_modifier.sh 苹果 cms 系统站点最佳 Nginx 配置</description></item><item><title>一劳永逸:用脚本实现夸克网盘内容自动更新</title><link>https://blog.taoshuge.eu.org/p/330/</link><pubDate>Sun, 22 Sep 2024 21:45:00 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/330/</guid><description>系统环境：debian/ubuntu 、 安装了python3
+原作者项目：https://github.com/Cp0204/quark-auto-save 感谢
+缘起 我喜欢看电影追剧，会经常转存一些资源到夸克网盘，电影还好，如果是电视剧，麻烦就来了。
+对于一些持续更新的资源，不是说你转存了别人的资源就会自动在你网盘更新了，需要手动隔段时间去转存十分麻烦。
+举个例子（如果你没用过夸克网盘）：当初你转存了一部电视剧，更新到第10集，隔段时间更新到了20集，网盘会提示你转存有更新
+这时候你需要打开转存的页面，手动保存更新的集数（11到20集），如此便很麻烦，如果你转存了很多东西
+部署 不用看到部署就慌张，我的东西从来就是简单、高效、清晰，不需要会敲代码。
+原项目有docker部署方式，但是经常在后台抽风，看不到之前添加好的转存任务（可能使用方式不对）
+所以，为了方便自己，制作了脚本，我向来喜欢使用脚本，因为简单高效
+安装依赖 sudo apt-get install jq 这条命令安装 jq,它是一个轻量级的命令行 JSON 处理器。
+克隆仓库: cd ~ git clone https://github.com/Cp0204/quark-auto-save.git 这些命令将您带到 root 目录,然后克隆 quark-auto-save 仓库。
+重命名目录: mv quark-auto-save quark 这条命令将 quark-auto-save 目录重命名为 quark。
+下载并覆盖文件: cd quark wget -N https://raw.githubusercontent.com/woniu336/open_shell/main/quark/movie_list.py wget -N https://raw.githubusercontent.com/woniu336/open_shell/main/quark/movie_list.txt wget -N https://raw.githubusercontent.com/woniu336/open_shell/main/quark/quark_config.json 运行脚本 cd ~ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/quark_manager.sh &amp;amp;&amp;amp; chmod +x quark_manager.sh &amp;amp;&amp;amp; ./quark_manager.sh 首先要设置Cookie
+获取Cookie很简单：登录https://pan.quark.cn/ 按F12查找Cookie</description></item><item><title>为什么AVIF将成为下一代图片格式之王</title><link>https://blog.taoshuge.eu.org/p/329/</link><pubDate>Sun, 22 Sep 2024 02:58:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/329/</guid><description>AVIF的卓越优势 便捷脚本：https://github.com/woniu336/open_shell/blob/main/avif_manager.sh
 AVIF（AV1 Image File Format）正在迅速崛起，成为下一代网络图片格式的有力竞争者。作为基于AV1视频编码技术的图像格式，AVIF在多个方面展现出了令人瞩目的性能。
 1. 卓越的压缩效率 与JPEG和WebP相比，AVIF能在保持相同图像质量的前提下，将文件大小减小30%至50%。这意味着：
 网站可呈现更高质量的图像 显著减少带宽使用 加快页面加载速度 2. 更广泛的色彩支持 支持10位和12位的色彩 兼容HDR（高动态范围）图像 呈现更丰富、更逼真的视觉效果 这对摄影、电商等对图像质量要求较高的领域尤为重要。
