@@ -17,7 +17,8 @@ systemctl status fail2ban 按键盘 q 退出
 对接Cloudflare 以下脚本适用于宝塔面板建站的朋友
 一键脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/fail2ban.sh &amp;amp;&amp;amp; chmod +x fail2ban.sh &amp;amp;&amp;amp; ./fail2ban.sh 国内机器
-curl -sS -O https://gitee.</description></item><item><title>超简单利用 CloudFlare Api 宕机自动切换ip，并开启小云朵(cdn)</title><link>https://blog.taoshuge.eu.org/p/221/</link><pubDate>Mon, 01 Apr 2024 09:49:35 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/221/</guid><description>首先获取API密钥 登录cloudflare
+curl -sS -O https://gitee.</description></item><item><title>超简单利用 CloudFlare Api 宕机自动切换ip，并开启小云朵(cdn)</title><link>https://blog.taoshuge.eu.org/p/221/</link><pubDate>Mon, 01 Apr 2024 09:49:35 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/221/</guid><description>脚本 使用了这个脚本，后面的内容可以不看了，
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 首先获取API密钥 登录cloudflare
 https://dash.cloudflare.com/profile/api-tokens
 获取：Global API Key
 获取域名区域ID 选择其中一个域名进入
@@ -31,12 +32,7 @@ wget https://gitee.com/dayu777/open_shell/raw/main/dns_update/dns_update.sh &amp
 注意：原始ip就是正在使用的IP，检测到宕机后切换ip就是备用ip，要检测哪个端口号看你的需求，
 ./dns_update.sh 完成后，会将信息录入dns_update.py脚本
 运行dns_update.py 终端输入：
-chmod +x dns_update.py python3 dns_update.py 测试脚本 比如你安装了宝塔面板，端口是5577，检测的端口号就是5577,然后停止面板，
-或者你安装了nginx，停止ngnix, 检测的端口号就是80,
-以上都会触发脚本自动更换ip
-会看到终端显示更新DNS记录，切换备用ip提示，也可以到cloudflare去看DNS解析情况
-如果要关掉小云朵cdn,修改：
-把 proxied=True 改成 proxied=False 后台运行 nohup python3 dns_update.</description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/p/126/</link><pubDate>Wed, 17 Jan 2024 04:53:36 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/126/</guid><description>添加防火墙规则表达式 复制代码即可 第一：恶意流量阻止 操作：托管质询
+chmod +x dns_update.py python3 dns_update.</description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/p/126/</link><pubDate>Wed, 17 Jan 2024 04:53:36 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/126/</guid><description>添加防火墙规则表达式 复制代码即可 第一：恶意流量阻止 操作：托管质询
 (cf.threat_score ge 5 and not cf.client.bot) or (not http.request.version in {&amp;#34;HTTP/1.2&amp;#34; &amp;#34;HTTP/2&amp;#34; &amp;#34;HTTP/3&amp;#34; &amp;#34;SPDY/3.1&amp;#34;}) or (not http.user_agent contains &amp;#34;Mozilla/&amp;#34;) 第二：放行爬虫（seo） 操作：跳过
 (cf.client.bot) or (http.user_agent contains &amp;#34;duckduckgo&amp;#34;) or (http.user_agent contains &amp;#34;facebookexternalhit&amp;#34;) or (http.user_agent contains &amp;#34;Feedfetcher-Google&amp;#34;) or (http.user_agent contains &amp;#34;LinkedInBot&amp;#34;) or (http.user_agent contains &amp;#34;Mediapartners-Google&amp;#34;) or (http.user_agent contains &amp;#34;msnbot&amp;#34;) or (http.user_agent contains &amp;#34;Slackbot&amp;#34;) or (http.user_agent contains &amp;#34;TwitterBot&amp;#34;) or (http.user_agent contains &amp;#34;ia_archive&amp;#34;) or (http.user_agent contains &amp;#34;yahoo&amp;#34;) 第三：其他 跳过源站IP、区域或国家阻止
 CF的WAF的防火墙规则！</description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.taoshuge.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</link><pubDate>Sat, 23 Dec 2023 12:14:09 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</guid><description>为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？ 当你接入Cloudflare的CDN，并点亮小云朵之后。你的网站就已经通过Cloudflare的CDN节点进行中转了。默认情况下，Cloudflare 会对你网站中的图片、JS、CSS文件等静态文件进行缓存。
