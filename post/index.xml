@@ -11,6 +11,7 @@ CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>Git操作助手</title><link>https://blog.taoshuge.eu.org/p/336/</link><pubDate>Tue, 01 Oct 2024 23:27:16 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/336/</guid><description>Git操作助手 基于windows系统
 Git操作助手是一个基于PyQt5的图形用户界面(GUI)应用程序,旨在简化常见的Git操作。它为Git新手和有经验的用户提供了一个直观的界面来执行各种Git命令。
+data:2024-12-13
 安装要求 在运行此程序之前,请确保您的系统满足以下要求:
 Python 3.x PyQt5 Git 安装步骤 确保您已安装Python 3.x。可以从Python官网下载并安装。
 安装PyQt5。打开命令行并运行:
