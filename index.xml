@@ -10,6 +10,8 @@ https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>正确开启ufw的方式</title><link>https://blog.taoshuge.eu.org/p/337/</link><pubDate>Tue, 08 Oct 2024 20:27:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/337/</guid><description> 如果没有正确配置规则，您可能会失去对服务器的访问权限,所以，从SSH入手
+安装ufw debian/ubuntu
+sudo apt update sudo apt install ufw 请注意，在启用 UFW 之前，必须配置SSH规则，以确保不会意外地阻止连接（如ssh）。
 查看当前的规则配置 在启用 UFW 之前，建议您先查看当前的规则配置：
 sudo ufw show added 允许 SSH 连接的规则 首先，添加一条允许 SSH 连接的规则：
 sudo ufw allow ssh 如果您使用的是非标准 SSH 端口，请使用实际的端口号。例如，如果您的 SSH 端口是 2222：
