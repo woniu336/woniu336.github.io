@@ -9,7 +9,16 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>Git操作助手</title><link>https://blog.taoshuge.eu.org/p/336/</link><pubDate>Tue, 01 Oct 2024 23:27:16 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/336/</guid><description>Git操作助手 基于windows系统
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>正确开启ufw的方式</title><link>https://blog.taoshuge.eu.org/p/337/</link><pubDate>Tue, 08 Oct 2024 20:27:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/337/</guid><description> 如果没有正确配置规则，您可能会失去对服务器的访问权限,所以，从SSH入手
+查看当前的规则配置 在启用 UFW 之前，建议您先查看当前的规则配置：
+sudo ufw show added 允许 SSH 连接的规则 首先，添加一条允许 SSH 连接的规则：
+sudo ufw allow ssh 如果您使用的是非标准 SSH 端口，请使用实际的端口号。例如，如果您的 SSH 端口是 2222：
+sudo ufw allow 2222/tcp 添加规则后，再次检查已添加的规则：
+sudo ufw show added 如果您看到 SSH 规则已经添加，那么现在启用 UFW 应该是安全的：
+sudo ufw enable 启用后，检查 UFW 状态：
+sudo ufw status verbose 这将显示 UFW 是否处于活动状态以及当前的规则。
+如果您只想知道 ufw 是否处于活动状态，可以使用：
+sudo ufw status | grep -q &amp;#34;Status: active&amp;#34; &amp;amp;&amp;amp; echo &amp;#34;UFW 已启用&amp;#34; || echo &amp;#34;UFW 未启用&amp;#34;</description></item><item><title>Git操作助手</title><link>https://blog.taoshuge.eu.org/p/336/</link><pubDate>Tue, 01 Oct 2024 23:27:16 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/336/</guid><description>Git操作助手 基于windows系统
 Git操作助手是一个基于PyQt5的图形用户界面(GUI)应用程序,旨在简化常见的Git操作。它为Git新手和有经验的用户提供了一个直观的界面来执行各种Git命令。
 安装要求 在运行此程序之前,请确保您的系统满足以下要求:
 Python 3.x PyQt5 Git 安装步骤 确保您已安装Python 3.x。可以从Python官网下载并安装。
