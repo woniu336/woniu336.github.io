@@ -9,7 +9,8 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>正确开启ufw的方式</title><link>https://blog.taoshuge.eu.org/p/337/</link><pubDate>Tue, 08 Oct 2024 20:27:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/337/</guid><description> 如果没有正确配置规则，您可能会失去对服务器的访问权限,所以，从SSH入手
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>屏蔽GPTbot爬虫</title><link>https://blog.taoshuge.eu.org/p/338/</link><pubDate>Wed, 09 Oct 2024 13:07:28 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/338/</guid><description>文档 https://platform.openai.com/docs/bots
+禁止IP sudo ufw insert 1 deny from 20.171.206.0/24 to any sudo ufw insert 1 deny from 52.230.152.0/24 to any sudo ufw insert 1 deny from 52.233.106.0/24 to any 阻止user-agent Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.1; +https://openai.com/gptbot</description></item><item><title>正确开启ufw的方式</title><link>https://blog.taoshuge.eu.org/p/337/</link><pubDate>Tue, 08 Oct 2024 20:27:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/337/</guid><description> 如果没有正确配置规则，您可能会失去对服务器的访问权限,所以，从SSH入手
 安装ufw debian/ubuntu
 sudo apt update sudo apt install ufw 请注意，在启用 UFW 之前，必须配置SSH规则，以确保不会意外地阻止连接（如ssh）。
 查看当前的规则配置 在启用 UFW 之前，建议您先查看当前的规则配置：
@@ -76,17 +77,14 @@ AVIF（AV1 Image File Format）正在迅速崛起，成为下一代网络图片�
 密钥登陆 服务器禁止密码登录，改成密钥登录，选择菜单9：root私钥登录模式
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 将密钥保存到本地（sshkey）然后再删除,因为公钥已写入：authorized_keys，大胆删除
 rm /root/.ssh/sshkey /root/.ssh/sshkey.pub 重启ssh
-sudo service ssh restart 监控脚本 首先安装依赖
+sudo service ssh restart 监控脚本 首先,我们需要安装 pip
+sudo apt-get update sudo apt-get install python3-pip 用 pip 安装 python-crontab 包
 pip3 install python-crontab 下载脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/php-s.py &amp;amp;&amp;amp; chmod +x php-s.py python3 php-s.py 删除的可疑php文件保存在/tmp/suspicious_files 监控记录日志/tmp/scan_history.log 这个脚本的主功能是：
 自动监控多个网站目录中的PHP文件，检测并删除包含高风险域名的代码，同时识别未授权的新增PHP文件并采取相应措施，通过钉钉实时通知管理员异常情况，从而提高网站安全性。
 脚本功能：
 自动删除包含高风险域名的代码行 检测并删除未经授权的新增PHP文件 通过钉钉实时通知管理员异常情况 定时任务 每5分钟检测一次
-(crontab -l ; echo &amp;#34;*/5 * * * * /root/php-malware-scanner.sh &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;#34;) | crontab - 检测脚本 默认备份目录：/opt/backup
-这个脚本是一个检测和清理PHP文件中恶意代码的自动化工具，它会备份原始文件，识别包含可疑模式的文件，移除恶意代码，并生成统计信息
-统计信息保存目录/opt/backup
-只检测不移除恶意代码的脚本
-curl -sS -O https://raw.</description></item><item><title>完美的宝塔面板防御策略，基于fail2ban</title><link>https://blog.taoshuge.eu.org/p/327/</link><pubDate>Tue, 17 Sep 2024 01:33:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/327/</guid><description>之前分享过宝塔面板配合fail2ban，以及开启cloudflare的cdn双重防御的教程，并制作了便捷的脚本 这次不靠cloudflare的减速cdn，看看防御效果怎么样 系统环境 debian/ubuntu
+(crontab -l ; echo &amp;#34;*/5 * * * * /root/php-malware-scanner.</description></item><item><title>完美的宝塔面板防御策略，基于fail2ban</title><link>https://blog.taoshuge.eu.org/p/327/</link><pubDate>Tue, 17 Sep 2024 01:33:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/327/</guid><description>之前分享过宝塔面板配合fail2ban，以及开启cloudflare的cdn双重防御的教程，并制作了便捷的脚本 这次不靠cloudflare的减速cdn，看看防御效果怎么样 系统环境 debian/ubuntu
 nginx
 宝塔面板
 注意要点 1.在宝塔面板开启站点日志 2.添加服务器白名单 以下设置钉钉的目的是有拦截的时候通知你，是可选的，可以不用通知看个人
