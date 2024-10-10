@@ -312,11 +312,10 @@ cd /home/2.2.2.2/public_html/ #回到ip目录 touch 404.html 写入内容：
 第一步： 改成如下图所示：取消设置默认站点
 第二步： 宝塔面板”文件”根目录搜索”0.default.conf”文件，注意勾选”包含子目录”，”0.default.conf”的文件路径如下。
 /www/server/panel/vhost/nginx/0.default.conf 这个文件是宝塔面板默认站点的nginx规则，我们把之前的内容删除，写入以下代码：
-（推荐）
+推荐
+server { listen 80 default_server; listen [::]:80 default_server; server_name _; return 444; } server { listen 443 ssl default_server; listen [::]:443 ssl default_server; server_name _; ssl_certificate /www/server/panel/ssl/certificate.pem; ssl_certificate_key /www/server/panel/ssl/privateKey.pem; return 444; } （或者）
 server { listen 443 ssl default_server; # 如果有 IPv6 地址的需要，则加入下面这行。 # listen [::]:443 ssl default_server; ssl_reject_handshake on; } （不推荐）
-server { listen 80 default; listen 443 default_server; ## 假如nginx开启了quic,去掉这行 server_name _; return 444; ssl_certificate /www/server/panel/ssl/certificate.pem; ssl_certificate_key /www/server/panel/ssl/privateKey.pem; ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4; ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; ssl_session_timeout 10m; ssl_prefer_server_ciphers on; } （不推荐）
-假如nginx开启了quic，使用如下代码，不然重启nginx会报错：
-server { listen 80 default; listen 443 ssl; server_name _; return 444; ssl_certificate /www/server/panel/ssl/certificate.</description></item><item><title>cyberpanel重写规则</title><link>https://blog.taoshuge.eu.org/p/293/</link><pubDate>Thu, 01 Aug 2024 22:57:07 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/293/</guid><description>cyberpanel防盗链设置 主页——网站——网站列表，选择对应网站，点击管理——重写规则
+server { listen 80 default; listen 443 default_server; ## 假如nginx开启了quic,去掉这行 server_name _; return 444; ssl_certificate /www/server/panel/ssl/certificate.</description></item><item><title>cyberpanel重写规则</title><link>https://blog.taoshuge.eu.org/p/293/</link><pubDate>Thu, 01 Aug 2024 22:57:07 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/293/</guid><description>cyberpanel防盗链设置 主页——网站——网站列表，选择对应网站，点击管理——重写规则
 RewriteEngine On RewriteCond %{HTTP_REFERER} !^https://(cdn.)?xxx.org [NC] RewriteRule .(jpg|jpeg|png|gif|webp|js|css)$ - [NC,F] 这条规则的意思是：
 阻止所有不是来自 xxx.org 主域名或其 CDN 子域名的请求访问网站的图片、JavaScript 和 CSS 文件，以防止资源被其他网站盗用。
 域名跳转到新域名 如果不保留原始的URL路径，把$1去掉即可
