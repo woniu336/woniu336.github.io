@@ -9,7 +9,13 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>屏蔽GPTbot爬虫</title><link>https://blog.taoshuge.eu.org/p/338/</link><pubDate>Wed, 09 Oct 2024 13:07:28 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/338/</guid><description>文档 https://platform.openai.com/docs/bots
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>cloudflare防火墙waf的设置</title><link>https://blog.taoshuge.eu.org/p/339/</link><pubDate>Thu, 10 Oct 2024 14:28:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/339/</guid><description>WAF 表达式：
+(cf.threat_score ge 5 and not cf.client.bot) or (not http.request.version in {&amp;#34;HTTP/2&amp;#34; &amp;#34;HTTP/3&amp;#34; &amp;#34;HTTP/1.1&amp;#34;}) or (ip.geoip.country in {&amp;#34;FR&amp;#34; &amp;#34;DE&amp;#34;}) or (http.request.uri.path wildcard r&amp;#34;/admin.php/*&amp;#34;) 解释如下：
+如果满足以下任一条件，则触发规则：
+Cloudflare 威胁评分大于或等于 5，且客户端不是机器人
+使用的 HTTP 协议版本不是 HTTP/2、HTTP/3 或 HTTP/1.1
+请求来自法国或德国,即对法国和德国实施防御
+请求的 URI 路径以 &amp;ldquo;/admin.php/&amp;rdquo; 开头</description></item><item><title>屏蔽GPTbot爬虫</title><link>https://blog.taoshuge.eu.org/p/338/</link><pubDate>Wed, 09 Oct 2024 13:07:28 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/338/</guid><description>文档 https://platform.openai.com/docs/bots
 禁止IP sudo ufw insert 1 deny from 20.171.206.0/24 to any sudo ufw insert 1 deny from 52.230.152.0/24 to any sudo ufw insert 1 deny from 52.233.106.0/24 to any 阻止user-agent Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.1; +https://openai.com/gptbot</description></item><item><title>正确开启ufw的方式</title><link>https://blog.taoshuge.eu.org/p/337/</link><pubDate>Tue, 08 Oct 2024 20:27:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/337/</guid><description> 如果没有正确配置规则，您可能会失去对服务器的访问权限,所以，从SSH入手
 安装ufw debian/ubuntu
 sudo apt update sudo apt install ufw 请注意，在启用 UFW 之前，必须配置SSH规则，以确保不会意外地阻止连接（如ssh）。
