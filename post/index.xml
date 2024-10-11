@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 10 Oct 2024 14:28:56 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/9213b07eca806538511d5432d1dda144ad348218.jpg" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 11 Oct 2024 13:03:16 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/9213b07eca806538511d5432d1dda144ad348218.jpg" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh ROOT私钥登录模式
@@ -9,7 +9,19 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>cloudflare防火墙waf的设置</title><link>https://blog.taoshuge.eu.org/p/339/</link><pubDate>Thu, 10 Oct 2024 14:28:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/339/</guid><description>WAF 表达式：
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>Windows 11 LTSC 2024 官方精简版！简体中文正式版ISO镜像下载</title><link>https://blog.taoshuge.eu.org/p/340/</link><pubDate>Fri, 11 Oct 2024 13:03:16 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/340/</guid><description>下载地址 Win11企业版 2024 长期服务版 (Windows 11 IoT Enterprise LTSC 2024) 提供长达 10 年的支持服务，支持至 2034 年。
+它可视为官方推出的精简版 Win11，系统稳定流畅，对电脑硬件的要求较低，适合性能有限的设备。用户可以通过数字权利实现永久激活。 LTSC 版本去除了应用商店、微软小娜（Cortana）、OneDrive，并且 Windows 更新提供了更多高级设置，用户可选择性安装系统更新，极大提升了系统的可控性和定制化。
+Microsoft Windows 11 Enterprise LTSC 2024 官方简体中文正式版ISO镜像下载地址
+zh-cn_windows_11_enterprise_ltsc_2024_x64_dvd_cff9cd2d.iso（4.92G）SHA: 2CB21649590C8CF770CD93556596DFF4FD800F24D267A9BE9D9CE0EE9E03F5AC
+【点击下载】或 【BT磁力下载】
+Microsoft Windows 11 Enterprise LTSC 2024 英文版官方下载 【点击下载 】
+Windows 11 IoT Enterprise LTSC 2024 物联英文版官方下载
+【点击前往】
+激活 Windows 11 2024 LTSC 长期服务版 KMS 官方密钥获取：
+【点击前往】
+或者使用以下命令(cmd管理员)：
+slmgr -ipk M7XTQ-FN8P6-TTKYV-9D4CC-J462D slmgr -skms kms.v0v.bid slmgr -ato 安装后可以进一步精简系统,使用DISM快速禁用或启用保留空间：
+# 禁用系统保留空间</description></item><item><title>cloudflare防火墙waf的设置</title><link>https://blog.taoshuge.eu.org/p/339/</link><pubDate>Thu, 10 Oct 2024 14:28:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/339/</guid><description>WAF 表达式：
 (cf.threat_score ge 5 and not cf.client.bot) or (not http.request.version in {&amp;#34;HTTP/2&amp;#34; &amp;#34;HTTP/3&amp;#34; &amp;#34;HTTP/1.1&amp;#34;}) or (ip.geoip.country in {&amp;#34;FR&amp;#34; &amp;#34;DE&amp;#34;}) or (http.request.uri.path wildcard r&amp;#34;/admin.php/*&amp;#34;) 解释如下：
 如果满足以下任一条件，则触发规则：
 Cloudflare 威胁评分大于或等于 5，且客户端不是机器人
