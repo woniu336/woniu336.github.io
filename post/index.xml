@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 20 Oct 2024 21:29:43 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/9213b07eca806538511d5432d1dda144ad348218.jpg" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 22 Oct 2024 13:37:42 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://imgsrc.baidu.com/forum/pic/item/9213b07eca806538511d5432d1dda144ad348218.jpg" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh ROOT私钥登录模式
@@ -9,7 +9,16 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>使用Pake一键打包网页为桌面应用/客户端</title><link>https://blog.taoshuge.eu.org/p/344/</link><pubDate>Sun, 20 Oct 2024 21:29:43 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/344/</guid><description>项目 项目：https://github.com/tw93/Pake/
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>MixFile: 一款可以上传加密文件并分享的安卓APP</title><link>https://blog.taoshuge.eu.org/p/345/</link><pubDate>Tue, 22 Oct 2024 13:37:42 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/345/</guid><description>MixFile介绍 https://gitlab.com/ivgeek/mixfile
+MixFile是一款可以上传加密文件并分享的安卓APP
+可实现本地加密上传,加密下载文件,在线播放加密视频
+加密时会自动生成随机密钥进行加密,上传完成后,密钥 文件地址 文件大小等信息会附加在分享码中
+将分享码发送给他人即可实现分享文件
+已发布版本: https://gitlab.com/ivgeek/mixfile/-/releases
+使用帮助: https://gitlab.com/ivgeek/mixfile/-/wikis/%E4%BD%BF%E7%94%A8%E5%B8%AE%E5%8A%A9
+测试
+mf://demmGp0ywJ1A29dfuKpqbCCdBe6fmd15daMSjYm8UIvTxcZMXOS8u5r4ruWjPb8U4EF2Qdw2mvr07qpIKS37SMlfQpKS9OQc1vLDlReDGGAQqDmdlqp9snNTx5xk4BdaHGkLf0CYPqFStejRC7GpiDFwBoCRyGkeGZ4CaK75hM1ff4pIGwdVawE6ItsGPOeUSnWsJuE1n2xK5HXimrHrAqzNlQUoO8YWm4JfwGEdfSl 死亡大乐透（电影）
+mf://iXI4tLos6lanlivWDDVob5rgyz8nYco5qwk7DqggS6mNOZ0ZsTuo3A5ZYqOChcSFpJpcYkfcQ7aXE00VcXQ6n5gWtV58UPpVCIllFNorVhst71LDzAcaq4CrXS6N8f5ca3KUcQgQ9zPe5hpu2DhITNxQn7gBhKCcVcg7yloOKiwpVP1IF7arc7FsuNMmSWglNtikzTAm0KcFvNe1ZwPs5wMDFm8mxHVcr1A9kekuCPtgeN08tasIDGHoD3j2gcw9FfLJggMW8LwUUW0mhojjCbtzl1bwZKGMhS</description></item><item><title>使用Pake一键打包网页为桌面应用/客户端</title><link>https://blog.taoshuge.eu.org/p/344/</link><pubDate>Sun, 20 Oct 2024 21:29:43 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/344/</guid><description>项目 项目：https://github.com/tw93/Pake/
 免费ICO图片：https://icon-icons.com/zh/
 实例：https://www.123865.com/s/cjqrVv-OjTQd
 设置环境 以下教程仅针对windows系统适用
