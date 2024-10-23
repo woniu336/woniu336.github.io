@@ -11,7 +11,9 @@ CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>docker可视化面板Dpanel</title><link>https://blog.taoshuge.eu.org/p/346/</link><pubDate>Wed, 23 Oct 2024 23:42:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/346/</guid><description>Dpanel官方 仓库 https://github.com/donknap/dpanel
 文档 https://dpanel.cc/#/zh-cn/install/docker
-部署代码 内网使用推荐大家使用lite版,lite版减少了反代服务器内容,减少了80,443端口映射 dpanel lite版 docker run -it -d --name dpanel --restart=always \ -p 8807:8080 -e APP_NAME=dpanel \ -v /var/run/docker.sock:/var/run/docker.sock \ -v dpanel:/dpanel dpanel/dpanel:lite docker开启API服务 注意：开放外网使用是不安全的，仅限内网使用
+部署代码 内网使用推荐大家使用lite版,如果你已经安装了宝塔或者nginx此类服务 dpanel lite版 docker run -it -d --name dpanel --restart=always \ -p 8807:8080 -e APP_NAME=dpanel \ -v /var/run/docker.sock:/var/run/docker.sock \ -v dpanel:/dpanel dpanel/dpanel:lite 默认登录账号/密码
+admin/admin
+docker开启API服务 注意：开放外网使用是不安全的，仅限内网使用
 编辑文件
 sudo nano /usr/lib/systemd/system/docker.service 将其中[service]部分中ExecStart=一行替换成下面内容
 ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock --containerd=/run/containerd/containerd.sock 重启docker服务
