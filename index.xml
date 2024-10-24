@@ -9,7 +9,12 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>docker可视化面板Dpanel</title><link>https://blog.taoshuge.eu.org/p/346/</link><pubDate>Wed, 23 Oct 2024 23:42:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/346/</guid><description>Dpanel官方 仓库 https://github.com/donknap/dpanel
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>个人订阅追踪器——Wallos</title><link>https://blog.taoshuge.eu.org/p/347/</link><pubDate>Thu, 24 Oct 2024 13:59:10 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/347/</guid><description>相关地址 GitHub地址：https://github.com/ellite/Wallos
+部署 创建文件夹：
+mkdir -p /root/data/docker_data/wallos &amp;amp;&amp;amp; cd /root/data/docker_data/wallos 创建配置文件：
+nano docker-compose.yml 然后贴入配置（官方）：
+services: wallos: container_name: wallos image: bellamy/wallos:latest ports: - &amp;#34;8282:80/tcp&amp;#34; environment: TZ: &amp;#39;Asia/Shanghai&amp;#39; # Volumes store your data between container upgrades volumes: - &amp;#39;./db:/var/www/html/db&amp;#39; - &amp;#39;./logos:/var/www/html/images/uploads/logos&amp;#39; restart: unless-stopped 完成后，开始部署：
+docker compose up -d demo</description></item><item><title>docker可视化面板Dpanel</title><link>https://blog.taoshuge.eu.org/p/346/</link><pubDate>Wed, 23 Oct 2024 23:42:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/346/</guid><description>Dpanel官方 仓库 https://github.com/donknap/dpanel
 文档 https://dpanel.cc/#/zh-cn/install/docker
 部署代码 内网使用推荐大家使用lite版,如果你已经安装了宝塔或者nginx此类服务 dpanel lite版 docker run -it -d --name dpanel --restart=always \ -p 8807:8080 -e APP_NAME=dpanel \ -v /var/run/docker.sock:/var/run/docker.sock \ -v dpanel:/dpanel dpanel/dpanel:lite 默认登录账号/密码
 admin/admin
