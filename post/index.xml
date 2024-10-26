@@ -72,8 +72,8 @@ docker run -d \ --name watchtower \ --restart unless-stopped \ -v /var/run/docke
 ACCESS_TOKEN = &amp;#34;&amp;#34; SECRET = &amp;#34;&amp;#34; 3.添加夸克网盘分享链接 格式: 文件名@url
 写入movie_links.txt文件
 4.运行脚本 python3 check_movie_links.py quark_config.json movie_links.txt 5.排除文件 把需要排除的文件写入.gitignore
-5.定时任务 每5分钟检测
-(crontab -l ; echo &amp;#34;*/5 * * * * cd /www/wwwroot/你的站点目录 &amp;amp;&amp;amp; python3 check_movie_links.py quark_config.json movie_links.txt &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;#34;) | crontab -</description></item><item><title>Bing必应不收录网站或被K的解决办法</title><link>https://blog.taoshuge.eu.org/p/341/</link><pubDate>Tue, 15 Oct 2024 14:05:00 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/341/</guid><description>按照 Form 要求填写自己的名字、邮箱地址、以及遇到的问题
+5.定时任务 每2小时检测一次
+(crontab -l ; echo &amp;#34;0 */2 * * * cd /www/wwwroot/kua.123.top &amp;amp;&amp;amp; python3 check_movie_links.py quark_config.json movie_links.txt &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;#34;) | crontab -</description></item><item><title>Bing必应不收录网站或被K的解决办法</title><link>https://blog.taoshuge.eu.org/p/341/</link><pubDate>Tue, 15 Oct 2024 14:05:00 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/341/</guid><description>按照 Form 要求填写自己的名字、邮箱地址、以及遇到的问题
 例如我现在的问题是：my site is not indexed by Bing：
 打开以下网址提交信息：
 https://www.bing.com/webmasters/support
