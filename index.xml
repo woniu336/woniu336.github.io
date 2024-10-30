@@ -9,7 +9,15 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>低端影视夸克网盘追更脚本</title><link>https://blog.taoshuge.eu.org/p/348/</link><pubDate>Tue, 29 Oct 2024 22:05:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/348/</guid><description>使用方法 cd /www/wwwboot/123.com # 定位到站点目录，可以是静态 然后：
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>一键屏蔽恶意IP：自动化管理Nginx ASN封禁的完整方案</title><link>https://blog.taoshuge.eu.org/p/350/</link><pubDate>Thu, 31 Oct 2024 00:24:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/350/</guid><description>脚本适用范围：宝塔面板，如果你的不是，唯一区别就是路径改改即可
+每次查看服务器负载，发现高的离谱，一看是IDC的大量恶意IP扫描我的站点，因此根据网友的脚本制作了一版基于ASN的IP封禁。
+什么是ASN？ ASN（Autonomous System Number）是互联网上的自治系统编号，相当于网络服务商的唯一标识符。通过ASN，我们可以：
+快速识别流量来源 批量封禁特定服务商的IP段 有效防御来自特定IDC的恶意扫描 常见的ASN示例：
+AS14061 (DigitalOcean) - 知名云服务提供商 AS135377 (UCLOUD) - 国内云服务商 AS202306 (Hostinger) - 国际虚拟主机提供商 使用方法 1. 下载脚本 curl -sS -O htnginxasns://raw.githubusercontent.com/woniu336/open_shell/main/nginxasn.sh &amp;amp;&amp;amp; chmod +x nginxasn.sh &amp;amp;&amp;amp; ./nginxasn.sh 2. 添加需要封禁的ASN列表 这一步可选，因为默认的ASN基本足够，尤其是AS135377
+nano nginxasn.sh 编辑下方的部分，添加想要屏蔽的ASN号码即可，一行一个，不加AS字符
+asnlist=&amp;#34;135377 14061 202306 9318 12737&amp;#34; 3. 在Nginx配置中启用 在你的网站配置文件中添加：例如屏蔽AS135377则站点配置文件写
+include asnblock135377.conf; 其中135377是ASN号码的数字部分。
+include asnblock135377.conf; # UCLOUD include asnblock14061.conf; # DigitalOcean include asnblock202306.conf; # Hostinger include asnblock9318.conf; # SK Broadband include asnblock12737.</description></item><item><title>低端影视夸克网盘追更脚本</title><link>https://blog.taoshuge.eu.org/p/348/</link><pubDate>Tue, 29 Oct 2024 22:05:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/348/</guid><description>使用方法 cd /www/wwwboot/123.com # 定位到站点目录，可以是静态 然后：
 git clone https://github.com/woniu336/auto-update.git cd auto-update chmod +x run_all.sh chmod +x auto.sh &amp;amp;&amp;amp; ./auto.sh 功能 从低端影视网站页面爬取影片信息，并把夸克网盘资源转存到自己的夸克网盘并自动生成分享链接，最后在目录下生成html页面（见底下）
 可以设置定时转存更新
 注意：只有夸克网盘资源是你自己的（脚本会自动替换），百度和UC依然是低端影视分享出来的。
