@@ -9,7 +9,8 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>图床一个就够：自建腾讯图床gtimg</title><link>https://blog.taoshuge.eu.org/p/353/</link><pubDate>Mon, 04 Nov 2024 01:35:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/353/</guid><description>项目地址 https://github.com/woniu336/gtimg
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>图床一个就够：自建腾讯图床gtimg</title><link>https://blog.taoshuge.eu.org/p/353/</link><pubDate>Mon, 04 Nov 2024 01:35:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/353/</guid><description>需要在img标签加防盗链
+referrerpolicy=&amp;#34;no-referrer&amp;#34; 项目地址 https://github.com/woniu336/gtimg
 界面预览 特色：支持批量传图，粘贴上传，一键复制外链，备份，重命名
 为什么需要这个图床？ 在使用各大图床服务时，我们经常会遇到两个痛点：
 上传的图片往往没有备份 返回的文件名完全随机，难以管理 比如你上传了一张 风景.jpg，可能得到一个类似 https://qq.com/abc123.png 的链接。即使你有备份，要找到对应的原图也很困难。
