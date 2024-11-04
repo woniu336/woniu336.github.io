@@ -21,8 +21,9 @@ referrerpolicy=&amp;#34;no-referrer&amp;#34; 后台默认登录用户名和密�
 https://inews.gtimg.com/om_ls/OoGoIjnMKjvJeux0lY-wWDYDRB9LxidTHE_ak7FfBRaRkAA/0 备份文件会自动命名为：
 OoGoIjnMKjvJeux0lY-wWDYDRB9LxidTHE_ak7FfBRaRkAA 快速上手 1. 获取授权信息 首先需要获取腾讯开放媒体平台的 Cookie：
 访问 腾讯开放媒体平台 使用微信扫码登录 按 F12 打开开发者工具，找到 Cookie 信息 💡 重要提示：我们只需要 Cookie 中从 userid 开始的部分，例如：
-userid=23510990; omaccesstoken=xxx; omtoken=xxx; logintype=4; srcopenid=xxx; srcaccessToken=xxx 2. 配置图床 将获取到的 Cookie 填入 upload.php 文件中：
-private $token = &amp;#39;把上面获取到的Cookie粘贴在这里&amp;#39; 完成配置后，就可以开始使用图床服务了！</description></item><item><title>从此告别图床失效：一个几乎可以代理所有图床的工具！</title><link>https://blog.taoshuge.eu.org/p/352/</link><pubDate>Fri, 01 Nov 2024 13:40:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/352/</guid><description>原项目 Github: https://github.com/webp-sh/webp_server_go
+userid=23510990; omaccesstoken=xxx; omtoken=xxx; logintype=4; srcopenid=xxx; srcaccessToken=xxx 2. 配置图床 将获取到的 Cookie 填入 后台管理的Token 配置中
+完成配置后，就可以开始使用图床服务了！
+3. 数据备份方案 为了确保数据安全，我推荐使用 rclone 配合 Cloudflare R2 进行自动备份。以下是经过优化的备份命令：</description></item><item><title>从此告别图床失效：一个几乎可以代理所有图床的工具！</title><link>https://blog.taoshuge.eu.org/p/352/</link><pubDate>Fri, 01 Nov 2024 13:40:46 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/352/</guid><description>原项目 Github: https://github.com/webp-sh/webp_server_go
 根据此项目制作的脚本工具
 一键脚本：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/webp-server.sh &amp;amp;&amp;amp; chmod +x webp-server.sh &amp;amp;&amp;amp; ./webp-server.sh 是的，脚本又来了哈~
