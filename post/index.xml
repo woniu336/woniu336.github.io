@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 04 Nov 2024 01:35:55 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Nov 2024 14:34:55 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh ROOT私钥登录模式
@@ -9,7 +9,18 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>图床一个就够：自建腾讯图床gtimg</title><link>https://blog.taoshuge.eu.org/p/353/</link><pubDate>Mon, 04 Nov 2024 01:35:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/353/</guid><description>需要在img标签加防盗链
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>CloudFlare 重定向教程</title><link>https://blog.taoshuge.eu.org/p/354/</link><pubDate>Tue, 05 Nov 2024 14:34:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/354/</guid><description>引言 看到这篇文章的哥们，不知道你有没有这样的需求？
+我有一个老的域名 old.com 不用了，想要把流量全部引入到 new.com 中。这很简单，使用 301 或者 302 重定向。那用什么实现呢？最常见的是 Nginx，宝塔中有快捷设置。
+但是这样成本就起来了，为了一个重定向还要单独一台服务器。而且，如果旧域名访问量多，也会给服务器带来负担。
+这个时候 Cloudflare 无疑是一个绝佳选择。
+准备工作 1、保证自己的域名处于“已代理”状态，这样后续的相关规则才能够生效。
+2、入口，创建自己的规则
+3、主机匹配，也就是添加条件，只让规定域名进行跳转
+场景匹配 这是重头戏，也是最核心的部分。因为重定向涉及到是否保留路径，是否需要重写路径。
+1. 不保留路径 2. 保留路径 选择动态，表达式为
+concat(&amp;#34;https://www.skyqian.com&amp;#34;, http.request.uri.path) 3. 重写路径 假如我想让 https://static.2ge.org/tg/xxxx.png 重定向到 https://telegra.ph/file/xxxx.png
+concat(&amp;#34;https://telegra.ph/file&amp;#34;, substring(http.request.uri.path, 3)) 结语 以上三种情况，可以覆盖大部分场景。一些细节部分需要自己多留心，此教程的基础是懂一点点编程的，其中比如 substring 的参数问题就是一个字符串截取。如果不太明白就照猫画虎吧，也问题不大。
+转自：https://www.skyqian.com/archives/cloudflare-redirect.html</description></item><item><title>图床一个就够：自建腾讯图床gtimg</title><link>https://blog.taoshuge.eu.org/p/353/</link><pubDate>Mon, 04 Nov 2024 01:35:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/353/</guid><description>需要在img标签加防盗链
 referrerpolicy=&amp;#34;no-referrer&amp;#34; 后台默认登录用户名和密码：admin/admin123
 修改密码：config.php
 项目地址 https://github.com/woniu336/gtimg
