@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Nov 2024 14:34:55 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.leshans.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.leshans.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 07 Nov 2024 04:38:18 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.leshans.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.leshans.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh ROOT私钥登录模式
@@ -9,7 +9,13 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>CloudFlare 重定向教程</title><link>https://blog.leshans.eu.org/p/354/</link><pubDate>Tue, 05 Nov 2024 14:34:55 +0800</pubDate><guid>https://blog.leshans.eu.org/p/354/</guid><description>引言 看到这篇文章的哥们，不知道你有没有这样的需求？
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>ovh监控脚本</title><link>https://blog.leshans.eu.org/p/355/</link><pubDate>Thu, 07 Nov 2024 04:38:18 +0800</pubDate><guid>https://blog.leshans.eu.org/p/355/</guid><description>下载脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/script.sh &amp;amp;&amp;amp; chmod +x script.sh 运行 nohup ./script.sh normal &amp;gt; ovh_monitor.log 2&amp;gt;&amp;amp;1 &amp;amp; 查看进程
+ps aux | grep script.sh 停止脚本
+kill &amp;lt;进程ID&amp;gt; 查看日志
+tail -f ovh_monitor.log 购买地址 https://eco.ovhcloud.com/fr/?display=list&amp;range=kimsufi
+https://eco.ovhcloud.com/en-ie/
+亚洲区：
+https://eco.ovhcloud.com/asia/kimsufi/ks-le-b/</description></item><item><title>CloudFlare 重定向教程</title><link>https://blog.leshans.eu.org/p/354/</link><pubDate>Tue, 05 Nov 2024 14:34:55 +0800</pubDate><guid>https://blog.leshans.eu.org/p/354/</guid><description>引言 看到这篇文章的哥们，不知道你有没有这样的需求？
 我有一个老的域名 old.com 不用了，想要把流量全部引入到 new.com 中。这很简单，使用 301 或者 302 重定向。那用什么实现呢？最常见的是 Nginx，宝塔中有快捷设置。
 但是这样成本就起来了，为了一个重定向还要单独一台服务器。而且，如果旧域名访问量多，也会给服务器带来负担。
 这个时候 Cloudflare 无疑是一个绝佳选择。
