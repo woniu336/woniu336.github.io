@@ -244,8 +244,9 @@ pip3 install python-crontab 下载脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/php-s.py &amp;amp;&amp;amp; chmod +x php-s.py python3 php-s.py 删除的可疑php文件保存在/tmp/suspicious_files 监控记录日志/tmp/scan_history.log 这个脚本的主功能是：
 自动监控多个网站目录中的PHP文件，检测并删除包含高风险域名的代码，同时识别未授权的新增PHP文件并采取相应措施，通过钉钉实时通知管理员异常情况，从而提高网站安全性。
 脚本功能：
-自动删除包含高风险域名的代码行 检测并删除未经授权的新增PHP文件 通过钉钉实时通知管理员异常情况 定时任务 每分钟检测一次
-(crontab -l ; echo &amp;#34;* * * * * /root/php-malware-scanner.</description></item><item><title>完美的宝塔面板防御策略，基于fail2ban</title><link>https://blog.leshans.eu.org/p/327/</link><pubDate>Tue, 17 Sep 2024 01:33:58 +0800</pubDate><guid>https://blog.leshans.eu.org/p/327/</guid><description>之前分享过宝塔面板配合fail2ban，以及开启cloudflare的cdn双重防御的教程，并制作了便捷的脚本 这次不靠cloudflare的减速cdn，看看防御效果怎么样 系统环境 debian/ubuntu
+自动删除包含高风险域名的代码行 检测并删除未经授权的新增PHP文件 通过钉钉实时通知管理员异常情况 监控脚本 每5秒监控一次
+cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/scanner_loop.sh 权限
+chmod +x /root/scanner_loop.</description></item><item><title>完美的宝塔面板防御策略，基于fail2ban</title><link>https://blog.leshans.eu.org/p/327/</link><pubDate>Tue, 17 Sep 2024 01:33:58 +0800</pubDate><guid>https://blog.leshans.eu.org/p/327/</guid><description>之前分享过宝塔面板配合fail2ban，以及开启cloudflare的cdn双重防御的教程，并制作了便捷的脚本 这次不靠cloudflare的减速cdn，看看防御效果怎么样 系统环境 debian/ubuntu
 nginx
 宝塔面板
 注意要点 1.在宝塔面板开启站点日志 2.添加服务器白名单 以下设置钉钉的目的是有拦截的时候通知你，是可选的，可以不用通知看个人
