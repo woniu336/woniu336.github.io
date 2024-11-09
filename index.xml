@@ -9,7 +9,8 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>自动监控、隔离可疑PHP文件的Bash脚本工具</title><link>https://blog.taoshuge.eu.org/p/357/</link><pubDate>Sat, 09 Nov 2024 21:02:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/357/</guid><description>下载脚本 cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/block_php.sh 赋予权限
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>自动监控、隔离可疑PHP文件的Bash脚本工具</title><link>https://blog.taoshuge.eu.org/p/357/</link><pubDate>Sat, 09 Nov 2024 21:02:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/357/</guid><description>注意：仅监控没有php文件的目录
+下载脚本 cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/block_php.sh 赋予权限
 chmod +x /root/block_php.sh 运行 前台运行,记得先修改检测目录和设置钉钉通知，记得把ip加入到钉钉的IP地址（段）
 ./block_php.sh 后台运行
 nohup ./block_php.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp; 启动服务 创建系统服务：
