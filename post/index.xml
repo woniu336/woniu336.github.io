@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 08 Nov 2024 20:56:35 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 09 Nov 2024 21:02:41 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh ROOT私钥登录模式
@@ -9,7 +9,13 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>V.PS 库存监控脚本使用教程</title><link>https://blog.taoshuge.eu.org/p/356/</link><pubDate>Fri, 08 Nov 2024 20:56:35 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/356/</guid><description> 仅监控阿姆斯特丹(Amsterdam)9.95欧pro配置
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>自动监控、隔离可疑PHP文件的Bash脚本工具</title><link>https://blog.taoshuge.eu.org/p/357/</link><pubDate>Sat, 09 Nov 2024 21:02:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/357/</guid><description>下载脚本 cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/block_php.sh 运行 前台运行
+./block_php.sh 后台运行
+nohup ./block_php.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp; 启动服务 创建系统服务：
+nano /etc/systemd/system/block-php.service 写入
+[Unit] Description=Block PHP Files Monitor After=network.target [Service] Type=simple ExecStart=/root/block_php.sh Restart=always User=root [Install] WantedBy=multi-user.target 启动服务：
+systemctl daemon-reload systemctl enable block-php.service systemctl start block-php.service 监控脚本运行状态：
+# 查看服务状态 systemctl status block-php.service # 查看日志 tail -f /var/log/php_block.log # 查看系统日志 journalctl -u block-php.service 停止服务 # 停止服务 sudo systemctl stop block-php.service # 禁用开机自启 sudo systemctl disable block-php.</description></item><item><title>V.PS 库存监控脚本使用教程</title><link>https://blog.taoshuge.eu.org/p/356/</link><pubDate>Fri, 08 Nov 2024 20:56:35 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/356/</guid><description> 仅监控阿姆斯特丹(Amsterdam)9.95欧pro配置
 需要配置钉钉通知
 1. 下载文件 首先需要创建目录并下载所需文件：
 创建目录
