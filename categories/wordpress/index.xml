@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wordpress on 浩瀚笔记</title><link>https://blog.leshans.eu.org/categories/wordpress/</link><description>Recent content in Wordpress on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 02 Aug 2024 06:00:48 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/categories/wordpress/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenLiteSpeed 访问ip跳转404</title><link>https://blog.leshans.eu.org/p/295/</link><pubDate>Fri, 02 Aug 2024 06:00:48 +0800</pubDate><guid>https://blog.leshans.eu.org/p/295/</guid><description>修改 OpenLiteSpeed 的配置 找到配置文件路径：例如我的ip是2.2.2.2
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wordpress on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/categories/wordpress/</link><description>Recent content in Wordpress on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 02 Aug 2024 06:00:48 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/categories/wordpress/index.xml" rel="self" type="application/rss+xml"/><item><title>OpenLiteSpeed 访问ip跳转404</title><link>https://blog.taoshuge.eu.org/p/295/</link><pubDate>Fri, 02 Aug 2024 06:00:48 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/295/</guid><description>修改 OpenLiteSpeed 的配置 找到配置文件路径：例如我的ip是2.2.2.2
 cd /usr/local/lsws/conf/vhosts/2.2.2.2/ 编辑vhost.conf文件，
 nano vhost.conf 写入如下内容：
 # 虚拟主机配置 docRoot $VH_ROOT/public_html vhDomain $VH_NAME vhAliases www.$VH_NAME adminEmails $VH_ADMIN_EMAIL enableGzip 1 enableIpGeo 1 # 重写规则 rewrite { enable 1 rules &amp;lt;&amp;lt;&amp;lt;END_RULES # 检查是否是通过 IP 地址访问 RewriteCond %{HTTP_HOST} ^[0-9.]+$ # 如果是 IP 访问，重定向到 404 页面 RewriteRule ^ /404.html [L] END_RULES } # 错误页面配置 errordoc 404 { url /404.html } 新建404页面
 cd /home/2.2.2.2/public_html/ #回到ip目录 touch 404.html 写入内容：
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh-CN&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description></item><item><title>cyberpanel重写规则</title><link>https://blog.leshans.eu.org/p/293/</link><pubDate>Thu, 01 Aug 2024 22:57:07 +0800</pubDate><guid>https://blog.leshans.eu.org/p/293/</guid><description>cyberpanel防盗链设置 主页——网站——网站列表，选择对应网站，点击管理——重写规则
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh-CN&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1.</description></item><item><title>cyberpanel重写规则</title><link>https://blog.taoshuge.eu.org/p/293/</link><pubDate>Thu, 01 Aug 2024 22:57:07 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/293/</guid><description>cyberpanel防盗链设置 主页——网站——网站列表，选择对应网站，点击管理——重写规则
 RewriteEngine On RewriteCond %{HTTP_REFERER} !^https://(cdn.)?xxx.org [NC] RewriteRule .(jpg|jpeg|png|gif|webp|js|css)$ - [NC,F] 这条规则的意思是：
 阻止所有不是来自 xxx.org 主域名或其 CDN 子域名的请求访问网站的图片、JavaScript 和 CSS 文件，以防止资源被其他网站盗用。
 域名跳转到新域名 如果不保留原始的URL路径，把$1去掉即可
@@ -14,7 +14,7 @@ RewriteEngine On RewriteCond %{HTTPS} !=on RewriteRule ^/?(.*) https://%{SERVER_
 https://uutool.cn/url-redirect/
 反向代理 还是在cyberpanel面板修改规则，但是portainer这部分需要在OpenLiteSpeed 面板设置
 REWRITERULE ^(.*)$ HTTP://portainer/$1 [P] portainer：外部应用程序名称 在openlitespeed 里设置
-导航到服务器 &amp;ndash; 外部应用程序 &amp;ndash; 添加 &amp;ndash;网络服务器</description></item><item><title>cyberpanel面板和openlitespeed设置</title><link>https://blog.leshans.eu.org/p/292/</link><pubDate>Thu, 01 Aug 2024 13:40:48 +0800</pubDate><guid>https://blog.leshans.eu.org/p/292/</guid><description>安装cyberpanel openlitespeed设置 管理界面账号密码
+导航到服务器 &amp;ndash; 外部应用程序 &amp;ndash; 添加 &amp;ndash;网络服务器</description></item><item><title>cyberpanel面板和openlitespeed设置</title><link>https://blog.taoshuge.eu.org/p/292/</link><pubDate>Thu, 01 Aug 2024 13:40:48 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/292/</guid><description>安装cyberpanel openlitespeed设置 管理界面账号密码
 sudo /usr/local/lsws/admin/misc/admpass.sh 查看密码 (如果之前更改过密码则无效)
 cd /usr/local/lsws cat adminpasswd IP使用自签证书
 防止IP泄露SSL证书，导致别人可以通过这种方式反查到你的源站
@@ -24,7 +24,7 @@ cat /opt/signcert/OpenLiteSpeed-cert.pem &amp;gt; /usr/local/lsws/admin/conf/web
 /opt/signcert/OpenLiteSpeed-key.pem /opt/signcert/OpenLiteSpeed-cert.pem 屏蔽Censys 导航到服务器&amp;ndash;安全&amp;ndash;访问控制&amp;ndash;拒绝列表
 162.142.125.0/24, 167.94.138.0/24, 167.94.145.0/24, 167.94.146.0/24, 167.248.133.0/24, 199.45.154.0/24, 199.45.155.0/24, 2602:80d:1000:b0cc:e::/80, 2620:96:e000:b0cc:e::/80 用户代理的屏蔽
 Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/) 禁用xmlrpc.php 导航到虚拟主机&amp;ndash;资源集&amp;ndash;类型Static 编辑&amp;ndash;重写规则，填入如下内容
-RewriteRule ^(xmlrpc\.php|wp-trackback\.php) - [F,L] 其他优化：https://www.</description></item><item><title>wordpress搭建经验</title><link>https://blog.leshans.eu.org/p/290/</link><pubDate>Tue, 30 Jul 2024 14:43:41 +0800</pubDate><guid>https://blog.leshans.eu.org/p/290/</guid><description>服务器选择 插件 LiteSpeed ##缓存
+RewriteRule ^(xmlrpc\.php|wp-trackback\.php) - [F,L] 其他优化：https://www.</description></item><item><title>wordpress搭建经验</title><link>https://blog.taoshuge.eu.org/p/290/</link><pubDate>Tue, 30 Jul 2024 14:43:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/290/</guid><description>服务器选择 插件 LiteSpeed ##缓存
 UpdraftPlus ##备份还原
 Better Search Replace ##在WordPress数据库上运行搜索/替换
 显示访客真实IP 显示真实游客 IP，而不是 CloudFlare IP
@@ -35,7 +35,7 @@ mkdir -p /home/5k.92dm.top/public_html/.well-known/acme-challenge 虚拟主机&a
 url: /.well-known/acme-challenge
 位置：/home/5k.92dm.top/public_html/.well-known/acme-challenge
 可访问：是
-申请证书 certbot certonly --non-interactive --agree-tos -m demo@gmail.com --webroot -w /home/catpdf.org/public_html/ -d catpdf.</description></item><item><title>纯代码免插件优化WordPress6.3实现0sql-强化拓展</title><link>https://blog.leshans.eu.org/p/113/</link><pubDate>Sun, 17 Dec 2023 14:47:53 +0000</pubDate><guid>https://blog.leshans.eu.org/p/113/</guid><description>在WordPress各种优化插件、各种手段层出不穷的时代，各方大佬均在推荐各类插件，比如super cache、cache master和litespeed cache等。不过对于老白博客个人而言，就想图个清净，不喜欢插件太多，设置一大堆，复杂！所以呢，今天就掏出一个“无代码版”优化WordPress（强化拓展），再结合最新版本的WordPress6.3，轻松实现首页0sql，网站毫秒级加载。
+申请证书 certbot certonly --non-interactive --agree-tos -m demo@gmail.com --webroot -w /home/catpdf.org/public_html/ -d catpdf.</description></item><item><title>纯代码免插件优化WordPress6.3实现0sql-强化拓展</title><link>https://blog.taoshuge.eu.org/p/113/</link><pubDate>Sun, 17 Dec 2023 14:47:53 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/113/</guid><description>在WordPress各种优化插件、各种手段层出不穷的时代，各方大佬均在推荐各类插件，比如super cache、cache master和litespeed cache等。不过对于老白博客个人而言，就想图个清净，不喜欢插件太多，设置一大堆，复杂！所以呢，今天就掏出一个“无代码版”优化WordPress（强化拓展），再结合最新版本的WordPress6.3，轻松实现首页0sql，网站毫秒级加载。
 1.batcache效果演示 演示网站：https://test.xcbtmw.com/
 网站底部就能看到（未使用前首页查询次数为63）：
 附带一个显示查询次数和时间的代码

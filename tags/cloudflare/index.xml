@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CloudFlare on 浩瀚笔记</title><link>https://blog.leshans.eu.org/tags/cloudflare/</link><description>Recent content in CloudFlare on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Nov 2024 14:34:55 +0800</lastBuildDate><atom:link href="https://blog.leshans.eu.org/tags/cloudflare/index.xml" rel="self" type="application/rss+xml"/><item><title>CloudFlare 重定向教程</title><link>https://blog.leshans.eu.org/p/354/</link><pubDate>Tue, 05 Nov 2024 14:34:55 +0800</pubDate><guid>https://blog.leshans.eu.org/p/354/</guid><description>引言 看到这篇文章的哥们，不知道你有没有这样的需求？
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CloudFlare on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/cloudflare/</link><description>Recent content in CloudFlare on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Nov 2024 14:34:55 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/cloudflare/index.xml" rel="self" type="application/rss+xml"/><item><title>CloudFlare 重定向教程</title><link>https://blog.taoshuge.eu.org/p/354/</link><pubDate>Tue, 05 Nov 2024 14:34:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/354/</guid><description>引言 看到这篇文章的哥们，不知道你有没有这样的需求？
 我有一个老的域名 old.com 不用了，想要把流量全部引入到 new.com 中。这很简单，使用 301 或者 302 重定向。那用什么实现呢？最常见的是 Nginx，宝塔中有快捷设置。
 但是这样成本就起来了，为了一个重定向还要单独一台服务器。而且，如果旧域名访问量多，也会给服务器带来负担。
 这个时候 Cloudflare 无疑是一个绝佳选择。
@@ -9,11 +9,11 @@
 1. 不保留路径 2. 保留路径 选择动态，表达式为
 concat(&amp;#34;https://www.skyqian.com&amp;#34;, http.request.uri.path) 3. 重写路径 假如我想让 https://static.2ge.org/tg/xxxx.png 重定向到 https://telegra.ph/file/xxxx.png
 concat(&amp;#34;https://telegra.ph/file&amp;#34;, substring(http.request.uri.path, 3)) 结语 以上三种情况，可以覆盖大部分场景。一些细节部分需要自己多留心，此教程的基础是懂一点点编程的，其中比如 substring 的参数问题就是一个字符串截取。如果不太明白就照猫画虎吧，也问题不大。
-转自：https://www.skyqian.com/archives/cloudflare-redirect.html</description></item><item><title>Cloudflare防火墙其他WAF设置</title><link>https://blog.leshans.eu.org/p/247/</link><pubDate>Tue, 30 Apr 2024 11:46:45 +0000</pubDate><guid>https://blog.leshans.eu.org/p/247/</guid><description>其他WAF设置 缓存设置 缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。
+转自：https://www.skyqian.com/archives/cloudflare-redirect.html</description></item><item><title>Cloudflare防火墙其他WAF设置</title><link>https://blog.taoshuge.eu.org/p/247/</link><pubDate>Tue, 30 Apr 2024 11:46:45 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/247/</guid><description>其他WAF设置 缓存设置 缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。
 缓存设置是在多个位置进行的。下面大家看截图就好。
 创建静态文件的缓存规则 表达式:
 (http.request.full_uri contains &amp;#34;.gif&amp;#34;) or (http.request.full_uri contains &amp;#34;.js&amp;#34;) or (http.request.full_uri contains &amp;#34;.css&amp;#34;) or (http.request.full_uri contains &amp;#34;.woff2&amp;#34;) or (http.request.full_uri contains &amp;#34;.webp&amp;#34;) or (http.request.full_uri contains &amp;#34;.png&amp;#34;) or (http.request.full_uri contains &amp;#34;.jpg&amp;#34;) or (http.request.full_uri contains &amp;#34;.jpeg&amp;#34;) 缓存时间看个人情况
-开启Tiered Cache 页面规则 关闭洋葱路由 Scrape Shield</description></item><item><title>Fail2Ban对接cloudflare防火墙技巧</title><link>https://blog.leshans.eu.org/p/245/</link><pubDate>Sat, 27 Apr 2024 18:12:04 +0000</pubDate><guid>https://blog.leshans.eu.org/p/245/</guid><description>我的大部分教程或者叫笔记,除了给自己看,考虑到其他朋友也会看到,本着简洁明白的原则,我基本上会制作一些快捷脚本,方便大家使用,本次脚本,我针对使用宝塔面板的朋友,当然,使用什么看个人情况,你可以更改我的脚本,已达到适合你的方式
+开启Tiered Cache 页面规则 关闭洋葱路由 Scrape Shield</description></item><item><title>Fail2Ban对接cloudflare防火墙技巧</title><link>https://blog.taoshuge.eu.org/p/245/</link><pubDate>Sat, 27 Apr 2024 18:12:04 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/245/</guid><description>我的大部分教程或者叫笔记,除了给自己看,考虑到其他朋友也会看到,本着简洁明白的原则,我基本上会制作一些快捷脚本,方便大家使用,本次脚本,我针对使用宝塔面板的朋友,当然,使用什么看个人情况,你可以更改我的脚本,已达到适合你的方式
 fail2ban原理 Fail2ban通过监视日志文件，检测并阻止恶意登录尝试和攻击.
 当Fail2ban检测到系统日志中的恶意行为模式时，它会自动阻止攻击者的IP地址，以保护系统安全。
 安装fail2ban Debian/Ubuntu安装
@@ -28,7 +28,7 @@ systemctl status fail2ban 按键盘 q 退出
 对接Cloudflare 以下脚本适用于宝塔面板建站的朋友
 一键脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/fail2ban.sh &amp;amp;&amp;amp; chmod +x fail2ban.sh &amp;amp;&amp;amp; ./fail2ban.sh 国内机器
-curl -sS -O https://gitee.</description></item><item><title>超简单利用 CloudFlare Api 宕机自动切换ip，并开启小云朵(cdn)</title><link>https://blog.leshans.eu.org/p/221/</link><pubDate>Mon, 01 Apr 2024 09:49:35 +0000</pubDate><guid>https://blog.leshans.eu.org/p/221/</guid><description>脚本 使用了这个脚本，后面的内容可以不看了，
+curl -sS -O https://gitee.</description></item><item><title>超简单利用 CloudFlare Api 宕机自动切换ip，并开启小云朵(cdn)</title><link>https://blog.taoshuge.eu.org/p/221/</link><pubDate>Mon, 01 Apr 2024 09:49:35 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/221/</guid><description>脚本 使用了这个脚本，后面的内容可以不看了，
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 首先获取API密钥 登录cloudflare
 https://dash.cloudflare.com/profile/api-tokens
 获取：Global API Key
@@ -43,10 +43,10 @@ wget https://gitee.com/dayu777/open_shell/raw/main/dns_update/dns_update.sh &amp
 注意：原始ip就是正在使用的IP，检测到宕机后切换ip就是备用ip，要检测哪个端口号看你的需求，
 ./dns_update.sh 完成后，会将信息录入dns_update.py脚本
 运行dns_update.py 终端输入：
-chmod +x dns_update.py python3 dns_update.</description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.leshans.eu.org/p/126/</link><pubDate>Wed, 17 Jan 2024 04:53:36 +0000</pubDate><guid>https://blog.leshans.eu.org/p/126/</guid><description>添加防火墙规则表达式 复制代码即可 第一：恶意流量阻止 操作：托管质询
+chmod +x dns_update.py python3 dns_update.</description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/p/126/</link><pubDate>Wed, 17 Jan 2024 04:53:36 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/126/</guid><description>添加防火墙规则表达式 复制代码即可 第一：恶意流量阻止 操作：托管质询
 (cf.threat_score ge 5 and not cf.client.bot) or (not http.request.version in {&amp;#34;HTTP/1.2&amp;#34; &amp;#34;HTTP/2&amp;#34; &amp;#34;HTTP/3&amp;#34; &amp;#34;SPDY/3.1&amp;#34;}) or (not http.user_agent contains &amp;#34;Mozilla/&amp;#34;) 第二：放行爬虫（seo） 操作：跳过
 (cf.client.bot) or (http.user_agent contains &amp;#34;duckduckgo&amp;#34;) or (http.user_agent contains &amp;#34;facebookexternalhit&amp;#34;) or (http.user_agent contains &amp;#34;Feedfetcher-Google&amp;#34;) or (http.user_agent contains &amp;#34;LinkedInBot&amp;#34;) or (http.user_agent contains &amp;#34;Mediapartners-Google&amp;#34;) or (http.user_agent contains &amp;#34;msnbot&amp;#34;) or (http.user_agent contains &amp;#34;Slackbot&amp;#34;) or (http.user_agent contains &amp;#34;TwitterBot&amp;#34;) or (http.user_agent contains &amp;#34;ia_archive&amp;#34;) or (http.user_agent contains &amp;#34;yahoo&amp;#34;) 第三：其他 跳过源站IP、区域或国家阻止
-CF的WAF的防火墙规则！</description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.leshans.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</link><pubDate>Sat, 23 Dec 2023 12:14:09 +0000</pubDate><guid>https://blog.leshans.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</guid><description>为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？ 当你接入Cloudflare的CDN，并点亮小云朵之后。你的网站就已经通过Cloudflare的CDN节点进行中转了。默认情况下，Cloudflare 会对你网站中的图片、JS、CSS文件等静态文件进行缓存。
+CF的WAF的防火墙规则！</description></item><item><title>Cloudflare 页面缓存（Page Rules）优化WordPress全站缓存配置规则</title><link>https://blog.taoshuge.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</link><pubDate>Sat, 23 Dec 2023 12:14:09 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/cloudflare-%E9%A1%B5%E9%9D%A2%E7%BC%93%E5%AD%98page-rules%E4%BC%98%E5%8C%96wordpress%E5%85%A8%E7%AB%99%E7%BC%93%E5%AD%98%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99/</guid><description>为什么要设置Cloudflare的页面规则 （Page Rules）进行全站缓存？ 当你接入Cloudflare的CDN，并点亮小云朵之后。你的网站就已经通过Cloudflare的CDN节点进行中转了。默认情况下，Cloudflare 会对你网站中的图片、JS、CSS文件等静态文件进行缓存。
 当访客访问你网站页面的时候，所有的静态文件都是由Cloudflare的节点直接给到访客的，但是HTML文件是默认不缓存的。也就意味着访客访问你的某一页面的时候。仍然会回源你的服务器。
 所以，本篇文章就是教你如何使用Cloudflare的页面规则（Page Rules）把整个HTML页面给缓存。 使访客访问被缓存的页面的时候，直接交由Cloudflare进行服务，甚至你的源服务器不会收到任何GET请求。
 这样做的好处是，可以大大减少源服务器的负载开支，使得你的站点能够承载更多的访客及流量。
@@ -66,7 +66,7 @@ Cloudflare的缓存机制 假设你的站点有 www.renao.org/1.html 和 www.ren
 好了，冗长的理论知识讲完了，我们来进行实战。 这里以Wordpress源站举例，来详细讲解如何设置页面规则才能够进行全站缓存。
 一、Cloudflare 页面规则 免费版3条规则配置 由于Cloudflare免费版只提供了三条免费的规则，所以我们的想法有很多，但是真正实现起来肯定要有所取舍。下面提供了三种陌涛小站测试过的方法。根据你网站的具体情况选择即可。
 在所有的规则配置中，“*”代表通配符，另外，规则注意上下排序。默认从第一条规则顺延到第二条规则，然后才是第三条规则。具体请参照以下【三种方法】的详细配置说明。
-方法一、常规无人值守方法（网上流传配置方法） .imotao.xyz/wp-login .imotao.xyz/wp-admin .</description></item><item><title>新版 CloudFlare CDN 防攻击设置</title><link>https://blog.leshans.eu.org/p/%E6%96%B0%E7%89%88-cloudflare-cdn-%E9%98%B2%E6%94%BB%E5%87%BB%E8%AE%BE%E7%BD%AE/</link><pubDate>Sat, 23 Dec 2023 06:45:21 +0000</pubDate><guid>https://blog.leshans.eu.org/p/%E6%96%B0%E7%89%88-cloudflare-cdn-%E9%98%B2%E6%94%BB%E5%87%BB%E8%AE%BE%E7%BD%AE/</guid><description>前段时间网站一直被攻击，然后博主扛不住了搬去了 CloudFlare 。初期因为设置问题，攻击还是透过了CloudFlare 打到了源站。后面经过多次的设置后已经可以完全阻止攻击请求了。下面给大家分享下我的设置，如果你的网站被攻击了，可以根据自己的实际情况微调修改下。
+方法一、常规无人值守方法（网上流传配置方法） .imotao.xyz/wp-login .imotao.xyz/wp-admin .</description></item><item><title>新版 CloudFlare CDN 防攻击设置</title><link>https://blog.taoshuge.eu.org/p/%E6%96%B0%E7%89%88-cloudflare-cdn-%E9%98%B2%E6%94%BB%E5%87%BB%E8%AE%BE%E7%BD%AE/</link><pubDate>Sat, 23 Dec 2023 06:45:21 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E6%96%B0%E7%89%88-cloudflare-cdn-%E9%98%B2%E6%94%BB%E5%87%BB%E8%AE%BE%E7%BD%AE/</guid><description>前段时间网站一直被攻击，然后博主扛不住了搬去了 CloudFlare 。初期因为设置问题，攻击还是透过了CloudFlare 打到了源站。后面经过多次的设置后已经可以完全阻止攻击请求了。下面给大家分享下我的设置，如果你的网站被攻击了，可以根据自己的实际情况微调修改下。
 1.设置前说明 网站程序为WordPress，不同程序可能需要微调下策略。
 CloudFlare免费版默认设置是针对整个域名的，如果你有其他二级域名站点，需要注意下这个策略对你其他站点有没有影响。
 在你使用CloudFlare前确保你的源站IP没有暴露，否则对方可以直接指定hosts到你的源站IP，CloudFlare就形同虚设。
@@ -107,7 +107,7 @@ CloudFlare会分析请求是否是DDOS，对于符合的请求我们可以选择
 创建一个静态文件的缓存规则。
 [
 [
-[</description></item><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://blog.leshans.eu.org/p/picgo-%E7%99%BD%E5%AB%96cloudflare-r2%E5%AD%98%E5%82%A8%E5%81%9A%E5%9B%BE%E5%BA%8A/</link><pubDate>Sun, 20 Aug 2023 05:05:54 +0000</pubDate><guid>https://blog.leshans.eu.org/p/picgo-%E7%99%BD%E5%AB%96cloudflare-r2%E5%AD%98%E5%82%A8%E5%81%9A%E5%9B%BE%E5%BA%8A/</guid><description>前言 Cloudflare R2存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。Cloudflare R2存储流量不收费，收费的是存储空间和请求次数。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。
+[</description></item><item><title>PICGO+白嫖Cloudflare R2存储做图床</title><link>https://blog.taoshuge.eu.org/p/picgo-%E7%99%BD%E5%AB%96cloudflare-r2%E5%AD%98%E5%82%A8%E5%81%9A%E5%9B%BE%E5%BA%8A/</link><pubDate>Sun, 20 Aug 2023 05:05:54 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/picgo-%E7%99%BD%E5%AB%96cloudflare-r2%E5%AD%98%E5%82%A8%E5%81%9A%E5%9B%BE%E5%BA%8A/</guid><description>前言 Cloudflare R2存储允许开发人员存储大量非结构化数据，而无需支付与典型云存储服务相关的昂贵出口带宽费用。Cloudflare R2存储流量不收费，收费的是存储空间和请求次数。A类操作和B类操作分开收费，上传属于A类操作，下载和访问属于B类操作。
 免费 付费 - 费率 贮存 10 GB/月 每月 0.015 美元/GB A 类操作 每月 100 万个请求 4.50 美元/百万请求 B 类操作 每月 1000 万个请求 0.36 美元/百万请求 也就是说，可以免费存储10G的文件，每个月可以上传100万次，访问1000万次，假如用作图床，一般是用不到这个量级的。并且可以绑定自定义域名，套用页面规则以后可以设置浏览器缓存，这样可以减少一些请求次数并且可以防止被人刷请求次数导致一晚上过去，房子就不属于自己了。不自定义域名也是可以的，也就是说你甚至不需要拥有域名就可以拥有一个图床。
 存储也是比较便宜的，超出10G以后，1G文件基本上每个月只要1毛人民币。当然和B2那种5刀一个月1T是没法比的，用作图床的话还有种阿里云国际的OSS的40G年付包也是比较有性价比，这里扯远了。下面详细说一下怎么白嫖R2做图床。
 本文的图就放在R2上，只不过域名是自定义的。
