@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Nov 2024 01:33:58 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Nov 2024 06:30:56 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh ROOT私钥登录模式
@@ -9,7 +9,22 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>指定ip仅cloudflare能访问</title><link>https://blog.taoshuge.eu.org/p/358/</link><pubDate>Mon, 11 Nov 2024 01:33:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/358/</guid><description>解释：只有把域名托管到cloudflare，并且开启了cdn（小云朵）的网站才能访问，可以有效防止真实服务器 IP 被探测到
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>清除恶意代码和锁住文件</title><link>https://blog.taoshuge.eu.org/p/359/</link><pubDate>Mon, 11 Nov 2024 06:30:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/359/</guid><description>下载脚本 cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/clean_html.py cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/lock_p.sh 权限
+chmod +x /root/{clean_html.py,lock_p.sh} 修改脚本 在脚本中修改要检测和清除的代码，以及目录，这很简单略过
+执行脚本 如果是宝塔面板，在后台&amp;ndash;计划任务&amp;ndash;添加shell命令
+锁住文件
+cd ~ &amp;amp;&amp;amp; sudo ./lock_p.sh lock 解锁文件
+cd ~ &amp;amp;&amp;amp; sudo ./lock_p.sh unlock 删除恶意代码
+cd ~ &amp;amp;&amp;amp; python3 clean_html.py 手动 首先切换到目标目录的上级目录
+cd /www/wwwroot
+修改目录的权限为只读(555)
+chmod 555 123.com
+修改目录下所有文件的权限为只读(444)
+chmod -R 444 123.com/*
+如果需要确保root用户也无法修改，可以添加chattr命令
+chattr +i -R 123.com
+如果之后需要修改文件，需要先恢复权限：
+chattr -i -R 123.com # 如果使用了chattr chmod -R 755 123.com # 恢复目录权限 chmod -R 644 123.</description></item><item><title>指定ip仅cloudflare能访问</title><link>https://blog.taoshuge.eu.org/p/358/</link><pubDate>Mon, 11 Nov 2024 01:33:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/358/</guid><description>解释：只有把域名托管到cloudflare，并且开启了cdn（小云朵）的网站才能访问，可以有效防止真实服务器 IP 被探测到
 在运营网站的过程中，安全始终是一个永恒的话题。即便我们使用了 Cloudflare 这样的 CDN 服务，但如果配置不当，真实 IP 依然有可能泄露。
 想象一下这个场景：你的网站正在使用 Cloudflare CDN，看似很安全。但是有一天，你突然发现服务器负载异常，网站响应缓慢。经过排查，你惊讶地发现有大量的直接 IP 访问请求，绕过了 CDN 的防护。这意味着你的服务器真实 IP 已经泄露了。
 这种情况并不罕见，IP 可能通过多种途径泄露：

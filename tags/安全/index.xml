@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/%E5%AE%89%E5%85%A8/</link><description>Recent content in 安全 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Nov 2024 06:30:56 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>清除恶意代码和锁住文件</title><link>https://blog.taoshuge.eu.org/p/359/</link><pubDate>Mon, 11 Nov 2024 06:30:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/359/</guid><description>下载脚本 cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/clean_html.py cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/lock_p.sh 权限
+chmod +x /root/{clean_html.py,lock_p.sh} 修改脚本 在脚本中修改要检测和清除的代码，以及目录，这很简单略过
+执行脚本 如果是宝塔面板，在后台&amp;ndash;计划任务&amp;ndash;添加shell命令
+锁住文件
+cd ~ &amp;amp;&amp;amp; sudo ./lock_p.sh lock 解锁文件
+cd ~ &amp;amp;&amp;amp; sudo ./lock_p.sh unlock 删除恶意代码
+cd ~ &amp;amp;&amp;amp; python3 clean_html.py 手动 首先切换到目标目录的上级目录
+cd /www/wwwroot
+修改目录的权限为只读(555)
+chmod 555 123.com
+修改目录下所有文件的权限为只读(444)
+chmod -R 444 123.com/*
+如果需要确保root用户也无法修改，可以添加chattr命令
+chattr +i -R 123.com
+如果之后需要修改文件，需要先恢复权限：
+chattr -i -R 123.com # 如果使用了chattr chmod -R 755 123.com # 恢复目录权限 chmod -R 644 123.</description></item></channel></rss>
