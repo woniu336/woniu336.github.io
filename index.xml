@@ -9,7 +9,15 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>一招制敌：使用 Fail2Ban 自动识别和封禁端口扫描攻击</title><link>https://blog.taoshuge.eu.org/p/360/</link><pubDate>Wed, 13 Nov 2024 01:03:34 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/360/</guid><description>1. 创建 /etc/fail2ban/jail.local 执行以下命令以创建并写入 jail.local 文件：
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>夸克网盘自动转存脚本（增强版）</title><link>https://blog.taoshuge.eu.org/p/361/</link><pubDate>Wed, 13 Nov 2024 01:32:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/361/</guid><description>安装依赖 pip3 install aiohttp sudo apt-get install jq 下载文件 cd ~ git clone https://github.com/woniu336/kua-auto.git 重命名目录:
+mv kua-auto kua-update 设置cookie
+在quark_config.json设置cookie和钉钉通知
+添加转存
+在movie_links.txt添加转存信息，格式,例如
+如龙=https://pan.quark.cn/s/df4a1b9ceb00=/yyds/如龙 每行一条信息
+前面是名称，中间是转存的链接，后面是转存的目录，使用等号区分
+运行脚本 cd kua-update python3 movie_list.py python3 quark_auto_save.py quark_config.json 自动化脚本
+#!/bin/bash # 设置错误处理 set -euo pipefail IFS=$&amp;#39;\n\t&amp;#39; # 更新json配置 echo &amp;#34;开始更新json配置...&amp;#34; cd /www/wwwroot/脚本所在目录 || { echo &amp;#34;切换目录失败&amp;#34;; exit 1; } if python3 movie_list.py; then echo &amp;#34;movie_list.py 执行成功&amp;#34; else echo &amp;#34;movie_list.py 执行失败&amp;#34; &amp;gt;&amp;amp;2 exit 1 fi # 转存 echo &amp;#34;开始转存.</description></item><item><title>一招制敌：使用 Fail2Ban 自动识别和封禁端口扫描攻击</title><link>https://blog.taoshuge.eu.org/p/360/</link><pubDate>Wed, 13 Nov 2024 01:03:34 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/360/</guid><description>1. 创建 /etc/fail2ban/jail.local 执行以下命令以创建并写入 jail.local 文件：
 sudo tee /etc/fail2ban/jail.local &amp;gt; /dev/null &amp;lt;&amp;lt;EOL [DEFAULT] # 封禁时间（秒）：1天 bantime = 86400 # 查找时间范围（秒）：1小时 findtime = 3600 # 尝试次数 maxretry = 3 # 忽略的IP地址（如果有） ignoreip = 127.0.0.1/8 ::1 # 自定义规则：端口扫描防护 [port-scan] enabled = true filter = port-scan logpath = /var/log/syslog maxretry = 5 findtime = 600 bantime = 7200 EOL 2. 创建 /etc/fail2ban/filter.d/port-scan.conf 执行以下命令以创建并写入 port-scan.conf 文件：
 sudo tee /etc/fail2ban/filter.d/port-scan.conf &amp;gt; /dev/null &amp;lt;&amp;lt;EOL [Definition] failregex = \[UFW BLOCK\] .</description></item><item><title>清除恶意代码和锁住文件</title><link>https://blog.taoshuge.eu.org/p/359/</link><pubDate>Mon, 11 Nov 2024 06:30:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/359/</guid><description>下载脚本 cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/clean_html.py cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/lock_p.sh 权限
 chmod +x /root/{clean_html.py,lock_p.sh} 修改脚本 在脚本中修改要检测和清除的代码，以及目录，这很简单略过
