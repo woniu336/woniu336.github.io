@@ -38,11 +38,11 @@ chattr -i -R 123.com # 如果使用了chattr chmod -R 755 123.com # 恢复目录
 在运营网站的过程中，安全始终是一个永恒的话题。即便我们使用了 Cloudflare 这样的 CDN 服务，但如果配置不当，真实 IP 依然有可能泄露。
 想象一下这个场景：你的网站正在使用 Cloudflare CDN，看似很安全。但是有一天，你突然发现服务器负载异常，网站响应缓慢。经过排查，你惊讶地发现有大量的直接 IP 访问请求，绕过了 CDN 的防护。这意味着你的服务器真实 IP 已经泄露了。
 这种情况并不罕见，IP 可能通过多种途径泄露：
-DNS 历史记录 邮件服务器配置 解析记录变更前的访问 网站本身的某些功能特性 下载脚本 cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/cloudflare-only.sh 赋予权限
+DNS 历史记录 邮件服务器配置 解析记录变更前的访问 网站本身的某些功能特性 IP 地址范围 https://www.cloudflare.com/zh-cn/ips/
+下载脚本 cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/cloudflare-only.sh 赋予权限
 chmod +x /root/cloudflare-only.sh 执行
 ./cloudflare-only.sh 恢复规则 如果你怕出幺蛾子，可以恢复原有规则
-# 恢复 IPv4 规则 cp /etc/iptables/rules.v4.bak /etc/iptables/rules.v4 iptables-restore &amp;lt; /etc/iptables/rules.v4 # 恢复 IPv6 规则 cp /etc/iptables/rules.v6.bak /etc/iptables/rules.v6 ip6tables-restore &amp;lt; /etc/iptables/rules.v6 查看规则 iptables -L INPUT -n --line-numbers 仅查看80和443
-iptables -L INPUT -n --line-numbers | grep -E &amp;#34;80|443&amp;#34; 查看ipv6</description></item><item><title>自动监控、隔离可疑PHP文件的Bash脚本工具</title><link>https://blog.taoshuge.eu.org/p/357/</link><pubDate>Sat, 09 Nov 2024 21:02:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/357/</guid><description>注意：仅监控没有php文件的目录
+# 恢复 IPv4 规则 cp /etc/iptables/rules.v4.bak /etc/iptables/rules.v4 iptables-restore &amp;lt; /etc/iptables/rules.v4 # 恢复 IPv6 规则 cp /etc/iptables/rules.v6.bak /etc/iptables/rules.v6 ip6tables-restore &amp;lt; /etc/iptables/rules.v6 查看规则 iptables -L INPUT -n --line-numbers 仅查看80和443</description></item><item><title>自动监控、隔离可疑PHP文件的Bash脚本工具</title><link>https://blog.taoshuge.eu.org/p/357/</link><pubDate>Sat, 09 Nov 2024 21:02:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/357/</guid><description>注意：仅监控没有php文件的目录
 下载脚本 cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/block_php.sh 赋予权限
 chmod +x /root/block_php.sh 运行 前台运行,记得先修改检测目录和设置钉钉通知，记得把ip加入到钉钉的IP地址（段）
 ./block_php.sh 后台运行
