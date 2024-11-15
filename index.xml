@@ -9,7 +9,12 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>夸克网盘自动转存脚本（增强版）</title><link>https://blog.taoshuge.eu.org/p/361/</link><pubDate>Wed, 13 Nov 2024 01:32:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/361/</guid><description>安装依赖 pip3 install aiohttp sudo apt-get install jq 下载文件 cd ~ git clone https://github.com/woniu336/kua-auto.git 重命名目录:
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh acme证书工具</description></item><item><title>hahaSIM 保号充值</title><link>https://blog.taoshuge.eu.org/p/362/</link><pubDate>Fri, 15 Nov 2024 22:39:14 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/362/</guid><description>保号策略 使用 App 充值最低 20 HKD，只支持 AlipayHK、信用卡等当地支付方式，延期至 充值时间 + 365 天。
+在线充值延期相同，支持微信、支付宝，最低 10 HKD：
+3HK 在线充值 https://www.three.com.hk/3Care/chi/prepay/payonline1.jsp
+在浏览器中打开，支付完成后要返回完成回调才会成功充值。
+hahaSIM 开箱测评 &amp;amp; 使用教程
+转自：https://blog.tsinbei.com/archives/1462/</description></item><item><title>夸克网盘自动转存脚本（增强版）</title><link>https://blog.taoshuge.eu.org/p/361/</link><pubDate>Wed, 13 Nov 2024 01:32:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/361/</guid><description>安装依赖 pip3 install aiohttp sudo apt-get install jq 下载文件 cd ~ git clone https://github.com/woniu336/kua-auto.git 重命名目录:
 mv kua-auto kua-update 设置cookie
 在quark_config.json设置cookie和钉钉通知
 添加转存
