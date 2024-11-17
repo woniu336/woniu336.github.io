@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>时间 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/%E6%97%B6%E9%97%B4/</link><description>Recent content in 时间 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 11 Sep 2023 08:19:05 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/%E6%97%B6%E9%97%B4/index.xml" rel="self" type="application/rss+xml"/><item><title>Debian/ubuntu服务器更改时区为中国</title><link>https://blog.taoshuge.eu.org/p/debian/ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9B%B4%E6%94%B9%E6%97%B6%E5%8C%BA%E4%B8%BA%E4%B8%AD%E5%9B%BD/</link><pubDate>Mon, 11 Sep 2023 08:19:05 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/debian/ubuntu%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%9B%B4%E6%94%B9%E6%97%B6%E5%8C%BA%E4%B8%BA%E4%B8%AD%E5%9B%BD/</guid><description>有时候我们安装服务器会用默认的UTC( Universal Time Coordinated)时区，造成后继一些软件记录时间上显示的不够直观，所以需要手动更改为中国/上海时区。
-更改很简单，如下2条命令即可：
+首先安装 NTP 服务
+sudo apt-get update sudo apt-get install systemd-timesyncd 安装完成后，启用并启动服务
+sudo systemctl enable systemd-timesyncd sudo systemctl start systemd-timesyncd 查询状态
+timedatectl status 更改很简单，如下2条命令即可：
 sudo rm /etc/localtime sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 或者
 #设置上海时区 sudo timedatectl set-timezone Asia/Shanghai 使用 timedatectl命令可以查看时区
 timedatectl 启用 NTP 时间同步
