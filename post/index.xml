@@ -329,9 +329,7 @@ nginx
 复制你站点的404页面链接，如果连404是什么页面也不清楚那不用往下看了 打开 https://www.itdog.cn/http/ 输入链接点击快速测试，连续测试3次，你会发现这个链接一片红，就对了，已经被拦截 如图，那一百多个ip就是 itdog 自身的ip，把itdog拉小黑屋了
 如何解除封禁 选择菜单10，输入图片上方那一串ip地址，就是这么简单，当然先查看拦截记录，然后复制被拦截的ip
 后续 都包含在脚本中了，自行探索把~
-祝大家中秋节快乐，心想事成。</description></item><item><title>苹果cms对接美团图床</title><link>https://blog.taoshuge.eu.org/p/326/</link><pubDate>Sun, 15 Sep 2024 23:26:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/326/</guid><description>下载对接文件 Btjson.php 路径：/苹果cms根目录/application/common/extend/upload btjson.html 路径：/苹果cms根目录/application/admin/view/extend/upload https://github.com/woniu336/open_shell/blob/main/application/common/extend/upload/Btjson.php
-https://github.com/woniu336/open_shell/blob/main/application/admin/view/extend/upload/btjson.html
-获取token 注册 https://czz.meituan.com/ 发布视频，上传封面，注意在上传封面后，F12 查找封面 token 即可，不用真的去发布视频
+祝大家中秋节快乐，心想事成。</description></item><item><title>苹果cms对接美团图床</title><link>https://blog.taoshuge.eu.org/p/326/</link><pubDate>Sun, 15 Sep 2024 23:26:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/326/</guid><description>下载对接文件 Btjson.php 路径：/苹果cms根目录/application/common/extend/upload btjson.html 路径：/苹果cms根目录/application/admin/view/extend/upload 获取token 注册 https://czz.meituan.com/ 发布视频，上传封面，注意在上传封面后，F12 查找封面 token 即可，不用真的去发布视频
 cms后台设置 对接地址必须是：https://pic-up.meituan.com
 采集参数配置
 自动同步图片开启：</description></item><item><title>美团图床设置教程</title><link>https://blog.taoshuge.eu.org/p/325/</link><pubDate>Sun, 15 Sep 2024 13:21:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/325/</guid><description> 大厂图床，CDN加速
