@@ -4,13 +4,13 @@ chmod +x /root/{clean_html.py,lock_p.sh} 修改脚本 在脚本中修改要检�
 锁住文件
 cd ~ &amp;amp;&amp;amp; sudo ./lock_p.sh lock 解锁文件
 cd ~ &amp;amp;&amp;amp; sudo ./lock_p.sh unlock 删除恶意代码
-cd ~ &amp;amp;&amp;amp; python3 clean_html.py 手动 首先切换到目标目录的上级目录
+cd ~ &amp;amp;&amp;amp; python3 clean_html.py 替换脚本 cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/new-ce.py 权限
+chmod +x new-ce.py 执行
+python3 new-ce.py 手动 首先切换到目标目录的上级目录
 cd /www/wwwroot
 修改目录的权限为只读(555)
 chmod 555 123.com
 修改目录下所有文件的权限为只读(444)
 chmod -R 444 123.com/*
 如果需要确保root用户也无法修改，可以添加chattr命令
-chattr +i -R 123.com
-如果之后需要修改文件，需要先恢复权限：
-chattr -i -R 123.com # 如果使用了chattr chmod -R 755 123.com # 恢复目录权限 chmod -R 644 123.</description></item></channel></rss>
+chattr +i -R 123.</description></item></channel></rss>
