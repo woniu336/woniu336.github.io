@@ -13,7 +13,8 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_updat
 一键安装
 docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1.18.5 指定版本安装,例如1.18.5版本，前提：你已经安装了最新版本
 docker pull louislam/uptime-kuma:1 docker stop uptime-kuma docker rm uptime-kuma docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1.18.5 反向代理 我使用Cloudflare-Tunnel作为反代
-https://github.com/louislam/uptime-kuma/wiki/Reverse-Proxy-with-Cloudflare-Tunnel</description></item><item><title>屏蔽 Censys ip 扫描你的站点信息</title><link>https://blog.taoshuge.eu.org/p/365/</link><pubDate>Sun, 17 Nov 2024 03:28:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/365/</guid><description>Censys IP 段 ：https://support.censys.io/hc/en-us/articles/360043177092-Opt-Out-of-Data-Collection
+https://github.com/louislam/uptime-kuma/wiki/Reverse-Proxy-with-Cloudflare-Tunnel
+美化 /* 自定义字体定义 */ @font-face { font-family: &amp;#39;1666963922&amp;#39;; src: url(&amp;#39;https://jsd.cdn.zzko.cn/gh/54ayao/ACG@main/static/fonts/1666963922.woff&amp;#39;) format(&amp;#39;woff&amp;#39;); font-weight: normal; font-style: normal; } /* 全局样式 */ body { font-family: &amp;#39;1666963922&amp;#39;, sans-serif; /* 使用自定义字体 */ color: #333; margin: 0; padding: 0; background-image: url(&amp;#39;https://www.</description></item><item><title>屏蔽 Censys ip 扫描你的站点信息</title><link>https://blog.taoshuge.eu.org/p/365/</link><pubDate>Sun, 17 Nov 2024 03:28:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/365/</guid><description>Censys IP 段 ：https://support.censys.io/hc/en-us/articles/360043177092-Opt-Out-of-Data-Collection
 作为一名系统管理员，你一定也经历过这样的困扰：每天查看服务器日志，都能看到来自全球各地的恶意扫描。这些自动化工具不知疲倦地探测着你的服务器漏洞，像蚂蚁一样持续骚扰着你的系统。手动添加UFW规则来阻止这些IP？太繁琐了。逐个封禁IP？没完没了。
 下面我寄出三个工具，喜欢哪个用哪个
 iptable脚本 安装iptable持久化套装，安装有提示直接回车即可
