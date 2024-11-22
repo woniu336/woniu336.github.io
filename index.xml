@@ -13,7 +13,7 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_updat
 需求：把一个项目推送到两个github账号上
 设置 生成新的ssh密钥
 ssh-keygen -q -t ed25519 -C &amp;#34;123456@qq.com&amp;#34; -N &amp;#34;&amp;#34; -f ~/.ssh/qkmov_id_rsa 查看公钥
-cat ~/.ssh/qkmov_id_rsa.pub 添加公钥到Github: https://github.com/settings/keys
+cat ~/.ssh/qkmov_id_rsa.pub 添加公钥到Github（另外打开一个浏览器）: https://github.com/settings/keys
 编辑~/.ssh/config文件，末尾添加以下内容
 Host qkmov_cc Hostname ssh.github.com IdentityFile ~/.ssh/qkmov_id_rsa User git Port 443 ProxyCommand &amp;#34;C:\Program Files\Git\mingw64\bin\connect.exe&amp;#34; -S 127.0.0.1:7890 %h %p ​
 验证
