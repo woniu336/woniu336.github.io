@@ -9,8 +9,7 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：</description></item><item><title>本地如何设置多个github账号</title><link>https://blog.taoshuge.eu.org/p/368/</link><pubDate>Fri, 22 Nov 2024 16:38:53 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/368/</guid><description>
-需求：把一个项目推送到两个github账号上
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：</description></item><item><title>本地如何设置多个github账号</title><link>https://blog.taoshuge.eu.org/p/368/</link><pubDate>Fri, 22 Nov 2024 16:38:53 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/368/</guid><description>需求：把一个项目推送到两个github账号上
 设置 生成新的ssh密钥
 ssh-keygen -q -t ed25519 -C &amp;#34;123456@qq.com&amp;#34; -N &amp;#34;&amp;#34; -f ~/.ssh/qkmov_id_rsa 查看公钥
 cat ~/.ssh/qkmov_id_rsa.pub 添加公钥到Github（另外打开一个浏览器）: https://github.com/settings/keys
@@ -19,7 +18,8 @@ Host qkmov_cc Hostname ssh.github.com IdentityFile ~/.ssh/qkmov_id_rsa User git 
 验证
 ssh -T git@qkmov_cc 添加仓库，用上面 Host 名称来代替原来的github.com
 git remote add qkmov git@qkmov_cc:jimugou/qkmov.git 推送
-git add . git commit -m &amp;#34;update&amp;#34; git push -f origin --all git push -f qkmov --all</description></item><item><title>爆改hugo博客变成影视站点</title><link>https://blog.taoshuge.eu.org/p/367/</link><pubDate>Fri, 22 Nov 2024 14:00:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/367/</guid><description>项目 hugo: https://gohugo.io/
+git add . git commit -m &amp;#34;update&amp;#34; git push -f origin --all git push -f qkmov --all 其他命令
+# 首先删除现有的 remote git remote remove origin # 然后添加新的 remote git remote add origin git@github.</description></item><item><title>爆改hugo博客变成影视站点</title><link>https://blog.taoshuge.eu.org/p/367/</link><pubDate>Fri, 22 Nov 2024 14:00:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/367/</guid><description>项目 hugo: https://gohugo.io/
 原项目：https://github.com/CaiJimmy/hugo-theme-stack
 魔改开源博客主题：https://github.com/woniu336/hugo-magic
 cloudflare加速：https://github.com/woniu336/enhanced-FaaS-in-China
