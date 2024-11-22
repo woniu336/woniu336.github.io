@@ -15,15 +15,14 @@ sysctl -p 安装 ufw debian/ubuntu
 sudo apt update sudo apt install ufw 允许 SSH 连接
 sudo ufw allow ssh 如果使用的是非标准端口，例如：5522
 sudo ufw allow 5522/tcp 最后启用
-sudo ufw enable 密钥登录 以下方式是为了便于多台服务器统一使用一个密钥文件。
+sudo ufw enable 生成密钥 注意：生成密钥是在本地电脑上操作
 首先，生成密钥对（如果存在略过）
 ssh-keygen -q -t ed25519 -C &amp;#34;你的邮箱&amp;#34; -N &amp;#34;&amp;#34; -f ~/.ssh/github_id_rsa 复制公钥
 cat ~/.ssh/github_id_rsa.pub 添加到你的Github上，地址如下，名称随意，内容就是你复制的公钥
-https://github.com/settings/keys 最后
-提示： woniu336 是我的Github账号名称，5522是ssh端口，前面已经使用ufw设置
+https://github.com/settings/keys 密钥登录 提示： woniu336 是我的Github账号名称，5522是ssh端口，前面已经使用ufw设置
 这条命令会自动获取你在Github上的公钥并保存到服务器的/root/.ssh/authorized_keys
 登录的时候记得你的私钥文件在本地电脑的 ~/.ssh/github_id_rsa
-bash &amp;lt;(curl -fsSL git.io/key.sh) -og woniu336 -p 5522 -d</description></item><item><title>本地如何设置多个github账号</title><link>https://blog.taoshuge.eu.org/p/368/</link><pubDate>Fri, 22 Nov 2024 16:38:53 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/368/</guid><description>需求：把一个项目推送到两个github账号上
+bash &amp;lt;(curl -fsSL git.io/key.sh) -og woniu336 -p 5522 -d 会不会觉得把公钥先上传到Github上，再拷贝到服务器多此一举？直接复制公钥到服务器不就行了，</description></item><item><title>本地如何设置多个github账号</title><link>https://blog.taoshuge.eu.org/p/368/</link><pubDate>Fri, 22 Nov 2024 16:38:53 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/368/</guid><description>需求：把一个项目推送到两个github账号上
 设置 生成新的ssh密钥
 ssh-keygen -q -t ed25519 -C &amp;#34;123456@qq.com&amp;#34; -N &amp;#34;&amp;#34; -f ~/.ssh/qkmov_id_rsa 查看公钥
 cat ~/.ssh/qkmov_id_rsa.pub 添加公钥到Github（另外打开一个浏览器）: https://github.com/settings/keys
