@@ -9,7 +9,17 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：</description></item><item><title>uptime kuma 监控安装</title><link>https://blog.taoshuge.eu.org/p/366/</link><pubDate>Wed, 20 Nov 2024 13:33:11 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/366/</guid><description>前言 新版本总是报错断联，于是换回旧版本：1.18.5 版本，记录一下
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：</description></item><item><title>也许是首位把hugo博客改成影视资源站的张三</title><link>https://blog.taoshuge.eu.org/p/367/</link><pubDate>Fri, 22 Nov 2024 14:00:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/367/</guid><description>项目 hugo: https://gohugo.io/
+原项目：https://github.com/CaiJimmy/hugo-theme-stack
+魔改开源博客主题：https://github.com/woniu336/hugo-magic
+cloudflare加速：https://github.com/woniu336/enhanced-FaaS-in-China
+前言 hugo号称全球最快的静态网站建设框架,比Jekyll、Hexo、VuePress要快得多。
+我使用hugo作为博客，记录一些网站和服务器相关的技术，已经有一年多了，
+我的博客部署到vercel，为了提高访问速度，使用了一个开源的cf加速项目
+后来突发奇想，将hugo主题魔改成资源分享站，借助AI修修改改，终于有了点影视站的样子。
+演示站点： https://www.qkmov.cc
+首页
+内页</description></item><item><title>uptime kuma 监控安装</title><link>https://blog.taoshuge.eu.org/p/366/</link><pubDate>Wed, 20 Nov 2024 13:33:11 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/366/</guid><description>前言 新版本总是报错断联，于是换回旧版本：1.18.5 版本，记录一下
 一键安装
 docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1.18.5 指定版本安装,例如1.18.5版本，前提：你已经安装了最新版本
 docker pull louislam/uptime-kuma:1 docker stop uptime-kuma docker rm uptime-kuma docker run -d --restart=always -p 3001:3001 -v uptime-kuma:/app/data --name uptime-kuma louislam/uptime-kuma:1.18.5 反向代理 我使用Cloudflare-Tunnel作为反代
