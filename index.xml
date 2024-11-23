@@ -8,8 +8,8 @@ https://woniu336.github.io/p/328/
 https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
-CloudFlare Api 宕机自动切换 ip
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：</description></item><item><title>Realm一键转发脚本</title><link>https://blog.taoshuge.eu.org/p/371/</link><pubDate>Sat, 23 Nov 2024 22:44:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/371/</guid><description>
+屏蔽 Censys
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>Realm一键转发脚本</title><link>https://blog.taoshuge.eu.org/p/371/</link><pubDate>Sat, 23 Nov 2024 22:44:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/371/</guid><description>
 iptables 一键转发脚本已经有了，再搞一个Realm脚本，
 在nodeseek论坛小伙伴脚本基础上添加了一些参数
 注意事项：在删除规则前，先停止服务才生效，再删除
@@ -356,15 +356,14 @@ AVIF（AV1 Image File Format）正在迅速崛起，成为下一代网络图片�
 密钥登陆 服务器禁止密码登录，改成密钥登录，选择菜单9：root私钥登录模式
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 将密钥保存到本地（sshkey）然后再删除,因为公钥已写入：authorized_keys，大胆删除
 rm /root/.ssh/sshkey /root/.ssh/sshkey.pub 重启ssh
-sudo service ssh restart 监控脚本 首先,我们需要安装 pip
+sudo service ssh restart 另外一种密钥登录方式（注意：仅适用博主本人）
+bash &amp;lt;(curl -fsSL git.io/key.sh) -og woniu336 -d 监控脚本 首先,我们需要安装 pip
 sudo apt-get update sudo apt-get install python3-pip 用 pip 安装 python-crontab 包
 pip3 install python-crontab 下载脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/php-s.py &amp;amp;&amp;amp; chmod +x php-s.py python3 php-s.py 删除的可疑php文件保存在/tmp/suspicious_files 监控记录日志/tmp/scan_history.log 这个脚本的主功能是：
 自动监控多个网站目录中的PHP文件，检测并删除包含高风险域名的代码，同时识别未授权的新增PHP文件并采取相应措施，通过钉钉实时通知管理员异常情况，从而提高网站安全性。
 脚本功能：
-自动删除包含高风险域名的代码行 检测并删除未经授权的新增PHP文件 通过钉钉实时通知管理员异常情况 监控脚本 每5秒监控一次
-cd /root &amp;amp;&amp;amp; curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/scanner_loop.sh 权限
-chmod +x /root/scanner_loop.</description></item><item><title>完美的宝塔面板防御策略，基于fail2ban</title><link>https://blog.taoshuge.eu.org/p/327/</link><pubDate>Tue, 17 Sep 2024 01:33:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/327/</guid><description>之前分享过宝塔面板配合fail2ban，以及开启cloudflare的cdn双重防御的教程，并制作了便捷的脚本 这次不靠cloudflare的减速cdn，看看防御效果怎么样 系统环境 debian/ubuntu
+自动删除包含高风险域名的代码行 检测并删除未经授权的新增PHP文件 通过钉钉实时通知管理员异常情况 监控脚本 每5秒监控一次</description></item><item><title>完美的宝塔面板防御策略，基于fail2ban</title><link>https://blog.taoshuge.eu.org/p/327/</link><pubDate>Tue, 17 Sep 2024 01:33:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/327/</guid><description>之前分享过宝塔面板配合fail2ban，以及开启cloudflare的cdn双重防御的教程，并制作了便捷的脚本 这次不靠cloudflare的减速cdn，看看防御效果怎么样 系统环境 debian/ubuntu
 nginx
 宝塔面板
 注意要点 1.在宝塔面板开启站点日志 2.添加服务器白名单 以下设置钉钉的目的是有拦截的时候通知你，是可选的，可以不用通知看个人
