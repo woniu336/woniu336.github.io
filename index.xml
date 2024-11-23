@@ -9,7 +9,16 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：</description></item><item><title>服务器安全设置</title><link>https://blog.taoshuge.eu.org/p/369/</link><pubDate>Sat, 23 Nov 2024 03:08:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/369/</guid><description>禁止 ping nano /etc/sysctl.conf 在文件末尾增加一行
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：</description></item><item><title>记录一次DNS连接不通的问题</title><link>https://blog.taoshuge.eu.org/p/370/</link><pubDate>Sat, 23 Nov 2024 14:10:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/370/</guid><description>查看当前防火墙规则
+iptables-save 临时清除所有规则（注意：仅测试用，可能有安全风险）
+iptables -F iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT 保存当前规则（以防需要恢复）
+iptables-save &amp;gt; /root/firewall-backup.rules 设置基本的安全规则
+清除所有规则
+iptables -F iptables -X iptables -Z 设置默认策略
+iptables -P INPUT DROP iptables -P FORWARD DROP iptables -P OUTPUT ACCEPT 允许本地回环接口
+iptables -A INPUT -i lo -j ACCEPT 允许已建立的连接
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT 允许 SSH（根据需要修改端口）
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT 允许 ping</description></item><item><title>服务器安全设置</title><link>https://blog.taoshuge.eu.org/p/369/</link><pubDate>Sat, 23 Nov 2024 03:08:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/369/</guid><description>禁止 ping nano /etc/sysctl.conf 在文件末尾增加一行
 net.ipv4.icmp_echo_ignore_all = 1 使其生效
 sysctl -p 安装 ufw debian/ubuntu
 sudo apt update sudo apt install ufw 允许 SSH 连接
