@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Nov 2024 14:10:41 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Nov 2024 22:44:59 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -9,7 +9,11 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 CloudFlare Api 宕机自动切换 ip
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：</description></item><item><title>记录一次DNS连接不通的问题</title><link>https://blog.taoshuge.eu.org/p/370/</link><pubDate>Sat, 23 Nov 2024 14:10:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/370/</guid><description>查看当前防火墙规则
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/dns_update/dns_update_menu.sh &amp;amp;&amp;amp; chmod +x dns_update_menu.sh &amp;amp;&amp;amp; ./dns_update_menu.sh 证书申请和续签cert工具：</description></item><item><title>Realm一键转发脚本</title><link>https://blog.taoshuge.eu.org/p/371/</link><pubDate>Sat, 23 Nov 2024 22:44:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/371/</guid><description>
+iptables 一键转发脚本已经有了，再搞一个Realm脚本，
+在nodeseek论坛小伙伴脚本基础上添加了一些参数
+注意事项：在删除规则前，先停止服务才生效，再删除
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/realm.sh &amp;amp;&amp;amp; chmod +x realm.sh &amp;amp;&amp;amp; ./realm.sh</description></item><item><title>记录一次DNS连接不通的问题</title><link>https://blog.taoshuge.eu.org/p/370/</link><pubDate>Sat, 23 Nov 2024 14:10:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/370/</guid><description>查看当前防火墙规则
 iptables-save 临时清除所有规则（注意：仅测试用，可能有安全风险）
 iptables -F iptables -P INPUT ACCEPT iptables -P FORWARD ACCEPT iptables -P OUTPUT ACCEPT 保存当前规则（以防需要恢复）
 iptables-save &amp;gt; /root/firewall-backup.rules 设置基本的安全规则
