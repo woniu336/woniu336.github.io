@@ -14,12 +14,13 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw
 那么现在，这样的烦恼统统没有了
 最后一点，我的服务器ip已经在outlook官方的黑名单中，所以发送给outlook的邮件是不成功的，会收到一封邮件说明，不是程序的问题。
 其他邮箱暂时没有发现问题，收发都正常，如果你找不到，看看垃圾邮箱
-特色 自动检测docker是否安装 检测25端口是否可用，如果显示不可用，那么请换其他机子 自动打印出需要设置的DNS记录 包含更新和彻底卸载功能 登录用户名和登录密码和管理后台一致 脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/poste_io.sh &amp;amp;&amp;amp; chmod +x poste_io.sh &amp;amp;&amp;amp; ./poste_io.sh 只有显示25端口当前可用，你才可以下一步，不可用就退出吧，换一台服务器。
+特色 自动检测docker是否安装 检测25端口是否可用，如果显示不可用，那么请换其他机子 自动打印出需要设置的DNS记录 包含更新和彻底卸载功能 登录用户名和登录密码和管理后台一致 禁用了病毒监测和反垃圾邮件功能，减小内存占用 程序占用大概280M内存 脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/poste_io.sh &amp;amp;&amp;amp; chmod +x poste_io.sh &amp;amp;&amp;amp; ./poste_io.sh 只有显示25端口当前可用，你才可以下一步，不可用就退出吧，换一台服务器。
 安装成功后，首先去设置好DNS记录
 证书和自动续期 DNS设置好以后，就是证书申请，注意以下脚本仅适配宝塔面板。
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh 根据顺序，安装cert、申请证书、添加定时任务，搞定！
 然后，来到宝塔面板后台，点击保存，强制开启https。
-反向代理 反代端口8808
+然后在终端运行以下代码
+./autossl.sh 反向代理 反代端口8808
 邮件后台设置 打开域名，填入管理员账号，设置密码，进入后台后，按照下面的图示操作
 点击创建 DKIM 密钥：
 注意，如果是托管在cf, 主机名只需要前面的：s20241127823._domainkey 然后到域名那里设置TXT记录，
