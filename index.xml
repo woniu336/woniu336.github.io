@@ -14,7 +14,7 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw
 特色 自动检测docker是否安装 检测25端口是否可用，如果显示不可用，那么请换其他机子 自动生成所需 DNS 记录配置 支持一键更新和完整卸载 登录用户名和登录密码和管理后台一致 禁用病毒扫描和关闭垃圾邮件过滤，减小内存占用 内存占用仅约 280MB 安装步骤 运行安装脚本: curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/poste_io.sh &amp;amp;&amp;amp; chmod +x poste_io.sh &amp;amp;&amp;amp; ./poste_io.sh 重要提示：请确保 25 端口可用，否则需更换服务器。系统会自动检测并提示端口状态。
 配置 DNS 记录 安装完成后，系统会自动显示需要配置的 DNS 记录。请务必正确配置所有显示的记录。
 例如：mail.123.com 作为邮箱域名
-记录类型 主机记录 记录值 A mail 1.1.1.1 （服务器ip） CNAME imap mail.123.com CNAME pop mail.123.com CNAME smtp mail.123.com MX @ mail.123.com TXT @ v=spf1 mx ~all TXT dmarc v=DMARC1; p=none; rua=mailto:admin@123.</description></item><item><title>多节点集群图床方案</title><link>https://blog.taoshuge.eu.org/p/372/</link><pubDate>Tue, 26 Nov 2024 00:34:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/372/</guid><description>
+记录类型 主机记录 记录值 A mail 1.1.1.1 （服务器ip） CNAME imap mail.123.com CNAME pop mail.123.com CNAME smtp mail.123.com MX @ mail.123.com TXT @ v=spf1 mx ~all TXT _dmarc v=DMARC1; p=none; rua=mailto:admin@123.</description></item><item><title>多节点集群图床方案</title><link>https://blog.taoshuge.eu.org/p/372/</link><pubDate>Tue, 26 Nov 2024 00:34:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/372/</guid><description>
 项目：https://github.com/fscarmen2/pic-hosting-cluster
 不限于图床，可用作私人文件存储
 油管教程 要看到视频需扶墙
