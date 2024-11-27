@@ -9,24 +9,21 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 屏蔽 Censys
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>Poste.io 邮局/邮件 一键部署脚本，兼容宝塔面板</title><link>https://blog.taoshuge.eu.org/p/373/</link><pubDate>Wed, 27 Nov 2024 00:36:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/373/</guid><description>在安装了nginx或者宝塔面板的基础上安装Poste会遇到不少坑
-不是证书申请问题，就是打不开，
-那么现在，这样的烦恼统统没有了
-最后一点，我的服务器ip已经在outlook官方的黑名单中，所以发送给outlook的邮件是不成功的，会收到一封邮件说明，不是程序的问题。
-其他邮箱暂时没有发现问题，收发都正常，如果你找不到，看看垃圾邮箱
-特色 自动检测docker是否安装 检测25端口是否可用，如果显示不可用，那么请换其他机子 自动打印出需要设置的DNS记录 包含更新和彻底卸载功能 登录用户名和登录密码和管理后台一致 禁用了病毒监测和反垃圾邮件功能，减小内存占用 程序占用大概280M内存 脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/poste_io.sh &amp;amp;&amp;amp; chmod +x poste_io.sh &amp;amp;&amp;amp; ./poste_io.sh 只有显示25端口当前可用，你才可以下一步，不可用就退出吧，换一台服务器。
-安装成功后，首先去设置好DNS记录
-证书和自动续期 DNS设置好以后，就是证书申请，注意以下脚本仅适配宝塔面板。
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh 根据顺序，安装cert、申请证书、添加定时任务，搞定！
-然后，来到宝塔面板后台，点击保存，强制开启https。
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>一键部署 Poste.io 邮件服务器完整指南</title><link>https://blog.taoshuge.eu.org/p/373/</link><pubDate>Wed, 27 Nov 2024 00:36:56 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/373/</guid><description>在使用 Nginx 或宝塔面板的基础上部署 Poste.io 时，经常会遇到证书申请失败或无法访问等问题。本教程将为您提供一个完整的解决方案。
+特别说明：如果您的服务器 IP 已被 Outlook 列入黑名单，发送到 Outlook 邮箱的邮件将会失败。其他邮箱服务目前运行正常，如未收到邮件请检查垃圾邮件文件夹。
+特色 自动检测docker是否安装 检测25端口是否可用，如果显示不可用，那么请换其他机子 自动生成所需 DNS 记录配置 支持一键更新和完整卸载 登录用户名和登录密码和管理后台一致 禁用病毒扫描和关闭垃圾邮件过滤，减小内存占用 内存占用仅约 280MB 安装步骤 运行安装脚本: curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/poste_io.sh &amp;amp;&amp;amp; chmod +x poste_io.sh &amp;amp;&amp;amp; ./poste_io.sh 重要提示：请确保 25 端口可用，否则需更换服务器。系统会自动检测并提示端口状态。
+配置 DNS 记录 安装完成后，系统会自动显示需要配置的 DNS 记录。请务必正确配置所有显示的记录。
+证书配置与自动续期 对于宝塔面板用户，执行以下命令配置 SSL 证书：
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh 配置步骤：
+安装 cert
+申请证书
+添加自动续期任务
+完成后，在宝塔面板中:
+进入网站设置
+导航到SSL，点击保存按钮
+强制HTTPS
 然后在终端运行以下代码
-./autossl.sh 反向代理 反代端口8808
-邮件后台设置 打开域名，填入管理员账号，设置密码，进入后台后，按照下面的图示操作
-点击创建 DKIM 密钥：
-注意，如果是托管在cf, 主机名只需要前面的：s20241127823._domainkey 然后到域名那里设置TXT记录，
-webmail 使用 点击右上角的 webmail，登录用户名和登录密码和管理后台一致。
-使用界面，简洁明了：
-完结撒花。</description></item><item><title>多节点集群图床方案</title><link>https://blog.taoshuge.eu.org/p/372/</link><pubDate>Tue, 26 Nov 2024 00:34:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/372/</guid><description>
+./autossl.sh 配置反向代理 在宝塔面板中配置反向代理：</description></item><item><title>多节点集群图床方案</title><link>https://blog.taoshuge.eu.org/p/372/</link><pubDate>Tue, 26 Nov 2024 00:34:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/372/</guid><description>
 项目：https://github.com/fscarmen2/pic-hosting-cluster
 不限于图床，可用作私人文件存储
 油管教程 要看到视频需扶墙
