@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 01 Dec 2024 04:31:44 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 03 Dec 2024 15:33:22 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -9,7 +9,12 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 屏蔽 Censys
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>MJJ订阅续费监控</title><link>https://blog.taoshuge.eu.org/p/375/</link><pubDate>Sun, 01 Dec 2024 04:31:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/375/</guid><description>项目 https://github.com/woniu336/vps-date
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>Plausible 统计备份迁移记录</title><link>https://blog.taoshuge.eu.org/p/376/</link><pubDate>Tue, 03 Dec 2024 15:33:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/376/</guid><description>如何备份和迁移Plausible容器到新服务器。以下是详细步骤：
+在源服务器上操作
+1. 备份Docker镜像 保存所有相关镜像到tar文件
+docker save postgres:14-alpine -o postgres-14-alpine.tar docker save plausible/analytics:v2.0 -o plausible-analytics-v2.tar docker save clickhouse/clickhouse-server:23.3.7.5-alpine -o clickhouse-server.tar docker save bytemark/smtp:latest -o smtp.tar 2. 备份数据卷 创建备份目录
+mkdir docker_backup 备份各个数据卷
+docker run --rm -v hosting_db-data:/source:ro -v $(pwd)/docker_backup:/backup alpine tar -czf /backup/db-data.tar.gz -C /source . docker run --rm -v hosting_event-data:/source:ro -v $(pwd)/docker_backup:/backup alpine tar -czf /backup/event-data.tar.gz -C /source . docker run --rm -v hosting_event-logs:/source:ro -v $(pwd)/docker_backup:/backup alpine tar -czf /backup/event-logs.tar.gz -C /source .</description></item><item><title>MJJ订阅续费监控</title><link>https://blog.taoshuge.eu.org/p/375/</link><pubDate>Sun, 01 Dec 2024 04:31:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/375/</guid><description>项目 https://github.com/woniu336/vps-date
 演示 https://woniu336.github.io/vps-date/
 每天0点和12点自动运行更新监控信息 首次使用，可以手动触发运行测试 添加监控 拷贝仓库，修改 update_vps_data.py
 添加小鸡信息，例如：
