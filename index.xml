@@ -359,13 +359,23 @@ https://www.cloudflare-cn.com/ips-v6/
 本工具可以配合fail2ban脚本使用，实现更强大的风险拦截功能。如果您不想使用fail2ban，可以修改以下文件中的相关代码：
 /root/logcheck/ban_severe_risk_ips.py /root/logcheck/logcheck.py /root/logcheck/web_log_monitor.py 将这些文件中的#command = f&amp;quot;sudo ufw insert 1 deny from {ip} to any&amp;quot;取消注释，并注释掉fail2ban相关代码即可。
 如果您希望配合fail2ban使用，可以运行以下命令安装fail2ban脚本：
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/fail2ban-s.sh &amp;amp;&amp;amp; chmod +x fail2ban-s.sh &amp;amp;&amp;amp; ./fail2ban-s.sh 结语 这款服务器日志检索与查杀工具为您提供了一个强大而简便的安全管理解决方案。通过自动化的日志分析、IP追踪和风险检查，您可以更轻松地掌控服务器安全状况，及时发现并应对潜在威胁。无论您是专业的系统管理员还是初学者，这个工具都能帮助您提升服务器安全管理的效率和效果。立即尝试，让您的服务器安全管理更上一层楼！</description></item><item><title>卢森堡服务器库存监控脚本</title><link>https://blog.taoshuge.eu.org/p/331/</link><pubDate>Mon, 23 Sep 2024 14:03:42 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/331/</guid><description>官网：https://my.frantech.ca/cart.php?gid=39
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/fail2ban-s.sh &amp;amp;&amp;amp; chmod +x fail2ban-s.sh &amp;amp;&amp;amp; ./fail2ban-s.sh 结语 这款服务器日志检索与查杀工具为您提供了一个强大而简便的安全管理解决方案。通过自动化的日志分析、IP追踪和风险检查，您可以更轻松地掌控服务器安全状况，及时发现并应对潜在威胁。无论您是专业的系统管理员还是初学者，这个工具都能帮助您提升服务器安全管理的效率和效果。立即尝试，让您的服务器安全管理更上一层楼！</description></item><item><title>卢森堡服务器库存监控脚本</title><link>https://blog.taoshuge.eu.org/p/331/</link><pubDate>Mon, 23 Sep 2024 14:03:42 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/331/</guid><description> 官网：https://my.frantech.ca/cart.php?gid=39
 后台：https://manage.buyvm.net/
-下载脚本 wget -N https://raw.githubusercontent.com/woniu336/open_shell/main/check_stock.py 修改脚本 使用这个脚本之前，请确保：
-将YOUR_ACCESS_TOKEN替换为您的实际钉钉机器人access token。 将YOUR_SECRET替换为您的实际钉钉机器人加签密钥（SEC开头的字符串）。 安装所需的Python库：pip install requests pip install requests 您可以直接运行这个Python脚本：
-python3 check_stock.py 右键复制其中一款商品按钮链接：Order Now
-填写商品链接、钉钉通知token、加签密钥
-import time import hmac import hashlib import base64 import urllib.parse import requests # 配置信息 URL = &amp;#34;https://my.frantech.ca/cart.php?a=add&amp;amp;pid=1424&amp;#34; ACCESS_TOKEN = &amp;#34;YOUR_ACCESS_TOKEN&amp;#34; SECRET = &amp;#34;YOUR_SECRET&amp;#34; def generate_sign(): timestamp = str(round(time.time() * 1000)) secret_enc = SECRET.encode(&amp;#39;utf-8&amp;#39;) string_to_sign = f&amp;#39;{timestamp}\n{SECRET}&amp;#39; string_to_sign_enc = string_to_sign.encode(&amp;#39;utf-8&amp;#39;) hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest() sign = urllib.</description></item><item><title>一劳永逸:用脚本实现夸克网盘内容自动更新</title><link>https://blog.taoshuge.eu.org/p/330/</link><pubDate>Sun, 22 Sep 2024 21:45:00 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/330/</guid><description>系统环境：debian/ubuntu 、 安装了python3
+脚本监控的配置是卢森堡3.5美金/月
+每5秒钟监控一次
+下载脚本 cd /root &amp;amp;&amp;amp; mkdir -p buyvm &amp;amp;&amp;amp; cd buyvm 下载这两个文件
+wget https://raw.githubusercontent.com/woniu336/open_shell/main/buyvm/buyvm.py wget https://raw.githubusercontent.com/woniu336/open_shell/main/buyvm/monitor.sh 给monitor.sh添加执行权限
+chmod +x monitor.sh 修改脚本 使用这个脚本之前，请确保：
+将YOUR_ACCESS_TOKEN替换为您的实际钉钉机器人access token。
+将YOUR_SECRET替换为您的实际钉钉机器人加签密钥（SEC开头的字符串）。
+安装所需的Python库：
+pip install requests 启动 ./monitor.sh start 停止监控
+./monitor.sh stop 重启监控
+./monitor.sh restart 查看日志：
+tail -f monitor.log 其他 卢森堡服务器设置：
+安装curl
+apt-get update apt-get install curl 安装sudo
+apt-get update apt-get install sudo</description></item><item><title>一劳永逸:用脚本实现夸克网盘内容自动更新</title><link>https://blog.taoshuge.eu.org/p/330/</link><pubDate>Sun, 22 Sep 2024 21:45:00 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/330/</guid><description>系统环境：debian/ubuntu 、 安装了python3
 原作者项目：https://github.com/Cp0204/quark-auto-save 感谢
 缘起 我喜欢看电影追剧，会经常转存一些资源到夸克网盘，电影还好，如果是电视剧，麻烦就来了。
 对于一些持续更新的资源，不是说你转存了别人的资源就会自动在你网盘更新了，需要手动隔段时间去转存十分麻烦。
