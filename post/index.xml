@@ -9,21 +9,16 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 屏蔽 Censys
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>建站经验：服务器同步与数据库备份的终极解决方案</title><link>https://blog.taoshuge.eu.org/p/379/</link><pubDate>Sat, 14 Dec 2024 16:33:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/379/</guid><description>时光回溯到2015年末，从东莞（血汗工厂）归来的我，一无所有，在临时租房的一张破桌子上，疯狂敲打着键盘，眼神迷离，凭借着早年的网站建设经验，开启了个人站长之路。那时恰逢行业风口，百度流量红利期，站点日IP最高达30万。从最初使用AMH面板到后来的宝塔面板(7.7.0版本)，期间经历过无数次网站被黑客入侵的教训，也在不断摸索中积累了丰富的建站经验。
-今天，我要分享一套完整的服务器同步方案，帮助站长们更好地管理自己的网站。
-一键部署脚本 提示（宝塔面板）：两台服务器数据库密码要一致，可在面板上修改，默认root用户
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>建站经验：服务器同步与数据库备份的终极解决方案</title><link>https://blog.taoshuge.eu.org/p/379/</link><pubDate>Sat, 14 Dec 2024 16:33:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/379/</guid><description>一键部署脚本 提示（宝塔面板）：两台服务器数据库密码要一致，可在面板上修改，默认root用户
 数据库同步的设置
 如果远程服务器本身还没有数据库的前提下：数据库同步完成后，点击一下从服务器获取，之后的定时任务就可以不用再次点击了。
 脚本
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rsync-vps.sh &amp;amp;&amp;amp; chmod +x rsync-vps.sh &amp;amp;&amp;amp; ./rsync-vps.sh 数据库配置要点 为确保数据同步的顺利进行，请严格按照以下步骤配置数据库权限：
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rsync-vps.sh &amp;amp;&amp;amp; chmod +x rsync-vps.sh &amp;amp;&amp;amp; ./rsync-vps.sh 数据库配置要点 为确保数据库同步的顺利进行，请严格按照以下步骤配置数据库权限：
 默认root用户，输入数据库密码，登录到 MySQL，
 mysql -u root -p 执行以下命令授予必要权限：
 GRANT ALL PRIVILEGES ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; WITH GRANT OPTION; 刷新
 FLUSH PRIVILEGES; 退出 MySQL
-exit SSH连接配置 以下操作使用脚本就可以完成了。记得测试ssh连接是否成功（脚本）
-脚本功能 这是一个服务器同步工具脚本，主要功能：
-文件同步 使用 rsync 在两台服务器间同步文件目录 支持增量同步，只传输变更部分 数据库同步 自动备份本地数据库 通过 SSH 传输到远程服务器 在远程服务器还原数据库 连接管理 自动配置 SSH 密钥认证 支持自定义 SSH 端口 提供连接测试功能 所有配置信息存储在 config.sh 中，包括服务器地址、用户名、数据库凭据等。这个脚本适合需要定期在服务器间同步数据的场景。
-经验总结 作为一名经验丰富的站长，我想说的是：</description></item><item><title>为什么要写技术博客</title><link>https://blog.taoshuge.eu.org/p/378/</link><pubDate>Thu, 12 Dec 2024 22:25:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/378/</guid><description>为什么写技术博客 记得那是一个安静的夜晚，我盯着黑色的终端界面，敲下了第一行服务器配置命令。那一刻，仿佛打开了一扇新的大门，我决定开始写博客，记录下这段奇妙的技术探索之旅。
+exit 经验总结 选择合适的工具很重要，宝塔面板虽然简单，但能满足大多数建站需求 安全永远是第一位的，定期备份和同步是必不可少的运维工作 技术服务于需求，提高效率才是关键</description></item><item><title>为什么要写技术博客</title><link>https://blog.taoshuge.eu.org/p/378/</link><pubDate>Thu, 12 Dec 2024 22:25:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/378/</guid><description>为什么写技术博客 记得那是一个安静的夜晚，我盯着黑色的终端界面，敲下了第一行服务器配置命令。那一刻，仿佛打开了一扇新的大门，我决定开始写博客，记录下这段奇妙的技术探索之旅。
 技术积累的必要性 💡 技术论点速查
 知识沉淀：通过写作梳理技术要点 经验复用：记录问题解决方案 技术传承：分享经验心得给他人 写作的意义 每当夜深人静，我常常会想：
 那些折腾服务器的日日夜夜 调试代码时的欣喜与沮丧 网站终于部署成功的那一刻喜悦 解决问题后的成就感 不仅是在记录，更是在构建自己的技术认知体系。 这些珍贵的经历，若不记录下来，总觉得少了些什么。
