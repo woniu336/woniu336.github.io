@@ -29,12 +29,13 @@ mysql -u root 更新 root 密码：</description></item><item><title>文件同�
 mysql -u root -p 执行以下命令授予必要权限：
 GRANT ALL PRIVILEGES ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; WITH GRANT OPTION; 刷新
 FLUSH PRIVILEGES; 退出 MySQL
-exit 手动备份数据库 在本机备份数据库
+exit 查看用户权限（可选）
+SHOW GRANTS FOR &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39;; 手动备份数据库 在本机备份数据库
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/export_db.sh &amp;amp;&amp;amp; chmod +x export_db.sh &amp;amp;&amp;amp; ./export_db.sh 手动还原数据库 在远程服务器操作
 把数据库备份文件传输到远程服务器,然后执行以下操作
 切换到 SQL 文件所在目录：
 cd /www/wwwroot/back/ 解压 SQL 文件：
-gunzip &amp;lt; all_databases.sql.gz &amp;gt; all_databases.sql 将 SQL 文件导入 MySQL：</description></item><item><title>为什么要写技术博客</title><link>https://blog.taoshuge.eu.org/p/378/</link><pubDate>Thu, 12 Dec 2024 22:25:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/378/</guid><description>为什么写技术博客 记得那是一个安静的夜晚，我盯着黑色的终端界面，敲下了第一行服务器配置命令。那一刻，仿佛打开了一扇新的大门，我决定开始写博客，记录下这段奇妙的技术探索之旅。
+gunzip &amp;lt; all_databases.</description></item><item><title>为什么要写技术博客</title><link>https://blog.taoshuge.eu.org/p/378/</link><pubDate>Thu, 12 Dec 2024 22:25:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/378/</guid><description>为什么写技术博客 记得那是一个安静的夜晚，我盯着黑色的终端界面，敲下了第一行服务器配置命令。那一刻，仿佛打开了一扇新的大门，我决定开始写博客，记录下这段奇妙的技术探索之旅。
 技术积累的必要性 💡 技术论点速查
 知识沉淀：通过写作梳理技术要点 经验复用：记录问题解决方案 技术传承：分享经验心得给他人 写作的意义 每当夜深人静，我常常会想：
 那些折腾服务器的日日夜夜 调试代码时的欣喜与沮丧 网站终于部署成功的那一刻喜悦 解决问题后的成就感 不仅是在记录，更是在构建自己的技术认知体系。 这些珍贵的经历，若不记录下来，总觉得少了些什么。
