@@ -9,7 +9,22 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 屏蔽 Censys
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>磁盘写入性能测试命令</title><link>https://blog.taoshuge.eu.org/p/381/</link><pubDate>Tue, 17 Dec 2024 23:36:21 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/381/</guid><description>磁盘的写入性能
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>vmiss库存监控</title><link>https://blog.taoshuge.eu.org/p/382/</link><pubDate>Wed, 18 Dec 2024 01:00:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/382/</guid><description> 官网：https://app.vmiss.com/store/gb-london-9929
+8折优惠码：20%off
+脚本监控的配置是伦敦9929，5加元/月
+如果要监控洛杉矶CMIN2，把脚本中的product78改成product44
+监控地址改成：https://app.vmiss.com/store/us-los-angeles-cmin2
+每5秒钟监控一次
+下载脚本 cd /root &amp;amp;&amp;amp; mkdir -p vmiss &amp;amp;&amp;amp; cd vmiss 下载这两个文件
+wget https://raw.githubusercontent.com/woniu336/open_shell/main/vmiss/monitor_stock.py wget https://raw.githubusercontent.com/woniu336/open_shell/main/vmiss/monitor_control.sh 给monitor.sh添加执行权限
+chmod +x monitor_control.sh 安装所需的Python库：
+pip install requests beautifulsoup4 修改脚本 使用这个脚本之前，请确保：
+将YOUR_ACCESS_TOKEN替换为您的实际钉钉机器人access token。
+将YOUR_SECRET替换为您的实际钉钉机器人加签密钥（SEC开头的字符串）。
+启动 ./monitor_control.sh start 停止监控
+./monitor_control.sh stop 重启监控
+./monitor_control.sh restart 查看实时日志：
+tail -f monitor.log</description></item><item><title>磁盘写入性能测试命令</title><link>https://blog.taoshuge.eu.org/p/381/</link><pubDate>Tue, 17 Dec 2024 23:36:21 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/381/</guid><description>磁盘的写入性能
 dd bs=64k count=4k if=/dev/zero of=test oflag=dsync</description></item><item><title>数据库权限设置</title><link>https://blog.taoshuge.eu.org/p/380/</link><pubDate>Tue, 17 Dec 2024 16:28:08 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/380/</guid><description>仅适用于在远程同步数据库时遇到问题的解决办法
 撤销权限 步骤：
 登录到 MySQL：
