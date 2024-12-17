@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 17 Dec 2024 16:28:08 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 17 Dec 2024 23:36:21 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -9,7 +9,8 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 屏蔽 Censys
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>数据库权限设置</title><link>https://blog.taoshuge.eu.org/p/380/</link><pubDate>Tue, 17 Dec 2024 16:28:08 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/380/</guid><description>仅适用于在远程同步数据库时遇到问题的解决办法
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>磁盘写入性能测试命令</title><link>https://blog.taoshuge.eu.org/p/381/</link><pubDate>Tue, 17 Dec 2024 23:36:21 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/381/</guid><description>磁盘的写入性能
+dd bs=64k count=4k if=/dev/zero of=test oflag=dsync</description></item><item><title>数据库权限设置</title><link>https://blog.taoshuge.eu.org/p/380/</link><pubDate>Tue, 17 Dec 2024 16:28:08 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/380/</guid><description>仅适用于在远程同步数据库时遇到问题的解决办法
 撤销权限 步骤：
 登录到 MySQL：
 mysql -u root -p 输入密码登录。
