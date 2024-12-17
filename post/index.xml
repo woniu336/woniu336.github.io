@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 14 Dec 2024 16:33:25 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 17 Dec 2024 16:28:08 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -9,7 +9,19 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 屏蔽 Censys
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>建站经验：服务器同步与数据库备份的终极解决方案</title><link>https://blog.taoshuge.eu.org/p/379/</link><pubDate>Sat, 14 Dec 2024 16:33:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/379/</guid><description>一键部署脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rsync-vps.sh &amp;amp;&amp;amp; chmod +x rsync-vps.sh &amp;amp;&amp;amp; ./rsync-vps.sh 注意事项 提示（宝塔面板）：两台服务器数据库密码要一致，可在面板上修改，默认root用户
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>数据库权限设置</title><link>https://blog.taoshuge.eu.org/p/380/</link><pubDate>Tue, 17 Dec 2024 16:28:08 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/380/</guid><description>仅适用于在远程同步数据库时遇到问题的解决办法
+撤销权限 步骤：
+登录到 MySQL：
+mysql -u root -p 输入密码登录。
+依次执行以下命令来撤销权限：
+REVOKE ALL PRIVILEGES ON *.* FROM &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39;; REVOKE GRANT OPTION ON *.* FROM &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39;; 刷新权限：
+FLUSH PRIVILEGES; 解读：
+这条命令会移除 root 用户在所有数据库上的所有权限。
+REVOKE ALL PRIVILEGES ON *.* FROM &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39;; 这条命令会移除 root 用户授予其他用户权限的能力（即，移除 GRANT OPTION）
+REVOKE GRANT OPTION ON *.* FROM &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39;; 恢复权限 停止 MySQL 服务：
+sudo systemctl stop mysql 启动 MySQL 安全模式（无需身份验证）：
+sudo mysqld_safe --skip-grant-tables &amp;amp; 登录 MySQL：
+mysql -u root 更新 root 密码：</description></item><item><title>文件同步与数据库备份的解决方案</title><link>https://blog.taoshuge.eu.org/p/379/</link><pubDate>Sat, 14 Dec 2024 16:33:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/379/</guid><description>一键部署脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rsync-vps.sh &amp;amp;&amp;amp; chmod +x rsync-vps.sh &amp;amp;&amp;amp; ./rsync-vps.sh 注意事项 提示（宝塔面板）：两台服务器数据库密码要一致，可在面板上修改，默认root用户
 数据库同步的设置
 如果远程服务器本身还没有数据库的前提下：数据库同步完成后，点击一下从服务器获取，之后的定时任务就可以不用再次点击了。
 数据库配置要点 为确保数据库同步的顺利进行，请严格按照以下步骤配置数据库权限：
@@ -17,7 +29,12 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw
 mysql -u root -p 执行以下命令授予必要权限：
 GRANT ALL PRIVILEGES ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; WITH GRANT OPTION; 刷新
 FLUSH PRIVILEGES; 退出 MySQL
-exit 经验总结 选择合适的工具很重要，宝塔面板虽然简单，但能满足大多数建站需求 安全永远是第一位的，定期备份和同步是必不可少的运维工作 技术服务于需求，提高效率才是关键</description></item><item><title>为什么要写技术博客</title><link>https://blog.taoshuge.eu.org/p/378/</link><pubDate>Thu, 12 Dec 2024 22:25:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/378/</guid><description>为什么写技术博客 记得那是一个安静的夜晚，我盯着黑色的终端界面，敲下了第一行服务器配置命令。那一刻，仿佛打开了一扇新的大门，我决定开始写博客，记录下这段奇妙的技术探索之旅。
+exit 手动备份数据库 在本机备份数据库
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/export_db.sh &amp;amp;&amp;amp; chmod +x export_db.sh &amp;amp;&amp;amp; ./export_db.sh 手动还原数据库 在远程服务器操作
+把数据库备份文件传输到远程服务器,然后执行以下操作
+切换到 SQL 文件所在目录：
+cd /www/wwwroot/back/ 解压 SQL 文件：
+gunzip &amp;lt; all_databases.sql.gz &amp;gt; all_databases.sql 将 SQL 文件导入 MySQL：</description></item><item><title>为什么要写技术博客</title><link>https://blog.taoshuge.eu.org/p/378/</link><pubDate>Thu, 12 Dec 2024 22:25:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/378/</guid><description>为什么写技术博客 记得那是一个安静的夜晚，我盯着黑色的终端界面，敲下了第一行服务器配置命令。那一刻，仿佛打开了一扇新的大门，我决定开始写博客，记录下这段奇妙的技术探索之旅。
 技术积累的必要性 💡 技术论点速查
 知识沉淀：通过写作梳理技术要点 经验复用：记录问题解决方案 技术传承：分享经验心得给他人 写作的意义 每当夜深人静，我常常会想：
 那些折腾服务器的日日夜夜 调试代码时的欣喜与沮丧 网站终于部署成功的那一刻喜悦 解决问题后的成就感 不仅是在记录，更是在构建自己的技术认知体系。 这些珍贵的经历，若不记录下来，总觉得少了些什么。
