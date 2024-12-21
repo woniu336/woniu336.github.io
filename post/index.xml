@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Dec 2024 15:50:02 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 21 Dec 2024 16:17:36 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -9,7 +9,18 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 屏蔽 Censys
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>nftables规则屏蔽垃圾IP</title><link>https://blog.taoshuge.eu.org/p/384/</link><pubDate>Fri, 20 Dec 2024 15:50:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/384/</guid><description>使用新表名重新创建规则
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>MySQL数据库主主同步</title><link>https://blog.taoshuge.eu.org/p/385/</link><pubDate>Sat, 21 Dec 2024 16:17:36 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/385/</guid><description>使用场景：两台服务器互为从主，数据库自动同步
+事先准备 开启防火墙 Debian/Ubuntu 检查UFW 是否启用
+sudo ufw status 如果显示 &amp;ldquo;Status: inactive&amp;rdquo; 说明防火墙未启用,需要安装UFW
+sudo apt update sudo apt install ufw ⚠️ 安全提醒：允许SSH连接（重要！防止被锁在系统外）
+sudo ufw allow ssh 如果您的 SSH 端口是 5522
+sudo ufw allow 5522/tcp 开放3306端口
+sudo ufw allow 3306/tcp 仅允许特定IP访问3306端口（可选）
+sudo ufw allow from 1.1.1.1 to any port 3306 proto tcp 启用UFW
+sudo ufw enable 防火墙设置完毕
+开启二进制日志 检查二进制日志是否开启
+mysql -u root -p 输入root密码后进入MySQL命令行,然后执行以下命令
+SHOW VARIABLES LIKE &amp;#39;%log_bin%&amp;#39;; 如果看到 log_bin 的值为 ON，则表示已开启。</description></item><item><title>nftables规则屏蔽垃圾IP</title><link>https://blog.taoshuge.eu.org/p/384/</link><pubDate>Fri, 20 Dec 2024 15:50:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/384/</guid><description>使用新表名重新创建规则
 # IPv4 规则 nft add table ip blacklist nft add chain ip blacklist input { type filter hook input priority filter \; policy accept \; } nft add rule ip blacklist input ip saddr { \ 20.171.206.0/24, \ 52.230.152.0/24, \ 52.233.106.0/24, \ 66.220.144.0/20, \ 69.63.176.0/20, \ 103.218.243.0/24, \ 152.32.128.0/17, \ 162.142.125.0/24, \ 167.94.138.0/24, \ 167.94.145.0/24, \ 167.94.146.0/24, \ 167.248.133.0/24, \ 199.45.154.0/23, \ 206.168.34.0/24 \ } drop # IPv6 规则 nft add table ip6 blacklist nft add chain ip6 blacklist input { type filter hook input priority filter \; policy accept \; } nft add rule ip6 blacklist input ip6 saddr { \ 2602:80d:1000:b0cc:e::/80, \ 2602:80d:1003::/112, \ 2602:80d:1004::/112, \ 2620:0:1c00::/40, \ 2620:96:e000:b0cc:e::/80, \ 2a03:2880::/32 \ } drop 查看所有规则</description></item><item><title>nftables 转发规则一键脚本</title><link>https://blog.taoshuge.eu.org/p/383/</link><pubDate>Fri, 20 Dec 2024 04:15:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/383/</guid><description>一键脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nftables-manager.sh &amp;amp;&amp;amp; chmod +x nftables-manager.sh &amp;amp;&amp;amp; ./nftables-manager.sh 虽然nftables好用，但是容易和ufw、某些docker应用不兼容，会出问题，所以，最好是专门用于转发用。
 至于nftables和iptables的区别不多说了，我往期帖子也有关于iptables的脚本
 注意事项 很重要！！！
