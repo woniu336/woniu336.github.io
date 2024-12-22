@@ -53,21 +53,12 @@ REVOKE ALL PRIVILEGES ON *.* FROM &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;
 REVOKE GRANT OPTION ON *.* FROM &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39;; 恢复权限 停止 MySQL 服务：
 sudo systemctl stop mysql 启动 MySQL 安全模式（无需身份验证）：
 sudo mysqld_safe --skip-grant-tables &amp;amp; 登录 MySQL：
-mysql -u root 更新 root 密码：</description></item><item><title>文件同步与数据库备份的解决方案</title><link>https://blog.taoshuge.eu.org/p/379/</link><pubDate>Sat, 14 Dec 2024 16:33:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/379/</guid><description>一键部署脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rsync-vps.sh &amp;amp;&amp;amp; chmod +x rsync-vps.sh &amp;amp;&amp;amp; ./rsync-vps.sh 注意事项 提示（宝塔面板）：两台服务器数据库密码要一致，可在面板上修改，默认root用户
-数据库同步的设置
-如果远程服务器本身还没有数据库的前提下：数据库同步完成后，点击一下从服务器获取，之后的定时任务就可以不用再次点击了。
-数据库配置要点 为确保数据库同步的顺利进行，请严格按照以下步骤配置数据库权限：
-默认root用户，输入数据库密码，登录到 MySQL，
-mysql -u root -p 执行以下命令授予必要权限：
-GRANT ALL PRIVILEGES ON *.* TO &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39; WITH GRANT OPTION; 刷新
-FLUSH PRIVILEGES; 退出 MySQL
-exit 查看用户权限（可选）
-SHOW GRANTS FOR &amp;#39;root&amp;#39;@&amp;#39;localhost&amp;#39;; 手动备份数据库 在本机备份数据库
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/export_db.sh &amp;amp;&amp;amp; chmod +x export_db.sh &amp;amp;&amp;amp; ./export_db.sh 手动还原数据库 在远程服务器操作
-把数据库备份文件传输到远程服务器,然后执行以下操作
-切换到 SQL 文件所在目录：
-cd /www/wwwroot/back/ 解压 SQL 文件：
-gunzip &amp;lt; all_databases.</description></item><item><title>为什么要写技术博客</title><link>https://blog.taoshuge.eu.org/p/378/</link><pubDate>Thu, 12 Dec 2024 22:25:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/378/</guid><description>为什么写技术博客 记得那是一个安静的夜晚，我盯着黑色的终端界面，敲下了第一行服务器配置命令。那一刻，仿佛打开了一扇新的大门，我决定开始写博客，记录下这段奇妙的技术探索之旅。
+mysql -u root 更新 root 密码：</description></item><item><title>宝塔面板跨服务器数据同步教程：双机备份零停机</title><link>https://blog.taoshuge.eu.org/p/379/</link><pubDate>Sat, 14 Dec 2024 16:33:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/379/</guid><description>前言 为什么需要双机备份？
+双服务器互备：主机宕机，备机即刻顶上 双节点反代：确保服务持续可用 自动化备份：目录增量同步 + 数据库全量备份 简单高效：一键部署，定时任务自动执行 适用环境：宝塔面板 7.7.0 及以上版本
+快速部署 ⚠️ 提醒：在使用脚本前，分别在两台服务器配置同步用户（下面有步骤）
+脚本：
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rsync-vps.sh &amp;amp;&amp;amp; chmod +x rsync-vps.sh &amp;amp;&amp;amp; ./rsync-vps.sh 配置同步用户 服务器 A 配置
+登录 MySQL： mysql -u root -p 创建同步用户tongbu并授权，仅修改密码即可，最好不要有特殊字符 CREATE USER &amp;#39;tongbu&amp;#39;@&amp;#39;127.0.0.1&amp;#39; IDENTIFIED BY &amp;#39;123456&amp;#39;; GRANT ALL PRIVILEGES ON *.* TO &amp;#39;tongbu&amp;#39;@&amp;#39;127.0.0.1&amp;#39;; FLUSH PRIVILEGES; 验证配置： # 查看同步用户权限 SHOW GRANTS FOR &amp;#39;tongbu&amp;#39;@&amp;#39;127.0.0.1&amp;#39;; # 查看所有用户 SELECT user, host FROM mysql.user; # 退出 exit 服务器 B 配置 按照服务器 A 相同步骤配置，确保用户名和密码一致。</description></item><item><title>为什么要写技术博客</title><link>https://blog.taoshuge.eu.org/p/378/</link><pubDate>Thu, 12 Dec 2024 22:25:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/378/</guid><description>为什么写技术博客 记得那是一个安静的夜晚，我盯着黑色的终端界面，敲下了第一行服务器配置命令。那一刻，仿佛打开了一扇新的大门，我决定开始写博客，记录下这段奇妙的技术探索之旅。
 技术积累的必要性 💡 技术论点速查
 知识沉淀：通过写作梳理技术要点 经验复用：记录问题解决方案 技术传承：分享经验心得给他人 写作的意义 每当夜深人静，我常常会想：
 那些折腾服务器的日日夜夜 调试代码时的欣喜与沮丧 网站终于部署成功的那一刻喜悦 解决问题后的成就感 不仅是在记录，更是在构建自己的技术认知体系。 这些珍贵的经历，若不记录下来，总觉得少了些什么。
