@@ -64,8 +64,8 @@ sudo systemctl stop mysql 启动 MySQL 安全模式（无需身份验证）：
 sudo mysqld_safe --skip-grant-tables &amp;amp; 登录 MySQL：
 mysql -u root 更新 root 密码：</description></item><item><title>宝塔面板跨服务器数据同步教程：双机备份零停机</title><link>https://blog.taoshuge.eu.org/p/379/</link><pubDate>Sat, 14 Dec 2024 16:33:25 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/379/</guid><description>前言 为什么需要双机备份？
 双服务器互备：主机宕机，备机即刻顶上 双节点反代：确保服务持续可用 自动化备份：目录增量同步 + 数据库全量备份 简单高效：一键部署，定时任务自动执行 适用环境：宝塔面板 7.7.0 及以上版本
-快速部署 ⚠️ 提醒：在使用脚本前，分别在两台服务器配置同步用户（下面有步骤）
-脚本：
+快速部署 ⚠️ 提醒：
+在使用脚本前，分别在两台服务器配置同步用户（下面有步骤） 数据库的root密码要一致，同步用户的密码也要一致 脚本：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rsync-vps.sh &amp;amp;&amp;amp; chmod +x rsync-vps.sh &amp;amp;&amp;amp; ./rsync-vps.sh 配置同步用户 服务器 A 配置
 登录 MySQL： mysql -u root -p 创建同步用户tongbu并授权，仅修改密码即可，最好不要有特殊字符 CREATE USER &amp;#39;tongbu&amp;#39;@&amp;#39;127.0.0.1&amp;#39; IDENTIFIED BY &amp;#39;123456&amp;#39;; GRANT ALL PRIVILEGES ON *.* TO &amp;#39;tongbu&amp;#39;@&amp;#39;127.0.0.1&amp;#39;; FLUSH PRIVILEGES; 验证配置： # 查看同步用户权限 SHOW GRANTS FOR &amp;#39;tongbu&amp;#39;@&amp;#39;127.0.0.1&amp;#39;; # 查看所有用户 SELECT user, host FROM mysql.user; # 退出 exit 服务器 B 配置 按照服务器 A 相同步骤配置，确保用户名和密码一致。</description></item><item><title>为什么要写技术博客</title><link>https://blog.taoshuge.eu.org/p/378/</link><pubDate>Thu, 12 Dec 2024 22:25:45 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/378/</guid><description>为什么写技术博客 记得那是一个安静的夜晚，我盯着黑色的终端界面，敲下了第一行服务器配置命令。那一刻，仿佛打开了一扇新的大门，我决定开始写博客，记录下这段奇妙的技术探索之旅。
 技术积累的必要性 💡 技术论点速查
