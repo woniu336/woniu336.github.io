@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 22 Dec 2024 21:07:32 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 24 Dec 2024 01:24:59 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -9,7 +9,23 @@ https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 屏蔽 Censys
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>整活！rclone配合cloudflare r2 备份站点</title><link>https://blog.taoshuge.eu.org/p/386/</link><pubDate>Sun, 22 Dec 2024 21:07:32 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/386/</guid><description>安装工具 安装pigz压缩
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh CloudFlare Api 宕机自动切换 ip</description></item><item><title>Rust 版 ServerStatus 云探针</title><link>https://blog.taoshuge.eu.org/p/387/</link><pubDate>Tue, 24 Dec 2024 01:24:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/387/</guid><description>项目：https://github.com/zdz/ServerStatus-Rust
+文档：https://doc.ssr.rs/
+安装服务端 下载脚本
+curl -LO https://raw.githubusercontent.com/AhFeil/bash-script/main/install-rust_serverstatus.sh 执行脚本（同时安装服务端和客户端，监控本机）
+sudo bash install-rust_serverstatus.sh &amp;#34;http://127.0.0.1:8080/report&amp;#34; &amp;#34;/root/tzserve/serverstatus&amp;#34; root &amp;#34;ovh&amp;#34; &amp;#34;123456&amp;#34; yes 编辑配置文件
+nano /root/tzserve/serverstatus/config.toml 修改如下
+hosts = [ {name = &amp;#34;ovh&amp;#34;, password = &amp;#34;123456&amp;#34;, alias = &amp;#34;Bwg&amp;#34;, location = &amp;#34;US&amp;#34;, type = &amp;#34;KVM&amp;#34;, labels = &amp;#34;os=debian;ndd=2024/1/15;spec=2C/2G/40G;&amp;#34;}, ] 注意看：上方的执行脚本root &amp;quot;ovh&amp;quot; &amp;quot;123456&amp;quot; yes要和配置文件对应上，
+其中root就是机子用户
+http://127.0.0.1:8080/report 服务端地址, 可以事先准备反代域名，后面加/report
+/root/tzserve/serverstatus 安装目录
+ovh就是配置文件中的name
+123456就是配置文件中password
+yes 意思就是安装服务端
+alias 展示名
+location 国家缩写即可，如 cn us 等，所有国家见 https://github.com/zdz/ServerStatus-Rust/tree/master/web/static/flags/4x3
+type 机器类型
+自定义标签 labels = &amp;ldquo;os=debian;ndd=2022/11/25;spec=2C/4G/60G;&amp;rdquo;</description></item><item><title>rclone配合cloudflare r2 备份站点</title><link>https://blog.taoshuge.eu.org/p/386/</link><pubDate>Sun, 22 Dec 2024 21:07:32 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/386/</guid><description>安装工具 安装pigz压缩
 apt-get update apt-get install pigz 安装rclone
 sudo -v ; curl https://rclone.org/install.sh | sudo bash 编辑cloudflare r2配置,当然也可以是其他s3网盘，或者谷歌网盘、onedrive都可以
 mkdir -p /root/.config/rclone/ touch /root/.config/rclone/rclone.conf nano /root/.config/rclone/rclone.conf 注意：名称r3要和backup_config.conf配置文件的remote_name名称一致
