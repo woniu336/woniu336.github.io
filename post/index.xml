@@ -10,16 +10,15 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 屏蔽 Censys
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh 三网回程路由线路测试
-curl https://raw.</description></item><item><title>数据库主从设置</title><link>https://blog.taoshuge.eu.org/p/388/</link><pubDate>Sun, 29 Dec 2024 01:30:19 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/388/</guid><description>我来帮您修改为主从（主备）复制模式。主要需要修改的部分如下：
-1. 主库设置 在主库，假设是A服务器上，开放 3306 端口
+curl https://raw.</description></item><item><title>数据库主从设置</title><link>https://blog.taoshuge.eu.org/p/388/</link><pubDate>Sun, 29 Dec 2024 01:30:19 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/388/</guid><description>1. 主库设置 在主库，假设是A服务器上，开放 3306 端口
 sudo ufw allow 3306/tcp 重新加载 UFW 生效
-sudo ufw reload 编辑my.cnf：
+sudo ufw reload 编辑/etc/my.cnf：
 [mysqld] server-id=1 read_only=0 log-bin=mysql-bin # 指定需要同步的数据库,如果不指定，默认所有数据库 binlog-do-db=db1 binlog-do-db=db2 重启数据库
 service mysqld restart 2. 从库设置 假设是B服务器上，编辑my.cnf：
 [mysqld] server-id=2 read_only=1 # 指定需要复制的数据库 replicate-do-db=db1 replicate-do-db=db2 重启数据库
 service mysqld restart 3. 主库授权 登录 mysql 命令行
 mysql -u root -p 只需要在主库，服务器(A)上创建同步用户：
--- 在主服务器A上执行 CREATE USER &amp;#39;tongbu&amp;#39;@&amp;#39;从服务器IP&amp;#39; IDENTIFIED BY &amp;#39;123456&amp;#39;; GRANT REPLICATION SLAVE ON *.* TO &amp;#39;tongbu&amp;#39;@&amp;#39;从服务器IP&amp;#39;; FLUSH PRIVILEGES; 4.</description></item><item><title>Rust 版 ServerStatus 云探针</title><link>https://blog.taoshuge.eu.org/p/387/</link><pubDate>Tue, 24 Dec 2024 01:24:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/387/</guid><description>项目地址：https://github.com/zdz/ServerStatus-Rust
+-- 在主服务器A上执行 CREATE USER &amp;#39;tongbu&amp;#39;@&amp;#39;从服务器IP&amp;#39; IDENTIFIED BY &amp;#39;123456&amp;#39;; GRANT REPLICATION SLAVE ON *.* TO &amp;#39;tongbu&amp;#39;@&amp;#39;从服务器IP&amp;#39;; FLUSH PRIVILEGES; 4. 配置主从关系 在主服务器上获取日志位置： SHOW MASTER STATUS; 在从服务器上配置： -- 1.</description></item><item><title>Rust 版 ServerStatus 云探针</title><link>https://blog.taoshuge.eu.org/p/387/</link><pubDate>Tue, 24 Dec 2024 01:24:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/387/</guid><description>项目地址：https://github.com/zdz/ServerStatus-Rust
 官方文档：https://doc.ssr.rs/
 demo: https://tz.tubaozijie.eu.org/
 在@AhFei大佬的安装脚本基础上制作的便捷一键脚本
