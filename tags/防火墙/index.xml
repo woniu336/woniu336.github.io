@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>防火墙 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/%E9%98%B2%E7%81%AB%E5%A2%99/</link><description>Recent content in 防火墙 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 30 Apr 2024 11:46:45 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/%E9%98%B2%E7%81%AB%E5%A2%99/index.xml" rel="self" type="application/rss+xml"/><item><title>Cloudflare防火墙其他WAF设置</title><link>https://blog.taoshuge.eu.org/p/247/</link><pubDate>Tue, 30 Apr 2024 11:46:45 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/247/</guid><description>其他WAF设置 缓存设置 缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>防火墙 on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/tags/%E9%98%B2%E7%81%AB%E5%A2%99/</link><description>Recent content in 防火墙 on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 30 Dec 2024 00:58:40 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/%E9%98%B2%E7%81%AB%E5%A2%99/index.xml" rel="self" type="application/rss+xml"/><item><title>关闭 nftables</title><link>https://blog.taoshuge.eu.org/p/389/</link><pubDate>Mon, 30 Dec 2024 00:58:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/389/</guid><description>关闭 nftables 可以通过以下步骤完成：
+停止 nftables 服务
+使用以下命令停止正在运行的 nftables 服务：
+sudo systemctl stop nftables 禁用 nftables 开机启动
+为防止 nftables 在系统启动时自动加载，运行以下命令：
+sudo systemctl disable nftables 确认规则被清空
+停止服务后，你可以检查 nftables 的规则是否已被清空：
+sudo nft list ruleset 如果仍有规则加载，可以使用以下命令清空规则：
+sudo nft flush ruleset 卸载 nftables（可选）
+如果你完全不需要 nftables，可以将其卸载：
+sudo apt remove nftables # 对于基于 Debian/Ubuntu 的系统 sudo yum remove nftables # 对于基于 CentOS/RHEL 的系统 完成以上步骤后，nftables 应该已被关闭，且不会再影响你的系统网络配置。</description></item><item><title>Cloudflare防火墙其他WAF设置</title><link>https://blog.taoshuge.eu.org/p/247/</link><pubDate>Tue, 30 Apr 2024 11:46:45 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/247/</guid><description>其他WAF设置 缓存设置 缓存设置好也可以帮助我们抵挡巨量的CC攻击。有些CC是很多IP随即攻击一个地址，如果我们的安全策略没有拦截到攻击。但是我们设置了缓存，那这些请求则会在CloudFlare边缘节点直接将缓存内容返回给请求。也达到了抗攻击的效果。
 缓存设置是在多个位置进行的。下面大家看截图就好。
 创建静态文件的缓存规则 表达式:
 (http.request.full_uri contains &amp;#34;.gif&amp;#34;) or (http.request.full_uri contains &amp;#34;.js&amp;#34;) or (http.request.full_uri contains &amp;#34;.css&amp;#34;) or (http.request.full_uri contains &amp;#34;.woff2&amp;#34;) or (http.request.full_uri contains &amp;#34;.webp&amp;#34;) or (http.request.full_uri contains &amp;#34;.png&amp;#34;) or (http.request.full_uri contains &amp;#34;.jpg&amp;#34;) or (http.request.full_uri contains &amp;#34;.jpeg&amp;#34;) 缓存时间看个人情况
