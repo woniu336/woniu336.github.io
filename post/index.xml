@@ -1904,15 +1904,9 @@ apt install wget -y sudo apt install unzip sudo apt-get install xz-utils sudo ap
 /application/admin/controller/Mycj.php 4、最后删除这个路径的文件夹即可
 /application/admin/view/mycj/ 将以上几个地方的文件删除，再重新上传插件，并启用试试看。
 若提示启用成功，后台快捷菜单处没有显示快捷菜单，那么手动添加一下快捷菜单即可
-萌芽采集资源,mycj/union 复制上方快捷菜单代码，添加到快捷菜单里面并保存即可</description></item><item><title>苹果cms通用清理php后门自动脚本</title><link>https://blog.taoshuge.eu.org/p/123/</link><pubDate>Fri, 12 Jan 2024 04:17:18 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/123/</guid><description>一键清理挂马脚本： curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/xiu.sh &amp;amp;&amp;amp; chmod +x xiu.sh &amp;amp;&amp;amp; ./xiu.sh 1：脚本会把网站配置文件备份到/home/back目录
-2：/template 以及 /upload目录内的所有 .php 文件删除
-3：检查并处理 template 和 upload 文件夹内的文件
-4：删除 template 和 upload 文件夹内包含 &amp;lt;?php 或 {php 代码段的文件
-5：将删除的文件备份到/home/back目录
-这样的好处是，在你查看/home/back，你会看到哪些文件是添加了&amp;lt;?php 或 {php 代码的，
-除了配置文件本身存在一个&amp;lt;?php内是一个return array返回数组,如果还有其他&amp;lt;?php块就是后门
-剩下的html文件请仔细检查
-注意：为了安全起见 每次发现被挂马后应该用以下方法来处理！！！ 黑客入侵后可能在数据库挂js，可能在网站目录任何角落留下php后门，用以下方法可以快速清理干净php后门，不用一个一个文件去分析。
+萌芽采集资源,mycj/union 复制上方快捷菜单代码，添加到快捷菜单里面并保存即可</description></item><item><title>苹果cms通用清理php后门自动脚本</title><link>https://blog.taoshuge.eu.org/p/123/</link><pubDate>Fri, 12 Jan 2024 04:17:18 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/123/</guid><description>锁住文件
+chattr -R +i /www/wwwroot/123.com 排除缓存目录
+chattr -R -i /www/wwwroot/123.com/runtime/temp 注意：为了安全起见 每次发现被挂马后应该用以下方法来处理！！！ 黑客入侵后可能在数据库挂js，可能在网站目录任何角落留下php后门，用以下方法可以快速清理干净php后门，不用一个一个文件去分析。
 1，备份原网站配置文件 ，并检查里边是否有后门代码，正常情况下&amp;lt;?php内是一个return array返回数组，如果还有其他&amp;lt;?php块就是后门。
 \application\database.php
 \application\route.php
@@ -1935,7 +1929,11 @@ apt install wget -y sudo apt install unzip sudo apt-get install xz-utils sudo ap
 \vendor\
 \说明文档\
 \admin.php 自定义后台入口文件
-\api.php 自定义api入口文件</description></item><item><title>海洋cms自动采集之宝塔面板定时任务</title><link>https://blog.taoshuge.eu.org/p/122/</link><pubDate>Sun, 07 Jan 2024 07:43:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/122/</guid><description>第一步：获取脚本代码
+\api.php 自定义api入口文件
+\index.php
+\install.php
+4，把刚才备份的配置文件覆盖到application下即可
+5，修改后台入口文件名；登录后台检查管理员账号并修改密码，删除多余被黑客创建的账号；</description></item><item><title>海洋cms自动采集之宝塔面板定时任务</title><link>https://blog.taoshuge.eu.org/p/122/</link><pubDate>Sun, 07 Jan 2024 07:43:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/122/</guid><description>第一步：获取脚本代码
 下面是自动采集脚本代码
 #!/bin/bash ######################################################## # 程序名称: 海洋CMS自动采集脚本 # 版本信息：seacmsbot/ v2.0 # 发布链接: https://www.seacms.net/ # 使用方法：直接复制代码到宝塔计划任务shell脚本内容里添加每小时任务使用 # 更新时间：2019.9.26 ########################################################## #①请修改下面的网站域名及管理目录 web_site=&amp;#34;http://你的域名/管理目录/admin_reslib2.php&amp;#34; #②请修改下面项内容为&amp;#34;admin_reslib2.php&amp;#34;里设置的访问密码(默认为系统设置的cookie密码) web_pwd=&amp;#34;111111111111111111&amp;#34; #③下面项内容为资源站每日采集链接地址列表，请自行修改,每行一条,可添加多个，前后需添加引号。 #每日采集链接获取方法:选择&amp;#34;后台-采集-资源库列表&amp;#34;,复制资源站右边的&amp;#34;采集每天&amp;#34;的链接地址,去掉?前面的内容。 web_api=( &amp;#39;?ac=day&amp;amp;rid=2&amp;amp;url=https://ikunzyapi.com/api.php/seaxml/vod/at/xml&amp;#39; &amp;#39;?ac=day&amp;amp;rid=3&amp;amp;url=https://taopianapi.com/cjapi/sea/vod/xml/m3u8.html&amp;#39; ) #模拟用户浏览器ua,请勿随意修改，以免被目标防火墙拦截! web_ua=&amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36 seacmsbot/1.2;&amp;#34; #采集单页 function get_content() { echo &amp;#34;正在采集第$page页...&amp;#34; #echo &amp;#34; get_content: ---&amp;gt;url:---&amp;gt;$1&amp;#34; cResult=$(curl --connect-timeout 10 -m 20 -k -s -L -A &amp;#34;$web_ua&amp;#34; &amp;#34;$1&amp;#34; ) echo $cResult | grep -q &amp;#34;采集&amp;#34; #echo -e &amp;#34;$1\n$cResult&amp;#34; if [ &amp;#34;$?</description></item><item><title>2023年最新可采集CMS视频资源站网址合集</title><link>https://blog.taoshuge.eu.org/p/2023%E5%B9%B4%E6%9C%80%E6%96%B0%E5%8F%AF%E9%87%87%E9%9B%86cms%E8%A7%86%E9%A2%91%E8%B5%84%E6%BA%90%E7%AB%99%E7%BD%91%E5%9D%80%E5%90%88%E9%9B%86/</link><pubDate>Sun, 07 Jan 2024 07:24:01 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/2023%E5%B9%B4%E6%9C%80%E6%96%B0%E5%8F%AF%E9%87%87%E9%9B%86cms%E8%A7%86%E9%A2%91%E8%B5%84%E6%BA%90%E7%AB%99%E7%BD%91%E5%9D%80%E5%90%88%E9%9B%86/</guid><description> 飞速资源 https://help.feisuzyapi.com/ 闪电资源 http://shan04.com/ 樱花资源 https://yhzy.cc/ 百度资源 http://bdzy.com/ 无尽资源 https://www.wujinzy.com/ 酷点资网 https://www.kudian20.com/ 红牛资源 https://www.hongniuziyuan.com/ 云解析资源 https://www.yparse.com/help 天空资源 http://help.tiankongapi.com/ 天堂官方资源 http://vipmv.cc/help/ 1080zyk优质资源 https://1080zyk2.com/ 卧龙影视资源 http://wolongzyw.com/ 全网影视资源 http://hao123.daicuo.cc/ fox资源 https://help.foxzyapi.com/ 金鹰资源 https://jinyingzy.net/ 新浪资源 https://xinlangzy.com/ 光速影视资源 https://guangsuzy.com/ 奥斯卡资源 https://aosikazy.com/static/help/index.html 快车资源 https://www.kuaichezy.com/ 淘片资源 (需VPN) https://www.taopianzy.com/ 量子资源 http://lzizy.net/ 诺讯资源 https://caiji.nxflv.com/ tom资源 https://www.tomziyuan.com/ 三零资源 http://www.000zy.com/ 麒麟资源(需要授权) https://www.qilinzyz.com/ 鱼乐资源 https://www.ylzy1.com/ ikun资源 https://www.ikunzy.com/ 阳光资源 https://www.xxzy.org/ U酷资源 https://ukuzy.com/ 非凡资源 http://ffzy.tv/ 伊人资源 https://yrzyz9.com/ 天猫资源 https://tianmaozy.com/ 快车资源 https://www.kuaichezy.com/ 海外看资源(需VPN) https://haiwaikan.com/</description></item><item><title>利用谷歌邮箱别名获取无限Gmail邮箱</title><link>https://blog.taoshuge.eu.org/p/%E5%88%A9%E7%94%A8%E8%B0%B7%E6%AD%8C%E9%82%AE%E7%AE%B1%E5%88%AB%E5%90%8D%E8%8E%B7%E5%8F%96%E6%97%A0%E9%99%90gmail%E9%82%AE%E7%AE%B1/</link><pubDate>Sun, 07 Jan 2024 05:10:06 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%88%A9%E7%94%A8%E8%B0%B7%E6%AD%8C%E9%82%AE%E7%AE%B1%E5%88%AB%E5%90%8D%E8%8E%B7%E5%8F%96%E6%97%A0%E9%99%90gmail%E9%82%AE%E7%AE%B1/</guid><description>前言 我们注册有些国外的服务时，是不能用国内邮箱注册的，这时一个Gmail邮箱就显得很有必要。而有时候我们会需要注册多个账号，当然你可以用多个Gmail邮箱来注册。但多个Gmail邮箱又不好管理，而且现在Gmail邮箱也不是那么好注册了，这时你就会需要下面我要介绍的内容了，利用Gmail邮箱的别名功能来实现同一邮箱获取无限多个Gmail邮箱号。
 在这之前你需要有一个谷歌账号（Gmail邮箱）。没有的话去到这里注册：http://mail.google.com（目前注册可能需要特殊方法，请自行搜索解决）。
