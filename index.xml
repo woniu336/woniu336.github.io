@@ -1906,7 +1906,9 @@ apt install wget -y sudo apt install unzip sudo apt-get install xz-utils sudo ap
 若提示启用成功，后台快捷菜单处没有显示快捷菜单，那么手动添加一下快捷菜单即可
 萌芽采集资源,mycj/union 复制上方快捷菜单代码，添加到快捷菜单里面并保存即可</description></item><item><title>苹果cms通用清理php后门自动脚本</title><link>https://blog.taoshuge.eu.org/p/123/</link><pubDate>Fri, 12 Jan 2024 04:17:18 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/123/</guid><description>锁住文件
 chattr -R +i /www/wwwroot/123.com 排除缓存目录
-chattr -R -i /www/wwwroot/123.com/runtime/temp 注意：为了安全起见 每次发现被挂马后应该用以下方法来处理！！！ 黑客入侵后可能在数据库挂js，可能在网站目录任何角落留下php后门，用以下方法可以快速清理干净php后门，不用一个一个文件去分析。
+chattr -R -i /www/wwwroot/123.com/runtime/temp 锁住单个文件
+chattr +i /www/wwwroot/123.com/block/foot.html 解锁
+chattr -i /www/wwwroot/123.com/block/foot.html 注意：为了安全起见 每次发现被挂马后应该用以下方法来处理！！！ 黑客入侵后可能在数据库挂js，可能在网站目录任何角落留下php后门，用以下方法可以快速清理干净php后门，不用一个一个文件去分析。
 1，备份原网站配置文件 ，并检查里边是否有后门代码，正常情况下&amp;lt;?php内是一个return array返回数组，如果还有其他&amp;lt;?php块就是后门。
 \application\database.php
 \application\route.php
