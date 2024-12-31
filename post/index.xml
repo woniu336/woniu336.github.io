@@ -208,9 +208,11 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/iptables-
 脚本执行顺序：
 启用IP转发（仅第一次） 转发规则管理（添加规则或者删除规则）、 保存规则 如果你要转发443或者80端口，使用域名访问（http/s），记得把DNS的A记录指向中转机ip，甚至还可以开启cloudflare cdn 双重保护，让黑子找不到你的ip。
 删除服务 如果不需要转发服务了，除了在脚本中删除转发规则，还可以删除服务，彻底清除
-systemctl disable iptables-forward.service &amp;amp;&amp;amp; rm -f /etc/systemd/system/iptables-forward.service &amp;amp;&amp;amp; systemctl daemon-reload 其他功能 因为我的中转机还承担着科学上网的任务，所以有必要开启本机访问支持，
-添加本机访问支持，例如目标IP 8.8.8.8:443 (转发443端口)
-iptables -t nat -A OUTPUT -p tcp --dport 443 -j DNAT --to-destination 8.8.8.8:443 iptables -t nat -A POSTROUTING -p tcp -d 443 --dport 443 -o lo -j MASQUERADE 允许已建立的连接（提高效率）</description></item><item><title>hahaSIM 保号充值</title><link>https://blog.taoshuge.eu.org/p/362/</link><pubDate>Fri, 15 Nov 2024 22:39:14 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/362/</guid><description>保号策略 使用 App 充值最低 20 HKD，只支持 AlipayHK、信用卡等当地支付方式，延期至 充值时间 + 365 天。
+systemctl disable iptables-forward.service &amp;amp;&amp;amp; rm -f /etc/systemd/system/iptables-forward.service &amp;amp;&amp;amp; systemctl daemon-reload 其他功能 允许已建立的连接（提高效率）
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT 删除规则 查看IPv4的NAT规则
+iptables-save -t nat 查看IPv6的NAT规则
+ip6tables-save -t nat 删除脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/iptables_del.sh &amp;amp;&amp;amp; chmod +x iptables_del.</description></item><item><title>hahaSIM 保号充值</title><link>https://blog.taoshuge.eu.org/p/362/</link><pubDate>Fri, 15 Nov 2024 22:39:14 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/362/</guid><description>保号策略 使用 App 充值最低 20 HKD，只支持 AlipayHK、信用卡等当地支付方式，延期至 充值时间 + 365 天。
 在线充值延期相同，支持微信、支付宝，最低 10 HKD：
 3HK 在线充值 https://www.three.com.hk/3Care/chi/prepay/payonline1.jsp
 在浏览器中打开，支付完成后要返回完成回调才会成功充值。
