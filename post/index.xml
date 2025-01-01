@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 30 Dec 2024 00:58:40 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 浩瀚笔记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 浩瀚笔记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 02 Jan 2025 01:04:15 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -10,7 +10,13 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 屏蔽 Censys
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh 三网回程路由线路测试
-curl https://raw.</description></item><item><title>关闭 nftables</title><link>https://blog.taoshuge.eu.org/p/389/</link><pubDate>Mon, 30 Dec 2024 00:58:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/389/</guid><description>关闭 nftables 可以通过以下步骤完成：
+curl https://raw.</description></item><item><title>Netcup 更改 DNS</title><link>https://blog.taoshuge.eu.org/p/390/</link><pubDate>Thu, 02 Jan 2025 01:04:15 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/390/</guid><description>今天想更改一下 Netcup 服务器的默认 DNS 发现直接更改更改不了，resolv.conf文件有不可变属性，以下方法可以更改成功
+运行
+chattr -i /etc/resolv.conf 删除不可变属性
+然后修改resolv.conf
+nano /etc/resolv.conf 我把默认的 DNS 服务器改为了谷歌的
+nameserver 8.8.8.8 nameserver 8.8.4.4 nameserver 2001:4860:4860::8888 nameserver 2001:4860:4860::8844 修改完后增加不可变属性（如果你不想增加也可以不增加）
+chattr +i /etc/resolv.conf</description></item><item><title>关闭 nftables</title><link>https://blog.taoshuge.eu.org/p/389/</link><pubDate>Mon, 30 Dec 2024 00:58:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/389/</guid><description>关闭 nftables 可以通过以下步骤完成：
 停止 nftables 服务
 使用以下命令停止正在运行的 nftables 服务：
 sudo systemctl stop nftables 禁用 nftables 开机启动
