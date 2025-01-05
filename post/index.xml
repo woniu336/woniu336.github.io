@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 折腾日记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 05 Jan 2025 02:01:01 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 折腾日记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 05 Jan 2025 14:07:05 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -10,7 +10,12 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 屏蔽 Censys
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh 三网回程路由线路测试
-curl https://raw.</description></item><item><title>TCP 网络优化配置指南</title><link>https://blog.taoshuge.eu.org/p/392/</link><pubDate>Sun, 05 Jan 2025 02:01:01 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/392/</guid><description>一、前期准备 准备工作
+curl https://raw.</description></item><item><title>Pingvin Share - 文件中转站</title><link>https://blog.taoshuge.eu.org/p/393/</link><pubDate>Sun, 05 Jan 2025 14:07:05 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/393/</guid><description> mkdir -p /root/data/docker_data/pingvin-share cd /root/data/docker_data/pingvin-share 编辑docker-compose.yml
+nano docker-compose.yml 粘贴代码
+version: &amp;#39;3.8&amp;#39; services: pingvin-share: image: stonith404/pingvin-share restart: unless-stopped ports: - 8080:3000 # 8080可以改成服务器上未被使用的端口 volumes: - &amp;#34;${PWD}/data:/opt/app/backend/data&amp;#34; # ${PWD}/data表示在当前目录下创建data文件夹用于存放文件 最后
+docker-compose up -d 更新
+cd /root/data/docker_data/pingvin-share docker-compose down docker-compose pull docker-compose up -d docker image prune # prune 命令用来删除不再使用的 docker 对象。删除所有未被 tag 标记和未被容器使用的镜像 卸载
+cd /root/data/docker_data/pingvin-share docker-compose down rm -rf /root/data/docker_data/pingvin-share # 完全删除映射到本地的数据</description></item><item><title>TCP 网络优化配置指南</title><link>https://blog.taoshuge.eu.org/p/392/</link><pubDate>Sun, 05 Jan 2025 02:01:01 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/392/</guid><description>一、前期准备 准备工作
 查看当前的 net.ipv4.tcp_wmem 参数值（最好记录一下）
 sysctl net.ipv4.tcp_wmem 查询当前使用的 TCP 拥塞控制算法
 sysctl net.ipv4.tcp_congestion_control 查看当前的队列管理算法
