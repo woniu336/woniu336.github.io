@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 折腾日记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 07 Jan 2025 00:18:58 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 折腾日记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 07 Jan 2025 23:47:44 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -10,7 +10,10 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 屏蔽 Censys
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh 三网回程路由线路测试
-curl https://raw.</description></item><item><title>TCP调优一键脚本：限速方式</title><link>https://blog.taoshuge.eu.org/p/395/</link><pubDate>Tue, 07 Jan 2025 00:18:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/395/</guid><description>脚本 根据论坛里众多小伙伴的帖子，制作的TCP调优脚本，使用的是Traffic Control限速方式，即大佬的方法二。
+curl https://raw.</description></item><item><title>SpeedTest-EX 一键安装脚本</title><link>https://blog.taoshuge.eu.org/p/396/</link><pubDate>Tue, 07 Jan 2025 23:47:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/396/</guid><description>项目 Github：https://github.com/WJQSERVER/speedtest-ex
+脚本：根据wjqserver大佬的项目制作的脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/speedtest-ex.sh &amp;amp;&amp;amp; chmod +x speedtest-ex.sh &amp;amp;&amp;amp; ./speedtest-ex.sh 特色：
+鉴权功能 单下载流模式 基于Go Gin构建的自托管Speedtest 前端演示</description></item><item><title>TCP调优一键脚本：限速方式</title><link>https://blog.taoshuge.eu.org/p/395/</link><pubDate>Tue, 07 Jan 2025 00:18:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/395/</guid><description>脚本 根据论坛里众多小伙伴的帖子，制作的TCP调优脚本，使用的是Traffic Control限速方式，即大佬的方法二。
 https://www.nodeseek.com/post-197087-1
 https://www.nodeseek.com/post-200243-1
 https://www.nodeseek.com/post-199985-1
