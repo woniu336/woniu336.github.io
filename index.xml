@@ -25,8 +25,10 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/network_o
 sudo sysctl --system 验证是否应用了新的参数
 sysctl -a | grep net.ipv4.tcp_rmem sysctl -a | grep net.ipv4.tcp_wmem 服务端安装
 apt update apt install iperf3 防火墙放行端口
-ufw allow 5201 使用命令
+sudo ufw allow 5201/tcp sudo ufw allow 5201/udp 使用命令
 iperf3 -s ============
+客户端下载：
+https://github.com/ar51an/iperf3-win-builds/releases/download/3.17.1/iperf-3.17.1-win64.zip
 客户端使用命令
 iperf3 -c 服务端ip -R -t 30 -p 5201 多线程
 iperf3 -c 服务端ip -p 5201 -t 30 -P 10 -R 然后在本机发起测速。其中 -c 参数表示客户端并指定测速服务器地址，-p 指定服务器端口，-t 指定测试时长（单位秒），-P 指定并发连接数（越高越能测试到速度极限），-R 表示下载测速（不加参数则测试上传速度）。如果要测试 UDP 连接，追加 -u 参数。</description></item><item><title>Cloudflared Tunnel 隧道开启HTTP2和IPv6支持</title><link>https://blog.taoshuge.eu.org/p/394/</link><pubDate>Sun, 05 Jan 2025 22:29:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/394/</guid><description>通过将Cloudflared Tunnel的传输层由QUIC改为HTTP/2, 地址栈加入IPv6支持，使连接更加稳定。
