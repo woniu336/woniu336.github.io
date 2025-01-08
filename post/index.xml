@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 折腾日记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 07 Jan 2025 23:47:44 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 折腾日记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 09 Jan 2025 02:34:52 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -10,7 +10,21 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 屏蔽 Censys
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh 三网回程路由线路测试
-curl https://raw.</description></item><item><title>SpeedTest-EX 一键安装脚本</title><link>https://blog.taoshuge.eu.org/p/396/</link><pubDate>Tue, 07 Jan 2025 23:47:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/396/</guid><description>项目 Github：https://github.com/WJQSERVER/speedtest-ex
+curl https://raw.</description></item><item><title>AMh面板设置</title><link>https://blog.taoshuge.eu.org/p/amh%E9%9D%A2%E6%9D%BF%E8%AE%BE%E7%BD%AE/</link><pubDate>Thu, 09 Jan 2025 02:34:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/amh%E9%9D%A2%E6%9D%BF%E8%AE%BE%E7%BD%AE/</guid><description>由于某些原因，我放弃宝塔使用amh，在n年前从织梦cms到amh。。到后来的宝塔
+因为开启了cloudflare的cdn,需要获取到用户真实ip,则需要用到nginx的realip模块
+我使用的是nginx1.24稳定版，不是nginx-generic-1.24通用版
+在amh中，nginx1.24并没有编译realip模块
+Nginx编译 下载 Nginx 源代码:
+wget http://nginx.org/download/nginx-1.24.0.tar.gz tar -zxvf nginx-1.24.0.tar.gz cd nginx-1.24.0 配置编译选项:
+./configure --prefix=/usr/local/nginx-1.24 --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_gzip_static_module 编译并安装:
+make sudo make install 重新加载 Nginx 配置，或者后台重启nginx
+sudo /usr/local/nginx-1.24/sbin/nginx -s reload PATH 环境变量 将 Nginx 的 sbin 目录添加到 PATH 环境变量 (可选):
+编辑 ~/.bashrc
+nano ~/.bashrc 并在其中添加以下行：
+export PATH=$PATH:/usr/local/nginx-1.24/sbin 使其生效
+source ~/.bashrc 模块查询 realip模块
+nginx -V 2&amp;gt;&amp;amp;1 | grep -i --color=auto &amp;#34;http_realip_module&amp;#34; gzip_static 模块（可选）
+nginx -V 2&amp;gt;&amp;amp;1| grep -o http_gzip_static_module Nginx配置修改 新建文件 cf.</description></item><item><title>SpeedTest-EX 一键安装脚本</title><link>https://blog.taoshuge.eu.org/p/396/</link><pubDate>Tue, 07 Jan 2025 23:47:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/396/</guid><description>项目 Github：https://github.com/WJQSERVER/speedtest-ex
 脚本：根据wjqserver大佬的项目制作的脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/speedtest-ex.sh &amp;amp;&amp;amp; chmod +x speedtest-ex.sh &amp;amp;&amp;amp; ./speedtest-ex.sh 特色：
 鉴权功能 单下载流模式 基于Go Gin构建的自托管Speedtest 前端演示</description></item><item><title>TCP调优一键脚本：限速方式</title><link>https://blog.taoshuge.eu.org/p/395/</link><pubDate>Tue, 07 Jan 2025 00:18:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/395/</guid><description>脚本 请注意，调参后能跑多少速度是由你的网络环境和线路的优劣决定的，线路垃圾再怎么调也没用
