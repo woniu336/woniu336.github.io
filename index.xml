@@ -26,14 +26,14 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/network_o
 仅替换核心参数，不影响原有的 sysctl.conf其余参数
 可恢复成原始设置
 只需要上调和下调带宽大小即可，例如小鸡原本200M，使用菜单1：设置带宽限制，设置成180~150（下调）
-查看配置实际加载顺序。
+查看配置实际加载顺序: 最后加载的会覆盖前面的参数
 sudo sysctl --system 验证是否应用了新的参数
 sysctl -a | grep net.ipv4.tcp_rmem sysctl -a | grep net.ipv4.tcp_wmem 实战 vmiss伦敦9929 我是在晚上11点左右测试的（高峰期），我的vmiss-伦敦9929，上行带宽200 Mbps，使用脚本限制带宽，我从180下调到150，来回反复测试，每次重传都非常的高，我干脆把带宽下调到100，惊喜来了，重传控制在了100以内，反复测试了几次都是如此
 ovh-加拿大
 原本的100M带宽口子，我限制在70M，
 =========
 vmiss伦敦9929:
-Server listening on 5201 (test #15) ----------------------------------------------------------- [ ID] Interval Transfer Bitrate Retr Cwnd [ 5] 0.00-1.00 sec 582 KBytes 4.77 Mbits/sec 0 145 KBytes [ 5] 1.</description></item><item><title>Cloudflared Tunnel 隧道开启HTTP2和IPv6支持</title><link>https://blog.taoshuge.eu.org/p/394/</link><pubDate>Sun, 05 Jan 2025 22:29:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/394/</guid><description>通过将Cloudflared Tunnel的传输层由QUIC改为HTTP/2, 地址栈加入IPv6支持，使连接更加稳定。
+Server listening on 5201 (test #15) ----------------------------------------------------------- [ ID] Interval Transfer Bitrate Retr Cwnd [ 5] 0.00-1.00 sec 582 KBytes 4.</description></item><item><title>Cloudflared Tunnel 隧道开启HTTP2和IPv6支持</title><link>https://blog.taoshuge.eu.org/p/394/</link><pubDate>Sun, 05 Jan 2025 22:29:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/394/</guid><description>通过将Cloudflared Tunnel的传输层由QUIC改为HTTP/2, 地址栈加入IPv6支持，使连接更加稳定。
 背景 先让我们了解一下, 默认情况下的 Cloudflared Tunnel 启动参数有那些影响到连接的因素:
 传输层协议: 默认使用QUIC协议, 它是Google开发的基于UDP的传输层协议, 传输性能较高 地址栈: 默认使用IPv4地址栈, IPv6地址栈需要手动开启 由于本地运营商对UDP的Qos甚至阻断, 导致Cloudflared Tunnel在某些网络环境下无法正常工作。同时运营商对于IPv4的相关管控设施和规则早已趋于完善, 流控、QoS等问题也更加严重。
 切换到HTTP/2 Cloudflared Tunnel默认使用QUIC协议, 它是Google开发的基于UDP的传输层协议, 传输性能较高。但是由于QUIC协议的一些限制, 如连接建立延迟、连接迁移、丢包率等, 使得在某些网络环境下无法正常工作。
