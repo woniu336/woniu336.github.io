@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 折腾日记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Jan 2025 01:49:17 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 折腾日记</title><link>https://blog.taoshuge.eu.org/post/</link><description>Recent content in Posts on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 11 Jan 2025 20:58:13 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.taoshuge.eu.org/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/87/</guid><description>&lt;img src="https://s.qkmov.cc/files/202412201639744.webp" alt="Featured image of post 路飞工具箱" />海外服务器用 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
@@ -10,7 +10,11 @@ https://woniu336.github.io/p/229/
 https://woniu336.github.io/p/299/
 屏蔽 Censys
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh 三网回程路由线路测试
-curl https://raw.</description></item><item><title>一个优雅的 VPS 到期日期监控工具</title><link>https://blog.taoshuge.eu.org/p/399/</link><pubDate>Sat, 11 Jan 2025 01:49:17 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/399/</guid><description>VPS 到期监控助手 🚀 一个优雅的 VPS 到期日期监控工具，再也不用担心 VPS 续费超期了！通过 Telegram 机器人推送到期提醒，轻松管理多台服务器。
+curl https://raw.</description></item><item><title>amh还原站点出现redis问题</title><link>https://blog.taoshuge.eu.org/p/400/</link><pubDate>Sat, 11 Jan 2025 20:58:13 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/400/</guid><description>站点使用了redis6.2作为缓存，在还原数据时出现网站打开错误，以下是解决方案
+错误提示： MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
+简单来说：Redis 无法保存数据快照(RDB)到磁盘，导致所有写入命令被禁用。
+临时生效 当 Redis 在保存数据快照（RDB）失败时，设置 stop-writes-on-bgsave-error no 表示允许 Redis 继续接受写入操作，但代价是可能会丢失一些数据。
+查找 redis-cli 的位置</description></item><item><title>一个优雅的 VPS 到期日期监控工具</title><link>https://blog.taoshuge.eu.org/p/399/</link><pubDate>Sat, 11 Jan 2025 01:49:17 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/399/</guid><description>VPS 到期监控助手 🚀 一个优雅的 VPS 到期日期监控工具，再也不用担心 VPS 续费超期了！通过 Telegram 机器人推送到期提醒，轻松管理多台服务器。
 之前发过帖子，功能上还不太行，这次重新打造
 演示：https://woniu336.github.io/vps-date/
 项目： https://github.com/woniu336/vps-date
@@ -27,20 +31,19 @@ mkdir -p /home/www/.config/rclone/ touch /home/www/.config/rclone/rclone.conf na
 mkdir -p /root/test/ amh amcrontab set_sh /root/test/ 下载脚本到可执行目录
 cd /root/test/ wget https://raw.githubusercontent.com/woniu336/open_shell/main/backup_amh.sh chmod +x backup_amh.sh 修改备份目录和远程路径
 nano backup_amh.sh 后台添加计划任务: 注意脚本在/root/test目录
-amh amcrontab run_sh /root/test/backup_amh.sh</description></item><item><title>AMh面板设置</title><link>https://blog.taoshuge.eu.org/p/397/</link><pubDate>Thu, 09 Jan 2025 02:34:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/397/</guid><description>由于某些原因，我放弃宝塔使用amh，在n年前从织梦cms到amh。。到后来的宝塔
-因为开启了cloudflare的cdn,需要获取到用户真实ip,则需要用到nginx的realip模块
-我使用的是nginx1.24稳定版，不是nginx-generic-1.24通用版
-在amh中，nginx1.24并没有编译realip模块
+amh amcrontab run_sh /root/test/backup_amh.sh</description></item><item><title>AMh面板设置</title><link>https://blog.taoshuge.eu.org/p/397/</link><pubDate>Thu, 09 Jan 2025 02:34:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/397/</guid><description>如果开启了cf的cdn,需要获取到用户真实ip,则需要用到nginx的realip模块
+我使用的是nginx-generic-1.24通用版
+在amh中，nginx-generic-1.24通用版没有编译realip模块
 安装amh
 wget https://dl.amh.sh/amh.sh &amp;amp;&amp;amp; bash amh.sh nginx-generic-1.24,mysql-generic-5.7,php-generic-7.4 Nginx编译 首先查询nginx.conf所在目录
 find /etc/nginx /usr/local/nginx* /usr/local/etc/nginx -name nginx.conf 2&amp;gt;/dev/null 下载 Nginx 源代码:
 wget http://nginx.org/download/nginx-1.24.0.tar.gz tar -zxvf nginx-1.24.0.tar.gz cd nginx-1.24.0 配置编译选项:
-./configure --prefix=/usr/local/nginx-1.24 --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_gzip_static_module 编译并安装:
+./configure --prefix=/usr/local/nginx-generic-1.24 --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_gzip_static_module 编译并安装:
 make sudo make install 重新加载 Nginx 配置，或者后台重启nginx
-sudo /usr/local/nginx-1.24/sbin/nginx -s reload PATH 环境变量 将 Nginx 的 sbin 目录添加到 PATH 环境变量 (可选):
+amh nginx reload PATH 环境变量 将 Nginx 的 sbin 目录添加到 PATH 环境变量 (可选):
 编辑 ~/.bashrc
 nano ~/.bashrc 并在其中添加以下行：
-export PATH=$PATH:/usr/local/nginx-1.24/sbin 使其生效
+export PATH=$PATH:/usr/local/nginx-generic-1.24/sbin 使其生效
 source ~/.bashrc 模块查询 realip模块</description></item><item><title>SpeedTest-EX 一键安装脚本</title><link>https://blog.taoshuge.eu.org/p/396/</link><pubDate>Tue, 07 Jan 2025 23:47:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/396/</guid><description>项目 Github：https://github.com/WJQSERVER/speedtest-ex
 脚本：根据wjqserver大佬的项目制作的脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/speedtest-ex.sh &amp;amp;&amp;amp; chmod +x speedtest-ex.sh &amp;amp;&amp;amp; ./speedtest-ex.sh 特色：
