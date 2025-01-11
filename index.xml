@@ -29,14 +29,12 @@ run_manager.bat ⚠️ 注意：项目有一个bug，vps名称不能用中文，
 定时备份，保留本地和r2最新10个备份文件 还原：可以设置定时还原最新的备份 安装 rclone sudo -v ; curl https://rclone.org/install.sh | sudo bash 编辑 rclone.conf 配置
 mkdir -p /home/www/.config/rclone/ touch /home/www/.config/rclone/rclone.conf nano /home/www/.config/rclone/rclone.conf 设置可执行目录 amh面板需要设置可执行目录才能执行脚本，例如将/root/test/设置为可执行目录
 mkdir -p /root/test/ amh amcrontab set_sh /root/test/ 下载脚本到可执行目录
-cd /root/test/ wget https://raw.githubusercontent.com/woniu336/open_shell/main/backup_amh.sh wget https://raw.githubusercontent.com/woniu336/open_shell/main/restore_amh.sh chmod +x backup_amh.sh chmod +x restore_amh.sh 修改备份目录和远程路径
+cd /root/test/ wget -O backup_amh.sh https://raw.githubusercontent.com/woniu336/open_shell/main/backup_amh.sh wget -O restore_amh.sh https://raw.githubusercontent.com/woniu336/open_shell/main/restore_amh.sh chmod +x backup_amh.sh chmod +x restore_amh.sh 修改备份目录和远程路径
 nano backup_amh.sh 然后修改
 nano restore_amh.sh 添加任务 后台添加计划任务: 注意脚本在/root/test目录
 一键备份命令：
 amh amcrontab run_sh /root/test/backup_amh.sh 一键还原命令：
-amh amcrontab run_sh /root/test/restore_amh.sh 其他命令 遇到备份出错的极端情况可以停止进程
-查看进程
-ps aux | grep backup_amh.</description></item><item><title>AMh面板设置</title><link>https://blog.taoshuge.eu.org/p/397/</link><pubDate>Thu, 09 Jan 2025 02:34:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/397/</guid><description>如果开启了cf的cdn,需要获取到用户真实ip,则需要用到nginx的realip模块
+amh amcrontab run_sh /root/test/restore_amh.sh 其他命令 遇到备份出错的极端情况可以停止进程</description></item><item><title>AMh面板设置</title><link>https://blog.taoshuge.eu.org/p/397/</link><pubDate>Thu, 09 Jan 2025 02:34:52 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/397/</guid><description>如果开启了cf的cdn,需要获取到用户真实ip,则需要用到nginx的realip模块
 我使用的是nginx-generic-1.24通用版
 在amh中，nginx-generic-1.24通用版没有编译realip模块
 安装amh
