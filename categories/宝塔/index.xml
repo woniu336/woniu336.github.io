@@ -2,7 +2,6 @@
 第一步： 改成如下图所示：取消设置默认站点
 第二步： 宝塔面板”文件”根目录搜索”0.default.conf”文件，注意勾选”包含子目录”，”0.default.conf”的文件路径如下。
 /www/server/panel/vhost/nginx/0.default.conf 这个文件是宝塔面板默认站点的nginx规则，我们把之前的内容删除，写入以下代码：
-推荐（如果有问题，把http2去掉）
-server { listen 80 default_server; listen [::]:80 default_server; server_name _; return 444; } server { listen 443 ssl http2 default_server; listen [::]:443 ssl http2 default_server; server_name _; ssl_certificate /www/server/panel/ssl/certificate.pem; ssl_certificate_key /www/server/panel/ssl/privateKey.pem; return 444; } （不推荐）
-server { listen 443 ssl default_server; # 如果有 IPv6 地址的需要，则加入下面这行。 # listen [::]:443 ssl default_server; ssl_reject_handshake on; } （不推荐）
-server { listen 80 default; listen 443 default_server; ## 假如nginx开启了quic,去掉这行 server_name _; return 444; ssl_certificate /www/server/panel/ssl/certificate.</description></item></channel></rss>
+server { listen 80 default_server; listen [::]:80 default_server; server_name _; return 444; } server { listen 443 ssl default_server; listen [::]:443 ssl default_server; server_name _; ssl_reject_handshake on; } 假如nginx开启了quic，使用如下代码，不然重启nginx会报错：
+server { listen 80 default; listen 443 ssl; server_name _; return 444; ssl_certificate /www/server/panel/ssl/certificate.pem; ssl_certificate_key /www/server/panel/ssl/privateKey.pem; ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4; ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; ssl_session_timeout 10m; ssl_prefer_server_ciphers on; } 搞定！
+理论上宝塔文件中存在的任意pem路径都可以</description></item></channel></rss>
