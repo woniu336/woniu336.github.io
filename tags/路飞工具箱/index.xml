@@ -2,12 +2,12 @@
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh ROOT私钥登录模式
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh ROOT私钥登录模式
 https://woniu336.github.io/p/328/
 安装宝塔面板
 https://woniu336.github.io/p/229/
 启用 QUIC 与 Brotli 的完整教程
 https://woniu336.github.io/p/299/
 屏蔽 Censys
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ufw_rules.sh &amp;amp;&amp;amp; chmod +x setup_ufw_rules.sh &amp;amp;&amp;amp; ./setup_ufw_rules.sh 三网回程路由线路测试
-curl https://raw.</description></item></channel></rss>
+curl -sS -O https://raw.</description></item></channel></rss>
