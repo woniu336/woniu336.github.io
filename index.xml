@@ -3,14 +3,28 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh ROOT私钥登录模式
-https://woniu336.github.io/p/328/
-安装宝塔面板
-https://woniu336.github.io/p/229/
-启用 QUIC 与 Brotli 的完整教程
-https://woniu336.github.io/p/299/
-屏蔽 Censys
-curl -sS -O https://raw.</description></item><item><title>Nginx 常用命令和操作</title><link>https://blog.taoshuge.eu.org/p/403/</link><pubDate>Tue, 14 Jan 2025 02:56:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/403/</guid><description>检查 Nginx 状态和权限 sudo systemctl status nginx # 检查 Nginx 服务状态，特别是是否有 PID 文件相关警告 ps aux | grep nginx # 查看 Nginx 进程是否正常运行，并检查其权限 ls -l /run/nginx/nginx.pid # 查看 Nginx 的 PID 文件权限是否正确 重启服务并观察日志 sudo systemctl daemon-reload # 重新加载 Systemd 配置文件 sudo systemctl restart nginx # 重启 Nginx 服务 sudo journalctl -xe # 查看系统日志，检查是否有与 Nginx 相关的错误 查找进程和文件路径 ps -ef | grep nginx # 确认 Nginx 的进程是否在运行 find / -name nginx # 在文件系统中查找 Nginx 的相关文件或路径 验证配置文件 sudo nginx -t # 测试 Nginx 配置文件是否正确 重启 Nginx 来应用新配置 nginx -t &amp;amp;&amp;amp; systemctl restart nginx 测试一下配置是否生效 curl -v http://127.</description></item><item><title>反向代理SNI验证测试</title><link>https://blog.taoshuge.eu.org/p/402/</link><pubDate>Mon, 13 Jan 2025 02:10:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/402/</guid><description>假设反代IP是9.9.9.9，加速域名是789.com, 注意：不是源站域名
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh bbr
+cat &amp;gt; /etc/sysctl.conf &amp;lt;&amp;lt; EOF fs.file-max = 6815744 net.ipv4.tcp_no_metrics_save=1 net.ipv4.tcp_ecn=0 net.ipv4.tcp_frto=0 net.ipv4.tcp_mtu_probing=0 net.</description></item><item><title>斯巴达、猫彦祖v.ps、claw-jp、vmiss-英国，高峰期表现</title><link>https://blog.taoshuge.eu.org/p/404/</link><pubDate>Sat, 18 Jan 2025 23:53:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/404/</guid><description>斯巴达西雅图： 电信：延迟表现中等，稳定性较好
+联通：延迟较为稳定，表现最好
+移动：延迟普遍偏高，波动较大
+总结：对延迟要求不苛刻的联通用户，电信用户其次,不建议移动用户使用
+================================================
+v.ps猫彦祖： 适合所有用户： 三网表现都非常优秀 丢包率全部为0% 延迟稳定，波动小
+总结：三网优秀
+claw-日本： 电信：丢包率较高，不稳定
+联通：延迟普遍较高，
+移动：延迟极低，丢包率低
+总结：适合移动用户，电信用户勉强可用，联通用户建议避开
+================================================
+vmiss-伦敦9929 电信：延迟良好，丢包率低，表现稳定
+联通：延迟优秀，零丢包，
+移动：延迟普遍较高
+总结：首选联通用户，电信用户也可以获得不错的体验，但移动用户建议避开
+==================
+总结建议： 电信用户 → 选择v.ps猫彦祖或vmiss伦敦
+联通用户 → 选择vmiss伦敦或v.ps猫彦祖
+移动用户 → 首选claw日本，备选v.ps猫彦祖
+特别提醒：斯巴达西雅图整体表现一般，建议作为备用节点使用。</description></item><item><title>Nginx 常用命令和操作</title><link>https://blog.taoshuge.eu.org/p/403/</link><pubDate>Tue, 14 Jan 2025 02:56:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/403/</guid><description>检查 Nginx 状态和权限 sudo systemctl status nginx # 检查 Nginx 服务状态，特别是是否有 PID 文件相关警告 ps aux | grep nginx # 查看 Nginx 进程是否正常运行，并检查其权限 ls -l /run/nginx/nginx.pid # 查看 Nginx 的 PID 文件权限是否正确 重启服务并观察日志 sudo systemctl daemon-reload # 重新加载 Systemd 配置文件 sudo systemctl restart nginx # 重启 Nginx 服务 sudo journalctl -xe # 查看系统日志，检查是否有与 Nginx 相关的错误 查找进程和文件路径 ps -ef | grep nginx # 确认 Nginx 的进程是否在运行 find / -name nginx # 在文件系统中查找 Nginx 的相关文件或路径 验证配置文件 sudo nginx -t # 测试 Nginx 配置文件是否正确 重启 Nginx 来应用新配置 nginx -t &amp;amp;&amp;amp; systemctl restart nginx 测试一下配置是否生效 curl -v http://127.</description></item><item><title>反向代理SNI验证测试</title><link>https://blog.taoshuge.eu.org/p/402/</link><pubDate>Mon, 13 Jan 2025 02:10:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/402/</guid><description>假设反代IP是9.9.9.9，加速域名是789.com, 注意：不是源站域名
 测试正确域名
 curl --tlsv1.2 https://9.9.9.9:443 --resolve 789.com:443:9.9.9.9 --insecure -H &amp;#34;Host: 789.com&amp;#34; -v 或者
 curl --tls-max 1.2 https://789.com:443 --connect-to 789.com:443:9.9.9.9:443 --insecure -v 返回网页内容
