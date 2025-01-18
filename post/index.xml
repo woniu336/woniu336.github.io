@@ -3,8 +3,9 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh bbr
-cat &amp;gt; /etc/sysctl.conf &amp;lt;&amp;lt; EOF fs.file-max = 6815744 net.ipv4.tcp_no_metrics_save=1 net.ipv4.tcp_ecn=0 net.ipv4.tcp_frto=0 net.ipv4.tcp_mtu_probing=0 net.</description></item><item><title>斯巴达、猫彦祖v.ps、claw-jp、vmiss-英国，高峰期表现</title><link>https://blog.taoshuge.eu.org/p/404/</link><pubDate>Sat, 18 Jan 2025 23:53:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/404/</guid><description>斯巴达西雅图： 电信：延迟表现中等，稳定性较好
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 清除缓存
+sudo rm -rf /usr/local/nginx/cache/proxy/* bbr
+cat &amp;gt; /etc/sysctl.conf &amp;lt;&amp;lt; EOF fs.file-max = 6815744 net.</description></item><item><title>斯巴达、猫彦祖v.ps、claw-jp、vmiss-英国，高峰期表现</title><link>https://blog.taoshuge.eu.org/p/404/</link><pubDate>Sat, 18 Jan 2025 23:53:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/404/</guid><description>斯巴达西雅图： 电信：延迟表现中等，稳定性较好
 联通：延迟较为稳定，表现最好
 移动：延迟普遍偏高，波动较大
 总结：对延迟要求不苛刻的联通用户，电信用户其次,不建议移动用户使用

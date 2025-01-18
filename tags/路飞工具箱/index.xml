@@ -3,5 +3,6 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh bbr
-cat &amp;gt; /etc/sysctl.conf &amp;lt;&amp;lt; EOF fs.file-max = 6815744 net.ipv4.tcp_no_metrics_save=1 net.ipv4.tcp_ecn=0 net.ipv4.tcp_frto=0 net.ipv4.tcp_mtu_probing=0 net.</description></item></channel></rss>
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 清除缓存
+sudo rm -rf /usr/local/nginx/cache/proxy/* bbr
+cat &amp;gt; /etc/sysctl.conf &amp;lt;&amp;lt; EOF fs.file-max = 6815744 net.</description></item></channel></rss>
