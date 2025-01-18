@@ -5,4 +5,4 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 注意：站点配置文件中的cf ip要改成不一样的
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 清除缓存
-sudo rm -rf /usr/local/nginx/cache/proxy/* nginx -t &amp;amp;&amp;amp; systemctl restart nginx bbr</description></item></channel></rss>
+sudo rm -rf /usr/local/nginx/cache/proxy/* nginx -t &amp;amp;&amp;amp; systemctl restart nginx 证书备份</description></item></channel></rss>

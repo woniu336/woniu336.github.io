@@ -5,7 +5,7 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 注意：站点配置文件中的cf ip要改成不一样的
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 清除缓存
-sudo rm -rf /usr/local/nginx/cache/proxy/* nginx -t &amp;amp;&amp;amp; systemctl restart nginx bbr</description></item><item><title>斯巴达、猫彦祖v.ps、claw-jp、vmiss-英国，高峰期表现</title><link>https://blog.taoshuge.eu.org/p/404/</link><pubDate>Sat, 18 Jan 2025 23:53:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/404/</guid><description>斯巴达西雅图： 电信：延迟表现中等，稳定性较好
+sudo rm -rf /usr/local/nginx/cache/proxy/* nginx -t &amp;amp;&amp;amp; systemctl restart nginx 证书备份</description></item><item><title>斯巴达、猫彦祖v.ps、claw-jp、vmiss-英国，高峰期表现</title><link>https://blog.taoshuge.eu.org/p/404/</link><pubDate>Sat, 18 Jan 2025 23:53:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/404/</guid><description>斯巴达西雅图： 电信：延迟表现中等，稳定性较好
 联通：延迟较为稳定，表现最好
 移动：延迟普遍偏高，波动较大
 总结：对延迟要求不苛刻的联通用户，电信用户其次,不建议移动用户使用
