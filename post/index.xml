@@ -12,10 +12,10 @@ sudo rm -rf /usr/local/nginx/cache/proxy/* nginx -t &amp;amp;&amp;amp; systemctl
 ================================================
 v.ps猫彦祖： 适合所有用户： 三网表现都非常优秀 丢包率全部为0% 延迟稳定，波动小
 总结：三网优秀
-claw-日本： 电信：丢包率较高，不稳定
-联通：延迟普遍较高，
-移动：延迟极低，丢包率低
-总结：适合移动用户，电信用户勉强可用，联通用户建议避开
+claw-日本： 电信：仍保持较低延迟，但丢包率上升
+联通：表现明显恶化，不再推荐使用
+移动：严重恶化，不建议使用
+总结：该机器性能明显下滑，已不再适合作为主力使用，建议仅作为电信用户的备用节点。
 ================================================
 vmiss-伦敦9929 电信：延迟良好，丢包率低，表现稳定
 联通：延迟优秀，零丢包，
@@ -24,7 +24,7 @@ vmiss-伦敦9929 电信：延迟良好，丢包率低，表现稳定
 ==================
 总结建议： 电信用户 → 选择v.ps猫彦祖或vmiss伦敦
 联通用户 → 选择vmiss伦敦或v.ps猫彦祖
-移动用户 → 首选claw日本，备选v.ps猫彦祖
+移动用户 → 首选v.ps猫彦祖
 特别提醒：斯巴达西雅图整体表现一般，建议作为备用节点使用。</description></item><item><title>Nginx 常用命令和操作</title><link>https://blog.taoshuge.eu.org/p/403/</link><pubDate>Tue, 14 Jan 2025 02:56:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/403/</guid><description>检查 Nginx 状态和权限 sudo systemctl status nginx # 检查 Nginx 服务状态，特别是是否有 PID 文件相关警告 ps aux | grep nginx # 查看 Nginx 进程是否正常运行，并检查其权限 ls -l /run/nginx/nginx.pid # 查看 Nginx 的 PID 文件权限是否正确 重启服务并观察日志 sudo systemctl daemon-reload # 重新加载 Systemd 配置文件 sudo systemctl restart nginx # 重启 Nginx 服务 sudo journalctl -xe # 查看系统日志，检查是否有与 Nginx 相关的错误 查找进程和文件路径 ps -ef | grep nginx # 确认 Nginx 的进程是否在运行 find / -name nginx # 在文件系统中查找 Nginx 的相关文件或路径 验证配置文件 sudo nginx -t # 测试 Nginx 配置文件是否正确 重启 Nginx 来应用新配置 nginx -t &amp;amp;&amp;amp; systemctl restart nginx 测试一下配置是否生效 curl -v http://127.</description></item><item><title>反向代理SNI验证测试</title><link>https://blog.taoshuge.eu.org/p/402/</link><pubDate>Mon, 13 Jan 2025 02:10:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/402/</guid><description>假设反代IP是9.9.9.9，加速域名是789.com, 注意：不是源站域名
 测试正确域名
 curl --tlsv1.2 https://9.9.9.9:443 --resolve 789.com:443:9.9.9.9 --insecure -H &amp;#34;Host: 789.com&amp;#34; -v 或者
