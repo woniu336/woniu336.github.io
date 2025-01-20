@@ -385,7 +385,8 @@ nohup ./block_php.sh &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp; 启动服�
 nano /etc/systemd/system/block-php.service 写入
 [Unit] Description=Block PHP Files Monitor After=network.target [Service] Type=simple ExecStart=/root/block_php.sh Restart=always User=root [Install] WantedBy=multi-user.target 启动服务：
 systemctl daemon-reload systemctl enable block-php.service systemctl start block-php.service 监控脚本运行状态：
-# 查看服务状态 systemctl status block-php.service # 查看日志 tail -f /var/log/php_block.log # 查看系统日志 journalctl -u block-php.service 停止服务 # 停止服务 sudo systemctl stop block-php.</description></item><item><title>V.PS 库存监控脚本使用教程</title><link>https://blog.taoshuge.eu.org/p/356/</link><pubDate>Fri, 08 Nov 2024 20:56:35 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/356/</guid><description> 仅监控阿姆斯特丹(Amsterdam)9.95欧pro配置
+# 查看服务状态 systemctl status block-php.service # 查看日志 tail -f /var/log/php_block.log # 查看系统日志 journalctl -u block-php.service 停止服务 # 停止服务 sudo systemctl stop block-php.</description></item><item><title>V.PS 库存监控脚本使用教程</title><link>https://blog.taoshuge.eu.org/p/356/</link><pubDate>Fri, 08 Nov 2024 20:56:35 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/356/</guid><description> 仅监控圣何塞(San Jose)8.95欧配置
+https://vps.hosting/cart/san-jose-cloud-kvm-vps/
 需要配置钉钉通知
 1. 下载文件 首先需要创建目录并下载所需文件：
 创建目录
