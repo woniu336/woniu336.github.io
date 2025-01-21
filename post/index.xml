@@ -4,8 +4,8 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 注意：站点配置文件中的cf ip要改成不一样的
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 清除缓存
-sudo rm -rf /usr/local/nginx/cache/proxy/* nginx -t &amp;amp;&amp;amp; systemctl restart nginx 证书备份</description></item><item><title>斯巴达、猫彦祖v.ps、claw-jp、vmiss-英国，高峰期表现</title><link>https://blog.taoshuge.eu.org/p/404/</link><pubDate>Sat, 18 Jan 2025 23:53:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/404/</guid><description>斯巴达西雅图： 电信：延迟表现中等，稳定性较好
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>斯巴达、猫彦祖v.ps、claw-jp、vmiss-英国，高峰期表现</title><link>https://blog.taoshuge.eu.org/p/404/</link><pubDate>Sat, 18 Jan 2025 23:53:40 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/404/</guid><description>斯巴达西雅图： 电信：延迟表现中等，稳定性较好
 联通：延迟较为稳定，表现最好
 移动：延迟普遍偏高，波动较大
 总结：对延迟要求不苛刻的联通用户，电信用户其次,不建议移动用户使用
@@ -25,7 +25,10 @@ vmiss-伦敦9929 电信：延迟良好，丢包率低，表现稳定
 总结建议： 电信用户 → 选择v.ps猫彦祖或vmiss伦敦
 联通用户 → 选择vmiss伦敦或v.ps猫彦祖
 移动用户 → 首选v.ps猫彦祖
-特别提醒：斯巴达西雅图整体表现一般，建议作为备用节点使用。</description></item><item><title>Nginx 常用命令和操作</title><link>https://blog.taoshuge.eu.org/p/403/</link><pubDate>Tue, 14 Jan 2025 02:56:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/403/</guid><description>检查 Nginx 状态和权限 sudo systemctl status nginx # 检查 Nginx 服务状态，特别是是否有 PID 文件相关警告 ps aux | grep nginx # 查看 Nginx 进程是否正常运行，并检查其权限 ls -l /run/nginx/nginx.pid # 查看 Nginx 的 PID 文件权限是否正确 重启服务并观察日志 sudo systemctl daemon-reload # 重新加载 Systemd 配置文件 sudo systemctl restart nginx # 重启 Nginx 服务 sudo journalctl -xe # 查看系统日志，检查是否有与 Nginx 相关的错误 查找进程和文件路径 ps -ef | grep nginx # 确认 Nginx 的进程是否在运行 find / -name nginx # 在文件系统中查找 Nginx 的相关文件或路径 验证配置文件 sudo nginx -t # 测试 Nginx 配置文件是否正确 重启 Nginx 来应用新配置 nginx -t &amp;amp;&amp;amp; systemctl restart nginx 测试一下配置是否生效 curl -v http://127.</description></item><item><title>反向代理SNI验证测试</title><link>https://blog.taoshuge.eu.org/p/402/</link><pubDate>Mon, 13 Jan 2025 02:10:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/402/</guid><description>假设反代IP是9.9.9.9，加速域名是789.com, 注意：不是源站域名
+特别提醒：斯巴达西雅图整体表现一般，建议作为备用节点使用。</description></item><item><title>Nginx 常用命令和操作</title><link>https://blog.taoshuge.eu.org/p/403/</link><pubDate>Tue, 14 Jan 2025 02:56:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/403/</guid><description>检查 Nginx 状态和权限
+sudo systemctl status nginx # 检查 Nginx 服务状态，特别是是否有 PID 文件相关警告 ps aux | grep nginx # 查看 Nginx 进程是否正常运行，并检查其权限 ls -l /run/nginx/nginx.pid # 查看 Nginx 的 PID 文件权限是否正确 重启服务并观察日志
+sudo systemctl daemon-reload # 重新加载 Systemd 配置文件 sudo systemctl restart nginx # 重启 Nginx 服务 sudo journalctl -xe # 查看系统日志，检查是否有与 Nginx 相关的错误 查找进程和文件路径
+ps -ef | grep nginx # 确认 Nginx 的进程是否在运行 find / -name nginx # 在文件系统中查找 Nginx 的相关文件或路径 验证配置文件</description></item><item><title>反向代理SNI验证测试</title><link>https://blog.taoshuge.eu.org/p/402/</link><pubDate>Mon, 13 Jan 2025 02:10:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/402/</guid><description>假设反代IP是9.9.9.9，加速域名是789.com, 注意：不是源站域名
 测试正确域名
 curl --tlsv1.2 https://9.9.9.9:443 --resolve 789.com:443:9.9.9.9 --insecure -H &amp;#34;Host: 789.com&amp;#34; -v 或者
 curl --tls-max 1.2 https://789.com:443 --connect-to 789.com:443:9.9.9.9:443 --insecure -v 返回网页内容
