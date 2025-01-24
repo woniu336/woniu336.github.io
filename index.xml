@@ -3,9 +3,19 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
-注意：站点配置文件中的cf ip要改成不一样的
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>haproxy端口转发脚本</title><link>https://blog.taoshuge.eu.org/p/405/</link><pubDate>Fri, 24 Jan 2025 00:54:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/405/</guid><description>haproxy主要是用于负载均衡的，在并发和性能方面优于nginx，当然用来做转发也是他的特色之一！
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>反向代理开启了cloudflare cdn的站点玩法</title><link>https://blog.taoshuge.eu.org/p/406/</link><pubDate>Fri, 24 Jan 2025 23:24:18 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/406/</guid><description>精心制作的专门反代开启了cf小云朵的站点，当然也可以直接反代源站， 不需要知道源站ip，多个后端的玩法才需要ip。 理论上可以反代任何网站，只要对方不屏蔽你
+脚本：
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 脚本特色 使用dns方式申请证书，支持多域名，自动续期
+一键安装部署nginx，默认配置经过精心优化
+默认开启了proxy缓存，速度飞跃
+隐藏了某些响应头信息，出于安全考虑
+开启了sni支持,避免被优选拿去干正经事
+还有很多就不列举了。。。
+脚本截图
+SSL证书管理菜单 ================================================= 1. 申请SSL证书 2. 查看证书状态 3. 手动续期证书 0. 返回主菜单 ================================================= 请输入选项 [0-3]: nginx
+Nginx 管理脚本 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1) 安装 Nginx 2) 卸载 Nginx 3) 重启 Nginx 4) 查看 Nginx 状态 0) 退出脚本 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 请输入选项 [0-4]: 反向代理
+================================================= 反向代理管理菜单 ================================================= 1. 反代 Cloudflare 2. 反代源站 3. 删除反代 0. 返回主菜单 ================================================= 请输入选项 [1-4]: 直接进入正题：</description></item><item><title>haproxy端口转发脚本</title><link>https://blog.taoshuge.eu.org/p/405/</link><pubDate>Fri, 24 Jan 2025 00:54:55 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/405/</guid><description>haproxy主要是用于负载均衡的，在并发和性能方面优于nginx，当然用来做转发也是他的特色之一！
 我用过iptables、nftables，Realm,这三个转发脚本我都有制作，至于谁更优秀，没有专业测试过，大差不差。
 后期我可能倾向于haproxy，因为添加多个后端实在太简单了~
 快速部署 使用以下命令一键部署 HAProxy 管理脚本：
