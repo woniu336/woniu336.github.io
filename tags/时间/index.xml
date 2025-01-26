@@ -7,4 +7,5 @@ sudo rm /etc/localtime sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localti
 #设置上海时区 sudo timedatectl set-timezone Asia/Shanghai 使用 timedatectl命令可以查看时区
 timedatectl 启用 NTP 时间同步
 sudo timedatectl set-ntp on 使用hwclock --systohc可以将系统时间同步到硬件时间。
-sudo hwclock --systohc</description></item></channel></rss>
+sudo hwclock --systohc 同步crontab定时任务时区
+sudo service cron restart</description></item></channel></rss>

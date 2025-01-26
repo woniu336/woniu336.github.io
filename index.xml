@@ -2513,7 +2513,8 @@ sudo rm /etc/localtime sudo ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localti
 #设置上海时区 sudo timedatectl set-timezone Asia/Shanghai 使用 timedatectl命令可以查看时区
 timedatectl 启用 NTP 时间同步
 sudo timedatectl set-ntp on 使用hwclock --systohc可以将系统时间同步到硬件时间。
-sudo hwclock --systohc</description></item><item><title>从网页视频到MP4：轻松使用M3U8下载器保存你喜爱的视频</title><link>https://blog.taoshuge.eu.org/p/%E4%BB%8E%E7%BD%91%E9%A1%B5%E8%A7%86%E9%A2%91%E5%88%B0mp4%E8%BD%BB%E6%9D%BE%E4%BD%BF%E7%94%A8m3u8%E4%B8%8B%E8%BD%BD%E5%99%A8%E4%BF%9D%E5%AD%98%E4%BD%A0%E5%96%9C%E7%88%B1%E7%9A%84%E8%A7%86%E9%A2%91/</link><pubDate>Mon, 11 Sep 2023 06:19:43 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E4%BB%8E%E7%BD%91%E9%A1%B5%E8%A7%86%E9%A2%91%E5%88%B0mp4%E8%BD%BB%E6%9D%BE%E4%BD%BF%E7%94%A8m3u8%E4%B8%8B%E8%BD%BD%E5%99%A8%E4%BF%9D%E5%AD%98%E4%BD%A0%E5%96%9C%E7%88%B1%E7%9A%84%E8%A7%86%E9%A2%91/</guid><description>项目 猫抓： https://github.com/xifangczy/cat-catch/releases
+sudo hwclock --systohc 同步crontab定时任务时区
+sudo service cron restart</description></item><item><title>从网页视频到MP4：轻松使用M3U8下载器保存你喜爱的视频</title><link>https://blog.taoshuge.eu.org/p/%E4%BB%8E%E7%BD%91%E9%A1%B5%E8%A7%86%E9%A2%91%E5%88%B0mp4%E8%BD%BB%E6%9D%BE%E4%BD%BF%E7%94%A8m3u8%E4%B8%8B%E8%BD%BD%E5%99%A8%E4%BF%9D%E5%AD%98%E4%BD%A0%E5%96%9C%E7%88%B1%E7%9A%84%E8%A7%86%E9%A2%91/</link><pubDate>Mon, 11 Sep 2023 06:19:43 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E4%BB%8E%E7%BD%91%E9%A1%B5%E8%A7%86%E9%A2%91%E5%88%B0mp4%E8%BD%BB%E6%9D%BE%E4%BD%BF%E7%94%A8m3u8%E4%B8%8B%E8%BD%BD%E5%99%A8%E4%BF%9D%E5%AD%98%E4%BD%A0%E5%96%9C%E7%88%B1%E7%9A%84%E8%A7%86%E9%A2%91/</guid><description>项目 猫抓： https://github.com/xifangczy/cat-catch/releases
 安装地址: https://o2bmm.gitbook.io/cat-catch/docs/install
 文档: https://o2bmm.gitbook.io/cat-catch/
 m3u8下载器： https://github.com/nilaoda/N_m3u8DL-CLI/releases
