@@ -4,14 +4,16 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>cloudflare + 反向代理 + haproxy</title><link>https://blog.taoshuge.eu.org/p/407/</link><pubDate>Wed, 29 Jan 2025 03:27:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/407/</guid><description>快速部署 在反代服务器上执行：
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>cloudflare + 反向代理 + haproxy</title><link>https://blog.taoshuge.eu.org/p/407/</link><pubDate>Wed, 29 Jan 2025 03:27:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/407/</guid><description>优化脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 放行端口
+ufw allow 80/tcp ufw allow 443/tcp 应用
+sudo ufw reload 查看规则
+sudo ufw status numbered 快速部署 在反代服务器上执行：
 curl -sS -O https://raw.githubusercontent.com/woniu336/cf-cdn-s/main/cf-cdn-s.sh &amp;amp;&amp;amp; chmod +x cf-cdn-s.sh &amp;amp;&amp;amp; ./cf-cdn-s.sh 先安装nginx，如果要添加www，在配置文件这样表示：server_name 123.cc www.123.cc;
 查看缓存大小：
 du -sh /usr/local/nginx/cache/proxy 证书配置 单账号配置 如果所有域名都在同一个 Cloudflare 账号下：
 创建凭证文件： mkdir -p /root/.secrets &amp;amp;&amp;amp; nano /root/.secrets/cloudflare.ini 添加 API Token： dns_cloudflare_api_token = 你的cloudflare_api_token 多账号配置 如果使用多个 Cloudflare 账号：
-为特定域名创建配置文件： mkdir -p /root/.secrets &amp;amp;&amp;amp; nano /root/.secrets/example.com.ini 添加对应账号的 API Token： dns_cloudflare_api_token = cloudflare_api_token 设置权限 对所有配置文件应用安全权限：
-chmod 600 /root/.secrets/*.ini 获取真实IP 快速配置 在反代服务器上执行：
-curl -sS -O https://raw.githubusercontent.com/woniu336/cf-cdn-s/main/update_nginx.sh &amp;amp;&amp;amp; chmod +x update_nginx.sh &amp;amp;&amp;amp; .</description></item><item><title>反向代理开启了cloudflare cdn的站点玩法</title><link>https://blog.taoshuge.eu.org/p/406/</link><pubDate>Fri, 24 Jan 2025 23:24:18 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/406/</guid><description>精心制作的专门反代开启了cf小云朵的站点，当然也可以直接反代源站， 不需要知道源站ip，多个后端的玩法才需要ip。 理论上可以反代任何网站，只要对方不屏蔽你
+为特定域名创建配置文件： mkdir -p /root/.</description></item><item><title>反向代理开启了cloudflare cdn的站点玩法</title><link>https://blog.taoshuge.eu.org/p/406/</link><pubDate>Fri, 24 Jan 2025 23:24:18 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/406/</guid><description>精心制作的专门反代开启了cf小云朵的站点，当然也可以直接反代源站， 不需要知道源站ip，多个后端的玩法才需要ip。 理论上可以反代任何网站，只要对方不屏蔽你
 脚本：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 脚本特色 使用dns方式申请证书，支持多域名，自动续期
 一键安装部署nginx，默认配置经过精心优化
