@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cdn on 折腾日记</title><link>https://blog.taoshuge.eu.org/tags/cdn/</link><description>Recent content in Cdn on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 17 Jan 2024 04:53:36 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/cdn/index.xml" rel="self" type="application/rss+xml"/><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/p/126/</link><pubDate>Wed, 17 Jan 2024 04:53:36 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/126/</guid><description>添加防火墙规则表达式 复制代码即可 第一：恶意流量阻止 操作：托管质询
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CDN on 折腾日记</title><link>https://blog.taoshuge.eu.org/tags/cdn/</link><description>Recent content in CDN on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 02 Feb 2025 15:34:44 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/cdn/index.xml" rel="self" type="application/rss+xml"/><item><title>源站CF+美西反代+线路机转发：我的终极建站方案(附一键部署脚本)</title><link>https://blog.taoshuge.eu.org/p/408/</link><pubDate>Sun, 02 Feb 2025 15:34:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/408/</guid><description>折腾了N个方案后，终于找到了这个堪称完美的建站架构！仅是我个人经验，你也许有更好的方法，也可以分享出来，此方案目前稳定运行，速度和安全都得到了极大提升。
+配置结构 原理：网站部署在netcup，找一台美西（bagevm）的落地鸡（即反代鸡）做反向代理，然后使用dmit的29.9线路鸡转发落地鸡的80和443端口
+线路鸡可以看成多个节点，多个节点转发落地鸡
+甚至可以DNS解析到三大运营商上，让吃灰小鸡不再只是探针上的点缀。
+项目地址 https://github.com/woniu336/cf-cdn-s
+💡 方案亮点 源站安全性MAX：CF 小云朵守护，黑客见了都摇头 高可用性：任何一层出问题都能快速切换，像变魔术一样简单 灵活扩展：手上闲置小鸡可以随时加入战斗，物尽其用！ 一键部署：从繁琐配置到一键搞定，解放双手 🆚 方案对比 原始方案：单机部署 优点：简单直接 缺点：一旦宕机就GG，重新配置太痛苦 吐槽：这就像把所有鸡蛋放在一个篮子里，太冒险了！ 对此方案展开一下：你可能是使用了线路好的机子，但是配置一般都低，流量也少，高配大流量需加钱。
+又或者你开启了cloudflare的小云朵，觉得这样最简单，没那么多事，但是速度嘛，稳定固然重要，但是我们还要追求速度。
+进阶方案：双机互备 优点：有了基础容灾能力 缺点：配置繁琐，速度提升有限 吐槽：好比给汽车加了个备胎，但还是跑不快&amp;hellip; 两台机子架构，网站部署在A鸡，B鸡做反向代理，反代鸡挂了，需要重新部署nginx，配置站点文件，有些繁琐，
+或者你反代鸡开启了cloudflare的小云朵，但是嘛速度又没有了。
+我的方案 源站（配置 CF 小云朵）：坚如磐石的基础 美西反代：可靠的中转枢纽 线路机转发：分布式加速网络 基础配置三台机子起，网站部署在nc，或者ovh、hz这些公认稳定的商家，你需要至少两个域名，
+例如，111.xyz域名解析到源站，开启cloudflare小云朵，这是第一层，起到了保护网站的作用！
+然后找一台普通线路的美西机子做反向代理，为什么是美西，这个要看你的线路鸡是哪里的，如果你使用的是香港线路鸡转发，那么反代鸡可以是香港的普通线路，接着，线路鸡使用haproxy转发反代鸡的80和443端口，222.com（用户访问的域名）解析到线路鸡。
+你可能会问：优势在哪，不是更繁琐了，让我介绍介绍。
+首先你的源站开启了小云朵，稳定性大大增加，然后反代鸡的普通线路流量又多， 但是如果反代鸡挂了怎么办，这个很好解决，事先备份好证书和站点配置文件，换一台机子重新安装nginx，重启即可还原。 线路鸡起到了加速的作用，一台线路鸡挂了，可以在新的机子上一键部署，非常简单就搞定了。线路鸡流量少，但是也阻止不了你手上小鸡多啊， 多个小鸡转发80和443到反代鸡上，流量均分。 🚀 部署教程 首先你需要一个解析到网站的垃圾域名，并托管在cf，开启了小云朵（cdn），这个域名不是用户访问的域名，我管这个域名叫后端域名，所以，这一步就是那么简单。 举例，后端域名：111.xyz（后端域名），222.com（用户访问的域名）
+找两台机子，普通机和线路机。 普通机做反向代理，首先要安装nginx，务必使用我的一键安装nginx脚本，因为nginx配置繁琐，稍有差池就会出错，
+curl -sS -O https://raw.githubusercontent.com/woniu336/cf-cdn-s/main/cf-cdn-s.sh &amp;amp;&amp;amp; chmod +x cf-cdn-s.sh &amp;amp;&amp;amp; ./cf-cdn-s.sh 选择菜单2安装nginx。
+然后就是证书的申请，注意使用用户访问的域名来申请证书。
+下载配置文件，菜单3
+配置站点。
+获取用户真实ip
+curl -sS -O https://raw.githubusercontent.com/woniu336/cf-cdn-s/main/update_nginx.sh &amp;amp;&amp;amp; chmod +x update_nginx.</description></item><item><title>套cf后 站点WAF防火墙规则设定</title><link>https://blog.taoshuge.eu.org/p/126/</link><pubDate>Wed, 17 Jan 2024 04:53:36 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/126/</guid><description>添加防火墙规则表达式 复制代码即可 第一：恶意流量阻止 操作：托管质询
 (cf.threat_score ge 5 and not cf.client.bot) or (not http.request.version in {&amp;#34;HTTP/1.2&amp;#34; &amp;#34;HTTP/2&amp;#34; &amp;#34;HTTP/3&amp;#34; &amp;#34;SPDY/3.1&amp;#34;}) or (not http.user_agent contains &amp;#34;Mozilla/&amp;#34;) 第二：放行爬虫（seo） 操作：跳过
 (cf.client.bot) or (http.user_agent contains &amp;#34;duckduckgo&amp;#34;) or (http.user_agent contains &amp;#34;facebookexternalhit&amp;#34;) or (http.user_agent contains &amp;#34;Feedfetcher-Google&amp;#34;) or (http.user_agent contains &amp;#34;LinkedInBot&amp;#34;) or (http.user_agent contains &amp;#34;Mediapartners-Google&amp;#34;) or (http.user_agent contains &amp;#34;msnbot&amp;#34;) or (http.user_agent contains &amp;#34;Slackbot&amp;#34;) or (http.user_agent contains &amp;#34;TwitterBot&amp;#34;) or (http.user_agent contains &amp;#34;ia_archive&amp;#34;) or (http.user_agent contains &amp;#34;yahoo&amp;#34;) 第三：其他 跳过源站IP、区域或国家阻止
 CF的WAF的防火墙规则！</description></item><item><title>使用Nginx反向代理，自建CDN加速节点</title><link>https://blog.taoshuge.eu.org/p/%E4%BD%BF%E7%94%A8nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%87%AA%E5%BB%BAcdn%E5%8A%A0%E9%80%9F%E8%8A%82%E7%82%B9/</link><pubDate>Thu, 24 Aug 2023 06:05:35 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E4%BD%BF%E7%94%A8nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E8%87%AA%E5%BB%BAcdn%E5%8A%A0%E9%80%9F%E8%8A%82%E7%82%B9/</guid><description>安装 1、安装Nginx 这里使用的是军哥的LNMP 单独安装Nginx
