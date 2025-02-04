@@ -6,6 +6,8 @@ curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o 
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
 sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>cloudflare + 反向代理 + haproxy</title><link>https://blog.taoshuge.eu.org/p/407/</link><pubDate>Wed, 29 Jan 2025 03:27:09 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/407/</guid><description>原理：源站开启cf 小云朵，落地机反代源站，线路机中转落地机
 注意：源站域名要在cf后台关闭自动程序，waf放行落地机ip
+项目：https://github.com/woniu336/cf-cdn-s
+项目2：https://github.com/woniu336/cf-cdn
 优化脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 放行端口
 ufw allow 80/tcp ufw allow 443/tcp 应用
