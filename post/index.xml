@@ -10,8 +10,8 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &
 获取真实访客ip：
 pip3 install requests wget https://raw.githubusercontent.com/woniu336/open_shell/main/update_cf_ips.py chmod +x update_cf_ips.py python3 update_cf_ips.py 定时任务
 (crontab -l ; echo &amp;#34;0 0 */15 * * python3 update_cf_ips.py &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;#34;) | crontab - 证书申请 适配宝塔面板，自动续期
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh 修改配置 nginx使用以下配置，覆盖重启即可
-https://github.com/woniu336/open_shell/blob/main/bt-cf/nginx.conf</description></item><item><title>我找到了建站的绝佳方案</title><link>https://blog.taoshuge.eu.org/p/408/</link><pubDate>Sun, 02 Feb 2025 15:34:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/408/</guid><description>折腾了N个方案后，终于找到了这个堪称完美的建站架构！仅是我个人经验，你也许有更好的方法，也可以分享出来，此方案目前稳定运行，速度和安全都得到了极大提升。
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ssl-cert.sh &amp;amp;&amp;amp; chmod +x ssl-cert.sh &amp;amp;&amp;amp; ./ssl-cert.sh 修改配置 注意：源站必须是443
+nginx使用以下配置，覆盖重启即可</description></item><item><title>我找到了建站的绝佳方案</title><link>https://blog.taoshuge.eu.org/p/408/</link><pubDate>Sun, 02 Feb 2025 15:34:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/408/</guid><description>折腾了N个方案后，终于找到了这个堪称完美的建站架构！仅是我个人经验，你也许有更好的方法，也可以分享出来，此方案目前稳定运行，速度和安全都得到了极大提升。
 配置结构 原理：网站部署在netcup，找一台美西（bagevm）的落地鸡（即反代鸡）做反向代理，然后使用dmit的29.9线路鸡转发落地鸡的80和443端口
 线路鸡可以看成多个节点，多个节点转发落地鸡
 甚至可以DNS解析到三大运营商上，让吃灰小鸡不再只是探针上的点缀。
