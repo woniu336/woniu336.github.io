@@ -4,7 +4,19 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>同步测试</title><link>https://blog.taoshuge.eu.org/p/411/</link><pubDate>Tue, 11 Feb 2025 13:17:06 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/411/</guid><description>测试</description></item><item><title>反代cloudflare之宝塔面板</title><link>https://blog.taoshuge.eu.org/p/410/</link><pubDate>Thu, 06 Feb 2025 02:10:00 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/410/</guid><description>debian11 测试通过
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>将托管在Github上的博客同步到vps教程</title><link>https://blog.taoshuge.eu.org/p/411/</link><pubDate>Tue, 11 Feb 2025 13:17:06 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/411/</guid><description>前言 我使用hugo搭建博客，记录一些技术、经验、踩坑，已有567天，博客部署在vercel，使用的是官方的cname：cname.vercel-dns.com，访问速度不佳，
+鉴于手头上小鸡多，何不把博客同步到vps，这样当本地写完文章，推送到Github的时候，同时也同步到了小鸡上。
+教程 原理：使用 rsync，配置 Actions 脚本同步
+1.安装 rsync
+登录远程服务器，键入以下命令来完成 rsync 的安装：
+sudo apt install rsync 2.新建 rsync 用户
+sudo adduser rsyncer 创建用户的途中会要求设置用户密码，其它配置使用默认值直接回车就行。
+然后会在/home目录生成一个rsyncer文件夹，记住这个文件夹。
+3.本地生成 SSH key
+然后在你的电脑上生成一个 Key 对，其中一个扩展名是.pub，是公钥。假设分别命名为：id_rsa 和 id_rsa.pub
+ssh-keygen -q -t rsa -b 4096 -C &amp;#34;阿弥托福&amp;#34; -N &amp;#34;&amp;#34; -f ~/.ssh/id_rsa 打开 id_rsa.pub, 复制里面的内容，稍后需要用到，
+4.将公钥添加到vps 登录你的服务器，逐个输入以下代码
+su rsyncer # 要输入密码 cd ~ mkdir -p www .ssh chmod 700 .ssh touch .ssh/authorized_keys chmod 600 .ssh/authorized_keys vim .ssh/authorized_keys # 用文本编辑器打开 `id_rsa.</description></item><item><title>反代cloudflare之宝塔面板</title><link>https://blog.taoshuge.eu.org/p/410/</link><pubDate>Thu, 06 Feb 2025 02:10:00 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/410/</guid><description>debian11 测试通过
 优化脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 首先安装宝塔面板 以下脚本安装的是宝塔原版7.7.0版本，可以解除手机号登录
 安装bt curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 或者使用以下脚本
