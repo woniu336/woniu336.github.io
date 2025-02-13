@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CDN on 折腾日记</title><link>https://blog.taoshuge.eu.org/tags/cdn/</link><description>Recent content in CDN on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 02 Feb 2025 15:34:44 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/cdn/index.xml" rel="self" type="application/rss+xml"/><item><title>我找到了建站的绝佳方案</title><link>https://blog.taoshuge.eu.org/p/408/</link><pubDate>Sun, 02 Feb 2025 15:34:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/408/</guid><description>折腾了N个方案后，终于找到了这个堪称完美的建站架构！仅是我个人经验，你也许有更好的方法，也可以分享出来，此方案目前稳定运行，速度和安全都得到了极大提升。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CDN on 折腾日记</title><link>https://blog.taoshuge.eu.org/tags/cdn/</link><description>Recent content in CDN on 折腾日记</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 12 Feb 2025 03:08:58 +0800</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/cdn/index.xml" rel="self" type="application/rss+xml"/><item><title>Nginx+CF+宝塔三剑客带你起飞</title><link>https://blog.taoshuge.eu.org/p/412/</link><pubDate>Wed, 12 Feb 2025 03:08:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/412/</guid><description>前言 个人网站搭建在多数情况下，基本是单台服务器托管多个站点，
+长期以来我都是这样建站的，因为简单，但是
+源站直接暴露在公网，面临 DDoS、CC 攻击或恶意扫描的风险，以下有三种方案可供参考
+添加b服务器，做站点目录同步和数据库主从同步，域名解析到b
+添加b服务器，使用nginx反代源站
+不需要额外机子，源站开启cf代理，这种方式最便捷省事
+先说第一种，配置比较繁琐，这种方式我使用了一段时间，博客有介绍，但涉及到数据库的操作，容易误操作，弃之，
+第二种后面再说，先说第三种，cf虽然速度欠佳，但配置好缓存整体还是可以的，
+但是假设你有dmca数字千年版权法的困扰（尤其影视站），单台服务器是不行的，避免商家收到投诉停机。
+总之，你还是需要b服务器。那么可不可以结合一下，nginx反代的同时开启cf代理呢，答案是没问题
+优势： 提升安全性：源站 IP 隐匿，避免成为直接攻击目标。 低成本防护：结合 Cloudflare 免费防护，无需源站改造。 整活 debian11, 宝塔面板7.7.0
+在b服务器安装宝塔面板，推荐安装原版，可解除手机登录，不要安装什么开心版。推荐以下脚本安装
+curl -sSO https://raw.githubusercontent.com/8838/btpanel-v7.7.0/main/install/install_panel.sh &amp;amp;&amp;amp; bash install_panel.sh 1，屏蔽手机号
+sed -i &amp;#34;s|bind_user == &amp;#39;True&amp;#39;|bind_user == &amp;#39;XXXX&amp;#39;|&amp;#34; /www/server/panel/BTPanel/static/js/index.js 2，删除强制绑定手机 js 文件
+rm -f /www/server/panel/data/bind.pl 3.安装好之后，仅仅需要安装nginx即可，需要到软件商店里查找nginx，然后安装1.27版本，使用编译的方式安装
+假设用户访问的域名是a.com, b.com是源站域名，b.com可开启cf代理（推荐），也可不开代理，但是需要配置好证书，
+然后添加a.com站点，
+接着使用以下配置覆盖nginx1.27配置，保存重启nginx。
+https://github.com/woniu336/open_shell/blob/main/bt-cf/nginx.conf
+接着使用以下配置覆盖a.com站点
+https://github.com/woniu336/open_shell/blob/main/bt-cf/http.conf
+把a.com替换成用户访问的域名，b.com替换成源站域名即可
+把a.com解析到这台机子ip，开启cf小黄云，搞定！
+实测和源站开启cf代理并无明显差异
+你可能觉得直接在抗版权的机子上建站，再开启cf代理不就完事了。这样的好处是不动源站，不想再繁琐的部署站点。
+但是还是回到前面说的隐藏源站，提高安全性的话题，最重要的一点是下面我将提到的进阶玩法，
+请不要觉得这样建站不正经，恰恰相反，cdn和负载均衡是不是更折腾，在你看来是不是更不正经都是瞎折腾，
+不管是cdn还是反代，原理都是差不多的。
+我们求稳的同时，也要居安思危，万一雷来了，好应付。
+那如果a.com不开cf代理呢？流程如下：
+nginx配置还是使用前面给的覆盖，a.com申请好证书，然后使用以下配置覆盖站点，
+https://github.com/woniu336/open_shell/blob/main/bt-cf/https.conf
+把a.com替换成主域名，b.com替换成源站域名,
+最后a.com解析到本机ip（即b服务器）
+进阶玩法 尽管开启cf代理带来了稳定性，但如果我想要追求速度呢，也就是源站开启cf代理，a.com直接解析到线路机。
+开整：
+同样在宝塔面板新建a.com，申请证书，推送使用以下脚本申请，适配宝塔面板,自动续期</description></item><item><title>我找到了建站的绝佳方案</title><link>https://blog.taoshuge.eu.org/p/408/</link><pubDate>Sun, 02 Feb 2025 15:34:44 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/408/</guid><description>折腾了N个方案后，终于找到了这个堪称完美的建站架构！仅是我个人经验，你也许有更好的方法，也可以分享出来，此方案目前稳定运行，速度和安全都得到了极大提升。
 配置结构 原理：网站部署在netcup，找一台美西（bagevm）的落地鸡（即反代鸡）做反向代理，然后使用dmit的29.9线路鸡转发落地鸡的80和443端口
 线路鸡可以看成多个节点，多个节点转发落地鸡
 甚至可以DNS解析到三大运营商上，让吃灰小鸡不再只是探针上的点缀。
