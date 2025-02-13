@@ -4,9 +4,10 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>网站安全之限制ip回源，附一键脚本</title><link>https://blog.taoshuge.eu.org/p/415/</link><pubDate>Thu, 13 Feb 2025 14:57:39 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/415/</guid><description>使用场景 场景1：B机反代了A机，那么在A机添加B机白名单。
-场景2：套娃模式，B机反代了A机，C机转发了B机80、443端口，那么在B机添加C机白名单。
-场景3：仅特定ip访问：在没有开启cf代理的情况下，添加本地或者你FQ的ip，也就是仅仅你自己可以访问。
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>网站安全之限制ip回源，附一键脚本</title><link>https://blog.taoshuge.eu.org/p/415/</link><pubDate>Thu, 13 Feb 2025 14:57:39 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/415/</guid><description>使用场景 场景1：凡是站点开启了cloudflare cdn的都适用。
+场景2：B机反代了A机，那么在A机添加B机白名单。
+场景3：套娃模式，B机反代了A机，C机转发了B机80、443端口，那么在B机添加C机白名单。
+场景4：仅特定ip访问：在没有开启cf代理的情况下，添加本地或者你FQ的ip，也就是仅仅你自己可以访问。
 脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/cloudflare-only.sh &amp;amp;&amp;amp; chmod +x cloudflare-only.sh &amp;amp;&amp;amp; ./cloudflare-only.sh 使用要点：先执行菜单1，再执行菜单2，添加白名单。</description></item><item><title>主流搜索引擎的IP范围</title><link>https://blog.taoshuge.eu.org/p/413/</link><pubDate>Thu, 13 Feb 2025 13:45:04 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/413/</guid><description> Google：Googlebot IP列表 Bing：Bingbot IP列表</description></item><item><title>Nginx+CF+宝塔三剑客带你起飞</title><link>https://blog.taoshuge.eu.org/p/412/</link><pubDate>Wed, 12 Feb 2025 03:08:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/412/</guid><description>前言 个人网站搭建在多数情况下，基本是单台服务器托管多个站点，
 长期以来我都是这样建站的，因为简单，但是
 源站直接暴露在公网，面临 DDoS、CC 攻击或恶意扫描的风险，以下有三种方案可供参考
