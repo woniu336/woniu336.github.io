@@ -4,7 +4,12 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>简易跳板机工具lssh，附安装脚本</title><link>https://blog.taoshuge.eu.org/p/421/</link><pubDate>Wed, 19 Feb 2025 16:11:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/421/</guid><description>使用场景：一对密钥维护多台机子，备份好配置，被控小鸡密钥丢了也没事
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>一键开启zram内存脚本，解决硬盘读写不佳(或容量小)的鸡鸡</title><link>https://blog.taoshuge.eu.org/p/422/</link><pubDate>Fri, 28 Feb 2025 04:20:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/422/</guid><description>系统：debian12，claw-jp测试通过
+前言 根据友佬@crzax的帖子 https://www.nodeseek.com/post-69126-1
+制作的一键开启zram脚本
+脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/zram_manager.sh &amp;amp;&amp;amp; chmod +x zram_manager.sh &amp;amp;&amp;amp; ./zram_manager.sh 预览：
+===== zRAM 管理工具 ===== 1. 安装并配置zRAM 2. 卸载zRAM 3. 查看系统状态 4. 验证zRAM运行状态 0. 退出 请选择操作 [0-4]: 查看状态：
+===== 系统状态 ===== &amp;gt;&amp;gt; 物理内存大小：0GB &amp;gt;&amp;gt; SWAP状态： NAME TYPE SIZE USED PRIO /swapfile file 1024M 0B -2 /dev/zram0 partition 923M 0B 100 &amp;gt;&amp;gt; 块设备信息： NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINTS zram0 252:0 0 923M 0 disk [SWAP] vda 254:0 0 20G 0 disk ├─vda1 254:1 0 19.</description></item><item><title>简易跳板机工具lssh，附安装脚本</title><link>https://blog.taoshuge.eu.org/p/421/</link><pubDate>Wed, 19 Feb 2025 16:11:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/421/</guid><description>使用场景：一对密钥维护多台机子，备份好配置，被控小鸡密钥丢了也没事
 项目 Github: https://github.com/blacknon/lssh/
 wiki: https://github.com/blacknon/lssh/wiki/Config
 脚本 在debian11测试通过
