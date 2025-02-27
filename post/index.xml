@@ -166,9 +166,11 @@ vmiss-伦敦9929 电信：延迟良好，丢包率低，表现稳定
 特别提醒：斯巴达西雅图整体表现一般，建议作为备用节点使用。</description></item><item><title>Nginx 常用命令和操作</title><link>https://blog.taoshuge.eu.org/p/403/</link><pubDate>Tue, 14 Jan 2025 02:56:31 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/403/</guid><description>查看缓存大小：
 du -sh /usr/local/nginx/cache/proxy 下载清理缓存脚本
 cd /usr/local/bin &amp;amp;&amp;amp; curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/clean_nginx_cache.sh &amp;amp;&amp;amp; chmod +x clean_nginx_cache.sh 定时任务: 每周日凌晨3点执行
-(crontab -l ; echo &amp;#34;0 3 * * 0 /usr/local/bin/clean_nginx_cache.sh&amp;#34;) | crontab - 检查 Nginx 状态和权限
-sudo systemctl status nginx # 检查 Nginx 服务状态，特别是是否有 PID 文件相关警告 ps aux | grep nginx # 查看 Nginx 进程是否正常运行，并检查其权限 ls -l /run/nginx/nginx.pid # 查看 Nginx 的 PID 文件权限是否正确 重启服务并观察日志
-sudo systemctl daemon-reload # 重新加载 Systemd 配置文件 sudo systemctl restart nginx # 重启 Nginx 服务 sudo journalctl -xe # 查看系统日志，检查是否有与 Nginx 相关的错误 查找进程和文件路径</description></item><item><title>反向代理SNI验证测试</title><link>https://blog.taoshuge.eu.org/p/402/</link><pubDate>Mon, 13 Jan 2025 02:10:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/402/</guid><description>假设反代IP是9.9.9.9，加速域名是789.com, 注意：不是源站域名
+(crontab -l ; echo &amp;#34;0 3 * * 0 /usr/local/bin/clean_nginx_cache.sh&amp;#34;) | crontab - 按小时统计今天的访问量
+awk &amp;#39;{split($4,a,&amp;#34;:&amp;#34;); print a[2]}&amp;#39; /data/wwwlogs/a.com.access.log | sort | uniq -c 查看最近一小时的 QPS
+awk -v now=&amp;#34;$(date +%H)&amp;#34; &amp;#39;$4~now{count++}END{print &amp;#34;最近一小时平均 QPS:&amp;#34;, count/3600}&amp;#39; /data/wwwlogs/a.com.access.log 假设今天是 3月15日
+awk &amp;#39;/15\/Mar\/2024:2[0-2]/{count++}END{print &amp;#34;总请求数:&amp;#34;, count; print &amp;#34;平均 QPS:&amp;#34;,count/10800}&amp;#39; /data/wwwlogs/a.com.access.log 或者查看最近24小时的统计
+awk &amp;#39;BEGIN{count=0} {count++} END{print &amp;#34;24小时总请求数:&amp;#34;, count; print &amp;#34;平均 QPS:&amp;#34;, count/86400}&amp;#39; /data/wwwlogs/a.</description></item><item><title>反向代理SNI验证测试</title><link>https://blog.taoshuge.eu.org/p/402/</link><pubDate>Mon, 13 Jan 2025 02:10:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/402/</guid><description>假设反代IP是9.9.9.9，加速域名是789.com, 注意：不是源站域名
 测试正确域名
 curl --tlsv1.2 https://9.9.9.9:443 --resolve 789.com:443:9.9.9.9 --insecure -H &amp;#34;Host: 789.com&amp;#34; -v 或者
 curl --tls-max 1.2 https://789.com:443 --connect-to 789.com:443:9.9.9.9:443 --insecure -v 返回网页内容
