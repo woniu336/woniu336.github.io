@@ -2095,13 +2095,22 @@ Ubuntu/Deepin
 wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;amp;&amp;amp; sudo bash install.sh aapanel Debian
 wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh &amp;amp;&amp;amp; bash install.sh aapanel 降级为aapanel6.8.27版本
 wget -O /root/update6_en.sh https://download.bt.cn/install/update6_en.sh &amp;amp;&amp;amp; sed -i &amp;#39;s/LinuxPanel_EN-${version}.zip/LinuxPanel_EN-6.8.27.zip/g&amp;#39; /root/update6_en.sh &amp;amp;&amp;amp; bash /root/update6_en.sh &amp;amp;&amp;amp; rm -rf /root/update6_en.sh 中文语言包
-wget -O aapanel_chinese.zip https://github.com/gacjie/aapanel_chinese/releases/download/6.8.27/aapanel_simplified_chinese_6827.zip &amp;amp;&amp;amp; unzip -o aapanel_chinese.zip -d /www/server/ &amp;amp;&amp;amp; /etc/init.d/bt restart</description></item><item><title>Linux系统Swap一键脚本 添加/删除</title><link>https://blog.taoshuge.eu.org/p/swap/</link><pubDate>Sat, 27 Jan 2024 17:36:29 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/swap/</guid><description> 在Linux系统中，swap是为了减少内存压力而设立的一种临时存储空间，当系统内存不足时，会将一部分内存交换到swap分区中。但是，当系统运行多个程序或进程时，swap会频繁的写入和读取数据，对硬盘进行频繁的访问，从而导致系统变慢。
+wget -O aapanel_chinese.zip https://github.com/gacjie/aapanel_chinese/releases/download/6.8.27/aapanel_simplified_chinese_6827.zip &amp;amp;&amp;amp; unzip -o aapanel_chinese.zip -d /www/server/ &amp;amp;&amp;amp; /etc/init.d/bt restart</description></item><item><title>Linux系统Swap调优</title><link>https://blog.taoshuge.eu.org/p/140/</link><pubDate>Sat, 27 Jan 2024 17:36:29 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/140/</guid><description>在Linux系统中，swap是为了减少内存压力而设立的一种临时存储空间，当系统内存不足时，会将一部分内存交换到swap分区中。但是，当系统运行多个程序或进程时，swap会频繁的写入和读取数据，对硬盘进行频繁的访问，从而导致系统变慢。
 如果你的系统内存足够并且感觉swap对系统性能没有多大帮助，可以考虑将swap关闭。
 建议禁止使用swap，除非你内存吃紧，或者调整vm.swappiness参数为10
-一键添加删除swap脚本 1G或者2G内存，可以设置swap为1G，即1024Mb
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/swap.sh &amp;amp;&amp;amp; chmod +x swap.sh &amp;amp;&amp;amp; ./swap.sh 临时调整vm.swappiness参数为10
-sudo sysctl vm.swappiness=10 永久调整 vm.swappiness参数为1（优先使用物理内存，迫不得已使用swap）
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/vm.sh &amp;amp;&amp;amp; chmod +x vm.sh &amp;amp;&amp;amp; ./vm.sh 使用free命令查看swap的使用情况 sudo free -m 查询当前系统中启用了哪些交换分区 sudo swapon -s 禁用命令 sudo swapoff -a 启用命令 sudo swapon -a 永久关闭swap分区 sed -ri &amp;#39;s/.*swap.*/#&amp;amp;/&amp;#39; /etc/fstab</description></item><item><title>简洁，没有广告，能下载资源的看片追剧APP</title><link>https://blog.taoshuge.eu.org/p/app/</link><pubDate>Thu, 25 Jan 2024 19:24:05 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/app/</guid><description>可能是最简洁干净的，能下载影视资源的APP了，能下载资源的APP才是好的看片追剧APP~~
+查看主配置文件是否包含该参数
+grep &amp;#34;vm.swappiness&amp;#34; /etc/sysctl.conf 检查自定义配置文件是否包含该参数
+grep &amp;#34;vm.swappiness&amp;#34; /etc/sysctl.d/*.conf 临时调整vm.swappiness参数为10, 重启失效
+sysctl -w vm.swappiness=10 查看当前生效值
+cat /proc/sys/vm/swappiness 或者
+sysctl vm.swappiness 1.持久化配置（推荐）
+若要确保重启后 vm.swappiness=1 仍然生效，需手动写入配置文件：
+echo &amp;#34;vm.swappiness = 1&amp;#34; | sudo tee /etc/sysctl.d/99-swap.conf 立即加载配置（无需重启）
+sudo sysctl -p /etc/sysctl.d/99-swap.conf 2.验证配置生效
+cat /etc/sysctl.d/99-swap.conf 确认当前值（应为 1）
+cat /proc/sys/vm/swappiness 查看 Swap 使用情况
+free -h | grep -i swap swapon --show 或者
+echo -e &amp;#34;\n\033[1;34m[Swap Usage]\033[0m&amp;#34; free -h | awk &amp;#39;/^Swap:/ {printf &amp;#34;Total: %s | Used: %s | Free: %s\n&amp;#34;, $2, $3, $4}&amp;#39; echo -e &amp;#34;\n\033[1;34m[Active Swap Partitions]\033[0m&amp;#34; swapon --show | column -t 一键添加删除swap脚本 1G或者2G内存，可以设置swap为1G，即1024Mb</description></item><item><title>简洁，没有广告，能下载资源的看片追剧APP</title><link>https://blog.taoshuge.eu.org/p/app/</link><pubDate>Thu, 25 Jan 2024 19:24:05 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/app/</guid><description>可能是最简洁干净的，能下载影视资源的APP了，能下载资源的APP才是好的看片追剧APP~~
 https://gh.ddlc.top/https://github.com/jimugou/app/releases/download/v1.6.3/fanqie-v1.6.3.apk</description></item><item><title>Lsky 图床 兰空图床</title><link>https://blog.taoshuge.eu.org/p/137/</link><pubDate>Thu, 25 Jan 2024 16:20:10 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/137/</guid><description>项目地址 https://github.com/lsky-org/lsky-pro
 推荐安装1.6.4版本，没有php和mysql的要求
 下载地址：https://github.com/lsky-org/lsky-pro/archive/refs/tags/v1.6.4.zip
