@@ -11,6 +11,5 @@ sysctl vm.swappiness 1.持久化配置（推荐）
 echo &amp;#34;vm.swappiness = 1&amp;#34; | sudo tee /etc/sysctl.d/99-swap.conf 立即加载配置（无需重启）
 sudo sysctl -p /etc/sysctl.d/99-swap.conf 2.验证配置生效
 cat /etc/sysctl.d/99-swap.conf 确认当前值（应为 1）
-cat /proc/sys/vm/swappiness 查看 Swap 使用情况
-free -h | grep -i swap swapon --show 或者
-echo -e &amp;#34;\n\033[1;34m[Swap Usage]\033[0m&amp;#34; free -h | awk &amp;#39;/^Swap:/ {printf &amp;#34;Total: %s | Used: %s | Free: %s\n&amp;#34;, $2, $3, $4}&amp;#39; echo -e &amp;#34;\n\033[1;34m[Active Swap Partitions]\033[0m&amp;#34; swapon --show | column -t 一键添加删除swap脚本 1G或者2G内存，可以设置swap为1G，即1024Mb</description></item></channel></rss>
+cat /proc/sys/vm/swappiness 统一设置
+# 1. 备份 sysctl.conf cp /etc/sysctl.conf /etc/sysctl.conf.bak # 2. 查找并显示所有包含 vm.swappiness 的文件 find /etc/sysctl.d/ /etc/sysctl.conf -type f -exec grep -l &amp;#34;vm.swappiness&amp;#34; {} \; # 3.</description></item></channel></rss>
