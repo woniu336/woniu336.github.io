@@ -4,7 +4,13 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>使用ufw防火墙自动检测和防御高频连接攻击</title><link>https://blog.taoshuge.eu.org/p/426/</link><pubDate>Wed, 05 Mar 2025 21:23:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/426/</guid><description>功能:
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>防火墙规则设置</title><link>https://blog.taoshuge.eu.org/p/427/</link><pubDate>Thu, 06 Mar 2025 00:46:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/427/</guid><description>防火墙设置 保存当前规则（以防万一）
+sudo iptables-save &amp;gt; ~/iptables.backup 允许本地回环（lo 接口）
+iptables -A INPUT -i lo -j ACCEPT 允许已建立和相关连接（关键！）
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT 放行特定端口（如 SSH、HTTP、HTTPS）
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT iptables -A INPUT -p tcp --dport 80 -j ACCEPT iptables -A INPUT -p tcp --dport 443 -j ACCEPT 默认拒绝其他所有入站流量
+iptables -P INPUT DROP 永久保存规则
+sudo apt install iptables-persistent sudo netfilter-persistent save sudo netfilter-persistent reload 检查规则是否生效</description></item><item><title>使用ufw防火墙自动检测和防御高频连接攻击</title><link>https://blog.taoshuge.eu.org/p/426/</link><pubDate>Wed, 05 Mar 2025 21:23:12 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/426/</guid><description>功能:
 实时监控TCP连接 自动识别异常连接 智能封禁可疑IP段 白名单保护机制 ufw安装 如果已经安装可以滤过，如果没有安装必须正确安装后放行ssh端口，避免ssh连接不上，把自己关门外，推荐使用以下脚本一键安装，自动放行ssh
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/block_censys_ips.sh &amp;amp;&amp;amp; chmod +x block_censys_ips.sh &amp;amp;&amp;amp; ./block_censys_ips.sh 脚本 提示：脚本中的阈值和白名单可自行调整
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/monitor_and_block.sh &amp;amp;&amp;amp; chmod +x monitor_and_block.sh 创建日志文件 sudo touch /var/log/ip_monitor.log sudo chmod 644 /var/log/ip_monitor.log 后台运行 60秒监控频率
