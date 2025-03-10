@@ -58,7 +58,12 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/dns-update/main/dns_menu.
 ┌─────────────────────────────────────────┐ │ Cloudflare 宕机切换IP脚本 │ │ 博客:https://woniu336.github.io │ ├─────────────────────────────────────────┤ │ 1. 安装依赖 │ │ 2. 设置 Cloudflare 配置 │ │ 3. 设置钉钉机器人配置 │ │ 4. 启动 DNS 更新脚本 │ │ 5. 查看运行状态 │ │ 6. 停止 DNS 更新脚本 │ │ 7. 切换 CDN 状态 │ │ 8. 设置服务器备注 │ │ 9.</description></item><item><title>宝塔面板安全之后台访问限制</title><link>https://blog.taoshuge.eu.org/p/416/</link><pubDate>Thu, 13 Feb 2025 16:33:49 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/416/</guid><description>虽然后台可以设置特定ip访问，但是权限不同，我使用ufw方式限制。
 安全提醒：
 不要追求市面上最新版的开心版，各种安装开心版的脚本，有没有加料无法分辨。 不需要phpMyAdmin的，可以移除888端口 改默认22端口，使用密钥登录服务器 脚本：前提你已经安装并正确启用了ufw
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ufw-port.sh &amp;amp;&amp;amp; chmod +x ufw-port.sh &amp;amp;&amp;amp; ./ufw-port.sh 添加后台端口，添加可以访问的ip即可。</description></item><item><title>网站安全之限制ip回源，附一键脚本</title><link>https://blog.taoshuge.eu.org/p/415/</link><pubDate>Thu, 13 Feb 2025 14:57:39 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/415/</guid><description>使用场景 场景1：凡是站点开启了cloudflare cdn的都适用。
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ufw-port.sh &amp;amp;&amp;amp; chmod +x ufw-port.sh &amp;amp;&amp;amp; ./ufw-port.sh 添加后台端口，添加可以访问的ip即可。
+手动设置 首先，删除现有的相关规则（假设规则编号是 36 和 37）：
+sudo ufw delete 36 sudo ufw delete 37 添加两个允许规则, 例如33333端口
+sudo ufw allow from 192.168.1.101 to any port 33333 sudo ufw allow from 192.168.1.102 to any port 33333 添加默认拒绝规则：
+sudo ufw deny 33333/tcp 确认规则配置：
+sudo ufw status numbered 完结</description></item><item><title>网站安全之限制ip回源，附一键脚本</title><link>https://blog.taoshuge.eu.org/p/415/</link><pubDate>Thu, 13 Feb 2025 14:57:39 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/415/</guid><description>使用场景 场景1：凡是站点开启了cloudflare cdn的都适用。
 场景2：B机反代了A机，那么在A机添加B机白名单。
 场景3：套娃模式，B机反代了A机，C机转发了B机80、443端口，那么在B机添加C机白名单。
 场景4：仅特定ip访问：在没有开启cf代理的情况下，添加本地或者你FQ的ip，也就是仅仅你自己可以访问。
