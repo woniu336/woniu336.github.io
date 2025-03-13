@@ -4,13 +4,14 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>使用iptables和ipset配合AbuseIPDB阻止恶意扫描</title><link>https://blog.taoshuge.eu.org/p/428/</link><pubDate>Thu, 13 Mar 2025 15:29:03 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/428/</guid><description>脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ipblocker.sh &amp;amp;&amp;amp; chmod +x ipblocker.sh &amp;amp;&amp;amp; ./ipblocker.sh 持久化 确保目录存在
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>使用iptables和ipset配合AbuseIPDB阻止恶意扫描</title><link>https://blog.taoshuge.eu.org/p/428/</link><pubDate>Thu, 13 Mar 2025 15:29:03 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/428/</guid><description>不会对现有的防火墙规则造成负面影响。它采用了独立的链和集合，与现有规则和策略和平共存。即使删除这个黑名单系统，也不会影响其他防火墙规则的正常运行。
+脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ipblocker.sh &amp;amp;&amp;amp; chmod +x ipblocker.sh &amp;amp;&amp;amp; ./ipblocker.sh 持久化 确保目录存在
 mkdir -p /etc/iptables 安装 iptables-persistent 工具（Debian/Ubuntu）：
 apt install iptables-persistent 保存规则
 iptables-save &amp;gt; /etc/iptables/rules.v4 ipset save banned_ips -f /etc/ipset.conf 验证持久化配置 # 重启系统 reboot # 确认 banned_ips 存在 ipset list # 确认 IPTables 规则生效 iptables -L BANNED -n 验证规则 统计规则匹配次数
 iptables -L BANNED -n -v -x 手动添加黑名单 ipset add banned_ips 1.2.3.4 然后使用ping测试
 手动解除 IP
-ipset del banned_ips 1.2.3.4</description></item><item><title>防火墙规则设置</title><link>https://blog.taoshuge.eu.org/p/427/</link><pubDate>Thu, 06 Mar 2025 00:46:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/427/</guid><description>防火墙设置 保存当前规则（以防万一）
+ipset del banned_ips 1.</description></item><item><title>防火墙规则设置</title><link>https://blog.taoshuge.eu.org/p/427/</link><pubDate>Thu, 06 Mar 2025 00:46:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/427/</guid><description>防火墙设置 保存当前规则（以防万一）
 sudo iptables-save &amp;gt; ~/iptables.backup 允许本地回环（lo 接口）
 iptables -A INPUT -i lo -j ACCEPT 允许已建立和相关连接（关键！）
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT 放行特定端口（如 SSH、HTTP、HTTPS）
