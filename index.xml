@@ -4,7 +4,15 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>使用iptables和ipset配合AbuseIPDB阻止恶意扫描</title><link>https://blog.taoshuge.eu.org/p/428/</link><pubDate>Thu, 13 Mar 2025 15:29:03 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/428/</guid><description>不会对现有的防火墙规则造成负面影响。它采用了独立的链和集合，与现有规则和策略和平共存。即使删除这个黑名单系统，也不会影响其他防火墙规则的正常运行。
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>使用电报管理你的Cloudflare DNS</title><link>https://blog.taoshuge.eu.org/p/429/</link><pubDate>Sat, 15 Mar 2025 00:07:53 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/429/</guid><description>项目地址 https://github.com/zcp1997/telegram-cf-dns-bot
+一键脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/cf-dns-bot.sh &amp;amp;&amp;amp; chmod +x cf-dns-bot.sh &amp;amp;&amp;amp; ./cf-dns-bot.sh 快速开始 前置要求
+Docker 和 Docker Compose
+Telegram Bot Token（从 @BotFather 获取）
+Cloudflare API Token（从 Cloudflare 控制面板获取）
+域名的 Zone ID（从 Cloudflare 控制面板获取）
+通过 @userinfobot 获取您的Telegram 用户 ID
+部署方式 以下为手动，可以使用脚本快速部署
+创建 docker-compose.yml 文件： services: tg-cf-dns-bot: image: ghcr.io/zcp1997/telegram-cf-dns-bot:latest container_name: tg-cf-dns-bot restart: unless-stopped environment: # Telegram Bot Token - TELEGRAM_TOKEN=your_telegram_token_here # Cloudflare API Token - CF_API_TOKEN=your_api_token_here # 允许访问的 Telegram 用户 ID（逗号分隔），第一个用户是管理员 - ALLOWED_CHAT_IDS=123456789,987654321 # 域名到 Zone ID 的映射（JSON 格式） - &amp;#39;DOMAIN_ZONE_MAP= { &amp;#34;example.</description></item><item><title>使用iptables和ipset配合AbuseIPDB阻止恶意扫描</title><link>https://blog.taoshuge.eu.org/p/428/</link><pubDate>Thu, 13 Mar 2025 15:29:03 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/428/</guid><description>不会对现有的防火墙规则造成负面影响。它采用了独立的链和集合，与现有规则和策略和平共存。即使删除这个黑名单系统，也不会影响其他防火墙规则的正常运行。
 脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ipblocker.sh &amp;amp;&amp;amp; chmod +x ipblocker.sh &amp;amp;&amp;amp; ./ipblocker.sh 持久化 确保目录存在
 mkdir -p /etc/iptables 安装 iptables-persistent 工具（Debian/Ubuntu）：
 apt install iptables-persistent 保存规则
