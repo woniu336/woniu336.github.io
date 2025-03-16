@@ -1820,6 +1820,9 @@ Install-WindowsFeature -Name Hyper-V -IncludeManagementTools -Restart 安装完�
 安全设置-账户策略-密码策略
 禁用密码复杂性要求以及最长使用期限为0(不过期)
 4.关闭登录系统按CTRL+ALT+DEL 本地策略-安全选项
+关闭登录密码：
+快捷键WIN+R输入regedit，再粘贴下面这行
+计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device 将DevicePasswordLessBuildVersion的值改为0
 4.组策略中打开 启用不安全来宾登陆 选项 目的是局域网文件共享: https://blog.csdn.net/u010499872/article/details/115704644
 开始运行，或者快捷键 Win+R 打开运行，输入 gpedit.msc 打开组策略。
 然后分别选择 计算机配置 → 管理模板 → 网络 →Lanman工作站，在右边找到 启用不安全的来宾登陆，双击打开，然后选择启用，点确定即可。
