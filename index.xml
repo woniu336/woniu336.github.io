@@ -13,10 +13,10 @@ demo 借用原作者的图
 curl -sS -O https://raw.githubusercontent.com/woniu336/domain-whois/main/install_whois.sh &amp;amp;&amp;amp; chmod +x install_whois.sh &amp;amp;&amp;amp; ./install_whois.sh 搭建成功后，访问：http://ip:8043/example.com, 输出内容表明安装成功，也可以查ip和ASN的whois信息，
 例如：http://ip:8043/8.8.8.8，http://ip:8043/AS135377
 绑定域名，这一步最简单
-访问cf后台，找一个域名，找到规则，Origin Rules，创建规则
+访问cf后台，解析域名，开启cdn，然后找到规则，Origin Rules，创建规则
 反代成功！！
 搭建面板 登录您的 Cloudflare 账户 创建新的 Worker 将domainkeeper.js脚本内容复制到 Worker 编辑器 https://github.com/woniu336/domain-whois/blob/main/domainkeeper.js 在脚本顶部配置以下变量： const CF_API_KEY = &amp;#34;your_cloudflare_api_key&amp;#34;; const WHOIS_PROXY_URL = &amp;#34;your_whois_proxy_url&amp;#34;; const ACCESS_PASSWORD = &amp;#34;your_frontend_password&amp;#34;; const ADMIN_PASSWORD = &amp;#34;your_backend_password&amp;#34;; CF_API_KEY的获取方式： 登录自己的cloudflare账号，打开https://dash.cloudflare.com/profile
-点击API令牌，创建令牌，读取所有资源-使用模板，继续以显示摘要，创建令牌，复制此令牌，**保存到记事本，之后不会再显示！
+点击API令牌，创建令牌，读取所有资源-使用模板，继续以显示摘要，创建令牌，复制此令牌，保存到记事本，之后不会再显示！
 WHOIS_PROXY_URL的获取方式：根据前面成功搭建的whois，你只需要填入http(s)://你的域名
 前台密码按需设置，后台密码必须设置。
 创建一个 KV 命名空间，命名为DOMAIN_INFO，并将其绑定到 Worker，绑定名称为 DOMAIN_INFO 保存并部署，完结</description></item><item><title>开源的SSL证书管理工具-certimate</title><link>https://blog.taoshuge.eu.org/p/431/</link><pubDate>Thu, 20 Mar 2025 23:28:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/431/</guid><description> 开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期
