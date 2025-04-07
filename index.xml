@@ -41,13 +41,13 @@ Cloudflare API Token（从 Cloudflare 控制面板获取）
 通过 @userinfobot 获取您的Telegram 用户 ID
 部署方式 以下为手动，可以使用脚本快速部署
 创建 docker-compose.yml 文件： services: tg-cf-dns-bot: image: ghcr.io/zcp1997/telegram-cf-dns-bot:latest container_name: tg-cf-dns-bot restart: unless-stopped environment: # Telegram Bot Token - TELEGRAM_TOKEN=your_telegram_token_here # Cloudflare API Token - CF_API_TOKEN=your_api_token_here # 允许访问的 Telegram 用户 ID（逗号分隔），第一个用户是管理员 - ALLOWED_CHAT_IDS=123456789,987654321 # 域名到 Zone ID 的映射（JSON 格式） - &amp;#39;DOMAIN_ZONE_MAP= { &amp;#34;example.</description></item><item><title>使用iptables和ipset配合AbuseIPDB阻止恶意扫描</title><link>https://blog.taoshuge.eu.org/p/428/</link><pubDate>Thu, 13 Mar 2025 15:29:03 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/428/</guid><description>不会对现有的防火墙规则造成负面影响。它采用了独立的链和集合，与现有规则和策略和平共存。即使删除这个黑名单系统，也不会影响其他防火墙规则的正常运行。
-脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ipblocker.sh &amp;amp;&amp;amp; chmod +x ipblocker.sh &amp;amp;&amp;amp; ./ipblocker.sh 持久化 确保目录存在
+脚本 首先安装依赖工具：
+apt-get install iptables ipset cron 然后运行以下脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ipblocker.sh &amp;amp;&amp;amp; chmod +x ipblocker.sh &amp;amp;&amp;amp; ./ipblocker.sh 持久化 确保目录存在
 mkdir -p /etc/iptables 安装 iptables-persistent 工具（Debian/Ubuntu）：
 apt install iptables-persistent 保存规则
-iptables-save &amp;gt; /etc/iptables/rules.v4 ipset save banned_ips -f /etc/ipset.conf 验证持久化配置 # 重启系统 reboot # 确认 banned_ips 存在 ipset list # 确认 IPTables 规则生效 iptables -L BANNED -n 验证规则 统计规则匹配次数
-iptables -L BANNED -n -v -x 手动添加黑名单 ipset add banned_ips 1.2.3.4 然后使用ping测试
-手动解除 IP
-ipset del banned_ips 1.</description></item><item><title>防火墙规则设置</title><link>https://blog.taoshuge.eu.org/p/427/</link><pubDate>Thu, 06 Mar 2025 00:46:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/427/</guid><description>防火墙设置 保存当前规则（以防万一）
+iptables-save &amp;gt; /etc/iptables/rules.v4 ipset save banned_ips -f /etc/ipset.conf 验证持久化配置 # 重启系统 reboot # 确认 banned_ips 存在 ipset list banned_ips # 确认 IPTables 规则生效 iptables -L BANNED -n 验证规则 统计规则匹配次数
+iptables -L BANNED -n -v -x 手动添加黑名单 ipset add banned_ips 1.</description></item><item><title>防火墙规则设置</title><link>https://blog.taoshuge.eu.org/p/427/</link><pubDate>Thu, 06 Mar 2025 00:46:02 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/427/</guid><description>防火墙设置 保存当前规则（以防万一）
 sudo iptables-save &amp;gt; ~/iptables.backup 允许本地回环（lo 接口）
 iptables -A INPUT -i lo -j ACCEPT 允许已建立和相关连接（关键！）
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT 放行特定端口（如 SSH、HTTP、HTTPS）
