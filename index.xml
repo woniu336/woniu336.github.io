@@ -4,7 +4,10 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>域名可视化展示面板搭建教程</title><link>https://blog.taoshuge.eu.org/p/432/</link><pubDate>Sun, 06 Apr 2025 21:46:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/432/</guid><description>原项目: https://github.com/ypq123456789/domainkeeper
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>ELK日志部署</title><link>https://blog.taoshuge.eu.org/p/433/</link><pubDate>Tue, 08 Apr 2025 11:10:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/433/</guid><description>1. 创建 Docker 网络 首先，创建一个名为 logging 的 Docker 网络：
+docker network create logging 2. 运行 Elasticsearch 容器 接下来，运行 Elasticsearch 容器：
+docker run -d \ --name=elasticsearch \ --net=logging \ -v elasticsearch-data:/usr/share/elasticsearch/data \ -e &amp;#34;discovery.type=single-node&amp;#34; \ -e &amp;#34;xpack.security.enabled=false&amp;#34; \ -e &amp;#34;ES_JAVA_OPTS=-Xms512m -Xmx1g&amp;#34; \ -p 9200:9200 \ docker.elastic.co/elasticsearch/elasticsearch:8.10.2 3. 运行 Kibana 容器 最后，运行 Kibana 容器，连接到 Elasticsearch：
+docker run -d \ --name=kibana \ --net=logging \ -e ELASTICSEARCH_HOSTS=http://elasticsearch:9200 \ -e I18N_LOCALE=zh-CN \ -p 5601:5601 \ docker.</description></item><item><title>域名可视化展示面板搭建教程</title><link>https://blog.taoshuge.eu.org/p/432/</link><pubDate>Sun, 06 Apr 2025 21:46:59 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/432/</guid><description>原项目: https://github.com/ypq123456789/domainkeeper
 本项目: https://github.com/woniu336/domain-whois
 demo(原作者) https://domainkeeper.bacon159.me/
 demo 借用原作者的图
