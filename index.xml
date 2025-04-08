@@ -4,7 +4,14 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>ELK 日志收集与分析系统部署指南</title><link>https://blog.taoshuge.eu.org/p/433/</link><pubDate>Tue, 08 Apr 2025 11:10:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/433/</guid><description>什么是 ELK？
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>ufw-docker 防火墙工具</title><link>https://blog.taoshuge.eu.org/p/434/</link><pubDate>Wed, 09 Apr 2025 00:17:48 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/434/</guid><description>项目: https://github.com/chaifeng/ufw-docker
+下载 ufw-docker 脚本 sudo wget -O /usr/local/bin/ufw-docker \ https://github.com/chaifeng/ufw-docker/raw/master/ufw-docker chmod +x /usr/local/bin/ufw-docker 使用下列命令来修改 ufw 的 after.rules 文件
+ufw-docker install 这个命令做了以下事情：
+备份文件 /etc/ufw/after.rules 把 UFW 和 Docker 的相关规则添加到文件 after.rules 的末尾 允许外部网络访问 如果希望允许外部网络访问 Docker 容器提供的服务，比如有一个容器的服务端口是 80。那就可以用以下命令来允许外部网络访问这个服务：
+ufw route allow proto tcp from any to any port 80 这个命令会允许外部网络访问所有用 Docker 发布出来的并且内部服务端口为 80 的所有服务。
+请注意，这个端口 80 是容器的端口，而非使用 -p 0.0.0.0:8080:80 选项发布在服务器上的 8080 端口。
+如果有多个容器的服务端口为 80，但只希望外部网络访问某个特定的容器。比如该容器的私有地址为 172.17.0.2，就用类似下面的命令：
+ufw route allow proto tcp from any to 172.</description></item><item><title>ELK 日志收集与分析系统部署指南</title><link>https://blog.taoshuge.eu.org/p/433/</link><pubDate>Tue, 08 Apr 2025 11:10:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/433/</guid><description>什么是 ELK？
 ELK 是 Elasticsearch、Logstash 和 Kibana 三个开源项目的首字母缩写，它是一个功能强大的日志收集、分析和可视化平台：
 Elasticsearch：分布式搜索和分析引擎，用于存储和快速查询日志数据 Logstash：数据收集和处理引擎，可以从多种来源获取数据，转换数据，然后将其发送到 Elasticsearch Kibana：可视化平台，提供了强大的图表、仪表板和查询功能，用于浏览和分析 Elasticsearch 中的数据 在本指南中，我们使用 Filebeat 代替 Logstash 作为日志收集工具，因此也可以称为 EFK 栈，这种组合更加轻量且适合于单纯的日志收集场景。
 关键说明
