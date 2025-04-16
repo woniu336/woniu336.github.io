@@ -6,11 +6,12 @@ curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o 
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
 sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>优化宝塔面板Redis内存配置</title><link>https://blog.taoshuge.eu.org/p/436/</link><pubDate>Wed, 16 Apr 2025 10:22:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/436/</guid><description>宝塔面板后台redis莫名停止运作，导致站点打开出现错误，当我重启redis后，系统负载又飙升，解决办法如下
 即时配置调整 # 设置内存上限 redis-cli config set maxmemory 1g # 设置内存淘汰策略 redis-cli config set maxmemory-policy volatile-lru # 适度提高采样精度 redis-cli config set maxmemory-samples 10 # 永久保存配置 redis-cli config rewrite 或者使用allkeys-lru内存淘汰策略
-redis-cli config set maxmemory-policy allkeys-lru 找出 Redis 中“最大的键”
+redis-cli config set maxmemory-policy allkeys-lru 开启 active-defrag 机制
+redis-cli CONFIG SET activedefrag yes 确认是否已开启：
+redis-cli CONFIG GET activedefrag 找出 Redis 中“最大的键”
 redis-cli --bigkeys 批量删除这些大 key（谨慎操作）：
 redis-cli --scan --pattern &amp;#34;xxxxx.com*&amp;#34; | xargs redis-cli del 脚本删除大 key
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/clean_bigkeys.sh &amp;amp;&amp;amp; chmod +x clean_bigkeys.sh 🧪 用法说明：
-查看前 10 个最大 key（仅分析，不删除）： ./clean_bigkeys.sh --top-n 10 清除所有大于 512KB 的 key（并 dry-run 看看）： .</description></item><item><title>the fuck</title><link>https://blog.taoshuge.eu.org/p/435/</link><pubDate>Tue, 15 Apr 2025 19:29:16 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/435/</guid><description> 项目: https://github.com/nvbn/thefuck
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/clean_bigkeys.sh &amp;amp;&amp;amp; chmod +x clean_bigkeys.</description></item><item><title>the fuck</title><link>https://blog.taoshuge.eu.org/p/435/</link><pubDate>Tue, 15 Apr 2025 19:29:16 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/435/</guid><description> 项目: https://github.com/nvbn/thefuck
 ubuntu / debian11 安装命令
 sudo apt update sudo apt install python3-dev python3-pip python3-setuptools pip3 install thefuck --user 配置别名
 echo &amp;#39;export PATH=&amp;#34;$PATH:/root/.local/bin&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bashrc echo &amp;#39;eval &amp;#34;$(thefuck --alias)&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc debian12
