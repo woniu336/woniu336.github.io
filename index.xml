@@ -4,7 +4,17 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>优化宝塔面板Redis内存配置</title><link>https://blog.taoshuge.eu.org/p/436/</link><pubDate>Wed, 16 Apr 2025 10:22:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/436/</guid><description>宝塔面板后台redis莫名停止运作，导致站点打开出现错误，当我重启redis后，系统负载又飙升，解决办法如下
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>netcup RS1000 更换系统语言到英文</title><link>https://blog.taoshuge.eu.org/p/437/</link><pubDate>Sun, 20 Apr 2025 23:02:20 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/437/</guid><description> rs1000德国纽伦堡机器，默认的系统语言是德文，方法如下
+安装必要工具
+sudo apt update sudo apt install wget curl -y 更换系统语言到英文
+1、查看当前语言环境
+env | grep LANG 2、en表示语言，US表示国家，UTF-8表示编码
+export LANG=en_US.UTF-8 3、配置
+sudo dpkg-reconfigure locales 在弹出的界面中，使用方向键导航，空格键选择 en_US.UTF-8，确保其被标记为 [ * ] 然后，按 Tab 键选择 ，按 Enter 确认。
+接下来，系统会询问默认的系统环境，选择 en_US.UTF-8，同样按 Tab 键选择 ，按 Enter 确认。
+4、重启reboot
+5、最后使用常用脚本给系统调优
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh</description></item><item><title>优化宝塔面板Redis内存配置</title><link>https://blog.taoshuge.eu.org/p/436/</link><pubDate>Wed, 16 Apr 2025 10:22:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/436/</guid><description>宝塔面板后台redis莫名停止运作，导致站点打开出现错误，当我重启redis后，系统负载又飙升，解决办法如下
 即时配置调整 # 设置内存上限 redis-cli config set maxmemory 1g # 设置内存淘汰策略 redis-cli config set maxmemory-policy volatile-lru # 适度提高采样精度 redis-cli config set maxmemory-samples 10 # 永久保存配置 redis-cli config rewrite 或者使用allkeys-lru内存淘汰策略
 redis-cli config set maxmemory-policy allkeys-lru 开启 active-defrag 机制
 redis-cli CONFIG SET activedefrag yes 确认是否已开启：
