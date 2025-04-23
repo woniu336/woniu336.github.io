@@ -3129,7 +3129,7 @@ No remotes found, make a new one? n) New remote s) Set configuration password q)
 免费套餐: 每月50G流量
 https://fleek.co/pricing/
 特点 优势 Git 集成 简化代码管理和部署流程 自动部署 省时省力地将站点部署到网络 自动SSL 自动为站点提供SSL安全证书 全球CDN 加速内容全球分发 速度极快 利用边缘网络提供快速加载 便于使用 用户友好的界面和操作 协作性 便于团队协作和版本控制 可定制 支持灵活的定制需求 优势 描述 速度快 Fleek的边缘网络结合了IPFS和边缘计算技术，为用户提供极快的加载时间，同时部署到Fleek Edge。 去中心化 使用Fleek，您的IPFS托管网站和应用程序不仅备份在其服务器上，还会自动存档到去中心化存储网络Filecoin，作为开放网络中的附加备份层。</description></item><item><title>公共DNS汇总</title><link>https://blog.taoshuge.eu.org/p/%E5%85%AC%E5%85%B1dns%E6%B1%87%E6%80%BB/</link><pubDate>Wed, 09 Aug 2023 04:20:03 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%85%AC%E5%85%B1dns%E6%B1%87%E6%80%BB/</guid><description>&lt;p>公共DNS汇总,互联网企业&amp;amp;高校DNS&lt;/p></description></item><item><title>🚀搭建一个小而美的网站访问统计监控 ——Umami</title><link>https://blog.taoshuge.eu.org/p/umami/</link><pubDate>Tue, 08 Aug 2023 14:30:23 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/umami/</guid><description>用过百度统计、友盟，最后的51拉(半夜带你嗨皮)，最后选择自建
-今天带大家用 Umami 快速搭建一个网站流量监控系统，界面清爽简洁，适合自部署。
+今天带大家用 Umami 快速搭建一个网站访客监控系统，界面清爽简洁，适合自部署。
 内存占用：约 250MB 镜像大小：约 670MB 🧱 1. 创建 docker-compose.yml 前提：已经安装好 Docker 和 curl 工具。
 cd ~ mkdir -p ~/data/docker_data/umami cd ~/data/docker_data/umami curl -o docker-compose.yml https://raw.githubusercontent.com/woniu336/open_shell/main/docker-compose.yml 🚫 2. 解决广告拦截问题（可选优化） Umami 默认的追踪脚本路径容易被广告拦截器屏蔽，因此建议修改为自定义路径。
 默认脚本地址：https://your-umami.com/script.js 默认数据收集接口：https://your-umami.com/api/send 修改方法： 打开配置文件：
