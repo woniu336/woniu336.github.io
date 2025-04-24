@@ -82,6 +82,7 @@ WHOIS_PROXY_URL的获取方式：根据前面成功搭建的whois，你只需要
 创建一个 KV 命名空间，命名为DOMAIN_INFO，并将其绑定到 Worker，绑定名称为 DOMAIN_INFO 保存并部署，完结</description></item><item><title>开源的SSL证书管理工具-certimate</title><link>https://blog.taoshuge.eu.org/p/431/</link><pubDate>Thu, 20 Mar 2025 23:28:41 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/431/</guid><description> 开源的SSL证书管理工具，可以帮助你自动申请、部署SSL证书，并在证书即将过期时自动续期
 https://github.com/usual2970/certimate
 文档： https://docs.certimate.me/docs/introduction/
+cloudflare授权管理: https://docs.certimate.me/docs/tutorial/authorization-management#cloudflare-credentials
 Docker 安装 mkdir -p ~/.certimate &amp;amp;&amp;amp; \ cd ~/.certimate &amp;amp;&amp;amp; \ curl -O https://raw.githubusercontent.com/usual2970/certimate/refs/heads/main/docker/docker-compose.yml &amp;amp;&amp;amp; \ docker compose up -d 浏览器中访问 http://127.0.0.1:8090。
 初始的管理员账号及密码：
 账号：admin@certimate.fun 密码：1234567890 记得修改密码
