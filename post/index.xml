@@ -963,20 +963,21 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/indexnow-
 例如,如果您使用 Hugo 静态网站生成器,可以将文件放在 /static 文件夹中:
 https://your-website.com/007997b63dd14237bdb9facc726c9a05.txt 3. 创建 GitHub Actions 工作流 在您的 GitHub 仓库根目录创建一个新的工作流文件:
 .github/workflows/IndexNow.yml 将以下内容添加到文件中(记得替换 sitemap-location 为您自己的网站地图 URL):
-name: &amp;#34;IndexNow&amp;#34; on: push: branches: - main schedule: # 每3天的 UTC 时间 04:00 运行一次 - cron: &amp;#39;0 4 */3 * *&amp;#39; jobs: check-and-submit: runs-on: ubuntu-latest steps: - name: submit-to-bing uses: bojieyang/indexnow-action@v2 with: sitemap-location: &amp;#34;https://your-website.</description></item><item><title>安装网站流量统计工具——Plausible</title><link>https://blog.taoshuge.eu.org/p/318/</link><pubDate>Tue, 03 Sep 2024 01:15:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/318/</guid><description>测试环境 debian11 需要安装好docker 宝塔面板7.7.0 项目 项目：https://github.com/plausible/community-edition
+name: &amp;#34;IndexNow&amp;#34; on: push: branches: - main schedule: # 每3天的 UTC 时间 04:00 运行一次 - cron: &amp;#39;0 4 */3 * *&amp;#39; jobs: check-and-submit: runs-on: ubuntu-latest steps: - name: submit-to-bing uses: bojieyang/indexnow-action@v2 with: sitemap-location: &amp;#34;https://your-website.</description></item><item><title>安装网站访客统计工具——Plausible</title><link>https://blog.taoshuge.eu.org/p/318/</link><pubDate>Tue, 03 Sep 2024 01:15:22 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/318/</guid><description>测试环境 Debian12 需要安装好docker 项目 项目：https://github.com/plausible/community-edition
 文档：https://plausible.io/docs/
-创建安装目录 mkdir -p /opt/docker_data/plausible/hosting cd /opt/docker_data/plausible/hosting 下载程序 v2.1.1版本部署失败，原因不明，故选择了旧版本2.0
+🔢 总内存占用约：548.77 MiB
+📦 总镜像大小约：1.18 GiB
+创建安装目录 mkdir -p /opt/docker_data/plausible/hosting cd /opt/docker_data/plausible/hosting 下载程序 版本：2.0
 默认端口：8000
-宝塔设置好反向代理
 wget https://github.com/plausible/community-edition/archive/refs/heads/v2.0.0.zip &amp;amp;&amp;amp; unzip v2.0.0.zip &amp;amp;&amp;amp; mv community-edition-2.0.0/* . &amp;amp;&amp;amp; rm -rf community-edition-2.0.0 v2.0.0.zip ==========================================================================
-此时目录下会有两个文件需要配置：
-docker-compose.yml：可以保持默认 plausible-conf.env：配置 Plausible 服务，完整的配置文件可以参考 其中需要注意的是 BASE_URL 是你的域名地址（例如：http://yourdomain.com 或者 https://web.yourdomain.com，目前不支持子目录），
-而 plausible-conf.env 则需要一个随机的 64 位字符 SECRET_KEY_BASE 用来提高安全性，可以通过下面的命令生成：
-openssl rand -base64 64 | tr -d &amp;#39;\n&amp;#39; ; echo 编辑plausible-conf.env
-vim plausible-conf.env 按esc键，然后:wq退出
-在该目录下启动服务：
+此时hosting目录下会有两个文件需要配置：
+docker-compose.yml：把127.0.0.1改成0.0.0.0 plausible-conf.env：配置 Plausible 服务 编辑plausible-conf.env
+nano plausible-conf.env BASE_URL 提前解析好的域名,例如：https://tj.1234.com
+SECRET_KEY_BASE 加密密钥，可以通过下面的命令生成：
+openssl rand -base64 64 | tr -d &amp;#39;\n&amp;#39; ; echo 最后启动服务：
 docker compose up -d 第一次访问创建的用户即是管理员，登录后，就可以添加网站了。
-添加发信邮箱【可选】 使用外部 SMTP 发信邮箱，编辑 Plausible 环境变量文件</description></item><item><title>去除YouTube弹窗，彻底无广告</title><link>https://blog.taoshuge.eu.org/p/317/</link><pubDate>Mon, 02 Sep 2024 03:49:30 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/317/</guid><description>项目 https://github.com/TheRealJoelmatic/RemoveAdblockThing
+一键查询Plausible内存和镜像大小
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/plausible_stats.sh &amp;amp;&amp;amp; chmod +x plausible_stats.</description></item><item><title>去除YouTube弹窗，彻底无广告</title><link>https://blog.taoshuge.eu.org/p/317/</link><pubDate>Mon, 02 Sep 2024 03:49:30 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/317/</guid><description>项目 https://github.com/TheRealJoelmatic/RemoveAdblockThing
 安装去广告脚本 安装脚本：单击此处并按安装
 禁用广告拦截器 务必在YouTube页面上禁用其他广告拦截器，例如Adblock Plus（因为这些已经被YouTube列入黑名单了）。否则会导致各种播放问题！
 不用担心，安装好的脚本会删除 YouTube 上的广告。
