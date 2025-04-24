@@ -967,7 +967,7 @@ name: &amp;#34;IndexNow&amp;#34; on: push: branches: - main schedule: # 每3天�
 文档：https://plausible.io/docs/
 🔢 总内存占用约：548.77 MiB
 📦 总镜像大小约：1.18 GiB
-创建安装目录 mkdir -p /opt/docker_data/plausible/hosting cd /opt/docker_data/plausible/hosting 下载程序 版本：2.0
+创建安装目录 mkdir -p /opt/docker_data/plausible/hosting cd /opt/docker_data/plausible/hosting 下载程序 版本：v2.0
 默认端口：8000
 wget https://github.com/plausible/community-edition/archive/refs/heads/v2.0.0.zip &amp;amp;&amp;amp; unzip v2.0.0.zip &amp;amp;&amp;amp; mv community-edition-2.0.0/* . &amp;amp;&amp;amp; rm -rf community-edition-2.0.0 v2.0.0.zip ==========================================================================
 此时hosting目录下会有两个文件需要配置：
