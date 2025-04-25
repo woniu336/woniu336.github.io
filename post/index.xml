@@ -3377,9 +3377,10 @@ smc.version = &amp;#34;0&amp;#34; 全选代码
 复制
 5.正式开始安装
 启用以太网：
-搜索 ethernet0.virtualDev = &amp;ldquo;e1000e&amp;rdquo; 并将 e1000e替换 为 vmxnet3 并保存文件。</description></item><item><title>docker 一键安装脚本</title><link>https://blog.taoshuge.eu.org/p/1/</link><pubDate>Tue, 25 Jul 2023 07:40:01 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/1/</guid><description>官方脚本 （推荐） curl -fsSL https://get.docker.com | sh curl -L &amp;#34;https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose chmod +x /usr/local/bin/docker-compose 查看 Docker 版本 （含 Docker compose） docker --version&amp;amp;&amp;amp;docker-compose --version 脚本01 Docker 一键安装脚本 bash &amp;lt;(curl -sSL https://linuxmirrors.cn/docker.sh) 其他
+搜索 ethernet0.virtualDev = &amp;ldquo;e1000e&amp;rdquo; 并将 e1000e替换 为 vmxnet3 并保存文件。</description></item><item><title>docker 一键安装脚本</title><link>https://blog.taoshuge.eu.org/p/1/</link><pubDate>Tue, 25 Jul 2023 07:40:01 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/1/</guid><description>官方脚本 （推荐） 脚本1：推荐
+curl -fsSL https://get.docker.com -o get-docker.sh &amp;amp;&amp;amp; sh get-docker.sh 查询
+docker --version docker compose version 脚本2：
+curl -fsSL https://get.docker.com | sh curl -L &amp;#34;https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose chmod +x /usr/local/bin/docker-compose 查看 Docker 版本 （含 Docker compose） docker --version&amp;amp;&amp;amp;docker-compose --version 脚本01 Docker 一键安装脚本 bash &amp;lt;(curl -sSL https://linuxmirrors.cn/docker.sh) 其他
 bash &amp;lt;(curl -sSL https://gitee.com/SuperManito/LinuxMirrors/raw/main/DockerInstallation.sh) 或者
 bash &amp;lt;(curl -sSL https://raw.githubusercontent.com/SuperManito/LinuxMirrors/main/DockerInstallation.sh) 脚本说明： 脚本集成安装 Docker Engine，可选择安装版本、下载软件源、镜像加速器，支持海内外服务器环境和 arm 架构处理器环境使用
-Docker CE 软件仓库，全称 Docker Community Edition (Docker 社区版)，用于下载并安装 Docker 相关软件包
-Docker Registry 镜像仓库，用于控制下载镜像的来源存储仓库，又称镜像加速器，默认为官方提供 Docker Hub 仓库
-脚本02 Docker 一键安装脚本 bash &amp;lt;(curl -sSL https://cdn.</description></item></channel></rss>
+Docker CE 软件仓库，全称 Docker Community Edition (Docker 社区版)，用于下载并安装 Docker 相关软件包</description></item></channel></rss>
