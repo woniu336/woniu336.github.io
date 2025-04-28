@@ -13,7 +13,7 @@ ls ~/iptables-backup-*.bak 恢复备份：
 sudo iptables-restore &amp;lt; ~/iptables-backup-xxx.bak 仅允许特定IP访问容器端口 示例：仅允许192.168.1.11访问5021端口
 sudo iptables -I DOCKER-USER 1 -s 192.168.1.11 -p tcp --dport 5021 -j ACCEPT sudo iptables -I DOCKER-USER 2 -p tcp --dport 5021 -j DROP ⚠️ 注意：5021为容器内部端口。
 允许Cloudflare IP段访问容器端口 若使用Cloudflare CDN，需允许其节点IP访问容器指定端口。
-示例：允许Cloudflare IPv4段访问5021端口
+示例：允许Cloudflare IPv4段访问5021端口,⚠️ 注意：5021为容器内部端口。
 sudo iptables -I DOCKER-USER 1 -s 103.</description></item><item><title>安装网站访客统计工具Plausible最新版本(v3)</title><link>https://blog.taoshuge.eu.org/p/439/</link><pubDate>Thu, 24 Apr 2025 13:38:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/439/</guid><description>测试环境 Debian12 需要安装好docker 解析好统计域名 项目 项目：https://github.com/plausible/community-edition
 文档：https://plausible.io/docs/
 🔢 总内存占用：765.98 MiB
