@@ -4,7 +4,17 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>安装网站访客统计工具Plausible最新版本(v3)</title><link>https://blog.taoshuge.eu.org/p/439/</link><pubDate>Thu, 24 Apr 2025 13:38:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/439/</guid><description>测试环境 Debian12 需要安装好docker 解析好统计域名 项目 项目：https://github.com/plausible/community-edition
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>仅允许特定IP或Cloudflare访问docker端口</title><link>https://blog.taoshuge.eu.org/p/440/</link><pubDate>Mon, 28 Apr 2025 14:16:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/440/</guid><description>需求：
+禁止使用ip+端口访问 无需nginx反代，可使用域名访问 开启cf cdn 方法：
+解析好域名，开启小黄云 规则 &amp;ndash; Origin Rules &amp;ndash; 创建规则 指定端口，⚠️ 注意：这里的端口为外部端口，即宿主机端口。
+备份现有iptables规则 修改前务必备份当前规则，以便回滚。
+sudo iptables-save &amp;gt; ~/iptables-backup-$(date +%F-%H%M%S).bak 查看备份：
+ls ~/iptables-backup-*.bak 恢复备份：
+sudo iptables-restore &amp;lt; ~/iptables-backup-xxx.bak 仅允许特定IP访问容器端口 示例：仅允许192.168.1.11访问5021端口
+sudo iptables -I DOCKER-USER 1 -s 192.168.1.11 -p tcp --dport 5021 -j ACCEPT sudo iptables -I DOCKER-USER 2 -p tcp --dport 5021 -j DROP ⚠️ 注意：5021为容器内部端口。
+允许Cloudflare IP段访问容器端口 若使用Cloudflare CDN，需允许其节点IP访问容器指定端口。
+示例：允许Cloudflare IPv4段访问5021端口
+sudo iptables -I DOCKER-USER 1 -s 103.</description></item><item><title>安装网站访客统计工具Plausible最新版本(v3)</title><link>https://blog.taoshuge.eu.org/p/439/</link><pubDate>Thu, 24 Apr 2025 13:38:38 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/439/</guid><description>测试环境 Debian12 需要安装好docker 解析好统计域名 项目 项目：https://github.com/plausible/community-edition
 文档：https://plausible.io/docs/
 🔢 总内存占用：765.98 MiB
 📦 总镜像大小：996.00 MiB
