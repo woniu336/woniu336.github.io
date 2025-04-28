@@ -57,7 +57,7 @@ sudo ufw reload 这个命令做了以下事情：
 备份文件 /etc/ufw/after.rules 把 UFW 和 Docker 的相关规则添加到文件 after.rules 的末尾 仅允许特定ip访问 可以在修改前先备份一下当前规则：
 sudo iptables-save &amp;gt; ~/iptables-backup-$(date +%F-%H%M%S).bak 这样如果不小心搞坏了，可以快速还原：
 查看 ls ~/iptables-backup-*.bak 还原 sudo iptables-restore &amp;lt; ~/iptables-backup-xxx.bak 例如: 仅允许192.168.1.11访问5021端口
-sudo iptables -I DOCKER-USER 1 -s 192.168.1.11 -p tcp --dport 5021 -j ACCEPT sudo iptables -I DOCKER-USER 2 -p tcp --dport 5021 -j DROP 注意：5021为容器内部端口，如果要反代域名访问，请使用以下方式(允许外部网络访问)</description></item><item><title>ELK 日志收集与分析系统部署指南</title><link>https://blog.taoshuge.eu.org/p/433/</link><pubDate>Tue, 08 Apr 2025 11:10:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/433/</guid><description>什么是 ELK？
+sudo iptables -I DOCKER-USER 1 -s 192.168.1.11 -p tcp --dport 5021 -j ACCEPT sudo iptables -I DOCKER-USER 2 -p tcp --dport 5021 -j DROP 注意：5021为容器内部端口，</description></item><item><title>ELK 日志收集与分析系统部署指南</title><link>https://blog.taoshuge.eu.org/p/433/</link><pubDate>Tue, 08 Apr 2025 11:10:29 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/433/</guid><description>什么是 ELK？
 ELK 是 Elasticsearch、Logstash 和 Kibana 三个开源项目的首字母缩写，它是一个功能强大的日志收集、分析和可视化平台：
 Elasticsearch：分布式搜索和分析引擎，用于存储和快速查询日志数据 Logstash：数据收集和处理引擎，可以从多种来源获取数据，转换数据，然后将其发送到 Elasticsearch Kibana：可视化平台，提供了强大的图表、仪表板和查询功能，用于浏览和分析 Elasticsearch 中的数据 在本指南中，我们使用 Filebeat 代替 Logstash 作为日志收集工具，因此也可以称为 EFK 栈，这种组合更加轻量且适合于单纯的日志收集场景。
 关键说明
