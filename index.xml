@@ -5,7 +5,7 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
 sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>仅允许特定IP或Cloudflare访问docker端口</title><link>https://blog.taoshuge.eu.org/p/440/</link><pubDate>Mon, 28 Apr 2025 14:16:58 +0800</pubDate><guid>https://blog.taoshuge.eu.org/p/440/</guid><description>需求：
-禁止使用ip+端口访问 无需nginx反代，可使用域名访问 开启cf cdn 方法：
+禁止使用ip+端口访问 无需nginx反代 可使用域名访问 方法：
 解析好域名，开启小黄云 规则 &amp;ndash; Origin Rules &amp;ndash; 创建规则 指定端口，⚠️ 注意：这里的端口为外部端口，即宿主机端口。
 备份现有iptables规则 修改前务必备份当前规则，以便回滚。
 sudo iptables-save &amp;gt; ~/iptables-backup-$(date +%F-%H%M%S).bak 查看备份：
