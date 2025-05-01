@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alist on 路飞博客</title><link>https://blog.taoshuge.eu.org/tags/alist/</link><description>Recent content in Alist on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 09 Dec 2023 23:40:57 +0000</lastBuildDate><atom:link href="https://blog.taoshuge.eu.org/tags/alist/index.xml" rel="self" type="application/rss+xml"/><item><title>小雅网盘</title><link>https://blog.taoshuge.eu.org/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/</link><pubDate>Sat, 09 Dec 2023 23:40:57 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/</guid><description>小雅网盘（基于alist） 网址：https://alist.xiaoya.pro/
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alist on 路飞博客</title><link>https://blog.lufei.de/tags/alist/</link><description>Recent content in Alist on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 09 Dec 2023 23:40:57 +0000</lastBuildDate><atom:link href="https://blog.lufei.de/tags/alist/index.xml" rel="self" type="application/rss+xml"/><item><title>小雅网盘</title><link>https://blog.lufei.de/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/</link><pubDate>Sat, 09 Dec 2023 23:40:57 +0000</pubDate><guid>https://blog.lufei.de/p/%E5%B0%8F%E9%9B%85%E7%BD%91%E7%9B%98/</guid><description>小雅网盘（基于alist） 网址：https://alist.xiaoya.pro/
 alist文档：https://alist.nn.ci/zh//
 小雅文档： https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f
 终端安装命令，端口 5678
@@ -11,7 +11,7 @@ bash -c &amp;#34;$(curl http://docker.xiaoya.pro/update_new.sh)&amp;#34; -s host
 模式3：创建一个名为 xiaoyakeeper 的docker定时运行小雅转存清理并升级小雅镜像
 bash -c &amp;#34;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;#34; -s 3 -tg 模式5：与模式3的区别是实时清理，只要产生了播放缓存一分钟内立即清理。签到和定时升级同模式3
 bash -c &amp;#34;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh | tail -n +2)&amp;#34; -s 5 -tg 套娃挂载： 输入命令，获取令牌
-docker exec -i xiaoya sqlite3 data/data.db &amp;lt;&amp;lt;EOF select value from x_setting_items where key = &amp;#34;token&amp;#34;; EOF 挂载 ：alist v3 输入令牌 输入链接 注意docker名称</description></item><item><title>玩客云刷Openwrt</title><link>https://blog.taoshuge.eu.org/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</link><pubDate>Sat, 02 Dec 2023 04:06:43 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</guid><description>玩客云Openwrt固件 玩客云固件：链接: https://pan.baidu.com/s/1q3gVWrsVoRiS2m3VKoqgoQ?pwd=p8ic 提取码: p8ic ip:10.0.0.1密码:root
+docker exec -i xiaoya sqlite3 data/data.db &amp;lt;&amp;lt;EOF select value from x_setting_items where key = &amp;#34;token&amp;#34;; EOF 挂载 ：alist v3 输入令牌 输入链接 注意docker名称</description></item><item><title>玩客云刷Openwrt</title><link>https://blog.lufei.de/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</link><pubDate>Sat, 02 Dec 2023 04:06:43 +0000</pubDate><guid>https://blog.lufei.de/p/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7openwrt/</guid><description>玩客云Openwrt固件 玩客云固件：链接: https://pan.baidu.com/s/1q3gVWrsVoRiS2m3VKoqgoQ?pwd=p8ic 提取码: p8ic ip:10.0.0.1密码:root
 小雅网盘（基于alist） 网址：https://alist.xiaoya.pro/
 文档： https://xiaoyaliu.notion.site/xiaoya-docker-69404af849504fa5bcf9f2dd5ecaa75f
 终端安装命令，端口 5678
@@ -27,7 +27,7 @@ bash -c &amp;#34;$(curl -s https://xiaoyahelper.zengge99.eu.org/aliyun_clear.sh 
 可以通过手动创建/etc/xiaoya/mycheckintoken.txt文件来定义多个网盘签到的32位refresh token，每行一个。若不添加文件，则使用默认小雅转存的网盘签到。
 自动刷新/etc/xiaoya/mycheckintoken.txt和/etc/xiaoya/mytoken.txt文件，这有可能延长refresh token的时效，具体效果需要观察。
 定时运行模式包括：
-默认每天从运行脚本的下一分钟开始执行。 运行时间可以通过手动创建/etc/xiaoya/myruntime.txt文件进行修改，例如06:00和18:00表示每天早晚6点各运行一次。 自动升级的说明：</description></item><item><title>openwrt n1 安装alist</title><link>https://blog.taoshuge.eu.org/p/openwrt-n1-%E5%AE%89%E8%A3%85alist/</link><pubDate>Mon, 11 Sep 2023 06:12:38 +0000</pubDate><guid>https://blog.taoshuge.eu.org/p/openwrt-n1-%E5%AE%89%E8%A3%85alist/</guid><description>项目地址 : https://github.com/sbwml/luci-app-alist
+默认每天从运行脚本的下一分钟开始执行。 运行时间可以通过手动创建/etc/xiaoya/myruntime.txt文件进行修改，例如06:00和18:00表示每天早晚6点各运行一次。 自动升级的说明：</description></item><item><title>openwrt n1 安装alist</title><link>https://blog.lufei.de/p/openwrt-n1-%E5%AE%89%E8%A3%85alist/</link><pubDate>Mon, 11 Sep 2023 06:12:38 +0000</pubDate><guid>https://blog.lufei.de/p/openwrt-n1-%E5%AE%89%E8%A3%85alist/</guid><description>项目地址 : https://github.com/sbwml/luci-app-alist
 OpenWrt 查看CPU架构命令：
 cat /etc/os-release |grep ARCH AList文档：https://alist.nn.ci/zh/
 下载插件: 点击下载
