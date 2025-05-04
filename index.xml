@@ -1115,7 +1115,9 @@ include cfip.conf; deny all; 重启nginx。
 nginx: 1.25.5
 1.屏蔽 Censys 的 IP 段 Censys 的 IP 段在其官网有。我的机子使用的是 Ubuntu 系统，带有 UFW 防火墙，按照下面的命令建立规则即可。
 Censys IP段 ：https://support.censys.io/hc/en-us/articles/360043177092-Opt-Out-of-Data-Collection
-sudo ufw deny from 162.142.125.0/24 sudo ufw deny from 167.94.138.0/24 sudo ufw deny from 167.94.145.0/24 sudo ufw deny from 167.94.146.0/24 sudo ufw deny from 167.</description></item><item><title>OCSP地址查询</title><link>https://blog.lufei.de/p/301/</link><pubDate>Sat, 10 Aug 2024 20:54:29 +0800</pubDate><guid>https://blog.lufei.de/p/301/</guid><description>certbot申请的证书 your-domain替换成你的域名
+sudo ufw deny from 162.142.125.0/24 sudo ufw deny from 167.94.138.0/24 sudo ufw deny from 167.94.145.0/24 sudo ufw deny from 167.94.146.0/24 sudo ufw deny from 167.</description></item><item><title>OCSP地址查询</title><link>https://blog.lufei.de/p/301/</link><pubDate>Sat, 10 Aug 2024 20:54:29 +0800</pubDate><guid>https://blog.lufei.de/p/301/</guid><description>一键查询脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/check-cert.sh &amp;amp;&amp;amp; chmod +x check-cert.sh 运行脚本并提供域名作为参数：
+./check-cert.sh example.com certbot申请的证书 your-domain替换成你的域名
 查询ocsp地址：
 openssl x509 -in /etc/letsencrypt/live/your-domain.com/cert.pem -noout -ocsp_uri ssl_trusted_certificate配置路径：
 ssl_trusted_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem; acme.sh申请的证书 查询ocsp地址：
