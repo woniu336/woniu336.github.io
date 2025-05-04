@@ -4,7 +4,15 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>OCSP装订：优化HTTPS性能</title><link>https://blog.lufei.de/p/445/</link><pubDate>Sun, 04 May 2025 20:54:21 +0800</pubDate><guid>https://blog.lufei.de/p/445/</guid><description>检测OCSP装订是否开启 一键查询脚本
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>ZeroSSL 免费证书申请与自动配置</title><link>https://blog.lufei.de/p/446/</link><pubDate>Sun, 04 May 2025 23:57:32 +0800</pubDate><guid>https://blog.lufei.de/p/446/</guid><description>安装 acme.sh curl https://get.acme.sh | sh -s email=my@example.com 添加 acme.sh 到环境变量
+echo &amp;#39;export PATH=&amp;#34;$HOME/.acme.sh:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc 确认 acme.sh 是否安装成功
+acme.sh --version 获取 EAB凭证 https://app.zerossl.com/developer
+设置 ZeroSSL 的 EAB 信息
+acme.sh --register-account -m my@gmail.com --server https://acme.zerossl.com/v2/DV90 \ --eab-kid &amp;#34;11111&amp;#34; \ --eab-hmac-key &amp;#34;111111&amp;#34; 切换默认CA，默认CA为ZeroSSL
+acme.sh --set-default-ca --server zerossl 签发新证书 签发的是泛域名证书
+获取需要DNS添加的 TXT 记录
+acme.sh --issue --dns dns_manual -d 123.com -d *.123.com 申请证书
+acme.sh --issue --dns dns_manual -d 123.com -d *.123.com 续签</description></item><item><title>OCSP装订：优化HTTPS性能</title><link>https://blog.lufei.de/p/445/</link><pubDate>Sun, 04 May 2025 20:54:21 +0800</pubDate><guid>https://blog.lufei.de/p/445/</guid><description>检测OCSP装订是否开启 一键查询脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/check-cert.sh &amp;amp;&amp;amp; chmod +x check-cert.sh 运行脚本并提供域名作为参数：
 ./check-cert.sh example.com 输出，例如
 OCSP Stapling: Enabled OCSP URI: http://e5.o.lencr.org Enabled 已启用，Not Enabled 未开启
