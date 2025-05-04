@@ -9,8 +9,8 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/check-cer
 ./check-cert.sh example.com 输出，例如
 OCSP Stapling: Enabled OCSP URI: http://e5.o.lencr.org Enabled 已启用，Not Enabled 未开启
 或者可以使用以下命令检测, 将命令中 www.yourdomain.com 改为你的域名
-openssl s_client -connect www.yourdomain.com:443 -servername www.yourdomain.com -status -tlsextdebug &amp;lt; /dev/null 2&amp;gt;&amp;amp;1 | grep -i &amp;#34;OCSP response&amp;#34; 开启 OCSP 装订 开启OCSP装订需要在网站的nginx配置文件中添加如下配置,例如
-# 123.com 的 HTTPS 配置 server { listen 443 ssl; http2 on; server_name 123.com; ssl_certificate /etc/nginx/certs/123.com_cert.pem; ssl_certificate_key /etc/nginx/certs/123.com_key.pem; # === OCSP 装订 配置开始 === ssl_stapling on; ssl_stapling_verify on; ssl_trusted_certificate /etc/letsencrypt/live/123.</description></item><item><title>使用Docker快速部署CDN管理平台-goedge</title><link>https://blog.lufei.de/p/443/</link><pubDate>Wed, 30 Apr 2025 20:17:39 +0800</pubDate><guid>https://blog.lufei.de/p/443/</guid><description>项目：https://github.com/icodex/docker-goedge
+openssl s_client -connect www.yourdomain.com:443 -servername www.yourdomain.com -status -tlsextdebug &amp;lt; /dev/null 2&amp;gt;&amp;amp;1 | grep -i &amp;#34;OCSP response&amp;#34; 成功输出：OCSP Response Status: successful (0x0) 失败提示：OCSP response: no response sent 开启 OCSP 装订 开启OCSP装订需要在网站的nginx配置文件中添加如下配置,例如
+# 123.com 的 HTTPS 配置 server { listen 443 ssl; http2 on; server_name 123.</description></item><item><title>使用Docker快速部署CDN管理平台-goedge</title><link>https://blog.lufei.de/p/443/</link><pubDate>Wed, 30 Apr 2025 20:17:39 +0800</pubDate><guid>https://blog.lufei.de/p/443/</guid><description>项目：https://github.com/icodex/docker-goedge
 测试系统: debian12
 注意放行必要端口: 7788、8002
 安装docker curl -fsSL https://get.docker.com -o get-docker.sh &amp;amp;&amp;amp; sh get-docker.sh 部署主程序 创建目录 mkdir -p /opt/goedge cd /opt/goedge 创建docker-compose.yaml 注意：这里的API通信端口我改成了8002（默认是8001，因为我的8001被占用了），你可以改成默认的8001
