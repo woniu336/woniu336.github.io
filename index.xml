@@ -4,7 +4,12 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>使用Docker快速部署CDN管理平台-goedge</title><link>https://blog.lufei.de/p/443/</link><pubDate>Wed, 30 Apr 2025 20:17:39 +0800</pubDate><guid>https://blog.lufei.de/p/443/</guid><description>项目：https://github.com/icodex/docker-goedge
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>OCSP装订：优化HTTPS性能</title><link>https://blog.lufei.de/p/445/</link><pubDate>Sun, 04 May 2025 20:54:21 +0800</pubDate><guid>https://blog.lufei.de/p/445/</guid><description>检测OCSP装订是否开启 一键查询脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/check-cert.sh &amp;amp;&amp;amp; chmod +x check-cert.sh 运行脚本并提供域名作为参数：
+./check-cert.sh example.com 输出，例如
+OCSP Stapling: Enabled OCSP URI: http://e5.o.lencr.org Enabled 已启用，Not Enabled 未开启
+开启 OCSP 装订 开启OCSP装订需要在网站的nginx配置文件中添加如下配置,例如
+# 123.com 的 HTTPS 配置 server { listen 443 ssl; http2 on; server_name 123.com; ssl_certificate /etc/nginx/certs/123.com_cert.pem; ssl_certificate_key /etc/nginx/certs/123.com_key.pem; # === OCSP 装订 配置开始 === ssl_stapling on; ssl_stapling_verify on; ssl_trusted_certificate /etc/letsencrypt/live/123.com/chain.pem; resolver 8.8.8.8 1.0.0.1 valid=60s ipv6=off; resolver_timeout 2s; # === OCSP 装订 配置结束 === .</description></item><item><title>使用Docker快速部署CDN管理平台-goedge</title><link>https://blog.lufei.de/p/443/</link><pubDate>Wed, 30 Apr 2025 20:17:39 +0800</pubDate><guid>https://blog.lufei.de/p/443/</guid><description>项目：https://github.com/icodex/docker-goedge
 测试系统: debian12
 注意放行必要端口: 7788、8002
 安装docker curl -fsSL https://get.docker.com -o get-docker.sh &amp;amp;&amp;amp; sh get-docker.sh 部署主程序 创建目录 mkdir -p /opt/goedge cd /opt/goedge 创建docker-compose.yaml 注意：这里的API通信端口我改成了8002（默认是8001，因为我的8001被占用了），你可以改成默认的8001
