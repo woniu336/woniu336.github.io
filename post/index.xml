@@ -426,9 +426,10 @@ iperf3 -c 服务端ip -p 5201 -t 30 -P 10 -R 然后在本机发起测速。其�
 仅IPv6地址栈: 加入--edge-ip-version 6参数, 以IPv6地址栈为主以连接Cloudflare边缘 加入IPv6地址栈支持: 加入--edge-ip-version auto参数, 同时支持IPv4和IPv6地址栈，交由Cloudflared Tunnel自动选择 实施 进入/etc/systemd/system/cloudflared.service文件, 对ExecStart命令进行如下修改:
 ExecStart=/usr/bin/cloudflared --no-autoupdate tunnel --protocol http2 --edge-ip-version auto run --token aaXX123 其中--protocol http2表示开启HTTP/2支持, --edge-ip-version auto表示加入IPv6地址栈支持。
 重启Cloudflared Tunnel服务:
-systemctl daemon-reload systemctl restart cloudflared</description></item><item><title>Pingvin Share - 文件中转站</title><link>https://blog.lufei.de/p/393/</link><pubDate>Sun, 05 Jan 2025 14:07:05 +0800</pubDate><guid>https://blog.lufei.de/p/393/</guid><description> mkdir -p /root/data/docker_data/pingvin-share cd /root/data/docker_data/pingvin-share 编辑docker-compose.yml
+systemctl daemon-reload systemctl restart cloudflared</description></item><item><title>Pingvin Share - 文件中转站</title><link>https://blog.lufei.de/p/393/</link><pubDate>Sun, 05 Jan 2025 14:07:05 +0800</pubDate><guid>https://blog.lufei.de/p/393/</guid><description>项目 https://github.com/stonith404/pingvin-share
+mkdir -p /root/data/docker_data/pingvin-share cd /root/data/docker_data/pingvin-share 编辑docker-compose.yml
 nano docker-compose.yml 粘贴代码
-version: &amp;#39;3.8&amp;#39; services: pingvin-share: image: stonith404/pingvin-share restart: unless-stopped ports: - 8080:3000 # 8080可以改成服务器上未被使用的端口 volumes: - &amp;#34;${PWD}/data:/opt/app/backend/data&amp;#34; # ${PWD}/data表示在当前目录下创建data文件夹用于存放文件 最后
+version: &amp;#39;3.8&amp;#39; services: pingvin-share: image: stonith404/pingvin-share restart: unless-stopped ports: - 3000:3000 # 可以改成服务器上未被使用的端口 volumes: - &amp;#34;${PWD}/data:/opt/app/backend/data&amp;#34; # ${PWD}/data表示在当前目录下创建data文件夹用于存放文件 最后
 docker-compose up -d 或者
 docker compose up -d 更新
 cd /root/data/docker_data/pingvin-share docker-compose down docker-compose pull docker-compose up -d docker image prune # prune 命令用来删除不再使用的 docker 对象。删除所有未被 tag 标记和未被容器使用的镜像 卸载
