@@ -429,7 +429,8 @@ ExecStart=/usr/bin/cloudflared --no-autoupdate tunnel --protocol http2 --edge-ip
 systemctl daemon-reload systemctl restart cloudflared</description></item><item><title>Pingvin Share - 文件中转站</title><link>https://blog.lufei.de/p/393/</link><pubDate>Sun, 05 Jan 2025 14:07:05 +0800</pubDate><guid>https://blog.lufei.de/p/393/</guid><description> mkdir -p /root/data/docker_data/pingvin-share cd /root/data/docker_data/pingvin-share 编辑docker-compose.yml
 nano docker-compose.yml 粘贴代码
 version: &amp;#39;3.8&amp;#39; services: pingvin-share: image: stonith404/pingvin-share restart: unless-stopped ports: - 8080:3000 # 8080可以改成服务器上未被使用的端口 volumes: - &amp;#34;${PWD}/data:/opt/app/backend/data&amp;#34; # ${PWD}/data表示在当前目录下创建data文件夹用于存放文件 最后
-docker-compose up -d 更新
+docker-compose up -d 或者
+docker compose up -d 更新
 cd /root/data/docker_data/pingvin-share docker-compose down docker-compose pull docker-compose up -d docker image prune # prune 命令用来删除不再使用的 docker 对象。删除所有未被 tag 标记和未被容器使用的镜像 卸载
 cd /root/data/docker_data/pingvin-share docker-compose down rm -rf /root/data/docker_data/pingvin-share # 完全删除映射到本地的数据</description></item><item><title>TCP 网络优化配置指南</title><link>https://blog.lufei.de/p/392/</link><pubDate>Sun, 05 Jan 2025 02:01:01 +0800</pubDate><guid>https://blog.lufei.de/p/392/</guid><description>一、前期准备 准备工作
 查看当前的 net.ipv4.tcp_wmem 参数值（最好记录一下）
