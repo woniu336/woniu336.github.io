@@ -7,12 +7,8 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &
 sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>使用白名单限制IP访问指定端口服务</title><link>https://blog.lufei.de/p/447/</link><pubDate>Sat, 10 May 2025 10:48:21 +0800</pubDate><guid>https://blog.lufei.de/p/447/</guid><description>需求 有时，我需要通过 IP + 端口的方式来访问服务，而不是所有服务都需要通过域名反向代理。 但我需要确保禁止其他 IP 访问我的端口。 这时，白名单方法就显得尤为重要。 脚本（非 Docker 服务） 如果你不使用 Docker，可以通过以下脚本进行操作：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ipwl.sh &amp;amp;&amp;amp; chmod +x ipwl.sh &amp;amp;&amp;amp; ./ipwl.sh 如果遇到错误提示，可以执行以下命令解决：
 sudo mkdir -p /etc/mysql sudo touch /etc/mysql/mariadb.cnf sudo dpkg --configure -a 查看
-sudo iptables -L INPUT --line-numbers amh面板设置方法，例如29669端口
-查看
-sudo iptables -S INPUT 解决方案：
-删除或修改冲突的规则，移除对 29669 端口的通用许可：
-sudo iptables -D INPUT -p tcp -m multiport --dports 80,29669,29670 -j ACCEPT 添加新规则只允许 80 和 29670 端口：
-sudo iptables -A INPUT -p tcp -m multiport --dports 80,29670 -j ACCEPT 确保您的白名单规则位置合适（可以考虑将它们移到前面）：</description></item><item><title>ZeroSSL 免费证书申请与自动配置</title><link>https://blog.lufei.de/p/446/</link><pubDate>Sun, 04 May 2025 23:57:32 +0800</pubDate><guid>https://blog.lufei.de/p/446/</guid><description>安装 acme.sh curl https://get.acme.sh | sh -s email=my@example.com 添加 acme.sh 到环境变量
+sudo iptables -S INPUT amh面板设置方法，例如29669端口
+首先创建一个新的 ipset 用于 29669 端口的白名单： sudo ipset create whitelist_port_29669 hash:ip 向白名单中添加您想要允许的 IP 地址，例如： sudo ipset add whitelist_port_29669 8.8.8.8 # 替换为您想要允许的 IP 地址 查看规则 sudo iptables -L INPUT --line-numbers 移除对 29669 端口的通用许可，假设在32编号 sudo iptables -D INPUT 32 然后添加新规则，允许 HTTP 端口和 29670端口的访问（与原始规则相同，但不包括 29669 ）： sudo iptables -I INPUT 32 -p tcp -m multiport --dports 80,29670 -j ACCEPT 最后，添加针对 29669 端口的白名单规则： sudo iptables -I INPUT 33 -p tcp -m tcp --dport 29669 -m set --match-set whitelist_port_29669 src -j ACCEPT sudo iptables -I INPUT 34 -p tcp -m tcp --dport 29669 -j DROP 保存规则，确保重启后规则仍然生效： sudo iptables-save &amp;gt; /etc/iptables/rules.</description></item><item><title>ZeroSSL 免费证书申请与自动配置</title><link>https://blog.lufei.de/p/446/</link><pubDate>Sun, 04 May 2025 23:57:32 +0800</pubDate><guid>https://blog.lufei.de/p/446/</guid><description>安装 acme.sh curl https://get.acme.sh | sh -s email=my@example.com 添加 acme.sh 到环境变量
 echo &amp;#39;export PATH=&amp;#34;$HOME/.acme.sh:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc 确认 acme.sh 是否安装成功
 acme.sh --version 获取 EAB凭证 https://app.zerossl.com/developer
 设置 ZeroSSL 的 EAB 信息
