@@ -199,7 +199,8 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/bt-cf/hap
 sudo haproxy -c -f /etc/haproxy/haproxy.cfg 可以根据服务器核心数设置nbthread 1参数，例如4核心，则是nbthread 4
 检查 HAProxy 服务状态：
 systemctl status haproxy 重启
-systemctl restart haproxy ssh连接优化
+systemctl restart haproxy TCP蜜汁调优
+sudo sed -i &amp;#39;/tcp_init_cwnd/d&amp;#39; /etc/sysctl.conf sudo sysctl -p ssh连接优化
 # 配置 PAM if grep -q &amp;#34;^UsePAM&amp;#34; /etc/ssh/sshd_config; then sed -i &amp;#39;s/^UsePAM.*/UsePAM yes/&amp;#39; /etc/ssh/sshd_config else echo &amp;#34;UsePAM yes&amp;#34; &amp;gt;&amp;gt; /etc/ssh/sshd_config fi # 禁用 X11 转发 if grep -q &amp;#34;^X11Forwarding&amp;#34; /etc/ssh/sshd_config; then sed -i &amp;#39;s/^X11Forwarding.</description></item><item><title>一个基于 Cloudflare API 的 DNS: 宕机自动切换ip脚本</title><link>https://blog.lufei.de/p/417/</link><pubDate>Fri, 14 Feb 2025 15:15:23 +0800</pubDate><guid>https://blog.lufei.de/p/417/</guid><description>一个基于 Cloudflare API 的智能 DNS 故障转移解决方案，当主服务器宕机时自动切换到备用 IP。
 curl -sS -O https://raw.githubusercontent.com/woniu336/dns-update/main/dns_menu.sh &amp;amp;&amp;amp; chmod +x dns_menu.sh &amp;amp;&amp;amp; ./dns_menu.sh Github: https://github.com/woniu336/dns-update
 预览：
