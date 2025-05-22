@@ -61,11 +61,12 @@ sudo iptables -I DOCKER-USER 1 -s 103.</description></item><item><title>安装�
 🔢 总内存占用：765.98 MiB
 📦 总镜像大小：996.00 MiB
 一键查询内存占用和镜像大小
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/plausible_stats_v3.sh &amp;amp;&amp;amp; chmod +x plausible_stats_v3.sh &amp;amp;&amp;amp; ./plausible_stats_v3.sh 一：克隆并进入项目目录 git clone -b v3.0.1 --single-branch https://github.com/plausible/community-edition plausible-ce cd plausible-ce 二：配置 .env 文件 创建 .env 文件并写入以下内容
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/plausible_stats_v3.sh &amp;amp;&amp;amp; chmod +x plausible_stats_v3.sh &amp;amp;&amp;amp; ./plausible_stats_v3.sh 安装 git clone -b v3.0.1 --single-branch https://github.com/plausible/community-edition plausible-ce cd plausible-ce 配置 .env 文件 创建 .env 文件并写入以下内容
 提醒：把plausible.example.com改成你的统计域名
 touch .env echo &amp;#34;BASE_URL=https://plausible.example.com&amp;#34; &amp;gt;&amp;gt; .env echo &amp;#34;SECRET_KEY_BASE=$(openssl rand -base64 48)&amp;#34; &amp;gt;&amp;gt; .env echo &amp;#34;HTTP_PORT=8000&amp;#34; &amp;gt;&amp;gt; .env 查看确认内容：
 cat .env 输出类似如下：
-BASE_URL=https://plausible.example.com SECRET_KEY_BASE=随机生成的密钥 HTTP_PORT=8000 流量高峰通知【可选】 cd plausible-ce nano .env 添加如下内容,以QQ邮箱为例</description></item><item><title>Debian 12 安装配置 Fail2Ban 完整指南</title><link>https://blog.lufei.de/p/438/</link><pubDate>Mon, 21 Apr 2025 00:18:11 +0800</pubDate><guid>https://blog.lufei.de/p/438/</guid><description>推荐使用密钥登录 SSH，因其更加安全。如果必须使用密码登录，请务必设置复杂密码，并更改默认的 SSH 端口以减少暴力破解的风险。此外，建议启用 Fail2Ban 来防范暴力破解攻击
+BASE_URL=https://plausible.example.com SECRET_KEY_BASE=随机生成的密钥 HTTP_PORT=8000 流量高峰通知【可选】
+cd plausible-ce nano .env 添加如下内容,以QQ邮箱为例</description></item><item><title>Debian 12 安装配置 Fail2Ban 完整指南</title><link>https://blog.lufei.de/p/438/</link><pubDate>Mon, 21 Apr 2025 00:18:11 +0800</pubDate><guid>https://blog.lufei.de/p/438/</guid><description>推荐使用密钥登录 SSH，因其更加安全。如果必须使用密码登录，请务必设置复杂密码，并更改默认的 SSH 端口以减少暴力破解的风险。此外，建议启用 Fail2Ban 来防范暴力破解攻击
 更改ssh端口 sudo nano /etc/ssh/sshd_config 找到 #Port 22，更改为其他端口（例如123）：
 Port 123 UFW防火墙开放对应端口
 sudo ufw allow 123/tcp 重启SSH服务
