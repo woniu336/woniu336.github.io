@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on 路飞博客</title><link>https://blog.lufei.de/tags/github/</link><description>Recent content in Github on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 22 May 2025 10:16:33 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>推荐两个开源Github项目</title><link>https://blog.lufei.de/p/450/</link><pubDate>Thu, 22 May 2025 10:16:33 +0800</pubDate><guid>https://blog.lufei.de/p/450/</guid><description>ctop https://github.com/bcicen/ctop
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on 路飞博客</title><link>https://blog.lufei.de/tags/github/</link><description>Recent content in Github on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 22 May 2025 10:16:33 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>推荐3个开源Github项目</title><link>https://blog.lufei.de/p/450/</link><pubDate>Thu, 22 May 2025 10:16:33 +0800</pubDate><guid>https://blog.lufei.de/p/450/</guid><description>openresty-manager https://github.com/Safe3/openresty-manager
+从“手撕配置”到“可视化面板”，从“手动续期”到“一键 Let’s Encrypt”，OpenResty Manager用极简姿态承载了反向代理的全部实力
+一键安装：自动安装可以在几分钟内完成。
+sudo bash -c &amp;#34;$(curl -fsSL https://om.uusec.com/docker_installer_cn.sh)&amp;#34; 随后可以通过下方命令管理OpenResty Manager容器，包括启动、停止、更新、卸载等。
+bash /opt/om/om.sh ctop https://github.com/bcicen/ctop
 ctop 就是一个专门为容器设计的、命令行版的“任务管理器”。它的界面风格是不是让你想起了经典的 top 命令？没错，它就是借鉴了 top 的设计思路，让你能在一个界面里，实时看到各个容器的 CPU、内存、网络 I/O 等关键指标。
 安装
 sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.7/ctop-0.7.7-linux-amd64 -O /usr/local/bin/ctop sudo chmod +x /usr/local/bin/ctop 启动：
-ctop 快捷键绑定 键位 操作说明 &amp;lt;ENTER&amp;gt; 打开容器菜单 a 切换显示所有容器（包括运行中和未运行） f 过滤显示的容器（打开时按 esc 清除） H 切换显示 ctop 头部信息 h 打开帮助对话框 s 选择容器排序字段 r 反转容器排序顺序 o 打开单一视图 l 查看容器日志（打开时按 t 切换时间戳） e 执行 Shell 命令 c 配置显示列 S 将当前配置保存到文件 q 退出 ctop GitHub 中文化插件 https://github.com/maboloshi/github-chinese
-目前项目主要有两个版本：
-开发版：更新贼快，每周一凌晨自动更新词库，适合喜欢尝鲜的小伙伴，能第一时间体验新功能和新翻译。
-发布版：稳定为主，每周五同步开发版的词库，适合追求稳定的用户，不用担心频繁更新出bug。 项目仓库里有各种文件，像 locals.js 存的是翻译词条，main.user.js 是核心脚本，还有专门处理繁體中文的 zh-TW 版本，考虑得很周到。</description></item><item><title>GitHub图床加速</title><link>https://blog.lufei.de/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</link><pubDate>Thu, 07 Dec 2023 13:07:15 +0000</pubDate><guid>https://blog.lufei.de/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</guid><description>Github图床使用 网络上关于GitHub+Jsdelivr实现图床加速的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。
+ctop 快捷键使用 键位 操作说明 &amp;lt;ENTER&amp;gt; 打开容器菜单 a 切换显示所有容器（包括运行中和未运行） f 过滤显示的容器（打开时按 esc 清除） H 切换显示 ctop 头部信息 h 打开帮助对话框 s 选择容器排序字段 r 反转容器排序顺序 o 打开单一视图 l 查看容器日志（打开时按 t 切换时间戳） e 执行 Shell 命令 c 配置显示列 S 将当前配置保存到文件 q 退出 ctop GitHub 中文化插件 https://github.</description></item><item><title>GitHub图床加速</title><link>https://blog.lufei.de/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</link><pubDate>Thu, 07 Dec 2023 13:07:15 +0000</pubDate><guid>https://blog.lufei.de/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</guid><description>Github图床使用 网络上关于GitHub+Jsdelivr实现图床加速的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。
 方法1：Jsdelivr镜像站 https://jsd.cdn.zzko.cn （公益）
 方法2：通过Cloudflare Workers实现反代
 即使镜像站点跑路了，Cloudflare还在，速度慢点
