@@ -4,8 +4,7 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>haproxy反向代理教程</title><link>https://blog.lufei.de/p/452/</link><pubDate>Thu, 29 May 2025 12:20:03 +0800</pubDate><guid>https://blog.lufei.de/p/452/</guid><description>为什么要反代源站，也就是说为什么要在源站前面添加一个反代服务， 我自身的理由有两个：
-避免dmca投诉被服务器商家封机子，要封也只会封掉你的反代服务器，源站不受影响 更安全，避免暴露源站 当然反代服务器我可以使用抗dmca的商家 为什么是使用haproxy作为反代，而不是nginx，或者iptables，就不细说了，因为haproxy更高效简洁，性能更优秀！这是我几个月来的使用和验证。
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>haproxy反向代理教程</title><link>https://blog.lufei.de/p/452/</link><pubDate>Thu, 29 May 2025 12:20:03 +0800</pubDate><guid>https://blog.lufei.de/p/452/</guid><description>为什么是使用haproxy作为反代，而不是nginx，或者iptables，就不细说了，因为haproxy更高效简洁，性能更优秀！这是我几个月来的使用和验证。
 注意：下面的配置是针对80端口（源站，可以开启cf cdn），但是没有针对https（443），如果有需要可以问ai怎么修改配置文件。
 安装haproxy apt install haproxy -y systemctl start haproxy systemctl enable haproxy 编辑haproxy
 nano /etc/haproxy/haproxy.cfg 内容如下
