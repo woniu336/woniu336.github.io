@@ -4,7 +4,14 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>haproxy反向代理教程</title><link>https://blog.lufei.de/p/452/</link><pubDate>Thu, 29 May 2025 12:20:03 +0800</pubDate><guid>https://blog.lufei.de/p/452/</guid><description>为什么是使用haproxy作为反代，而不是nginx，或者iptables，就不细说了，因为haproxy更高效简洁，性能更优秀！这是我几个月来的使用和验证。
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>ovh杜甫修改dns</title><link>https://blog.lufei.de/p/453/</link><pubDate>Fri, 30 May 2025 20:40:31 +0800</pubDate><guid>https://blog.lufei.de/p/453/</guid><description>注意： 这里的dns是服务器端的，与用户访问你的网站完全无关
+用户的 DNS：用户浏览器使用他们本地配置的 DNS
+可能是 ISP 提供的、或者他们手动设置的（如 8.8.8.8）用于解析你的域名到你服务器的 IP 地址
+所以你的 DNS 优化主要是为了提升服务器自身的网络性能，而不是用户访问体验
+编辑 /etc/systemd/resolved.conf
+nano /etc/systemd/resolved.conf 内容
+[Resolve] DNS=9.9.9.9 149.112.112.112 FallbackDNS=1.1.1.1 8.8.8.8 测试不同 DNS 的性能
+# 测试主要 DNS 服务器 dig @1.1.1.1 google.com | grep &amp;#34;Query time&amp;#34; dig @8.8.8.8 google.com | grep &amp;#34;Query time&amp;#34; dig @9.9.9.9 google.com | grep &amp;#34;Query time&amp;#34; # 或者使用循环测试 for dns in 1.1.1.1 8.8.8.8 9.9.9.9; do echo &amp;#34;Testing $dns:&amp;#34; dig @$dns google.com | grep &amp;#34;Query time&amp;#34; done 基于测试结果，哪个DNS 在你的网络环境下表现更好，建议优先使用它。</description></item><item><title>haproxy反向代理教程</title><link>https://blog.lufei.de/p/452/</link><pubDate>Thu, 29 May 2025 12:20:03 +0800</pubDate><guid>https://blog.lufei.de/p/452/</guid><description>为什么是使用haproxy作为反代，而不是nginx，或者iptables，就不细说了，因为haproxy更高效简洁，性能更优秀！这是我几个月来的使用和验证。
 注意：下面的配置是针对80端口（源站，可以开启cf cdn），但是没有针对https（443），如果有需要可以问ai怎么修改配置文件。
 安装haproxy apt install haproxy -y systemctl start haproxy systemctl enable haproxy 编辑haproxy
 nano /etc/haproxy/haproxy.cfg 内容如下
