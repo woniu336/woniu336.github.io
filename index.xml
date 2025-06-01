@@ -1161,7 +1161,8 @@ iptables -I INPUT -s 140.205.201.0/28 -j DROP iptables -I INPUT -s 140.205.201.1
 将图像转换为质量为 60 的 AVIF 格式，设置压缩级别为 6，编码努力程度为 7
 convert &amp;#34;$input&amp;#34; -quality 60 -define avif:compression-level=6 -define avif:effort=7 &amp;#34;$output&amp;#34; 编码2（推荐）
 convert &amp;#34;$input&amp;#34; -quality 70 -define avif:compression-level=3 -define avif:effort=4 &amp;#34;$output&amp;#34; 例如
-ShareX 截图任务 按下图顺序设置截图后的任务顺序 上传到cloudflare r2 教程地址：
+ShareX 截图任务 按下图顺序设置截图后的任务顺序 保存图像文件 &amp;ndash; 执行操作 &amp;ndash; 上传图片
+上传到cloudflare r2 教程地址：
 https://getsharex.com/docs/cloudflare-r2</description></item><item><title>将hugo博客搬迁到服务器</title><link>https://blog.lufei.de/p/306/</link><pubDate>Sun, 18 Aug 2024 02:15:46 +0800</pubDate><guid>https://blog.lufei.de/p/306/</guid><description>本文介绍了将Hugo博客迁移到Ubuntu 22.04服务器的详细步骤。首先，创建并配置具有root权限的git用户，初始化Git仓库并设置钩子。接着，生成SSH密钥，配置服务器以接受公钥并测试SSH连接。然后，本地初始化仓库，添加远程仓库并推送代码。提供了一键推送脚本以简化更新过程。最后，通过宝塔面板使用nginx部署静态站点，并使用计划任务同步更新。</description></item><item><title>剪贴板神器Ditto</title><link>https://blog.lufei.de/p/305/</link><pubDate>Sat, 17 Aug 2024 00:15:44 +0800</pubDate><guid>https://blog.lufei.de/p/305/</guid><description>官网：https://ditto-cp.sourceforge.io/</description></item><item><title>markdown工具推荐</title><link>https://blog.lufei.de/p/304/</link><pubDate>Fri, 16 Aug 2024 15:11:20 +0800</pubDate><guid>https://blog.lufei.de/p/304/</guid><description>markdownmonster 官网：https://markdownmonster.west-wind.com/download</description></item><item><title>Nginx配置仅允许cloudflare回源IP访问</title><link>https://blog.lufei.de/p/303/</link><pubDate>Fri, 16 Aug 2024 01:07:36 +0800</pubDate><guid>https://blog.lufei.de/p/303/</guid><description>☺☠〠
 让Nginx只接受cloudflare（以下简称cf）的回源请求，不允许其他客户端直接访问源服务器。
 首先获取最新的cf回源IP，并转换成nginx的配置文件格式。

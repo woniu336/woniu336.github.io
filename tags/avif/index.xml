@@ -6,5 +6,6 @@
 将图像转换为质量为 60 的 AVIF 格式，设置压缩级别为 6，编码努力程度为 7
 convert &amp;#34;$input&amp;#34; -quality 60 -define avif:compression-level=6 -define avif:effort=7 &amp;#34;$output&amp;#34; 编码2（推荐）
 convert &amp;#34;$input&amp;#34; -quality 70 -define avif:compression-level=3 -define avif:effort=4 &amp;#34;$output&amp;#34; 例如
-ShareX 截图任务 按下图顺序设置截图后的任务顺序 上传到cloudflare r2 教程地址：
+ShareX 截图任务 按下图顺序设置截图后的任务顺序 保存图像文件 &amp;ndash; 执行操作 &amp;ndash; 上传图片
+上传到cloudflare r2 教程地址：
 https://getsharex.com/docs/cloudflare-r2</description></item></channel></rss>
