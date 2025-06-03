@@ -4,17 +4,13 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 反向代理
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh 重启nginx
-sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>小鸡变中转站！轻松部署 haproxy 实现稳定高速访问</title><link>https://blog.lufei.de/p/455/</link><pubDate>Tue, 03 Jun 2025 12:27:32 +0800</pubDate><guid>https://blog.lufei.de/p/455/</guid><description>前提 假设你的网站搭建在欧洲（例如德国，荷兰）服务器上，你不想使用 cloudflare cdn（高峰减速）
-你的域名托管在 cloudflare ，准备好具有dns权限的 cloudflare 令牌
-开始 找一台线路不错的小鸡(看作节点)，例如cn2、cmin2、9929等，开始以下操作
-以下步骤均在节点服务器操作
-系统：debian12测试通过
-一键脚本
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/haproxy-d.sh &amp;amp;&amp;amp; chmod +x haproxy-d.sh &amp;amp;&amp;amp; ./haproxy-d.sh 步骤 脚本预览
-================================ HAProxy 配置管理工具 ================================ 1. 申请SSL证书 2. 安装HAProxy 3. 配置站点 4. 测试SSL证书 5. 查看HAProxy状态 6. 重启HAProxy服务 0. 退出 首要就是配置证书，源站不需要配置（仅开启80端口即可）， 然后安装haproxy 配置站点 &amp;hellip;
-最后域名解析到小鸡ip即可
-提示：测试ssl证书的部分，如果你的域名包含根域和www,会提示找不到www的证书，这只是bug，是没有问题的，忽略即可
-脚本代码 #!/bin/bash # HAProxy配置管理脚本 # 作者: 自动化配置工具 # 版本: 1.0 # 颜色定义 RED=&amp;#39;\033[0;31m&amp;#39; GREEN=&amp;#39;\033[0;32m&amp;#39; YELLOW=&amp;#39;\033[1;33m&amp;#39; BLUE=&amp;#39;\033[0;34m&amp;#39; NC=&amp;#39;\033[0m&amp;#39; # No Color # 配置文件路径 HAPROXY_CONFIG=&amp;#34;/etc/haproxy/haproxy.</description></item><item><title>haproxy之爬虫拦截规则</title><link>https://blog.lufei.de/p/454/</link><pubDate>Sun, 01 Jun 2025 05:48:55 +0800</pubDate><guid>https://blog.lufei.de/p/454/</guid><description>注意：后端服务器监听80端口（HTTP），但前端是HTTPS HAProxy将终止SSL，并以HTTP协议与后端通信 新建爬虫文件 nano /etc/haproxy/blacklist-agent.txt 内容
+sudo rm -rf /usr/local/nginx/cache/proxy/* sudo systemctl restart nginx &amp;amp;&amp;amp; nginx -t 停止nginx</description></item><item><title>小鸡变中转站！轻松部署 haproxy 实现稳定高速访问</title><link>https://blog.lufei.de/p/455/</link><pubDate>Tue, 03 Jun 2025 12:27:32 +0800</pubDate><guid>https://blog.lufei.de/p/455/</guid><description>一键脚本 安装与配置 HAProxy：
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/haproxy-d.sh &amp;amp;&amp;amp; chmod +x haproxy-d.sh &amp;amp;&amp;amp; ./haproxy-d.sh 迁移配置备份与恢复：
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/restore_haproxy.sh &amp;amp;&amp;amp; chmod +x restore_haproxy.sh &amp;amp;&amp;amp; ./restore_haproxy.sh 验证
+haproxy -c -f /etc/haproxy/haproxy.cfg 显示Configuration file is valid 即正确
+重启服务
+systemctl restart haproxy 检查状态
+systemctl status haproxy 前言 网站托管在欧洲（如德国、荷兰）服务器上，不使用 Cloudflare CDN 域名托管在 Cloudflare，准备好具有 DNS 权限的 API 令牌 使用说明 系统推荐：Debian 12（测试通过） 节点推荐：线路好（如 CN2、CMIN2、9929） 脚本功能菜单 ================================ HAProxy 配置管理工具 ================================ 1. 申请SSL证书 2. 安装HAProxy 3. 配置站点 4. 测试SSL证书 5.</description></item><item><title>haproxy之爬虫拦截规则</title><link>https://blog.lufei.de/p/454/</link><pubDate>Sun, 01 Jun 2025 05:48:55 +0800</pubDate><guid>https://blog.lufei.de/p/454/</guid><description>注意：后端服务器监听80端口（HTTP），但前端是HTTPS HAProxy将终止SSL，并以HTTP协议与后端通信 新建爬虫文件 nano /etc/haproxy/blacklist-agent.txt 内容
 YandexBot DotBot SemrushBot AhrefsBot BLEXBot YaK MJ12bot MauiBot MegaIndex.ru GPTBot meta-externalagent/1.1 Qwantbot ClaudeBot Amazonbot SearchBot DataForSeoBot Barkrowler GoogleOther Googlebot 更多爬虫
 https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/bad-user-agents.list
 配置文件 配置参考: https://github.com/woniu336/open_shell/blob/main/u-haproxy.cfg
