@@ -10,7 +10,9 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/restore_h
 haproxy -c -f /etc/haproxy/haproxy.cfg 显示Configuration file is valid 即正确
 重启服务
 systemctl restart haproxy 检查状态
-systemctl status haproxy 前言 网站托管在欧洲（如德国、荷兰）服务器上，不使用 Cloudflare CDN 域名托管在 Cloudflare，准备好具有 DNS 权限的 API 令牌 使用说明 系统推荐：Debian 12（测试通过） 节点推荐：线路好（如 CN2、CMIN2、9929） 脚本功能菜单 ================================ HAProxy 配置管理工具 ================================ 1. 申请SSL证书 2. 安装HAProxy 3. 配置站点 4. 测试SSL证书 5.</description></item><item><title>haproxy之爬虫拦截规则</title><link>https://blog.lufei.de/p/454/</link><pubDate>Sun, 01 Jun 2025 05:48:55 +0800</pubDate><guid>https://blog.lufei.de/p/454/</guid><description>注意：后端服务器监听80端口（HTTP），但前端是HTTPS HAProxy将终止SSL，并以HTTP协议与后端通信 新建爬虫文件 nano /etc/haproxy/blacklist-agent.txt 内容
+systemctl status haproxy sni证书匹配检测
+提示：如果包含www，仅检测根域即可
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/sni_check.sh &amp;amp;&amp;amp; chmod +x sni_check.sh &amp;amp;&amp;amp; ./sni_check.sh 前言 网站托管在欧洲（如德国、荷兰）服务器上，不使用 Cloudflare CDN 域名托管在 Cloudflare，准备好具有 DNS 权限的 API 令牌 使用说明 系统推荐：Debian 12（测试通过） 节点推荐：线路好（如 CN2、CMIN2、9929） 脚本功能菜单 ================================ HAProxy 配置管理工具 ================================ 1.</description></item><item><title>haproxy之爬虫拦截规则</title><link>https://blog.lufei.de/p/454/</link><pubDate>Sun, 01 Jun 2025 05:48:55 +0800</pubDate><guid>https://blog.lufei.de/p/454/</guid><description>注意：后端服务器监听80端口（HTTP），但前端是HTTPS HAProxy将终止SSL，并以HTTP协议与后端通信 新建爬虫文件 nano /etc/haproxy/blacklist-agent.txt 内容
 YandexBot DotBot SemrushBot AhrefsBot BLEXBot YaK MJ12bot MauiBot MegaIndex.ru GPTBot meta-externalagent/1.1 Qwantbot ClaudeBot Amazonbot SearchBot DataForSeoBot Barkrowler GoogleOther Googlebot 更多爬虫
 https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/_generator_lists/bad-user-agents.list
 配置文件 配置参考: https://github.com/woniu336/open_shell/blob/main/u-haproxy.cfg
