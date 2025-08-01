@@ -1,5 +1,5 @@
-<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="haproxy配置 示例 global log /dev/log local0 warning log /dev/log local1 notice chroot /var/lib/haproxy user haproxy group haproxy daemon maxconn 20000 stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners stats timeout 30s defaults log global option dontlognull option clitcpka option srvtcpka timeout connect 2000 timeout client 20000 timeout server 20000 errorfile 400 /etc/haproxy/errors/400.http errorfile 403 /etc/haproxy/errors/403.http errorfile 408 /etc/haproxy/errors/408.http errorfile 500 /etc/haproxy/errors/500.http errorfile 502 /etc/haproxy/errors/502.http errorfile 503 /etc/haproxy/errors/503.http errorfile 504 /etc/haproxy/errors/504."><title>caddy和haproxy配置分享</title>
-<link rel=canonical href=https://blog.lufei.de/p/462/><link rel=stylesheet href=/scss/style.min.854e34c0d49cd05dfb69d11f315f89d76adcdf82c7f2d2fc9e8e87cbfc5906f9.css><meta property='og:title' content="caddy和haproxy配置分享"><meta property='og:description' content="haproxy配置 示例 global log /dev/log local0 warning log /dev/log local1 notice chroot /var/lib/haproxy user haproxy group haproxy daemon maxconn 20000 stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners stats timeout 30s defaults log global option dontlognull option clitcpka option srvtcpka timeout connect 2000 timeout client 20000 timeout server 20000 errorfile 400 /etc/haproxy/errors/400.http errorfile 403 /etc/haproxy/errors/403.http errorfile 408 /etc/haproxy/errors/408.http errorfile 500 /etc/haproxy/errors/500.http errorfile 502 /etc/haproxy/errors/502.http errorfile 503 /etc/haproxy/errors/503.http errorfile 504 /etc/haproxy/errors/504."><meta property='og:url' content='https://blog.lufei.de/p/462/'><meta property='og:site_name' content='路飞博客'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2025-08-01T01:09:34+08:00'><meta property='article:modified_time' content='2025-07-31T17:18:09+00:00'><meta name=twitter:title content="caddy和haproxy配置分享"><meta name=twitter:description content="haproxy配置 示例 global log /dev/log local0 warning log /dev/log local1 notice chroot /var/lib/haproxy user haproxy group haproxy daemon maxconn 20000 stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners stats timeout 30s defaults log global option dontlognull option clitcpka option srvtcpka timeout connect 2000 timeout client 20000 timeout server 20000 errorfile 400 /etc/haproxy/errors/400.http errorfile 403 /etc/haproxy/errors/403.http errorfile 408 /etc/haproxy/errors/408.http errorfile 500 /etc/haproxy/errors/500.http errorfile 502 /etc/haproxy/errors/502.http errorfile 503 /etc/haproxy/errors/503.http errorfile 504 /etc/haproxy/errors/504."><link rel="shortcut icon" href=/favicon.ico><link rel=stylesheet href=https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css><link rel=stylesheet href=https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css><link rel=stylesheet href=https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css><style>#scroll-to-top,#search-button{display:none;position:fixed;right:30px;z-index:99;border:none;outline:none;background-color:transparent;color:#555;cursor:pointer;padding:10px;transition:color .3s}#scroll-to-top:hover,#search-button:hover{color:#333}#scroll-to-top{bottom:20px}#search-button{bottom:80px}.cat-icon{width:40px;height:40px}@media(min-width:768px){#search-button{display:none!important}}@media(max-width:767px){#search-button{display:block}}</style><button onclick=topFunction() id=scroll-to-top title=回到顶部>
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="haproxy配置 示例 global log /dev/log local0 warning log /dev/log local1 notice chroot /var/lib/haproxy user haproxy group haproxy daemon maxconn 20000 stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners stats timeout 30s defaults log global option dontlognull option clitcpka option srvtcpka timeout connect 5s timeout client 30s timeout server 30s errorfile 400 /etc/haproxy/errors/400.http errorfile 403 /etc/haproxy/errors/403.http errorfile 408 /etc/haproxy/errors/408.http errorfile 500 /etc/haproxy/errors/500.http errorfile 502 /etc/haproxy/errors/502.http errorfile 503 /etc/haproxy/errors/503.http errorfile 504 /etc/haproxy/errors/504."><title>caddy和haproxy配置分享</title>
+<link rel=canonical href=https://blog.lufei.de/p/462/><link rel=stylesheet href=/scss/style.min.854e34c0d49cd05dfb69d11f315f89d76adcdf82c7f2d2fc9e8e87cbfc5906f9.css><meta property='og:title' content="caddy和haproxy配置分享"><meta property='og:description' content="haproxy配置 示例 global log /dev/log local0 warning log /dev/log local1 notice chroot /var/lib/haproxy user haproxy group haproxy daemon maxconn 20000 stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners stats timeout 30s defaults log global option dontlognull option clitcpka option srvtcpka timeout connect 5s timeout client 30s timeout server 30s errorfile 400 /etc/haproxy/errors/400.http errorfile 403 /etc/haproxy/errors/403.http errorfile 408 /etc/haproxy/errors/408.http errorfile 500 /etc/haproxy/errors/500.http errorfile 502 /etc/haproxy/errors/502.http errorfile 503 /etc/haproxy/errors/503.http errorfile 504 /etc/haproxy/errors/504."><meta property='og:url' content='https://blog.lufei.de/p/462/'><meta property='og:site_name' content='路飞博客'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2025-08-01T01:09:34+08:00'><meta property='article:modified_time' content='2025-08-01T03:29:13+00:00'><meta name=twitter:title content="caddy和haproxy配置分享"><meta name=twitter:description content="haproxy配置 示例 global log /dev/log local0 warning log /dev/log local1 notice chroot /var/lib/haproxy user haproxy group haproxy daemon maxconn 20000 stats socket /run/haproxy/admin.sock mode 660 level admin expose-fd listeners stats timeout 30s defaults log global option dontlognull option clitcpka option srvtcpka timeout connect 5s timeout client 30s timeout server 30s errorfile 400 /etc/haproxy/errors/400.http errorfile 403 /etc/haproxy/errors/403.http errorfile 408 /etc/haproxy/errors/408.http errorfile 500 /etc/haproxy/errors/500.http errorfile 502 /etc/haproxy/errors/502.http errorfile 503 /etc/haproxy/errors/503.http errorfile 504 /etc/haproxy/errors/504."><link rel="shortcut icon" href=/favicon.ico><link rel=stylesheet href=https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css><link rel=stylesheet href=https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css><link rel=stylesheet href=https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css><style>#scroll-to-top,#search-button{display:none;position:fixed;right:30px;z-index:99;border:none;outline:none;background-color:transparent;color:#555;cursor:pointer;padding:10px;transition:color .3s}#scroll-to-top:hover,#search-button:hover{color:#333}#scroll-to-top{bottom:20px}#search-button{bottom:80px}.cat-icon{width:40px;height:40px}@media(min-width:768px){#search-button{display:none!important}}@media(max-width:767px){#search-button{display:block}}</style><button onclick=topFunction() id=scroll-to-top title=回到顶部>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-rounded-arrow-up-filled" width="43" height="43" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2c-.218.0-.432.002-.642.005l-.616.017-.299.013-.579.034-.553.046c-4.785.464-6.732 2.411-7.196 7.196l-.046.553-.034.579c-.005.098-.01.198-.013.299l-.017.616-.004.318L2 12c0 .218.002.432.005.642l.017.616.013.299.034.579.046.553c.464 4.785 2.411 6.732 7.196 7.196l.553.046.579.034c.098.005.198.01.299.013l.616.017L12 22l.642-.005.616-.017.299-.013.579-.034.553-.046c4.785-.464 6.732-2.411 7.196-7.196l.046-.553.034-.579c.005-.098.01-.198.013-.299l.017-.616L22 12l-.005-.642-.017-.616-.013-.299-.034-.579-.046-.553c-.464-4.785-2.411-6.732-7.196-7.196l-.553-.046-.579-.034a28.058 28.058.0 00-.299-.013l-.616-.017-.318-.004L12 2zm-.148 5.011.058-.007L12 7l.075.003.126.017.111.03.111.044.098.052.104.074.082.073 4 4a1 1 0 01-1.32 1.497l-.094-.083L13 10.415V16a1 1 0 01-1.993.117L11 16v-5.585l-2.293 2.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 01-.083-1.32l.083-.094 4-4a.927.927.0 01.112-.097l.11-.071.114-.054.105-.035.118-.025z" fill="currentcolor" stroke-width="0"/></svg>
 </button>
 <button onclick=openSearch() id=search-button title=搜索>
@@ -16,8 +16,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132.0.263.0.393.0a7.5 7.5.0 007.92 12.446A9 9 0 1112 2.992z"/><path d="M17 4a2 2 0 002 2 2 2 0 00-2 2 2 2 0 00-2-2 2 2 0 002-2"/><path d="M19 11h2m-1-1v2"/></svg>
 <span>深色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#haproxy配置>haproxy配置</a></li><li><a href=#caddy配置>caddy配置</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/p/462/>caddy和haproxy配置分享</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>2025-08-01</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<time class=article-time--reading>阅读时长: 3 分钟</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h4L18.5 9.5a2.828 2.828.0 10-4-4L4 16v4"/><path d="M13.5 6.5l4 4"/></svg>
-<time class=article-time--reading>字数: 586字</time></div></footer></div></header><section class=article-content><h3 id=haproxy配置>haproxy配置</h3><p><a class=link href=https://github.com/woniu336/open_shell/blob/main/web/haproxy.cfg target=_blank rel=noopener>示例</a></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>global</span>
+<time class=article-time--reading>阅读时长: 2 分钟</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h4L18.5 9.5a2.828 2.828.0 10-4-4L4 16v4"/><path d="M13.5 6.5l4 4"/></svg>
+<time class=article-time--reading>字数: 409字</time></div></footer></div></header><section class=article-content><h3 id=haproxy配置>haproxy配置</h3><p><a class=link href=https://github.com/woniu336/open_shell/blob/main/web/haproxy.cfg target=_blank rel=noopener>示例</a></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>global</span>
 </span></span><span class=line><span class=cl>    <span class=nb>log</span> <span class=o>/</span><span class=n>dev</span><span class=o>/</span><span class=nb>log</span> <span class=n>local0</span> <span class=n>warning</span>
 </span></span><span class=line><span class=cl>    <span class=nb>log</span> <span class=o>/</span><span class=n>dev</span><span class=o>/</span><span class=nb>log</span> <span class=n>local1</span> <span class=n>notice</span>
 </span></span><span class=line><span class=cl>    <span class=n>chroot</span> <span class=o>/</span><span class=k>var</span><span class=o>/</span><span class=n>lib</span><span class=o>/</span><span class=n>haproxy</span>
@@ -33,9 +33,9 @@
 </span></span><span class=line><span class=cl>    <span class=n>option</span> <span class=n>dontlognull</span>
 </span></span><span class=line><span class=cl>    <span class=n>option</span> <span class=n>clitcpka</span>
 </span></span><span class=line><span class=cl>    <span class=n>option</span> <span class=n>srvtcpka</span>
-</span></span><span class=line><span class=cl>    <span class=n>timeout</span> <span class=n>connect</span> <span class=mi>2000</span>
-</span></span><span class=line><span class=cl>    <span class=n>timeout</span> <span class=n>client</span>  <span class=mi>20000</span>
-</span></span><span class=line><span class=cl>    <span class=n>timeout</span> <span class=n>server</span>  <span class=mi>20000</span>
+</span></span><span class=line><span class=cl>    <span class=n>timeout</span> <span class=n>connect</span> <span class=mi>5</span><span class=n>s</span>
+</span></span><span class=line><span class=cl>    <span class=n>timeout</span> <span class=n>client</span>  <span class=mi>30</span><span class=n>s</span>
+</span></span><span class=line><span class=cl>    <span class=n>timeout</span> <span class=n>server</span>  <span class=mi>30</span><span class=n>s</span>
 </span></span><span class=line><span class=cl>    <span class=n>errorfile</span> <span class=mi>400</span> <span class=o>/</span><span class=n>etc</span><span class=o>/</span><span class=n>haproxy</span><span class=o>/</span><span class=n>errors</span><span class=o>/</span><span class=mf>400.</span><span class=n>http</span>
 </span></span><span class=line><span class=cl>    <span class=n>errorfile</span> <span class=mi>403</span> <span class=o>/</span><span class=n>etc</span><span class=o>/</span><span class=n>haproxy</span><span class=o>/</span><span class=n>errors</span><span class=o>/</span><span class=mf>403.</span><span class=n>http</span>
 </span></span><span class=line><span class=cl>    <span class=n>errorfile</span> <span class=mi>408</span> <span class=o>/</span><span class=n>etc</span><span class=o>/</span><span class=n>haproxy</span><span class=o>/</span><span class=n>errors</span><span class=o>/</span><span class=mf>408.</span><span class=n>http</span>
@@ -45,7 +45,19 @@
 </span></span><span class=line><span class=cl>    <span class=n>errorfile</span> <span class=mi>504</span> <span class=o>/</span><span class=n>etc</span><span class=o>/</span><span class=n>haproxy</span><span class=o>/</span><span class=n>errors</span><span class=o>/</span><span class=mf>504.</span><span class=n>http</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
-</span></span><span class=line><span class=cl><span class=c1># 前端 配置 - HTTPS (443端口)</span>
+</span></span><span class=line><span class=cl><span class=c1># 前端配置 - HTTP (80端口) - 简化为强制重定向HTTPS</span>
+</span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
+</span></span><span class=line><span class=cl><span class=n>frontend</span> <span class=n>http</span><span class=o>-</span><span class=ow>in</span>
+</span></span><span class=line><span class=cl>    <span class=n>bind</span> <span class=o>*</span><span class=p>:</span><span class=mi>80</span>
+</span></span><span class=line><span class=cl>    <span class=n>mode</span> <span class=n>http</span>
+</span></span><span class=line><span class=cl>    <span class=n>option</span> <span class=n>httplog</span>
+</span></span><span class=line><span class=cl>    <span class=n>option</span> <span class=n>http</span><span class=o>-</span><span class=n>keep</span><span class=o>-</span><span class=n>alive</span>      
+</span></span><span class=line><span class=cl>    <span class=n>timeout</span> <span class=n>http</span><span class=o>-</span><span class=n>keep</span><span class=o>-</span><span class=n>alive</span> <span class=mi>15</span><span class=n>s</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 所有HTTP流量强制跳转HTTPS</span>
+</span></span><span class=line><span class=cl>    <span class=n>redirect</span> <span class=n>scheme</span> <span class=n>https</span> <span class=n>code</span> <span class=mi>301</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
+</span></span><span class=line><span class=cl><span class=c1># 前端配置 - HTTPS (443端口) - 保留原有功能</span>
 </span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
 </span></span><span class=line><span class=cl><span class=n>frontend</span> <span class=n>tcp_front_443</span>
 </span></span><span class=line><span class=cl>    <span class=n>bind</span> <span class=o>*</span><span class=p>:</span><span class=mi>443</span>
@@ -58,43 +70,22 @@
 </span></span><span class=line><span class=cl>    <span class=n>tcp</span><span class=o>-</span><span class=n>request</span> <span class=n>content</span> <span class=n>accept</span> <span class=k>if</span> <span class=p>{</span> <span class=n>req_ssl_hello_type</span> <span class=mi>1</span> <span class=p>}</span>
 </span></span><span class=line><span class=cl>    
 </span></span><span class=line><span class=cl>    <span class=c1># Nginx 后端域名配置</span>
-</span></span><span class=line><span class=cl>    <span class=n>use_backend</span> <span class=n>nginx_servers_443</span> <span class=k>if</span> <span class=p>{</span> <span class=n>req_ssl_sni</span> <span class=o>-</span><span class=n>i</span> <span class=n>www</span><span class=o>.</span><span class=n>example1</span><span class=o>.</span><span class=n>com</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>use_backend</span> <span class=n>nginx_servers_443</span> <span class=k>if</span> <span class=p>{</span> <span class=n>req_ssl_sni</span> <span class=o>-</span><span class=n>i</span> <span class=n>www</span><span class=o>.</span><span class=mf>1234.</span><span class=n>com</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>use_backend</span> <span class=n>nginx_servers_443</span> <span class=k>if</span> <span class=p>{</span> <span class=n>req_ssl_sni</span> <span class=o>-</span><span class=n>i</span> <span class=mf>1234.</span><span class=n>com</span> <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=c1>#use_backend nginx_servers_443 if { req_ssl_sni -i www.example2.com }</span>
 </span></span><span class=line><span class=cl>    <span class=c1>#use_backend nginx_servers_443 if { req_ssl_sni -i www.example3.com }</span>
 </span></span><span class=line><span class=cl>    
 </span></span><span class=line><span class=cl>    <span class=c1># Caddy 后端域名配置</span>
-</span></span><span class=line><span class=cl>    <span class=n>use_backend</span> <span class=n>caddy_servers_443</span> <span class=k>if</span> <span class=p>{</span> <span class=n>req_ssl_sni</span> <span class=o>-</span><span class=n>i</span> <span class=n>www</span><span class=o>.</span><span class=n>example4</span><span class=o>.</span><span class=n>com</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>use_backend</span> <span class=n>caddy_servers_443</span> <span class=k>if</span> <span class=p>{</span> <span class=n>req_ssl_sni</span> <span class=o>-</span><span class=n>i</span> <span class=n>www</span><span class=o>.</span><span class=mf>2345.</span><span class=n>com</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=n>use_backend</span> <span class=n>caddy_servers_443</span> <span class=k>if</span> <span class=p>{</span> <span class=n>req_ssl_sni</span> <span class=o>-</span><span class=n>i</span> <span class=mf>2345.</span><span class=n>com</span> <span class=p>}</span>
 </span></span><span class=line><span class=cl>    <span class=c1>#use_backend caddy_servers_443 if { req_ssl_sni -i www.example5.com }</span>
 </span></span><span class=line><span class=cl>    <span class=c1>#use_backend caddy_servers_443 if { req_ssl_sni -i www.example6.com }</span>
-</span></span><span class=line><span class=cl> 
 </span></span><span class=line><span class=cl>    
 </span></span><span class=line><span class=cl>    <span class=c1># 默认后端（处理无法匹配的域名，如直接IP访问等）</span>
 </span></span><span class=line><span class=cl>    <span class=n>default_backend</span> <span class=n>nginx_servers_443</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
-</span></span><span class=line><span class=cl><span class=c1># 前端 配置 - HTTP (80端口)</span>
-</span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
-</span></span><span class=line><span class=cl><span class=n>frontend</span> <span class=n>http_front_80</span>
-</span></span><span class=line><span class=cl>    <span class=n>bind</span> <span class=o>*</span><span class=p>:</span><span class=mi>80</span>
-</span></span><span class=line><span class=cl>    <span class=n>mode</span> <span class=n>http</span>
-</span></span><span class=line><span class=cl>    <span class=n>option</span> <span class=n>httplog</span>
-</span></span><span class=line><span class=cl>    
-</span></span><span class=line><span class=cl>    <span class=c1># Nginx 后端域名配置</span>
-</span></span><span class=line><span class=cl>    <span class=n>use_backend</span> <span class=n>nginx_servers_80</span> <span class=k>if</span> <span class=p>{</span> <span class=n>hdr</span><span class=p>(</span><span class=n>host</span><span class=p>)</span> <span class=o>-</span><span class=n>i</span> <span class=n>www</span><span class=o>.</span><span class=n>example1</span><span class=o>.</span><span class=n>com</span> <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=c1>#use_backend nginx_servers_80 if { hdr(host) -i www.example2.com }</span>
-</span></span><span class=line><span class=cl>    <span class=c1>#use_backend nginx_servers_80 if { hdr(host) -i www.example3.com }</span>
-</span></span><span class=line><span class=cl>    
-</span></span><span class=line><span class=cl>    <span class=c1># Caddy 后端域名配置</span>
-</span></span><span class=line><span class=cl>    <span class=n>use_backend</span> <span class=n>caddy_servers_80</span> <span class=k>if</span> <span class=p>{</span> <span class=n>hdr</span><span class=p>(</span><span class=n>host</span><span class=p>)</span> <span class=o>-</span><span class=n>i</span> <span class=n>www</span><span class=o>.</span><span class=n>example4</span><span class=o>.</span><span class=n>com</span> <span class=p>}</span>
-</span></span><span class=line><span class=cl>    <span class=c1>#use_backend caddy_servers_80 if { hdr(host) -i www.example5.com }</span>
-</span></span><span class=line><span class=cl>    <span class=c1>#use_backend caddy_servers_80 if { hdr(host) -i www.example6.com }</span>
-</span></span><span class=line><span class=cl>    
-</span></span><span class=line><span class=cl>    
-</span></span><span class=line><span class=cl>    <span class=c1># 默认后端</span>
-</span></span><span class=line><span class=cl>    <span class=n>default_backend</span> <span class=n>nginx_servers_80</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
-</span></span><span class=line><span class=cl><span class=c1># 后端 配置 - Nginx 服务器</span>
+</span></span><span class=line><span class=cl><span class=c1># 后端配置 - Nginx 服务器 (仅443端口)</span>
 </span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
 </span></span><span class=line><span class=cl><span class=n>backend</span> <span class=n>nginx_servers_443</span>
 </span></span><span class=line><span class=cl>    <span class=n>mode</span> <span class=n>tcp</span>    
@@ -106,35 +97,17 @@
 </span></span><span class=line><span class=cl>    
 </span></span><span class=line><span class=cl>    <span class=c1># 如果后端不支持 send-proxy，请移除该参数</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=n>backend</span> <span class=n>nginx_servers_80</span>
-</span></span><span class=line><span class=cl>    <span class=n>mode</span> <span class=n>http</span>
-</span></span><span class=line><span class=cl>    <span class=c1># 主 Nginx 服务器</span>
-</span></span><span class=line><span class=cl>    <span class=n>server</span> <span class=n>nginx1_80</span> <span class=mf>6.6</span><span class=o>.</span><span class=mf>6.6</span><span class=p>:</span><span class=mi>80</span> <span class=n>check</span> <span class=n>inter</span> <span class=mi>10</span><span class=n>s</span> <span class=n>rise</span> <span class=mi>2</span> <span class=n>fall</span> <span class=mi>3</span>
-</span></span><span class=line><span class=cl>    
-</span></span><span class=line><span class=cl>    <span class=c1># 备用 Nginx 服务器（可选）</span>
-</span></span><span class=line><span class=cl>    <span class=c1># server nginx2_80 8.8.8.8:80 check inter 10s rise 2 fall 3 backup</span>
-</span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
-</span></span><span class=line><span class=cl><span class=c1># 后端 配置 - Caddy 服务器</span>
+</span></span><span class=line><span class=cl><span class=c1># 后端配置 - Caddy 服务器 (仅443端口)</span>
 </span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
 </span></span><span class=line><span class=cl><span class=n>backend</span> <span class=n>caddy_servers_443</span>
 </span></span><span class=line><span class=cl>    <span class=n>mode</span> <span class=n>tcp</span>
 </span></span><span class=line><span class=cl>    <span class=c1># 主 Caddy 服务器</span>
-</span></span><span class=line><span class=cl>    <span class=n>server</span> <span class=n>caddy1_443</span> <span class=mf>7.7</span><span class=o>.</span><span class=mf>7.7</span><span class=p>:</span><span class=mi>443</span> <span class=n>check</span> <span class=n>inter</span> <span class=mi>10</span><span class=n>s</span> <span class=n>rise</span> <span class=mi>2</span> <span class=n>fall</span> <span class=mi>3</span>
+</span></span><span class=line><span class=cl>    <span class=n>server</span> <span class=n>caddy1_443</span> <span class=mf>9.9</span><span class=o>.</span><span class=mf>9.9</span><span class=p>:</span><span class=mi>443</span> <span class=n>check</span> <span class=n>inter</span> <span class=mi>10</span><span class=n>s</span> <span class=n>rise</span> <span class=mi>2</span> <span class=n>fall</span> <span class=mi>3</span>
 </span></span><span class=line><span class=cl>    
 </span></span><span class=line><span class=cl>    <span class=c1># 备用 Caddy 服务器（可选）</span>
 </span></span><span class=line><span class=cl>    <span class=c1># server caddy2_443 9.9.9.9:443 check inter 10s rise 2 fall 3 backup</span>
-</span></span><span class=line><span class=cl>    
-</span></span><span class=line><span class=cl>    <span class=c1># 如果 Caddy 不支持 send-proxy，请移除该参数</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=n>backend</span> <span class=n>caddy_servers_80</span>
-</span></span><span class=line><span class=cl>    <span class=n>mode</span> <span class=n>http</span>
-</span></span><span class=line><span class=cl>    <span class=c1># 主 Caddy 服务器</span>
-</span></span><span class=line><span class=cl>    <span class=n>server</span> <span class=n>caddy1_80</span> <span class=mf>7.7</span><span class=o>.</span><span class=mf>7.7</span><span class=p>:</span><span class=mi>80</span> <span class=n>check</span> <span class=n>inter</span> <span class=mi>10</span><span class=n>s</span> <span class=n>rise</span> <span class=mi>2</span> <span class=n>fall</span> <span class=mi>3</span>
-</span></span><span class=line><span class=cl>    
-</span></span><span class=line><span class=cl>    <span class=c1># 备用 Caddy 服务器（可选）</span>
-</span></span><span class=line><span class=cl>    <span class=c1># server caddy2_80 9.9.9.9:80 check inter 10s rise 2 fall 3 backup</span>
-</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>   
 </span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
 </span></span><span class=line><span class=cl><span class=c1># 统计页面（可选）</span>
 </span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
@@ -149,30 +122,12 @@
 </span></span><span class=line><span class=cl>    <span class=c1>#stats auth admin:your_password_here</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
-</span></span><span class=line><span class=cl><span class=c1># 配置说明：</span>
-</span></span><span class=line><span class=cl><span class=c1># </span>
-</span></span><span class=line><span class=cl><span class=c1># 1. 域名配置：</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - 将 example1.com, example2.com 等替换为你的实际域名</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - Nginx 后端：example1.com, example2.com, blog.example1.com</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - Caddy 后端：example3.com, example4.com, api.example3.com</span>
-</span></span><span class=line><span class=cl><span class=c1>#</span>
-</span></span><span class=line><span class=cl><span class=c1># 2. 服务器 IP 配置：</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - 将 6.6.6.6 替换为你的 Nginx 服务器 IP</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - 将 7.7.7.7 替换为你的 Caddy 服务器 IP</span>
-</span></span><span class=line><span class=cl><span class=c1>#</span>
-</span></span><span class=line><span class=cl><span class=c1># 3. send-proxy 参数：</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - 如果后端服务器不支持 PROXY 协议，请移除 send-proxy 参数</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - Nginx 需要配置 proxy_protocol 支持</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - Caddy 需要配置相应的代理协议支持</span>
-</span></span><span class=line><span class=cl><span class=c1>#</span>
-</span></span><span class=line><span class=cl><span class=c1># 4. 备用服务器：</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - 取消注释 backup 服务器行来添加备用服务器</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - 备用服务器只在主服务器全部故障时启用</span>
-</span></span><span class=line><span class=cl><span class=c1>#</span>
-</span></span><span class=line><span class=cl><span class=c1># 5. 统计页面：</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - 访问 http://your_server:8404/stats 查看状态</span>
-</span></span><span class=line><span class=cl><span class=c1>#    - 建议在生产环境中启用认证</span>
-</span></span><span class=line><span class=cl><span class=c1># =============================================================================</span>
+</span></span><span class=line><span class=cl><span class=c1># 使用说明：</span>
+</span></span><span class=line><span class=cl><span class=c1># 1. 将域名替换为你的实际域名</span>
+</span></span><span class=line><span class=cl><span class=c1># 2. 将IP地址替换为实际的后端服务器IP</span>
+</span></span><span class=line><span class=cl><span class=c1># 3. 后端服务器需要配置SSL证书</span>
+</span></span><span class=line><span class=cl><span class=c1># 4. 访问 http://服务器IP:8404/stats 查看状态</span>
+</span></span><span class=line><span class=cl><span class=c1># ==========================================================================</span>
 </span></span></code></pre></div><h3 id=caddy配置>caddy配置</h3><p><a class=link href=https://github.com/woniu336/open_shell/blob/main/web/Caddyfile target=_blank rel=noopener>示例</a></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>(common_config) {
 </span></span><span class=line><span class=cl>	tls {
 </span></span><span class=line><span class=cl>		protocols tls1.2 tls1.3
@@ -204,7 +159,7 @@
 </span></span><span class=line><span class=cl>}
 </span></span></code></pre></div></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>CC BY-NC-SA 4.0 转载请注明</span></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<span>最后更新于 2025-07-31 17:18</span></section></footer></article><footer class=site-footer><section class=powerby><a target=_blank title=clarity统计 href=https://clarity.microsoft.com/projects>clarity统计</a><br></section><section class=copyright><br>共手书67.2k字·共 451篇文章</br><span><p>本站已稳定运行
+<span>最后更新于 2025-08-01 03:29</span></section></footer></article><footer class=site-footer><section class=powerby><a target=_blank title=clarity统计 href=https://clarity.microsoft.com/projects>clarity统计</a><br></section><section class=copyright><br>共手书67k字·共 451篇文章</br><span><p>本站已稳定运行
 <span id=runningdays class=running-days></span>
 <script>function updateRunningTime(){const t=new Date("2023-07-25".replace(/-/g,"/")),n=new Date,e=n-t,s=Math.floor(e/(1e3*60*60*24)),o=Math.floor(e%(1e3*60*60*24)/(1e3*60*60)),i=Math.floor(e%(1e3*60*60)/(1e3*60)),a=Math.floor(e%(1e3*60)/1e3),r=`${s} 天 ${o} 小时 ${i} 分 ${a} 秒 `;document.getElementById("runningdays").innerHTML=r}setInterval(updateRunningTime,1e3),updateRunningTime()</script><br></section><a target=_blank href=https://github.com/CaiJimmy/hugo-theme-stack title=主题开源项目><img src=/img/github.svg alt>
 </a><a target=_blank href=https://gohugo.io/ title="由 HUGO 驱动"><img src=/img/hugo.svg alt>
