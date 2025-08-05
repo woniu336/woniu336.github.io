@@ -17,7 +17,7 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/haproxy-c
 sudo apt update sudo apt install -y rsync 脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_backup.sh &amp;amp;&amp;amp; chmod +x caddy_backup.sh &amp;amp;&amp;amp; ./caddy_backup.sh 备份
 ./caddy_backup.sh backup 恢复
-./caddy_backup.sh restore /opt/caddy-backups/caddy-backup-20231201-120000.tar.gz 用法
+mkdir -p /opt/caddy-backups ./caddy_backup.sh restore /opt/caddy-backups/caddy-backup-20231201-120000.tar.gz 用法
 # 赋予执行权限 chmod +x caddy_backup.sh # 创建备份（自动命名） sudo ./caddy_backup.sh backup # 创建指定名称的备份 sudo ./caddy_backup.sh backup my-migration-backup # 列出所有备份 .</description></item><item><title>amh之redis优化</title><link>https://blog.lufei.de/p/461/</link><pubDate>Thu, 31 Jul 2025 20:06:10 +0800</pubDate><guid>https://blog.lufei.de/p/461/</guid><description>查找 redis-cli 的位置
 find / -name redis-cli 建议创建软链接：
 ln -s /usr/local/redis-8.0/bin/redis-cli /usr/bin/redis-cli 连接到 Redis CLI
