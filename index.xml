@@ -3,7 +3,13 @@ read -p &amp;#34;请输入想要的快捷命令名称 (如: cm, caddy, mgr): &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>Caddy 模块化配置：按需引入，各取所需</title><link>https://blog.lufei.de/p/468/</link><pubDate>Fri, 22 Aug 2025 12:44:48 +0800</pubDate><guid>https://blog.lufei.de/p/468/</guid><description>问题 多个场景（多项目）配置重复冗余，维护困难。
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>caddy 反代cloudflare方法</title><link>https://blog.lufei.de/p/469/</link><pubDate>Sun, 24 Aug 2025 12:11:12 +0800</pubDate><guid>https://blog.lufei.de/p/469/</guid><description>系统：debian12
+准备工作 假设1234.com是用户访问的域名，再找一个域名，例如 1234.kkk.eu.org
+1234.kkk.eu.org 绑定到源站（注意：1234.com也要绑定到源站）
+1234.kkk.eu.org 解析到源服务器 IP 地址，开启 CDN（小云朵），设置为灵活模式
+安装caddy sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https curl curl -1sLf &amp;#39;https://dl.cloudsmith.io/public/caddy/stable/gpg.key&amp;#39; | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg curl -1sLf &amp;#39;https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt&amp;#39; | sudo tee /etc/apt/sources.list.d/caddy-stable.list chmod o+r /usr/share/keyrings/caddy-stable-archive-keyring.gpg chmod o+r /etc/apt/sources.list.d/caddy-stable.list sudo apt update sudo apt install caddy 检测是否安装成功
+caddy -v 配置修改 nano /etc/caddy/Caddyfile 反代配置如下：
+(common) { tls { protocols tls1.2 tls1.3 } header { -Via -Alt-Svc -Server } } (proxy) { header_up Host {upstream_hostport} header_up X-Real-IP {remote} } 1234.</description></item><item><title>Caddy 模块化配置：按需引入，各取所需</title><link>https://blog.lufei.de/p/468/</link><pubDate>Fri, 22 Aug 2025 12:44:48 +0800</pubDate><guid>https://blog.lufei.de/p/468/</guid><description>问题 多个场景（多项目）配置重复冗余，维护困难。
 结尾贴出配置
 解决方案 三种配置模块，按需组合：
 (main_backend) # 双后端负载均衡 (common_config) # 通用安全配置 (standard_site) # 组合上述两者 应用场景 场景一：标准站点（需要负载均衡）
