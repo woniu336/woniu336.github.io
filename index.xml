@@ -101,10 +101,12 @@ nano /etc/systemd/resolved.conf 内容
 [Resolve] DNS=9.9.9.9 149.112.112.112 FallbackDNS=1.1.1.1 8.8.8.8 查看当前生成的 resolv.conf
 cat /run/systemd/resolve/resolv.conf 查看完整的 DNS 配置状态
 resolvectl status 确认服务状态
-systemctl status systemd-resolved 测试不同 DNS 的性能
+systemctl status systemd-resolved 或者可以这样（临时的）
+resolvectl dns ens3 8.8.8.8 1.0.0.1 resolvectl flush-caches 测试
+resolvectl query openai.com 测试不同 DNS 的性能
 安装dig
 apt update &amp;amp;&amp;amp; apt install dnsutils 测试主要 DNS 服务器
-dig @1.1.1.1 google.com | grep &amp;#34;Query time&amp;#34; dig @8.8.8.8 google.com | grep &amp;#34;Query time&amp;#34; dig @9.9.9.9 google.com | grep &amp;#34;Query time&amp;#34; 或者使用循环测试</description></item><item><title>haproxy反向代理教程</title><link>https://blog.lufei.de/p/452/</link><pubDate>Thu, 29 May 2025 12:20:03 +0800</pubDate><guid>https://blog.lufei.de/p/452/</guid><description>为什么是使用haproxy作为反代，而不是nginx，或者iptables，就不细说了，因为haproxy更高效简洁，性能更优秀！这是我几个月来的使用和验证。
+dig @1.1.1.1 google.com | grep &amp;#34;Query time&amp;#34; dig @8.</description></item><item><title>haproxy反向代理教程</title><link>https://blog.lufei.de/p/452/</link><pubDate>Thu, 29 May 2025 12:20:03 +0800</pubDate><guid>https://blog.lufei.de/p/452/</guid><description>为什么是使用haproxy作为反代，而不是nginx，或者iptables，就不细说了，因为haproxy更高效简洁，性能更优秀！这是我几个月来的使用和验证。
 注意：下面的配置是针对80端口（源站，可以开启cf cdn），但是没有针对https（443），如果有需要可以问ai怎么修改配置文件。
 安装haproxy 一键脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/haproxy-k.sh &amp;amp;&amp;amp; chmod +x haproxy-k.sh &amp;amp;&amp;amp; ./haproxy-k.sh 安装
