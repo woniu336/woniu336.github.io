@@ -10,10 +10,12 @@ find /etc/nginx /www/server/nginx/conf /usr/local/nginx* /usr/local/etc/nginx -n
 access_log /home/wwwroot/xxx.access.log jsonlog; 重载nginx
 重载nginx
 创建目录 mkdir -p /opt/nginx_alog cd /opt/nginx_alog 下载所需文件
+地址1：
+https://send.now/a/16G8 地址2：
 https://pan.quark.cn/s/092686511ae5 将文件移动到/opt/nginx_alog目录
 启动程序 使用您的实际路径启动
 ./nginx_alog log=/var/log/nginx/access.log logkeep=375 token=123 conf=/etc/nginx/nginx.conf 后台运行方式
-# 方法1：使用nohup nohup ./nginx_alog log=/var/log/nginx/access.log logkeep=375 token=123 conf=/etc/nginx/nginx.conf &amp;gt; nginx_alog.log 2&amp;gt;&amp;amp;1 &amp;amp; # 方法2：使用screen（推荐） screen -S nginx_alog .</description></item><item><title>彩虹聚合DNS管理系统部署教程</title><link>https://blog.lufei.de/p/477/</link><pubDate>Sun, 28 Sep 2025 14:04:03 +0800</pubDate><guid>https://blog.lufei.de/p/477/</guid><description>项目： github.com/netcccyun/dnsmgr
+# 方法1：使用nohup nohup ./nginx_alog log=/var/log/nginx/access.log logkeep=375 token=123 conf=/etc/nginx/nginx.conf &amp;gt; nginx_alog.</description></item><item><title>彩虹聚合DNS管理系统部署教程</title><link>https://blog.lufei.de/p/477/</link><pubDate>Sun, 28 Sep 2025 14:04:03 +0800</pubDate><guid>https://blog.lufei.de/p/477/</guid><description>项目： github.com/netcccyun/dnsmgr
 系统：推荐 Debian12
 安装docker curl -fsSL https://get.docker.com -o get-docker.sh &amp;amp;&amp;amp; sh get-docker.sh 检测是否安装
 docker --version docker compose version 创建目录 # 创建项目根目录 mkdir dnsmgr-deploy cd dnsmgr-deploy # 创建必要的目录结构 mkdir -p ./web mkdir -p ./mysql/conf mkdir -p ./mysql/logs mkdir -p ./mysql/data 配置MySQL文件 vim mysql/conf/my.cnf 在 my.cnf 文件中添加以下内容：
