@@ -20,7 +20,8 @@ services: dnsmgr-web: container_name: dnsmgr-web stdin_open: true tty: true port
 使用场景：网站反代
 前提：后端站点要配置好证书，绑定域名
 域名解析到安装haproxy服务器的ip上
-找一台线路还不错的服务器按照以下方式进行
+一键脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/fd-haproxy.sh &amp;amp;&amp;amp; chmod +x fd-haproxy.sh &amp;amp;&amp;amp; ./fd-haproxy.sh 找一台线路还不错的服务器按照以下方式进行
 HAProxy的安装 apt install haproxy -y 安装完毕后，启用haproxy进程
 systemctl start haproxy systemctl enable haproxy HAProxy的配置文件地址默认为/etc/haproxy/haproxy.cfg接下来，我们要编辑这个文件，
 nano /etc/haproxy/haproxy.cfg 配置HAProxy前后端 反代后端站点的80和443端口，仅修改后端服务器ip即可
