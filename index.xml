@@ -3,17 +3,26 @@ read -p &amp;#34;请输入想要的快捷命令名称 (如: cm, caddy, mgr): &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>Nginx ACME 自动化管理脚本，证书自动续签</title><link>https://blog.lufei.de/p/479/</link><pubDate>Wed, 01 Oct 2025 23:25:03 +0800</pubDate><guid>https://blog.lufei.de/p/479/</guid><description>前言 系统推荐：debian12
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>docker端口白名单脚本</title><link>https://blog.lufei.de/p/480/</link><pubDate>Fri, 03 Oct 2025 11:40:17 +0800</pubDate><guid>https://blog.lufei.de/p/480/</guid><description>系统推荐：debian12
+场景 在部署docker项目的时候，也要注意安全性，禁止通过ip:端口的方式访问，可以通过添加
+127.0.0.1，本地回环的方式，然后域名反代，但是如果要作为后端，需要开放公网访问的，所以需要通过白名单ip的访问方式更安全，所以就有了此脚本
+用法 docker端口白名单脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/allow_ips.sh &amp;amp;&amp;amp; chmod +x allow_ips.sh &amp;amp;&amp;amp; ./allow_ips.sh 首次运行会检测netfilter-persistent是否安装，没有的会自动安装
+用法
+# 1) ./allow_ips.sh &amp;lt;端口&amp;gt; &amp;lt;ip1&amp;gt; &amp;lt;ip2&amp;gt; ... # 添加规则 # 2) ./allow_ips.sh list # 查看规则 # 3) ./allow_ips.sh clear &amp;lt;端口&amp;gt; # 清理指定端口的规则 # 4) ./allow_ips.sh save # 手动保存规则 # 5) ./allow_ips.sh restore # 恢复规则（开机自启可用） 例如发行 5521端口，仅6.6.6.6可以访问
+./allow_ips.sh 5521 6.6.6.6 多个ip
+./allow_ips.sh 5521 6.6.6.6 3.3.3.3 查看规则
+./allow_ips.sh list 或者
+sudo iptables -L DOCKER-USER -n 反代脚本（nginx） 配合我的nginx反代脚本，自动签发证书和续签，当然你也可以使用caddy，他们的区别我不清楚，生产环境我更愿意使用nginx</description></item><item><title>Nginx ACME 自动化管理脚本，证书自动续签</title><link>https://blog.lufei.de/p/479/</link><pubDate>Wed, 01 Oct 2025 23:25:03 +0800</pubDate><guid>https://blog.lufei.de/p/479/</guid><description>前言 系统推荐：debian12
 服务器要开放80端口
 nginx版本1.25以上
-可能需要在源站目录创建/.well-known/acme-challenge/
 一键脚本，不保证100%运行无错，推荐手动
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-manager.sh &amp;amp;&amp;amp; chmod +x nginx-acme-manager.sh &amp;amp;&amp;amp; ./nginx-acme-manager.sh 以下为手动操作
 安装依赖 sudo apt update sudo apt install -y build-essential libpcre3-dev zlib1g-dev libssl-dev pkg-config libclang-dev git wget curl 安装 Rust 工具链：
 curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh source $HOME/.cargo/env 创建目录结构
 mkdir -pv /app/nginx/{logs,conf,cache,acme} /app/nginx-build cd /app/nginx-build 获取源码 下载 ACME 模块：
 git clone https://github.com/nginx/nginx-acme.git /app/nginx-build/nginx-acme 下载并解压 NGINX 源码（推荐稳定版 1.28.0）：
-wget https://nginx.org/download/nginx-1.28.0.tar.gz tar -zxf nginx-1.</description></item><item><title>nginx日志分析工具</title><link>https://blog.lufei.de/p/478/</link><pubDate>Mon, 29 Sep 2025 05:27:05 +0800</pubDate><guid>https://blog.lufei.de/p/478/</guid><description>转载：https://ros6.com/?action=show&amp;amp;id=264
+wget https://nginx.org/download/nginx-1.28.0.tar.gz tar -zxf nginx-1.28.0.tar.gz 编译 NGINX + ACME 模块 大概5分钟</description></item><item><title>nginx日志分析工具</title><link>https://blog.lufei.de/p/478/</link><pubDate>Mon, 29 Sep 2025 05:27:05 +0800</pubDate><guid>https://blog.lufei.de/p/478/</guid><description>转载：https://ros6.com/?action=show&amp;amp;id=264
 预览
 防火墙 确保876端口开放
 # 如果使用ufw ufw allow 876 # 如果使用iptables iptables -A INPUT -p tcp --dport 876 -j ACCEPT 日志格式 首先查询 nginx.conf 所在目录
