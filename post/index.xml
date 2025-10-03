@@ -4,8 +4,7 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>docker端口白名单脚本</title><link>https://blog.lufei.de/p/480/</link><pubDate>Fri, 03 Oct 2025 11:40:17 +0800</pubDate><guid>https://blog.lufei.de/p/480/</guid><description>系统推荐：debian12
-场景 在部署docker项目的时候，也要注意安全性，禁止通过ip:端口的方式访问，可以通过添加
-127.0.0.1，本地回环的方式，然后域名反代，但是如果要作为后端，需要开放公网访问的，所以需要通过白名单ip的访问方式更安全，所以就有了此脚本
+场景 在部署docker项目的时候，也要注意安全性，禁止通过ip:端口的方式访问，可以通过添加白名单ip的方式
 用法 docker端口白名单脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/allow_ips.sh &amp;amp;&amp;amp; chmod +x allow_ips.sh &amp;amp;&amp;amp; ./allow_ips.sh 首次运行会检测netfilter-persistent是否安装，没有的会自动安装
 用法
