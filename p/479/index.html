@@ -1,5 +1,5 @@
 <!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="前言 系统推荐：debian12 服务器要开放80端口 nginx版本1.25以上 一键脚本，不保证100%运行无错，推荐手动 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-manager.sh && chmod +x nginx-acme-manager.sh && ./nginx-acme-manager.sh 以下为手动操作 安装依赖 sudo apt update sudo apt install -y build-essential libpcre3-dev zlib1g-dev libssl-dev pkg-config libclang-dev git wget curl 安装 Rust 工具链： curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh source $HOME/.cargo/env 创建目录结构 mkdir -pv /app/nginx/{logs,conf,cache,acme} /app/nginx-build cd /app/nginx-build 获取源码 下载 ACME 模块： git clone https://github.com/nginx/nginx-acme.git /app/nginx-build/nginx-acme 下载并解压 NGINX 源码（推荐稳定版 1.28.0）： wget https://nginx.org/download/nginx-1.28.0.tar.gz tar -zxf nginx-1.28.0.tar.gz 编译 NGINX + ACME 模块 大概5分钟"><title>Nginx ACME 自动化管理脚本，证书自动续签</title>
-<link rel=canonical href=https://blog.lufei.de/p/479/><link rel=stylesheet href=/scss/style.min.854e34c0d49cd05dfb69d11f315f89d76adcdf82c7f2d2fc9e8e87cbfc5906f9.css><meta property='og:title' content="Nginx ACME 自动化管理脚本，证书自动续签"><meta property='og:description' content="前言 系统推荐：debian12 服务器要开放80端口 nginx版本1.25以上 一键脚本，不保证100%运行无错，推荐手动 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-manager.sh && chmod +x nginx-acme-manager.sh && ./nginx-acme-manager.sh 以下为手动操作 安装依赖 sudo apt update sudo apt install -y build-essential libpcre3-dev zlib1g-dev libssl-dev pkg-config libclang-dev git wget curl 安装 Rust 工具链： curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh source $HOME/.cargo/env 创建目录结构 mkdir -pv /app/nginx/{logs,conf,cache,acme} /app/nginx-build cd /app/nginx-build 获取源码 下载 ACME 模块： git clone https://github.com/nginx/nginx-acme.git /app/nginx-build/nginx-acme 下载并解压 NGINX 源码（推荐稳定版 1.28.0）： wget https://nginx.org/download/nginx-1.28.0.tar.gz tar -zxf nginx-1.28.0.tar.gz 编译 NGINX + ACME 模块 大概5分钟"><meta property='og:url' content='https://blog.lufei.de/p/479/'><meta property='og:site_name' content='路飞博客'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2025-10-01T23:25:03+08:00'><meta property='article:modified_time' content='2025-10-03T16:08:18+00:00'><meta name=twitter:title content="Nginx ACME 自动化管理脚本，证书自动续签"><meta name=twitter:description content="前言 系统推荐：debian12 服务器要开放80端口 nginx版本1.25以上 一键脚本，不保证100%运行无错，推荐手动 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-manager.sh && chmod +x nginx-acme-manager.sh && ./nginx-acme-manager.sh 以下为手动操作 安装依赖 sudo apt update sudo apt install -y build-essential libpcre3-dev zlib1g-dev libssl-dev pkg-config libclang-dev git wget curl 安装 Rust 工具链： curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh source $HOME/.cargo/env 创建目录结构 mkdir -pv /app/nginx/{logs,conf,cache,acme} /app/nginx-build cd /app/nginx-build 获取源码 下载 ACME 模块： git clone https://github.com/nginx/nginx-acme.git /app/nginx-build/nginx-acme 下载并解压 NGINX 源码（推荐稳定版 1.28.0）： wget https://nginx.org/download/nginx-1.28.0.tar.gz tar -zxf nginx-1.28.0.tar.gz 编译 NGINX + ACME 模块 大概5分钟"><link rel="shortcut icon" href=/favicon.ico><link rel=stylesheet href=https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css><link rel=stylesheet href=https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css><link rel=stylesheet href=https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css><style>#scroll-to-top,#search-button{display:none;position:fixed;right:30px;z-index:99;border:none;outline:none;background-color:transparent;color:#555;cursor:pointer;padding:10px;transition:color .3s}#scroll-to-top:hover,#search-button:hover{color:#333}#scroll-to-top{bottom:20px}#search-button{bottom:80px}.cat-icon{width:40px;height:40px}@media(min-width:768px){#search-button{display:none!important}}@media(max-width:767px){#search-button{display:block}}</style><button onclick=topFunction() id=scroll-to-top title=回到顶部>
+<link rel=canonical href=https://blog.lufei.de/p/479/><link rel=stylesheet href=/scss/style.min.854e34c0d49cd05dfb69d11f315f89d76adcdf82c7f2d2fc9e8e87cbfc5906f9.css><meta property='og:title' content="Nginx ACME 自动化管理脚本，证书自动续签"><meta property='og:description' content="前言 系统推荐：debian12 服务器要开放80端口 nginx版本1.25以上 一键脚本，不保证100%运行无错，推荐手动 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-manager.sh && chmod +x nginx-acme-manager.sh && ./nginx-acme-manager.sh 以下为手动操作 安装依赖 sudo apt update sudo apt install -y build-essential libpcre3-dev zlib1g-dev libssl-dev pkg-config libclang-dev git wget curl 安装 Rust 工具链： curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh source $HOME/.cargo/env 创建目录结构 mkdir -pv /app/nginx/{logs,conf,cache,acme} /app/nginx-build cd /app/nginx-build 获取源码 下载 ACME 模块： git clone https://github.com/nginx/nginx-acme.git /app/nginx-build/nginx-acme 下载并解压 NGINX 源码（推荐稳定版 1.28.0）： wget https://nginx.org/download/nginx-1.28.0.tar.gz tar -zxf nginx-1.28.0.tar.gz 编译 NGINX + ACME 模块 大概5分钟"><meta property='og:url' content='https://blog.lufei.de/p/479/'><meta property='og:site_name' content='路飞博客'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2025-10-01T23:25:03+08:00'><meta property='article:modified_time' content='2025-10-04T11:11:03+00:00'><meta name=twitter:title content="Nginx ACME 自动化管理脚本，证书自动续签"><meta name=twitter:description content="前言 系统推荐：debian12 服务器要开放80端口 nginx版本1.25以上 一键脚本，不保证100%运行无错，推荐手动 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-manager.sh && chmod +x nginx-acme-manager.sh && ./nginx-acme-manager.sh 以下为手动操作 安装依赖 sudo apt update sudo apt install -y build-essential libpcre3-dev zlib1g-dev libssl-dev pkg-config libclang-dev git wget curl 安装 Rust 工具链： curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh source $HOME/.cargo/env 创建目录结构 mkdir -pv /app/nginx/{logs,conf,cache,acme} /app/nginx-build cd /app/nginx-build 获取源码 下载 ACME 模块： git clone https://github.com/nginx/nginx-acme.git /app/nginx-build/nginx-acme 下载并解压 NGINX 源码（推荐稳定版 1.28.0）： wget https://nginx.org/download/nginx-1.28.0.tar.gz tar -zxf nginx-1.28.0.tar.gz 编译 NGINX + ACME 模块 大概5分钟"><link rel="shortcut icon" href=/favicon.ico><link rel=stylesheet href=https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css><link rel=stylesheet href=https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css><link rel=stylesheet href=https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css><style>#scroll-to-top,#search-button{display:none;position:fixed;right:30px;z-index:99;border:none;outline:none;background-color:transparent;color:#555;cursor:pointer;padding:10px;transition:color .3s}#scroll-to-top:hover,#search-button:hover{color:#333}#scroll-to-top{bottom:20px}#search-button{bottom:80px}.cat-icon{width:40px;height:40px}@media(min-width:768px){#search-button{display:none!important}}@media(max-width:767px){#search-button{display:block}}</style><button onclick=topFunction() id=scroll-to-top title=回到顶部>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-rounded-arrow-up-filled" width="43" height="43" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2c-.218.0-.432.002-.642.005l-.616.017-.299.013-.579.034-.553.046c-4.785.464-6.732 2.411-7.196 7.196l-.046.553-.034.579c-.005.098-.01.198-.013.299l-.017.616-.004.318L2 12c0 .218.002.432.005.642l.017.616.013.299.034.579.046.553c.464 4.785 2.411 6.732 7.196 7.196l.553.046.579.034c.098.005.198.01.299.013l.616.017L12 22l.642-.005.616-.017.299-.013.579-.034.553-.046c4.785-.464 6.732-2.411 7.196-7.196l.046-.553.034-.579c.005-.098.01-.198.013-.299l.017-.616L22 12l-.005-.642-.017-.616-.013-.299-.034-.579-.046-.553c-.464-4.785-2.411-6.732-7.196-7.196l-.553-.046-.579-.034a28.058 28.058.0 00-.299-.013l-.616-.017-.318-.004L12 2zm-.148 5.011.058-.007L12 7l.075.003.126.017.111.03.111.044.098.052.104.074.082.073 4 4a1 1 0 01-1.32 1.497l-.094-.083L13 10.415V16a1 1 0 01-1.993.117L11 16v-5.585l-2.293 2.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 01-.083-1.32l.083-.094 4-4a.927.927.0 01.112-.097l.11-.071.114-.054.105-.035.118-.025z" fill="currentcolor" stroke-width="0"/></svg>
 </button>
 <button onclick=openSearch() id=search-button title=搜索>
@@ -17,7 +17,7 @@
 <span>深色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#前言>前言</a></li><li><a href=#安装依赖>安装依赖</a></li><li><a href=#获取源码><strong>获取源码</strong></a></li><li><a href=#编译-nginx--acme-模块>编译 NGINX + ACME 模块</a></li><li><a href=#全局nginx配置>全局nginx配置</a></li><li><a href=#站点配置>站点配置</a></li><li><a href=#验证和重载>验证和重载</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/p/479/>Nginx ACME 自动化管理脚本，证书自动续签</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>2025-10-01</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>阅读时长: 4 分钟</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h4L18.5 9.5a2.828 2.828.0 10-4-4L4 16v4"/><path d="M13.5 6.5l4 4"/></svg>
-<time class=article-time--reading>字数: 663字</time></div></footer></div></header><section class=article-content><h3 id=前言>前言</h3><blockquote><p>系统推荐：debian12</p><p>服务器要开放80端口</p><p>nginx版本1.25以上</p></blockquote><p>一键脚本，不保证100%运行无错，推荐手动</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-manager.sh &amp;&amp; chmod +x nginx-acme-manager.sh &amp;&amp; ./nginx-acme-manager.sh
+<time class=article-time--reading>字数: 698字</time></div></footer></div></header><section class=article-content><h3 id=前言>前言</h3><blockquote><p>系统推荐：debian12</p><p>服务器要开放80端口</p><p>nginx版本1.25以上</p></blockquote><p>一键脚本，不保证100%运行无错，推荐手动</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-manager.sh &amp;&amp; chmod +x nginx-acme-manager.sh &amp;&amp; ./nginx-acme-manager.sh
 </span></span></code></pre></div><p>以下为手动操作</p><h3 id=安装依赖>安装依赖</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>sudo apt update
 </span></span><span class=line><span class=cl>sudo apt install -y build-essential libpcre3-dev zlib1g-dev libssl-dev pkg-config libclang-dev git wget curl
 </span></span></code></pre></div><p>安装 Rust 工具链：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -95,11 +95,11 @@
 </span></span><span class=line><span class=cl>    <span class=c1># === 客户端请求体配置 ===</span>
 </span></span><span class=line><span class=cl>    <span class=n>client_max_body_size</span> <span class=mi>100</span><span class=n>m</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>    <span class=n>client_body_buffer_size</span> <span class=mi>256</span><span class=n>k</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>client_body_timeout</span> <span class=mi>60</span><span class=n>s</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>client_body_timeout</span> <span class=mi>30</span><span class=n>s</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>	
 </span></span><span class=line><span class=cl>    <span class=c1># === 客户端请求头配置 ===</span>
 </span></span><span class=line><span class=cl>    <span class=n>client_header_buffer_size</span> <span class=mi>4</span><span class=n>k</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>large_client_header_buffers</span> <span class=mi>8</span> <span class=mi>16</span><span class=n>k</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=n>large_client_header_buffers</span> <span class=mi>4</span> <span class=mi>16</span><span class=n>k</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>    <span class=n>client_header_timeout</span> <span class=mi>10</span><span class=n>s</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>    
 </span></span><span class=line><span class=cl>    <span class=c1># === 临时文件路径 ===</span>
@@ -185,105 +185,117 @@
 </span></span><span class=line><span class=cl>    <span class=n>include</span> <span class=n>conf</span><span class=o>.</span><span class=n>d</span><span class=o>/*.</span><span class=n>conf</span><span class=p>;</span>
 </span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span></code></pre></div><h3 id=站点配置>站点配置</h3><p>站点路径：/app/nginx/conf/conf.d</p><blockquote><p>把6.6.6.6:80，改成你要反代的源站ip和端口</p><p>2345_com是上游服务器（源站）名称，每个站点不一样，避免冲突，</p><p>backup是备用服务器的意思，源站挂了，备用顶上，需要的话移除注释</p><p>证书目录 /app/nginx/acme/letsencrypt</p></blockquote><p>示例：2345.com, <a class=link href=https://www.2345.com target=_blank rel=noopener>www.2345.com</a>, 根域跳转到www</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>nano /app/nginx/conf/conf.d/2345.com.conf
-</span></span></code></pre></div><p>粘贴以下内容</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>upstream</span> <span class=mi>2345</span><span class=n>_com</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=n>server</span> <span class=mf>6.6</span><span class=o>.</span><span class=mf>6.6</span><span class=p>:</span><span class=mi>80</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=c1>#server 3.2.3.8:80 backup;</span>
-</span></span><span class=line><span class=cl>    <span class=n>keepalive</span> <span class=mi>32</span><span class=p>;</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>粘贴以下内容</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>upstream 2345_com {
+</span></span><span class=line><span class=cl>    server 6.6.6.6:80;
+</span></span><span class=line><span class=cl>    #server 3.2.3.8:80 backup;
+</span></span><span class=line><span class=cl>    keepalive 32;
+</span></span><span class=line><span class=cl>}
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=n>server</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=n>listen</span> <span class=mi>443</span> <span class=n>ssl</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>listen</span> <span class=p>[::]:</span><span class=mi>443</span> <span class=n>ssl</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>http2</span> <span class=n>on</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>server {
+</span></span><span class=line><span class=cl>    listen 443 ssl;
+</span></span><span class=line><span class=cl>    listen [::]:443 ssl;
+</span></span><span class=line><span class=cl>    http2 on;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>server_name</span> <span class=mf>2345.</span><span class=n>com</span> <span class=n>www</span><span class=o>.</span><span class=mf>2345.</span><span class=n>com</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    server_name 2345.com www.2345.com;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=c1># 根域名跳转</span>
-</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=p>(</span><span class=o>$</span><span class=n>host</span> <span class=o>=</span> <span class=mf>2345.</span><span class=n>com</span><span class=p>)</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=mi>301</span> <span class=n>https</span><span class=p>:</span><span class=o>//</span><span class=n>www</span><span class=o>.</span><span class=mf>2345.</span><span class=n>com</span><span class=o>$</span><span class=n>request_uri</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    # 根域名跳转
+</span></span><span class=line><span class=cl>    if ($host = 2345.com) {
+</span></span><span class=line><span class=cl>        return 301 https://www.2345.com$request_uri;
+</span></span><span class=line><span class=cl>    }
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>access_log</span> <span class=n>logs</span><span class=o>/</span><span class=mf>2345.</span><span class=n>com</span><span class=o>-</span><span class=n>access</span><span class=o>.</span><span class=n>log</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>error_log</span> <span class=n>logs</span><span class=o>/</span><span class=mf>2345.</span><span class=n>com</span><span class=o>-</span><span class=n>error</span><span class=o>.</span><span class=n>log</span> <span class=n>warn</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    access_log logs/2345.com-access.log;
+</span></span><span class=line><span class=cl>    error_log logs/2345.com-error.log warn;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>acme_certificate</span> <span class=n>letsencrypt</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>ssl_certificate</span> <span class=o>$</span><span class=n>acme_certificate</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>ssl_certificate_key</span> <span class=o>$</span><span class=n>acme_certificate_key</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>ssl_certificate_cache</span> <span class=nb>max</span><span class=o>=</span><span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    acme_certificate letsencrypt;
+</span></span><span class=line><span class=cl>    ssl_certificate $acme_certificate;
+</span></span><span class=line><span class=cl>    ssl_certificate_key $acme_certificate_key;
+</span></span><span class=line><span class=cl>    ssl_certificate_cache max=2;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>add_header</span> <span class=n>Strict</span><span class=o>-</span><span class=n>Transport</span><span class=o>-</span><span class=n>Security</span> <span class=s2>&#34;max-age=31536000; includeSubDomains; preload&#34;</span> <span class=n>always</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    # 安全头
+</span></span><span class=line><span class=cl>    add_header X-Frame-Options &#34;SAMEORIGIN&#34; always;
+</span></span><span class=line><span class=cl>    add_header X-Content-Type-Options &#34;nosniff&#34; always;
+</span></span><span class=line><span class=cl>    add_header X-XSS-Protection &#34;1; mode=block&#34; always;
+</span></span><span class=line><span class=cl>    add_header Referrer-Policy &#34;strict-origin-when-cross-origin&#34; always;
+</span></span><span class=line><span class=cl>    add_header Strict-Transport-Security &#34;max-age=31536000&#34; always;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>location</span> <span class=o>/</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_pass</span> <span class=n>http</span><span class=p>:</span><span class=o>//</span><span class=mi>2345</span><span class=n>_com</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_http_version</span> <span class=mf>1.1</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_set_header</span> <span class=n>Connection</span> <span class=s2>&#34;&#34;</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    location / {
+</span></span><span class=line><span class=cl>        proxy_pass http://2345_com;
+</span></span><span class=line><span class=cl>        proxy_http_version 1.1;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1># 代理超时与重试</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_connect_timeout</span> <span class=mi>5</span><span class=n>s</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_send_timeout</span> <span class=mi>15</span><span class=n>s</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_read_timeout</span> <span class=mi>15</span><span class=n>s</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_next_upstream</span> <span class=n>error</span> <span class=n>timeout</span> <span class=n>http_502</span> <span class=n>http_503</span> <span class=n>http_504</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>        # 代理超时与重试
+</span></span><span class=line><span class=cl>        proxy_connect_timeout 5s;
+</span></span><span class=line><span class=cl>        proxy_send_timeout 15s;
+</span></span><span class=line><span class=cl>        proxy_read_timeout 15s;
+</span></span><span class=line><span class=cl>        proxy_next_upstream error timeout http_502 http_503 http_504;
+</span></span><span class=line><span class=cl>    }
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>location</span> <span class=o>^~</span> <span class=o>/.</span><span class=n>well</span><span class=o>-</span><span class=n>known</span><span class=o>/</span><span class=n>acme</span><span class=o>-</span><span class=n>challenge</span><span class=o>/</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=n>root</span> <span class=o>/</span><span class=n>app</span><span class=o>/</span><span class=n>nginx</span><span class=o>/</span><span class=n>html</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>allow</span> <span class=n>all</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    location ~ /\. {
+</span></span><span class=line><span class=cl>        deny all;
+</span></span><span class=line><span class=cl>        access_log off;
+</span></span><span class=line><span class=cl>        log_not_found off;
+</span></span><span class=line><span class=cl>    }
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>error_page</span> <span class=mi>500</span> <span class=mi>502</span> <span class=mi>503</span> <span class=mi>504</span> <span class=o>/</span><span class=mi>50</span><span class=n>x</span><span class=o>.</span><span class=n>html</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>location</span> <span class=o>=</span> <span class=o>/</span><span class=mi>50</span><span class=n>x</span><span class=o>.</span><span class=n>html</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=n>root</span> <span class=o>/</span><span class=n>app</span><span class=o>/</span><span class=n>nginx</span><span class=o>/</span><span class=n>html</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>internal</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>    error_page 500 502 503 504 /50x.html;
+</span></span><span class=line><span class=cl>    location = /50x.html {
+</span></span><span class=line><span class=cl>        root /app/nginx/html;
+</span></span><span class=line><span class=cl>        internal;
+</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>}
 </span></span></code></pre></div><p>查看证书：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>cd /app/nginx
 </span></span><span class=line><span class=cl>tree acme/ modules/
 </span></span></code></pre></div><p>需要安装tree</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>apt-get update &amp;&amp; apt-get install -y tree
-</span></span></code></pre></div><p>单域名没有跳转配置</p><p>示例：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>upstream</span> <span class=n>tv_2345_com</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=n>server</span> <span class=mf>6.6</span><span class=o>.</span><span class=mf>6.6</span><span class=p>:</span><span class=mi>80</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=c1>#server 3.2.3.8:80 backup;</span>
-</span></span><span class=line><span class=cl>    <span class=n>keepalive</span> <span class=mi>32</span><span class=p>;</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>单域名没有跳转配置</p><p>示例：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>upstream tv_2345_com {
+</span></span><span class=line><span class=cl>    server 6.6.6.6:80;
+</span></span><span class=line><span class=cl>	#server 3.2.3.8:80 backup;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=n>server</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>    <span class=n>listen</span> <span class=mi>443</span> <span class=n>ssl</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>listen</span> <span class=p>[::]:</span><span class=mi>443</span> <span class=n>ssl</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>http2</span> <span class=n>on</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    keepalive 32;
+</span></span><span class=line><span class=cl>}
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>server_name</span> <span class=n>tv</span><span class=o>.</span><span class=mf>2345.</span><span class=n>com</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>server {
+</span></span><span class=line><span class=cl>    listen 443 ssl;
+</span></span><span class=line><span class=cl>    listen [::]:443 ssl;
+</span></span><span class=line><span class=cl>    http2 on;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>access_log</span> <span class=n>logs</span><span class=o>/</span><span class=n>tv</span><span class=o>.</span><span class=mf>2345.</span><span class=n>com</span><span class=o>-</span><span class=n>access</span><span class=o>.</span><span class=n>log</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>error_log</span> <span class=n>logs</span><span class=o>/</span><span class=n>tv</span><span class=o>.</span><span class=mf>2345.</span><span class=n>com</span><span class=o>-</span><span class=n>error</span><span class=o>.</span><span class=n>log</span> <span class=n>warn</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    server_name tv.2345.com;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>acme_certificate</span> <span class=n>letsencrypt</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>ssl_certificate</span> <span class=o>$</span><span class=n>acme_certificate</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>ssl_certificate_key</span> <span class=o>$</span><span class=n>acme_certificate_key</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>ssl_certificate_cache</span> <span class=nb>max</span><span class=o>=</span><span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    access_log logs/tv.2345.com-access.log;
+</span></span><span class=line><span class=cl>    error_log logs/tv.2345.com-error.log warn;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>add_header</span> <span class=n>Strict</span><span class=o>-</span><span class=n>Transport</span><span class=o>-</span><span class=n>Security</span> <span class=s2>&#34;max-age=31536000; includeSubDomains; preload&#34;</span> <span class=n>always</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    acme_certificate letsencrypt;
+</span></span><span class=line><span class=cl>    ssl_certificate $acme_certificate;
+</span></span><span class=line><span class=cl>    ssl_certificate_key $acme_certificate_key;
+</span></span><span class=line><span class=cl>    ssl_certificate_cache max=2;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>location</span> <span class=o>/</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_pass</span> <span class=n>http</span><span class=p>:</span><span class=o>//</span><span class=n>tv_2345_com</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_http_version</span> <span class=mf>1.1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    # 安全头
+</span></span><span class=line><span class=cl>    add_header X-Frame-Options &#34;SAMEORIGIN&#34; always;
+</span></span><span class=line><span class=cl>    add_header X-Content-Type-Options &#34;nosniff&#34; always;
+</span></span><span class=line><span class=cl>    add_header X-XSS-Protection &#34;1; mode=block&#34; always;
+</span></span><span class=line><span class=cl>    add_header Referrer-Policy &#34;strict-origin-when-cross-origin&#34; always;
+</span></span><span class=line><span class=cl>    add_header Strict-Transport-Security &#34;max-age=31536000&#34; always;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        <span class=c1># 代理超时与重试</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_connect_timeout</span> <span class=mi>5</span><span class=n>s</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_send_timeout</span> <span class=mi>15</span><span class=n>s</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_read_timeout</span> <span class=mi>15</span><span class=n>s</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>proxy_next_upstream</span> <span class=n>error</span> <span class=n>timeout</span> <span class=n>http_502</span> <span class=n>http_503</span> <span class=n>http_504</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    location / {
+</span></span><span class=line><span class=cl>        proxy_pass http://tv_2345_com;
+</span></span><span class=line><span class=cl>        proxy_http_version 1.1;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>location</span> <span class=o>^~</span> <span class=o>/.</span><span class=n>well</span><span class=o>-</span><span class=n>known</span><span class=o>/</span><span class=n>acme</span><span class=o>-</span><span class=n>challenge</span><span class=o>/</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=n>root</span> <span class=o>/</span><span class=n>app</span><span class=o>/</span><span class=n>nginx</span><span class=o>/</span><span class=n>html</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>allow</span> <span class=n>all</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>        # 代理超时与重试
+</span></span><span class=line><span class=cl>        proxy_connect_timeout 5s;
+</span></span><span class=line><span class=cl>        proxy_send_timeout 15s;
+</span></span><span class=line><span class=cl>        proxy_read_timeout 15s;
+</span></span><span class=line><span class=cl>        proxy_next_upstream error timeout http_502 http_503 http_504;
+</span></span><span class=line><span class=cl>    }
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    <span class=n>error_page</span> <span class=mi>500</span> <span class=mi>502</span> <span class=mi>503</span> <span class=mi>504</span> <span class=o>/</span><span class=mi>50</span><span class=n>x</span><span class=o>.</span><span class=n>html</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=n>location</span> <span class=o>=</span> <span class=o>/</span><span class=mi>50</span><span class=n>x</span><span class=o>.</span><span class=n>html</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>        <span class=n>root</span> <span class=o>/</span><span class=n>app</span><span class=o>/</span><span class=n>nginx</span><span class=o>/</span><span class=n>html</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>        <span class=n>internal</span><span class=p>;</span>
-</span></span><span class=line><span class=cl>    <span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>    location ~ /\. {
+</span></span><span class=line><span class=cl>        deny all;
+</span></span><span class=line><span class=cl>        access_log off;
+</span></span><span class=line><span class=cl>        log_not_found off;
+</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    error_page 500 502 503 504 /50x.html;
+</span></span><span class=line><span class=cl>    location = /50x.html {
+</span></span><span class=line><span class=cl>        root /app/nginx/html;
+</span></span><span class=line><span class=cl>        internal;
+</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>}
 </span></span></code></pre></div><h3 id=验证和重载>验证和重载</h3><p>验证配置文件语法</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>cd /app/nginx/
 </span></span><span class=line><span class=cl>./sbin/nginx -c conf/nginx.conf -t
 </span></span></code></pre></div><p>提示以下信息正确</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>nginx: the configuration file /app/nginx/conf/nginx.conf syntax is ok
@@ -294,7 +306,7 @@
 </span></span><span class=line><span class=cl><span class=o>./</span><span class=n>sbin</span><span class=o>/</span><span class=n>nginx</span> <span class=o>-</span><span class=n>c</span> <span class=n>conf</span><span class=o>/</span><span class=n>nginx</span><span class=o>.</span><span class=n>conf</span> <span class=o>-</span><span class=n>s</span> <span class=n>reload</span>
 </span></span></code></pre></div></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>CC BY-NC-SA 4.0 转载请注明</span></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<span>最后更新于 2025-10-03 16:08</span></section></footer></article><footer class=site-footer><section class=powerby><a target=_blank title=clarity统计 href=https://clarity.microsoft.com/projects>clarity统计</a><br></section><section class=copyright><br>共手书71.6k字·共 467篇文章</br><span><p>本站已稳定运行
+<span>最后更新于 2025-10-04 11:11</span></section></footer></article><footer class=site-footer><section class=powerby><a target=_blank title=clarity统计 href=https://clarity.microsoft.com/projects>clarity统计</a><br></section><section class=copyright><br>共手书71.6k字·共 467篇文章</br><span><p>本站已稳定运行
 <span id=runningdays class=running-days></span>
 <script>function updateRunningTime(){const t=new Date("2023-07-25".replace(/-/g,"/")),n=new Date,e=n-t,s=Math.floor(e/(1e3*60*60*24)),o=Math.floor(e%(1e3*60*60*24)/(1e3*60*60)),i=Math.floor(e%(1e3*60*60)/(1e3*60)),a=Math.floor(e%(1e3*60)/1e3),r=`${s} 天 ${o} 小时 ${i} 分 ${a} 秒 `;document.getElementById("runningdays").innerHTML=r}setInterval(updateRunningTime,1e3),updateRunningTime()</script><br></section><a target=_blank href=https://github.com/CaiJimmy/hugo-theme-stack title=主题开源项目><img src=/img/github.svg alt>
 </a><a target=_blank href=https://gohugo.io/ title="由 HUGO 驱动"><img src=/img/hugo.svg alt>
