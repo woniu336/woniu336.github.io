@@ -10,8 +10,7 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/safe_cn_f
 ipset list bingbot 验证：过几个小时或几天后，你可以再次执行
 iptables -L -n -v | grep bingbot 若看到计数器（pkts 和 bytes）不为 0，则说明：
 ✅ Bing 爬虫确实访问并成功被放行。
-定时任务 crontab -e 添加：
-0 4 * * * /root/safe_cn_firewall.</description></item><item><title>docker端口白名单脚本</title><link>https://blog.lufei.de/p/480/</link><pubDate>Fri, 03 Oct 2025 11:40:17 +0800</pubDate><guid>https://blog.lufei.de/p/480/</guid><description>系统推荐：debian12
+定时任务 (crontab -l ; echo &amp;#34;0 4 * * * /root/safe_cn_firewall.</description></item><item><title>docker端口白名单脚本</title><link>https://blog.lufei.de/p/480/</link><pubDate>Fri, 03 Oct 2025 11:40:17 +0800</pubDate><guid>https://blog.lufei.de/p/480/</guid><description>系统推荐：debian12
 场景 例如：A服务器部署了项目,仅B服务器可以反代，脚本在A服务器运行
 用法 docker端口白名单脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/allow_ips.sh &amp;amp;&amp;amp; chmod +x allow_ips.sh &amp;amp;&amp;amp; ./allow_ips.sh 首次运行会检测netfilter-persistent是否安装，没有的会自动安装
