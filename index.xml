@@ -3,7 +3,16 @@ read -p &amp;#34;请输入想要的快捷命令名称 (如: cm, caddy, mgr): &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>Caddy 性能优化：添加缓存插件的编译与配置</title><link>https://blog.lufei.de/p/485/</link><pubDate>Mon, 27 Oct 2025 15:34:43 +0800</pubDate><guid>https://blog.lufei.de/p/485/</guid><description>安装原版caddy 重要：避免后续出现什么意外，请先安装原版caddy，推荐使用我的一键安装脚本
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>Rclone 单向实时同步：A→B 服务器自动化方案</title><link>https://blog.lufei.de/p/486/</link><pubDate>Mon, 27 Oct 2025 20:02:02 +0800</pubDate><guid>https://blog.lufei.de/p/486/</guid><description>场景 A服务器同步内容到B服务器（单向同步）
+特点：
+本地文件变化 → 延迟 5 秒同步
+没有变化 → 每 1 小时强制同步一次
+安装 rclone 首先在服务器 A 安装 rclone, 使用以下命令安装
+sudo -v ; curl https://rclone.org/install.sh | sudo bash 生成密钥对 在服务器 A 生成密钥对，以及合并密钥，复制以下命令
+ssh-keygen -q -t rsa -b 4096 -C &amp;#34;rclone key&amp;#34; -N &amp;#34;&amp;#34; -f ~/.ssh/rclone cd ~/.ssh/ cat rclone* &amp;gt; rclone-merged 会在 /root/.ssh/ 目录下生成 rclone.pub，rclone，以及 rclone-merged 三个文件
+复制rclone.pub里面的内容，等下用到
+cat rclone.pub 在B服务器上运行以下命令,粘贴rclone.pub里面的内容（注意是在B服务器）
+read -p &amp;#34;请输入你的公钥内容: &amp;#34; PUBKEY &amp;amp;&amp;amp; mkdir -p /root/.ssh &amp;amp;&amp;amp; touch /root/.</description></item><item><title>Caddy 性能优化：添加缓存插件的编译与配置</title><link>https://blog.lufei.de/p/485/</link><pubDate>Mon, 27 Oct 2025 15:34:43 +0800</pubDate><guid>https://blog.lufei.de/p/485/</guid><description>安装原版caddy 重要：避免后续出现什么意外，请先安装原版caddy，推荐使用我的一键安装脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh 安装 Go wget https://go.dev/dl/go1.23.2.linux-amd64.tar.gz rm -rf /usr/local/go &amp;amp;&amp;amp; tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz 配置环境变量
 echo &amp;#39;export PATH=$PATH:/usr/local/go/bin&amp;#39; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc 验证安装
 go version 安装 xcaddy xcaddy 是 Caddy 的官方构建工具，用于编译带有自定义插件的 Caddy 版本。 让你把第三方模块（如缓存插件）编译进 Caddy 二进制文件中。
