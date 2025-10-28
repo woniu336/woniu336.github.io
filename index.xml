@@ -12,14 +12,14 @@ sudo -v ; curl https://rclone.org/install.sh | sudo bash 生成密钥对 在服�
 ssh-keygen -q -t rsa -b 4096 -C &amp;#34;rclone key&amp;#34; -N &amp;#34;&amp;#34; -f ~/.ssh/rclone cd ~/.ssh/ cat rclone* &amp;gt; rclone-merged 会在 /root/.ssh/ 目录下生成 rclone.pub，rclone，以及 rclone-merged 三个文件
 复制rclone.pub里面的内容，等下用到
 cat rclone.pub 在B服务器上运行以下命令,粘贴rclone.pub里面的内容（注意是在B服务器）
-read -p &amp;#34;请输入你的公钥内容: &amp;#34; PUBKEY &amp;amp;&amp;amp; mkdir -p /root/.ssh &amp;amp;&amp;amp; touch /root/.</description></item><item><title>Caddy 性能优化：添加缓存插件的编译与配置</title><link>https://blog.lufei.de/p/485/</link><pubDate>Mon, 27 Oct 2025 15:34:43 +0800</pubDate><guid>https://blog.lufei.de/p/485/</guid><description>安装原版caddy 重要：避免后续出现什么意外，请先安装原版caddy，推荐使用我的一键安装脚本
+read -p &amp;#34;请输入你的公钥内容: &amp;#34; PUBKEY &amp;amp;&amp;amp; mkdir -p /root/.ssh &amp;amp;&amp;amp; touch /root/.</description></item><item><title>Caddy 性能优化：添加缓存插件的编译与配置</title><link>https://blog.lufei.de/p/485/</link><pubDate>Mon, 27 Oct 2025 15:34:43 +0800</pubDate><guid>https://blog.lufei.de/p/485/</guid><description>一键脚本 无需编译，直接使用已经编译好的caddy替换掉原版caddy，前提是要先安装原版caddy
+curl -fsSL https://raw.githubusercontent.com/woniu336/open_shell/main/caddy-cache.sh | bash 安装原版caddy 重要：避免后续出现什么意外，请先安装原版caddy，推荐使用我的一键安装脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh 安装 Go wget https://go.dev/dl/go1.23.2.linux-amd64.tar.gz rm -rf /usr/local/go &amp;amp;&amp;amp; tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz 配置环境变量
 echo &amp;#39;export PATH=$PATH:/usr/local/go/bin&amp;#39; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc 验证安装
 go version 安装 xcaddy xcaddy 是 Caddy 的官方构建工具，用于编译带有自定义插件的 Caddy 版本。 让你把第三方模块（如缓存插件）编译进 Caddy 二进制文件中。
 使用 Go 安装（推荐）
 go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest 添加 Go bin 目录到 PATH
-echo &amp;#39;export PATH=$PATH:$HOME/go/bin&amp;#39; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc 验证安装
-xcaddy version 编译带缓存插件的 Caddy 创建构建目录</description></item><item><title>榛子图床加强版，包含r2配合rclone的同步功能教程</title><link>https://blog.lufei.de/p/483/</link><pubDate>Sat, 25 Oct 2025 23:26:35 +0800</pubDate><guid>https://blog.lufei.de/p/483/</guid><description>原项目 https://github.com/ceocok/fake-nodeimage
+echo &amp;#39;export PATH=$PATH:$HOME/go/bin&amp;#39; &amp;gt;&amp;gt; ~/.bashrc source ~/.</description></item><item><title>榛子图床加强版，包含r2配合rclone的同步功能教程</title><link>https://blog.lufei.de/p/483/</link><pubDate>Sat, 25 Oct 2025 23:26:35 +0800</pubDate><guid>https://blog.lufei.de/p/483/</guid><description>原项目 https://github.com/ceocok/fake-nodeimage
 特点 去重、图片命名缩短，默认压缩webp格式
 前端 因为是静态文件，部署到cf pages，然后自定义域名即可，就是这么简单
 下载压缩包传到cf pages即可
