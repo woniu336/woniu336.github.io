@@ -59,13 +59,13 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/allow_ips
 sudo iptables -L DOCKER-USER -n 反代脚本（nginx） 脚本在B服务器运行</description></item><item><title>Nginx ACME 自动化管理脚本，证书自动续签</title><link>https://blog.lufei.de/p/479/</link><pubDate>Wed, 01 Oct 2025 23:25:03 +0800</pubDate><guid>https://blog.lufei.de/p/479/</guid><description>前言 系统推荐：debian12
 服务器要开放80端口
 nginx版本1.25以上
-一键脚本，不保证100%运行无错，推荐手动
+一键脚本 ，安装的末尾提示输入邮箱，安装完成后记得运行一下启动nginx。
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-manager.sh &amp;amp;&amp;amp; chmod +x nginx-acme-manager.sh &amp;amp;&amp;amp; ./nginx-acme-manager.sh 以下为手动操作
 安装依赖 sudo apt update sudo apt install -y build-essential libpcre3-dev zlib1g-dev libssl-dev pkg-config libclang-dev git wget curl 安装 Rust 工具链：
 curl --proto &amp;#39;=https&amp;#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh source $HOME/.cargo/env 创建目录结构
 mkdir -pv /app/nginx/{logs,conf,cache,acme} /app/nginx-build cd /app/nginx-build 获取源码 下载 ACME 模块：
 git clone https://github.com/nginx/nginx-acme.git /app/nginx-build/nginx-acme 下载并解压 NGINX 源码（推荐稳定版 1.28.0）：
-wget https://nginx.org/download/nginx-1.28.0.tar.gz tar -zxf nginx-1.28.0.tar.gz 编译 NGINX + ACME 模块 大概5分钟</description></item><item><title>nginx日志分析工具</title><link>https://blog.lufei.de/p/478/</link><pubDate>Mon, 29 Sep 2025 05:27:05 +0800</pubDate><guid>https://blog.lufei.de/p/478/</guid><description>转载：https://ros6.com/?action=show&amp;amp;id=264
+wget https://nginx.org/download/nginx-1.28.0.tar.gz tar -zxf nginx-1.</description></item><item><title>nginx日志分析工具</title><link>https://blog.lufei.de/p/478/</link><pubDate>Mon, 29 Sep 2025 05:27:05 +0800</pubDate><guid>https://blog.lufei.de/p/478/</guid><description>转载：https://ros6.com/?action=show&amp;amp;id=264
 预览
 防火墙 确保876端口开放
 # 如果使用ufw ufw allow 876 # 如果使用iptables iptables -A INPUT -p tcp --dport 876 -j ACCEPT 日志格式 首先查询 nginx.conf 所在目录
