@@ -174,15 +174,15 @@ sudo systemctl enable --now fail2ban sudo systemctl enable --now rsyslog 检查�
 sudo systemctl status fail2ban sudo systemctl status rsyslog 配置 Fail2Ban
 sudo nano /etc/fail2ban/jail.local 粘贴以下内容，记得把 5522 改成你的SSH端口
 [sshd] ignoreip = 127.0.0.1/8 enabled = true filter = sshd port = 5522 maxretry = 3 findtime = 300 bantime = -1 banaction = ufw logpath = /var/log/auth.log 配置说明：</description></item><item><title>nginx一键反代</title><link>https://blog.lufei.de/p/457/</link><pubDate>Mon, 07 Jul 2025 12:26:10 +0800</pubDate><guid>https://blog.lufei.de/p/457/</guid><description>一键脚本
-bash &amp;lt;(curl -sL kejilion.sh) fd www.2345.com 192.168.1.2 2233 192.168.1.2 源站ip 2233 源站端口 www.2345.com 用户访问的域名 注意事项：
-多域名注意修改配置文件中的 server_name 字段，添加其他域名，
-证书要包含添加的域名，需要重新申请
-管理已有配置
+bash &amp;lt;(curl -sL kejilion.sh) fd 批量反代
+bash &amp;lt;(curl -sL kejilion.sh) fd [你的域名] [目标IP] [目标端口] bash &amp;lt;(curl -sL kejilion.sh) fd web1.example.com 123.123.123.123 8080 bash &amp;lt;(curl -sL kejilion.sh) fd web2.example.com 123.123.123.123 8060 如果需要根域重定向到www,先执行上面的批量反代命令，然后再执行重定向菜单
+注意事项：
+如果要开放80端口,查看iptables规则
+sudo iptables -L INPUT -n --line-numbers | grep 80 然后删除规则,假设前面的序号是3和2
+sudo iptables -D INPUT 3 sudo iptables -D INPUT 2 注意：
+要 先删除行号大的（3），再删小的（2），否则删除后行号会变动。 删除顺序错误会导致 No such rule 错误。 管理已有配置
 k web 重启生效
-docker exec nginx nginx -s reload 查询Nginx缓存大小
-docker exec nginx du -sh /var/cache/nginx/ 查询缓存文件数量
-docker exec nginx find /var/cache/nginx -type f | wc -l 2&amp;gt;/dev/null 转换成nginx # 为 proxy 缓存创建目录并设置权限 sudo mkdir -p /var/cache/nginx/proxy sudo chown -R nginx:nginx /var/cache/nginx 清理系统缓存
-# 清理页面缓存 echo 1 &amp;gt; /proc/sys/vm/drop_caches 微调整缓存策略</description></item><item><title>iptables规则开放80/443</title><link>https://blog.lufei.de/p/456/</link><pubDate>Fri, 20 Jun 2025 21:45:55 +0800</pubDate><guid>https://blog.lufei.de/p/456/</guid><description> 插入新的允许规则 iptables -I INPUT 1 -p tcp -m multiport --dports 80,443 -j ACCEPT 删除原来的限制规则（现在变成了第2、3条） iptables -D INPUT 2 iptables -D INPUT 2 保存规则 iptables-save &amp;gt; /etc/iptables/rules.v4</description></item><item><title>小鸡变中转站！轻松部署 haproxy 实现稳定高速访问</title><link>https://blog.lufei.de/p/455/</link><pubDate>Tue, 03 Jun 2025 12:27:32 +0800</pubDate><guid>https://blog.lufei.de/p/455/</guid><description>一键脚本 安装与配置 HAProxy：
+docker exec nginx nginx -s reload 查询Nginx缓存大小</description></item><item><title>iptables规则开放80/443</title><link>https://blog.lufei.de/p/456/</link><pubDate>Fri, 20 Jun 2025 21:45:55 +0800</pubDate><guid>https://blog.lufei.de/p/456/</guid><description> 插入新的允许规则 iptables -I INPUT 1 -p tcp -m multiport --dports 80,443 -j ACCEPT 删除原来的限制规则（现在变成了第2、3条） iptables -D INPUT 2 iptables -D INPUT 2 保存规则 iptables-save &amp;gt; /etc/iptables/rules.v4</description></item><item><title>小鸡变中转站！轻松部署 haproxy 实现稳定高速访问</title><link>https://blog.lufei.de/p/455/</link><pubDate>Tue, 03 Jun 2025 12:27:32 +0800</pubDate><guid>https://blog.lufei.de/p/455/</guid><description>一键脚本 安装与配置 HAProxy：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/haproxy-d.sh &amp;amp;&amp;amp; chmod +x haproxy-d.sh &amp;amp;&amp;amp; ./haproxy-d.sh 迁移配置备份与恢复：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/restore_haproxy.sh &amp;amp;&amp;amp; chmod +x restore_haproxy.sh &amp;amp;&amp;amp; ./restore_haproxy.sh 验证
 haproxy -c -f /etc/haproxy/haproxy.cfg 显示Configuration file is valid 即正确
