@@ -730,7 +730,7 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_ser
 sudo systemctl stop stat_server # 停止服务 sudo systemctl start stat_server # 启动服务 sudo systemctl restart stat_server # 重启服务 sudo systemctl status stat_server # 查看状态 客户端 客户端管理命令：</description></item><item><title>rclone配合cloudflare r2 备份站点</title><link>https://blog.lufei.de/p/386/</link><pubDate>Sun, 22 Dec 2024 21:07:32 +0800</pubDate><guid>https://blog.lufei.de/p/386/</guid><description>安装工具 安装pigz压缩
 apt-get update apt-get install pigz 安装rclone
 sudo -v ; curl https://rclone.org/install.sh | sudo bash 编辑cloudflare r2配置,当然也可以是其他s3网盘，或者谷歌网盘、onedrive都可以
-mkdir -p /root/.config/rclone/ touch /root/.config/rclone/rclone.conf nano /root/.config/rclone/rclone.conf 注意：名称r3要和backup_config.conf配置文件的remote_name名称一致
+mkdir -p /root/.config/rclone/ nano /root/.config/rclone/rclone.conf 注意：名称r3要和backup_config.conf配置文件的remote_name名称一致
 配置如下，只需要修改access_key_id、secret_access_key、endpoint 三个参数
 [r3] type = s3 provider = Cloudflare access_key_id = 111 secret_access_key = 222 region = auto endpoint = https://333.r2.cloudflarestorage.com 按ctrl+x保存，y退出
 测试是否配置正确
