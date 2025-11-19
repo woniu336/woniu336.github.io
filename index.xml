@@ -69,15 +69,10 @@ ipset list bingbot 验证：过几个小时或几天后，你可以再次执行
 iptables -L -n -v | grep bingbot 若看到计数器（pkts 和 bytes）不为 0，则说明：
 ✅ Bing 爬虫确实访问并成功被放行。
 定时任务 (crontab -l ; echo &amp;#34;0 4 * * * /root/safe_cn_firewall.</description></item><item><title>docker端口白名单脚本</title><link>https://blog.lufei.de/p/480/</link><pubDate>Fri, 03 Oct 2025 11:40:17 +0800</pubDate><guid>https://blog.lufei.de/p/480/</guid><description>系统推荐：debian12
-场景 例如：A服务器部署了项目,仅B服务器可以反代，脚本在A服务器运行
-用法 docker端口白名单脚本
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/allow_ips.sh &amp;amp;&amp;amp; chmod +x allow_ips.sh &amp;amp;&amp;amp; ./allow_ips.sh 首次运行会检测netfilter-persistent是否安装，没有的会自动安装
-用法
-# 1) ./allow_ips.sh &amp;lt;端口&amp;gt; &amp;lt;ip1&amp;gt; &amp;lt;ip2&amp;gt; ... # 添加规则 # 2) ./allow_ips.sh list # 查看规则 # 3) ./allow_ips.sh clear &amp;lt;端口&amp;gt; # 清理指定端口的规则 # 4) ./allow_ips.sh save # 手动保存规则 # 5) ./allow_ips.sh restore # 恢复规则（开机自启可用） 例如发行 5521端口，仅6.6.6.6可以访问
-./allow_ips.sh 5521 6.6.6.6 多个ip
-./allow_ips.sh 5521 6.6.6.6 3.3.3.3 查看规则
-./allow_ips.sh list 或者
-sudo iptables -L DOCKER-USER -n 反代脚本（nginx） 脚本在B服务器运行</description></item><item><title>Nginx ACME 自动化管理脚本，证书自动续签</title><link>https://blog.lufei.de/p/479/</link><pubDate>Wed, 01 Oct 2025 23:25:03 +0800</pubDate><guid>https://blog.lufei.de/p/479/</guid><description>前言 系统推荐：debian12
+docker端口白名单脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/docker_whitelist.sh &amp;amp;&amp;amp; chmod +x docker_whitelist.sh &amp;amp;&amp;amp; ./docker_whitelist.sh 使用流程:
+选择 1 → 添加允许访问的 IP(如 192.168.1.100) 选择 4 → 为端口添加保护(如 9000) 选择 3 → 查看白名单确认 选择 7 → 保存配置(重启后自动生效) 多端口保护:
+你可以多次选择选项 4,为不同的端口(9000、3306、6379 等)添加保护规则,它们都会共享同一个白名单。</description></item><item><title>Nginx ACME 自动化管理脚本，证书自动续签</title><link>https://blog.lufei.de/p/479/</link><pubDate>Wed, 01 Oct 2025 23:25:03 +0800</pubDate><guid>https://blog.lufei.de/p/479/</guid><description>前言 系统推荐：debian12
 服务器要开放80端口
 nginx版本1.25以上
 一键脚本 ，安装的末尾提示输入邮箱，安装完成后记得运行一下启动nginx。
