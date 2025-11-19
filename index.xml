@@ -68,11 +68,11 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/safe_cn_f
 ipset list bingbot 验证：过几个小时或几天后，你可以再次执行
 iptables -L -n -v | grep bingbot 若看到计数器（pkts 和 bytes）不为 0，则说明：
 ✅ Bing 爬虫确实访问并成功被放行。
-定时任务 (crontab -l ; echo &amp;#34;0 4 * * * /root/safe_cn_firewall.</description></item><item><title>docker端口白名单脚本</title><link>https://blog.lufei.de/p/480/</link><pubDate>Fri, 03 Oct 2025 11:40:17 +0800</pubDate><guid>https://blog.lufei.de/p/480/</guid><description>系统推荐：debian12
-docker端口白名单脚本
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/docker_whitelist.sh &amp;amp;&amp;amp; chmod +x docker_whitelist.sh &amp;amp;&amp;amp; ./docker_whitelist.sh 使用流程:
+定时任务 (crontab -l ; echo &amp;#34;0 4 * * * /root/safe_cn_firewall.</description></item><item><title>docker端口白名单脚本</title><link>https://blog.lufei.de/p/480/</link><pubDate>Fri, 03 Oct 2025 11:40:17 +0800</pubDate><guid>https://blog.lufei.de/p/480/</guid><description> 系统推荐：debian12
+docker端口白名单脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/docker_whitelist.sh &amp;amp;&amp;amp; chmod +x docker_whitelist.sh &amp;amp;&amp;amp; ./docker_whitelist.sh 使用流程:
 选择 1 → 添加允许访问的 IP(如 192.168.1.100) 选择 4 → 为端口添加保护(如 9000) 选择 3 → 查看白名单确认 选择 7 → 保存配置(重启后自动生效) 多端口保护:
-你可以多次选择选项 4,为不同的端口(9000、3306、6379 等)添加保护规则,它们都会共享同一个白名单。</description></item><item><title>Nginx ACME 自动化管理脚本，证书自动续签</title><link>https://blog.lufei.de/p/479/</link><pubDate>Wed, 01 Oct 2025 23:25:03 +0800</pubDate><guid>https://blog.lufei.de/p/479/</guid><description>前言 系统推荐：debian12
+你可以多次选择选项 4,为不同的端口(9000、3306、6379 等)添加保护规则,它们都会共享同一个白名单。
+非docker版本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ipwl.sh &amp;amp;&amp;amp; chmod +x ipwl.sh &amp;amp;&amp;amp; ./ipwl.sh</description></item><item><title>Nginx ACME 自动化管理脚本，证书自动续签</title><link>https://blog.lufei.de/p/479/</link><pubDate>Wed, 01 Oct 2025 23:25:03 +0800</pubDate><guid>https://blog.lufei.de/p/479/</guid><description>前言 系统推荐：debian12
 服务器要开放80端口
 nginx版本1.25以上
 一键脚本 ，安装的末尾提示输入邮箱，安装完成后记得运行一下启动nginx。
