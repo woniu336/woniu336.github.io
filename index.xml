@@ -3,14 +3,13 @@ read -p &amp;#34;请输入想要的快捷命令名称 (如: cm, caddy, mgr): &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>境外IP天天扫你网站？3步彻底封杀，还不用编译Nginx！</title><link>https://blog.lufei.de/p/493/</link><pubDate>Thu, 20 Nov 2025 19:56:30 +0800</pubDate><guid>https://blog.lufei.de/p/493/</guid><description>转载自wx公众号小柳实验室, 在原文基础上做了修改,
-在之前的帖子我有一篇帖子是ufw + ipset 防火墙：仅允许大陆与 Cloudflare 访问 80/443 一键脚本可以搞定，是针对全部站点，但是如果我需要针对其中一个站点进行限制，那还是使用nginx来得方便
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>3 步搞定境外 IP 扫描，无需编译 Nginx</title><link>https://blog.lufei.de/p/493/</link><pubDate>Thu, 20 Nov 2025 19:56:30 +0800</pubDate><guid>https://blog.lufei.de/p/493/</guid><description>转载自wx公众号小柳实验室, 在原文基础上做了修改,
 前言 你的服务器是否每天被 /admin、/wp-login.php、/.env 扫描刷屏？
 这些攻击 90% 来自境外。如果你的业务只服务中国大陆用户，那完全没必要开放全球访问！
 更重要的是：你不需要编译 Nginx，不需要 MaxMind 账号，甚至不用装额外模块
 只需利用 亚太网络信息中心（APNIC）公开的官方 IP 数据，配合 Nginx 原生功能，3 步实现精准拦截！
-方案对比（供参考） 方案 优点 缺点 推荐场景 本文方案（APNIC + allow/deny） 免费、开源、无需模块、全平台兼容 需定期更新 IP 段 自主运维、无 CDN、追求可控 CDN 地域封禁 5 分钟上线、自动更新、抗 DDoS 依赖第三方、高级功能收费 已接入 CDN 的网站 iptables + ipset 内核层拦截，性能极高 配置复杂，Docker/NAT 环境需调试 高并发、安全敏感业务 GeoIP2（MaxMind） 支持国家/城市级判断 需账号、需编译 Nginx 需要精细地理分析的场景 创建自动生成脚本 ⚠️提醒：因为使用的是kejilion的反代脚本(docker版nginx)，所以站点配置目录是/home/web/conf.d,请根据实际情况修改配置目录
-sudo cat &amp;gt; /usr/local/bin/gen-cn-allow.sh &amp;lt;&amp;lt; &amp;#39;EOF&amp;#39; #!</description></item><item><title>USDT钱包监控</title><link>https://blog.lufei.de/p/492/</link><pubDate>Tue, 18 Nov 2025 14:32:18 +0800</pubDate><guid>https://blog.lufei.de/p/492/</guid><description>下载脚本
+创建自动生成脚本 ⚠️提醒：因为使用的是kejilion的反代脚本(docker版nginx)，所以站点配置目录是/home/web/conf.d,请根据实际情况修改配置目录
+sudo cat &amp;gt; /usr/local/bin/gen-cn-allow.sh &amp;lt;&amp;lt; &amp;#39;EOF&amp;#39; #!/bin/bash # 从 APNIC 官方数据生成 Nginx allow 规则 # 适用于任意 Linux 系统 OUTPUT_DIR=&amp;#34;/home/web/conf.d&amp;#34; mkdir -p &amp;#34;$OUTPUT_DIR&amp;#34; echo &amp;#34;正在下载 APNIC 最新数据...&amp;#34; wget -qO- http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest | \ awk -F&amp;#39;|&amp;#39; &amp;#39; $2 == &amp;#34;CN&amp;#34; &amp;amp;&amp;amp; $3 == &amp;#34;ipv4&amp;#34; { prefix = $4; len = 32 - log($5) / log(2); print &amp;#34;allow &amp;#34; prefix &amp;#34;/&amp;#34; len &amp;#34;;&amp;#34;; } $2 == &amp;#34;CN&amp;#34; &amp;amp;&amp;amp; $3 == &amp;#34;ipv6&amp;#34; { print &amp;#34;allow &amp;#34; $4 &amp;#34;/&amp;#34; $5 &amp;#34;;&amp;#34;; } &amp;#39; &amp;gt; /tmp/cn_allow.</description></item><item><title>USDT钱包监控</title><link>https://blog.lufei.de/p/492/</link><pubDate>Tue, 18 Nov 2025 14:32:18 +0800</pubDate><guid>https://blog.lufei.de/p/492/</guid><description>下载脚本
 wget https://raw.githubusercontent.com/woniu336/open_shell/main/wallet_monitor.py 安装依赖
 pip3 install requests 后台运行
 nohup python3 wallet_monitor.py &amp;gt; monitor.log 2&amp;gt;&amp;amp;1 &amp;amp; 查看进程：
