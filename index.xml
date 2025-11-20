@@ -3,7 +3,17 @@ read -p &amp;#34;请输入想要的快捷命令名称 (如: cm, caddy, mgr): &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>3 步搞定境外 IP 扫描，无需编译 Nginx</title><link>https://blog.lufei.de/p/493/</link><pubDate>Thu, 20 Nov 2025 19:56:30 +0800</pubDate><guid>https://blog.lufei.de/p/493/</guid><description>转载自wx公众号小柳实验室, 在原文基础上做了修改,
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>croc：一款安全性极强的点对点数据传输工具</title><link>https://blog.lufei.de/p/495/</link><pubDate>Fri, 21 Nov 2025 00:07:22 +0800</pubDate><guid>https://blog.lufei.de/p/495/</guid><description>Croc Croc是一款安全性极强的点对点数据传输工具，该工具允许两台计算机设备以一种简单和安全的方式来传输文件或文件夹。简而言之，Croc是一款命令行接口工具，在Croc的帮助下，广大研究人员可以通过命令行工具来实现文件传输。
+工具特性 该工具允许任意两台计算机设备直接进行数据传输； 提供了端到端加密支持（PAKE）； 支持跨平台传输（Windows、Linux和macOS）； 支持多文件传输； 允许断线后的文件续传； 不需要本地服务器或端口转发； 支持IPv6和IPv4； 支持使用Tor之类的代理； windows系统 打开cmd或者powershell 工具 执行以下命令
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&amp;#39;https://community.chocolatey.org/install.ps1&amp;#39;)) 或者
+iwr https://cin.st | iex 再安装
+choco install croc linux系统 curl https://getcroc.schollz.com | bash 用法 如需发送文件，可以直接运行下列命令：
+$ croc send [file(s)-or-folder] Sending &amp;#39;file-or-folder&amp;#39; (X MB) Code is: code-phrase 接下来，在另一台电脑上使用下列命令来进行文件或目录接收：
+$ croc code-phrase 这里的code-phrase即密码短语，用于建立密码认证密钥协议（PAKE），该协议将生成一个密钥供发送方和接收方用于端到端加密。
+自定义密码短语
+我们可以使用下列方式来配置自己的密码短语，必须是4个字符以上：
+$ croc send --code [code-phrase] [file(s)-or-folder] 使用管道-stdin和stdout
+我们可以通过管道来向Croc传递文件：</description></item><item><title>3 步搞定境外 IP 扫描，无需编译 Nginx</title><link>https://blog.lufei.de/p/493/</link><pubDate>Thu, 20 Nov 2025 19:56:30 +0800</pubDate><guid>https://blog.lufei.de/p/493/</guid><description>转载自wx公众号小柳实验室, 在原文基础上做了修改,
 前言 你的服务器是否每天被 /admin、/wp-login.php、/.env 扫描刷屏？
 这些攻击 90% 来自境外。如果你的业务只服务中国大陆用户，那完全没必要开放全球访问！
 更重要的是：你不需要编译 Nginx，不需要 MaxMind 账号，甚至不用装额外模块
