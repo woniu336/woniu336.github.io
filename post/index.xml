@@ -623,18 +623,17 @@ amh amcrontab run_sh /root/test/clean_mysql_logs.sh</description></item><item><t
 错误提示： MISCONF Redis is configured to save RDB snapshots, but it is currently not able to persist on disk. Commands that may modify the data set are disabled, because this instance is configured to report errors during writes if RDB snapshotting fails (stop-writes-on-bgsave-error option). Please check the Redis logs for details about the RDB error.
 简单来说：Redis 无法保存数据快照(RDB)到磁盘，导致所有写入命令被禁用。
 临时生效 当 Redis 在保存数据快照（RDB）失败时，设置 stop-writes-on-bgsave-error no 表示允许 Redis 继续接受写入操作，但代价是可能会丢失一些数据。
-查找 redis-cli 的位置</description></item><item><title>一个优雅的 VPS 到期日期监控工具</title><link>https://blog.lufei.de/p/399/</link><pubDate>Sat, 11 Jan 2025 01:49:17 +0800</pubDate><guid>https://blog.lufei.de/p/399/</guid><description>VPS 到期监控助手 🚀 一个优雅的 VPS 到期日期监控工具，再也不用担心 VPS 续费超期了！通过 Telegram 机器人推送到期提醒，轻松管理多台服务器。
+查找 redis-cli 的位置</description></item><item><title>一个优雅的 VPS 到期日期监控工具</title><link>https://blog.lufei.de/p/399/</link><pubDate>Sat, 11 Jan 2025 01:49:17 +0800</pubDate><guid>https://blog.lufei.de/p/399/</guid><description>一个优雅的 VPS 到期日期监控工具，再也不用担心 VPS 续费超期了！通过 Telegram 机器人推送到期提醒，轻松管理多台服务器。
 之前发过帖子，功能上还不太行，这次重新打造
-演示：https://woniu336.github.io/vps-date/
 项目： https://github.com/woniu336/vps-date
-✨ 特色功能 🤖 支持 Telegram 机器人通知（3天内到期触发通知） ⏰ 自动定时检查（每天早8点和晚8点） 📊 支持批量管理多台服务器 🔔 灵活的提醒时间配置，按固定日期还是每月循环 💻 支持 GitHub Actions 自动运行 🔔多币种汇率更新，免费的API，不要频繁使用 🚀 快速开始 下载项目到本地，双击运行 (本地要安装python)
+特色功能 🤖 支持 Telegram 机器人通知（3天内到期触发通知） ⏰ 自动定时检查（每天早8点和晚8点） 📊 支持批量管理多台服务器 🔔 灵活的提醒时间配置，按固定日期还是每月循环 💻 支持 GitHub Actions 自动运行 🔔多币种汇率更新，免费的API，不要频繁使用 快速开始 下载项目到本地，双击运行 (本地要安装python)
 run_manager.bat ⚠️ 注意：项目有一个bug，vps名称不能用中文，使用中文脚本会报错，你可以在设置好以后退出脚本，在index.html改成中文名称即可，
 后续不影响使用
 ⚠️ 前端可点击index.html查看，脚本集成了一键推送到Giuhub
 有两个地方需要手动修改，
-修改vps_manager.py 第53行，修改成你的监控地址，作用是仅在tg通知底部展示 把config.example.json重命名为config.json，目的是测试通知，注意只有即将到期才会触发通知 3. 通知部署 Fork 本仓库 在仓库设置中添加以下 Secrets： TELEGRAM_BOT_TOKEN: 您的 Telegram 机器人 token TELEGRAM_CHAT_ID: 您的 Telegram 聊天 ID Actions 会自动在每天早8点和晚8点（北京时间）运行检查 4. 钉钉通知 钉钉通知由于我技术太菜，不能整合到项目中，但可以在你服务器上运行使用
-下载ding_monitor.py到服务器上运行即可
-安装依赖 pip install requests 修改脚本，添加钉钉通知</description></item><item><title>AMh备份数据到网盘</title><link>https://blog.lufei.de/p/398/</link><pubDate>Thu, 09 Jan 2025 06:38:20 +0800</pubDate><guid>https://blog.lufei.de/p/398/</guid><description>利用rclone结合cloudflare r2，实现amh面板定时备份或者还原站点所有数据
+修改vps_manager.py 第53行，修改成你的监控地址，作用是仅在tg通知底部展示 把config.example.json重命名为config.json，目的是测试通知，注意只有即将到期才会触发通知 3. 通知部署 Fork 本仓库 在仓库设置中添加以下 Secrets： TELEGRAM_BOT_TOKEN: 您的 Telegram 机器人 token TELEGRAM_CHAT_ID: 您的 Telegram 聊天 ID Actions 会自动在每天早8点和晚8点（北京时间）运行检查 4. 钉钉通知 下载ding_monitor.py到服务器上运行即可
+wget https://raw.githubusercontent.com/woniu336/vps-date/main/ding_monitor.py 赋予执行权限
+chmod +x ding_monitor.py 安装依赖 pip install requests 修改脚本，添加钉钉通知</description></item><item><title>AMh备份数据到网盘</title><link>https://blog.lufei.de/p/398/</link><pubDate>Thu, 09 Jan 2025 06:38:20 +0800</pubDate><guid>https://blog.lufei.de/p/398/</guid><description>利用rclone结合cloudflare r2，实现amh面板定时备份或者还原站点所有数据
 定时备份，保留本地和r2最新10个备份文件 还原：可以设置定时还原最新的备份 安装 rclone sudo -v ; curl https://rclone.org/install.sh | sudo bash 编辑 rclone.conf 配置
 mkdir -p /home/www/.config/rclone/ touch /home/www/.config/rclone/rclone.conf nano /home/www/.config/rclone/rclone.conf 填入以下信息 (改成你的r2密钥)
 [r2] type = s3 provider = Cloudflare access_key_id = xxxx secret_access_key = xxxx region = auto endpoint = https://xxxxxx.r2.cloudflarestorage.com 复制到root目录
