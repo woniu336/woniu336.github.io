@@ -1308,8 +1308,8 @@ Tampermonkey for Opera/OperaGX
 创建钉钉报警机器人 文档：https://open.dingtalk.com/document/orgapp/custom-robot-access
 记得在安全设置那里写上服务器IP地址，也就是你放脚本的服务器IP地址
 最后复制webhook地址
-修改脚本 check_ssl.txt 添加需要检测证书的域名 domains.txt 添加需要到期检测的域名 check_ssl.sh 证书检测脚本 monitor_server.sh 服务器健康检测脚本 domain_expiry_reminder.sh和warnsrc.py 域名到期检测脚本 daily_report.sh 每日生成检测报告的脚本 文件名 需要修改的内容 check_ssl.txt 添加域名证书到期检测文件，每行一个域名 check_ssl.sh TOKEN=&amp;ldquo;Webhook地址&amp;rdquo; monitor_server.sh DINGTALK_WEBHOOK=&amp;ldquo;Webhook地址&amp;rdquo; domains.txt 域名到期检测，每行一个域名 warnsrc.py url = &amp;lsquo;Webhook地址&amp;rsquo; daily_report.sh DINGTALK_WEBHOOK=&amp;ldquo;Webhook地址&amp;rdquo; 测试说明 不把数值改大一点，是没有通知的，因为默认数值比较小，
-定时任务 daily_report.sh脚本很推荐， 因为会养成你每天下午2点就收到钉钉通知报告的习惯。时间一长，你会记得去看~ (crontab -l ; echo &amp;#34;30 2 */3 * * cd /home/domain &amp;amp;&amp;amp; .</description></item><item><title>监控域名到期发送钉钉消息通知</title><link>https://blog.lufei.de/p/315/</link><pubDate>Sat, 31 Aug 2024 04:50:36 +0800</pubDate><guid>https://blog.lufei.de/p/315/</guid><description>准备条件 系统：debian,ubuntu，安装了python
+修改脚本 check_ssl.txt 添加需要检测证书的域名，每行一个 domains.txt 添加需要到期检测的域名，每行一个 测试说明 不把数值改大一点，是没有通知的，因为默认数值比较小，
+定时任务 daily_report.sh脚本很推荐， 因为会养成你每天下午2点就收到钉钉通知报告的习惯。时间一长，你会记得去看~ (crontab -l ; echo &amp;#34;30 2 */3 * * cd /home/domain &amp;amp;&amp;amp; ./domain_expiry_reminder.sh &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;#34;) | crontab - (crontab -l ; echo &amp;#34;0 14 * * * cd /home/domain &amp;amp;&amp;amp; ./daily_report.sh &amp;gt;/dev/null 2&amp;gt;&amp;amp;1&amp;#34;) | crontab - (crontab -l ; echo &amp;#34;10 3 * * * cd /home/domain &amp;amp;&amp;amp; .</description></item><item><title>监控域名到期发送钉钉消息通知</title><link>https://blog.lufei.de/p/315/</link><pubDate>Sat, 31 Aug 2024 04:50:36 +0800</pubDate><guid>https://blog.lufei.de/p/315/</guid><description>准备条件 系统：debian,ubuntu，安装了python
 检测是否安装了python：
 python3 --version 检测是否安装了requests
 python3 -c &amp;#34;import requests; print(requests.__version__)&amp;#34; 如果没安装
