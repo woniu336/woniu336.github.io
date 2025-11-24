@@ -203,10 +203,8 @@ sudo nano /etc/fail2ban/jail.local 粘贴以下内容，记得把 5522 改成你
 负载均衡 轮询方式
 server 3.3.3.3:80 max_fails=3 fail_timeout=30s; server 6.6.6.6:80 max_fails=3 fail_timeout=30s; 加权轮询
 server 192.168.1.10 weight=2 max_fails=3 fail_timeout=30s; server 192.168.1.11 weight=1 max_fails=3 fail_timeout=30s; 原版方式
-hash $remote_addr consistent; server 3.3.3.3:80; server 6.6.6.6:80; 续签 原脚本存在防火墙不太安全的原因，所以改动了一下
-备份旧脚本（推荐）
-cp /root/auto_cert_renewal.sh /root/auto_cert_renewal.sh.backup 下载新脚本覆盖
-wget -O /root/auto_cert_renewal.</description></item><item><title>iptables规则开放80/443</title><link>https://blog.lufei.de/p/456/</link><pubDate>Fri, 20 Jun 2025 21:45:55 +0800</pubDate><guid>https://blog.lufei.de/p/456/</guid><description> 插入新的允许规则 iptables -I INPUT 1 -p tcp -m multiport --dports 80,443 -j ACCEPT 删除原来的限制规则（现在变成了第2、3条） iptables -D INPUT 2 iptables -D INPUT 2 保存规则 iptables-save &amp;gt; /etc/iptables/rules.v4</description></item><item><title>小鸡变中转站！轻松部署 haproxy 实现稳定高速访问</title><link>https://blog.lufei.de/p/455/</link><pubDate>Tue, 03 Jun 2025 12:27:32 +0800</pubDate><guid>https://blog.lufei.de/p/455/</guid><description>一键脚本 安装与配置 HAProxy：
+hash $remote_addr consistent; server 3.3.3.3:80; server 6.6.6.6:80; 查看占用
+netstat -an | grep ESTABLISHED | awk &amp;#39;{print $5}&amp;#39; | cut -d: -f1 | sort | uniq -c | sort -rn | head -20 续签 原脚本存在防火墙不太安全的原因，所以改动了一下</description></item><item><title>iptables规则开放80/443</title><link>https://blog.lufei.de/p/456/</link><pubDate>Fri, 20 Jun 2025 21:45:55 +0800</pubDate><guid>https://blog.lufei.de/p/456/</guid><description> 插入新的允许规则 iptables -I INPUT 1 -p tcp -m multiport --dports 80,443 -j ACCEPT 删除原来的限制规则（现在变成了第2、3条） iptables -D INPUT 2 iptables -D INPUT 2 保存规则 iptables-save &amp;gt; /etc/iptables/rules.v4</description></item><item><title>小鸡变中转站！轻松部署 haproxy 实现稳定高速访问</title><link>https://blog.lufei.de/p/455/</link><pubDate>Tue, 03 Jun 2025 12:27:32 +0800</pubDate><guid>https://blog.lufei.de/p/455/</guid><description>一键脚本 安装与配置 HAProxy：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/haproxy-d.sh &amp;amp;&amp;amp; chmod +x haproxy-d.sh &amp;amp;&amp;amp; ./haproxy-d.sh 迁移配置备份与恢复：
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/restore_haproxy.sh &amp;amp;&amp;amp; chmod +x restore_haproxy.sh &amp;amp;&amp;amp; ./restore_haproxy.sh 验证
 haproxy -c -f /etc/haproxy/haproxy.cfg 显示Configuration file is valid 即正确
