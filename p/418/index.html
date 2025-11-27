@@ -1,5 +1,5 @@
 <!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content='一键脚本： curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ophaproxy.sh && chmod +x ophaproxy.sh && ./ophaproxy.sh 验证 ulimit -n haproxy脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/bt-cf/haproxy/setup_haproxy.sh && chmod +x setup_haproxy.sh && ./setup_haproxy.sh 验证 sudo haproxy -c -f /etc/haproxy/haproxy.cfg 可以根据服务器核心数设置nbthread 1参数，例如4核心，则是nbthread 4 检查 HAProxy 服务状态： systemctl status haproxy 重启 systemctl restart haproxy TCP蜜汁调优 sudo sed -i &#39;/tcp_init_cwnd/d&#39; /etc/sysctl.conf sudo sysctl -p ssh连接优化 # 配置 PAM if grep -q "^UsePAM" /etc/ssh/sshd_config; then sed -i &#39;s/^UsePAM.*/UsePAM yes/&#39; /etc/ssh/sshd_config else echo "UsePAM yes" >> /etc/ssh/sshd_config fi # 禁用 X11 转发 if grep -q "^X11Forwarding" /etc/ssh/sshd_config; then sed -i &#39;s/^X11Forwarding.'><title>haproxy调优记录</title>
-<link rel=canonical href=https://blog.lufei.de/p/418/><link rel=stylesheet href=/scss/style.min.854e34c0d49cd05dfb69d11f315f89d76adcdf82c7f2d2fc9e8e87cbfc5906f9.css><meta property='og:title' content="haproxy调优记录"><meta property='og:description' content='一键脚本： curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ophaproxy.sh && chmod +x ophaproxy.sh && ./ophaproxy.sh 验证 ulimit -n haproxy脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/bt-cf/haproxy/setup_haproxy.sh && chmod +x setup_haproxy.sh && ./setup_haproxy.sh 验证 sudo haproxy -c -f /etc/haproxy/haproxy.cfg 可以根据服务器核心数设置nbthread 1参数，例如4核心，则是nbthread 4 检查 HAProxy 服务状态： systemctl status haproxy 重启 systemctl restart haproxy TCP蜜汁调优 sudo sed -i &#39;/tcp_init_cwnd/d&#39; /etc/sysctl.conf sudo sysctl -p ssh连接优化 # 配置 PAM if grep -q "^UsePAM" /etc/ssh/sshd_config; then sed -i &#39;s/^UsePAM.*/UsePAM yes/&#39; /etc/ssh/sshd_config else echo "UsePAM yes" >> /etc/ssh/sshd_config fi # 禁用 X11 转发 if grep -q "^X11Forwarding" /etc/ssh/sshd_config; then sed -i &#39;s/^X11Forwarding.'><meta property='og:url' content='https://blog.lufei.de/p/418/'><meta property='og:site_name' content='路飞博客'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2025-02-15T19:56:23+08:00'><meta property='article:modified_time' content='2025-11-24T07:32:50+00:00'><meta name=twitter:title content="haproxy调优记录"><meta name=twitter:description content='一键脚本： curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ophaproxy.sh && chmod +x ophaproxy.sh && ./ophaproxy.sh 验证 ulimit -n haproxy脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/bt-cf/haproxy/setup_haproxy.sh && chmod +x setup_haproxy.sh && ./setup_haproxy.sh 验证 sudo haproxy -c -f /etc/haproxy/haproxy.cfg 可以根据服务器核心数设置nbthread 1参数，例如4核心，则是nbthread 4 检查 HAProxy 服务状态： systemctl status haproxy 重启 systemctl restart haproxy TCP蜜汁调优 sudo sed -i &#39;/tcp_init_cwnd/d&#39; /etc/sysctl.conf sudo sysctl -p ssh连接优化 # 配置 PAM if grep -q "^UsePAM" /etc/ssh/sshd_config; then sed -i &#39;s/^UsePAM.*/UsePAM yes/&#39; /etc/ssh/sshd_config else echo "UsePAM yes" >> /etc/ssh/sshd_config fi # 禁用 X11 转发 if grep -q "^X11Forwarding" /etc/ssh/sshd_config; then sed -i &#39;s/^X11Forwarding.'><link rel="shortcut icon" href=/favicon.ico><link rel=stylesheet href=https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css><link rel=stylesheet href=https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css><style>#scroll-to-top,#search-button{display:none;position:fixed;right:30px;z-index:99;border:none;outline:none;background-color:transparent;color:#555;cursor:pointer;padding:10px;transition:color .3s}#scroll-to-top:hover,#search-button:hover{color:#333}#scroll-to-top{bottom:20px}#search-button{bottom:80px}.cat-icon{width:40px;height:40px}@media(min-width:768px){#search-button{display:none!important}}@media(max-width:767px){#search-button{display:block}}</style><button onclick=topFunction() id=scroll-to-top title=回到顶部>
+<link rel=canonical href=https://blog.lufei.de/p/418/><link rel=stylesheet href=/scss/style.min.854e34c0d49cd05dfb69d11f315f89d76adcdf82c7f2d2fc9e8e87cbfc5906f9.css><meta property='og:title' content="haproxy调优记录"><meta property='og:description' content='一键脚本： curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ophaproxy.sh && chmod +x ophaproxy.sh && ./ophaproxy.sh 验证 ulimit -n haproxy脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/bt-cf/haproxy/setup_haproxy.sh && chmod +x setup_haproxy.sh && ./setup_haproxy.sh 验证 sudo haproxy -c -f /etc/haproxy/haproxy.cfg 可以根据服务器核心数设置nbthread 1参数，例如4核心，则是nbthread 4 检查 HAProxy 服务状态： systemctl status haproxy 重启 systemctl restart haproxy TCP蜜汁调优 sudo sed -i &#39;/tcp_init_cwnd/d&#39; /etc/sysctl.conf sudo sysctl -p ssh连接优化 # 配置 PAM if grep -q "^UsePAM" /etc/ssh/sshd_config; then sed -i &#39;s/^UsePAM.*/UsePAM yes/&#39; /etc/ssh/sshd_config else echo "UsePAM yes" >> /etc/ssh/sshd_config fi # 禁用 X11 转发 if grep -q "^X11Forwarding" /etc/ssh/sshd_config; then sed -i &#39;s/^X11Forwarding.'><meta property='og:url' content='https://blog.lufei.de/p/418/'><meta property='og:site_name' content='路飞博客'><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:published_time' content='2025-02-15T19:56:23+08:00'><meta property='article:modified_time' content='2025-11-27T02:35:20+00:00'><meta name=twitter:title content="haproxy调优记录"><meta name=twitter:description content='一键脚本： curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ophaproxy.sh && chmod +x ophaproxy.sh && ./ophaproxy.sh 验证 ulimit -n haproxy脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/bt-cf/haproxy/setup_haproxy.sh && chmod +x setup_haproxy.sh && ./setup_haproxy.sh 验证 sudo haproxy -c -f /etc/haproxy/haproxy.cfg 可以根据服务器核心数设置nbthread 1参数，例如4核心，则是nbthread 4 检查 HAProxy 服务状态： systemctl status haproxy 重启 systemctl restart haproxy TCP蜜汁调优 sudo sed -i &#39;/tcp_init_cwnd/d&#39; /etc/sysctl.conf sudo sysctl -p ssh连接优化 # 配置 PAM if grep -q "^UsePAM" /etc/ssh/sshd_config; then sed -i &#39;s/^UsePAM.*/UsePAM yes/&#39; /etc/ssh/sshd_config else echo "UsePAM yes" >> /etc/ssh/sshd_config fi # 禁用 X11 转发 if grep -q "^X11Forwarding" /etc/ssh/sshd_config; then sed -i &#39;s/^X11Forwarding.'><link rel="shortcut icon" href=/favicon.ico><link rel=stylesheet href=https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/lxgwwenkaiscreen.css><link rel=stylesheet href=https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/fontawesome.min.css><style>#scroll-to-top,#search-button{display:none;position:fixed;right:30px;z-index:99;border:none;outline:none;background-color:transparent;color:#555;cursor:pointer;padding:10px;transition:color .3s}#scroll-to-top:hover,#search-button:hover{color:#333}#scroll-to-top{bottom:20px}#search-button{bottom:80px}.cat-icon{width:40px;height:40px}@media(min-width:768px){#search-button{display:none!important}}@media(max-width:767px){#search-button{display:block}}</style><button onclick=topFunction() id=scroll-to-top title=回到顶部>
 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-rounded-arrow-up-filled" width="43" height="43" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2c-.218.0-.432.002-.642.005l-.616.017-.299.013-.579.034-.553.046c-4.785.464-6.732 2.411-7.196 7.196l-.046.553-.034.579c-.005.098-.01.198-.013.299l-.017.616-.004.318L2 12c0 .218.002.432.005.642l.017.616.013.299.034.579.046.553c.464 4.785 2.411 6.732 7.196 7.196l.553.046.579.034c.098.005.198.01.299.013l.616.017L12 22l.642-.005.616-.017.299-.013.579-.034.553-.046c4.785-.464 6.732-2.411 7.196-7.196l.046-.553.034-.579c.005-.098.01-.198.013-.299l.017-.616L22 12l-.005-.642-.017-.616-.013-.299-.034-.579-.046-.553c-.464-4.785-2.411-6.732-7.196-7.196l-.553-.046-.579-.034a28.058 28.058.0 00-.299-.013l-.616-.017-.318-.004L12 2zm-.148 5.011.058-.007L12 7l.075.003.126.017.111.03.111.044.098.052.104.074.082.073 4 4a1 1 0 01-1.32 1.497l-.094-.083L13 10.415V16a1 1 0 01-1.993.117L11 16v-5.585l-2.293 2.292a1 1 0 01-1.32.083l-.094-.083a1 1 0 01-.083-1.32l.083-.094 4-4a.927.927.0 01.112-.097l.11-.071.114-.054.105-.035.118-.025z" fill="currentcolor" stroke-width="0"/></svg>
 </button>
 <button onclick=openSearch() id=search-button title=搜索>
@@ -17,7 +17,7 @@
 <span>深色模式</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">目录</h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><ol><li><a href=#系统调优>系统调优</a></li><li><a href=#修改-systemd-限制>修改 systemd 限制</a></li><li><a href=#添加-haproxy-限制到-limitsconf>添加 HAProxy 限制到 limits.conf</a></li></ol></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/p/418/>haproxy调优记录</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
 <time class=article-time--published>2025-02-15</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time class=article-time--reading>阅读时长: 4 分钟</time></div><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-pencil" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h4L18.5 9.5a2.828 2.828.0 10-4-4L4 16v4"/><path d="M13.5 6.5l4 4"/></svg>
-<time class=article-time--reading>字数: 819字</time></div></footer></div></header><section class=article-content><p>一键脚本：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ophaproxy.sh &amp;&amp; chmod +x ophaproxy.sh &amp;&amp; ./ophaproxy.sh
+<time class=article-time--reading>字数: 726字</time></div></footer></div></header><section class=article-content><p>一键脚本：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ophaproxy.sh &amp;&amp; chmod +x ophaproxy.sh &amp;&amp; ./ophaproxy.sh
 </span></span></code></pre></div><p>验证</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>ulimit -n
 </span></span></code></pre></div><p>haproxy脚本</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/bt-cf/haproxy/setup_haproxy.sh &amp;&amp; chmod +x setup_haproxy.sh &amp;&amp; ./setup_haproxy.sh
 </span></span></code></pre></div><p>验证</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>sudo haproxy -c -f /etc/haproxy/haproxy.cfg
@@ -151,20 +151,14 @@
 </span></span><span class=line><span class=cl>EOF
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>sysctl -p &amp;&amp; sysctl --system
-</span></span></code></pre></div><p>或者</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>sudo cat &gt; /etc/sysctl.conf &lt;&lt; &#39;EOF&#39;
-</span></span><span class=line><span class=cl># --------------------------
-</span></span><span class=line><span class=cl># 文件描述符与进程限制
-</span></span><span class=line><span class=cl># --------------------------
+</span></span></code></pre></div><p>或者（推荐）</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>cat &lt;&lt; &#39;EOF&#39; | sudo tee /etc/sysctl.conf &gt; /dev/null
 </span></span><span class=line><span class=cl>fs.file-max = 6815744
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># --------------------------
-</span></span><span class=line><span class=cl># TCP 基础优化参数
-</span></span><span class=line><span class=cl># --------------------------
 </span></span><span class=line><span class=cl>net.ipv4.tcp_no_metrics_save = 1
 </span></span><span class=line><span class=cl>net.ipv4.tcp_ecn = 0
-</span></span><span class=line><span class=cl>net.ipv4.tcp_frto = 1                # 启用 F-RTO 优化
-</span></span><span class=line><span class=cl>net.ipv4.tcp_mtu_probing = 1         # 启用 MTU 探测
-</span></span><span class=line><span class=cl>net.ipv4.tcp_rfc1337 = 1             # 安全处理 TIME-WAIT
+</span></span><span class=line><span class=cl>net.ipv4.tcp_frto = 1
+</span></span><span class=line><span class=cl>net.ipv4.tcp_mtu_probing = 1
+</span></span><span class=line><span class=cl>net.ipv4.tcp_rfc1337 = 1
 </span></span><span class=line><span class=cl>net.ipv4.tcp_sack = 1
 </span></span><span class=line><span class=cl>net.ipv4.tcp_fack = 1
 </span></span><span class=line><span class=cl>net.ipv4.tcp_window_scaling = 1
@@ -172,63 +166,45 @@
 </span></span><span class=line><span class=cl>net.ipv4.tcp_moderate_rcvbuf = 1
 </span></span><span class=line><span class=cl>net.ipv4.tcp_slow_start_after_idle = 0
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># --------------------------
-</span></span><span class=line><span class=cl># 网络缓冲区优化
-</span></span><span class=line><span class=cl># --------------------------
 </span></span><span class=line><span class=cl>net.core.rmem_max = 33554432
 </span></span><span class=line><span class=cl>net.core.wmem_max = 33554432
-</span></span><span class=line><span class=cl>net.core.rmem_default = 87380        # 默认接收缓冲区
-</span></span><span class=line><span class=cl>net.core.wmem_default = 87380        # 默认发送缓冲区
+</span></span><span class=line><span class=cl>net.core.rmem_default = 87380
+</span></span><span class=line><span class=cl>net.core.wmem_default = 87380
 </span></span><span class=line><span class=cl>net.ipv4.tcp_rmem = 4096 87380 33554432
-</span></span><span class=line><span class=cl>net.ipv4.tcp_wmem = 4096 87380 33554432  # 对齐接收缓冲区中间值
-</span></span><span class=line><span class=cl>net.ipv4.udp_rmem_min = 16384        # 增大 UDP 最小缓冲区
+</span></span><span class=line><span class=cl>net.ipv4.tcp_wmem = 4096 87380 33554432
+</span></span><span class=line><span class=cl>net.ipv4.udp_rmem_min = 16384
 </span></span><span class=line><span class=cl>net.ipv4.udp_wmem_min = 16384
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># --------------------------
-</span></span><span class=line><span class=cl># 连接队列与超时控制
-</span></span><span class=line><span class=cl># --------------------------
 </span></span><span class=line><span class=cl>net.core.somaxconn = 65535
 </span></span><span class=line><span class=cl>net.ipv4.tcp_max_syn_backlog = 65535
-</span></span><span class=line><span class=cl>net.ipv4.tcp_syn_retries = 2         # 减少 SYN 重试次数
+</span></span><span class=line><span class=cl>net.ipv4.tcp_syn_retries = 2
 </span></span><span class=line><span class=cl>net.ipv4.tcp_synack_retries = 2
-</span></span><span class=line><span class=cl>net.ipv4.tcp_max_tw_buckets = 65536  # 限制 TIME-WAIT 数量
+</span></span><span class=line><span class=cl>net.ipv4.tcp_max_tw_buckets = 65536
 </span></span><span class=line><span class=cl>net.ipv4.tcp_fin_timeout = 30
 </span></span><span class=line><span class=cl>net.ipv4.tcp_tw_reuse = 1
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># --------------------------
-</span></span><span class=line><span class=cl># 内存与拥塞控制
-</span></span><span class=line><span class=cl># --------------------------
-</span></span><span class=line><span class=cl>net.core.netdev_max_backlog = 262144  # 网络设备队列长度
-</span></span><span class=line><span class=cl>net.ipv4.tcp_mem = 786432 1048576 1572864  # 全局 TCP 内存限制
+</span></span><span class=line><span class=cl>net.core.netdev_max_backlog = 262144
+</span></span><span class=line><span class=cl>net.ipv4.tcp_mem = 786432 1048576 1572864
 </span></span><span class=line><span class=cl>net.core.default_qdisc = fq
 </span></span><span class=line><span class=cl>net.ipv4.tcp_congestion_control = bbr
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># --------------------------
-</span></span><span class=line><span class=cl># Keepalive 与安全
-</span></span><span class=line><span class=cl># --------------------------
 </span></span><span class=line><span class=cl>net.ipv4.tcp_keepalive_time = 600
 </span></span><span class=line><span class=cl>net.ipv4.tcp_keepalive_intvl = 30
 </span></span><span class=line><span class=cl>net.ipv4.tcp_keepalive_probes = 3
-</span></span><span class=line><span class=cl>net.ipv4.conf.all.rp_filter = 1       # 启用反向路径过滤
+</span></span><span class=line><span class=cl>net.ipv4.conf.all.rp_filter = 1
 </span></span><span class=line><span class=cl>net.ipv4.conf.default.rp_filter = 1
-</span></span><span class=line><span class=cl>net.ipv4.conf.all.route_localnet = 0  # 关闭危险的路由选项
+</span></span><span class=line><span class=cl>net.ipv4.conf.all.route_localnet = 0
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># --------------------------
-</span></span><span class=line><span class=cl># 网络转发与 IPv6
-</span></span><span class=line><span class=cl># --------------------------
 </span></span><span class=line><span class=cl>net.ipv4.ip_forward = 1
 </span></span><span class=line><span class=cl>net.ipv4.conf.all.forwarding = 1
 </span></span><span class=line><span class=cl>net.ipv4.conf.default.forwarding = 1
 </span></span><span class=line><span class=cl>net.ipv6.conf.all.forwarding = 1
 </span></span><span class=line><span class=cl>net.ipv6.conf.default.forwarding = 1
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># --------------------------
-</span></span><span class=line><span class=cl># 高级加速选项
-</span></span><span class=line><span class=cl># --------------------------
-</span></span><span class=line><span class=cl>net.ipv4.tcp_fastopen = 3            # 启用 TCP Fast Open
+</span></span><span class=line><span class=cl>net.ipv4.tcp_fastopen = 3
 </span></span><span class=line><span class=cl>EOF
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>sudo sysctl -p /etc/sysctl.conf
+</span></span><span class=line><span class=cl>sudo sysctl -p
 </span></span></code></pre></div><h4 id=修改-systemd-限制>修改 systemd 限制</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-gdscript3 data-lang=gdscript3><span class=line><span class=cl><span class=n>mkdir</span> <span class=o>-</span><span class=n>p</span> <span class=o>/</span><span class=n>etc</span><span class=o>/</span><span class=n>systemd</span><span class=o>/</span><span class=n>system</span><span class=o>/</span><span class=n>haproxy</span><span class=o>.</span><span class=n>service</span><span class=o>.</span><span class=n>d</span><span class=o>/</span> <span class=o>&amp;&amp;</span> <span class=n>echo</span> <span class=o>-</span><span class=n>e</span> <span class=s2>&#34;[Service]</span><span class=se>\n</span><span class=s2>LimitNOFILE=200000&#34;</span> <span class=o>&gt;</span> <span class=o>/</span><span class=n>etc</span><span class=o>/</span><span class=n>systemd</span><span class=o>/</span><span class=n>system</span><span class=o>/</span><span class=n>haproxy</span><span class=o>.</span><span class=n>service</span><span class=o>.</span><span class=n>d</span><span class=o>/</span><span class=n>limits</span><span class=o>.</span><span class=n>conf</span> <span class=o>&amp;&amp;</span> <span class=n>systemctl</span> <span class=n>daemon</span><span class=o>-</span><span class=n>reload</span>
 </span></span></code></pre></div><h4 id=添加-haproxy-限制到-limitsconf>添加 HAProxy 限制到 limits.conf</h4><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>cat &gt; /etc/security/limits.conf &lt;&lt; &#39;EOF&#39;
 </span></span><span class=line><span class=cl>* soft nofile 200000
@@ -265,7 +241,7 @@
 </span></span></code></pre></div><p>查询</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>echo &#34;show info&#34; | socat unix-connect:/run/haproxy/admin.sock stdio
 </span></span></code></pre></div><p>CurrConns 当前连接数</p><p>MaxConnRate 最大连接速率/每秒</p><p>CumConns 累计连接数</p></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>CC BY-NC-SA 4.0 转载请注明</span></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<span>最后更新于 2025-11-24 07:32</span></section></footer></article><footer class=site-footer><section class=powerby><a target=_blank title=clarity统计 href=https://laozi.lufei.de>Cloudflare统计</a><br></section><section class=copyright><br>共手书76.1k字·共 479篇文章</br><span><p>本站已稳定运行
+<span>最后更新于 2025-11-27 02:35</span></section></footer></article><footer class=site-footer><section class=powerby><a target=_blank title=clarity统计 href=https://laozi.lufei.de>Cloudflare统计</a><br></section><section class=copyright><br>共手书76.2k字·共 480篇文章</br><span><p>本站已稳定运行
 <span id=runningdays class=running-days></span>
 <script>function updateRunningTime(){const t=new Date("2023-07-25".replace(/-/g,"/")),n=new Date,e=n-t,s=Math.floor(e/(1e3*60*60*24)),o=Math.floor(e%(1e3*60*60*24)/(1e3*60*60)),i=Math.floor(e%(1e3*60*60)/(1e3*60)),a=Math.floor(e%(1e3*60)/1e3),r=`${s} 天 ${o} 小时 ${i} 分 ${a} 秒 `;document.getElementById("runningdays").innerHTML=r}setInterval(updateRunningTime,1e3),updateRunningTime()</script><br></section><a target=_blank href=https://github.com/CaiJimmy/hugo-theme-stack title=主题开源项目><img src=/img/github.svg alt>
 </a><a target=_blank href=https://gohugo.io/ title="由 HUGO 驱动"><img src=/img/hugo.svg alt>
