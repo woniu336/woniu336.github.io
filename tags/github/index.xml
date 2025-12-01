@@ -4,11 +4,12 @@
 主机版
 sudo bash -c &amp;#34;$(curl -fsSL https://om.uusec.com/cn/installer.sh)&amp;#34; 启动
 # 启动服务 /opt/om/oms -s start # 检查服务状态 /opt/om/oms -s status # 停止服务 /opt/om/oms -s stop # 重新启动 /opt/om/oms -s start 访问 https://your-ip:34567 ，用户名: admin ，密码: #Passw0rd
-容器版
+301重定向（在站点高级配置修改）
+return 301 &amp;#39;http://www.xxxx.cc$request_uri&amp;#39;; 屏蔽敏感信息头（在系统设置-OpenResty-缓存资源）修改
+add_header X-Cf-Cache $upstream_cache_status always; more_set_headers &amp;#34;Server: &amp;#34;; 容器版
 sudo bash -c &amp;#34;$(curl -fsSL https://om.uusec.com/cn/docker_installer.sh)&amp;#34; 随后可以通过下方命令管理OpenResty Manager容器，包括启动、停止、更新、卸载等。
 bash /opt/om/om.sh 卸载
-sudo bash -c &amp;#34;$(curl -fsSL https://om.uusec.com/uninstaller.sh)&amp;#34; ctop https://github.com/bcicen/ctop
-ctop 就是一个专门为容器设计的、命令行版的“任务管理器”。它的界面风格是不是让你想起了经典的 top 命令？没错，它就是借鉴了 top 的设计思路，让你能在一个界面里，实时看到各个容器的 CPU、内存、网络 I/O 等关键指标。</description></item><item><title>GitHub图床加速</title><link>https://blog.lufei.de/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</link><pubDate>Thu, 07 Dec 2023 13:07:15 +0000</pubDate><guid>https://blog.lufei.de/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</guid><description>Github图床使用 网络上关于GitHub+Jsdelivr实现图床加速的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。
+sudo bash -c &amp;#34;$(curl -fsSL https://om.</description></item><item><title>GitHub图床加速</title><link>https://blog.lufei.de/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</link><pubDate>Thu, 07 Dec 2023 13:07:15 +0000</pubDate><guid>https://blog.lufei.de/p/github%E5%9B%BE%E5%BA%8A%E5%8A%A0%E9%80%9F/</guid><description>Github图床使用 网络上关于GitHub+Jsdelivr实现图床加速的文章很多，但是年代久远，加上Jsdelivr早就被和谐了，所以本人重新整理一下，目前还能使用，无需科学上网的就能加速图片的方法。
 方法1：Jsdelivr镜像站 https://jsd.cdn.zzko.cn （公益）
 方法2：通过Cloudflare Workers实现反代
 即使镜像站点跑路了，Cloudflare还在，速度慢点
