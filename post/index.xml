@@ -12,7 +12,7 @@ DNS解析, 在系统设置-OpenResty-DNS解析修改
 resolver 1.1.1.1 8.8.8.8 1.0.0.1 valid=300s ipv6=off local=off; 301重定向（在站点高级配置修改）
 return 301 &amp;#39;http://www.xxxx.cc$request_uri&amp;#39;; 屏蔽敏感信息头（在系统设置-OpenResty-缓存资源）修改
 add_header X-Cf-Cache $upstream_cache_status always; more_set_headers &amp;#34;Server: &amp;#34;; 负载均衡（轮询）
-server 3.3.3.3:80 weight=3 max_fails=3 fail_timeout=30s; server 6.6.6.6:80 weight=1 max_fails=3 fail_timeout=30s; keepalive 320; keepalive_requests 1000; 应用限流（在在系统设置-OpenResty-Real IP）后面添加</description></item><item><title>监控ovh服务器上新，通过钉钉发送通知。</title><link>https://blog.lufei.de/p/497/</link><pubDate>Sun, 30 Nov 2025 11:53:14 +0800</pubDate><guid>https://blog.lufei.de/p/497/</guid><description>钉钉通知设置机器人,记得把监控服务器的ip地址添加到IP地址(段)
+server 3.3.3.3:80 weight=3 max_fails=3 fail_timeout=30s; server 6.6.6.6:80 weight=1 max_fails=3 fail_timeout=30s; keepalive 320; keepalive_requests 1000; 仅允许中国大陆访问 curl -sS -O https://raw.</description></item><item><title>监控ovh服务器上新，通过钉钉发送通知。</title><link>https://blog.lufei.de/p/497/</link><pubDate>Sun, 30 Nov 2025 11:53:14 +0800</pubDate><guid>https://blog.lufei.de/p/497/</guid><description>钉钉通知设置机器人,记得把监控服务器的ip地址添加到IP地址(段)
 监控脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ovh-k.sh &amp;amp;&amp;amp; chmod +x ovh-k.sh &amp;amp;&amp;amp; ./ovh-k.sh 常用命令（可在任何目录运行）:
 查看实时日志: pm2 logs ovh-monitor 查看进程状态: pm2 list 停止服务: pm2 stop ovh-monitor 重启服务: pm2 restart ovh-monitor 按 Ctrl+C 退出日志查看（服务会继续运行） 这个脚本是一个状态变化监控器：
