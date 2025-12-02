@@ -8,11 +8,10 @@ curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o 
 基于OpenResty提供的强大web的管理界面，具有服务器状态监控、安全防护、免费SSL证书、主机管理、应用商店等功能。
 安装 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/om.sh &amp;amp;&amp;amp; chmod +x om.sh &amp;amp;&amp;amp; ./om.sh 固定版
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/omm.sh &amp;amp;&amp;amp; chmod +x omm.sh &amp;amp;&amp;amp; ./omm.sh 访问 https://your-ip:34567 ，用户名: admin ，密码: #Passw0rd
-启动 # 启动服务 /opt/om/oms -s start # 检查服务状态 /opt/om/oms -s status # 停止服务 /opt/om/oms -s stop # 重新启动 /opt/om/oms -s start 配置 这部分是DIY，为了满足个性化需求
+备份脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/om-b.sh &amp;amp;&amp;amp; chmod +x om-b.sh &amp;amp;&amp;amp; ./om-b.sh 启动 # 启动服务 /opt/om/oms -s start # 检查服务状态 /opt/om/oms -s status # 停止服务 /opt/om/oms -s stop # 重新启动 /opt/om/oms -s start 配置 这部分是DIY，为了满足个性化需求
 DNS解析, 在系统设置-OpenResty-DNS解析修改
-resolver 1.1.1.1 8.8.8.8 1.0.0.1 valid=300s ipv6=off local=off; 301重定向（在站点高级配置修改）
-return 301 &amp;#39;http://www.xxxx.cc$request_uri&amp;#39;; 屏蔽敏感信息头（在系统设置-OpenResty-缓存资源）修改
-add_header X-Cf-Cache $upstream_cache_status always; more_set_headers &amp;#34;Server: &amp;#34;; 负载均衡（轮询）</description></item><item><title>监控ovh服务器上新，通过钉钉发送通知。</title><link>https://blog.lufei.de/p/497/</link><pubDate>Sun, 30 Nov 2025 11:53:14 +0800</pubDate><guid>https://blog.lufei.de/p/497/</guid><description>钉钉通知设置机器人,记得把监控服务器的ip地址添加到IP地址(段)
+resolver 1.1.1.1 8.</description></item><item><title>监控ovh服务器上新，通过钉钉发送通知。</title><link>https://blog.lufei.de/p/497/</link><pubDate>Sun, 30 Nov 2025 11:53:14 +0800</pubDate><guid>https://blog.lufei.de/p/497/</guid><description>钉钉通知设置机器人,记得把监控服务器的ip地址添加到IP地址(段)
 监控脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ovh-k.sh &amp;amp;&amp;amp; chmod +x ovh-k.sh &amp;amp;&amp;amp; ./ovh-k.sh 常用命令（可在任何目录运行）:
 查看实时日志: pm2 logs ovh-monitor 查看进程状态: pm2 list 停止服务: pm2 stop ovh-monitor 重启服务: pm2 restart ovh-monitor 按 Ctrl+C 退出日志查看（服务会继续运行） 这个脚本是一个状态变化监控器：
