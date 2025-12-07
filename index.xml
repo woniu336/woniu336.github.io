@@ -3,7 +3,17 @@ read -p &amp;#34;请输入想要的快捷命令名称 (如: cm, caddy, mgr): &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>openresty-manager 开源反代面板</title><link>https://blog.lufei.de/p/openresty-manager-%E5%BC%80%E6%BA%90%E5%8F%8D%E4%BB%A3%E9%9D%A2%E6%9D%BF/</link><pubDate>Tue, 02 Dec 2025 00:41:02 +0800</pubDate><guid>https://blog.lufei.de/p/openresty-manager-%E5%BC%80%E6%BA%90%E5%8F%8D%E4%BB%A3%E9%9D%A2%E6%9D%BF/</guid><description>项目：https://github.com/Safe3/openresty-manager
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>一键封禁整个 ASN — 高效服务器防火墙脚本！</title><link>https://blog.lufei.de/p/500/</link><pubDate>Sun, 07 Dec 2025 21:44:39 +0800</pubDate><guid>https://blog.lufei.de/p/500/</guid><description>快速安装 curl -O https://raw.githubusercontent.com/woniu336/open_shell/main/block_asn.py &amp;amp;&amp;amp; chmod +x block_asn.py &amp;amp;&amp;amp; ./block_asn.py 功能说明
+这个脚本可以帮你：
+通过ASN号码批量封禁IP段 自动查询ASN下的所有IP地址 将规则添加到防火墙并永久保存 主要特性
+高性能封禁 使用 ipset + iptables 组合，支持同时封禁数千个IP段
+简单易用 提供交互式菜单：封禁ASN、查询ASN信息、移除封禁、查看封禁列表、测试IP
+智能检测 自动检测并提示安装所需的系统依赖
+双栈支持 同时支持IPv4和IPv6
+持久化配置 服务器重启后规则自动生效
+使用场景
+封禁爬虫：屏蔽某些云厂商的过度抓取 地域封锁：限制特定地区的访问 防御攻击：快速封禁攻击来源 节省带宽：减少无效流量消耗 常见ASN参考
+ASN 组织 AS398722 Censys AS14061 DigitalOcean AS135377 UCLOUD</description></item><item><title>openresty-manager 开源反代面板</title><link>https://blog.lufei.de/p/openresty-manager-%E5%BC%80%E6%BA%90%E5%8F%8D%E4%BB%A3%E9%9D%A2%E6%9D%BF/</link><pubDate>Tue, 02 Dec 2025 00:41:02 +0800</pubDate><guid>https://blog.lufei.de/p/openresty-manager-%E5%BC%80%E6%BA%90%E5%8F%8D%E4%BB%A3%E9%9D%A2%E6%9D%BF/</guid><description>项目：https://github.com/Safe3/openresty-manager
 文档：https://github.com/Safe3/openresty-manager/blob/main/README_CN.md
 基于OpenResty提供的强大web的管理界面，具有服务器状态监控、安全防护、免费SSL证书、主机管理、应用商店等功能。
 安装 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/om.sh &amp;amp;&amp;amp; chmod +x om.sh &amp;amp;&amp;amp; ./om.sh 固定版
