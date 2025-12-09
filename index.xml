@@ -3,7 +3,13 @@ read -p &amp;#34;请输入想要的快捷命令名称 (如: cm, caddy, mgr): &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>IP滥用检查系统</title><link>https://blog.lufei.de/p/501/</link><pubDate>Mon, 08 Dec 2025 20:55:17 +0800</pubDate><guid>https://blog.lufei.de/p/501/</guid><description>预览 免费API限制
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>iptables + ipset 黑名单管理脚本</title><link>https://blog.lufei.de/p/502/</link><pubDate>Tue, 09 Dec 2025 11:16:20 +0800</pubDate><guid>https://blog.lufei.de/p/502/</guid><description>高效封禁大量恶意IP
+脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ip_blacklist.sh &amp;amp;&amp;amp; chmod +x ip_blacklist.sh &amp;amp;&amp;amp; ./ip_blacklist.sh 快捷键
+echo &amp;#34;alias ipban=&amp;#39;/root/ip_blacklist.sh&amp;#39;&amp;#34; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc 输入ipban即可启动脚本
+手动查询
+# ✅ 查看ipset集合 ipset list blacklist # ✅ 查看iptables规则是否生效 iptables -L INPUT -n | grep blacklist # ✅ 检查某个IP是否被封禁 ipset test blacklist 194.110.115.222 其他命令
+# 手动添加IP（不用脚本） ipset add blacklist 1.2.3.4 # 手动删除IP ipset del blacklist 1.2.3.4 # 清空所有IP ipset flush blacklist # 查看黑名单的详细配置（包括类型、大小等） ipset list blacklist -t 其他命令2</description></item><item><title>IP滥用检查系统</title><link>https://blog.lufei.de/p/501/</link><pubDate>Mon, 08 Dec 2025 20:55:17 +0800</pubDate><guid>https://blog.lufei.de/p/501/</guid><description>预览 免费API限制
 每天1000次查询 每分钟不超过一定次数 下载check_ip.php
 https://github.com/woniu336/open_shell/blob/main/check_ip.php 下载index.html
 https://github.com/woniu336/open_shell/blob/main/index.html 放在同一个目录下，修改check_ip.php, 添加密钥
