@@ -26,7 +26,7 @@ define(&amp;#39;ABUSEIPDB_API_KEY&amp;#39;, &amp;#39;你的API密钥&amp;#39;); 
 持久化配置 服务器重启后规则自动生效
 使用场景
 封禁爬虫：屏蔽某些云厂商的过度抓取 地域封锁：限制特定地区的访问 防御攻击：快速封禁攻击来源 节省带宽：减少无效流量消耗 常见ASN参考
-ASN 组织 AS398722 Censys AS14061 DigitalOcean AS135377 UCLOUD</description></item><item><title>openresty-manager 开源反代面板</title><link>https://blog.lufei.de/p/498/</link><pubDate>Tue, 02 Dec 2025 00:41:02 +0800</pubDate><guid>https://blog.lufei.de/p/498/</guid><description>项目：https://github.com/Safe3/openresty-manager
+ASN 组织 AS398722 Censys AS14061 DigitalOcean AS135377 UCLOUD</description></item><item><title>openresty-manager开源反代面板</title><link>https://blog.lufei.de/p/498/</link><pubDate>Tue, 02 Dec 2025 00:41:02 +0800</pubDate><guid>https://blog.lufei.de/p/498/</guid><description>项目：https://github.com/Safe3/openresty-manager
 文档：https://github.com/Safe3/openresty-manager/blob/main/README_CN.md
 基于OpenResty提供的强大web的管理界面，具有服务器状态监控、安全防护、免费SSL证书、主机管理、应用商店等功能。
 安装 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/om.sh &amp;amp;&amp;amp; chmod +x om.sh &amp;amp;&amp;amp; ./om.sh 固定版
