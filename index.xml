@@ -3,10 +3,24 @@ read -p &amp;#34;请输入想要的快捷命令名称 (如: cm, caddy, mgr): &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>nginx防御教程之fail2ban（一）</title><link>https://blog.lufei.de/p/506/</link><pubDate>Wed, 17 Dec 2025 21:24:27 +0800</pubDate><guid>https://blog.lufei.de/p/506/</guid><description>基于 nginx 基础上，非docker nginx
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>nginx 防御教程之Shell脚本（二）</title><link>https://blog.lufei.de/p/507/</link><pubDate>Fri, 19 Dec 2025 21:10:01 +0800</pubDate><guid>https://blog.lufei.de/p/507/</guid><description>deny方式 零依赖｜只用 Nginx｜运维只需写文件
+脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-b.sh &amp;amp;&amp;amp; chmod +x nginx-b.sh &amp;amp;&amp;amp; ./nginx-b.sh 然后在 Nginx 配置中引入黑名单,例如
+server { listen 80; include /etc/nginx/dynamic/blacklist.conf; # ← 关键！ location / { proxy_pass http://127.0.0.1:8080; } } 核心思想：
+维护一个纯文本黑名单文件：/etc/nginx/blacklist.txt（每行一个 IP）
+用一个 Shell 脚本自动转成 deny 配置并 重载nginx
+通过 inotifywait 监听文件变化，改完即生效
+配合fail2ban（cc策略）检测到403状态码，封禁，完美联动
+使用方式： 运维只需编辑 /etc/nginx/blacklist.txt, 或者使用菜单2
+示例内容
+1.2.3.4 5.6.7.8/24 保存文件后，3 秒内自动封禁！无需任何命令！
+优点： 只需一个文本文件 + 一个 Shell 脚本 完全兼容原生 Nginx
+仅允许中国用户访问 脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/cn-nginx.sh &amp;amp;&amp;amp; chmod +x cn-nginx.</description></item><item><title>nginx防御教程之fail2ban（一）</title><link>https://blog.lufei.de/p/506/</link><pubDate>Wed, 17 Dec 2025 21:24:27 +0800</pubDate><guid>https://blog.lufei.de/p/506/</guid><description>基于 nginx 基础上，非docker nginx
 测试系统：debian12
 防CC攻击过滤器基于nginx的limit速率限制配置，判断403和429状态码
 使用ufw封禁
+注意：日志要存在，避免报错
 fail2ban脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/f2.sh &amp;amp;&amp;amp; chmod +x f2.sh &amp;amp;&amp;amp; ./f2.sh 相关命令 # 查看 Fail2Ban 服务状态 sudo systemctl status fail2ban # 重启 sudo systemctl restart fail2ban # 查看所有监狱 sudo fail2ban-client status # 查看 Nginx 相关监狱 sudo fail2ban-client status sshd sudo fail2ban-client status nginx-bad-request sudo fail2ban-client status nginx-cc # 测试 Fail2Ban 配置语法 sudo fail2ban-server -t # Fail2Ban 实时日志 sudo tail -f /var/log/fail2ban.log # 日志 sudo journalctl -u fail2ban -f -n 50 编辑过滤器</description></item><item><title>Nginx-ui 部署教程</title><link>https://blog.lufei.de/p/505/</link><pubDate>Sun, 14 Dec 2025 01:21:53 +0800</pubDate><guid>https://blog.lufei.de/p/505/</guid><description>项目：https://github.com/0xJacky/nginx-ui
 文档：https://nginxui.com/zh_CN/
