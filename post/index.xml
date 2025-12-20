@@ -7,7 +7,8 @@ curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o 
 不管你是否安装了nginx，不影响使用，只要80端口没有被占用
 忽略nginx警告即可，如果你不使用nginx
 首次申请 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ip-cert-apply.sh &amp;amp;&amp;amp; chmod +x ip-cert-apply.sh &amp;amp;&amp;amp; ./ip-cert-apply.sh 成功提示：
-检测证书申请结果... ✓ 证书申请成功！ 证书文件: /root/lego/certificates/3.3.3.3.crt 私钥文件: /root/lego/certificates/3.3.3.3.key 复制证书到nginx目录... ✓ 证书已复制到 /etc/nginx/ssl/ip 重新启动nginx服务... 警告: nginx启动失败 === 证书申请完成 === 公网IP: 3.3.3.3 证书文件: /etc/nginx/ssl/ip/3.3.3.3.crt 私钥文件: /etc/nginx/ssl/ip/3.3.3.3.key 续期脚本
+检测证书申请结果... ✓ 证书申请成功！ 证书文件: /root/lego/certificates/3.3.3.3.crt 私钥文件: /root/lego/certificates/3.3.3.3.key 复制证书到nginx目录... ✓ 证书已复制到 /etc/nginx/ssl/ip 重新启动nginx服务... 警告: nginx启动失败 === 证书申请完成 === 公网IP: 3.3.3.3 证书文件: /etc/nginx/ssl/ip/3.3.3.3.crt 私钥文件: /etc/nginx/ssl/ip/3.3.3.3.key 如果遇到什么错误，重启docker容器
+sudo systemctl restart docker 续期脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ip-renew.sh &amp;amp;&amp;amp; chmod +x ip-renew.sh &amp;amp;&amp;amp; ./ip-renew.sh 提示
 执行证书续期... [3.3.3.3] acme: renewalInfo endpoint indicates that renewal is not needed [3.3.3.3] The certificate expires in 6 days, the number of days defined to perform the renewal is 2: no ✓ 证书续期成功！ 更新nginx证书文件.</description></item><item><title>nginx 防御教程之Shell脚本（二）</title><link>https://blog.lufei.de/p/507/</link><pubDate>Fri, 19 Dec 2025 21:10:01 +0800</pubDate><guid>https://blog.lufei.de/p/507/</guid><description>deny方式 零依赖｜只用 Nginx｜运维只需写文件
 脚本
