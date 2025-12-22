@@ -3,7 +3,13 @@ read -p &amp;#34;请输入想要的快捷命令名称 (如: cm, caddy, mgr): &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>可能是最好的Nginx反向代理管理脚本</title><link>https://blog.lufei.de/p/511/</link><pubDate>Mon, 22 Dec 2025 15:28:02 +0800</pubDate><guid>https://blog.lufei.de/p/511/</guid><description>前言
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>rsync同步和实时监控工具</title><link>https://blog.lufei.de/p/512/</link><pubDate>Tue, 23 Dec 2025 00:19:22 +0800</pubDate><guid>https://blog.lufei.de/p/512/</guid><description> 注意事项：在填写同步目录时，结尾要带上/ 例如：/home/web/
+脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rsync_manager.sh &amp;amp;&amp;amp; chmod +x rsync_manager.sh &amp;amp;&amp;amp; ./rsync_manager.sh 快速启动
+echo &amp;#34;alias rsync=&amp;#39;/root/rsync_manager.sh&amp;#39;&amp;#34; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc 自定义模式 排除 .gz 文件
+-avz --exclude=&amp;#39;*.gz&amp;#39; 排除多种压缩文件
+-avz --exclude=&amp;#39;*.gz&amp;#39; --exclude=&amp;#39;*.zip&amp;#39; --exclude=&amp;#39;*.tar&amp;#39; 带删除并排除 .gz 文件, 在镜像同步（删除远程多余文件）的同时排除 .gz 文件
+-avz --delete --exclude=&amp;#39;*.gz&amp;#39; 使用排除模式文件：
+-avz --exclude-from=&amp;#39;/path/to/exclude-list.txt&amp;#39;</description></item><item><title>可能是最好的Nginx反向代理管理脚本</title><link>https://blog.lufei.de/p/511/</link><pubDate>Mon, 22 Dec 2025 15:28:02 +0800</pubDate><guid>https://blog.lufei.de/p/511/</guid><description>前言
 这款脚本将 ACME 自动化模块 编译到 Nginx v1.28.0 实现证书自动化
 完美适配Nginx-UI如果你习惯使用面板管理，推荐
 主要用于反向代理，非建站环境
