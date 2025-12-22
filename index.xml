@@ -3,7 +3,16 @@ read -p &amp;#34;请输入想要的快捷命令名称 (如: cm, caddy, mgr): &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
-curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>nginx配置反向代理400错误解决办法</title><link>https://blog.lufei.de/p/510/</link><pubDate>Mon, 22 Dec 2025 00:36:03 +0800</pubDate><guid>https://blog.lufei.de/p/510/</guid><description>nginx配置反向代理或跳转出现
+curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; .</description></item><item><title>可能是最好的Nginx反向代理管理脚本</title><link>https://blog.lufei.de/p/511/</link><pubDate>Mon, 22 Dec 2025 15:28:02 +0800</pubDate><guid>https://blog.lufei.de/p/511/</guid><description>前言
+这款脚本将 ACME 自动化模块 编译到 Nginx v1.28.0 实现证书自动化
+完美适配Nginx-UI如果你习惯使用面板管理，推荐
+主要用于反向代理，非建站环境
+脚本特色：
+全自动 SSL： 内置 Nginx ACME 模块，证书申请、部署、自动续期一条龙，上线即 HTTPS。 一键全能型： 反代、负载均衡、静态站点、端口转发，WebSocket 支持、HTTP 强制跳转等 标准路径： 拒绝乱放文件，遵循标准 Nginx路径。 备份还原： 压缩备份与一键还原功能，改错配置瞬间回血。 多节点同步 利用Nginx-ui节点同步特色可以做到修改配置就同步 脚本
+注意事项：
+1G内存机子最好添加swap，避免安装失败 安装过程大概5分钟，也许不到 要事先解析域名到ip，避免一顿操作猛如虎，检查一看250 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme.sh &amp;amp;&amp;amp; chmod +x nginx-acme.sh &amp;amp;&amp;amp; ./nginx-acme.sh 快捷启动
+echo &amp;#34;alias ng=&amp;#39;/root/nginx-acme.sh&amp;#39;&amp;#34; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc 输入ng 启动脚本
+在这个追求效率的时代，别让琐事消耗你的技术热情。这套脚本将复杂的 Nginx 调优和证书维护浓缩进一个 0-15 的选择题里。</description></item><item><title>nginx配置反向代理400错误解决办法</title><link>https://blog.lufei.de/p/510/</link><pubDate>Mon, 22 Dec 2025 00:36:03 +0800</pubDate><guid>https://blog.lufei.de/p/510/</guid><description>nginx配置反向代理或跳转出现
 400,Request Header Or Cookie Too Large
 浪费我不少时间排查，结果网上查找资料找到了答案
 通常与客户端请求头或 Cookie 太大有关。通过增加 client_header_buffer_size 和 large_client_header_buffers 的值，可以允许更大的请求头被正确解析，从而避免出现 400 错误。
