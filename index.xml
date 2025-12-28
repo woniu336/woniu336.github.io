@@ -7,7 +7,7 @@ curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o 
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
 curl -sS -O https://raw.</description></item><item><title>优化静态资源传输：在 Nginx 中启用 Brotli 预压缩</title><link>https://blog.lufei.de/p/513/</link><pubDate>Sun, 28 Dec 2025 11:59:30 +0800</pubDate><guid>https://blog.lufei.de/p/513/</guid><description>安装nginx脚本 带Brotli压缩模块
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-br.sh &amp;amp;&amp;amp; chmod +x nginx-acme-br.sh &amp;amp;&amp;amp; ./nginx-acme-br.sh 静态处理 bulu
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme.sh &amp;amp;&amp;amp; chmod +x nginx-acme.sh &amp;amp;&amp;amp; ./nginx-acme.sh 静态处理 bulu
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/gzbr.sh &amp;amp;&amp;amp; chmod +x gzbr.sh &amp;amp;&amp;amp; ./gzbr.sh 8090
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/8090.sh &amp;amp;&amp;amp; chmod +x 8090.sh &amp;amp;&amp;amp; ./8090.sh cat
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/cat.sh &amp;amp;&amp;amp; chmod +x cat.sh &amp;amp;&amp;amp; ./cat.sh qk
