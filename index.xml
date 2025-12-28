@@ -6,12 +6,12 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>优化静态资源传输：在 Nginx 中启用 Brotli 预压缩</title><link>https://blog.lufei.de/p/513/</link><pubDate>Sun, 28 Dec 2025 11:59:30 +0800</pubDate><guid>https://blog.lufei.de/p/513/</guid><description>安装nginx脚本，带Brotli压缩模块
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-br.sh &amp;amp;&amp;amp; chmod +x nginx-acme-br.sh &amp;amp;&amp;amp; ./nginx-acme-br.sh 将静态处理成br格式
+curl -sS -O https://raw.</description></item><item><title>优化静态资源传输：在 Nginx 中启用 Brotli 预压缩</title><link>https://blog.lufei.de/p/513/</link><pubDate>Sun, 28 Dec 2025 11:59:30 +0800</pubDate><guid>https://blog.lufei.de/p/513/</guid><description>安装nginx脚本 带Brotli压缩模块
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme-br.sh &amp;amp;&amp;amp; chmod +x nginx-acme-br.sh &amp;amp;&amp;amp; ./nginx-acme-br.sh 静态处理 脚本（自用）
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/gzbr.sh &amp;amp;&amp;amp; chmod +x gzbr.sh &amp;amp;&amp;amp; ./gzbr.sh 将静态处理成br格式
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/br.sh &amp;amp;&amp;amp; chmod +x br.sh &amp;amp;&amp;amp; ./br.sh 将静态处理成gz格式
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/gzip.sh &amp;amp;&amp;amp; chmod +x gzip.sh &amp;amp;&amp;amp; ./gzip.sh 创建预压缩存储目录
-mkdir -p /var/www/cache/2345.cc 负载均衡
-# ===== WebSocket 智能判断 ===== map $http_upgrade $connection_upgrade { default &amp;#34;&amp;#34;; websocket &amp;#34;upgrade&amp;#34;; } upstream www_2345_cc { keepalive 320; keepalive_requests 500; keepalive_timeout 60s; server 3.3.3.3:80; server 5.5.5.5:80; } # ===== HTTP → HTTPS ===== server { listen 80; listen [::]:80; server_name 2345.</description></item><item><title>rsync同步和实时监控工具</title><link>https://blog.lufei.de/p/512/</link><pubDate>Tue, 23 Dec 2025 00:19:22 +0800</pubDate><guid>https://blog.lufei.de/p/512/</guid><description> 注意事项：在填写同步目录时，结尾要带上/ 例如：/home/web/
+mkdir -p /var/www/cache/2345.cc 负载均衡 # ===== WebSocket 智能判断 ===== map $http_upgrade $connection_upgrade { default &amp;#34;&amp;#34;; websocket &amp;#34;upgrade&amp;#34;; } upstream www_2345_cc { keepalive 320; keepalive_requests 500; keepalive_timeout 60s; server 3.</description></item><item><title>rsync同步和实时监控工具</title><link>https://blog.lufei.de/p/512/</link><pubDate>Tue, 23 Dec 2025 00:19:22 +0800</pubDate><guid>https://blog.lufei.de/p/512/</guid><description> 注意事项：在填写同步目录时，结尾要带上/ 例如：/home/web/
 脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/rsync_manager.sh &amp;amp;&amp;amp; chmod +x rsync_manager.sh &amp;amp;&amp;amp; ./rsync_manager.sh 快速启动
 echo &amp;#34;alias rsync=&amp;#39;/root/rsync_manager.sh&amp;#39;&amp;#34; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc 自定义模式 排除 .gz 文件
 -avz --exclude=&amp;#39;*.gz&amp;#39; 排除多种压缩文件
