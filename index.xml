@@ -6,7 +6,9 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>优化静态资源传输：在 Nginx 中启用 Brotli 预压缩</title><link>https://blog.lufei.de/p/513/</link><pubDate>Sun, 28 Dec 2025 11:59:30 +0800</pubDate><guid>https://blog.lufei.de/p/513/</guid><description>安装nginx脚本 带Brotli压缩模块
+curl -sS -O https://raw.</description></item><item><title>cloudflare R2 备份/还原脚本 - nginx专用</title><link>https://blog.lufei.de/p/514/</link><pubDate>Mon, 29 Dec 2025 13:02:53 +0800</pubDate><guid>https://blog.lufei.de/p/514/</guid><description>备份脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/r2-b.sh &amp;amp;&amp;amp; chmod +x r2-b.sh &amp;amp;&amp;amp; ./r2-b.sh 还原脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/r2.sh &amp;amp;&amp;amp; chmod +x r2.sh &amp;amp;&amp;amp; ./r2.sh</description></item><item><title>优化静态资源传输：在 Nginx 中启用 Brotli 预压缩</title><link>https://blog.lufei.de/p/513/</link><pubDate>Sun, 28 Dec 2025 11:59:30 +0800</pubDate><guid>https://blog.lufei.de/p/513/</guid><description>安装nginx脚本 带Brotli压缩模块
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme.sh &amp;amp;&amp;amp; chmod +x nginx-acme.sh &amp;amp;&amp;amp; ./nginx-acme.sh 静态处理 bulu
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/gzbr.sh &amp;amp;&amp;amp; chmod +x gzbr.sh &amp;amp;&amp;amp; ./gzbr.sh 8090
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/8090.sh &amp;amp;&amp;amp; chmod +x 8090.sh &amp;amp;&amp;amp; ./8090.sh cat
@@ -850,16 +852,16 @@ railway部署教程：https://doc.ssr.rs/railway/
 一键脚本（真正的最简单操作的探针脚本）
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_serverstatus.sh &amp;amp;&amp;amp; chmod +x setup_serverstatus.sh &amp;amp;&amp;amp; ./setup_serverstatus.sh 介绍 ServerStatus 中文威力加强版，保持轻量和简化部署，增加主要特性如下：
 使用 rust 完全重写 server、client，单个执行文件部署 支持上下线和简单自定义规则告警 (telegram、 wechat、 email、 webhook) 支持 http 协议上报，可以方便部署到各免费容器服务和配合 cf 等优化上报链路 支持 cloudflare tunnels 和 mTLS 部署 支持主机分组动态注册，简化配置 支持 vnstat 统计月流量，重启不丢流量数据 支持 railway 快速部署 支持 systemd 开机自启 其它功能，如 🗺️ 见 wiki 服务端 服务端管理命令：
-sudo systemctl stop stat_server # 停止服务 sudo systemctl start stat_server # 启动服务 sudo systemctl restart stat_server # 重启服务 sudo systemctl status stat_server # 查看状态 客户端 客户端管理命令：</description></item><item><title>rclone配合cloudflare r2 备份站点</title><link>https://blog.lufei.de/p/386/</link><pubDate>Sun, 22 Dec 2024 21:07:32 +0800</pubDate><guid>https://blog.lufei.de/p/386/</guid><description>安装工具 安装pigz压缩
+sudo systemctl stop stat_server # 停止服务 sudo systemctl start stat_server # 启动服务 sudo systemctl restart stat_server # 重启服务 sudo systemctl status stat_server # 查看状态 客户端 客户端管理命令：</description></item><item><title>rclone配合cloudflare r2 备份站点</title><link>https://blog.lufei.de/p/386/</link><pubDate>Sun, 22 Dec 2024 21:07:32 +0800</pubDate><guid>https://blog.lufei.de/p/386/</guid><description>一键脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/r2-b.sh &amp;amp;&amp;amp; chmod +x r2-b.sh &amp;amp;&amp;amp; ./r2-b.sh 还原脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/r2.sh &amp;amp;&amp;amp; chmod +x r2.sh &amp;amp;&amp;amp; ./r2.sh 安装工具 安装pigz压缩
 apt-get update apt-get install pigz 安装rclone
 sudo -v ; curl https://rclone.org/install.sh | sudo bash 编辑cloudflare r2配置,当然也可以是其他s3网盘，或者谷歌网盘、onedrive都可以
 mkdir -p /root/.config/rclone/ nano /root/.config/rclone/rclone.conf 注意：名称r3要和backup_config.conf配置文件的remote_name名称一致
 配置如下，只需要修改access_key_id、secret_access_key、endpoint 三个参数
 [r3] type = s3 provider = Cloudflare access_key_id = 111 secret_access_key = 222 region = auto endpoint = https://333.r2.cloudflarestorage.com 按ctrl+x保存，y退出
 测试是否配置正确
-rclone ls r3:web # web是存储桶名称 下载脚本文件 wget https://raw.githubusercontent.com/woniu336/open_shell/main/website_backup.py wget https://raw.githubusercontent.com/woniu336/open_shell/main/backup_config.conf 编辑backup_config.conf
-nano backup_config.conf 需要修改的地方
-source_dir: 需要备份的目录 backup_dir：压缩文件保存的临时目录 remote_path：web/bt/backup，注意：web是r2存储桶的名称，/bt/backup是目录， 目录可以不存在，会自动创建 ### 排除目录，一行一个，例如 node_modules/ 按 ctrl+x 保存，y 退出</description></item><item><title>MySQL数据库主主同步</title><link>https://blog.lufei.de/p/385/</link><pubDate>Sat, 21 Dec 2024 16:17:36 +0800</pubDate><guid>https://blog.lufei.de/p/385/</guid><description>使用场景：两台服务器互为从主，数据库自动同步
+rclone ls r3:web # web是存储桶名称 下载脚本文件 wget https://raw.</description></item><item><title>MySQL数据库主主同步</title><link>https://blog.lufei.de/p/385/</link><pubDate>Sat, 21 Dec 2024 16:17:36 +0800</pubDate><guid>https://blog.lufei.de/p/385/</guid><description>使用场景：两台服务器互为从主，数据库自动同步
 事先准备 开启防火墙 Debian/Ubuntu 检查UFW 是否启用
 sudo ufw status 如果显示 &amp;ldquo;Status: inactive&amp;rdquo; 说明防火墙未启用,需要安装UFW
 sudo apt update sudo apt install ufw ⚠️ 安全提醒：允许SSH连接（重要！防止被锁在系统外）
