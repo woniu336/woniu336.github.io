@@ -36,7 +36,8 @@ echo &amp;#34;alias rsync=&amp;#39;/root/rsync_manager.sh&amp;#39;&amp;#34; &amp
 注意事项：
 1G内存机子最好添加swap，避免安装失败 安装过程大概5分钟，也许不到 要事先解析域名到ip，避免一顿操作猛如虎，检查一看250 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme.sh &amp;amp;&amp;amp; chmod +x nginx-acme.sh &amp;amp;&amp;amp; ./nginx-acme.sh 快捷启动
 echo &amp;#34;alias ng=&amp;#39;/root/nginx-acme.sh&amp;#39;&amp;#34; &amp;gt;&amp;gt; ~/.bashrc source ~/.bashrc 输入ng 启动脚本
-在这个追求效率的时代，别让琐事消耗你的技术热情。这套脚本将复杂的 Nginx 调优和证书维护浓缩进一个 0-15 的选择题里。</description></item><item><title>nginx配置反向代理400错误解决办法</title><link>https://blog.lufei.de/p/510/</link><pubDate>Mon, 22 Dec 2025 00:36:03 +0800</pubDate><guid>https://blog.lufei.de/p/510/</guid><description>nginx配置反向代理或跳转出现
+编辑站点
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ng-s.sh &amp;amp;&amp;amp; chmod +x ng-s.sh &amp;amp;&amp;amp; ./ng-s.sh 在这个追求效率的时代，别让琐事消耗你的技术热情。这套脚本将复杂的 Nginx 调优和证书维护浓缩进一个 0-15 的选择题里。</description></item><item><title>nginx配置反向代理400错误解决办法</title><link>https://blog.lufei.de/p/510/</link><pubDate>Mon, 22 Dec 2025 00:36:03 +0800</pubDate><guid>https://blog.lufei.de/p/510/</guid><description>nginx配置反向代理或跳转出现
 400,Request Header Or Cookie Too Large
 浪费我不少时间排查，结果网上查找资料找到了答案
 通常与客户端请求头或 Cookie 太大有关。通过增加 client_header_buffer_size 和 large_client_header_buffers 的值，可以允许更大的请求头被正确解析，从而避免出现 400 错误。
