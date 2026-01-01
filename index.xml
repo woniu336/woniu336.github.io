@@ -6,7 +6,17 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>Nginx 网站日志分析工具</title><link>https://blog.lufei.de/p/515/</link><pubDate>Tue, 30 Dec 2025 13:07:48 +0800</pubDate><guid>https://blog.lufei.de/p/515/</guid><description>项目：https://github.com/BeyondXinXin/nixvis
+curl -sS -O https://raw.</description></item><item><title>网页版vscode部署</title><link>https://blog.lufei.de/p/516/</link><pubDate>Thu, 01 Jan 2026 22:19:39 +0800</pubDate><guid>https://blog.lufei.de/p/516/</guid><description>系统：debian12
+API：https://dmxapi.cn/
+安装 code-server 安装node
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - sudo apt install -y nodejs 验证
+node -v npm -v which node 安装code-server
+curl -fsSL https://code-server.dev/install.sh | sh 开机自启
+sudo systemctl enable --now code-server@$USER 编辑配置
+nano ~/.config/code-server/config.yaml 开放防火墙
+sudo ufw allow 8080 sudo ufw reload 重启
+sudo systemctl restart code-server@$USER 安装 codex sudo npm install -g @openai/codex 验证
+codex --version 配置 DMXAPI mkdir -p ~/.codex touch ~/.</description></item><item><title>Nginx 网站日志分析工具</title><link>https://blog.lufei.de/p/515/</link><pubDate>Tue, 30 Dec 2025 13:07:48 +0800</pubDate><guid>https://blog.lufei.de/p/515/</guid><description>项目：https://github.com/BeyondXinXin/nixvis
 NixVis 是一款基于 Go 语言开发的、开源轻量级 Nginx 日志分析工具，专为自部署场景设计。它提供直观的数据可视化和全面的统计分析功能，帮助您实时监控网站流量、访问来源和地理分布等关键指标，无需复杂配置即可快速部署使用。
 go安装 如果没有安装
 wget https://golang.org/dl/go1.25.5.linux-amd64.tar.gz tar -C /usr/local -xzf go1.25.5.linux-amd64.tar.gz echo &amp;#39;export PATH=$PATH:/usr/local/go/bin&amp;#39; &amp;gt;&amp;gt; ~/.bashrc &amp;amp;&amp;amp; source ~/.bashrc go version 放行防火墙
