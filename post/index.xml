@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 01 Jan 2026 22:19:39 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 02 Jan 2026 15:34:07 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_menu.sh &amp;amp;&amp;amp; chmod +x setup_menu.sh &amp;amp;&amp;amp; ./setup_menu.sh 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
@@ -6,7 +6,17 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>网页版vscode部署</title><link>https://blog.lufei.de/p/516/</link><pubDate>Thu, 01 Jan 2026 22:19:39 +0800</pubDate><guid>https://blog.lufei.de/p/516/</guid><description>系统：debian12
+curl -sS -O https://raw.</description></item><item><title>一个轻量、可靠的 Nginx 可视化运维面板</title><link>https://blog.lufei.de/p/517/</link><pubDate>Fri, 02 Jan 2026 15:34:07 +0800</pubDate><guid>https://blog.lufei.de/p/517/</guid><description>项目：https://github.com/woniu336/ngx-nova
+轻量级的 Nginx 可视化运维面板，内存占用 低于 20MB，帮助你快速完成安装、站点管理、端口转发、备份与日志查看等常见任务。
+✨ 功能亮点 极简部署：单一 Go 二进制 + 静态前端，极低资源占用。
+一键安装/卸载：内置 nginx-acme 脚本调用，快速部署或清理 Nginx。
+站点与转发管理：图形化创建/编辑/删除站点与 Stream 转发配置，自动执行重载
+一键备份与恢复：本地备份 + 自动每天备份到 Cloudflare R2。
+日志中心：可视化按域名聚合 Access/Error 日志，支持刷新与独立查看。
+不再担心 SSL 证书过期，内置 ACME 自动化能力，HTTPS 证书申请与续期全自动完成。
+🚀 快速开始 1.放行防火墙
+ufw allow 8083/tcp 安装脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/ngx.sh &amp;amp;&amp;amp; chmod +x ngx.sh &amp;amp;&amp;amp; ./ngx.sh 登录http://ip:8083/ui/ 首次设置登录令牌 如需修改令牌
+tokenctl --set &amp;#34;你的令牌&amp;#34; --file /opt/nginx-mgr/auth_token.json 卸载 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/uni-ngx.sh &amp;amp;&amp;amp; chmod +x uni-ngx.sh &amp;amp;&amp;amp; .</description></item><item><title>网页版vscode部署</title><link>https://blog.lufei.de/p/516/</link><pubDate>Thu, 01 Jan 2026 22:19:39 +0800</pubDate><guid>https://blog.lufei.de/p/516/</guid><description>系统：debian12
 API：https://dmxapi.cn/
 安装 code-server 安装node
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - sudo apt install -y nodejs 验证
