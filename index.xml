@@ -6,7 +6,14 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>一个轻量、可靠的 Nginx 可视化运维面板</title><link>https://blog.lufei.de/p/517/</link><pubDate>Fri, 02 Jan 2026 15:34:07 +0800</pubDate><guid>https://blog.lufei.de/p/517/</guid><description>项目：https://github.com/woniu336/ngx-nova
+curl -sS -O https://raw.</description></item><item><title>CF DNS 宕机切换面板</title><link>https://blog.lufei.de/p/518/</link><pubDate>Sun, 04 Jan 2026 20:03:17 +0800</pubDate><guid>https://blog.lufei.de/p/518/</guid><description>放行防火墙 默认8081端口，例如
+ufw allow 8081/tcp 安装 unzip 工具避免安装失败
+sudo apt-get update sudo apt-get install unzip 部署脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/cfserver.sh &amp;amp;&amp;amp; chmod +x cfserver.sh &amp;amp;&amp;amp; ./cfserver.sh 修改令牌
+cd /opt/cfserver &amp;amp;&amp;amp; ./dns-server -reset-token 然后重启
+cd /opt/cfserver &amp;amp;&amp;amp; pkill dns-server &amp;amp;&amp;amp; nohup ./dns-server &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp; 部署说明： 新建目录
+mkdir -p /opt/cfserver cd /opt/cfserver 上传到 Linux 服务器
+# 将以下文件上传到服务器 - dns-server (二进制文件) - web/ (整个目录) 在服务器上设置
+# 赋予执行权限 chmod +x dns-server # 启动服务 .</description></item><item><title>一个轻量、可靠的 Nginx 可视化运维面板</title><link>https://blog.lufei.de/p/517/</link><pubDate>Fri, 02 Jan 2026 15:34:07 +0800</pubDate><guid>https://blog.lufei.de/p/517/</guid><description>项目：https://github.com/woniu336/ngx-nova
 轻量级的 Nginx 可视化运维面板，内存占用 低于 20MB，帮助你快速完成安装、站点管理、端口转发、备份与日志查看等常见任务。
 ✨ 功能亮点 极简部署：单一 Go 二进制 + 静态前端，极低资源占用。
 一键安装/卸载：内置 nginx-acme 脚本调用，快速部署或清理 Nginx。
