@@ -6,7 +6,18 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>519</title><link>https://blog.lufei.de/p/519/</link><pubDate>Mon, 05 Jan 2026 13:00:01 +0800</pubDate><guid>https://blog.lufei.de/p/519/</guid><description/></item><item><title>CF DNS 宕机切换面板</title><link>https://blog.lufei.de/p/518/</link><pubDate>Sun, 04 Jan 2026 20:03:17 +0800</pubDate><guid>https://blog.lufei.de/p/518/</guid><description>放行防火墙 默认8081端口，例如
+curl -sS -O https://raw.</description></item><item><title>Scoop - Windows 命令行式的软件安装工具</title><link>https://blog.lufei.de/p/519/</link><pubDate>Mon, 05 Jan 2026 13:00:01 +0800</pubDate><guid>https://blog.lufei.de/p/519/</guid><description>原文档: https://gitee.com/scoop-installer-mirrors
+开始部署 安装PowerShell 7
+https://gh-proxy.com/https://github.com/PowerShell/PowerShell/releases/download/v7.5.4/PowerShell-7.5.4-win-x64.msi 安装 Scoop 打开 PowerShell 7.0+ (Core) 或 Windows PowerShell 5.1
+设置执行策略
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser 下载安装脚本
+irm https://gitee.com/scoop-installer-mirrors/Install/releases/download/archive/install.ps1 -OutFile install.ps1 执行安装脚本
+mkdir D:\scoop .\install.ps1 -ScoopDir &amp;#34;D:\scoop&amp;#34; 或者
+$env:SCOOP=&amp;#39;D:\scoop&amp;#39;; iex &amp;#34;&amp;amp; {$(irm get.scoop.sh)} -RunAsAdmin&amp;#34; 设置 scoop 仓库
+scoop config scoop_repo https://gitee.com/scoop-installer-mirrors/Scoop 添加 bucket
+scoop bucket add main https://gitee.com/scoop-installer-mirrors/Main extras
+scoop bucket add extras https://gitee.com/scoop-installer-mirrors/Extras 优化 scoop search 的性能
+scoop config use_sqlite_cache true 提升 Scoop 使用体验 添加 abyss (Github 或 Gitee)</description></item><item><title>CF DNS 宕机切换面板</title><link>https://blog.lufei.de/p/518/</link><pubDate>Sun, 04 Jan 2026 20:03:17 +0800</pubDate><guid>https://blog.lufei.de/p/518/</guid><description>放行防火墙 默认8081端口，例如
 ufw allow 8081/tcp 安装 unzip 工具避免安装失败
 sudo apt-get update sudo apt-get install unzip 部署脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/cfserver.sh &amp;amp;&amp;amp; chmod +x cfserver.sh &amp;amp;&amp;amp; ./cfserver.sh 修改令牌
 cd /opt/cfserver &amp;amp;&amp;amp; ./dns-server -reset-token 然后重启
