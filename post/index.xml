@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 05 Jan 2026 13:00:01 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 06 Jan 2026 10:16:30 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_menu.sh &amp;amp;&amp;amp; chmod +x setup_menu.sh &amp;amp;&amp;amp; ./setup_menu.sh 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
@@ -6,7 +6,13 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>Scoop - Windows 命令行式的软件安装工具</title><link>https://blog.lufei.de/p/519/</link><pubDate>Mon, 05 Jan 2026 13:00:01 +0800</pubDate><guid>https://blog.lufei.de/p/519/</guid><description>原文档: https://gitee.com/scoop-installer-mirrors
+curl -sS -O https://raw.</description></item><item><title>域名到期监控系统</title><link>https://blog.lufei.de/p/520/</link><pubDate>Tue, 06 Jan 2026 10:16:30 +0800</pubDate><guid>https://blog.lufei.de/p/520/</guid><description>项目 Github: https://github.com/woniu336/whois
+API调用：https://whois.233333.best/api/
+一键部署脚本 提醒：开放8080端口
+curl -fsSL https://raw.githubusercontent.com/woniu336/whois/main/install.sh | sudo bash 默认登录密码：admin/admin123
+通知说明： 剩余天数精准匹配提醒天数就会触发通知，默认在凌晨两点通知(可在检测频率)设置
+通知生效需要重启：systemctl restart domain-monitor
+浏览器打开：http://localhost:8080 默认账户：admin 默认密码：admin123 功能特性 ✅ 域名WHOIS查询和到期监控 ✅ 多渠道通知（邮件、Telegram、钉钉） ✅ JWT身份认证 ✅ 密码加密存储（bcrypt） ✅ 自动定时检测 ✅ Web管理界面</description></item><item><title>Scoop - Windows 命令行式的软件安装工具</title><link>https://blog.lufei.de/p/519/</link><pubDate>Mon, 05 Jan 2026 13:00:01 +0800</pubDate><guid>https://blog.lufei.de/p/519/</guid><description>原文档: https://gitee.com/scoop-installer-mirrors
 开始部署 安装PowerShell 7
 https://gh-proxy.com/https://github.com/PowerShell/PowerShell/releases/download/v7.5.4/PowerShell-7.5.4-win-x64.msi 安装 Scoop 打开 PowerShell 7.0+ (Core) 或 Windows PowerShell 5.1
 设置执行策略
