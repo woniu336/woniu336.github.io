@@ -12,7 +12,8 @@ API调用：https://whois.233333.best/api/
 curl -fsSL https://raw.githubusercontent.com/woniu336/whois/main/install.sh | sudo bash 默认登录密码：admin/admin123
 通知说明： 剩余天数精准匹配提醒天数就会触发通知，默认在凌晨两点通知(可在检测频率)设置
 通知生效需要重启：systemctl restart domain-monitor
-浏览器打开：http://localhost:8080 默认账户：admin 默认密码：admin123 功能特性 ✅ 域名WHOIS查询和到期监控 ✅ 多渠道通知（邮件、Telegram、钉钉） ✅ JWT身份认证 ✅ 密码加密存储（bcrypt） ✅ 自动定时检测 ✅ Web管理界面</description></item><item><title>Scoop - Windows 命令行式的软件安装工具</title><link>https://blog.lufei.de/p/519/</link><pubDate>Mon, 05 Jan 2026 13:00:01 +0800</pubDate><guid>https://blog.lufei.de/p/519/</guid><description>原文档: https://gitee.com/scoop-installer-mirrors
+浏览器打开：http://localhost:8080 默认账户：admin 默认密码：admin123 Bug 某些后缀无法查询到，会报错，例如.de后缀，最好删掉，添加常用后缀
+功能特性 ✅ 域名WHOIS查询和到期监控 ✅ 多渠道通知（邮件、Telegram、钉钉） ✅ JWT身份认证 ✅ 密码加密存储（bcrypt） ✅ 自动定时检测 ✅ Web管理界面</description></item><item><title>Scoop - Windows 命令行式的软件安装工具</title><link>https://blog.lufei.de/p/519/</link><pubDate>Mon, 05 Jan 2026 13:00:01 +0800</pubDate><guid>https://blog.lufei.de/p/519/</guid><description>原文档: https://gitee.com/scoop-installer-mirrors
 开始部署 安装PowerShell 7
 https://gh-proxy.com/https://github.com/PowerShell/PowerShell/releases/download/v7.5.4/PowerShell-7.5.4-win-x64.msi 安装 Scoop 打开 PowerShell 7.0+ (Core) 或 Windows PowerShell 5.1
 设置执行策略
