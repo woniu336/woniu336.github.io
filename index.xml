@@ -6,7 +6,11 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>域名到期监控系统</title><link>https://blog.lufei.de/p/520/</link><pubDate>Tue, 06 Jan 2026 10:16:30 +0800</pubDate><guid>https://blog.lufei.de/p/520/</guid><description>项目 Github: https://github.com/woniu336/whois
+curl -sS -O https://raw.</description></item><item><title>强大简洁的vps到期监控系统</title><link>https://blog.lufei.de/p/521/</link><pubDate>Thu, 08 Jan 2026 00:44:40 +0800</pubDate><guid>https://blog.lufei.de/p/521/</guid><description>项目 项目：https://github.com/woniu336/vps
+系统： Debian12
+一键安装 wget -O install.sh https://raw.githubusercontent.com/woniu336/vps/main/install.sh &amp;amp;&amp;amp; chmod +x install.sh &amp;amp;&amp;amp; ./install.sh 安装完成后：
+访问地址: http://你的服务器IP:9527 默认用户名: admin 默认密码: admin123 请记得开放 9527 端口！ 服务管理命令
+# 启动服务 systemctl start vps-manager # 停止服务 systemctl stop vps-manager # 重启服务 systemctl restart vps-manager # 查看状态 systemctl status vps-manager # 查看日志 journalctl -u vps-manager -f 卸载 wget -O uninstall.sh https://raw.githubusercontent.com/woniu336/vps/main/uninstall.sh &amp;amp;&amp;amp; chmod +x uninstall.sh &amp;amp;&amp;amp; ./uninstall.sh</description></item><item><title>域名到期监控系统</title><link>https://blog.lufei.de/p/520/</link><pubDate>Tue, 06 Jan 2026 10:16:30 +0800</pubDate><guid>https://blog.lufei.de/p/520/</guid><description>项目 Github: https://github.com/woniu336/whois
 API调用：https://whois.233333.best/api/
 一键部署脚本 提醒：开放8080端口
 curl -fsSL https://raw.githubusercontent.com/woniu336/whois/main/install.sh | sudo bash 默认登录密码：admin/admin123
