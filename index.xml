@@ -6,7 +6,15 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>强大简洁的vps到期监控系统</title><link>https://blog.lufei.de/p/521/</link><pubDate>Thu, 08 Jan 2026 00:44:40 +0800</pubDate><guid>https://blog.lufei.de/p/521/</guid><description>项目 项目：https://github.com/woniu336/vps
+curl -sS -O https://raw.</description></item><item><title>VSCode SFTP插件-远程开发</title><link>https://blog.lufei.de/p/522/</link><pubDate>Tue, 13 Jan 2026 12:11:56 +0800</pubDate><guid>https://blog.lufei.de/p/522/</guid><description>前言 在日常开发中，我们经常需要在本地编写代码，然后将代码同步到远程服务器进行测试或部署。传统的方式是使用 FileZilla、WinSCP 等第三方工具手动上传文件，这种方式不仅繁琐，而且容易出错。VSCode 的 SFTP 插件可以帮助我们实现本地代码与远程服务器的自动同步，大大提高开发效率。
+应用场景 SFTP 插件适用于以下场景：
+本地开发，远程调试：在本地编写代码，保存后自动同步到远程服务器，无需手动上传 快速部署：本地测试通过后，一键同步到生产环境服务器 多服务器管理：同时管理多个远程服务器，快速切换上传目标 团队协作：统一开发环境，确保代码在服务器端运行一致 安装插件 打开 VSCode，按下快捷键 Ctrl + Shift + X 打开扩展商店，搜索 sftp，找到名为 SFTP 的插件（作者：Natizyskunk），这是安装量最高、最受欢迎的 SFTP 插件。点击安装即可。
+安装完成后，VSCode 会在侧边栏显示 SFTP 图标，表示插件已成功安装。
+配置插件 生成配置文件 插件安装完成后，我们需要为当前项目创建配置文件。有两种方式：
+方式一：使用命令面板
+按下快捷键 Ctrl + Shift + P 打开命令面板 输入 SFTP: Config 并回车 VSCode 会在当前工作区的 .vscode 文件夹下自动生成 sftp.json 配置文件 方式二：右键菜单
+在 VSCode 资源管理器中，右键点击项目文件夹 选择 SFTP: Config 同样会生成 sftp.json 配置文件 配置示例 打开生成的 sftp.json 文件
+{ &amp;#34;name&amp;#34;: &amp;#34;myserver&amp;#34;, &amp;#34;host&amp;#34;: &amp;#34;192.</description></item><item><title>强大简洁的vps到期监控系统</title><link>https://blog.lufei.de/p/521/</link><pubDate>Thu, 08 Jan 2026 00:44:40 +0800</pubDate><guid>https://blog.lufei.de/p/521/</guid><description>项目 项目：https://github.com/woniu336/vps
 系统： Debian12
 一键安装 wget -O install.sh https://raw.githubusercontent.com/woniu336/vps/main/install.sh &amp;amp;&amp;amp; chmod +x install.sh &amp;amp;&amp;amp; ./install.sh 安装完成后：
 访问地址: http://你的服务器IP:9527 默认用户名: admin 默认密码: admin123 请记得开放 9527 端口！ 服务管理命令
