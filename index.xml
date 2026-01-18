@@ -63,13 +63,13 @@ sudo systemctl enable --now code-server@$USER 编辑配置
 nano ~/.config/code-server/config.yaml 开放防火墙
 sudo ufw allow 8080 sudo ufw reload 重启
 sudo systemctl restart code-server@$USER 安装 codex sudo npm install -g @openai/codex 验证
-codex --version 配置 DMXAPI mkdir -p ~/.codex touch ~/.</description></item><item><title>Nginx 网站日志分析工具</title><link>https://blog.lufei.de/p/515/</link><pubDate>Tue, 30 Dec 2025 13:07:48 +0800</pubDate><guid>https://blog.lufei.de/p/515/</guid><description>项目：https://github.com/BeyondXinXin/nixvis
-NixVis 是一款基于 Go 语言开发的、开源轻量级 Nginx 日志分析工具，专为自部署场景设计。它提供直观的数据可视化和全面的统计分析功能，帮助您实时监控网站流量、访问来源和地理分布等关键指标，无需复杂配置即可快速部署使用。
-go安装 如果没有安装
-wget https://golang.org/dl/go1.25.5.linux-amd64.tar.gz tar -C /usr/local -xzf go1.25.5.linux-amd64.tar.gz echo &amp;#39;export PATH=$PATH:/usr/local/go/bin&amp;#39; &amp;gt;&amp;gt; ~/.bashrc &amp;amp;&amp;amp; source ~/.bashrc go version 放行防火墙
-ufw allow 8089/tcp 快速开始 下载最新版本的 NixVis wget https://github.com/beyondxinxin/nixvis/releases/download/latest/nixvis chmod +x nixvis 生成配置文件 ./nixvis -gen-config 执行后将在当前目录生成 nixvis_config.json 配置文件。
-nixvis_config.json 模板参考
-{ &amp;#34;websites&amp;#34;: [ { &amp;#34;name&amp;#34;: &amp;#34;blog&amp;#34;, &amp;#34;logPath&amp;#34;: &amp;#34;/home/nginx/log/www.1234.com-*.log&amp;#34; }, { &amp;#34;name&amp;#34;: &amp;#34;web&amp;#34;, &amp;#34;logPath&amp;#34;: &amp;#34;/home/nginx/log/www.5678.cc-*.log&amp;#34; } ], &amp;#34;system&amp;#34;: { &amp;#34;logDestination&amp;#34;: &amp;#34;file&amp;#34;, &amp;#34;taskInterval&amp;#34;: &amp;#34;5m&amp;#34; }, &amp;#34;server&amp;#34;: { &amp;#34;Port&amp;#34;: &amp;#34;:8089&amp;#34; }, &amp;#34;pvFilter&amp;#34;: { &amp;#34;statusCodeInclude&amp;#34;: [ 200 ], &amp;#34;excludePatterns&amp;#34;: [ &amp;#34;favicon.</description></item><item><title>cloudflare R2 备份/还原脚本 - nginx专用</title><link>https://blog.lufei.de/p/514/</link><pubDate>Mon, 29 Dec 2025 13:02:53 +0800</pubDate><guid>https://blog.lufei.de/p/514/</guid><description>备份脚本
+codex --version 配置 DMXAPI mkdir -p ~/.codex touch ~/.</description></item><item><title>Nginx 网站日志分析工具</title><link>https://blog.lufei.de/p/515/</link><pubDate>Tue, 30 Dec 2025 13:07:48 +0800</pubDate><guid>https://blog.lufei.de/p/515/</guid><description>原项目 https://github.com/BeyondXinXin/nixvis
+功能特点 全面访问指标：实时统计独立访客数 (UV)、页面浏览量 (PV) 和流量数据 地理位置分布：展示国内和全球访问来源的可视化地图 详细访问排名：提供 URL、引荐来源、浏览器、操作系统和设备类型的访问排名 时间序列分析：支持按小时和按天查看访问趋势 多站点支持：可同时监控多个网站的访问数据 增量日志解析：自动扫描 Nginx 日志文件，解析并存储最新数据 高性能查询：存储使用轻量级 SQLite，结合多级缓存策略实现快速响应 嵌入式资源：前端资源和IP库内嵌于可执行文件中，无需额外部署静态文件 用户认证：内置用户认证系统，保护敏感数据访问 可疑IP检测：自动检测异常访问行为，支持IP黑名单功能 蜘蛛统计：识别并统计各类搜索引擎蜘蛛的访问情况 快速开始 Linux/Debian 系统部署 放行防火墙，例如
+ufw allow 9523/tcp 一键安装脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/nixvis/main/install.sh &amp;amp;&amp;amp; chmod +x install.sh &amp;amp;&amp;amp; ./install.sh 安装脚本会自动完成以下操作：
+创建专用用户和目录 安装二进制文件到 /opt/nixvis 创建 systemd 服务 生成默认配置文件 /etc/nixvis/config.json 启动服务 设置正确的权限
+sudo chown nixvis:nixvis /opt/nixvis/nixvis sudo chmod +x /opt/nixvis/nixvis sudo systemctl stop nixvis sudo systemctl start nixvis 如果添加到 adm 组后仍有权限问题，可以检查：
+# 1.</description></item><item><title>cloudflare R2 备份/还原脚本 - nginx专用</title><link>https://blog.lufei.de/p/514/</link><pubDate>Mon, 29 Dec 2025 13:02:53 +0800</pubDate><guid>https://blog.lufei.de/p/514/</guid><description>备份脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/r2-b.sh &amp;amp;&amp;amp; chmod +x r2-b.sh &amp;amp;&amp;amp; ./r2-b.sh 还原脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/r2.sh &amp;amp;&amp;amp; chmod +x r2.sh &amp;amp;&amp;amp; ./r2.sh</description></item><item><title>优化静态资源传输：在 Nginx 中启用 Brotli 预压缩</title><link>https://blog.lufei.de/p/513/</link><pubDate>Sun, 28 Dec 2025 11:59:30 +0800</pubDate><guid>https://blog.lufei.de/p/513/</guid><description>安装nginx脚本 带Brotli压缩模块
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/nginx-acme.sh &amp;amp;&amp;amp; chmod +x nginx-acme.sh &amp;amp;&amp;amp; ./nginx-acme.sh br压缩检查
