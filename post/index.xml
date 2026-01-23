@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 22 Jan 2026 13:36:18 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 23 Jan 2026 22:46:27 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_menu.sh &amp;amp;&amp;amp; chmod +x setup_menu.sh &amp;amp;&amp;amp; ./setup_menu.sh 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
@@ -6,7 +6,16 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>rsyslog配置方法</title><link>https://blog.lufei.de/p/525/</link><pubDate>Thu, 22 Jan 2026 13:36:18 +0800</pubDate><guid>https://blog.lufei.de/p/525/</guid><description>说明：日志中心指的是服务端，站点指的是客户端（你的网站）
+curl -sS -O https://raw.</description></item><item><title>强大简洁的nginx日志分析工具</title><link>https://blog.lufei.de/p/526/</link><pubDate>Fri, 23 Jan 2026 22:46:27 +0800</pubDate><guid>https://blog.lufei.de/p/526/</guid><description>项目：https://github.com/woniu336/rhit
+致谢：https://github.com/Canop/rhit
+威胁情报：https://www.abuseipdb.com/
+场景 市面上有不少分析nginx日志的工具，部分内容和统计工具有重合，还有不少花里胡哨的、加载慢的，总觉得不顺手，就自己训练AI做了一个自用的，借此分享出来，如果你觉得还行，就打个星吧。
+基于 rhit 的 Web 日志分析和报告管理系统，提供友好的 Web 界面进行日志查询、威胁检测和报告管理。
+功能特性 📊 日志报告管理：自动生成和管理多站点的 rhit 报告 🔍 日志搜索：支持按状态码、路径、IP等条件搜索日志 🛡️ 威胁检测：IP威胁分析、XSS/SQL注入检测、爬虫识别 🕷️ 蜘蛛统计：识别30+种知名爬虫，按类型统计访问情况 🔐 用户认证：基于 Session 的登录认证系统 ⏰ 定时任务：自动生成每日报告并清理旧数据 快速安装 首先开放5000端口，例如
+ufw allow 5000/tcp 一键脚本
+git clone https://github.com/woniu336/rhit.git cd rhit chmod +x install.sh ./install.sh 打开浏览器访问：http://localhost:5000
+默认账号：
+用户名：admin 密码：admin123 截图预览</description></item><item><title>rsyslog配置方法</title><link>https://blog.lufei.de/p/525/</link><pubDate>Thu, 22 Jan 2026 13:36:18 +0800</pubDate><guid>https://blog.lufei.de/p/525/</guid><description>说明：日志中心指的是服务端，站点指的是客户端（你的网站）
 日志中心配置 脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/deploy_server.sh &amp;amp;&amp;amp; chmod +x deploy_server.sh 指定路径
 ./deploy_server.sh /data/log-center 日志轮转文件
