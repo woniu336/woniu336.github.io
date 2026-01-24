@@ -6,15 +6,12 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>Gemini CLI</title><link>https://blog.lufei.de/p/527/</link><pubDate>Sat, 24 Jan 2026 15:38:14 +0800</pubDate><guid>https://blog.lufei.de/p/527/</guid><description> 系统：windows
-目前的 免费额度 (~250 次 Pro 请求/天 + 1500 次 Flash 请求/天) 所有 Pro 系列模型共享这 250 次的额度池 安装
-npm install -g @google/gemini-cli 确认
-gemini --version 设置代理
-setx HTTP_PROXY &amp;#34;http://127.0.0.1:7890&amp;#34; setx HTTPS_PROXY &amp;#34;http://127.0.0.1:7890&amp;#34; Gemini CLI 年度统计
-npx gemini-wrapped 生成过去 365 天，使用 Gemini 的精简报告，包括会话数、项目数量、模型使用排名、总的tokens、成本花费等。
-移除代理
-setx HTTP_PROXY &amp;#34;&amp;#34; setx HTTPS_PROXY &amp;#34;&amp;#34; 卸载Gemini CLI
-npm uninstall -g @google/gemini-cli</description></item><item><title>强大简洁的nginx日志分析工具</title><link>https://blog.lufei.de/p/526/</link><pubDate>Fri, 23 Jan 2026 22:46:27 +0800</pubDate><guid>https://blog.lufei.de/p/526/</guid><description>项目：https://github.com/woniu336/rhit
+curl -sS -O https://raw.</description></item><item><title>Gemini CLI</title><link>https://blog.lufei.de/p/527/</link><pubDate>Sat, 24 Jan 2026 15:38:14 +0800</pubDate><guid>https://blog.lufei.de/p/527/</guid><description>系统/工具：windows、powershell 目前的 免费额度 (~250 次 Pro 请求/天 + 1500 次 Flash 请求/天) 所有 Pro 系列模型共享这 250 次的额度池 安装 npm install -g @google/gemini-cli 确认
+gemini --version 设置代理 setx HTTP_PROXY &amp;#34;http://127.0.0.1:7890&amp;#34; setx HTTPS_PROXY &amp;#34;http://127.0.0.1:7890&amp;#34; Gemini CLI 年度统计 npx gemini-wrapped 生成过去 365 天，使用 Gemini 的精简报告，包括会话数、项目数量、模型使用排名、总的tokens、成本花费等。
+Skills 设置Git bash 环境变量，目录：C:\Program Files\Git\bin
+设置用户目录,首先打开
+C:\Users\Administrator\.gemini\settings.json 编写
+{ &amp;#34;maxRetries&amp;#34;: 3, &amp;#34;security&amp;#34;: { &amp;#34;auth&amp;#34;: { &amp;#34;selectedType&amp;#34;: &amp;#34;oauth-personal&amp;#34; } }, &amp;#34;timeout&amp;#34;: 30000, &amp;#34;general&amp;#34;: { &amp;#34;previewFeatures&amp;#34;: true }, &amp;#34;tools&amp;#34;: { &amp;#34;autoAccept&amp;#34;: true } } 以运行 /resume 恢复上一次的历史记录</description></item><item><title>强大简洁的nginx日志分析工具</title><link>https://blog.lufei.de/p/526/</link><pubDate>Fri, 23 Jan 2026 22:46:27 +0800</pubDate><guid>https://blog.lufei.de/p/526/</guid><description>项目：https://github.com/woniu336/rhit
 致谢：https://github.com/Canop/rhit
 威胁情报：https://www.abuseipdb.com/
 场景 市面上有不少分析nginx日志的工具，部分内容和统计工具有重合，还有不少花里胡哨的、加载慢的，总觉得不顺手，就自己训练AI做了一个自用的，借此分享出来，如果你觉得还行，就打个星吧。
