@@ -7,7 +7,7 @@ curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o 
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
 curl -sS -O https://raw.</description></item><item><title>Gemini CLI</title><link>https://blog.lufei.de/p/527/</link><pubDate>Sat, 24 Jan 2026 15:38:14 +0800</pubDate><guid>https://blog.lufei.de/p/527/</guid><description> 系统：windows
-安装
+目前的 免费额度 (~250 次 Pro 请求/天 + 1500 次 Flash 请求/天) 所有 Pro 系列模型共享这 250 次的额度池 安装
 npm install -g @google/gemini-cli 确认
 gemini --version 设置代理
 setx HTTP_PROXY &amp;#34;http://127.0.0.1:7890&amp;#34; setx HTTPS_PROXY &amp;#34;http://127.0.0.1:7890&amp;#34; Gemini CLI 年度统计
