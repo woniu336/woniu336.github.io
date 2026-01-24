@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Fri, 23 Jan 2026 22:46:27 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 24 Jan 2026 15:38:14 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_menu.sh &amp;amp;&amp;amp; chmod +x setup_menu.sh &amp;amp;&amp;amp; ./setup_menu.sh 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
@@ -6,7 +6,15 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>强大简洁的nginx日志分析工具</title><link>https://blog.lufei.de/p/526/</link><pubDate>Fri, 23 Jan 2026 22:46:27 +0800</pubDate><guid>https://blog.lufei.de/p/526/</guid><description>项目：https://github.com/woniu336/rhit
+curl -sS -O https://raw.</description></item><item><title>Gemini CLI</title><link>https://blog.lufei.de/p/527/</link><pubDate>Sat, 24 Jan 2026 15:38:14 +0800</pubDate><guid>https://blog.lufei.de/p/527/</guid><description> 系统：windows
+安装
+npm install -g @google/gemini-cli 确认
+gemini --version 设置代理
+setx HTTP_PROXY &amp;#34;http://127.0.0.1:7890&amp;#34; setx HTTPS_PROXY &amp;#34;http://127.0.0.1:7890&amp;#34; Gemini CLI 年度统计
+npx gemini-wrapped 生成过去 365 天，使用 Gemini 的精简报告，包括会话数、项目数量、模型使用排名、总的tokens、成本花费等。
+移除代理
+setx HTTP_PROXY &amp;#34;&amp;#34; setx HTTPS_PROXY &amp;#34;&amp;#34; 卸载Gemini CLI
+npm uninstall -g @google/gemini-cli</description></item><item><title>强大简洁的nginx日志分析工具</title><link>https://blog.lufei.de/p/526/</link><pubDate>Fri, 23 Jan 2026 22:46:27 +0800</pubDate><guid>https://blog.lufei.de/p/526/</guid><description>项目：https://github.com/woniu336/rhit
 致谢：https://github.com/Canop/rhit
 威胁情报：https://www.abuseipdb.com/
 场景 市面上有不少分析nginx日志的工具，部分内容和统计工具有重合，还有不少花里胡哨的、加载慢的，总觉得不顺手，就自己训练AI做了一个自用的，借此分享出来，如果你觉得还行，就打个星吧。
@@ -17,12 +25,13 @@ git clone https://github.com/woniu336/rhit.git cd rhit chmod +x install.sh ./ins
 默认账号：
 用户名：admin 密码：admin123 截图预览</description></item><item><title>rsyslog配置方法</title><link>https://blog.lufei.de/p/525/</link><pubDate>Thu, 22 Jan 2026 13:36:18 +0800</pubDate><guid>https://blog.lufei.de/p/525/</guid><description>说明：日志中心指的是服务端，站点指的是客户端（你的网站）
 日志中心配置 脚本
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/deploy_server.sh &amp;amp;&amp;amp; chmod +x deploy_server.sh 指定路径
-./deploy_server.sh /data/log-center 日志轮转文件
-cat /etc/logrotate.d/nginx-log-center 站点日志配置 添加日志格式 /etc/nginx/nginx.conf 在原本的log下方添加
-log_format syslog_combined &amp;#39;$remote_addr - $remote_user [$time_local] &amp;#39; &amp;#39;&amp;#34;$request&amp;#34; $status $body_bytes_sent &amp;#39; &amp;#39;&amp;#34;$http_referer&amp;#34; &amp;#34;$http_user_agent&amp;#34; &amp;#39; &amp;#39;rt=$request_time &amp;#39; &amp;#39;uct=$upstream_connect_time &amp;#39; &amp;#39;uht=$upstream_header_time &amp;#39; &amp;#39;urt=$upstream_response_time&amp;#39;; 站点日志脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/deploy_client.sh &amp;amp;&amp;amp; chmod +x deploy_client.sh 运行脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/deploy_server.sh &amp;amp;&amp;amp; chmod +x deploy_server.sh 默认路径：/data/nginx_logs
+./deploy_server.sh 日志轮转文件
+cat /etc/logrotate.d/nginx-log-center 清除
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/cleanup_server.sh &amp;amp;&amp;amp; chmod +x cleanup_server.sh 站点日志配置 添加日志格式 /etc/nginx/nginx.conf 在原本的log下方添加
+log_format syslog_combined &amp;#39;$remote_addr - $remote_user [$time_local] &amp;#39; &amp;#39;&amp;#34;$request&amp;#34; $status $body_bytes_sent &amp;#39; &amp;#39;&amp;#34;$http_referer&amp;#34; &amp;#34;$http_user_agent&amp;#34;&amp;#39;; 站点日志脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/deploy_client.sh &amp;amp;&amp;amp; chmod +x deploy_client.sh 运行脚本
 ./deploy_client.sh &amp;lt;日志中心IP&amp;gt; all 注意：转发后的日志不会保存在本地
-站点恢复 BACKUP_DIR=$(ls -d /root/rsyslog_backup_* | tail -1) &amp;amp;&amp;amp; \ cp -f &amp;#34;${BACKUP_DIR}/nginx.conf&amp;#34; /etc/nginx/ &amp;amp;&amp;amp; \ cp -f &amp;#34;${BACKUP_DIR}/sites-available/&amp;#34;* /etc/nginx/sites-available/ &amp;amp;&amp;amp; \ nginx -t &amp;amp;&amp;amp; systemctl reload nginx &amp;amp;&amp;amp; echo &amp;#34;✅ Nginx 配置已恢复并重载&amp;#34; 清理</description></item><item><title>nginxpulse日志分析工具安装教程</title><link>https://blog.lufei.de/p/524/</link><pubDate>Wed, 21 Jan 2026 14:32:36 +0800</pubDate><guid>https://blog.lufei.de/p/524/</guid><description>项目：https://github.com/likaia/nginxpulse
+站点恢复 BACKUP_DIR=$(ls -d /root/rsyslog_backup_* | tail -1) &amp;amp;&amp;amp; \ cp -f &amp;#34;${BACKUP_DIR}/nginx.conf&amp;#34; /etc/nginx/ &amp;amp;&amp;amp; \ cp -f &amp;#34;${BACKUP_DIR}/sites-available/&amp;#34;* /etc/nginx/sites-available/ &amp;amp;&amp;amp; \ nginx -t &amp;amp;&amp;amp; systemctl reload nginx &amp;amp;&amp;amp; echo &amp;#34;✅ Nginx 配置已恢复并重载&amp;#34; 清理配置</description></item><item><title>nginxpulse日志分析工具安装教程</title><link>https://blog.lufei.de/p/524/</link><pubDate>Wed, 21 Jan 2026 14:32:36 +0800</pubDate><guid>https://blog.lufei.de/p/524/</guid><description>项目：https://github.com/likaia/nginxpulse
 系统：debian12
 下载并解压 进入临时目录并下载：
 cd /tmp wget https://github.com/likaia/nginxpulse/releases/download/v1.5.3/nginxpulse-v1.5.3-linux-amd64.tar.gz 解压文件：
