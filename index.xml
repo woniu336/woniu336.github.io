@@ -27,11 +27,12 @@ git clone https://github.com/woniu336/rhit.git cd rhit chmod +x install.sh ./ins
 日志中心配置 脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/deploy_server.sh &amp;amp;&amp;amp; chmod +x deploy_server.sh 默认路径：/data/nginx_logs
 ./deploy_server.sh 日志轮转文件
-cat /etc/logrotate.d/nginx-log-center 清除
+cat /etc/logrotate.d/nginx-log-center 查看日志大小
+cd /data/nginx_logs/active du -h * | sort -h 清除
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/cleanup_server.sh &amp;amp;&amp;amp; chmod +x cleanup_server.sh 站点日志配置 添加日志格式 /etc/nginx/nginx.conf 在原本的log下方添加
 log_format syslog_combined &amp;#39;$remote_addr - $remote_user [$time_local] &amp;#39; &amp;#39;&amp;#34;$request&amp;#34; $status $body_bytes_sent &amp;#39; &amp;#39;&amp;#34;$http_referer&amp;#34; &amp;#34;$http_user_agent&amp;#34;&amp;#39;; 站点日志脚本 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/deploy_client.sh &amp;amp;&amp;amp; chmod +x deploy_client.sh 运行脚本
 ./deploy_client.sh &amp;lt;日志中心IP&amp;gt; all 注意：转发后的日志不会保存在本地
-站点恢复 BACKUP_DIR=$(ls -d /root/rsyslog_backup_* | tail -1) &amp;amp;&amp;amp; \ cp -f &amp;#34;${BACKUP_DIR}/nginx.conf&amp;#34; /etc/nginx/ &amp;amp;&amp;amp; \ cp -f &amp;#34;${BACKUP_DIR}/sites-available/&amp;#34;* /etc/nginx/sites-available/ &amp;amp;&amp;amp; \ nginx -t &amp;amp;&amp;amp; systemctl reload nginx &amp;amp;&amp;amp; echo &amp;#34;✅ Nginx 配置已恢复并重载&amp;#34; 清理配置</description></item><item><title>nginxpulse日志分析工具安装教程</title><link>https://blog.lufei.de/p/524/</link><pubDate>Wed, 21 Jan 2026 14:32:36 +0800</pubDate><guid>https://blog.lufei.de/p/524/</guid><description>项目：https://github.com/likaia/nginxpulse
+站点恢复 BACKUP_DIR=$(ls -d /root/rsyslog_backup_* | tail -1) &amp;amp;&amp;amp; \ cp -f &amp;#34;${BACKUP_DIR}/nginx.</description></item><item><title>nginxpulse日志分析工具安装教程</title><link>https://blog.lufei.de/p/524/</link><pubDate>Wed, 21 Jan 2026 14:32:36 +0800</pubDate><guid>https://blog.lufei.de/p/524/</guid><description>项目：https://github.com/likaia/nginxpulse
 系统：debian12
 下载并解压 进入临时目录并下载：
 cd /tmp wget https://github.com/likaia/nginxpulse/releases/download/v1.5.3/nginxpulse-v1.5.3-linux-amd64.tar.gz 解压文件：
