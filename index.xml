@@ -6,7 +6,17 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>Gemini cli 开发技巧</title><link>https://blog.lufei.de/p/527/</link><pubDate>Sat, 24 Jan 2026 15:38:14 +0800</pubDate><guid>https://blog.lufei.de/p/527/</guid><description>系统/工具：windows、powershell 目前的 免费额度 (~250 次 Pro 请求/天 + 1500 次 Flash 请求/天) 所有 Pro 系列模型共享这 250 次的额度池 神奇代码(powershell)
+curl -sS -O https://raw.</description></item><item><title>memos备忘录/个人笔记-部署</title><link>https://blog.lufei.de/p/528/</link><pubDate>Fri, 30 Jan 2026 23:52:46 +0800</pubDate><guid>https://blog.lufei.de/p/528/</guid><description>项目：https://github.com/usememos/memos
+安卓端推荐：https://github.com/hzc073/memoflow
+注意：部署成功后，需要反向代理才能打开，IP+端口是打不开的
+开放端口：5230
+下载
+cd /tmp wget https://github.com/memospot/memos-builds/releases/download/v0.25.3/memos-v0.25.3-linux-x86_64.tar.gz 解压
+tar -xzf memos-v0.25.3-linux-x86_64.tar.gz 移动到系统位置
+sudo mv memos /usr/local/bin/ sudo chmod +x /usr/local/bin/memos 创建数据目录
+sudo mkdir -p /var/lib/memos 启动
+# Create service file sudo tee /etc/systemd/system/memos.service &amp;lt;&amp;lt; &amp;#39;EOF&amp;#39; [Unit] Description=Memos After=network.target [Service] Type=simple ExecStart=/usr/local/bin/memos --mode prod --port 5230 --data /var/lib/memos Restart=always RestartSec=3 [Install] WantedBy=multi-user.target EOF # Enable and start sudo systemctl daemon-reload sudo systemctl enable --now memos 升级
+下载来自memos-builds的最新版本(memos-builds) 替换二进制 sudo systemctl stop memos sudo cp /usr/local/bin/memos /usr/local/bin/memos.</description></item><item><title>Gemini cli 开发技巧</title><link>https://blog.lufei.de/p/527/</link><pubDate>Sat, 24 Jan 2026 15:38:14 +0800</pubDate><guid>https://blog.lufei.de/p/527/</guid><description>系统/工具：windows、powershell 目前的 免费额度 (~250 次 Pro 请求/天 + 1500 次 Flash 请求/天) 所有 Pro 系列模型共享这 250 次的额度池 神奇代码(powershell)
 # 创建配置文件并添加函数 $profileContent = @&amp;#39; # Git快捷命令 function mm { git add .; git commit -m &amp;#34;vibe save&amp;#34; } function uc { git reset --hard HEAD~1 } function mmp { mm; git push origin main } function ms { git status } function ml { git log --oneline -10 } &amp;#39;@ # 确保目录存在 $profileDir = Split-Path $PROFILE -Parent if (!</description></item><item><title>强大简洁的nginx日志分析工具</title><link>https://blog.lufei.de/p/526/</link><pubDate>Fri, 23 Jan 2026 22:46:27 +0800</pubDate><guid>https://blog.lufei.de/p/526/</guid><description>项目：https://github.com/woniu336/rhit
 致谢：https://github.com/Canop/rhit
 威胁情报：https://www.abuseipdb.com/
