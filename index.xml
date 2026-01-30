@@ -6,7 +6,15 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>memos备忘录/个人笔记-部署</title><link>https://blog.lufei.de/p/528/</link><pubDate>Fri, 30 Jan 2026 23:52:46 +0800</pubDate><guid>https://blog.lufei.de/p/528/</guid><description>项目：https://github.com/usememos/memos
+curl -sS -O https://raw.</description></item><item><title>让你的 Claude 拥有“肌肉记忆”！</title><link>https://blog.lufei.de/p/529/</link><pubDate>Sat, 31 Jan 2026 03:39:49 +0800</pubDate><guid>https://blog.lufei.de/p/529/</guid><description>前言 厌倦了每次 /clear 后都要重新调教 AI？我开发了一套基于 Windows 环境的自动化闭环：对话 -&amp;gt; 自动归档 -&amp;gt; 技能(Skills)自动提取。让 Claude 彻底告别“鱼的记忆”，在实战中不断自我进化！
+只需一句“归档”，所有技术决策、Bug 修复方案瞬间转化为本地 Skill 库。
+环境准备 确保您的系统已安装必要的 Python 库，用于处理中文归档名。
+pip install pypinyin 确保skills目录存在：C:\Users\Administrator\.claude\skills
+创建归档存储目录 创建归档存储目录 New-Item -ItemType Directory -Force -Path &amp;#34;C:\Users\Administrator\archives\conversations&amp;#34; 创建 archivist-config.json 在 C:\Users\Administrator\ 目录下创建 archivist-config.json 文件。
+文件路径: C:\Users\Administrator\archivist-config.json
+文件内容:
+{ &amp;#34;default_archive_path&amp;#34;: &amp;#34;C:\\Users\\Administrator\\archives\\conversations&amp;#34;, &amp;#34;custom_project_paths&amp;#34;: {}, &amp;#34;include_full_history&amp;#34;: false, &amp;#34;summarize_conversations&amp;#34;: true, &amp;#34;auto_tag&amp;#34;: true } 创建 Python 转化脚本 在 C:\Users\Administrator\.claude\scripts\ 下创建 archive_to_skill.py，负责将归档文件处理为 Claude 可识别的技能包。
+import os import re from pypinyin import pinyin, Style # 配置路径：直接指向 skills 根目录以确保可见性 ARCHIVE_DIR = r&amp;#34;C:\Users\Administrator\archives\conversations&amp;#34; SKILLS_DIR = r&amp;#34;C:\Users\Administrator\.</description></item><item><title>memos备忘录/个人笔记-部署</title><link>https://blog.lufei.de/p/528/</link><pubDate>Fri, 30 Jan 2026 23:52:46 +0800</pubDate><guid>https://blog.lufei.de/p/528/</guid><description>项目：https://github.com/usememos/memos
 安卓端推荐：https://github.com/hzc073/memoflow
 注意：部署成功后，需要反向代理才能打开，IP+端口是打不开的
 开放端口：5230
