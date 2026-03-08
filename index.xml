@@ -6,7 +6,15 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>CLIProxyAPIPlus安装教程</title><link>https://blog.lufei.de/p/532/</link><pubDate>Tue, 03 Mar 2026 13:57:07 +0800</pubDate><guid>https://blog.lufei.de/p/532/</guid><description>项目：https://github.com/router-for-me/CLIProxyAPIPlus/blob/main/README_CN.md
+curl -sS -O https://raw.</description></item><item><title>与SkyClaw完整对话记录</title><link>https://blog.lufei.de/p/533/</link><pubDate>Sun, 08 Mar 2026 21:19:23 +0800</pubDate><guid>https://blog.lufei.de/p/533/</guid><description>会话整理（保持原话，仅重排） 元信息 导出日期: 2026-03-08
+系统版本: OpenClaw 2026.2.25
+会话 ID: 2973119f-937c-4a82-bfe4-f7869f961576
+12:43:56 USER 你是什么系统架构
+12:43:57 ASSISTANT 我是 OpenClaw，一个运行在容器化 Linux 环境中的个人智能助手系统。
+我的架构核心由以下几个部分组成：
+内核与运行时：基于 Node.js 构建 of OpenClaw Gateway，负责管理会话、工具调用、节点通信和自动化任务（Cron）。 操作系统层：运行在标准的 Linux 容器（Docker/Podman）中，通常使用 Debian 或 Ubuntu 基础镜像。 桌面与交互层： 桌面环境：配备了 Cinnamon 桌面和 Muffin 窗口管理器，支持图形界面操作。 浏览器：内置 Chromium，通过 CDP（Chrome DevTools Protocol）实现自动化控制和网页分析。 输入模拟：利用 xdotool 和 wmctrl 等工具模拟人类在桌面上的点击、键入和窗口管理行为。 工具链：集成了一系列生产力工具，包括 Python（支持数据科学和 Office 文档处理）、LibreOffice、Git，以及用于搜索（Brave Search）和文件操作的专用接口。 多模态能力：通过接入不同的 LLM（如当前的 Gemini 模型）来处理自然语言、视觉图像和逻辑推理，并能通过 Zalo、Telegram、Signal 等多种社交渠道进行即时通讯。 简而言之，我不仅是一个聊天机器人，而是一个拥有完整 Linux 桌面操作权限和工具调用能力的自动化智能终端。
+12:45:14 USER 怎么查询是ubuntu还是debian
+12:45:15 ASSISTANT 系统操作: exec(command=&amp;quot;cat /etc/os-release&amp;quot;)</description></item><item><title>CLIProxyAPIPlus安装教程</title><link>https://blog.lufei.de/p/532/</link><pubDate>Tue, 03 Mar 2026 13:57:07 +0800</pubDate><guid>https://blog.lufei.de/p/532/</guid><description>项目：https://github.com/router-for-me/CLIProxyAPIPlus/blob/main/README_CN.md
 文档：https://help.router-for.me/cn/configuration/basic
 推荐chrome扩展：Page Assist
 注意事项，推荐使用国外服务器注册codex
