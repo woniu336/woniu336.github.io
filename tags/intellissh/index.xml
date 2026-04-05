@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Intellissh on 路飞博客</title><link>https://blog.lufei.de/tags/intellissh/</link><description>Recent content in Intellissh on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 05 Apr 2026 14:12:35 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/tags/intellissh/index.xml" rel="self" type="application/rss+xml"/><item><title>一款带 AI 大脑的 Web SSH 工具</title><link>https://blog.lufei.de/p/537/</link><pubDate>Sun, 05 Apr 2026 14:12:35 +0800</pubDate><guid>https://blog.lufei.de/p/537/</guid><description> 项目：https://github.com/clusterzx/intellissh
+安装 mkdir -p /opt/docker/intellissh &amp;amp;&amp;amp; cd /opt/docker/intellissh 创建docker-compose.yml
+nano docker-compose.yml 粘贴
+services: intellissh: image: clusterzx/intellissh:latest container_name: intellissh ports: - &amp;#34;8080:3000&amp;#34; volumes: - ./data:/app/server/data restart: unless-stopped 启动
+docker compose up -d 查看用户名和密码
+docker logs intellissh</description></item></channel></rss>
