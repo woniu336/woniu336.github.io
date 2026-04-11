@@ -40,7 +40,7 @@ Docker Compose 安装方式 使用 Docker Compose 部署，包含 PostgreSQL 和
 cd sub2api-deploy nano .env 修改配置：
 ADMIN_EMAIL=admin@example.com ADMIN_PASSWORD=your_admin_password 重启容器
 docker compose down docker compose up -d 反向代理 反向代理使用caddy的方法如下：</description></item><item><title>caddy一键脚本</title><link>https://blog.lufei.de/p/530/</link><pubDate>Mon, 09 Feb 2026 23:28:08 +0800</pubDate><guid>https://blog.lufei.de/p/530/</guid><description>准备好1个域名，A 纪录指向到你服务器的IP 比如我的域名是openclaw.cnno.de 然后开始反代。用caddy这个脚本，1分钟就完成了。在你的vps上运行以下内容
-wget -O caddyman.sh https://c.cococ.co/caddyman.sh &amp;amp;&amp;amp; bash caddyman.sh</description></item><item><title>让你的 Claude code 拥有“肌肉记忆”！</title><link>https://blog.lufei.de/p/529/</link><pubDate>Sat, 31 Jan 2026 03:39:49 +0800</pubDate><guid>https://blog.lufei.de/p/529/</guid><description>前言 厌倦了每次 /clear 后都要重新调教 AI？我开发了一套基于 Windows 环境的自动化闭环：对话 -&amp;gt; 自动归档 -&amp;gt; 技能 (Skills) 自动提取。让 Claude 彻底告别 “鱼的记忆”，在实战中不断自我进化！
+wget -O caddyman.sh https://raw.githubusercontent.com/woniu336/open_shell/main/caddyman.sh &amp;amp;&amp;amp; bash caddyman.sh</description></item><item><title>让你的 Claude code 拥有“肌肉记忆”！</title><link>https://blog.lufei.de/p/529/</link><pubDate>Sat, 31 Jan 2026 03:39:49 +0800</pubDate><guid>https://blog.lufei.de/p/529/</guid><description>前言 厌倦了每次 /clear 后都要重新调教 AI？我开发了一套基于 Windows 环境的自动化闭环：对话 -&amp;gt; 自动归档 -&amp;gt; 技能 (Skills) 自动提取。让 Claude 彻底告别 “鱼的记忆”，在实战中不断自我进化！
 只需一句 “归档”，所有技术决策、Bug 修复方案瞬间转化为本地 Skill 库。
 1️⃣ 环境准备 确保安装 Python 中文处理库：
 pip install pypinyin 确认技能目录存在：
