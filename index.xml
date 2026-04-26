@@ -6,7 +6,9 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>一款带 AI 大脑的 Web SSH 工具</title><link>https://blog.lufei.de/p/537/</link><pubDate>Sun, 05 Apr 2026 14:12:35 +0800</pubDate><guid>https://blog.lufei.de/p/537/</guid><description> 项目：https://github.com/clusterzx/intellissh
+curl -sS -O https://raw.</description></item><item><title>caddy 反代 GitHub Pages</title><link>https://blog.lufei.de/p/538/</link><pubDate>Sun, 26 Apr 2026 23:59:11 +0800</pubDate><guid>https://blog.lufei.de/p/538/</guid><description>caddy配置 (common) { tls { protocols tls1.2 tls1.3 } header { -Via -Alt-Svc -Server } } (proxy) { header_up Host &amp;#34;woniu336.github.io&amp;#34; header_up X-Real-IP {remote} } blog.lufei.de { import common reverse_proxy https://woniu336.github.io { import proxy } } 验证配置文件：
+sudo caddy validate --config /etc/caddy/Caddyfile 重启 Caddy 服务：
+sudo systemctl restart caddy</description></item><item><title>一款带 AI 大脑的 Web SSH 工具</title><link>https://blog.lufei.de/p/537/</link><pubDate>Sun, 05 Apr 2026 14:12:35 +0800</pubDate><guid>https://blog.lufei.de/p/537/</guid><description> 项目：https://github.com/clusterzx/intellissh
 安装 mkdir -p /opt/docker/intellissh &amp;amp;&amp;amp; cd /opt/docker/intellissh 创建docker-compose.yml
 nano docker-compose.yml 粘贴
 services: intellissh: image: clusterzx/intellissh:latest container_name: intellissh ports: - &amp;#34;8080:3000&amp;#34; volumes: - ./data:/app/server/data restart: unless-stopped 启动
