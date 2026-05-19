@@ -6,7 +6,14 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
 脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>caddy 反代 GitHub Pages</title><link>https://blog.lufei.de/p/538/</link><pubDate>Sun, 26 Apr 2026 23:59:11 +0800</pubDate><guid>https://blog.lufei.de/p/538/</guid><description>caddy配置 (common) { tls { protocols tls1.2 tls1.3 } header { -Via -Alt-Svc -Server } } (proxy) { header_up Host &amp;#34;woniu336.github.io&amp;#34; header_up X-Real-IP {remote} } blog.lufei.de { import common reverse_proxy https://woniu336.github.io { import proxy } } 验证配置文件：
+curl -sS -O https://raw.</description></item><item><title>Mac mini一行命令实现软路由功能</title><link>https://blog.lufei.de/p/539/</link><pubDate>Tue, 19 May 2026 09:39:29 +0800</pubDate><guid>https://blog.lufei.de/p/539/</guid><description>Mac mini变身软路由 想要实现Mac mini当路由器用，由于是单网口设备，只能把Mac mini当做旁路网关，也就是俗称的“旁路由”，玩过N1的小伙伴肯定不陌生。
+使用Mac mini作为路由系统，仅需一个步骤使用命令开启系统级的IP转发，然后代理工具支持TUN模式即可，M系列的芯片和iPhone同架构，所以我们可以安装iPhone上的软件，使用方式和iOS保持一致，这里我使用ios版的小猫咪（Stash）作为演示。
+Mac开启IP转发 打开终端、开启IP转发命令：
+sudo sh -c &amp;#39;echo &amp;#34;net.inet.ip.forwarding=1&amp;#34; &amp;gt;&amp;gt; /etc/sysctl.conf &amp;amp;&amp;amp; sysctl -w net.inet.ip.forwarding=1&amp;#39; ▲ 提示net.inet.ip.forwarding:0-&amp;gt;1 代表开启成功，永久生效，重启也没关系，
+▲ 软件开启虚拟网卡模式，小猫咪默认就是此模式，其他软件可以找找设置，尝试一下。
+假如你需要关闭IP转发：
+sudo sysctl -w net.inet.ip.forwarding=0 Mac关闭睡眠模式 使用旁路由 Mac mini的设置完成了，需要使用旁路由上网的终端，需要手动设置下网关地址和DNS地址，这里用手机作为演示：
+▲ 手机设置静态IP，网关设置成Mac mini的IP地址，Mac mini最好是设置成静态IP，这样不会变动；DNS这里设置成任意公共DNS，选一个你觉得解析速度快的即可。</description></item><item><title>caddy 反代 GitHub Pages</title><link>https://blog.lufei.de/p/538/</link><pubDate>Sun, 26 Apr 2026 23:59:11 +0800</pubDate><guid>https://blog.lufei.de/p/538/</guid><description>caddy配置 (common) { tls { protocols tls1.2 tls1.3 } header { -Via -Alt-Svc -Server } } (proxy) { header_up Host &amp;#34;woniu336.github.io&amp;#34; header_up X-Real-IP {remote} } blog.lufei.de { import common reverse_proxy https://woniu336.github.io { import proxy } } 验证配置文件：
 sudo caddy validate --config /etc/caddy/Caddyfile 重启 Caddy 服务：
 sudo systemctl restart caddy</description></item><item><title>一款带 AI 大脑的 Web SSH 工具</title><link>https://blog.lufei.de/p/537/</link><pubDate>Sun, 05 Apr 2026 14:12:35 +0800</pubDate><guid>https://blog.lufei.de/p/537/</guid><description> 项目：https://github.com/clusterzx/intellissh
 安装 mkdir -p /opt/docker/intellissh &amp;amp;&amp;amp; cd /opt/docker/intellissh 创建docker-compose.yml
