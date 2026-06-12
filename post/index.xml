@@ -925,12 +925,11 @@ cd /root/test/ wget -O backup_amh.sh https://raw.githubusercontent.com/woniu336/
 安装之前修改DNS
 cat &amp;gt;&amp;gt; /etc/systemd/resolved.conf &amp;lt;&amp;lt; &amp;#39;EOF&amp;#39; [Resolve] DNS=8.8.8.8 114.114.114.114 FallbackDNS= EOF systemctl restart systemd-resolved 安装完成后再修改回来
 sed -i &amp;#39;s/DNS=8.8.8.8 114.114.114.114/DNS=8.8.8.8 1.1.1.1/&amp;#39; /etc/systemd/resolved.conf systemctl restart systemd-resolved 安装amh
-wget https://dl.amh.sh/amh.sh &amp;amp;&amp;amp; bash amh.sh nginx-generic-1.24,mysql-generic-5.7,php-generic-7.4 Nginx编译 首先查询nginx.conf所在目录
+wget https://dl.amh.sh/amh.sh &amp;amp;&amp;amp; bash amh.sh nginx-generic-1.24,mysql-generic-5.7,php-generic-7.4 然后以下的部分可以使用脚本
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/menu.sh &amp;amp;&amp;amp; chmod +x menu.sh &amp;amp;&amp;amp; ./menu.sh Nginx编译 首先查询nginx.conf所在目录
 find /etc/nginx /usr/local/nginx* /usr/local/etc/nginx -name nginx.conf 2&amp;gt;/dev/null 下载 Nginx 源代码:
 wget http://nginx.org/download/nginx-1.24.0.tar.gz tar -zxvf nginx-1.24.0.tar.gz cd nginx-1.24.0 配置编译选项:
-./configure --prefix=/usr/local/nginx-generic-1.24 --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_gzip_static_module 编译并安装:
-make sudo make install 重新加载 Nginx 配置，或者后台重启nginx
-amh nginx reload PATH 环境变量 将 Nginx 的 sbin 目录添加到 PATH 环境变量 (可选):</description></item><item><title>SpeedTest-EX 一键安装脚本</title><link>https://blog.lufei.de/p/396/</link><pubDate>Tue, 07 Jan 2025 23:47:44 +0800</pubDate><guid>https://blog.lufei.de/p/396/</guid><description>项目 Github：https://github.com/WJQSERVER/speedtest-ex
+./configure --prefix=/usr/local/nginx-generic-1.24 --with-http_ssl_module --with-http_v2_module --with-http_realip_module --with-http_gzip_static_module 编译并安装:</description></item><item><title>SpeedTest-EX 一键安装脚本</title><link>https://blog.lufei.de/p/396/</link><pubDate>Tue, 07 Jan 2025 23:47:44 +0800</pubDate><guid>https://blog.lufei.de/p/396/</guid><description>项目 Github：https://github.com/WJQSERVER/speedtest-ex
 脚本：根据wjqserver大佬的项目制作的脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/speedtest-ex.sh &amp;amp;&amp;amp; chmod +x speedtest-ex.sh &amp;amp;&amp;amp; ./speedtest-ex.sh 特色：
 鉴权功能 单下载流模式 基于Go Gin构建的自托管Speedtest 前端演示</description></item><item><title>TCP调优一键脚本：限速方式</title><link>https://blog.lufei.de/p/395/</link><pubDate>Tue, 07 Jan 2025 00:18:58 +0800</pubDate><guid>https://blog.lufei.de/p/395/</guid><description>脚本 请注意，调参后能跑多少速度是由你的网络环境和线路的优劣决定的，线路垃圾再怎么调也没用
