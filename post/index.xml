@@ -4,9 +4,9 @@ curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &am
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
 curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;amp;&amp;amp; chmod +x kejilion.sh &amp;amp;&amp;amp; ./kejilion.sh 脚本推荐四
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
-curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh ssh密钥登录
-脚本1（推荐）
-curl -sS -O https://raw.</description></item><item><title>Mac mini一行命令实现软路由功能</title><link>https://blog.lufei.de/p/539/</link><pubDate>Tue, 19 May 2026 09:39:29 +0800</pubDate><guid>https://blog.lufei.de/p/539/</guid><description>Mac mini变身软路由 想要实现Mac mini当路由器用，由于是单网口设备，只能把Mac mini当做旁路网关，也就是俗称的“旁路由”，玩过N1的小伙伴肯定不陌生。
+curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh 内核调优
+1.（可选）
+sed -i -E &amp;#39;s/^(root[[:space:]]+(soft|hard)[[:space:]]+nofile[[:space:]]+)200000/\1655350/&amp;#39; /etc/security/limits.</description></item><item><title>Mac mini一行命令实现软路由功能</title><link>https://blog.lufei.de/p/539/</link><pubDate>Tue, 19 May 2026 09:39:29 +0800</pubDate><guid>https://blog.lufei.de/p/539/</guid><description>Mac mini变身软路由 想要实现Mac mini当路由器用，由于是单网口设备，只能把Mac mini当做旁路网关，也就是俗称的“旁路由”，玩过N1的小伙伴肯定不陌生。
 使用Mac mini作为路由系统，仅需一个步骤使用命令开启系统级的IP转发，然后代理工具支持TUN模式即可，M系列的芯片和iPhone同架构，所以我们可以安装iPhone上的软件，使用方式和iOS保持一致，这里我使用ios版的小猫咪（Stash）作为演示。
 Mac开启IP转发 打开终端、开启IP转发命令：
 sudo sh -c &amp;#39;echo &amp;#34;net.inet.ip.forwarding=1&amp;#34; &amp;gt;&amp;gt; /etc/sysctl.conf &amp;amp;&amp;amp; sysctl -w net.inet.ip.forwarding=1&amp;#39; ▲ 提示net.inet.ip.forwarding:0-&amp;gt;1 代表开启成功，永久生效，重启也没关系，
