@@ -6,4 +6,4 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh 内核调优
 1.（可选）
-sed -i -E &amp;#39;s/^(root[[:space:]]+(soft|hard)[[:space:]]+nofile[[:space:]]+)200000/\1655350/&amp;#39; /etc/security/limits.</description></item></channel></rss>
+curl -sS -O https://raw.</description></item></channel></rss>
