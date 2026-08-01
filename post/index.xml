@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 19 May 2026 09:39:29 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 01 Aug 2026 12:08:06 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_menu.sh &amp;amp;&amp;amp; chmod +x setup_menu.sh &amp;amp;&amp;amp; ./setup_menu.sh 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
@@ -6,7 +6,16 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh 内核调优
 1.（可选）
-curl -sS -O https://raw.</description></item><item><title>Mac mini一行命令实现软路由功能</title><link>https://blog.lufei.de/p/539/</link><pubDate>Tue, 19 May 2026 09:39:29 +0800</pubDate><guid>https://blog.lufei.de/p/539/</guid><description>Mac mini变身软路由 想要实现Mac mini当路由器用，由于是单网口设备，只能把Mac mini当做旁路网关，也就是俗称的“旁路由”，玩过N1的小伙伴肯定不陌生。
+curl -sS -O https://raw.</description></item><item><title>自建 ntfy 通知服务 + 服务器流量日报自动推送</title><link>https://blog.lufei.de/p/540/</link><pubDate>Sat, 01 Aug 2026 12:08:06 +0800</pubDate><guid>https://blog.lufei.de/p/540/</guid><description>项目文档：https://docs.ntfy.sh/
+Debian12测试通过
+三步搞定
+下载手机客户端
+自建ntfy 通知服务
+下载流量推送脚本
+第 1 步：安装 vnstat（流量统计） sudo apt-get update &amp;amp;&amp;amp; sudo apt-get install -y vnstat sudo systemctl enable --now vnstat vnstat --version 第 2 步：确认主网卡名称 ip -o link show | awk -F&amp;#39;: &amp;#39; &amp;#39;{print $2}&amp;#39; | grep -v &amp;#39;^lo$&amp;#39; 记下第一个非 docker 的网卡名，下一步用到。 云服务器一般是 eth0（阿里云/腾讯云）、ens3/ens5（部分 KVM）、enp1s0（部分 VPS）。
+第 3 步：下载流量日报脚本 记得按需修改
+sudo curl -o /usr/local/bin/traffic-report.sh \ https://raw.githubusercontent.com/woniu336/open_shell/main/traffic-report.sh 给执行权限：
+sudo chmod +x /usr/local/bin/traffic-report.sh 第 4 步：测试 + 配置定时任务（每天 10:00） 手动测试，手机/订阅端应能收到</description></item><item><title>Mac mini一行命令实现软路由功能</title><link>https://blog.lufei.de/p/539/</link><pubDate>Tue, 19 May 2026 09:39:29 +0800</pubDate><guid>https://blog.lufei.de/p/539/</guid><description>Mac mini变身软路由 想要实现Mac mini当路由器用，由于是单网口设备，只能把Mac mini当做旁路网关，也就是俗称的“旁路由”，玩过N1的小伙伴肯定不陌生。
 使用Mac mini作为路由系统，仅需一个步骤使用命令开启系统级的IP转发，然后代理工具支持TUN模式即可，M系列的芯片和iPhone同架构，所以我们可以安装iPhone上的软件，使用方式和iOS保持一致，这里我使用ios版的小猫咪（Stash）作为演示。
 Mac开启IP转发 打开终端、开启IP转发命令：
 sudo sh -c &amp;#39;echo &amp;#34;net.inet.ip.forwarding=1&amp;#34; &amp;gt;&amp;gt; /etc/sysctl.conf &amp;amp;&amp;amp; sysctl -w net.inet.ip.forwarding=1&amp;#39; ▲ 提示net.inet.ip.forwarding:0-&amp;gt;1 代表开启成功，永久生效，重启也没关系，
