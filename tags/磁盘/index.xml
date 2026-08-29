@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>磁盘 on 路飞博客</title><link>https://blog.lufei.de/tags/%E7%A3%81%E7%9B%98/</link><description>Recent content in 磁盘 on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 05 Aug 2025 13:10:58 +0800</lastBuildDate><atom:link href="https://blog.lufei.de/tags/%E7%A3%81%E7%9B%98/index.xml" rel="self" type="application/rss+xml"/><item><title>ncdu-磁盘使用分析工具查看空间大小</title><link>https://blog.lufei.de/p/466/</link><pubDate>Tue, 05 Aug 2025 13:10:58 +0800</pubDate><guid>https://blog.lufei.de/p/466/</guid><description>ncdu 是一个交互式的磁盘使用分析工具，非常直观：
+安装：
+sudo apt update sudo apt install ncdu 使用：
+# 分析根目录 sudo ncdu / # 分析当前目录 ncdu # 分析指定目录 ncdu /home</description></item></channel></rss>
