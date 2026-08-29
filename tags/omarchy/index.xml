@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Omarchy on 路飞博客</title><link>https://blog.lufei.de/tags/omarchy/</link><description>Recent content in Omarchy on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 29 Aug 2026 15:06:00 +0000</lastBuildDate><atom:link href="https://blog.lufei.de/tags/omarchy/index.xml" rel="self" type="application/rss+xml"/><item><title>Omarchy：这个 Linux，有点不太一样</title><link>https://blog.lufei.de/p/542/</link><pubDate>Sat, 29 Aug 2026 15:06:00 +0000</pubDate><guid>https://blog.lufei.de/p/542/</guid><description>&lt;img src="https://img.meituan.net/content/d1b81495ea465766fc546b6ce44f0d0061524.png" alt="Featured image of post Omarchy：这个 Linux，有点不太一样" />如果你已经看腻了 Windows，又觉得传统 Linux 桌面少了点意思，那么 Omarchy 值得你花一个晚上折腾一下。
+最近体验了一个让我眼前一亮的 Linux 发行版——Omarchy。
+它不是那种努力把自己伪装成 Windows 或 macOS 的 Linux。
+恰恰相反。
+它似乎在告诉你：
+既然都用 Linux 了，为什么不彻底一点？
+⚡ 第一眼：这很 Linux，但也很未来 Omarchy 是一个基于 Arch Linux 打造的现代 Linux 发行版，由 DHH 发起。
+它很有自己的脾气。
+平铺式窗口、键盘驱动的操作逻辑、终端、快捷键、主题，以及一整套已经搭配好的开发环境，让整个桌面看起来不像传统意义上的“电脑桌面”。
+更像是一间属于开发者的数字驾驶舱。
+打开窗口。
+Super + ...
+切换。
+再开一个终端。
+窗口自动重新排列。
+用习惯之后，你甚至会开始嫌弃鼠标：
+“这东西怎么还需要我伸手去拿？”
+🧩 它真正有意思的地方，是“不让你从零开始” Arch 很迷人。
+但 Arch 的经典体验通常是：
+安装系统 → 查 Wiki → 配桌面 → 配窗口管理器 → 配终端 → 配快捷键 → 配主题 → 配着配着天亮了。
+Omarchy 的思路不太一样。</description></item></channel></rss>
