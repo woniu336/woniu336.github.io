@@ -6,27 +6,34 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh 内核调优
 1.（可选）
-curl -sS -O https://raw.</description></item><item><title>Omarchy：这个 Linux，有点不太一样</title><link>https://blog.lufei.de/p/542/</link><pubDate>Sat, 29 Aug 2026 15:06:00 +0000</pubDate><guid>https://blog.lufei.de/p/542/</guid><description>&lt;img src="https://img.meituan.net/content/d1b81495ea465766fc546b6ce44f0d0061524.png" alt="Featured image of post Omarchy：这个 Linux，有点不太一样" />如果你已经看腻了 Windows，又觉得传统 Linux 桌面少了点意思，那么 Omarchy 值得你花一个晚上折腾一下。
-最近体验了一个让我眼前一亮的 Linux 发行版——Omarchy。
-它不是那种努力把自己伪装成 Windows 或 macOS 的 Linux。
-恰恰相反。
-它似乎在告诉你：
-既然都用 Linux 了，为什么不彻底一点？
-⚡ 第一眼：这很 Linux，但也很未来 Omarchy 是一个基于 Arch Linux 打造的现代 Linux 发行版，由 DHH 发起。
-它很有自己的脾气。
-平铺式窗口、键盘驱动的操作逻辑、终端、快捷键、主题，以及一整套已经搭配好的开发环境，让整个桌面看起来不像传统意义上的“电脑桌面”。
-更像是一间属于开发者的数字驾驶舱。
-打开窗口。
-Super + ...
-切换。
-再开一个终端。
-窗口自动重新排列。
-用习惯之后，你甚至会开始嫌弃鼠标：
-“这东西怎么还需要我伸手去拿？”
-🧩 它真正有意思的地方，是“不让你从零开始” Arch 很迷人。
-但 Arch 的经典体验通常是：
-安装系统 → 查 Wiki → 配桌面 → 配窗口管理器 → 配终端 → 配快捷键 → 配主题 → 配着配着天亮了。
-Omarchy 的思路不太一样。</description></item><item><title>用 nvm 安装 Node.js 22 完整教程</title><link>https://blog.lufei.de/p/541/</link><pubDate>Wed, 12 Aug 2026 22:45:34 +0800</pubDate><guid>https://blog.lufei.de/p/541/</guid><description>1. 安装 nvm（如果还没装） curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash 2. 让 nvm 生效 source ~/.bashrc 3. 安装 Node.js 22 并设为默认 nvm install 22 nvm alias default 22 4. 确认版本 node -v 应该显示 v22.x.x</description></item><item><title>自建 ntfy 通知服务 + 服务器流量日报自动推送</title><link>https://blog.lufei.de/p/540/</link><pubDate>Sat, 01 Aug 2026 12:08:06 +0800</pubDate><guid>https://blog.lufei.de/p/540/</guid><description>项目文档：https://docs.ntfy.sh/
+curl -sS -O https://raw.</description></item><item><title>Omarchy：这个 Linux，有点不太一样</title><link>https://blog.lufei.de/p/542/</link><pubDate>Sat, 29 Aug 2026 15:06:00 +0000</pubDate><guid>https://blog.lufei.de/p/542/</guid><description>可以。上一版还是稍微有点“介绍文章”的味道。你要的是更短、更冷、更像科技博客推荐页，官网直接放在开头，少解释，多传达感觉。
+Omarchy：重新想象 Linux 桌面 Beautiful. Modern. Opinionated.
+🌐 官网： https://omarchy.org ⌁ GitHub： https://github.com/omacom/omarchy
+如果 Arch Linux 代表自由，
+那么 Omarchy 做的，是替这种自由加上一套审美。
+它由 DHH 打造，基于 Arch Linux，围绕现代 Linux 桌面重新组织了一套完整的使用体验。([GitHub][1])
+没有传统桌面密密麻麻的窗口。
+没有安装系统后漫长的配置清单。
+取而代之的是 Hyprland、平铺窗口、快捷键、终端，以及一套高度统一的视觉语言。
+打开应用。
+窗口自动就位。
+切换工作区。
+继续写代码。
+整个系统更像一块为键盘和效率而生的数字工作台。
+少一点配置，多一点使用 Arch 最迷人的地方，是你可以决定一切。
+最麻烦的地方，也是你要决定一切。
+Omarchy 选择了另一条路：
+把那些值得折腾的东西，提前折腾好了。
+桌面、终端、开发工具、快捷键、主题与工作流被整合到一起。
+开机之后，不必先花几个小时雕刻 .config。
+直接开始。
+它不想成为所有人的 Linux Omarchy 有自己的审美，也有自己的主张。
+如果你喜欢：
+Arch · Hyprland · Terminal · Keyboard · Minimal
+那么它很可能正中你的审美。
+如果你已经看腻了千篇一律的桌面系统——
+试试 Omarchy。
+也许 Linux 桌面，本来就应该这么酷。</description></item><item><title>用 nvm 安装 Node.js 22 完整教程</title><link>https://blog.lufei.de/p/541/</link><pubDate>Wed, 12 Aug 2026 22:45:34 +0800</pubDate><guid>https://blog.lufei.de/p/541/</guid><description>1. 安装 nvm（如果还没装） curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash 2. 让 nvm 生效 source ~/.bashrc 3. 安装 Node.js 22 并设为默认 nvm install 22 nvm alias default 22 4. 确认版本 node -v 应该显示 v22.x.x</description></item><item><title>自建 ntfy 通知服务 + 服务器流量日报自动推送</title><link>https://blog.lufei.de/p/540/</link><pubDate>Sat, 01 Aug 2026 12:08:06 +0800</pubDate><guid>https://blog.lufei.de/p/540/</guid><description>项目文档：https://docs.ntfy.sh/
 环境：Debian 12 测试通过
 概述 三步搞定：
 手机安装 ntfy 客户端 服务器自建 ntfy 通知服务 下载流量推送脚本，配置定时任务 搭建 ntfy 服务器 第 1 步：添加官方仓库并安装（Debian/Ubuntu, amd64） sudo mkdir -p /etc/apt/keyrings sudo curl -L -o /etc/apt/keyrings/ntfy.gpg https://archive.ntfy.sh/apt/keyring.gpg sudo apt-get install -y apt-transport-https echo &amp;#34;deb [arch=amd64 signed-by=/etc/apt/keyrings/ntfy.gpg] https://archive.ntfy.sh/apt stable main&amp;#34; \ | sudo tee /etc/apt/sources.list.d/ntfy.list sudo apt-get update sudo apt-get install -y ntfy ntfy -v 第 2 步：配置监听端口 注意：这里配置端口为 2586
