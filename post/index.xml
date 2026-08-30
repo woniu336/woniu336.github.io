@@ -6,12 +6,11 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh 内核调优
 1.（可选）
-curl -sS -O https://raw.</description></item><item><title>Omarchy：这个 Linux，有点不太一样</title><link>https://blog.lufei.de/p/542/</link><pubDate>Sat, 29 Aug 2026 15:06:00 +0000</pubDate><guid>https://blog.lufei.de/p/542/</guid><description>可以。上一版还是稍微有点“介绍文章”的味道。你要的是更短、更冷、更像科技博客推荐页，官网直接放在开头，少解释，多传达感觉。
-Omarchy：重新想象 Linux 桌面 Beautiful. Modern. Opinionated.
-🌐 官网： https://omarchy.org ⌁ GitHub： https://github.com/omacom/omarchy
+curl -sS -O https://raw.</description></item><item><title>Omarchy：这个 Linux，有点不太一样</title><link>https://blog.lufei.de/p/542/</link><pubDate>Sat, 29 Aug 2026 15:06:00 +0000</pubDate><guid>https://blog.lufei.de/p/542/</guid><description>🌐 官网： https://omarchy.org
+GitHub： https://github.com/omacom/omarchy
 如果 Arch Linux 代表自由，
 那么 Omarchy 做的，是替这种自由加上一套审美。
-它由 DHH 打造，基于 Arch Linux，围绕现代 Linux 桌面重新组织了一套完整的使用体验。([GitHub][1])
+它由 DHH 打造，基于 Arch Linux，围绕现代 Linux 桌面重新组织了一套完整的使用体验。
 没有传统桌面密密麻麻的窗口。
 没有安装系统后漫长的配置清单。
 取而代之的是 Hyprland、平铺窗口、快捷键、终端，以及一套高度统一的视觉语言。
