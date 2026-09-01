@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 29 Aug 2026 15:06:00 +0000</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 01 Sep 2026 14:24:32 +0000</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_menu.sh &amp;amp;&amp;amp; chmod +x setup_menu.sh &amp;amp;&amp;amp; ./setup_menu.sh 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
@@ -6,7 +6,18 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh 内核调优
 1.（可选）
-curl -sS -O https://raw.</description></item><item><title>Omarchy：这个 Linux，有点不太一样</title><link>https://blog.lufei.de/p/542/</link><pubDate>Sat, 29 Aug 2026 15:06:00 +0000</pubDate><guid>https://blog.lufei.de/p/542/</guid><description>🌐 官网： https://omarchy.org
+curl -sS -O https://raw.</description></item><item><title>将本地 Git 项目同时上传到 GitHub 和 Gitee</title><link>https://blog.lufei.de/p/543/</link><pubDate>Tue, 01 Sep 2026 14:24:32 +0000</pubDate><guid>https://blog.lufei.de/p/543/</guid><description>本文以本地项目： C:\Users\奇哥\Desktop\bazi-web 为例，介绍如何完成 Git 初始化、清除代理、配置 SSH、连接 GitHub 和 Gitee，并将代码同时推送到两个平台。
+一、准备工作 需要准备：
+已安装 Git； 一个 GitHub 账号； 一个 Gitee 账号； GitHub 和 Gitee 上各创建一个空仓库。 GitHub 仓库地址：
+https://github.com/woniu336/bazi-web Gitee 仓库地址：
+https://gitee.com/dayu777/bazi-web 创建仓库时，建议不要勾选 README、.gitignore 和 License，避免首次推送时产生冲突。
+二、检查 Git 是否安装 打开 PowerShell，执行：
+git --version 如果出现版本号，说明 Git 已经安装。
+三、进入本地项目目录 cd &amp;#34;C:\Users\奇哥\Desktop\bazi-web&amp;#34; 查看当前项目状态：
+git status 如果提示：
+fatal: not a git repository 说明当前目录还没有初始化 Git，需要执行：
+git init 四、配置 Git 用户信息 执行：
+git config --global user.name &amp;#34;你的用户名&amp;#34; git config --global user.</description></item><item><title>Omarchy：这个 Linux，有点不太一样</title><link>https://blog.lufei.de/p/542/</link><pubDate>Sat, 29 Aug 2026 15:06:00 +0000</pubDate><guid>https://blog.lufei.de/p/542/</guid><description>🌐 官网： https://omarchy.org
 GitHub： https://github.com/omacom/omarchy
 如果 Arch Linux 代表自由，
 那么 Omarchy 做的，是替这种自由加上一套审美。
