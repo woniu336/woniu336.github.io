@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Tue, 01 Sep 2026 14:24:32 +0000</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 路飞博客</title><link>https://blog.lufei.de/post/</link><description>Recent content in Posts on 路飞博客</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 02 Sep 2026 16:15:34 +0000</lastBuildDate><atom:link href="https://blog.lufei.de/post/index.xml" rel="self" type="application/rss+xml"/><item><title>路飞工具箱</title><link>https://blog.lufei.de/p/87/</link><pubDate>Sun, 17 Sep 2023 15:30:46 +0000</pubDate><guid>https://blog.lufei.de/p/87/</guid><description>&lt;img src="https://img.meituan.net/csc/b3af8d16f23d1e63f8157d761c4688c51249652.png" alt="Featured image of post 路飞工具箱" />自用脚本
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/setup_menu.sh &amp;amp;&amp;amp; chmod +x setup_menu.sh &amp;amp;&amp;amp; ./setup_menu.sh 脚本推荐一
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tp.sh &amp;amp;&amp;amp; chmod +x tp.sh &amp;amp;&amp;amp; ./tp.sh 脚本推荐二
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/tool.sh &amp;amp;&amp;amp; chmod +x tool.sh &amp;amp;&amp;amp; ./tool.sh 脚本推荐三
@@ -6,7 +6,17 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh 内核调优
 1.（可选）
-curl -sS -O https://raw.</description></item><item><title>将本地 Git 项目同时上传到 GitHub 和 Gitee</title><link>https://blog.lufei.de/p/543/</link><pubDate>Tue, 01 Sep 2026 14:24:32 +0000</pubDate><guid>https://blog.lufei.de/p/543/</guid><description>本文以本地项目： C:\Users\奇哥\Desktop\bazi-web 为例，介绍如何完成 Git 初始化、清除代理、配置 SSH、连接 GitHub 和 Gitee，并将代码同时推送到两个平台。
+curl -sS -O https://raw.</description></item><item><title>omp实现额度的自动提醒与监控</title><link>https://blog.lufei.de/p/544/</link><pubDate>Wed, 02 Sep 2026 16:15:34 +0000</pubDate><guid>https://blog.lufei.de/p/544/</guid><description>omp 不需要额外安装第三方插件，它已经在核心引擎中原生内置了额度感知与预警保护机制，只是默认未开启。
+你可以通过以下几种方式实现额度的自动提醒与监控：
+────────────────────────────────────────────────────────────────────────────────
+1. 开启内置的“额度感知预警与保护”（原生推荐） omp 自带了 usageAwareFallback 系统，专门用于在 Provider 额度达到警戒线时进行提醒或降级：
+开启步骤： 在终端执行：
+# 开启额度感知机制 omp config set retry.usageAwareFallback true # 设置预留警戒阈值（百分比，默认 10 表示剩余 10% 额度时触发报警） omp config set retry.usageReservePct 10 # 设置触发策略：confirm（提醒确认）/ auto（自动切换备用模型）/ fail-closed（停止使用） omp config set retry.usageReservePolicy confirm 效果： 当你的模型账号额度消耗到剩余 10%（可自定义）时，omp 会主动拦截并弹出提示，询问你是否继续消耗该账号，或者切换到其他可用模型。 ────────────────────────────────────────────────────────────────────────────────
+2. 开启每轮 Token 消耗即时展示 如果你想在每轮对话/操作后都看到消耗了多少 Token，可以开启：
+omp config set display.showTokenUsage true 开启后，每次模型回答完毕都会在底部打印当前请求的 Token 消耗量。
+────────────────────────────────────────────────────────────────────────────────
+3. 自定义系统级桌面弹窗 / Webhook 提醒（插件方式） 目前 omp 官方插件市场没有单独打包独立的“弹窗提醒插件”，因为上述原生配置已覆盖绝大部分场景。
+如果你需要特殊的提醒方式（例如 Windows 系统右下角桌面 Toast 通知、叮叮/飞书群推送等），可以通过 omp 的 Extension / Hook 机制 挂载一个轻量脚本。omp 会在每次请求完成后提供钩子事件，读取 /usage 的实时百分比并在超过警戒线时调用系统通知接口。</description></item><item><title>将本地 Git 项目同时上传到 GitHub 和 Gitee</title><link>https://blog.lufei.de/p/543/</link><pubDate>Tue, 01 Sep 2026 14:24:32 +0000</pubDate><guid>https://blog.lufei.de/p/543/</guid><description>本文以本地项目： C:\Users\奇哥\Desktop\bazi-web 为例，介绍如何完成 Git 初始化、清除代理、配置 SSH、连接 GitHub 和 Gitee，并将代码同时推送到两个平台。
 一、准备工作 需要准备：
 已安装 Git； 一个 GitHub 账号； 一个 Gitee 账号； GitHub 和 Gitee 上各创建一个空仓库。 GitHub 仓库地址：
 https://github.com/woniu336/bazi-web Gitee 仓库地址：
