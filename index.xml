@@ -6,7 +6,18 @@ curl -sS -O https://raw.githubusercontent.com/kejilion/sh/main/kejilion.sh &amp;
 curl -fsSL https://raw.githubusercontent.com/eooce/ssh_tool/main/ssh_tool.sh -o ssh_tool.sh &amp;amp;&amp;amp; chmod +x ssh_tool.sh &amp;amp;&amp;amp; ./ssh_tool.sh 脚本五
 curl -sS -O https://raw.githubusercontent.com/woniu336/open_shell/main/caddy_manager.sh &amp;amp;&amp;amp; chmod +x caddy_manager.sh &amp;amp;&amp;amp; ./caddy_manager.sh 内核调优
 1.（可选）
-curl -sS -O https://raw.</description></item><item><title>Cloudflare缓存清除脚本</title><link>https://blog.lufei.de/p/545/</link><pubDate>Sat, 05 Sep 2026 07:01:13 +0000</pubDate><guid>https://blog.lufei.de/p/545/</guid><description>以下脚本需要修改成适配成自己站点的页面，不会的可以交给Ai帮你修改
+curl -sS -O https://raw.</description></item><item><title>算个卦而已，不要较真，一个六爻排盘工具</title><link>https://blog.lufei.de/p/546/</link><pubDate>Thu, 17 Sep 2026 13:31:19 +0000</pubDate><guid>https://blog.lufei.de/p/546/</guid><description>古人讲：“神兆机于动，动则必有应。”
+工具地址：https://zhanbu.lufei.de （免下载，断网也能随时排盘。）
+项目地址：https://github.com/woniu336/liuyao
+很多时候我们起一卦，其实不是为了听一句轻飘飘的“大吉大利”或“大祸临头”，而是心里早有一道坎、一个悬而未决的局，想借六爻的动静生克，照一照自己那颗兵荒马乱的心。
+市面上的排盘软件不少，但我自己断卦时，总觉得用得不舒坦：要么一点开就是花里胡哨的界面，和“速断吉凶”，粗暴地把人心里的恐惧包装成卖点；要么纳甲和神煞错漏百出，同一天起同一个卦，换两个软件世应居然都不挨着。
+于是我自己动手做了个极简的工具，叫野鹤六爻。给它立了三条规矩：
+第一，机不可乱：把摇卦还给概率，不做伪随机。
+懂六爻的都知道，三钱落地，少阳、少阴、老阳、老阴，四象概率自有天数。有些软件图省事直接生成个假数字应付你，在我看来，那是断了起卦者当下的机锋感应。 在这个工具里，每次点击摇卦，都走真机底层的纯净掷币模拟。你可以不信玄，但我绝不糊弄你的念头。 我认为摇卦就是以你作为变量，由你引发的和自身相关联的时空信息的一个快照。就像《命运的求索》这本书中对八字命理是这样解释的：作者认为，人出生的时空结构联系着他的生命信息，这是中华先人的一个伟大假说。
+第二，理归古法：盘面是客观事实，不许掺杂水份。
+纳甲、世应、旬空、伏神、六神、十三神煞……这些确定性的规则交给代码计算，拿过几千个古今卦案反复校正过。 在排盘这页，我故意没写任何现成的“吉凶用神”。盘面是盘面，判断是判断。吉凶并非孤立的一爻，全在全盘生克转化之间。把断语过早印在盘上，只会先入为主，乱了自己的慧眼。
+第三，意在解惑：卦象是明镜，但抉择始终在你。
+卦象排定，若想参详，工具内置了结合大模型的解卦参考：取用、看原神忌神、断应期、析走势。AI解卦准确率暂且不论，毕竟少了高手断卦的外应(易象)和经验(灵感)，但能作为参考。 另外我还把《增删卜易》原书里的精选经典卦例都放到了案例中，点一下就能重排。</description></item><item><title>Cloudflare缓存清除脚本</title><link>https://blog.lufei.de/p/545/</link><pubDate>Sat, 05 Sep 2026 07:01:13 +0000</pubDate><guid>https://blog.lufei.de/p/545/</guid><description>以下脚本需要修改成适配成自己站点的页面，不会的可以交给Ai帮你修改
 脚本地址 https://github.com/woniu336/open_shell/blob/main/cf_purge.py
 前置准备：获取 Cloudflare 必要凭证 在使用以下脚本前，准备好两项信息：
 Zone ID：登录 Cloudflare 仪表板，点击进入 xxxx.com 域名，在右下角的“API”栏中能找到 区域 ID (Zone ID)。 API Token： 前往 Cloudflare API 令牌页面 (https://dash.cloudflare.com/profile/api-tokens)。 点击 创建令牌 -&amp;gt; 选择模版 清除缓存 (Cache Purge)，或者自定义权限为： 区域 (Zone) - 缓存清除 (Cache Purge) - 清除 (Purge)。 区域资源选择包含 xxxxx.com。 生成后复制该 Token。 交互式菜单： 在终端执行 python cf_purge.py，可以看到新增的选项：
